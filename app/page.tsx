@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import ModeSelection from "@/components/ModeSelection";
 import BookSelection from "@/components/BookSelection";
 import QuizPage from "@/components/QuizPage";
@@ -30,7 +30,7 @@ export default function Home() {
   };
 
   return (
-    <main className="min-h-screen bg-gradient-to-b from-blue-100 to-green-100 p-4">
+    <main className="min-h-screen bg-white p-4">
       {quizMode === null ? (
         <ModeSelection onSelectMode={handleSelectMode} />
       ) : !quizStarted ? (
