@@ -1,0 +1,340 @@
+{
+    "questions": [
+      {
+        "type": "in-which-book",
+        "text": "In which book is there a talking doll?",
+        "answer": "Solimar: The Sword of the Monarchs by Pam Munoz Ryan",
+        "page": 65
+      },
+      {
+        "type": "in-which-book",
+        "text": "In which book does someone get a scholarship for a computer class?",
+        "answer": "Thirst by Varsha Bajaj",
+        "page": 85
+      },
+      {
+        "type": "in-which-book",
+        "text": "In which book are chickens described as having \"such tiny brains?\"",
+        "answer": "The Mystwick School of Musicraft by Jessica Koury",
+        "page": 1
+      },
+      {
+        "type": "in-which-book",
+        "text": "In which book does someone have a turtle night light?",
+        "answer": "Leonard (My Life as a Cat) by Carlie Sorosiak",
+        "page": 142
+      },
+      {
+        "type": "in-which-book",
+        "text": "In which book does someone want to make a goat cheese omelet?",
+        "answer": "Sam Makes a Splash by Nicole Melleby",
+        "page": 123
+      },
+      {
+        "type": "in-which-book",
+        "text": "In which book does someone camouflage themselves with mud and flowers?",
+        "answer": "The Wild Robot by Peter Brown",
+        "page": 42
+      },
+      {
+        "type": "in-which-book",
+        "text": "In which book does someone write, \"Never trust a magician?\"",
+        "answer": "The Name of This Book is Secret by Pseudonymous Bosch",
+        "page": 124
+      },
+      {
+        "type": "in-which-book",
+        "text": "In which book does someone join Color Guard?",
+        "answer": "Twins by Varian Johnson & Shannon Wright",
+        "page": 245
+      },
+      {
+        "type": "content",
+        "text": "When was Circus Mirandus formed?",
+        "book": "Circus Mirandus",
+        "author": "Cassie Beasley",
+        "answer": "500 B.C.",
+        "page": 66
+      },
+      {
+        "type": "content",
+        "text": "What is Marlene's favorite class at school?",
+        "book": "Frizzy",
+        "author": "Claribel A. Ortega",
+        "answer": "art",
+        "page": 87
+      },
+      {
+        "type": "content",
+        "text": "How many books does Finn take to Gran's?",
+        "book": "A Time Traveler's Theory of Relativity",
+        "author": "Nicole Valentine",
+        "answer": "5",
+        "page": 5
+      },
+      {
+        "type": "content",
+        "text": "What does IEP stand for?",
+        "book": "Fifty-Four Things Wrong with Gwendolyn Rogers",
+        "author": "Caela Carter",
+        "answer": "Individualized Education Plan",
+        "page": 60
+      },
+      {
+        "type": "content",
+        "text": "Whose dad is an ex-Marine?",
+        "book": "J.D. and the Great Barber Battle",
+        "author": "J. Dillard",
+        "answer": "Xavier",
+        "page": 7
+      },
+      {
+        "type": "content",
+        "text": "What do ZJ and his friends call themselves?",
+        "book": "Before the Ever After",
+        "author": "Jacqueline Woodson",
+        "answer": "The Fantastic Four",
+        "page": 8
+      },
+      {
+        "type": "content",
+        "text": "Which NBA team does Stephen Curry play for?",
+        "book": "Marshmallow & Jordan",
+        "author": "Alina Chau",
+        "answer": "The Golden State Warriors",
+        "page": 89
+      },
+      {
+        "type": "content",
+        "text": "Which art museum does Jerry have a solo exhibition in?",
+        "book": "Just Jerry: How Drawing Shaped My Life",
+        "author": "Jerry Pinkney",
+        "answer": "Philadelphia Museum of Art",
+        "page": 129
+      },
+      {
+        "type": "in-which-book",
+        "text": "In which book does someone like Earl Grey tea with 5 packets of sugar?",
+        "answer": "A Time Traveler's Theory of Relativity by Nicole Valentine",
+        "page": 157
+      },
+      {
+        "type": "in-which-book",
+        "text": "In which book does someone call their bike Magic Broom?",
+        "answer": "Before the Ever After by Jacqueline Woodson",
+        "page": 14
+      },
+      {
+        "type": "in-which-book",
+        "text": "In which book does someone make a quipu?",
+        "answer": "Circus Mirandus by Cassie Beasley",
+        "page": 11
+      },
+      {
+        "type": "in-which-book",
+        "text": "In which book does someone like to wear their hair in two French braids?",
+        "answer": "Fifty-Four Things Wrong with Gwendolyn Rogers by Caela Carter",
+        "page": 13
+      },
+      {
+        "type": "in-which-book",
+        "text": "In which book does someone use ultra hold gel in their hair?",
+        "answer": "Frizzy by Claribel Ortega & Rose Bousamra",
+        "page": 69
+      },
+      {
+        "type": "in-which-book",
+        "text": "In which book is there a school called Douglass Elementary?",
+        "answer": "J.D. and the Great Barber Battle by J. Dillard",
+        "page": 14
+      },
+      {
+        "type": "in-which-book",
+        "text": "In which book is there a store called Auggie's grocery?",
+        "answer": "Just Jerry: How Drawing Shaped My Life by Jerry Pinkney",
+        "page": 62
+      },
+      {
+        "type": "in-which-book",
+        "text": "In which book is a character named after their father's favorite athlete?",
+        "answer": "Marshmallow & Jordan by Alina Chau",
+        "page": 88
+      },
+      {
+        "type": "content",
+        "text": "What is the name of the most famous chain of music stores?",
+        "book": "The Mystwick School of Musicraft",
+        "author": "Jessica Khoury",
+        "answer": "Spellstones",
+        "page": 18
+      },
+      {
+        "type": "content",
+        "text": "Where did Sam keep her money before she had a wallet?",
+        "book": "Sam Makes a Splash",
+        "author": "Nicole Melleby",
+        "answer": "in a sock",
+        "page": 63
+      },
+      {
+        "type": "content",
+        "text": "What is the name of the Sensorium and Spa?",
+        "book": "The Name of This Book is Secret",
+        "author": "Pseudonymous Bosch",
+        "answer": "The Midnight Sun",
+        "page": 162
+      },
+      {
+        "type": "content",
+        "text": "What do the animals call the first hour of dawn?",
+        "book": "The Wild Robot",
+        "author": "Peter Brown",
+        "answer": "The Dawn Truce",
+        "page": 49
+      },
+      {
+        "type": "content",
+        "text": "Which twin is ¼\" shorter?",
+        "book": "Twins",
+        "author": "Varian Johnson & Shannon Wright",
+        "answer": "Maureen",
+        "page": 10
+      },
+      {
+        "type": "content",
+        "text": "What is the name of the river that Minni lives close to?",
+        "book": "Thirst",
+        "author": "Varsha Bajaj",
+        "answer": "the Mithi River",
+        "page": 45
+      },
+      {
+        "type": "content",
+        "text": "What is Leonard's home planet made of?",
+        "book": "Leonard (My Life as a Cat)",
+        "author": "Carlie Sorosiak",
+        "answer": "helium",
+        "page": 105
+      },
+      {
+        "type": "content",
+        "text": "What type of bird is Lazaro?",
+        "book": "Solimar: the Sword of the Monarchs",
+        "author": "Pam Munoz Ryan",
+        "answer": "a Quetzal",
+        "page": 2
+      },
+      {
+        "type": "in-which-book",
+        "text": "In which book does someone have a foot made of wood?",
+        "answer": "The Wild Robot by Peter Brown",
+        "page": 151
+      },
+      {
+        "type": "in-which-book",
+        "text": "In which book does someone destroy some curtains?",
+        "answer": "Leonard (My Life as a Cat) by Carlie Sorosiak",
+        "page": 25
+      },
+      {
+        "type": "in-which-book",
+        "text": "In which book does a family own a Great Dane?",
+        "answer": "Sam Makes a Splash by Nicole Melleby",
+        "page": 24
+      },
+      {
+        "type": "in-which-book",
+        "text": "In which book is there a character named Bryce Jackson?",
+        "answer": "Twins by Varian Johnson & Shannon Wright",
+        "page": 27
+      },
+      {
+        "type": "in-which-book",
+        "text": "In which book is there a boulder with a sword shaped crevice?",
+        "answer": "Solimar: The Sword of the Monarchs by Pam Munoz Ryan",
+        "page": 3
+      },
+      {
+        "type": "in-which-book",
+        "text": "In which book does someone know every two-letter word in the English language?",
+        "answer": "A Time Traveller's Theory of Relativity by Nicole Valentine",
+        "page": 8
+      },
+      {
+        "type": "in-which-book",
+        "text": "In which book is a story hidden underneath double pages of a notebook?",
+        "answer": "The Name of This Book Is Secret by Pseudonymous Bosch",
+        "page": 112
+      },
+      {
+        "type": "in-which-book",
+        "text": "In which book is someone's middle name Andrea?",
+        "answer": "Frizzy by Claribel Ortega",
+        "page": 116
+      },
+      {
+        "type": "content",
+        "text": "What city did the author grow up in?",
+        "book": "Just Jerry: How Drawing Shaped My Life",
+        "author": "Jerry Pinkney",
+        "answer": "Philadelphia",
+        "page": 6
+      },
+      {
+        "type": "content",
+        "text": "Who makes a pyramid for their school project?",
+        "book": "Circus Mirandus",
+        "author": "Cassie Beasley",
+        "answer": "Florence",
+        "page": 40
+      },
+      {
+        "type": "content",
+        "text": "What does Nenek clean Marshmallow's knee with?",
+        "book": "Marshmallow & Jordan",
+        "author": "Alina Chau",
+        "answer": "Hydrogen peroxide",
+        "page": 34
+      },
+      {
+        "type": "content",
+        "text": "What is Minni's best friend's name?",
+        "book": "Thirst",
+        "author": "Varsha Bajaj",
+        "answer": "Faiza",
+        "page": 6
+      },
+      {
+        "type": "content",
+        "text": "What is Zachariah's football number?",
+        "book": "Before the Ever After",
+        "author": "Jacqueline Woodson",
+        "answer": "44",
+        "page": 4
+      },
+      {
+        "type": "content",
+        "text": "What is Gwendolyn's hamster's name?",
+        "book": "Fifty-Four Things Wrong with Gwendolyn Rogers",
+        "author": "Caela Carter",
+        "answer": "Mr. Jojo",
+        "page": 2
+      },
+      {
+        "type": "content",
+        "text": "What is the musicat's name?",
+        "book": "The Mystwick School of Musicraft",
+        "author": "Jessica Khoury",
+        "answer": "Wynk",
+        "page": 106
+      },
+      {
+        "type": "content",
+        "text": "How long has Henry Sr. been cutting hair?",
+        "book": "J.D. and the Great Barber Battle",
+        "author": "J. Dillard",
+        "answer": "58 years",
+        "page": 31
+      }
+    ]
+  }
