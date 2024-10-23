@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -9,8 +9,9 @@ import {
   CardTitle,
   CardFooter,
 } from "@/components/ui/card";
-import { CheckCircle, XCircle, SkipForward, Redo } from "lucide-react";
+import { SkipForward, Redo } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
+import { Progress } from "@/components/ui/progress";
 
 type Question = {
   type: "in-which-book" | "content";
@@ -27,6 +28,8 @@ type QuizPageProps = {
   onQuizEnd: () => void;
 };
 
+const TIMER_DURATION = 15000; // 15 seconds in milliseconds
+
 export default function QuizPage({
   selectedBooks,
   quizMode,
@@ -38,6 +41,11 @@ export default function QuizPage({
   const [showAnswer, setShowAnswer] = useState(false);
   const [quizFinished, setQuizFinished] = useState(false);
   const [animateScore, setAnimateScore] = useState(false);
+  const [timeLeft, setTimeLeft] = useState(TIMER_DURATION);
+  const [isTimerRunning, setIsTimerRunning] = useState(false);
+  const boopSound = useRef<HTMLAudioElement | null>(null);
+  const timerRef = useRef<number | null>(null);
+  const startTimeRef = useRef<number | null>(null);
 
   useEffect(() => {
     fetch("/questions.json")
@@ -53,16 +61,57 @@ export default function QuizPage({
         );
         setQuestions(shuffledQuestions.slice(0, 10));
       });
+
+    boopSound.current = new Audio("/boop.mp3");
   }, [selectedBooks]);
+
+  useEffect(() => {
+    if (isTimerRunning && timeLeft > 0) {
+      startTimeRef.current = Date.now() - (TIMER_DURATION - timeLeft);
+      timerRef.current = window.requestAnimationFrame(updateTimer);
+    } else if (timeLeft <= 0) {
+      setIsTimerRunning(false);
+      setShowAnswer(true);
+      boopSound.current?.play();
+    }
+    return () => {
+      if (timerRef.current) {
+        window.cancelAnimationFrame(timerRef.current);
+      }
+    };
+  }, [isTimerRunning, timeLeft]);
+
+  const updateTimer = () => {
+    if (startTimeRef.current) {
+      const elapsedTime = Date.now() - startTimeRef.current;
+      const newTimeLeft = Math.max(TIMER_DURATION - elapsedTime, 0);
+      setTimeLeft(newTimeLeft);
+
+      if (newTimeLeft > 0) {
+        timerRef.current = window.requestAnimationFrame(updateTimer);
+      } else {
+        setIsTimerRunning(false);
+        setShowAnswer(true);
+        boopSound.current?.play();
+      }
+    }
+  };
 
   const handleShowAnswer = () => {
     setShowAnswer(true);
   };
 
+  const handleStartTimer = () => {
+    setIsTimerRunning(true);
+    setTimeLeft(TIMER_DURATION);
+    setShowAnswer(false);
+    startTimeRef.current = Date.now();
+  };
+
   const handleAnswer = (points: number) => {
     setScore((prevScore) => prevScore + points);
     setAnimateScore(true);
-    setTimeout(() => setAnimateScore(false), 300); // Reset animation after 300ms
+    setTimeout(() => setAnimateScore(false), 300);
     nextQuestion();
   };
 
@@ -70,6 +119,8 @@ export default function QuizPage({
     if (currentQuestionIndex < questions.length - 1) {
       setCurrentQuestionIndex(currentQuestionIndex + 1);
       setShowAnswer(false);
+      setIsTimerRunning(false);
+      setTimeLeft(TIMER_DURATION);
     } else {
       setQuizFinished(true);
     }
@@ -80,6 +131,8 @@ export default function QuizPage({
     setScore(0);
     setShowAnswer(false);
     setQuizFinished(false);
+    setIsTimerRunning(false);
+    setTimeLeft(TIMER_DURATION);
   };
 
   const currentQuestion = questions[currentQuestionIndex];
@@ -129,7 +182,7 @@ export default function QuizPage({
     <Card className="w-full max-w-2xl mx-auto">
       <CardHeader>
         <CardTitle className="text-2xl font-bold text-center">
-          OBOB Quiz - Personal Mode
+          OBOB Quiz - {quizMode === "personal" ? "Personal" : "Friend"} Mode
         </CardTitle>
       </CardHeader>
       <CardContent>
@@ -165,7 +218,33 @@ export default function QuizPage({
               <p className="text-xl mb-4">{currentQuestion.text}</p>
             </CardContent>
           </Card>
-          {showAnswer && (
+          {quizMode === "friend" && (
+            <div className="space-y-2">
+              {!isTimerRunning && !showAnswer && (
+                <Button
+                  onClick={handleStartTimer}
+                  className="w-full bg-blue-500 hover:bg-blue-600"
+                >
+                  Start Timer
+                </Button>
+              )}
+              {(isTimerRunning || showAnswer) && (
+                <>
+                  <Progress
+                    value={((TIMER_DURATION - timeLeft) / TIMER_DURATION) * 100}
+                    className="w-full h-3 transition-all duration-100 ease-linear"
+                  />
+                  <p className="text-center font-semibold">
+                    {timeLeft > 0
+                      ? `Time left: ${Math.ceil(timeLeft / 1000)}s`
+                      : "Time's up!"}
+                  </p>
+                </>
+              )}
+            </div>
+          )}
+          {((quizMode === "personal" && showAnswer) ||
+            (quizMode === "friend" && (showAnswer || isTimerRunning))) && (
             <div className="bg-yellow-100 p-3 rounded-md mt-4">
               <p className="text-lg font-semibold">
                 Answer: {currentQuestion.answer}
@@ -178,7 +257,7 @@ export default function QuizPage({
         </div>
       </CardContent>
       <CardFooter className="flex flex-col space-y-4">
-        {!showAnswer ? (
+        {quizMode === "personal" && !showAnswer ? (
           <Button
             onClick={handleShowAnswer}
             className="w-full bg-blue-500 hover:bg-blue-600"
@@ -186,26 +265,29 @@ export default function QuizPage({
             Show Answer
           </Button>
         ) : (
-          <div className="flex flex-col sm:flex-row justify-center space-y-2 sm:space-y-0 sm:space-x-4 w-full">
-            <Button
-              onClick={() => handleAnswer(5)}
-              className="bg-green-500 hover:bg-green-600"
-            >
-              Correct (5 pts)
-            </Button>
-            <Button
-              onClick={() => handleAnswer(3)}
-              className="bg-yellow-500 hover:bg-yellow-600"
-            >
-              Partially Correct (3 pts)
-            </Button>
-            <Button
-              onClick={() => handleAnswer(0)}
-              className="bg-red-500 hover:bg-red-600"
-            >
-              Incorrect (0 pts)
-            </Button>
-          </div>
+          (quizMode === "personal" ||
+            (quizMode === "friend" && (isTimerRunning || showAnswer))) && (
+            <div className="flex flex-col sm:flex-row justify-center space-y-2 sm:space-y-0 sm:space-x-4 w-full">
+              <Button
+                onClick={() => handleAnswer(5)}
+                className="bg-green-500 hover:bg-green-600"
+              >
+                Correct (5 pts)
+              </Button>
+              <Button
+                onClick={() => handleAnswer(3)}
+                className="bg-yellow-500 hover:bg-yellow-600"
+              >
+                Partially Correct (3 pts)
+              </Button>
+              <Button
+                onClick={() => handleAnswer(0)}
+                className="bg-red-500 hover:bg-red-600"
+              >
+                Incorrect (0 pts)
+              </Button>
+            </div>
+          )
         )}
         <Separator className="my-2" />
         <Button
