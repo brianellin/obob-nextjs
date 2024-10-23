@@ -2,14 +2,8 @@
 
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { CheckCircle } from "lucide-react";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { CheckCircle, ArrowRight } from "lucide-react";
 import Image from "next/image";
 
 const books = [
@@ -120,6 +114,8 @@ export default function BookSelection({ onSelectBooks }: BookSelectionProps) {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
+
     const checkIfMobile = () => {
       setIsMobile(window.matchMedia("(max-width: 768px)").matches);
     };
@@ -158,72 +154,80 @@ export default function BookSelection({ onSelectBooks }: BookSelectionProps) {
   };
 
   return (
-    <Card className="w-full max-w-6xl">
-      <CardHeader>
-        <CardTitle className="text-2xl font-bold text-center">
-          Select Books for Quiz
-        </CardTitle>
-      </CardHeader>
-      <CardContent>
-        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-3">
-          <div className="col-span-full flex justify-between mb-4">
-            <Button
-              onClick={handleSelectAll}
-              variant="outline"
-              size="sm"
-              className="w-[calc(50%-0.375rem)]"
-            >
-              Select All
-            </Button>
-            <Button
-              onClick={handleDeselectAll}
-              variant="outline"
-              size="sm"
-              className="w-[calc(50%-0.375rem)]"
-            >
-              Deselect All
-            </Button>
-          </div>
-          {books.map((book) => (
-            <div key={book.id} className="flex flex-col items-center">
-              <div
-                className={`relative w-24 h-36 cursor-pointer transition-all duration-200 rounded-md overflow-hidden ${
-                  selectedBooks.includes(book.id) ? "ring-4 ring-blue-500" : ""
-                }`}
-                onClick={() => handleToggleBook(book.id)}
+    <div className="min-h-screen pb-20 md:pb-0 relative">
+      <Card className="w-full max-w-6xl mx-auto mb-4">
+        <CardHeader>
+          <CardTitle className="text-2xl font-bold text-center">
+            Select Books for Quiz
+          </CardTitle>
+        </CardHeader>
+        <CardContent>
+          <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-8 gap-3">
+            <div className="col-span-full flex justify-between mb-4">
+              <Button
+                onClick={handleSelectAll}
+                variant="outline"
+                size="sm"
+                className="w-[calc(50%-0.375rem)]"
               >
-                <Image
-                  src={book.cover}
-                  alt={book.title}
-                  layout="fill"
-                  objectFit="cover"
-                  className="rounded-md shadow-sm"
-                />
-                {(!isMobile || !selectedBooks.includes(book.id)) && (
-                  <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-200">
-                    <p className="text-white text-center text-xs p-1">
-                      {book.author}
-                    </p>
-                  </div>
-                )}
-                {selectedBooks.includes(book.id) && (
-                  <div className="absolute inset-0 bg-blue-500 bg-opacity-30 flex items-center justify-center">
-                    <CheckCircle className="text-white w-8 h-8" />
-                  </div>
-                )}
-              </div>
-              <p className="mt-1 text-xs font-medium text-center line-clamp-2 w-24">
-                {book.title}
-              </p>
+                Select All
+              </Button>
+              <Button
+                onClick={handleDeselectAll}
+                variant="outline"
+                size="sm"
+                className="w-[calc(50%-0.375rem)]"
+              >
+                Deselect All
+              </Button>
             </div>
-          ))}
-        </div>
-      </CardContent>
-      <CardFooter className="flex justify-center">
-        <Button onClick={handleSubmit} className="w-full max-w-xs">
-          Start Quiz with Selected Books
+            {books.map((book) => (
+              <div key={book.id} className="flex flex-col items-center">
+                <div
+                  className={`relative w-24 h-36 cursor-pointer transition-all duration-200 rounded-md overflow-hidden ${
+                    selectedBooks.includes(book.id)
+                      ? "ring-4 ring-blue-500"
+                      : ""
+                  }`}
+                  onClick={() => handleToggleBook(book.id)}
+                >
+                  <Image
+                    src={book.cover}
+                    alt={book.title}
+                    layout="fill"
+                    objectFit="cover"
+                    className="rounded-md shadow-sm"
+                  />
+                  {(!isMobile || !selectedBooks.includes(book.id)) && (
+                    <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-200">
+                      <p className="text-white text-center text-xs p-1">
+                        {book.author}
+                      </p>
+                    </div>
+                  )}
+                  {selectedBooks.includes(book.id) && (
+                    <div className="absolute inset-0 bg-blue-500 bg-opacity-30 flex items-center justify-center">
+                      <CheckCircle className="text-white w-8 h-8" />
+                    </div>
+                  )}
+                </div>
+                <p className="mt-1 text-xs font-medium text-center line-clamp-2 w-24">
+                  {book.title}
+                </p>
+              </div>
+            ))}
+          </div>
+        </CardContent>
+      </Card>
+      <div className="fixed bottom-0 left-0 right-0 p-4 md:static md:p-0 md:mt-4 flex justify-center">
+        <Button
+          onClick={handleSubmit}
+          className="w-auto px-8 py-6 text-lg font-semibold group"
+        >
+          Start Quiz
+          <ArrowRight className="ml-2 h-5 w-5 animate-move-arrow" />
         </Button>
-      </CardFooter>
-    </Card>
+      </div>
+    </div>
   );
 }
