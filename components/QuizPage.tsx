@@ -171,7 +171,7 @@ export default function QuizPage({
   }
 
   return (
-    <Card className="w-full max-w-2xl mx-auto">
+    <Card className="w-full max-w-2xl mx-auto bg-slate-100">
       <CardHeader>
         <CardTitle className="text-2xl font-bold text-center">
           OBOB Quiz - {quizMode === "personal" ? "Personal" : "Friend"} Mode
@@ -207,7 +207,12 @@ export default function QuizPage({
                   </span>
                 )}
               </p>
-              <p className="text-xl mb-4">{currentQuestion.text}</p>
+              <p className="text-xl mb-4">
+                {currentQuestion.type === "in-which-book" &&
+                currentQuestion.text.startsWith("In which book")
+                  ? "..." + currentQuestion.text.slice("In which book".length)
+                  : currentQuestion.text}
+              </p>
             </CardContent>
           </Card>
           {quizMode === "friend" && (
