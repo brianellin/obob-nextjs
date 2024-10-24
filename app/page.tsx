@@ -9,11 +9,12 @@ import {
 } from "@/components/ui/card";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
+import ModeSelection from "@/components/ModeSelection";
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-white p-2">
-      <Card className="bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 text-white">
+      <Card className="bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 text-white mb-8">
         <CardHeader>
           <CardTitle className="text-2xl">Welcome to OBOB.dog!</CardTitle>
           <CardDescription className="text-white text-lg">
@@ -38,9 +39,7 @@ export default function Home() {
         </CardFooter>
       </Card>
 
-      <Link href="/battle" passHref>
-        Start a battle
-      </Link>
+      <ModeSelection />
     </main>
   );
 }

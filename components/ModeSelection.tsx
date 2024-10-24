@@ -8,12 +8,9 @@ import {
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { User, Users } from "lucide-react";
+import Link from "next/link";
 
-type ModeSelectionProps = {
-  onModeSelect: (mode: "personal" | "friend") => void;
-};
-
-export default function ModeSelection({ onModeSelect }: ModeSelectionProps) {
+export default function ModeSelection() {
   return (
     <div className="space-y-8">
       <div className="grid gap-6 md:grid-cols-2">
@@ -28,12 +25,11 @@ export default function ModeSelection({ onModeSelect }: ModeSelectionProps) {
             </p>
           </CardContent>
           <CardFooter>
-            <Button
-              onClick={() => onModeSelect("personal")}
-              className="w-full bg-purple-500 text-white hover:bg-purple-600 transition-colors"
-            >
-              <User className="mr-2 h-4 w-4" /> Play solo
-            </Button>
+            <Link href="/battle?mode=personal" passHref className="w-full">
+              <Button className="w-full bg-purple-500 text-white hover:bg-purple-600 transition-colors">
+                <User className="mr-2 h-4 w-4" /> Play solo
+              </Button>
+            </Link>
           </CardFooter>
         </Card>
         <Card>
@@ -50,12 +46,11 @@ export default function ModeSelection({ onModeSelect }: ModeSelectionProps) {
             </p>
           </CardContent>
           <CardFooter>
-            <Button
-              onClick={() => onModeSelect("friend")}
-              className="w-full bg-cyan-400 hover:bg-cyan-500 transition-colors"
-            >
-              <Users className="mr-2 h-4 w-4" /> Play with friends
-            </Button>
+            <Link href="/battle?mode=friend" passHref className="w-full">
+              <Button className="w-full bg-cyan-400 hover:bg-cyan-500 transition-colors">
+                <Users className="mr-2 h-4 w-4" /> Play with friends
+              </Button>
+            </Link>
           </CardFooter>
         </Card>
       </div>

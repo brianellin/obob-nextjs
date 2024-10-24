@@ -12,6 +12,7 @@ import {
 import { SkipForward, Redo } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 import { Progress } from "@/components/ui/progress";
+import { WavyUnderline } from "./WavyUnderline";
 
 type Question = {
   type: "in-which-book" | "content";
@@ -171,10 +172,12 @@ export default function QuizPage({
   }
 
   return (
-    <Card className="w-full max-w-2xl mx-auto bg-slate-100">
+    <Card className="w-full max-w-2xl mx-auto border-none shadow-none">
       <CardHeader>
         <CardTitle className="text-2xl font-bold text-center">
-          {quizMode === "personal" ? "Solo battle" : "Friend battle"}
+          <WavyUnderline style={4} thickness={5} color="text-lime-200">
+            {quizMode === "personal" ? "Solo battle" : "Friend battle"}
+          </WavyUnderline>
         </CardTitle>
       </CardHeader>
       <CardContent>

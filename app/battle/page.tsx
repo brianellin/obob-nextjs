@@ -1,22 +1,27 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Suspense } from "react";
+import { useSearchParams } from "next/navigation";
 import ModeSelection from "@/components/ModeSelection";
 import BookSelection from "@/components/BookSelection";
 import QuizPage from "@/components/QuizPage";
 
-export default function BattlePage() {
+function BattleContent() {
+  const searchParams = useSearchParams();
   const [selectedBooks, setSelectedBooks] = useState<string[]>([]);
   const [quizMode, setQuizMode] = useState<"personal" | "friend" | null>(null);
   const [quizStarted, setQuizStarted] = useState(false);
 
   useEffect(() => {
+    const mode = searchParams.get("mode") as "personal" | "friend" | null;
+    if (mode) {
+      setQuizMode(mode);
+    }
+  }, [searchParams]);
+
+  useEffect(() => {
     window.scrollTo(0, 0);
   }, [quizMode, quizStarted]);
-
-  const handleSelectMode = (mode: "personal" | "friend") => {
-    setQuizMode(mode);
-  };
 
   const handleSelectBooks = (books: string[]) => {
     setSelectedBooks(books);
@@ -29,19 +34,27 @@ export default function BattlePage() {
     setQuizMode(null);
   };
 
+  if (quizMode === null) {
+    return <ModeSelection />;
+  }
+
+  if (!quizStarted) {
+    return <BookSelection onSelectBooks={handleSelectBooks} />;
+  }
+
   return (
-    <main className="min-h-screen bg-white p-4">
-      {quizMode === null ? (
-        <ModeSelection onModeSelect={handleSelectMode} />
-      ) : !quizStarted ? (
-        <BookSelection onSelectBooks={handleSelectBooks} />
-      ) : (
-        <QuizPage
-          selectedBooks={selectedBooks}
-          quizMode={quizMode}
-          onQuizEnd={handleQuizEnd}
-        />
-      )}
-    </main>
+    <QuizPage
+      selectedBooks={selectedBooks}
+      quizMode={quizMode}
+      onQuizEnd={handleQuizEnd}
+    />
+  );
+}
+
+export default function BattlePage() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <BattleContent />
+    </Suspense>
   );
 }

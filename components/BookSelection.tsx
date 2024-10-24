@@ -155,10 +155,10 @@ export default function BookSelection({ onSelectBooks }: BookSelectionProps) {
 
   return (
     <div className="min-h-screen pb-20 md:pb-0 relative">
-      <Card className="w-full max-w-6xl mx-auto mb-4">
+      <Card className="w-full max-w-6xl mx-auto mb-4 border-none shadow-none">
         <CardHeader>
           <CardTitle className="text-2xl font-bold text-center">
-            Select Books for Quiz
+            Select Books
           </CardTitle>
         </CardHeader>
         <CardContent className="p-2 sm:p-4">
@@ -228,7 +228,7 @@ export default function BookSelection({ onSelectBooks }: BookSelectionProps) {
           onClick={handleSubmit}
           className="w-auto px-8 py-6 text-lg font-semibold group bg-cyan-400 "
         >
-          Start Quiz
+          Start Battle
           <ArrowRight className="ml-2 h-8 w-8 animate-move-arrow" />
         </Button>
       </div>
