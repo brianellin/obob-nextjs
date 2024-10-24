@@ -6,7 +6,7 @@ module.exports = {
 	  './components/**/*.{ts,tsx}',
 	  './app/**/*.{ts,tsx}',
 	  './src/**/*.{ts,tsx}',
-	  ],
+	],
 	theme: {
 	  container: {
 		center: true,
@@ -16,6 +16,9 @@ module.exports = {
 		},
 	  },
 	  extend: {
+		fontFamily: {
+		  sans: ['Inter', 'sans-serif'],
+		},
 		colors: {
 		  border: "hsl(var(--border))",
 		  input: "hsl(var(--input))",
