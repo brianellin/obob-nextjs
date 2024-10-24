@@ -28,7 +28,7 @@ type QuizPageProps = {
   onQuizEnd: () => void;
 };
 
-const TIMER_DURATION = 15000; // 15 seconds in milliseconds
+const TIMER_DURATION = 15; // 15 seconds
 
 export default function QuizPage({
   selectedBooks,
@@ -44,8 +44,7 @@ export default function QuizPage({
   const [timeLeft, setTimeLeft] = useState(TIMER_DURATION);
   const [isTimerRunning, setIsTimerRunning] = useState(false);
   const boopSound = useRef<HTMLAudioElement | null>(null);
-  const timerRef = useRef<number | null>(null);
-  const startTimeRef = useRef<number | null>(null);
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
     fetch("/questions.json")
@@ -67,35 +66,29 @@ export default function QuizPage({
 
   useEffect(() => {
     if (isTimerRunning && timeLeft > 0) {
-      startTimeRef.current = Date.now() - (TIMER_DURATION - timeLeft);
-      timerRef.current = window.requestAnimationFrame(updateTimer);
-    } else if (timeLeft <= 0) {
+      timerRef.current = setInterval(() => {
+        setTimeLeft((prevTime) => {
+          if (prevTime <= 1) {
+            clearInterval(timerRef.current as NodeJS.Timeout);
+            setIsTimerRunning(false);
+            setShowAnswer(true);
+            boopSound.current?.play();
+            return 0;
+          }
+          return prevTime - 1;
+        });
+      }, 1000);
+    } else if (timeLeft === 0) {
       setIsTimerRunning(false);
       setShowAnswer(true);
-      boopSound.current?.play();
     }
+
     return () => {
       if (timerRef.current) {
-        window.cancelAnimationFrame(timerRef.current);
+        clearInterval(timerRef.current);
       }
     };
   }, [isTimerRunning, timeLeft]);
-
-  const updateTimer = () => {
-    if (startTimeRef.current) {
-      const elapsedTime = Date.now() - startTimeRef.current;
-      const newTimeLeft = Math.max(TIMER_DURATION - elapsedTime, 0);
-      setTimeLeft(newTimeLeft);
-
-      if (newTimeLeft > 0) {
-        timerRef.current = window.requestAnimationFrame(updateTimer);
-      } else {
-        setIsTimerRunning(false);
-        setShowAnswer(true);
-        boopSound.current?.play();
-      }
-    }
-  };
 
   const handleShowAnswer = () => {
     setShowAnswer(true);
@@ -105,7 +98,6 @@ export default function QuizPage({
     setIsTimerRunning(true);
     setTimeLeft(TIMER_DURATION);
     setShowAnswer(false);
-    startTimeRef.current = Date.now();
   };
 
   const handleAnswer = (points: number) => {
@@ -232,12 +224,10 @@ export default function QuizPage({
                 <>
                   <Progress
                     value={((TIMER_DURATION - timeLeft) / TIMER_DURATION) * 100}
-                    className="w-full h-3 transition-all duration-100 ease-linear"
+                    className="w-full h-3"
                   />
                   <p className="text-center font-semibold">
-                    {timeLeft > 0
-                      ? `Time left: ${Math.ceil(timeLeft / 1000)}s`
-                      : "Time's up!"}
+                    {timeLeft > 0 ? `Time left: ${timeLeft}s` : "Time's up!"}
                   </p>
                 </>
               )}
