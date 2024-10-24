@@ -7,9 +7,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { BookOpen, User, Users } from "lucide-react";
-import Link from "next/link";
-import { WavyUnderline } from "./WavyUnderline";
+import { User, Users } from "lucide-react";
 
 type ModeSelectionProps = {
   onModeSelect: (mode: "personal" | "friend") => void;

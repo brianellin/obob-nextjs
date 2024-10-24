@@ -25,7 +25,7 @@ export default function AboutPage() {
             <p>
               obob.dog is a fun and interactive quiz app designed to help
               students practice for the Oregon Battle of the Books (OBOB)
-              competition. It's a{" "}
+              competition. It&apos;s a{" "}
               <WavyUnderline thickness={3} color="text-green-500">
                 paw-some
               </WavyUnderline>{" "}
