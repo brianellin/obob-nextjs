@@ -1,47 +1,48 @@
-"use client";
-
 import React, { useState, useEffect } from "react";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+  CardFooter,
+  CardDescription,
+} from "@/components/ui/card";
+import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 import ModeSelection from "@/components/ModeSelection";
-import BookSelection from "@/components/BookSelection";
-import QuizPage from "@/components/QuizPage";
 
 export default function Home() {
-  const [selectedBooks, setSelectedBooks] = useState<string[]>([]);
-  const [quizMode, setQuizMode] = useState<"personal" | "friend" | null>(null);
-  const [quizStarted, setQuizStarted] = useState(false);
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [quizMode, quizStarted]);
-
-  const handleSelectMode = (mode: "personal" | "friend") => {
-    setQuizMode(mode);
-  };
-
-  const handleSelectBooks = (books: string[]) => {
-    setSelectedBooks(books);
-    setQuizStarted(true);
-  };
-
-  const handleQuizEnd = () => {
-    setQuizStarted(false);
-    setSelectedBooks([]);
-    setQuizMode(null);
-  };
-
   return (
-    <main className="min-h-screen bg-white p-4">
-      {quizMode === null ? (
-        <ModeSelection onSelectMode={handleSelectMode} />
-      ) : !quizStarted ? (
-        <BookSelection onSelectBooks={handleSelectBooks} />
-      ) : (
-        <QuizPage
-          selectedBooks={selectedBooks}
-          quizMode={quizMode}
-          onQuizEnd={handleQuizEnd}
-        />
-      )}
+    <main className="min-h-screen bg-white p-2">
+      <Card className="bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 text-white">
+        <CardHeader>
+          <CardTitle className="text-2xl">Welcome to OBOB.dog!</CardTitle>
+          <CardDescription className="text-white text-lg">
+            Your fun practice buddy for Oregon Battle of the Books
+          </CardDescription>
+        </CardHeader>
+        <CardContent>
+          <p className="text-lg">
+            Ready to become an OBOB champion? Choose your adventure below and
+            start your journey through amazing books!
+          </p>
+        </CardContent>
+        <CardFooter>
+          <Link href="/about" passHref>
+            <Button
+              variant="secondary"
+              className="text-black hover:text-white transition-colors"
+            >
+              Learn More <ArrowRight className="ml-2 h-4 w-4" />
+            </Button>
+          </Link>
+        </CardFooter>
+      </Card>
+
+      <Link href="/battle" passHref>
+        Start a battle
+      </Link>
     </main>
   );
 }

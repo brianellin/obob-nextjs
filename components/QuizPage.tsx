@@ -174,7 +174,7 @@ export default function QuizPage({
     <Card className="w-full max-w-2xl mx-auto bg-slate-100">
       <CardHeader>
         <CardTitle className="text-2xl font-bold text-center">
-          OBOB Quiz - {quizMode === "personal" ? "Personal" : "Friend"} Mode
+          {quizMode === "personal" ? "Solo battle" : "Friend battle"}
         </CardTitle>
       </CardHeader>
       <CardContent>

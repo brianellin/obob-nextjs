@@ -1,72 +1,66 @@
-"use client";
-
-import { useEffect } from "react";
-import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
+  CardDescription,
+  CardFooter,
   CardHeader,
   CardTitle,
-  CardDescription,
 } from "@/components/ui/card";
-import { User, Users } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { BookOpen, User, Users } from "lucide-react";
+import Link from "next/link";
+import { WavyUnderline } from "./WavyUnderline";
 
 type ModeSelectionProps = {
-  onSelectMode: (mode: "personal" | "friend") => void;
+  onModeSelect: (mode: "personal" | "friend") => void;
 };
 
-export default function ModeSelection({ onSelectMode }: ModeSelectionProps) {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
+export default function ModeSelection({ onModeSelect }: ModeSelectionProps) {
   return (
-    <Card className="w-full max-w-3xl mx-auto">
-      <CardHeader>
-        <CardTitle className="text-3xl font-bold text-center">
-          Select Quiz Mode
-        </CardTitle>
-        <CardDescription className="text-center text-lg mt-2">
-          Choose how you want to practice for the Oregon Battle of the Books
-        </CardDescription>
-      </CardHeader>
-      <CardContent className="flex flex-col space-y-6">
-        <Card className="hover:shadow-lg transition-shadow duration-300">
-          <CardContent className="p-6">
-            <Button
-              onClick={() => onSelectMode("personal")}
-              className="w-full flex items-center justify-center text-lg py-8 px-6"
-            >
-              <div className="flex items-center">
-                <User className="mr-4 h-8 w-8" />
-                <span className="text-xl font-semibold">Personal Mode</span>
-              </div>
-            </Button>
-            <p className="mt-4 text-gray-600">
-              Practice on your own with a 15-second timer for each question.
-              Great for individual study and improving your speed!
+    <div className="space-y-8">
+      <div className="grid gap-6 md:grid-cols-2">
+        <Card>
+          <CardHeader>
+            <CardTitle>Solo battle</CardTitle>
+            <CardDescription>Practice at your own pace</CardDescription>
+          </CardHeader>
+          <CardContent>
+            <p>
+              Read and answer OBOB questions on your own, without time pressure.
             </p>
           </CardContent>
-        </Card>
-
-        <Card className="hover:shadow-lg transition-shadow duration-300">
-          <CardContent className="p-6">
+          <CardFooter>
             <Button
-              onClick={() => onSelectMode("friend")}
-              className="w-full flex items-center justify-center text-lg py-8 px-6"
+              onClick={() => onModeSelect("personal")}
+              className="w-full bg-purple-500 text-white hover:bg-purple-600 transition-colors"
             >
-              <div className="flex items-center">
-                <Users className="mr-4 h-8 w-8" />
-                <span className="text-xl font-semibold">Friend Mode</span>
-              </div>
+              <User className="mr-2 h-4 w-4" /> Play solo
             </Button>
-            <p className="mt-4 text-gray-600">
-              Quiz a friend or have them quiz you. No timer, just mark answers
-              as correct or incorrect. Perfect for group study sessions!
+          </CardFooter>
+        </Card>
+        <Card>
+          <CardHeader>
+            <CardTitle>Friend battle</CardTitle>
+            <CardDescription>
+              Practice a real<i>ish</i> OBOB battle
+            </CardDescription>
+          </CardHeader>
+          <CardContent>
+            <p>
+              Have a friend or parent read timed questions aloud to your or your
+              team.
             </p>
           </CardContent>
+          <CardFooter>
+            <Button
+              onClick={() => onModeSelect("friend")}
+              className="w-full bg-cyan-400 hover:bg-cyan-500 transition-colors"
+            >
+              <Users className="mr-2 h-4 w-4" /> Play with friends
+            </Button>
+          </CardFooter>
         </Card>
-      </CardContent>
-    </Card>
+      </div>
+    </div>
   );
 }

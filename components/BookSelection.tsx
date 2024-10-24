@@ -161,8 +161,12 @@ export default function BookSelection({ onSelectBooks }: BookSelectionProps) {
             Select Books for Quiz
           </CardTitle>
         </CardHeader>
-        <CardContent>
+        <CardContent className="p-2 sm:p-4">
+          {" "}
+          {/* Update: Added sm:p-4 */}
           <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-8 gap-3">
+            {" "}
+            {/* No changes needed here based on the provided updates */}
             <div className="col-span-full flex justify-between mb-4">
               <Button
                 onClick={handleSelectAll}
@@ -186,7 +190,7 @@ export default function BookSelection({ onSelectBooks }: BookSelectionProps) {
                 <div
                   className={`relative w-24 h-36 cursor-pointer transition-all duration-200 rounded-md overflow-hidden ${
                     selectedBooks.includes(book.id)
-                      ? "ring-4 ring-blue-500"
+                      ? "ring-4 ring-purple-600"
                       : ""
                   }`}
                   onClick={() => handleToggleBook(book.id)}
@@ -206,7 +210,7 @@ export default function BookSelection({ onSelectBooks }: BookSelectionProps) {
                     </div>
                   )}
                   {selectedBooks.includes(book.id) && (
-                    <div className="absolute inset-0 bg-blue-500 bg-opacity-30 flex items-center justify-center">
+                    <div className="absolute inset-0 bg-purple-600 bg-opacity-30 flex items-center justify-center">
                       <CheckCircle className="text-white w-8 h-8" />
                     </div>
                   )}
@@ -222,10 +226,10 @@ export default function BookSelection({ onSelectBooks }: BookSelectionProps) {
       <div className="fixed bottom-0 left-0 right-0 p-4 md:static md:p-0 md:mt-4 flex justify-center">
         <Button
           onClick={handleSubmit}
-          className="w-auto px-8 py-6 text-lg font-semibold group"
+          className="w-auto px-8 py-6 text-lg font-semibold group bg-cyan-400 "
         >
           Start Quiz
-          <ArrowRight className="ml-2 h-5 w-5 animate-move-arrow" />
+          <ArrowRight className="ml-2 h-8 w-8 animate-move-arrow" />
         </Button>
       </div>
     </div>
