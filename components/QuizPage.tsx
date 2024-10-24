@@ -196,22 +196,27 @@ export default function QuizPage({
           </div>
           <Card className="bg-white shadow-lg">
             <CardContent className="p-4">
-              <p className="text-lg font-medium mb-2">
+              <p className="text-xl mb-4">
                 {currentQuestion.type === "in-which-book" ? (
-                  <span className="font-bold text-blue-500">
-                    In which book...
+                  <span>
+                    <span className="font-bold text-blue-500">
+                      In which book{" "}
+                    </span>
+                    {currentQuestion.text.replace(/^In which book\s*/i, "")}
                   </span>
                 ) : (
-                  <span className="font-bold text-green-500">
-                    {currentQuestion.book} by {currentQuestion.author}
+                  <span>
+                    In{" "}
+                    <span className="font-bold text-blue-500">
+                      {currentQuestion.book}
+                    </span>{" "}
+                    by{" "}
+                    <span className="font-bold text-blue-500">
+                      {currentQuestion.author}
+                    </span>{" "}
+                    - {currentQuestion.text}
                   </span>
                 )}
-              </p>
-              <p className="text-xl mb-4">
-                {currentQuestion.type === "in-which-book" &&
-                currentQuestion.text.startsWith("In which book")
-                  ? "..." + currentQuestion.text.slice("In which book".length)
-                  : currentQuestion.text}
               </p>
             </CardContent>
           </Card>

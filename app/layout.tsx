@@ -1,12 +1,13 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { Header } from "@/components/Header";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Oregon Battle of the Books to Go",
-  description: "Practice your OBOB knowledge with this interactive quiz app",
+  title: "obob.dog - practice oregon battle of the books with your pack",
+  description: "practice oregon battle of the books with your pack. woof!",
 };
 
 export default function RootLayout({
@@ -16,7 +17,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <Header />
+        <main className="container mx-auto px-4 py-8">{children}</main>
+      </body>
     </html>
   );
 }
