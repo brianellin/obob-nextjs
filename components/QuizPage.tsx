@@ -13,15 +13,7 @@ import { SkipForward, Redo } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 import { Progress } from "@/components/ui/progress";
 import { WavyUnderline } from "./WavyUnderline";
-
-type Question = {
-  type: "in-which-book" | "content";
-  text: string;
-  book?: string;
-  author?: string;
-  answer: string;
-  page: number;
-};
+import type { Question } from "@/types";
 
 type QuizPageProps = {
   selectedBooks: string[];
