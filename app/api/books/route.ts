@@ -1,16 +1,17 @@
 import { NextResponse } from 'next/server';
 import path from 'path';
 import fs from 'fs/promises';
+import { Book, Books } from '@/types';
 
 export async function GET() {
   try {
     const filePath = path.join(process.cwd(), 'public/obob/books.json');
     const fileContents = await fs.readFile(filePath, 'utf8');
-    const data = JSON.parse(fileContents);
+    const data = JSON.parse(fileContents) as { books: Books };
 
     // Add bookKey to each book object
     const booksWithKeys = Object.fromEntries(
-      Object.entries(data.books).map(([key, book]) => [
+      Object.entries(data.books).map(([key, book]: [string, Book]) => [
         key,
         { ...book, bookKey: key }
       ])

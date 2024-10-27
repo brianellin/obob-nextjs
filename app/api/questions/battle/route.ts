@@ -17,8 +17,8 @@ export async function POST(request: Request) {
       fs.readFile(booksPath, 'utf8')
     ]);
     
-    const questionsData = JSON.parse(questionsFile);
-    const booksData = JSON.parse(booksFile);
+    const questionsData = JSON.parse(questionsFile) as { questions: Question[] };
+    const booksData = JSON.parse(booksFile) as { books: Record<string, Book> };
 
     // Filter questions based on selected books
     const filteredQuestions = questionsData.questions.filter((q: Question) =>
@@ -31,7 +31,7 @@ export async function POST(request: Request) {
     if (selectedBooks.length < 4) {
       // If less than 4 books, only use content questions
       const contentQuestions = filteredQuestions
-        .filter(q => q.type === 'content')
+        .filter((q: Question) => q.type === 'content')
         .sort(() => Math.random() - 0.5)
         .slice(0, 8);
 
@@ -44,12 +44,12 @@ export async function POST(request: Request) {
     } else {
       // Normal case with both types of questions
       const inWhichBookQuestions = filteredQuestions
-        .filter(q => q.type === 'in-which-book')
+        .filter((q: Question) => q.type === 'in-which-book')
         .sort(() => Math.random() - 0.5)
         .slice(0, 4);
 
       const contentQuestions = filteredQuestions
-        .filter(q => q.type === 'content')
+        .filter((q: Question) => q.type === 'content')
         .sort(() => Math.random() - 0.5)
         .slice(0, 4);
 

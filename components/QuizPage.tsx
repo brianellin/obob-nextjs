@@ -13,7 +13,7 @@ import { SkipForward, Redo, Bone } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 import { Progress } from "@/components/ui/progress";
 import { WavyUnderline } from "./WavyUnderline";
-import type { Question, QuestionWithBook, Book, Books } from "@/types";
+import type { QuestionWithBook, Book } from "@/types";
 
 type QuizPageProps = {
   selectedBooks: Book[]; // Changed from string[] to Book[]

@@ -1,4 +1,5 @@
 export type Book = {
+  bookKey: string;
   title: string;
   author: string;
   cover: string;
@@ -28,6 +29,11 @@ export type ContentQuestion = BaseQuestion & {
 
 export type Question = InWhichBookQuestion | ContentQuestion;
 
-export type QuestionWithBook = Omit<Question, 'bookKey'> & {
+export type QuestionWithBook = {
   book: Book;
-};
+  page: number;
+  text: string;
+} & (
+  | { type: "in-which-book" }
+  | { type: "content"; answer: string }
+);
