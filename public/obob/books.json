@@ -1,0 +1,116 @@
+{
+  "books": {
+    "time-travelers": {
+      "title": "A Time Traveler's Theory of Relativity",
+      "author": "Nicole Valentine",
+      "cover": "/cover_images/time_travelers.jpg",
+      "obob_division": "3-5",
+      "obob_year": "2024-2025"
+    },
+    "before-ever-after": {
+      "title": "Before the Ever After",
+      "author": "Jacqueline Woodson",
+      "cover": "/cover_images/before_the_ever_after.jpg",
+      "obob_division": "3-5",
+      "obob_year": "2024-2025"
+    },
+    "circus-mirandus": {
+      "title": "Circus Mirandus",
+      "author": "Cassie Beasley",
+      "cover": "/cover_images/circus_mirandus.jpg",
+      "obob_division": "3-5",
+      "obob_year": "2024-2025"
+    },
+    "fifty-four-things-wrong-with-gwendolyn-rogers": {
+      "title": "Fifty-Four Things Wrong with Gwendolyn Rogers",
+      "author": "Caela Carter",
+      "cover": "/cover_images/54_things.jpg",
+      "obob_division": "3-5",
+      "obob_year": "2024-2025"
+    },
+    "frizzy": {
+      "title": "Frizzy",
+      "author": "Claribel A. Ortega",
+      "cover": "/cover_images/frizzy.jpg",
+      "obob_division": "3-5",
+      "obob_year": "2024-2025"
+    },
+    "jd-and-the-great-barber-battle": {
+      "title": "J.D. and the Great Barber Battle",
+      "author": "J. Dillard",
+      "cover": "/cover_images/jd_barber.jpg",
+      "obob_division": "3-5",
+      "obob_year": "2024-2025"
+    },
+    "just-jerry": {
+      "title": "Just Jerry: How Drawing Shaped My Life",
+      "author": "Jerry Pinkney",
+      "cover": "/cover_images/just_jerry.jpg",
+      "obob_division": "3-5",
+      "obob_year": "2024-2025"
+    },
+    "leonard-my-life-as-a-cat": {
+      "title": "Leonard (My Life as a Cat)",
+      "author": "Carlie Sorosiak",
+      "cover": "/cover_images/leonard_cat.jpg",
+      "obob_division": "3-5",
+      "obob_year": "2024-2025"
+    },
+    "marshmallow-jordan": {
+      "title": "Marshmallow & Jordan",
+      "author": "Alina Chau",
+      "cover": "/cover_images/marshmallow_jordan.jpg",
+      "obob_division": "3-5",
+      "obob_year": "2024-2025"
+    },
+    "sam-makes-a-splash": {
+      "title": "Sam Makes a Splash",
+      "author": "Nicole Melleby",
+      "cover": "/cover_images/sam_makes_a_splash.jpg",
+      "obob_division": "3-5",
+      "obob_year": "2024-2025"
+    },
+    "solimar-the-sword-of-the-monarchs": {
+      "title": "Solimar: The Sword of the Monarchs",
+      "author": "Pam Munoz Ryan",
+      "cover": "/cover_images/solimar.jpg",
+      "obob_division": "3-5",
+      "obob_year": "2024-2025"
+    },
+    "mystwick-school-of-musicraft": {
+      "title": "The Mystwick School of Musicraft",
+      "author": "Jessica Koury",
+      "cover": "/cover_images/mystwick_music.jpg",
+      "obob_division": "3-5",
+      "obob_year": "2024-2025"
+    },
+    "the-name-of-this-book-is-secret": {
+      "title": "The Name of This Book Is Secret",
+      "author": "Pseudonymous Bosch",
+      "cover": "/cover_images/the_name_of_this_book_is_secret.jpg",
+      "obob_division": "3-5",
+      "obob_year": "2024-2025"
+    },
+    "the-wild-robot": {
+      "title": "The Wild Robot",
+      "author": "Peter Brown",
+      "cover": "/cover_images/wild_robot.jpg",
+      "obob_division": "3-5",
+      "obob_year": "2024-2025"
+    },
+    "thirst": {
+      "title": "Thirst",
+      "author": "Varsha Bajaj",
+      "cover": "/cover_images/thirst.jpg",
+      "obob_division": "3-5",
+      "obob_year": "2024-2025"
+    },
+    "twins": {
+      "title": "Twins",
+      "author": "Varian Johnson & Shannon Wright",
+      "cover": "/cover_images/twins.jpg",
+      "obob_division": "3-5",
+      "obob_year": "2024-2025"
+    }
+  }
+}

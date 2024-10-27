@@ -9,14 +9,14 @@ import {
   CardTitle,
   CardFooter,
 } from "@/components/ui/card";
-import { SkipForward, Redo } from "lucide-react";
+import { SkipForward, Redo, Bone } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 import { Progress } from "@/components/ui/progress";
 import { WavyUnderline } from "./WavyUnderline";
-import type { Question } from "@/types";
+import type { Question, QuestionWithBook, Book, Books } from "@/types";
 
 type QuizPageProps = {
-  selectedBooks: string[];
+  selectedBooks: Book[]; // Changed from string[] to Book[]
   quizMode: "personal" | "friend";
   onQuizEnd: () => void;
 };
@@ -28,7 +28,8 @@ export default function QuizPage({
   quizMode,
   onQuizEnd,
 }: QuizPageProps) {
-  const [questions, setQuestions] = useState<Question[]>([]);
+  const [questions, setQuestions] = useState<QuestionWithBook[]>([]);
+  const [message, setMessage] = useState<string | null>(null);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [score, setScore] = useState(0);
   const [showAnswer, setShowAnswer] = useState(false);
@@ -40,20 +41,29 @@ export default function QuizPage({
   const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
-    fetch("/questions.json")
-      .then((response) => response.json())
-      .then((data) => {
-        const filteredQuestions = data.questions.filter(
-          (q: Question) =>
-            selectedBooks.includes(q.book || "") ||
-            selectedBooks.some((book: string) => q.answer.includes(book))
-        );
-        const shuffledQuestions = filteredQuestions.sort(
-          () => Math.random() - 0.5
-        );
-        setQuestions(shuffledQuestions.slice(0, 10));
-      });
+    const loadQuestions = async () => {
+      try {
+        const response = await fetch("/api/questions/battle", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ selectedBooks }),
+        });
 
+        if (!response.ok) {
+          throw new Error("Failed to load questions");
+        }
+
+        const data = await response.json();
+        setQuestions(data.questions);
+        setMessage(data.message);
+      } catch (error) {
+        console.error("Error loading questions:", error);
+      }
+    };
+
+    loadQuestions();
     boopSound.current = new Audio("/boop.mp3");
   }, [selectedBooks]);
 
@@ -151,7 +161,7 @@ export default function QuizPage({
             onClick={restartQuiz}
             className="bg-blue-500 hover:bg-blue-600"
           >
-            <Redo className="mr-2 h-4 w-4" /> Start Another Quiz
+            <Redo className="mr-2 h-4 w-4" /> Start Another Battle
           </Button>
         </CardContent>
         <CardFooter className="justify-center">
@@ -164,136 +174,155 @@ export default function QuizPage({
   }
 
   return (
-    <Card className="w-full max-w-2xl mx-auto border-none shadow-none">
-      <CardHeader>
-        <CardTitle className="text-2xl font-bold text-center">
-          <WavyUnderline style={4} thickness={5} color="text-lime-200">
-            {quizMode === "personal" ? "Solo battle" : "Friend battle"}
-          </WavyUnderline>
-        </CardTitle>
-      </CardHeader>
-      <CardContent>
-        <div className="space-y-4">
-          <div className="flex items-center justify-between">
-            <span className="text-lg font-semibold">
-              Score:
-              <span
-                className={`ml-2 inline-block ${
-                  animateScore ? "animate-score-pop" : ""
-                }`}
-              >
-                {score}
-              </span>
-            </span>
-            <span className="text-lg font-semibold">
-              Question: {currentQuestionIndex + 1}/{questions.length}
-            </span>
-          </div>
-          <Card className="bg-white shadow-lg">
-            <CardContent className="p-4">
-              <p className="text-xl mb-4">
-                {currentQuestion.type === "in-which-book" ? (
-                  <span>
-                    <span className="font-bold text-blue-500">
-                      In which book{" "}
-                    </span>
-                    {currentQuestion.text.replace(/^In which book\s*/i, "")}
-                  </span>
-                ) : (
-                  <span>
-                    In{" "}
-                    <span className="font-bold text-blue-500">
-                      {currentQuestion.book}
-                    </span>{" "}
-                    by{" "}
-                    <span className="font-bold text-blue-500">
-                      {currentQuestion.author}
-                    </span>{" "}
-                    - {currentQuestion.text}
-                  </span>
-                )}
-              </p>
-            </CardContent>
-          </Card>
-          {quizMode === "friend" && (
-            <div className="space-y-2">
-              {!isTimerRunning && !showAnswer && (
-                <Button
-                  onClick={handleStartTimer}
-                  className="w-full bg-blue-500 hover:bg-blue-600"
+    <div className="container mx-auto px-4 py-8">
+      {message && (
+        <Card className="mb-6 bg-yellow-50 border-yellow-200 shadow-sm">
+          <CardContent className="p-4">
+            <div className="flex items-center gap-3">
+              <div className="flex-shrink-0">
+                <Bone className="h-6 w-6 text-yellow-600 rotate-12" />
+              </div>
+              <p className="text-yellow-800 font-medium">{message}</p>
+            </div>
+          </CardContent>
+        </Card>
+      )}
+      <Card className="w-full max-w-4xl mx-auto">
+        <CardHeader>
+          <CardTitle className="text-2xl font-bold text-center">
+            <WavyUnderline style={4} thickness={5} color="text-lime-200">
+              {quizMode === "personal" ? "Solo battle" : "Friend battle"}
+            </WavyUnderline>
+          </CardTitle>
+        </CardHeader>
+        <CardContent>
+          <div className="space-y-4">
+            <div className="flex items-center justify-between">
+              <span className="text-lg font-semibold">
+                Score:
+                <span
+                  className={`ml-2 inline-block ${
+                    animateScore ? "animate-score-pop" : ""
+                  }`}
                 >
-                  Start Timer
+                  {score}
+                </span>
+              </span>
+              <span className="text-lg font-semibold">
+                Question: {currentQuestionIndex + 1}/{questions.length}
+              </span>
+            </div>
+            <Card className="bg-white shadow-lg">
+              <CardContent className="p-4 pb-1">
+                <p className="text-xl mb-4">
+                  {currentQuestion.type === "in-which-book" ? (
+                    <span>
+                      <span className="font-bold text-blue-500">
+                        In which book{" "}
+                      </span>
+                      {currentQuestion.text}
+                    </span>
+                  ) : (
+                    <span>
+                      In{" "}
+                      <span className="font-bold text-blue-500">
+                        {currentQuestion.book.title}
+                      </span>{" "}
+                      by{" "}
+                      <span className="font-bold text-blue-500">
+                        {currentQuestion.book.author}
+                      </span>{" "}
+                      <span className="pt-4 block">{currentQuestion.text}</span>
+                    </span>
+                  )}
+                </p>
+              </CardContent>
+            </Card>
+            {quizMode === "friend" && (
+              <div className="space-y-2">
+                {!isTimerRunning && !showAnswer && (
+                  <Button
+                    onClick={handleStartTimer}
+                    className="w-full bg-blue-500 hover:bg-blue-600"
+                  >
+                    Start Timer
+                  </Button>
+                )}
+                {(isTimerRunning || showAnswer) && (
+                  <>
+                    <Progress
+                      value={
+                        ((TIMER_DURATION - timeLeft) / TIMER_DURATION) * 100
+                      }
+                      className="w-full h-3"
+                    />
+                    <p className="text-center font-semibold">
+                      {timeLeft > 0 ? `Time left: ${timeLeft}s` : "Time's up!"}
+                    </p>
+                  </>
+                )}
+              </div>
+            )}
+            {((quizMode === "personal" && showAnswer) ||
+              (quizMode === "friend" && (showAnswer || isTimerRunning))) && (
+              <div className="bg-yellow-100 p-3 rounded-md mt-4">
+                <p className="text-lg font-semibold">
+                  Answer:{" "}
+                  {currentQuestion.type === "in-which-book"
+                    ? `${currentQuestion.book.title} by ${currentQuestion.book.author}`
+                    : currentQuestion.answer}
+                </p>
+                <p className="text-sm text-gray-600">
+                  Page: {currentQuestion.page}
+                </p>
+              </div>
+            )}
+          </div>
+        </CardContent>
+        <CardFooter className="flex flex-col space-y-4">
+          {quizMode === "personal" && !showAnswer ? (
+            <Button
+              onClick={handleShowAnswer}
+              className="w-full bg-blue-500 hover:bg-blue-600"
+            >
+              Show Answer
+            </Button>
+          ) : (
+            (quizMode === "personal" ||
+              (quizMode === "friend" && (isTimerRunning || showAnswer))) && (
+              <div className="flex flex-col sm:flex-row justify-center space-y-2 sm:space-y-0 sm:space-x-4 w-full">
+                <Button
+                  onClick={() => handleAnswer(5)}
+                  className="bg-green-500 hover:bg-green-600"
+                >
+                  Correct (5 pts)
                 </Button>
-              )}
-              {(isTimerRunning || showAnswer) && (
-                <>
-                  <Progress
-                    value={((TIMER_DURATION - timeLeft) / TIMER_DURATION) * 100}
-                    className="w-full h-3"
-                  />
-                  <p className="text-center font-semibold">
-                    {timeLeft > 0 ? `Time left: ${timeLeft}s` : "Time's up!"}
-                  </p>
-                </>
-              )}
-            </div>
+                <Button
+                  onClick={() => handleAnswer(3)}
+                  className="bg-yellow-500 hover:bg-yellow-600"
+                >
+                  Partially Correct (3 pts)
+                </Button>
+                <Button
+                  onClick={() => handleAnswer(0)}
+                  className="bg-red-500 hover:bg-red-600"
+                >
+                  Incorrect (0 pts)
+                </Button>
+              </div>
+            )
           )}
-          {((quizMode === "personal" && showAnswer) ||
-            (quizMode === "friend" && (showAnswer || isTimerRunning))) && (
-            <div className="bg-yellow-100 p-3 rounded-md mt-4">
-              <p className="text-lg font-semibold">
-                Answer: {currentQuestion.answer}
-              </p>
-              <p className="text-sm text-gray-600">
-                Page: {currentQuestion.page}
-              </p>
-            </div>
-          )}
-        </div>
-      </CardContent>
-      <CardFooter className="flex flex-col space-y-4">
-        {quizMode === "personal" && !showAnswer ? (
+          <Separator className="my-2" />
           <Button
-            onClick={handleShowAnswer}
-            className="w-full bg-blue-500 hover:bg-blue-600"
+            onClick={nextQuestion}
+            variant="outline"
+            className="w-full flex items-center justify-center"
           >
-            Show Answer
+            <SkipForward className="h-4 w-4 sm:mr-2" />
+            <span className="ml-2 sm:ml-0">Skip Question</span>
           </Button>
-        ) : (
-          (quizMode === "personal" ||
-            (quizMode === "friend" && (isTimerRunning || showAnswer))) && (
-            <div className="flex flex-col sm:flex-row justify-center space-y-2 sm:space-y-0 sm:space-x-4 w-full">
-              <Button
-                onClick={() => handleAnswer(5)}
-                className="bg-green-500 hover:bg-green-600"
-              >
-                Correct (5 pts)
-              </Button>
-              <Button
-                onClick={() => handleAnswer(3)}
-                className="bg-yellow-500 hover:bg-yellow-600"
-              >
-                Partially Correct (3 pts)
-              </Button>
-              <Button
-                onClick={() => handleAnswer(0)}
-                className="bg-red-500 hover:bg-red-600"
-              >
-                Incorrect (0 pts)
-              </Button>
-            </div>
-          )
-        )}
-        <Separator className="my-2" />
-        <Button
-          onClick={nextQuestion}
-          variant="outline"
-          className="w-full flex items-center justify-center"
-        >
-          <SkipForward className="h-4 w-4 sm:mr-2" />
-          <span className="ml-2 sm:ml-0">Skip Question</span>
-        </Button>
-      </CardFooter>
-    </Card>
+        </CardFooter>
+      </Card>
+    </div>
   );
 }

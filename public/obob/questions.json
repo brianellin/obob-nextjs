@@ -1,0 +1,309 @@
+{
+  "questions": [
+    {
+      "type": "in-which-book",
+      "text": "is there a talking doll?",
+      "bookKey": "solimar",
+      "page": 65
+    },
+    {
+      "type": "in-which-book",
+      "text": "does someone get a scholarship for a computer class?",
+      "bookKey": "thirst",
+      "page": 85
+    },
+    {
+      "type": "in-which-book",
+      "text": "are chickens described as having \"such tiny brains?\"",
+      "bookKey": "mystwick-school-of-musicraft",
+      "page": 1
+    },
+    {
+      "type": "in-which-book",
+      "text": "does someone have a turtle night light?",
+      "bookKey": "leonard-my-life-as-a-cat",
+      "page": 142
+    },
+    {
+      "type": "in-which-book",
+      "text": "does someone want to make a goat cheese omelet?",
+      "bookKey": "sam-makes-a-splash",
+      "page": 123
+    },
+    {
+      "type": "in-which-book",
+      "text": "does someone camouflage themselves with mud and flowers?",
+      "bookKey": "the-wild-robot",
+      "page": 42
+    },
+    {
+      "type": "in-which-book",
+      "text": "does someone write, \"Never trust a magician?\"",
+      "bookKey": "the-name-of-this-book-is-secret",
+      "page": 124
+    },
+    {
+      "type": "in-which-book",
+      "text": "does someone join Color Guard?",
+      "bookKey": "twins",
+      "page": 245
+    },
+    {
+      "type": "content",
+      "text": "When was Circus Mirandus formed?",
+      "bookKey": "circus-mirandus",
+      "answer": "500 B.C.",
+      "page": 66
+    },
+    {
+      "type": "content",
+      "text": "What is Marlene's favorite class at school?",
+      "bookKey": "frizzy",
+      "answer": "art",
+      "page": 87
+    },
+    {
+      "type": "content",
+      "text": "How many books does Finn take to Gran's?",
+      "bookKey": "time-travelers",
+      "answer": "5",
+      "page": 5
+    },
+    {
+      "type": "content",
+      "text": "What does IEP stand for?",
+      "bookKey": "fifty-four-things-wrong-with-gwendolyn-rogers",
+      "answer": "Individualized Education Plan",
+      "page": 60
+    },
+    {
+      "type": "content",
+      "text": "Whose dad is an ex-Marine?",
+      "bookKey": "jd-and-the-great-barber-battle",
+      "answer": "Xavier",
+      "page": 7
+    },
+    {
+      "type": "content",
+      "text": "What do ZJ and his friends call themselves?",
+      "bookKey": "before-ever-after",
+      "answer": "The Fantastic Four",
+      "page": 8
+    },
+    {
+      "type": "content",
+      "text": "Which NBA team does Stephen Curry play for?",
+      "bookKey": "marshmallow-jordan",
+      "answer": "The Golden State Warriors",
+      "page": 89
+    },
+    {
+      "type": "content",
+      "text": "Which art museum does Jerry have a solo exhibition in?",
+      "bookKey": "just-jerry",
+      "answer": "Philadelphia Museum of Art",
+      "page": 129
+    },
+    {
+      "type": "in-which-book",
+      "text": "does someone like Earl Grey tea with 5 packets of sugar?",
+      "bookKey": "time-travelers",
+      "page": 157
+    },
+    {
+      "type": "in-which-book",
+      "text": "does someone call their bike Magic Broom?",
+      "bookKey": "before-ever-after",
+      "page": 14
+    },
+    {
+      "type": "in-which-book",
+      "text": "does someone make a quipu?",
+      "bookKey": "circus-mirandus",
+      "page": 11
+    },
+    {
+      "type": "in-which-book",
+      "text": "does someone like to wear their hair in two French braids?",
+      "bookKey": "fifty-four-things-wrong-with-gwendolyn-rogers",
+      "page": 13
+    },
+    {
+      "type": "in-which-book",
+      "text": "does someone use ultra hold gel in their hair?",
+      "bookKey": "frizzy",
+      "page": 69
+    },
+    {
+      "type": "in-which-book",
+      "text": "is there a school called Douglass Elementary?",
+      "bookKey": "jd-and-the-great-barber-battle",
+      "page": 14
+    },
+    {
+      "type": "in-which-book",
+      "text": "is there a store called Auggie's grocery?",
+      "bookKey": "just-jerry",
+      "page": 62
+    },
+    {
+      "type": "in-which-book",
+      "text": "is a character named after their father's favorite athlete?",
+      "bookKey": "marshmallow-jordan",
+      "page": 88
+    },
+    {
+      "type": "content",
+      "text": "What is the name of the most famous chain of music stores?",
+      "bookKey": "mystwick-school-of-musicraft",
+      "answer": "Spellstones",
+      "page": 18
+    },
+    {
+      "type": "content",
+      "text": "Where did Sam keep her money before she had a wallet?",
+      "bookKey": "sam-makes-a-splash",
+      "answer": "in a sock",
+      "page": 63
+    },
+    {
+      "type": "content",
+      "text": "What is the name of the Sensorium and Spa?",
+      "bookKey": "the-name-of-this-book-is-secret",
+      "answer": "The Midnight Sun",
+      "page": 162
+    },
+    {
+      "type": "content",
+      "text": "What do the animals call the first hour of dawn?",
+      "bookKey": "the-wild-robot",
+      "answer": "The Dawn Truce",
+      "page": 49
+    },
+    {
+      "type": "content",
+      "text": "Which twin is ¼\" shorter?",
+      "bookKey": "twins",
+      "answer": "Maureen",
+      "page": 10
+    },
+    {
+      "type": "content",
+      "text": "What is Leonard's home planet made of?",
+      "bookKey": "leonard-my-life-as-a-cat",
+      "answer": "helium",
+      "page": 105
+    },
+    {
+      "type": "content",
+      "text": "What type of bird is Lazaro?",
+      "bookKey": "solimar",
+      "answer": "a Quetzal",
+      "page": 2
+    },
+    {
+      "type": "in-which-book",
+      "text": "does someone have a foot made of wood?",
+      "bookKey": "the-wild-robot",
+      "page": 151
+    },
+    {
+      "type": "in-which-book",
+      "text": "does someone destroy some curtains?",
+      "bookKey": "leonard-my-life-as-a-cat",
+      "page": 25
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a family own a Great Dane?",
+      "bookKey": "sam-makes-a-splash",
+      "page": 24
+    },
+    {
+      "type": "in-which-book",
+      "text": "is there a character named Bryce Jackson?",
+      "bookKey": "twins",
+      "page": 27
+    },
+    {
+      "type": "in-which-book",
+      "text": "is there a boulder with a sword shaped crevice?",
+      "bookKey": "solimar",
+      "page": 3
+    },
+    {
+      "type": "in-which-book",
+      "text": "does someone know every two-letter word in the English language?",
+      "bookKey": "time-travelers",
+      "page": 8
+    },
+    {
+      "type": "in-which-book",
+      "text": "is a story hidden underneath double pages of a notebook?",
+      "bookKey": "the-name-of-this-book-is-secret",
+      "page": 112
+    },
+    {
+      "type": "in-which-book",
+      "text": "is someone's middle name Andrea?",
+      "bookKey": "frizzy",
+      "page": 116
+    },
+    {
+      "type": "content",
+      "text": "What city did the author grow up in?",
+      "bookKey": "just-jerry",
+      "answer": "Philadelphia",
+      "page": 6
+    },
+    {
+      "type": "content",
+      "text": "Who makes a pyramid for their school project?",
+      "bookKey": "circus-mirandus",
+      "answer": "Florence",
+      "page": 40
+    },
+    {
+      "type": "content",
+      "text": "What does Nenek clean Marshmallow's knee with?",
+      "bookKey": "marshmallow-jordan",
+      "answer": "Hydrogen peroxide",
+      "page": 34
+    },
+    {
+      "type": "content",
+      "text": "What is Minni's best friend's name?",
+      "bookKey": "thirst",
+      "answer": "Faiza",
+      "page": 6
+    },
+    {
+      "type": "content",
+      "text": "What is Zachariah's football number?",
+      "bookKey": "before-ever-after",
+      "answer": "44",
+      "page": 4
+    },
+    {
+      "type": "content",
+      "text": "What is Gwendolyn's hamster's name?",
+      "bookKey": "fifty-four-things-wrong-with-gwendolyn-rogers",
+      "answer": "Mr. Jojo",
+      "page": 2
+    },
+    {
+      "type": "content",
+      "text": "What is the musicat's name?",
+      "bookKey": "mystwick-school-of-musicraft",
+      "answer": "Wynk",
+      "page": 106
+    },
+    {
+      "type": "content",
+      "text": "How long has Henry Sr. been cutting hair?",
+      "bookKey": "jd-and-the-great-barber-battle",
+      "answer": "58 years",
+      "page": 31
+    }
+  ]
+}
