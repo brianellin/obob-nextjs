@@ -10,7 +10,6 @@ import {
   CardFooter,
 } from "@/components/ui/card";
 import { SkipForward, Redo, Bone, Loader2 } from "lucide-react";
-import { Separator } from "@/components/ui/separator";
 import { Progress } from "@/components/ui/progress";
 import { WavyUnderline } from "./WavyUnderline";
 import type { QuestionWithBook, Book } from "@/types";
@@ -198,57 +197,60 @@ export default function QuizPage({
           </CardContent>
         </Card>
       )}
-      <Card className="w-full max-w-4xl mx-auto">
-        <CardHeader>
-          <CardTitle className="text-2xl font-bold text-center">
+
+      {/* New header section above the card */}
+      <div className="w-full max-w-4xl mx-auto">
+        <div className="flex flex-col  items-center justify-between">
+          <h1 className="text-2xl font-bold mb-5">
             <WavyUnderline style={4} thickness={5} color="text-lime-200">
               {quizMode === "personal" ? "Solo battle" : "Friend battle"}
             </WavyUnderline>
-          </CardTitle>
-        </CardHeader>
-        <CardContent>
-          <div className="space-y-4">
-            <div className="flex items-center justify-between">
-              <span className="text-lg font-semibold">
-                Score:
-                <span
-                  className={`ml-2 inline-block ${
-                    animateScore ? "animate-score-pop" : ""
-                  }`}
-                >
-                  {score}
-                </span>
+          </h1>
+          <div className="w-full flex items-center justify-between gap-4 mb-2">
+            <span className="text-lg font-semibold">
+              Question: {currentQuestionIndex + 1}/{questions.length}
+            </span>
+            <span className="text-lg font-semibold">
+              Score:
+              <span
+                className={`ml-2 inline-block ${
+                  animateScore ? "animate-score-pop" : ""
+                }`}
+              >
+                {score}
               </span>
-              <span className="text-lg font-semibold">
-                Question: {currentQuestionIndex + 1}/{questions.length}
-              </span>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <Card className="w-full max-w-4xl mx-auto">
+        <CardContent className="p-6 mb-0">
+          <div className="">
+            <div>
+              <p className="text-xl mb-4">
+                {currentQuestion.type === "in-which-book" ? (
+                  <span>
+                    <span className="font-bold text-blue-500">
+                      In which book{" "}
+                    </span>
+                    {currentQuestion.text}
+                  </span>
+                ) : (
+                  <span>
+                    In{" "}
+                    <span className="font-bold text-blue-500">
+                      {currentQuestion.book.title}
+                    </span>{" "}
+                    by{" "}
+                    <span className="font-bold text-blue-500">
+                      {currentQuestion.book.author}
+                    </span>{" "}
+                    <span className="pt-4 block">{currentQuestion.text}</span>
+                  </span>
+                )}
+              </p>
             </div>
-            <Card className="bg-white shadow-lg">
-              <CardContent className="p-4 pb-1">
-                <p className="text-xl mb-4">
-                  {currentQuestion.type === "in-which-book" ? (
-                    <span>
-                      <span className="font-bold text-blue-500">
-                        In which book{" "}
-                      </span>
-                      {currentQuestion.text}
-                    </span>
-                  ) : (
-                    <span>
-                      In{" "}
-                      <span className="font-bold text-blue-500">
-                        {currentQuestion.book.title}
-                      </span>{" "}
-                      by{" "}
-                      <span className="font-bold text-blue-500">
-                        {currentQuestion.book.author}
-                      </span>{" "}
-                      <span className="pt-4 block">{currentQuestion.text}</span>
-                    </span>
-                  )}
-                </p>
-              </CardContent>
-            </Card>
             {quizMode === "friend" && (
               <div className="space-y-2">
                 {!isTimerRunning && !showAnswer && (
@@ -276,7 +278,7 @@ export default function QuizPage({
             )}
             {((quizMode === "personal" && showAnswer) ||
               (quizMode === "friend" && (showAnswer || isTimerRunning))) && (
-              <div className="bg-yellow-100 p-3 rounded-md mt-4">
+              <div className="bg-slate-100 p-3 rounded-md my-4">
                 <p className="text-lg font-semibold">
                   Answer:{" "}
                   {currentQuestion.type === "in-which-book"
@@ -289,8 +291,7 @@ export default function QuizPage({
               </div>
             )}
           </div>
-        </CardContent>
-        <CardFooter className="flex flex-col space-y-4">
+
           {quizMode === "personal" && !showAnswer ? (
             <Button
               onClick={handleShowAnswer}
@@ -323,17 +324,20 @@ export default function QuizPage({
               </div>
             )
           )}
-          <Separator className="my-2" />
-          <Button
-            onClick={nextQuestion}
-            variant="outline"
-            className="w-full flex items-center justify-center"
-          >
-            <SkipForward className="h-4 w-4 sm:mr-2" />
-            <span className="ml-2 sm:ml-0">Skip Question</span>
-          </Button>
-        </CardFooter>
+        </CardContent>
       </Card>
+
+      {/* New skip button below the card */}
+      <div className="w-full max-w-4xl mx-auto mt-4">
+        <Button
+          onClick={nextQuestion}
+          variant="outline"
+          className="w-full flex items-center justify-center"
+        >
+          <SkipForward className="h-4 w-4 sm:mr-2" />
+          <span className="ml-2 sm:ml-0">Skip Question</span>
+        </Button>
+      </div>
     </div>
   );
 }

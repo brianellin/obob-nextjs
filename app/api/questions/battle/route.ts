@@ -22,7 +22,7 @@ export async function POST(request: Request) {
 
     // Filter questions based on selected books
     const filteredQuestions = questionsData.questions.filter((q: Question) =>
-      selectedBooks.some(book => book.bookKey === q.bookKey)
+      selectedBooks.some(book => book.book_key === q.book_key)
     );
 
     let questionsWithBooks: QuestionWithBook[];
@@ -37,7 +37,7 @@ export async function POST(request: Request) {
 
       questionsWithBooks = contentQuestions.map((q: Question) => ({
         ...q,
-        book: booksData.books[q.bookKey]
+        book: booksData.books[q.book_key]
       }));
 
       message = "Choose at least 4 books to add 'In Which Book' questions to your battle!";
@@ -56,7 +56,7 @@ export async function POST(request: Request) {
       questionsWithBooks = [...inWhichBookQuestions, ...contentQuestions]
         .map((q: Question) => ({
           ...q,
-          book: booksData.books[q.bookKey]
+          book: booksData.books[q.book_key]
         }));
     }
 

@@ -63,13 +63,13 @@ export default function BookSelection({ onSelectBooks }: BookSelectionProps) {
   const handleSubmit = () => {
     const selectedBooks = selectedBookKeys.map((key) => ({
       ...books[key],
-      bookKey: key, // Ensure bookKey is included
+      book_key: key, // Changed from bookKey to book_key
     }));
     onSelectBooks(
       selectedBooks.length === 0
         ? Object.entries(books).map(([key, book]) => ({
             ...book,
-            bookKey: key,
+            book_key: key, // Changed from bookKey to book_key
           }))
         : selectedBooks
     );

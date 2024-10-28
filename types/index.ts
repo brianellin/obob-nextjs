@@ -1,5 +1,5 @@
 export type Book = {
-  bookKey: string;
+  book_key: string;
   title: string;
   author: string;
   cover: string;
@@ -14,7 +14,7 @@ export type Books = {
 export type BaseQuestion = {
   type: "in-which-book" | "content";
   text: string;
-  bookKey: string;
+  book_key: string;
   page: number;
 };
 

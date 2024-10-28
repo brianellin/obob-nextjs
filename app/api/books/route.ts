@@ -9,11 +9,11 @@ export async function GET() {
     const fileContents = await fs.readFile(filePath, 'utf8');
     const data = JSON.parse(fileContents) as { books: Books };
 
-    // Add bookKey to each book object
+    // Add book_key to each book object
     const booksWithKeys = Object.fromEntries(
       Object.entries(data.books).map(([key, book]: [string, Book]) => [
         key,
-        { ...book, bookKey: key }
+        { ...book, book_key: key }
       ])
     );
 
