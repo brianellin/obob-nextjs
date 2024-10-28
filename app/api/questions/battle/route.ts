@@ -40,7 +40,7 @@ export async function POST(request: Request) {
         book: booksData.books[q.bookKey]
       }));
 
-      message = "Select 4 or more books to include 'In Which Book' questions in your battle!";
+      message = "Choose at least 4 books to add 'In Which Book' questions to your battle!";
     } else {
       // Normal case with both types of questions
       const inWhichBookQuestions = filteredQuestions

@@ -39,6 +39,7 @@ export default function QuizPage({
   const [isTimerRunning, setIsTimerRunning] = useState(false);
   const boopSound = useRef<HTMLAudioElement | null>(null);
   const timerRef = useRef<NodeJS.Timeout | null>(null);
+  const [isMessageVisible, setIsMessageVisible] = useState(true);
 
   useEffect(() => {
     const loadQuestions = async () => {
@@ -175,14 +176,20 @@ export default function QuizPage({
 
   return (
     <div className="container mx-auto px-4 py-8">
-      {message && (
+      {isMessageVisible && message && (
         <Card className="mb-6 bg-yellow-50 border-yellow-200 shadow-sm">
           <CardContent className="p-4">
-            <div className="flex items-center gap-3">
+            <div className="flex items-start gap-3">
               <div className="flex-shrink-0">
                 <Bone className="h-6 w-6 text-yellow-600 rotate-12" />
               </div>
-              <p className="text-yellow-800 font-medium">{message}</p>
+              <p className="text-yellow-800 font-medium flex-grow">{message}</p>
+              <button
+                onClick={() => setIsMessageVisible(false)}
+                className="text-yellow-600 hover:text-yellow-800 text-2xl leading-none"
+              >
+                &times;
+              </button>
             </div>
           </CardContent>
         </Card>
