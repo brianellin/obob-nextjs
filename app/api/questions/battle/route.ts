@@ -15,8 +15,8 @@ function shuffle<T>(array: T[]): T[] {
 
 // Define question sources
 const QUESTION_SOURCES = [
-  { path: 'public/obob/lake_oswego/questions.json', name: 'Lake Oswego Library', link: 'https://www.ci.oswego.or.us/kids/obob-practice-questions' },
-  { path: 'public/obob/cedar_mill/questions.json', name: 'Cedar Mill Library', link: 'https://library.cedarmill.org/kids/obob/' },
+  { path: 'obob/lake_oswego/questions.json', name: 'Lake Oswego Library', link: 'https://www.ci.oswego.or.us/kids/obob-practice-questions' },
+  { path: 'obob/cedar_mill/questions.json', name: 'Cedar Mill Library', link: 'https://library.cedarmill.org/kids/obob/' },
   // Add more sources here as needed
 ];
 
@@ -27,9 +27,9 @@ export async function POST(request: Request) {
     
     // Map paths to full system paths
     const questionPaths = QUESTION_SOURCES.map(source => 
-      path.join(process.cwd(), source.path)
+      path.join(process.cwd(), 'public', source.path)
     );
-    const booksPath = path.join(process.cwd(), 'public/obob/books.json');
+    const booksPath = path.join(process.cwd(), 'public', 'obob/books.json');
     
     // Read all files concurrently
     const [questionsFiles, booksFile] = await Promise.all([
