@@ -3,25 +3,59 @@ import path from 'path';
 import fs from 'fs/promises';
 import { Book, Question, QuestionWithBook } from '@/types';
 
+// Add this helper function at the top level
+function shuffle<T>(array: T[]): T[] {
+    const shuffled = [...array]; // Create a copy to avoid mutating the original
+    for (let i = shuffled.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+    return shuffled;
+}
+
+// Define question sources
+const QUESTION_SOURCES = [
+  { path: 'public/obob/lake_oswego/questions.json', name: 'Lake Oswego Library', link: 'https://www.ci.oswego.or.us/kids/obob-practice-questions' },
+  { path: 'public/obob/cedar_mill/questions.json', name: 'Cedar Mill Library', link: 'https://library.cedarmill.org/kids/obob/' },
+  // Add more sources here as needed
+];
+
 export async function POST(request: Request) {
   try {
     // Get selected books from request body
     const { selectedBooks } = await request.json() as { selectedBooks: Book[] };
     
-    // Load questions and books
-    const questionsPath = path.join(process.cwd(), 'public/obob/questions.json');
+    // Map paths to full system paths
+    const questionPaths = QUESTION_SOURCES.map(source => 
+      path.join(process.cwd(), source.path)
+    );
     const booksPath = path.join(process.cwd(), 'public/obob/books.json');
     
-    const [questionsFile, booksFile] = await Promise.all([
-      fs.readFile(questionsPath, 'utf8'),
+    // Read all files concurrently
+    const [questionsFiles, booksFile] = await Promise.all([
+      Promise.all(questionPaths.map(path => fs.readFile(path, 'utf8'))),
       fs.readFile(booksPath, 'utf8')
     ]);
     
-    const questionsData = JSON.parse(questionsFile) as { questions: Question[] };
+    // Parse and combine all question files, including source information
+    const allQuestions = questionsFiles.map((file, index) => {
+      const questions = (JSON.parse(file) as { questions: Question[] }).questions;
+      const source = QUESTION_SOURCES[index];
+      return questions.map(q => ({
+        ...q,
+        source: {
+          name: source.name,
+          link: source.link
+        }
+      }));
+    }).flat();
+
     const booksData = JSON.parse(booksFile) as { books: Record<string, Book> };
 
+    console.log(`Loaded ${allQuestions.length} questions`);
+
     // Filter questions based on selected books
-    const filteredQuestions = questionsData.questions.filter((q: Question) =>
+    const filteredQuestions = allQuestions.filter((q: Question) =>
       selectedBooks.some(book => book.book_key === q.book_key)
     );
 
@@ -30,10 +64,9 @@ export async function POST(request: Request) {
 
     if (selectedBooks.length < 4) {
       // If less than 4 books, only use content questions
-      const contentQuestions = filteredQuestions
-        .filter((q: Question) => q.type === 'content')
-        .sort(() => Math.random() - 0.5)
-        .slice(0, 8);
+      const contentQuestions = shuffle(
+        filteredQuestions.filter((q: Question) => q.type === 'content')
+      ).slice(0, 8);
 
       questionsWithBooks = contentQuestions.map((q: Question) => ({
         ...q,
@@ -43,15 +76,13 @@ export async function POST(request: Request) {
       message = "Choose at least 4 books to add 'In Which Book' questions to your battle!";
     } else {
       // Normal case with both types of questions
-      const inWhichBookQuestions = filteredQuestions
-        .filter((q: Question) => q.type === 'in-which-book')
-        .sort(() => Math.random() - 0.5)
-        .slice(0, 4);
+      const inWhichBookQuestions = shuffle(
+        filteredQuestions.filter((q: Question) => q.type === 'in-which-book')
+      ).slice(0, 4);
 
-      const contentQuestions = filteredQuestions
-        .filter((q: Question) => q.type === 'content')
-        .sort(() => Math.random() - 0.5)
-        .slice(0, 4);
+      const contentQuestions = shuffle(
+        filteredQuestions.filter((q: Question) => q.type === 'content')
+      ).slice(0, 4);
 
       questionsWithBooks = [...inWhichBookQuestions, ...contentQuestions]
         .map((q: Question) => ({

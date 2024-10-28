@@ -1,8 +1,4 @@
 {
-  "source": {
-    "name": "Cedar Mill Community Library",
-    "link": "https://library.cedarmill.org/kids/obob/"
-  },
   "questions": [
     {
         "type": "in-which-book",

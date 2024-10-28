@@ -9,10 +9,10 @@ import {
   CardTitle,
   CardFooter,
 } from "@/components/ui/card";
-import { SkipForward, Redo, Bone, Loader2 } from "lucide-react";
+import { SkipForward, Redo, Bone, Loader2, ExternalLink } from "lucide-react";
 import { Progress } from "@/components/ui/progress";
-import { WavyUnderline } from "./WavyUnderline";
 import type { QuestionWithBook, Book } from "@/types";
+import Link from "next/link";
 
 type QuizPageProps = {
   selectedBooks: Book[]; // Changed from string[] to Book[]
@@ -202,11 +202,9 @@ export default function QuizPage({
       <div className="w-full max-w-4xl mx-auto">
         <div className="flex flex-col  items-center justify-between">
           <h1 className="text-2xl font-bold mb-5">
-            <WavyUnderline style={4} thickness={5} color="text-lime-200">
-              {quizMode === "personal" ? "Solo battle" : "Friend battle"}
-            </WavyUnderline>
+            {quizMode === "personal" ? "Solo battle" : "Friend battle"}
           </h1>
-          <div className="w-full flex items-center justify-between gap-4 mb-2">
+          <div className="w-full flex items-center justify-between gap-4 mb-2 px-1 ">
             <span className="text-lg font-semibold">
               Question: {currentQuestionIndex + 1}/{questions.length}
             </span>
@@ -231,22 +229,23 @@ export default function QuizPage({
               <p className="text-xl mb-4">
                 {currentQuestion.type === "in-which-book" ? (
                   <span>
-                    <span className="font-bold text-blue-500">
-                      In which book{" "}
-                    </span>
+                    <span className="font-bold">In which book </span>
                     {currentQuestion.text}
                   </span>
                 ) : (
                   <span>
                     In{" "}
-                    <span className="font-bold text-blue-500">
+                    <span className="font-bold">
                       {currentQuestion.book.title}
                     </span>{" "}
                     by{" "}
-                    <span className="font-bold text-blue-500">
+                    <span className="font-bold">
                       {currentQuestion.book.author}
                     </span>{" "}
-                    <span className="pt-4 block">{currentQuestion.text}</span>
+                    <span className="pt-4 block">
+                      {currentQuestion.text.charAt(0).toUpperCase() +
+                        currentQuestion.text.slice(1)}
+                    </span>
                   </span>
                 )}
               </p>
@@ -256,7 +255,7 @@ export default function QuizPage({
                 {!isTimerRunning && !showAnswer && (
                   <Button
                     onClick={handleStartTimer}
-                    className="w-full bg-blue-500 hover:bg-blue-600"
+                    className="w-full bg-cyan-400 hover:bg-cyan-500"
                   >
                     Start Timer
                   </Button>
@@ -279,8 +278,7 @@ export default function QuizPage({
             {((quizMode === "personal" && showAnswer) ||
               (quizMode === "friend" && (showAnswer || isTimerRunning))) && (
               <div className="bg-slate-100 p-3 rounded-md my-4">
-                <p className="text-lg font-semibold">
-                  Answer:{" "}
+                <p className="text-lg font-medium">
                   {currentQuestion.type === "in-which-book"
                     ? `${currentQuestion.book.title} by ${currentQuestion.book.author}`
                     : currentQuestion.answer}
@@ -295,7 +293,7 @@ export default function QuizPage({
           {quizMode === "personal" && !showAnswer ? (
             <Button
               onClick={handleShowAnswer}
-              className="w-full bg-blue-500 hover:bg-blue-600"
+              className="w-full bg-cyan-400 hover:bg-cyan-500"
             >
               Show Answer
             </Button>
@@ -305,19 +303,19 @@ export default function QuizPage({
               <div className="flex flex-col sm:flex-row justify-center space-y-2 sm:space-y-0 sm:space-x-4 w-full">
                 <Button
                   onClick={() => handleAnswer(5)}
-                  className="bg-green-500 hover:bg-green-600"
+                  className="bg-emerald-500 hover:bg-emerald-600"
                 >
                   Correct (5 pts)
                 </Button>
                 <Button
                   onClick={() => handleAnswer(3)}
-                  className="bg-yellow-500 hover:bg-yellow-600"
+                  className="bg-neutral-400 hover:bg-neutral-500"
                 >
                   Partially Correct (3 pts)
                 </Button>
                 <Button
                   onClick={() => handleAnswer(0)}
-                  className="bg-red-500 hover:bg-red-600"
+                  className="bg-orange-400 hover:bg-orange-500"
                 >
                   Incorrect (0 pts)
                 </Button>
@@ -334,9 +332,19 @@ export default function QuizPage({
           variant="outline"
           className="w-full flex items-center justify-center"
         >
-          <SkipForward className="h-4 w-4 sm:mr-2" />
-          <span className="ml-2 sm:ml-0">Skip Question</span>
+          <span>Skip Question</span>
+          <SkipForward className="h-5 w-5 ml-2" />
         </Button>
+      </div>
+      <div className="flex items-center justify-center text-xs mt-4 text-muted-foreground">
+        <Link
+          href={currentQuestion.source!.link}
+          className=" flex items-center gap-1 hover:text-muted-foreground/80"
+          target="_blank"
+        >
+          {currentQuestion.source?.name}
+          <ExternalLink className="h-3 w-3" />
+        </Link>
       </div>
     </div>
   );

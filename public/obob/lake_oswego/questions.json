@@ -1,0 +1,3174 @@
+{
+  "questions": [
+    {
+      "type": "in-which-book",
+      "text": "is there a robot graveyard?",
+      "book_key": "the-wild-robot",
+      "page": 4
+    },
+    {
+      "type": "in-which-book",
+      "text": "does an otter push an important button with its paw?",
+      "book_key": "the-wild-robot",
+      "page": 6
+    },
+    {
+      "type": "in-which-book",
+      "text": "is a character compared to a hatchling breaking from a shell?",
+      "book_key": "the-wild-robot",
+      "page": 8
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character tumble into a mudslide during a big storm?",
+      "book_key": "the-wild-robot",
+      "page": 28
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character camouflage themself with dirt, sticks, twigs, ferns, leaves and flowers?",
+      "book_key": "the-wild-robot",
+      "page": 42
+    },
+    {
+      "type": "in-which-book",
+      "text": "does someone learn the languages of many different kinds of animals by observing them while they are camouflaged?",
+      "book_key": "the-wild-robot",
+      "page": 48
+    },
+    {
+      "type": "in-which-book",
+      "text": "does someone accidentally kill a family of geese?",
+      "book_key": "the-wild-robot",
+      "page": 58
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a beaver reprimand another beaver for being stubborn and rude?",
+      "book_key": "the-wild-robot",
+      "page": 80
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character ask all of the animals to defecate (poop) in their garden?",
+      "book_key": "the-wild-robot",
+      "page": 93
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a goose become a flying fanatic?",
+      "book_key": "the-wild-robot",
+      "page": 117
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a bear give a character a ride home on her back?",
+      "book_key": "the-wild-robot",
+      "page": 147
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character lose their foot and get a replacement wooden foot?",
+      "book_key": "the-wild-robot",
+      "page": 154
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character welcome animals to join them during the winter to stay warm by",
+      "book_key": "the-wild-robot",
+      "page": 178
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character notice that the wilder they acted, the more the animals liked the",
+      "book_key": "the-wild-robot",
+      "page": 200
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character discover a factory where robots are built?",
+      "book_key": "the-wild-robot",
+      "page": 210
+    },
+    {
+      "type": "in-which-book",
+      "text": "do a son and his adopted mother spend the winter apart?",
+      "book_key": "the-wild-robot",
+      "page": 209
+    },
+    {
+      "type": "in-which-book",
+      "text": "do animals save their friend while others are attempting to capture the friend?",
+      "book_key": "the-wild-robot",
+      "page": 236
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character devise a plan on an airship to get the repairs they need, escape, and find their way back home?",
+      "book_key": "the-wild-robot",
+      "page": 269
+    },
+    {
+      "type": "content",
+      "text": "where does the story begin?",
+      "book_key": "the-wild-robot",
+      "answer": "On the ocean",
+      "page": 1
+    },
+    {
+      "type": "content",
+      "text": "how many crates from the cargo ship survive the hurricane initially?",
+      "book_key": "the-wild-robot",
+      "answer": "Five",
+      "page": 1
+    },
+    {
+      "type": "content",
+      "text": "what kind of animals open the crate with the robot in it?",
+      "book_key": "the-wild-robot",
+      "answer": "Otters",
+      "page": 5
+    },
+    {
+      "type": "content",
+      "text": "what is the robot\u2019s full name and number?",
+      "book_key": "the-wild-robot",
+      "answer": "ROZZUM unit 7134",
+      "page": 7
+    },
+    {
+      "type": "content",
+      "text": "what kind of an animal does Roz mimic to climb the cliffs?",
+      "book_key": "the-wild-robot",
+      "answer": "Crab",
+      "page": 14
+    },
+    {
+      "type": "content",
+      "text": "what kind of animals does Roz awaken when she steps into a cave after the storm?",
+      "book_key": "the-wild-robot",
+      "answer": "Bears",
+      "page": 34
+    },
+    {
+      "type": "content",
+      "text": "what is the hour each morning called when all the island animals are safe?",
+      "book_key": "the-wild-robot",
+      "answer": "The Dawn Truce",
+      "page": 49
+    },
+    {
+      "type": "content",
+      "text": "name two of the animals Roz meets during the Dawn Truce by name and type?",
+      "book_key": "the-wild-robot",
+      "answer": "(Any two:) Swooper the owl, Dart the weasel, Digdown the groundhog, Fink the fox",
+      "page": 50
+    },
+    {
+      "type": "content",
+      "text": "when Roz plummets off the side of the cliff, who does she land on?",
+      "book_key": "the-wild-robot",
+      "answer": "A family of geese",
+      "page": 58
+    },
+    {
+      "type": "content",
+      "text": "what are two of the facts Roz retrieves about opossums?",
+      "book_key": "the-wild-robot",
+      "answer": "(Any two:) They\u2019re marsupials, they\u2019re nocturnal, they mimic the appearance and/or smell of dead animals when threatened.",
+      "page": 66
+    },
+    {
+      "type": "content",
+      "text": "what name is given to the surviving gosling after it hatches?",
+      "book_key": "the-wild-robot",
+      "answer": "Brightbill",
+      "page": 76
+    },
+    {
+      "type": "content",
+      "text": "who builds a lodge for Roz and Brightbill?",
+      "book_key": "the-wild-robot",
+      "answer": "Beavers",
+      "page": 84
+    },
+    {
+      "type": "content",
+      "text": "what does Roz name her lodge?",
+      "book_key": "the-wild-robot",
+      "answer": "The Nest",
+      "page": 88
+    },
+    {
+      "type": "content",
+      "text": "what does Chitchat tell Brightbill that a squirrel nest is called?",
+      "book_key": "the-wild-robot",
+      "answer": "A drey",
+      "page": 110
+    },
+    {
+      "type": "content",
+      "text": "why were the other goslings making fun of Brightbill?",
+      "book_key": "the-wild-robot",
+      "answer": "His mother is a robot (or: His mother is a monster)",
+      "page": 123
+    },
+    {
+      "type": "content",
+      "text": "why can\u2019t Roz touch the button on her head?",
+      "book_key": "the-wild-robot",
+      "answer": "Her hands automatically stop before they reach the button.",
+      "page": 135
+    },
+    {
+      "type": "content",
+      "text": "what are the names of the bears that attack Roz?",
+      "book_key": "the-wild-robot",
+      "answer": "Nettle and Thorn",
+      "page": 141
+    },
+    {
+      "type": "content",
+      "text": "who is the first animal to join Roz in the lodge by the fire during the winter?",
+      "book_key": "the-wild-robot",
+      "answer": "Chitchat the squirrel",
+      "page": 177
+    },
+    {
+      "type": "content",
+      "text": "what kind of animal does Roz save from the second lodge that catches on fire?",
+      "book_key": "the-wild-robot",
+      "answer": "A hare",
+      "page": 186
+    },
+    {
+      "type": "content",
+      "text": "how many winters has Crag the turtle seen?",
+      "book_key": "the-wild-robot",
+      "answer": "93",
+      "page": 191
+    },
+    {
+      "type": "content",
+      "text": "why is Rockmouth angry at the beavers?",
+      "book_key": "the-wild-robot",
+      "answer": "He was trapped in the pond when the beavers built their dam.",
+      "page": 198
+    },
+    {
+      "type": "content",
+      "text": "where do the geese stay when they are unexpectedly caught in a snowstorm on their flight south?",
+      "book_key": "the-wild-robot",
+      "answer": "In a greenhouse on a farm.",
+      "page": 206
+    },
+    {
+      "type": "content",
+      "text": "how does Roz commemorate the one-year anniversary of her arrival on the island?",
+      "book_key": "the-wild-robot",
+      "answer": "Party/celebration for her animal friends",
+      "page": 217
+    },
+    {
+      "type": "content",
+      "text": "what word is etched on the three robots on the airship that flies over the island?",
+      "book_key": "the-wild-robot",
+      "answer": "RECO",
+      "page": 223
+    },
+    {
+      "type": "content",
+      "text": "according to the RECO robots, who does Roz belong to?",
+      "book_key": "the-wild-robot",
+      "answer": "TechLab Industries",
+      "page": 227
+    },
+    {
+      "type": "content",
+      "text": "how is RECO 3 destroyed?",
+      "book_key": "the-wild-robot",
+      "answer": "By the kicks of Broadfoot the bull moose",
+      "page": 234
+    },
+    {
+      "type": "content",
+      "text": "how is RECO 2 finally destroyed after its battle with the bears?",
+      "book_key": "the-wild-robot",
+      "answer": "It falls over a waterfall",
+      "page": 242
+    },
+    {
+      "type": "content",
+      "text": "how is RECO 1 destroyed?",
+      "book_key": "the-wild-robot",
+      "answer": "He is shot by the geese",
+      "page": 255
+    },
+    {
+      "type": "content",
+      "text": "after the battle with the RECOs, what body parts is Roz missing?",
+      "book_key": "the-wild-robot",
+      "answer": "Her arms and legs",
+      "page": 258
+    },
+    {
+      "type": "content",
+      "text": "when Roz gathers the animals after the battle with the RECOs for the Dawn Truce, what does she tell them she has decided?",
+      "book_key": "the-wild-robot",
+      "answer": "She will leave the island so she can protect her island friends from more danger",
+      "page": 261
+    },
+    {
+      "type": "content",
+      "text": "who does the author think robots have some things in common with?",
+      "book_key": "the-wild-robot",
+      "answer": "Wild animals",
+      "page": 272
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character have first lunch as part of their middle school schedule?",
+      "book_key": "twins",
+      "page": 6
+    },
+    {
+      "type": "in-which-book",
+      "text": "do certain lunch tables have nicknames like \u201cRibbon Ravine,\u201d \u201cJock Mountain,\u201d and \u201cValley of Burps & Smells?\u201d",
+      "book_key": "twins",
+      "page": 21
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character eat lunch in the library alone at the beginning of sixth grade?",
+      "book_key": "twins",
+      "page": 24
+    },
+    {
+      "type": "in-which-book",
+      "text": "is there a class where students can earn a higher rank throughout the year?",
+      "book_key": "twins",
+      "page": 27
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character have an older half brother out of college who has their own apartment?",
+      "book_key": "twins",
+      "page": 40
+    },
+    {
+      "type": "in-which-book",
+      "text": "is a character offered extra credit for running for student council?",
+      "book_key": "twins",
+      "page": 61
+    },
+    {
+      "type": "in-which-book",
+      "text": "is a character\u2019s favorite restaurant The Wonderful World of Waffles?",
+      "book_key": "twins",
+      "page": 94
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a coin-flip determine which bedrooms two characters get to sleep in?",
+      "book_key": "twins",
+      "page": 116
+    },
+    {
+      "type": "in-which-book",
+      "text": "are there two teddy bears named Venus and Serena?",
+      "book_key": "twins",
+      "page": 120
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character think that sixth graders should be buddied up with older students at the beginning of middle school?",
+      "book_key": "twins",
+      "page": 131
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character tell someone else\u2019s secret to someone in their gym class?",
+      "book_key": "twins",
+      "page": 160
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character join Color Guard?",
+      "book_key": "twins",
+      "page": 245
+    },
+    {
+      "type": "content",
+      "text": "what is the name of the twins\u2019 new middle school?",
+      "book_key": "twins",
+      "answer": "O\u2019Connor Middle School",
+      "page": 1
+    },
+    {
+      "type": "content",
+      "text": "which twin is the talker, and which twin is the thinker?",
+      "book_key": "twins",
+      "answer": "Francine is the talker, Maureen is the thinker",
+      "page": 8
+    },
+    {
+      "type": "content",
+      "text": "name two of the three classes the twins have together.",
+      "book_key": "twins",
+      "answer": "(Any two:) Advisory, science, language arts",
+      "page": 9
+    },
+    {
+      "type": "content",
+      "text": "which twin is \u00bc inch shorter?",
+      "book_key": "twins",
+      "answer": "Maureen",
+      "page": 10
+    },
+    {
+      "type": "content",
+      "text": "who is the twins\u2019 advisory teacher?",
+      "book_key": "twins",
+      "answer": "Mrs. Barbosa",
+      "page": 17
+    },
+    {
+      "type": "content",
+      "text": "what is the name and rank of Maureen\u2019s Youth Cadet Corps instructor?",
+      "book_key": "twins",
+      "answer": "Master Sergeant Lucinda Fields",
+      "page": 27
+    },
+    {
+      "type": "content",
+      "text": "what is Francine\u2019s favorite class after the first day of sixth grade?",
+      "book_key": "twins",
+      "answer": "Chorus",
+      "page": 30
+    },
+    {
+      "type": "content",
+      "text": "Francine is how much older than Maureen?",
+      "book_key": "twins",
+      "answer": "Two minutes",
+      "page": 36
+    },
+    {
+      "type": "content",
+      "text": "according to Francine and Maureen\u2019s dad, who is the \u201cfifth gear\u201d in their group of friends?",
+      "book_key": "twins",
+      "answer": "Monique",
+      "page": 50
+    },
+    {
+      "type": "content",
+      "text": "what student council position do Maureen and Francine both run for?",
+      "book_key": "twins",
+      "answer": "President",
+      "page": 81
+    },
+    {
+      "type": "content",
+      "text": "what is the name of the store where the salesperson is rude to Maureen and her friends?",
+      "book_key": "twins",
+      "answer": "Mercy Danger",
+      "page": 92
+    },
+    {
+      "type": "content",
+      "text": "how long do Francine and Maureen have to live in separate rooms?",
+      "book_key": "twins",
+      "answer": "Two weeks, or until the election is over",
+      "page": 115
+    },
+    {
+      "type": "content",
+      "text": "what topic does Master Sergeant always put on the first exam?",
+      "book_key": "twins",
+      "answer": "Military history",
+      "page": 129
+    },
+    {
+      "type": "content",
+      "text": "what is the name of the seventh grade class president?",
+      "book_key": "twins",
+      "answer": "Rhonda",
+      "page": 131
+    },
+    {
+      "type": "content",
+      "text": "who tips off Maureen that her sister is being tutored after school?",
+      "book_key": "twins",
+      "answer": "Monique",
+      "page": 202
+    },
+    {
+      "type": "content",
+      "text": "which twin wins the student council election?",
+      "book_key": "twins",
+      "answer": "Francine",
+      "page": 238
+    },
+    {
+      "type": "content",
+      "text": "who is Maureen\u2019s seventh grade buddy?",
+      "book_key": "twins",
+      "answer": "Bryce",
+      "page": 246
+    },
+    {
+      "type": "in-which-book",
+      "text": "is a story told about King John of Portugal giving away a city as a dowry for his daughter\u2019s marriage to King Charles II of England?",
+      "book_key": "thirst",
+      "page": 17
+    },
+    {
+      "type": "in-which-book",
+      "text": "does one character dream of being a star chef with their own TV show?",
+      "book_key": "thirst",
+      "page": 9
+    },
+    {
+      "type": "in-which-book",
+      "text": "is there a saying \u201cIf you invite trouble, it will come. It will stay for chai and for dinner.\u201d",
+      "book_key": "thirst",
+      "page": 5
+    },
+    {
+      "type": "in-which-book",
+      "text": "do a brother and sister use a notebook to share secrets at night?",
+      "book_key": "thirst",
+      "page": 28
+    },
+    {
+      "type": "in-which-book",
+      "text": "are two friends sent to a farm in the country to get away from trouble?",
+      "book_key": "thirst",
+      "page": 32
+    },
+    {
+      "type": "in-which-book",
+      "text": "does someone notice a flyer that says \u201cWater is life. Stealing water is a crime.\u201d",
+      "book_key": "thirst",
+      "page": 41
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character get teased that okra is their favorite vegetable?",
+      "book_key": "thirst",
+      "page": 44
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character conquer their fear by climbing a rickety ladder to the roof?",
+      "book_key": "thirst",
+      "page": 59
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character learn from a security guard that their mother thinks they are as smart as her mother\u2019s sister?",
+      "book_key": "thirst",
+      "page": 66
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character celebrate not getting fired from their first day on the job?",
+      "book_key": "thirst",
+      "page": 74
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character learn the day before about an important practice exam?",
+      "book_key": "thirst",
+      "page": 102
+    },
+    {
+      "type": "in-which-book",
+      "text": "do two characters share a bowl of noodles while they study for the same exam?",
+      "book_key": "thirst",
+      "page": 109
+    },
+    {
+      "type": "in-which-book",
+      "text": "do two characters hope that a stolen photograph will alert the police to the leader of a crime ring?",
+      "book_key": "thirst",
+      "page": 157
+    },
+    {
+      "type": "content",
+      "text": "a character chooses what color to paint the family house?",
+      "book_key": "thirst",
+      "answer": "yellow",
+      "page": 2
+    },
+    {
+      "type": "content",
+      "text": "a mango is given as a thank you gift.",
+      "book_key": "thirst",
+      "answer": "Combing and braiding Pinky\u2019s hair",
+      "page": 10
+    },
+    {
+      "type": "content",
+      "text": "we learn that Bombay was made up of how many disconnected islands?",
+      "book_key": "thirst",
+      "answer": "Seven",
+      "page": 18
+    },
+    {
+      "type": "content",
+      "text": "the room a brother and sister share is filled with photographs from magazines.",
+      "book_key": "thirst",
+      "answer": "Mouthwatering foods and beautiful beaches",
+      "page": 38
+    },
+    {
+      "type": "content",
+      "text": "a character\u2019s mother teaches them how to make what?",
+      "book_key": "thirst",
+      "answer": "Rotis",
+      "page": 52
+    },
+    {
+      "type": "content",
+      "text": "a character is told not to go into a certain room because of who lives there.",
+      "book_key": "thirst",
+      "answer": "Anita Ma\u2019am\u2019s mother-in-law",
+      "page": 69
+    },
+    {
+      "type": "content",
+      "text": "two characters get into trouble for playing a card game together.",
+      "book_key": "thirst",
+      "answer": "Uno",
+      "page": 80
+    },
+    {
+      "type": "content",
+      "text": "a character wins a scholarship for a special kind of class.",
+      "book_key": "thirst",
+      "answer": "Computer class and it meets on Sundays",
+      "page": 86
+    },
+    {
+      "type": "content",
+      "text": "a character recognizes something about someone\u2019s father, and drops what they are holding.",
+      "book_key": "thirst",
+      "answer": "The man\u2019s voice, a bowl of pudding",
+      "page": 136
+    },
+    {
+      "type": "content",
+      "text": "a character is often late for school and gets in trouble.",
+      "book_key": "thirst",
+      "answer": "To boil their water at night",
+      "page": 132
+    },
+    {
+      "type": "content",
+      "text": "a character suggests adding something to the rotis to make them softer.",
+      "book_key": "thirst",
+      "answer": "oil",
+      "page": 127
+    },
+    {
+      "type": "content",
+      "text": "a character\u2019s mother is diagnosed with a disease that she got from drinking water that was not boiled.",
+      "book_key": "thirst",
+      "answer": "Hepatitis A",
+      "page": 160
+    },
+    {
+      "type": "content",
+      "text": "a character loses their job and starts their own business.",
+      "book_key": "thirst",
+      "answer": "Rotis. Rohini\u2019s Rotis",
+      "page": 172
+    },
+    {
+      "type": "in-which-book",
+      "text": "did the main character\u2019s mother disappear right before their thirteenth birthday?",
+      "book_key": "time-travelers",
+      "page": 3
+    },
+    {
+      "type": "in-which-book",
+      "text": "is the \u201cMany Worlds\u201d principle described as other universes pushed up right next to us, almost identical to ours but with small changes?",
+      "book_key": "time-travelers",
+      "page": 45
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a doctor lie about calling the library to try to locate the main character\u2019s father?",
+      "book_key": "time-travelers",
+      "page": 92
+    },
+    {
+      "type": "in-which-book",
+      "text": "are two friends described as \u201cremainders;\u201d both living an extra careful life so their parents won\u2019t relive the pain of losing a child?",
+      "book_key": "time-travelers",
+      "page": 107
+    },
+    {
+      "type": "in-which-book",
+      "text": "do friends prepare an email for delayed delivery which would explain they were on a mountain search?",
+      "book_key": "time-travelers",
+      "page": 108
+    },
+    {
+      "type": "in-which-book",
+      "text": "do Initials and their time traveling selves appear to stutter or shimmer if they are in close proximity to each other?",
+      "book_key": "time-travelers",
+      "page": 118
+    },
+    {
+      "type": "in-which-book",
+      "text": "is there a secret society to protect the timeline?",
+      "book_key": "time-travelers",
+      "page": 155
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character keep a note in his pocket from his grandmother that reads \u201cI was wrong. Don\u2019t trust anyone?\u201d",
+      "book_key": "time-travelers",
+      "page": 72
+    },
+    {
+      "type": "in-which-book",
+      "text": "does ISTA, The International Society for Temporal Adherence, become a problem?",
+      "book_key": "time-travelers",
+      "page": 116
+    },
+    {
+      "type": "in-which-book",
+      "text": "does an unknown character occasionally speak directly to the reader between chapters?",
+      "book_key": "time-travelers",
+      "page": 185
+    },
+    {
+      "type": "in-which-book",
+      "text": "are \u201cnodes\u2019 like knots on a thread where you can grab hold and then jump off; they\u2019re markers and landing points?",
+      "book_key": "time-travelers",
+      "page": 203
+    },
+    {
+      "type": "in-which-book",
+      "text": "are \u201cimprints\u201d alternative timelines from the \u201cprime imprint\u201d of the original timeline?",
+      "book_key": "time-travelers",
+      "page": 208
+    },
+    {
+      "type": "in-which-book",
+      "text": "does the story include multiple universes, each with multiple timelines?",
+      "book_key": "time-travelers",
+      "page": 322
+    },
+    {
+      "type": "content",
+      "text": "why was Finn reluctant to go swimming with his good friend Gabi at the quarry?",
+      "book_key": "time-travelers",
+      "answer": "It was where his twin sister had drowned.",
+      "page": 18
+    },
+    {
+      "type": "content",
+      "text": "Gabi and Finn became friends when she dreamt that he was in trouble and couldn\u2019t get back home.",
+      "book_key": "time-travelers",
+      "answer": "A ball of sunlight",
+      "page": 22
+    },
+    {
+      "type": "content",
+      "text": "who are the two tiny figures in the quarry photo that Finn studies in his father's office?",
+      "book_key": "time-travelers",
+      "answer": "Finn and Grace",
+      "page": 105
+    },
+    {
+      "type": "content",
+      "text": "what gender have the family\u2019s time travelers been?",
+      "book_key": "time-travelers",
+      "answer": "Female; they have all been women",
+      "page": 155
+    },
+    {
+      "type": "content",
+      "text": "Finn\u2019s mother built a portal, a way to reach her in an emergency.",
+      "book_key": "time-travelers",
+      "answer": "A tree",
+      "page": 63
+    },
+    {
+      "type": "content",
+      "text": "Finn and Gabi come upon a cabin in the woods.",
+      "book_key": "time-travelers",
+      "answer": "A rotting animal skull",
+      "page": 179
+    },
+    {
+      "type": "content",
+      "text": "who is trying to make decisions about what should be changed in history?",
+      "book_key": "time-travelers",
+      "answer": "Doc and/or his faction of ISTA",
+      "page": 207
+    },
+    {
+      "type": "content",
+      "text": "Finn is told of the most powerful time traveler in their family.",
+      "book_key": "time-travelers",
+      "answer": "Faith, his sister",
+      "page": 209
+    },
+    {
+      "type": "content",
+      "text": "Finn finally finds his mother who then shares her plan with him.",
+      "book_key": "time-travelers",
+      "answer": "His mother never intends to return home with him; she will stay behind to try to raise and teach his sister with love.",
+      "page": 219
+    },
+    {
+      "type": "content",
+      "text": "before time traveling to find his sister, Faith, Finn feels in his pocket for his meager arsenal of three objects.",
+      "book_key": "time-travelers",
+      "answer": "Gran\u2019s note, the grounding stone, and/or the skeleton key ring",
+      "page": 223
+    },
+    {
+      "type": "content",
+      "text": "Gran tells Finn that time is stubborn, and changing the outcome of time is not about the beat of a wing or catching a later bus.",
+      "book_key": "time-travelers",
+      "answer": "If you want to change time, you must change hearts. It\u2019s about people\u2019s choices to be kind.",
+      "page": 324
+    },
+    {
+      "type": "content",
+      "text": "Gabi finally teases Finn that he should fear and respect her because she is now part machine.",
+      "book_key": "time-travelers",
+      "answer": "Gabi\u2019s serious injuries left her with metal pins inserted into her arm.",
+      "page": 327
+    },
+    {
+      "type": "content",
+      "text": "the book closes with Finn mentally connecting with an old woman who is standing in front of a bank.",
+      "book_key": "time-travelers",
+      "answer": "Finn\u2019s sister, Faith",
+      "page": 335
+    },
+    {
+      "type": "in-which-book",
+      "text": "do they visit Village Ice Cream?",
+      "book_key": "before-ever-after",
+      "page": 6
+    },
+    {
+      "type": "in-which-book",
+      "text": "did someone break their arm skateboarding?",
+      "book_key": "before-ever-after",
+      "page": 8
+    },
+    {
+      "type": "in-which-book",
+      "text": "does someone have a bike named Magic Broom?",
+      "book_key": "before-ever-after",
+      "page": 14
+    },
+    {
+      "type": "in-which-book",
+      "text": "do they listen to the Beastie Boys after the first day of school?",
+      "book_key": "before-ever-after",
+      "page": 19
+    },
+    {
+      "type": "in-which-book",
+      "text": "do they have pizza night with extra cheese, extra sausage and lots of olives?",
+      "book_key": "before-ever-after",
+      "page": 21
+    },
+    {
+      "type": "in-which-book",
+      "text": "did someone\u2019s grandma lose a leg because of diabetes?",
+      "book_key": "before-ever-after",
+      "page": 25
+    },
+    {
+      "type": "in-which-book",
+      "text": "does the character live 8 blocks away from school?",
+      "book_key": "before-ever-after",
+      "page": 40
+    },
+    {
+      "type": "in-which-book",
+      "text": "are they doing a puzzle with a Yeti on top of a mountain?",
+      "book_key": "before-ever-after",
+      "page": 44
+    },
+    {
+      "type": "in-which-book",
+      "text": "do they eat breakfast for dinner, pancakes and bacon and scrambled eggs?",
+      "book_key": "before-ever-after",
+      "page": 75
+    },
+    {
+      "type": "in-which-book",
+      "text": "did someone receive a guitar on their seventh birthday?",
+      "book_key": "before-ever-after",
+      "page": 78
+    },
+    {
+      "type": "in-which-book",
+      "text": "does someone have a pillow that smells like lavender oil?",
+      "book_key": "before-ever-after",
+      "page": 92
+    },
+    {
+      "type": "in-which-book",
+      "text": "is the phrase \u201cI need the trail\u201d used as a code?",
+      "book_key": "before-ever-after",
+      "page": 114
+    },
+    {
+      "type": "in-which-book",
+      "text": "do they reference the song \u201cI Wanna Dance With Somebody\u201d by Whitney Houston?",
+      "book_key": "before-ever-after",
+      "page": 128
+    },
+    {
+      "type": "content",
+      "text": "in what year does the book begin?",
+      "book_key": "before-ever-after",
+      "answer": "1999",
+      "page": 0
+    },
+    {
+      "type": "content",
+      "text": "what is their dad\u2019s nickname?",
+      "book_key": "before-ever-after",
+      "answer": "Zachariah44",
+      "page": 4
+    },
+    {
+      "type": "content",
+      "text": "how many \u201cpounds of pain\u201d is his father?",
+      "book_key": "before-ever-after",
+      "answer": "223",
+      "page": 5
+    },
+    {
+      "type": "content",
+      "text": "which friend can divide fractions in their head?",
+      "book_key": "before-ever-after",
+      "answer": "Ollie",
+      "page": 14
+    },
+    {
+      "type": "content",
+      "text": "what does the note say that was pinned to Ollie when he was abandoned at the church?",
+      "book_key": "before-ever-after",
+      "answer": "Please take care of this baby. And love him like crazy too.",
+      "page": 16
+    },
+    {
+      "type": "content",
+      "text": "what is the name of the town they live in?",
+      "book_key": "before-ever-after",
+      "answer": "Maplewood",
+      "page": 23
+    },
+    {
+      "type": "content",
+      "text": "what genre of book does ZJ like to read?",
+      "book_key": "before-ever-after",
+      "answer": "Realistic Fiction",
+      "page": 27
+    },
+    {
+      "type": "content",
+      "text": "what is the name of Ollie\u2019s mother?",
+      "book_key": "before-ever-after",
+      "answer": "Bernadette",
+      "page": 32
+    },
+    {
+      "type": "content",
+      "text": "what color rain boots does Daniel have?",
+      "book_key": "before-ever-after",
+      "answer": "Blue",
+      "page": 44
+    },
+    {
+      "type": "content",
+      "text": "what did they name the birch tree?",
+      "book_key": "before-ever-after",
+      "answer": "Sweet Pine",
+      "page": 53
+    },
+    {
+      "type": "content",
+      "text": "what position does Sightman play?",
+      "book_key": "before-ever-after",
+      "answer": "Wide Receiver",
+      "page": 70
+    },
+    {
+      "type": "content",
+      "text": "which birthday are they celebrating for Daniel, when they meet at the skate park?",
+      "book_key": "before-ever-after",
+      "answer": "12",
+      "page": 107
+    },
+    {
+      "type": "content",
+      "text": "what does ZJ call his dad\u2019s older sister?",
+      "book_key": "before-ever-after",
+      "answer": "Auntie Nan",
+      "page": 132
+    },
+    {
+      "type": "in-which-book",
+      "text": "is a character forbidden to cross the creek?",
+      "book_key": "solimar",
+      "page": 3
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character\u2019s grandmother make medicines and potions from plants and herbs? herbs?",
+      "book_key": "solimar",
+      "page": 8
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a cat use a green sock as a comfort item?",
+      "book_key": "solimar",
+      "page": 21
+    },
+    {
+      "type": "in-which-book",
+      "text": "is a village known for making beautiful rag dolls?",
+      "book_key": "solimar",
+      "page": 16
+    },
+    {
+      "type": "in-which-book",
+      "text": "can a character predict things that will happen in the near future?",
+      "book_key": "solimar",
+      "page": 25
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a king seek to make an alliance with eleven other rulers?",
+      "book_key": "solimar",
+      "page": 36
+    },
+    {
+      "type": "in-which-book",
+      "text": "is a large event to celebrate a character\u2019s fifteenth birthday approaching?",
+      "book_key": "solimar",
+      "page": 39
+    },
+    {
+      "type": "in-which-book",
+      "text": "is it said that the river is so dangerous that only flotsam survives?",
+      "book_key": "solimar",
+      "page": 39
+    },
+    {
+      "type": "in-which-book",
+      "text": "is there a secret passageway hidden behind a bookshelf?",
+      "book_key": "solimar",
+      "page": 52
+    },
+    {
+      "type": "in-which-book",
+      "text": "is it said that hot chocolate calms the soul?",
+      "book_key": "solimar",
+      "page": 58
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character drink hot chocolate sprinkled with cayenne pepper?",
+      "book_key": "solimar",
+      "page": 59
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a type of magic only work in the sunshine?",
+      "book_key": "solimar",
+      "page": 63
+    },
+    {
+      "type": "in-which-book",
+      "text": "is a character delivered a secret note that says, Don\u2019t eat the pastries?",
+      "book_key": "solimar",
+      "page": 176
+    },
+    {
+      "type": "in-which-book",
+      "text": "is a character meant to change their shoes as part of a birthday ceremony?",
+      "book_key": "solimar",
+      "page": 74
+    },
+    {
+      "type": "in-which-book",
+      "text": "is a character excited to find that their dress was made with pockets?",
+      "book_key": "solimar",
+      "page": 77
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character wear a flotation vest filled with the fluffy fibers from the seed pods of kapok trees?",
+      "book_key": "solimar",
+      "page": 90
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character call themselves a \u201cflume-ologist?\u201d",
+      "book_key": "solimar",
+      "page": 105
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character make a pair of shoes out of leather and cotton?",
+      "book_key": "solimar",
+      "page": 113
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character name a raft after their mother?",
+      "book_key": "solimar",
+      "page": 116
+    },
+    {
+      "type": "content",
+      "text": "what type of bird is L\u00e1zaro?",
+      "book_key": "solimar",
+      "answer": "Quetzal (or resplendent quetzal)",
+      "page": 2
+    },
+    {
+      "type": "content",
+      "text": "the ancestors of what creature inhabit the oyamel forest?",
+      "book_key": "solimar",
+      "answer": "Monarch butterflies",
+      "page": 2
+    },
+    {
+      "type": "content",
+      "text": "what is Solimar\u2019s Abuela\u2019s full name?",
+      "book_key": "solimar",
+      "answer": "Do\u00f1a Ana Socorro",
+      "page": 8
+    },
+    {
+      "type": "content",
+      "text": "what are the first names of Solimar\u2019s parents?",
+      "book_key": "solimar",
+      "answer": "Sebasti\u00e1n and Rosalinda",
+      "page": 11
+    },
+    {
+      "type": "content",
+      "text": "what is Solimar\u2019s brother\u2019s given first name, and what is the nickname everyone has called him since he was a toddler?",
+      "book_key": "solimar",
+      "answer": "Constantino, Campe\u00f3n",
+      "page": 11
+    },
+    {
+      "type": "content",
+      "text": "what is the name of the massive fair in Puerto Rivera?",
+      "book_key": "solimar",
+      "answer": "El Gran Mercado",
+      "page": 12
+    },
+    {
+      "type": "content",
+      "text": "which herb does Abuela need for a medicinal tea that treats headaches and stomach ailments?",
+      "book_key": "solimar",
+      "answer": "Mentha spicata (or spearmint)",
+      "page": 13
+    },
+    {
+      "type": "content",
+      "text": "Mar\u00eda\u2019s mother was planning on making a pineapple cake for dessert, but changed her mind.",
+      "book_key": "solimar",
+      "answer": "Orange flan",
+      "page": 26
+    },
+    {
+      "type": "content",
+      "text": "what is Solimar\u2019s nickname for Se\u00f1or Verde?",
+      "book_key": "solimar",
+      "answer": "The Shadow",
+      "page": 33
+    },
+    {
+      "type": "content",
+      "text": "what is the name of the ship on which Campe\u00f3n plans to secretly work as a deckhand?",
+      "book_key": "solimar",
+      "answer": "La Quinta",
+      "page": 42
+    },
+    {
+      "type": "content",
+      "text": "what is the full name of the magical folk healer who lives on the shadowy side of the mountain, and what is she more familiarly known as?",
+      "book_key": "solimar",
+      "answer": "Do\u00f1a Flor Espinoza, la curandera",
+      "page": 54
+    },
+    {
+      "type": "content",
+      "text": "what strong scent does Abuela say helps with remembering?",
+      "book_key": "solimar",
+      "answer": "Eucalyptus",
+      "page": 62
+    },
+    {
+      "type": "content",
+      "text": "what drains the strength of the butterflies protected within Solimar\u2019s rebozo?",
+      "book_key": "solimar",
+      "answer": "Answering questions (magically)",
+      "page": 63
+    },
+    {
+      "type": "content",
+      "text": "what is L\u00e1zaro\u2019s original country of origin?",
+      "book_key": "solimar",
+      "answer": "Guatemala",
+      "page": 70
+    },
+    {
+      "type": "content",
+      "text": "what will Solimar\u2019s full title be once she is crowned Princess?",
+      "book_key": "solimar",
+      "answer": "Princess Solimar Socorro Reyes Guadalupe of San Gregorio",
+      "page": 74
+    },
+    {
+      "type": "content",
+      "text": "what is the name of the extremely dangerous second waterfall that Solimar must avoid on the river?",
+      "book_key": "solimar",
+      "answer": "El Salto de los \u00c1ngeles (or Leap of Angels)",
+      "page": 92
+    },
+    {
+      "type": "content",
+      "text": "what is the name of the net Berto has engineered over a waterfall?",
+      "book_key": "solimar",
+      "answer": "The Confiscator",
+      "page": 99
+    },
+    {
+      "type": "content",
+      "text": "how long ago did Berto\u2019s father die?",
+      "book_key": "solimar",
+      "answer": "Five years ago",
+      "page": 119
+    },
+    {
+      "type": "content",
+      "text": "the final cavern of the labyrinth cave is filled with what animal?",
+      "book_key": "solimar",
+      "answer": "Bats",
+      "page": 141
+    },
+    {
+      "type": "content",
+      "text": "who switches places with King Sebasti\u00e1n to pose as king for their escape?",
+      "book_key": "solimar",
+      "answer": "Arturo",
+      "page": 169
+    },
+    {
+      "type": "in-which-book",
+      "text": "does someone use a white-noise machine?",
+      "book_key": "sam-makes-a-splash",
+      "page": 2
+    },
+    {
+      "type": "in-which-book",
+      "text": "are siblings compared to Russian dolls, based on their similar appearances?",
+      "book_key": "sam-makes-a-splash",
+      "page": 13
+    },
+    {
+      "type": "in-which-book",
+      "text": "is there a neighbor named Ms. Patel?",
+      "book_key": "sam-makes-a-splash",
+      "page": 15
+    },
+    {
+      "type": "in-which-book",
+      "text": "are there siblings of Syrian descent?",
+      "book_key": "sam-makes-a-splash",
+      "page": 23
+    },
+    {
+      "type": "in-which-book",
+      "text": "do they visit the neighborhood called Forked River?",
+      "book_key": "sam-makes-a-splash",
+      "page": 45
+    },
+    {
+      "type": "in-which-book",
+      "text": "does someone declare that they are going to go to culinary school, business school, and play baseball?",
+      "book_key": "sam-makes-a-splash",
+      "page": 46
+    },
+    {
+      "type": "in-which-book",
+      "text": "is it stated that it\u2019s a scientific fact that once a kid turns fourteen, they start turning into a grump?",
+      "book_key": "sam-makes-a-splash",
+      "page": 55
+    },
+    {
+      "type": "in-which-book",
+      "text": "is there a diner that has been missing the L in their sign that says Daily?",
+      "book_key": "sam-makes-a-splash",
+      "page": 58
+    },
+    {
+      "type": "in-which-book",
+      "text": "is there a coupon for Perry\u2019s Golf Course?",
+      "book_key": "sam-makes-a-splash",
+      "page": 61
+    },
+    {
+      "type": "in-which-book",
+      "text": "is someone pee-shy?",
+      "book_key": "sam-makes-a-splash",
+      "page": 65
+    },
+    {
+      "type": "in-which-book",
+      "text": "is there a dog that likes cucumbers?",
+      "book_key": "sam-makes-a-splash",
+      "page": 87
+    },
+    {
+      "type": "in-which-book",
+      "text": "do they make Chicken Cutlets?",
+      "book_key": "sam-makes-a-splash",
+      "page": 88
+    },
+    {
+      "type": "in-which-book",
+      "text": "do they make cupcakes that look like bald eagles?",
+      "book_key": "sam-makes-a-splash",
+      "page": 94
+    },
+    {
+      "type": "in-which-book",
+      "text": "does someone add goat cheese to the omelet?",
+      "book_key": "sam-makes-a-splash",
+      "page": 123
+    },
+    {
+      "type": "content",
+      "text": "how long was the Chaparral boat that their Mom was working on?",
+      "book_key": "sam-makes-a-splash",
+      "answer": "Forty-Five feet",
+      "page": 2
+    },
+    {
+      "type": "content",
+      "text": "what did the arrival of the Badger Boys mean?",
+      "book_key": "sam-makes-a-splash",
+      "answer": "The beginning of Summer",
+      "page": 6
+    },
+    {
+      "type": "content",
+      "text": "how many feet wide was the lagoon from the end of their dock to the beginning of the Badgers\u2019 dock?",
+      "book_key": "sam-makes-a-splash",
+      "answer": "Fifty feet",
+      "page": 7
+    },
+    {
+      "type": "content",
+      "text": "the marshes are a national wildlife refuge and what are two types of birds that call it home?",
+      "book_key": "sam-makes-a-splash",
+      "answer": "Ospreys, Egret, or Blue Heron",
+      "page": 15
+    },
+    {
+      "type": "content",
+      "text": "what is the name of the thirteen foot Boston Whaler?",
+      "book_key": "sam-makes-a-splash",
+      "answer": "Raggedy Ann",
+      "page": 18
+    },
+    {
+      "type": "content",
+      "text": "what is Pork\u2019s real name?",
+      "book_key": "sam-makes-a-splash",
+      "answer": "Pete",
+      "page": 25
+    },
+    {
+      "type": "content",
+      "text": "how long has Sam been a member of the AliO\u2019Connor family?",
+      "book_key": "sam-makes-a-splash",
+      "answer": "Three years",
+      "page": 28
+    },
+    {
+      "type": "content",
+      "text": "what is the name of Mr.",
+      "book_key": "sam-makes-a-splash",
+      "answer": "The Lovely Lilah",
+      "page": 41
+    },
+    {
+      "type": "content",
+      "text": "what is the name of the most lively restaurant on the river?",
+      "book_key": "sam-makes-a-splash",
+      "answer": "Captain\u2019s Inn",
+      "page": 46
+    },
+    {
+      "type": "content",
+      "text": "what type of animal eats the fiddler crabs?",
+      "book_key": "sam-makes-a-splash",
+      "answer": "The Egrets",
+      "page": 53
+    },
+    {
+      "type": "content",
+      "text": "how much does an ad cost for the biggest square on the mat at the diner?",
+      "book_key": "sam-makes-a-splash",
+      "answer": "Seven hundred forty-nine dollars and ninety-five cents",
+      "page": 66
+    },
+    {
+      "type": "content",
+      "text": "where does everyone take their boats on the 4th of July?",
+      "book_key": "sam-makes-a-splash",
+      "answer": "Tices Shoal",
+      "page": 77
+    },
+    {
+      "type": "content",
+      "text": "what is the name of the Perezs\u2019 boat?",
+      "book_key": "sam-makes-a-splash",
+      "answer": "The Happy Harpoon",
+      "page": 95
+    },
+    {
+      "type": "content",
+      "text": "what is Sam\u2019s grandmother\u2019s room number?",
+      "book_key": "sam-makes-a-splash",
+      "answer": "Room 129",
+      "page": 131
+    },
+    {
+      "type": "content",
+      "text": "Sam\u2019s grandma recites a poem by which poet to Harbor?",
+      "book_key": "sam-makes-a-splash",
+      "answer": "John Henry Yates",
+      "page": 134
+    },
+    {
+      "type": "content",
+      "text": "how many flukes were Mr.",
+      "book_key": "sam-makes-a-splash",
+      "answer": "3",
+      "page": 157
+    },
+    {
+      "type": "in-which-book",
+      "text": "is Chapter One made up of nothing but repetitions of the letter X periodically separated by spaces and punctuation?",
+      "book_key": "the-name-of-this-book-is-secret",
+      "page": 2
+    },
+    {
+      "type": "in-which-book",
+      "text": "does an ornate wooden box have inside a small brass plaque with the words: The Symphony of Smells?",
+      "book_key": "the-name-of-this-book-is-secret",
+      "page": 23
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character cut every hair on their head the exact same length because they didn\u2019t like to favor one hair over another?",
+      "book_key": "the-name-of-this-book-is-secret",
+      "page": 27
+    },
+    {
+      "type": "in-which-book",
+      "text": "are the parents of a newborn so bitter and angry in their disagreement over choosing their baby\u2019s name that they got a divorce as soon as they left the hospital with the baby?",
+      "book_key": "the-name-of-this-book-is-secret",
+      "page": 30
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character practice lying by telling their mother that \u201cthey don\u2019t have plates in Thailand?\u201d",
+      "book_key": "the-name-of-this-book-is-secret",
+      "page": 51
+    },
+    {
+      "type": "in-which-book",
+      "text": "do divorced parents believe that every child should be raised with two parents in the house, so they live in separate halves of a house that has been split down the middle?",
+      "book_key": "the-name-of-this-book-is-secret",
+      "page": 56
+    },
+    {
+      "type": "in-which-book",
+      "text": "do we read most of the story of \u201cLa Storia della Mia Vida\u201d about two fraternal twins who were born in Italy and then sent to America together to escape Benito Mussolini?",
+      "book_key": "the-name-of-this-book-is-secret",
+      "page": 125
+    },
+    {
+      "type": "in-which-book",
+      "text": "is synesthesia, the condition of sounds and colors and sounds all mixed up in one\u2019s head, an important element?",
+      "book_key": "the-name-of-this-book-is-secret",
+      "page": 134
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a circus Ringmaster try to sell a pair of ten-year-old twins to a stranger for a few dollars?",
+      "book_key": "the-name-of-this-book-is-secret",
+      "page": 141
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character send the school principal information about a missing student using a ransom note instead of a standard tip-off note from a concerned citizen?",
+      "book_key": "the-name-of-this-book-is-secret",
+      "page": 164
+    },
+    {
+      "type": "in-which-book",
+      "text": "does the author assert that school subjects like math, English, and history are unnecessary in life, but Egyptology comes in handy time after time?",
+      "book_key": "the-name-of-this-book-is-secret",
+      "page": 183
+    },
+    {
+      "type": "in-which-book",
+      "text": "is a character told by a doctor to practice having feelings? To name and then sit with his feelings for a while?",
+      "book_key": "the-name-of-this-book-is-secret",
+      "page": 195
+    },
+    {
+      "type": "in-which-book",
+      "text": "were evil alchemists searching for the secret of everlasting life?",
+      "book_key": "the-name-of-this-book-is-secret",
+      "page": 289
+    },
+    {
+      "type": "content",
+      "text": "the author wants the real location of the story to remain a mystery, so where does he ask the reader to imagine the story takes place?",
+      "book_key": "the-name-of-this-book-is-secret",
+      "answer": "\u201cYour Hometown,\u201d or the place that you live in.",
+      "page": 7
+    },
+    {
+      "type": "content",
+      "text": "Cass has a distinguishing physical feature.",
+      "book_key": "the-name-of-this-book-is-secret",
+      "answer": "She has rather large, pointy ears.",
+      "page": 11
+    },
+    {
+      "type": "content",
+      "text": "while Cass is being introduced we learn her two word motto.",
+      "book_key": "the-name-of-this-book-is-secret",
+      "answer": "Be Prepared",
+      "page": 12
+    },
+    {
+      "type": "content",
+      "text": "Max-Ernest repeatedly poses this riddle: What is not enough for one, just right for two, and too much for three?",
+      "book_key": "the-name-of-this-book-is-secret",
+      "answer": "A Secret",
+      "page": 26
+    },
+    {
+      "type": "content",
+      "text": "what is the secret word necessary to use the elevator in the magician\u2019s house?",
+      "book_key": "the-name-of-this-book-is-secret",
+      "answer": "Please",
+      "page": 65
+    },
+    {
+      "type": "content",
+      "text": "Max-Ernest defines an anagram for Cassie.",
+      "book_key": "the-name-of-this-book-is-secret",
+      "answer": "\u201cIt\u2019s when two words have all the same letters but in a different order.\u201d",
+      "page": 85
+    },
+    {
+      "type": "content",
+      "text": "whose private office created the illusion of infinitely expanding space with many reflecting panels of mirrors on the walls and ceiling?",
+      "book_key": "the-name-of-this-book-is-secret",
+      "answer": "Ms. Mauvais",
+      "page": 215
+    },
+    {
+      "type": "content",
+      "text": "Ms.",
+      "book_key": "the-name-of-this-book-is-secret",
+      "answer": "Cass\u2019 ears",
+      "page": 216
+    },
+    {
+      "type": "content",
+      "text": "Max-Ernest tells Cass that Dr.",
+      "book_key": "the-name-of-this-book-is-secret",
+      "answer": "His nose",
+      "page": 223
+    },
+    {
+      "type": "content",
+      "text": "Ms.",
+      "book_key": "the-name-of-this-book-is-secret",
+      "answer": "The ungloved hand of a very old woman [thin and frail fingers, nails yellow and cracked, and skin so translucent you could see bones, ligaments and veins].",
+      "page": 236
+    },
+    {
+      "type": "content",
+      "text": "what did all the many guests waiting for admittance to the pyramid have in common?",
+      "book_key": "the-name-of-this-book-is-secret",
+      "answer": "They were all wearing gloves.",
+      "page": 264
+    },
+    {
+      "type": "content",
+      "text": "Max-Ernest could not swim and was afraid to cross the moat to the pyramid.",
+      "book_key": "the-name-of-this-book-is-secret",
+      "answer": "The water was only waist deep and they could wade across.",
+      "page": 291
+    },
+    {
+      "type": "content",
+      "text": "the book ends with a coded letter inviting Cass and Max-Ernest to become members of the Terces Society.",
+      "book_key": "the-name-of-this-book-is-secret",
+      "answer": "The missing magician, and twin brother to Dr.L, Pietro Bergamo",
+      "page": 351
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character\u2019s mother die when they are only four years old?",
+      "book_key": "mystwick-school-of-musicraft",
+      "page": 11
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a newspaper headline read Tokyo Philharmonic Staves Off Deadly Typhoon?",
+      "book_key": "mystwick-school-of-musicraft",
+      "page": 14
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character find out their mother did not die in a car crash, as they had always been told?",
+      "book_key": "mystwick-school-of-musicraft",
+      "page": 52
+    },
+    {
+      "type": "in-which-book",
+      "text": "is a character given a piece of grape chewing gum in case of motion sickness?",
+      "book_key": "mystwick-school-of-musicraft",
+      "page": 61
+    },
+    {
+      "type": "in-which-book",
+      "text": "is there a magical cat named Wynk?",
+      "book_key": "mystwick-school-of-musicraft",
+      "page": 83
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character get mistaken for another student with the exact same name?",
+      "book_key": "mystwick-school-of-musicraft",
+      "page": 84
+    },
+    {
+      "type": "in-which-book",
+      "text": "is a wooden whistle with three holes actually a key?",
+      "book_key": "mystwick-school-of-musicraft",
+      "page": 96
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character find a book in the library that their mother checked out seven times?",
+      "book_key": "mystwick-school-of-musicraft",
+      "page": 138
+    },
+    {
+      "type": "in-which-book",
+      "text": "is the school\u2019s main auditorium called \u201cThe Shell?\u201d",
+      "book_key": "mystwick-school-of-musicraft",
+      "page": 141
+    },
+    {
+      "type": "in-which-book",
+      "text": "is there a lake called Orpheus Lake?",
+      "book_key": "mystwick-school-of-musicraft",
+      "page": 159
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character steal someone\u2019s cat as a trade?",
+      "book_key": "mystwick-school-of-musicraft",
+      "page": 231
+    },
+    {
+      "type": "in-which-book",
+      "text": "do characters get trapped by magical trees?",
+      "book_key": "mystwick-school-of-musicraft",
+      "page": 272
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character have an important test on Halloween?",
+      "book_key": "mystwick-school-of-musicraft",
+      "page": 286
+    },
+    {
+      "type": "in-which-book",
+      "text": "is there a tornado made up entirely of ghosts?",
+      "book_key": "mystwick-school-of-musicraft",
+      "page": 309
+    },
+    {
+      "type": "in-which-book",
+      "text": "is a character brought back from the dead?",
+      "book_key": "mystwick-school-of-musicraft",
+      "page": 321
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character\u2019s grandmother forget her email password?",
+      "book_key": "mystwick-school-of-musicraft",
+      "page": 354
+    },
+    {
+      "type": "content",
+      "text": "what is the first rule of Musicraft?",
+      "book_key": "mystwick-school-of-musicraft",
+      "answer": "A spell can charm or do great harm. Before you play, clear the way.",
+      "page": 2
+    },
+    {
+      "type": "content",
+      "text": "what is Amelia\u2019s Mystwick School audition number?",
+      "book_key": "mystwick-school-of-musicraft",
+      "answer": "242",
+      "page": 19
+    },
+    {
+      "type": "content",
+      "text": "what song is the simple drying spell Amelia tries to use to clean up the grape juice she spilled before her audition?",
+      "book_key": "mystwick-school-of-musicraft",
+      "answer": "The Itsy-Bitsy Spider",
+      "page": 22
+    },
+    {
+      "type": "content",
+      "text": "which two instruments does Jai\u2019s dad believe are not serious enough?",
+      "book_key": "mystwick-school-of-musicraft",
+      "answer": "Sax (or saxophone) and guitar",
+      "page": 26
+    },
+    {
+      "type": "content",
+      "text": "what kind of vehicle picks Amelia up for her first day of school?",
+      "book_key": "mystwick-school-of-musicraft",
+      "answer": "A zeppelin",
+      "page": 60
+    },
+    {
+      "type": "content",
+      "text": "how many people in the world are licensed to teleport anything bigger than a refrigerator?",
+      "book_key": "mystwick-school-of-musicraft",
+      "answer": "16",
+      "page": 65
+    },
+    {
+      "type": "content",
+      "text": "name two of the four teacher Maestros of Mystwick School of Musicraft.",
+      "book_key": "mystwick-school-of-musicraft",
+      "answer": "(Any two) Miss Noorani, Mr. Walters, Miss Becker, Mr. Pinwhistle",
+      "page": 81
+    },
+    {
+      "type": "content",
+      "text": "what is the full name of the Headmaestro of Mystwick?",
+      "book_key": "mystwick-school-of-musicraft",
+      "answer": "Euphonia Le Roux",
+      "page": 83
+    },
+    {
+      "type": "content",
+      "text": "what song does Amelia play at the edge of the Echo Wood on her first day at Mystwick?",
+      "book_key": "mystwick-school-of-musicraft",
+      "answer": "Pachelbel\u2019s Canon in D",
+      "page": 89
+    },
+    {
+      "type": "content",
+      "text": "what are the only two ways to leave Mystwick for good?",
+      "book_key": "mystwick-school-of-musicraft",
+      "answer": "Either by graduating or being expelled",
+      "page": 93
+    },
+    {
+      "type": "content",
+      "text": "what is Darby\u2019s actual first name?",
+      "book_key": "mystwick-school-of-musicraft",
+      "answer": "Hamako",
+      "page": 101
+    },
+    {
+      "type": "content",
+      "text": "what is the name for all the students who play woodwind instruments?",
+      "book_key": "mystwick-school-of-musicraft",
+      "answer": "Aeros",
+      "page": 127
+    },
+    {
+      "type": "content",
+      "text": "what four colors represent different kinds of spells?",
+      "book_key": "mystwick-school-of-musicraft",
+      "answer": "Green, yellow, blue, white",
+      "page": 130
+    },
+    {
+      "type": "content",
+      "text": "who is the school nurse, the librarian, and the dean of students?",
+      "book_key": "mystwick-school-of-musicraft",
+      "answer": "Miss March",
+      "page": 157
+    },
+    {
+      "type": "content",
+      "text": "what is the name for the metal staples clamped onto the ears of musicians who use magic for evil purposes?",
+      "book_key": "mystwick-school-of-musicraft",
+      "answer": "Bars",
+      "page": 179
+    },
+    {
+      "type": "content",
+      "text": "what is the name of the school rock club?",
+      "book_key": "mystwick-school-of-musicraft",
+      "answer": "Rebel Clef",
+      "page": 215
+    },
+    {
+      "type": "content",
+      "text": "what is Amelia\u2019s dad\u2019s full name?",
+      "book_key": "mystwick-school-of-musicraft",
+      "answer": "Eric Neal",
+      "page": 237
+    },
+    {
+      "type": "content",
+      "text": "what is the name of Amelia\u2019s favorite opera?",
+      "book_key": "mystwick-school-of-musicraft",
+      "answer": "The Magic Flute",
+      "page": 295
+    },
+    {
+      "type": "content",
+      "text": "what is Amelia\u2019s actual middle name?",
+      "book_key": "mystwick-school-of-musicraft",
+      "answer": "Grace",
+      "page": 334
+    },
+    {
+      "type": "in-which-book",
+      "text": "does the story begin during monsoon rains and thunderstorms?",
+      "book_key": "marshmallow-jordan",
+      "page": 1
+    },
+    {
+      "type": "in-which-book",
+      "text": "does the team captain stand in for her basketball coach when he has to leave early?",
+      "book_key": "marshmallow-jordan",
+      "page": 10
+    },
+    {
+      "type": "in-which-book",
+      "text": "does someone use a scooter to give assistance to someone with an injured leg?",
+      "book_key": "marshmallow-jordan",
+      "page": 23
+    },
+    {
+      "type": "in-which-book",
+      "text": "does someone change out of their tennis shoes into flip flops when they get home from work?",
+      "book_key": "marshmallow-jordan",
+      "page": 39
+    },
+    {
+      "type": "in-which-book",
+      "text": "are the students studying the Pacific Rim of Fire?",
+      "book_key": "marshmallow-jordan",
+      "page": 66
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a student fall asleep in class because they stayed up late playing Star Wars: Battlefront?",
+      "book_key": "marshmallow-jordan",
+      "page": 71
+    },
+    {
+      "type": "in-which-book",
+      "text": "does an elephant join a basketball team?",
+      "book_key": "marshmallow-jordan",
+      "page": 84
+    },
+    {
+      "type": "in-which-book",
+      "text": "does the main character admire a Golden State Warrior basketball player?",
+      "book_key": "marshmallow-jordan",
+      "page": 89
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character dig a pool in the middle of the night?",
+      "book_key": "marshmallow-jordan",
+      "page": 117
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a main character rediscover swimming as an enjoyable activity?",
+      "book_key": "marshmallow-jordan",
+      "page": 127
+    },
+    {
+      "type": "in-which-book",
+      "text": "does someone overhear a conversation about herself while she\u2019s in the girls\u2019 restroom?",
+      "book_key": "marshmallow-jordan",
+      "page": 225
+    },
+    {
+      "type": "in-which-book",
+      "text": "does the basketball team travel to another team\u2019s game?",
+      "book_key": "marshmallow-jordan",
+      "page": 252
+    },
+    {
+      "type": "in-which-book",
+      "text": "does someone love pineapple Cold Whip with extra coconut topping?",
+      "book_key": "marshmallow-jordan",
+      "page": 347
+    },
+    {
+      "type": "content",
+      "text": "Jordan has two favorite basketball players.",
+      "book_key": "marshmallow-jordan",
+      "answer": "Michael Jordan and Steph Curry",
+      "page": 88
+    },
+    {
+      "type": "content",
+      "text": "Hans brings smoothies for his sister and friend.",
+      "book_key": "marshmallow-jordan",
+      "answer": "Avocado and chocolate",
+      "page": 12
+    },
+    {
+      "type": "content",
+      "text": "Jordan hears something whimpering in the playground on the way home from school.",
+      "book_key": "marshmallow-jordan",
+      "answer": "A white elephant",
+      "page": 19
+    },
+    {
+      "type": "content",
+      "text": "Jordan prays to an elephant god to watch over her elephant friend.",
+      "book_key": "marshmallow-jordan",
+      "answer": "Lord Ganesh",
+      "page": 55
+    },
+    {
+      "type": "content",
+      "text": "what is the first name that Jordan suggests for her elephant?",
+      "book_key": "marshmallow-jordan",
+      "answer": "Cotton Puff",
+      "page": 58
+    },
+    {
+      "type": "content",
+      "text": "who is Jordan named for?",
+      "book_key": "marshmallow-jordan",
+      "answer": "Michael Jordan",
+      "page": 88
+    },
+    {
+      "type": "content",
+      "text": "Jordan\u2019s dad pretends to be shopping for Nanek\u2019s sewing club.",
+      "book_key": "marshmallow-jordan",
+      "answer": "Mango and durian",
+      "page": 133
+    },
+    {
+      "type": "content",
+      "text": "Jordan\u2019s basketball coach recommends that she try out for what other school athletic team?",
+      "book_key": "marshmallow-jordan",
+      "answer": "Water polo",
+      "page": 154
+    },
+    {
+      "type": "content",
+      "text": "why does Jordan miss the basketball team\u2019s first game?",
+      "book_key": "marshmallow-jordan",
+      "answer": "She has to stay late at water polo practice",
+      "page": 209
+    },
+    {
+      "type": "content",
+      "text": "Kemala is afraid she will lose her scholarship.",
+      "book_key": "marshmallow-jordan",
+      "answer": "Their farm isn\u2019t doing well because of the drought",
+      "page": 224
+    },
+    {
+      "type": "content",
+      "text": "in the last 10 seconds of the water polo game who scores?",
+      "book_key": "marshmallow-jordan",
+      "answer": "Jordan",
+      "page": 293
+    },
+    {
+      "type": "content",
+      "text": "it turns out that the elephant is not an elephant.",
+      "book_key": "marshmallow-jordan",
+      "answer": "A regional rain cloud",
+      "page": 340
+    },
+    {
+      "type": "in-which-book",
+      "text": "does the character say \u201cI\u2019m a Girl Scout, and I\u2019m here to save you\u201d?",
+      "book_key": "leonard-my-life-as-a-cat",
+      "page": 12
+    },
+    {
+      "type": "in-which-book",
+      "text": "do they have curtains that are tan colored?",
+      "book_key": "leonard-my-life-as-a-cat",
+      "page": 25
+    },
+    {
+      "type": "in-which-book",
+      "text": "is there a turtle night-light?",
+      "book_key": "leonard-my-life-as-a-cat",
+      "page": 27
+    },
+    {
+      "type": "in-which-book",
+      "text": "was there a packet of coupons for jumbo shrimp and other \u201csea delights\u201d?",
+      "book_key": "leonard-my-life-as-a-cat",
+      "page": 32
+    },
+    {
+      "type": "in-which-book",
+      "text": "do they plan to blame the shredding of the letters on the birds?",
+      "book_key": "leonard-my-life-as-a-cat",
+      "page": 38
+    },
+    {
+      "type": "in-which-book",
+      "text": "do they have Coco Pops, Froot Loops and Cinnamon Toast Crunch cereal?",
+      "book_key": "leonard-my-life-as-a-cat",
+      "page": 41
+    },
+    {
+      "type": "in-which-book",
+      "text": "do they own a backpack shaped like a turtle\u2019s shell?",
+      "book_key": "leonard-my-life-as-a-cat",
+      "page": 47
+    },
+    {
+      "type": "in-which-book",
+      "text": "are they warned to not try the clam flavored ice cream?",
+      "book_key": "leonard-my-life-as-a-cat",
+      "page": 56
+    },
+    {
+      "type": "in-which-book",
+      "text": "is there a stuffed animal horse named Mr. Stickhorse?",
+      "book_key": "leonard-my-life-as-a-cat",
+      "page": 63
+    },
+    {
+      "type": "in-which-book",
+      "text": "do they have a box of crayons with ninety-six colors?",
+      "book_key": "leonard-my-life-as-a-cat",
+      "page": 87
+    },
+    {
+      "type": "in-which-book",
+      "text": "did they want to rename golf carts \u201cDanger Mobiles\u201d?",
+      "book_key": "leonard-my-life-as-a-cat",
+      "page": 90
+    },
+    {
+      "type": "in-which-book",
+      "text": "did they go see The Wizard of Oz?",
+      "book_key": "leonard-my-life-as-a-cat",
+      "page": 127
+    },
+    {
+      "type": "in-which-book",
+      "text": "did they order a chocolate-cherry ice cream cone?",
+      "book_key": "leonard-my-life-as-a-cat",
+      "page": 132
+    },
+    {
+      "type": "in-which-book",
+      "text": "is someone\u2019s scent identified as cinnamon toast and raspberry shampoo?",
+      "book_key": "leonard-my-life-as-a-cat",
+      "page": 146
+    },
+    {
+      "type": "in-which-book",
+      "text": "did someone become mildly obsessed with Hungry Hungry Hippos?",
+      "book_key": "leonard-my-life-as-a-cat",
+      "page": 147
+    },
+    {
+      "type": "in-which-book",
+      "text": "did they get a wild-cherry slurpee?",
+      "book_key": "leonard-my-life-as-a-cat",
+      "page": 186
+    },
+    {
+      "type": "in-which-book",
+      "text": "did they attend a Science Explorers camp?",
+      "book_key": "leonard-my-life-as-a-cat",
+      "page": 204
+    },
+    {
+      "type": "in-which-book",
+      "text": "does their mom make pancakes on Christmas morning, sometimes with strawberries in them?",
+      "book_key": "leonard-my-life-as-a-cat",
+      "page": 241
+    },
+    {
+      "type": "content",
+      "text": "what flavor are the crunchies first fed to Leonard?",
+      "book_key": "leonard-my-life-as-a-cat",
+      "answer": "Trout flavored",
+      "page": 3
+    },
+    {
+      "type": "content",
+      "text": "according to Leonard\u2019s joke, how many park rangers does it take to change a light bulb?",
+      "book_key": "leonard-my-life-as-a-cat",
+      "answer": "Twenty-two",
+      "page": 7
+    },
+    {
+      "type": "content",
+      "text": "how tall is Earth\u2019s largest flower?",
+      "book_key": "leonard-my-life-as-a-cat",
+      "answer": "Over nine feet tall",
+      "page": 21
+    },
+    {
+      "type": "content",
+      "text": "what is the name for a group of cats?",
+      "book_key": "leonard-my-life-as-a-cat",
+      "answer": "A clowder",
+      "page": 25
+    },
+    {
+      "type": "content",
+      "text": "how long can alpine swifts fly without stopping?",
+      "book_key": "leonard-my-life-as-a-cat",
+      "answer": "Six months",
+      "page": 30
+    },
+    {
+      "type": "content",
+      "text": "what are the mountains made of on Leonard\u2019s home planet?",
+      "book_key": "leonard-my-life-as-a-cat",
+      "answer": "Crystals",
+      "page": 34
+    },
+    {
+      "type": "content",
+      "text": "which friend of Olive\u2019s owns a family farm?",
+      "book_key": "leonard-my-life-as-a-cat",
+      "answer": "Hazel",
+      "page": 42
+    },
+    {
+      "type": "content",
+      "text": "how many stingrays are at the aquarium?",
+      "book_key": "leonard-my-life-as-a-cat",
+      "answer": "Three",
+      "page": 48
+    },
+    {
+      "type": "content",
+      "text": "what are the two sharks named at the aquarium?",
+      "book_key": "leonard-my-life-as-a-cat",
+      "answer": "Steve and Martin",
+      "page": 57
+    },
+    {
+      "type": "content",
+      "text": "how many days does the average human live for?",
+      "book_key": "leonard-my-life-as-a-cat",
+      "answer": "28,835",
+      "page": 68
+    },
+    {
+      "type": "content",
+      "text": "what percentage of Antarctic ice is made from penguin urine?",
+      "book_key": "leonard-my-life-as-a-cat",
+      "answer": "Three percent",
+      "page": 91
+    },
+    {
+      "type": "content",
+      "text": "what is the first message that Leonard types to Olive?",
+      "book_key": "leonard-my-life-as-a-cat",
+      "answer": "hello olive, it is me leonard i am an alien do not be scared.",
+      "page": 98
+    },
+    {
+      "type": "content",
+      "text": "how old is Olive?",
+      "book_key": "leonard-my-life-as-a-cat",
+      "answer": "Eleven",
+      "page": 108
+    },
+    {
+      "type": "content",
+      "text": "what is the date of Norma\u2019s Save the Sea Turtles event?",
+      "book_key": "leonard-my-life-as-a-cat",
+      "answer": "July eighteenth",
+      "page": 111
+    },
+    {
+      "type": "content",
+      "text": "what color is Olive\u2019s beach towel?",
+      "book_key": "leonard-my-life-as-a-cat",
+      "answer": "Green",
+      "page": 182
+    },
+    {
+      "type": "content",
+      "text": "what year was Q\u2019s Winnebago?",
+      "book_key": "leonard-my-life-as-a-cat",
+      "answer": "Nineteen sixty-nine",
+      "page": 183
+    },
+    {
+      "type": "content",
+      "text": "according to Norma, what's the name of the cafe that makes biscuits that are an educational experience?",
+      "book_key": "leonard-my-life-as-a-cat",
+      "answer": "Tupelo Honey cafe",
+      "page": 187
+    },
+    {
+      "type": "content",
+      "text": "how far away from Old Faithful were they when the Winnebago broke down?",
+      "book_key": "leonard-my-life-as-a-cat",
+      "answer": "Fifteen Miles",
+      "page": 211
+    },
+    {
+      "type": "in-which-book",
+      "text": "is the design and writing meant to be friendly to readers with dyslexia?",
+      "book_key": "just-jerry",
+      "page": -1
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a street dead-end at the St. Luke\u2019s Epicopal Church Cemetery?",
+      "book_key": "just-jerry",
+      "page": 7
+    },
+    {
+      "type": "in-which-book",
+      "text": "is a sister mad about a drawing of her napping when she was supposed to be watching her siblings?",
+      "book_key": "just-jerry",
+      "page": 12
+    },
+    {
+      "type": "in-which-book",
+      "text": "does someone get teased for having a \u201cnickname\u201d and no middle name?",
+      "book_key": "just-jerry",
+      "page": 13
+    },
+    {
+      "type": "in-which-book",
+      "text": "does someone find relief from a busy household by drawing on the wall beside their bed?",
+      "book_key": "just-jerry",
+      "page": 36
+    },
+    {
+      "type": "in-which-book",
+      "text": "does someone rely on reading their friends lips as they read out loud from Western movie posters?",
+      "book_key": "just-jerry",
+      "page": 49
+    },
+    {
+      "type": "in-which-book",
+      "text": "do the kids build a clubhouse using old fence slats, bricks for the floor and a car window?",
+      "book_key": "just-jerry",
+      "page": 60
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a mother keep her kid\u2019s dinner warm by covering it with an upside down plate and setting it on top of a pot of water on a low flame?",
+      "book_key": "just-jerry",
+      "page": 74
+    },
+    {
+      "type": "in-which-book",
+      "text": "does someone get in trouble for wanting to see the Steel Pier High-Diving Horses?",
+      "book_key": "just-jerry",
+      "page": 84
+    },
+    {
+      "type": "in-which-book",
+      "text": "does someone accidentally kill a small bird with their bow and arrow?",
+      "book_key": "just-jerry",
+      "page": 98
+    },
+    {
+      "type": "in-which-book",
+      "text": "does someone consider their work helping to paint hex signs as great training?",
+      "book_key": "just-jerry",
+      "page": 125
+    },
+    {
+      "type": "in-which-book",
+      "text": "does someone drop out of college and get a job at a florist\u2019s shop delivering flowers?",
+      "book_key": "just-jerry",
+      "page": 133
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a museum purchase an original oil painting to hang in its collection, and give a shout out to the artist on their 81st birthday?",
+      "book_key": "just-jerry",
+      "page": 141
+    },
+    {
+      "type": "content",
+      "text": "Jerry\u2019s favorite place to draw in his crowded home is where?",
+      "book_key": "just-jerry",
+      "answer": "Under the upright piano keyboard",
+      "page": 29
+    },
+    {
+      "type": "content",
+      "text": "Jerry finds a stash of what kind of magazines in a wardrobe full of bed linens?",
+      "book_key": "just-jerry",
+      "answer": "Life magazine. World War II",
+      "page": 34
+    },
+    {
+      "type": "content",
+      "text": "Jerry\u2019s mother gives him something to calm his stomach before going to school.",
+      "book_key": "just-jerry",
+      "answer": "Tums",
+      "page": 46
+    },
+    {
+      "type": "content",
+      "text": "a teacher asks Jerry to help with a school wide unit about safety by doing what?",
+      "book_key": "just-jerry",
+      "answer": "Drawing a fire engine on the chalkboard",
+      "page": 53
+    },
+    {
+      "type": "content",
+      "text": "the boys ride their bikes to the Ben Franklin Bridge which crosses which river?",
+      "book_key": "just-jerry",
+      "answer": "The Delaware",
+      "page": 68
+    },
+    {
+      "type": "content",
+      "text": "what color are the police cars in Philadelphia?",
+      "book_key": "just-jerry",
+      "answer": "Fire-engine red",
+      "page": 73
+    },
+    {
+      "type": "content",
+      "text": "the family goes to the Jersey Shore for vacation.",
+      "book_key": "just-jerry",
+      "answer": "Chicken Bone Beach",
+      "page": 79
+    },
+    {
+      "type": "content",
+      "text": "Jerry and his friends would offer shoe-shines outside of Woolworth five-and-dime.",
+      "book_key": "just-jerry",
+      "answer": "Fifteen cents",
+      "page": 107
+    },
+    {
+      "type": "content",
+      "text": "Jerry finds the perfect still life in a shop window.",
+      "book_key": "just-jerry",
+      "answer": "Headless mannequins in wedding dresses",
+      "page": 117
+    },
+    {
+      "type": "content",
+      "text": "Jerry meets a real artist while selling newspapers.",
+      "book_key": "just-jerry",
+      "answer": "John Liney. A comic strip named HENRY.",
+      "page": 120
+    },
+    {
+      "type": "content",
+      "text": "what is the subject of Jerry\u2019s first oil painting?",
+      "book_key": "just-jerry",
+      "answer": "Jesus praying at a rock",
+      "page": 127
+    },
+    {
+      "type": "content",
+      "text": "Jerry goes to Murrell Dobbins Vocational High School to study what?",
+      "book_key": "just-jerry",
+      "answer": "Commercial art",
+      "page": 128
+    },
+    {
+      "type": "content",
+      "text": "the Philadelphia Museum of Art mounts a solo exhibition of Jerry\u2019s work.",
+      "book_key": "just-jerry",
+      "answer": "Witness: The Art of Jerry Pinkney",
+      "page": 129
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character quit their job at the hospital because they hate that everybody isn\u2019t treated the same?",
+      "book_key": "jd-and-the-great-barber-battle",
+      "page": 11
+    },
+    {
+      "type": "in-which-book",
+      "text": "did a character have the nickname \u201cCheetah\u201d as a kid?",
+      "book_key": "jd-and-the-great-barber-battle",
+      "page": 13
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character live with their brother, sister, mom, and two grandparents in a house built in the 1930s?",
+      "book_key": "jd-and-the-great-barber-battle",
+      "page": 13
+    },
+    {
+      "type": "in-which-book",
+      "text": "is a character a third grader at Douglass Elementary?",
+      "book_key": "jd-and-the-great-barber-battle",
+      "page": 14
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a girl character anchor the boys\u2019 4x100 relay track team?",
+      "book_key": "jd-and-the-great-barber-battle",
+      "page": 22
+    },
+    {
+      "type": "in-which-book",
+      "text": "is a character told to take off their hat on the first day of school?",
+      "book_key": "jd-and-the-great-barber-battle",
+      "page": 24
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character want to look like football star Patrick Mahomes?",
+      "book_key": "jd-and-the-great-barber-battle",
+      "page": 29
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character put a relaxer in their hair to straighten it?",
+      "book_key": "jd-and-the-great-barber-battle",
+      "page": 34
+    },
+    {
+      "type": "in-which-book",
+      "text": "can a character afford to buy thirty pieces of ten-cent candy from the candy store?",
+      "book_key": "jd-and-the-great-barber-battle",
+      "page": 52
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character get a visit from the County Health Inspector?",
+      "book_key": "jd-and-the-great-barber-battle",
+      "page": 69
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character invite the whole town to a special competition?",
+      "book_key": "jd-and-the-great-barber-battle",
+      "page": 79
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character teach ceramics classes?",
+      "book_key": "jd-and-the-great-barber-battle",
+      "page": 86
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character rent a chair in a shop on weekends?",
+      "book_key": "jd-and-the-great-barber-battle",
+      "page": 117
+    },
+    {
+      "type": "content",
+      "text": "how old are the Jones kids when they usually get their first haircut?",
+      "book_key": "jd-and-the-great-barber-battle",
+      "answer": "Nine",
+      "page": 7
+    },
+    {
+      "type": "content",
+      "text": "name two of the three kids\u2019 haircuts offered at Hart and Son Barbershop.",
+      "book_key": "jd-and-the-great-barber-battle",
+      "answer": "Michael B. Jordan",
+      "page": 10
+    },
+    {
+      "type": "content",
+      "text": "what was the name of the college where J.",
+      "book_key": "jd-and-the-great-barber-battle",
+      "answer": "Mississippi Valley State",
+      "page": 13
+    },
+    {
+      "type": "content",
+      "text": "name the town and state where J.",
+      "book_key": "jd-and-the-great-barber-battle",
+      "answer": "Meridian, Mississippi",
+      "page": 13
+    },
+    {
+      "type": "content",
+      "text": "what business did J.",
+      "book_key": "jd-and-the-great-barber-battle",
+      "answer": "Burial insurance",
+      "page": 17
+    },
+    {
+      "type": "content",
+      "text": "what is the first and last name of the only girl on J.",
+      "book_key": "jd-and-the-great-barber-battle",
+      "answer": "Jessyka Fleet",
+      "page": 22
+    },
+    {
+      "type": "content",
+      "text": "what does it mean for Jordan\u2019s family to be \u201cCreasters?",
+      "book_key": "jd-and-the-great-barber-battle",
+      "answer": "They only go to church on Christmas and Easter",
+      "page": 27
+    },
+    {
+      "type": "content",
+      "text": "who is on the cover of the Madden NFL 20 video game?",
+      "book_key": "jd-and-the-great-barber-battle",
+      "answer": "Patrick Mahomes",
+      "page": 29
+    },
+    {
+      "type": "content",
+      "text": "how much does a kids\u2019 haircut cost at Hart and Son Barbershop?",
+      "book_key": "jd-and-the-great-barber-battle",
+      "answer": "$7.50",
+      "page": 30
+    },
+    {
+      "type": "content",
+      "text": "what type of cream does J.",
+      "book_key": "jd-and-the-great-barber-battle",
+      "answer": "Relaxer",
+      "page": 32
+    },
+    {
+      "type": "content",
+      "text": "how old is Justin when J.",
+      "book_key": "jd-and-the-great-barber-battle",
+      "answer": "Three",
+      "page": 41
+    },
+    {
+      "type": "content",
+      "text": "when J.",
+      "book_key": "jd-and-the-great-barber-battle",
+      "answer": "Jumpman, Chicago Bulls logo",
+      "page": 51
+    },
+    {
+      "type": "content",
+      "text": "how much does J.",
+      "book_key": "jd-and-the-great-barber-battle",
+      "answer": "$3.00",
+      "page": 52
+    },
+    {
+      "type": "content",
+      "text": "what is the name of the County Health Inspector?",
+      "book_key": "jd-and-the-great-barber-battle",
+      "answer": "Robert Victor",
+      "page": 69
+    },
+    {
+      "type": "content",
+      "text": "what does J.",
+      "book_key": "jd-and-the-great-barber-battle",
+      "answer": "A new video game console",
+      "page": 73
+    },
+    {
+      "type": "content",
+      "text": "what is the first of three hairstyles the contestants have to cut in the Great Barber Battle?",
+      "book_key": "jd-and-the-great-barber-battle",
+      "answer": "A fade",
+      "page": 101
+    },
+    {
+      "type": "in-which-book",
+      "text": "is a Sunday trip to the hair salon a weekly family tradition?",
+      "book_key": "frizzy",
+      "page": 16
+    },
+    {
+      "type": "in-which-book",
+      "text": "do two girls end up crying together in a closet because they don\u2019t compare well to Diana?",
+      "book_key": "frizzy",
+      "page": 34
+    },
+    {
+      "type": "in-which-book",
+      "text": "does the main character say they don\u2019t want to see family sometimes because they are worried they will make fun of them?",
+      "book_key": "frizzy",
+      "page": 51
+    },
+    {
+      "type": "in-which-book",
+      "text": "does the main character wonder if they could make their hair be \u201cwhat it was supposed to be,\u201d then people would let them be themself?",
+      "book_key": "frizzy",
+      "page": 63
+    },
+    {
+      "type": "in-which-book",
+      "text": "is someone teased by being told they look like they got electrocuted, and they look like Chewbacca?",
+      "book_key": "frizzy",
+      "page": 84
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a mother say that straightened hair makes it easier to fit in and looks more professional?",
+      "book_key": "frizzy",
+      "page": 132
+    },
+    {
+      "type": "in-which-book",
+      "text": "do we learn that the main character\u2019s mother was bullied about her own appearance in her youth?",
+      "book_key": "frizzy",
+      "page": 147
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character and their aunt share \u201cwash day 101\u201d together?",
+      "book_key": "frizzy",
+      "page": 154
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a mother sit down on the kitchen floor with her daughter to have a serious talk about feelings?",
+      "book_key": "frizzy",
+      "page": 197
+    },
+    {
+      "type": "in-which-book",
+      "text": "do friends watch video tutorials for styling advice?",
+      "book_key": "frizzy",
+      "page": 51
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a chicken named Cantinflas warm up to the main character?",
+      "book_key": "frizzy",
+      "page": 146
+    },
+    {
+      "type": "in-which-book",
+      "text": "does someone distract herself at the salon by pretending she is like Dulce Maria from the Super Amigas?",
+      "book_key": "frizzy",
+      "page": 8
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a best friend say, \u201cYou know I love your curls! But it doesn\u2019t make a difference what you look like to me. I just want you to be happy.\u201d?",
+      "book_key": "frizzy",
+      "page": 56
+    },
+    {
+      "type": "content",
+      "text": "the book opens with an extra visit to the hair salon to prepare for a special occasion.",
+      "book_key": "frizzy",
+      "answer": "Marlene\u2019s cousin\u2019s quince.",
+      "page": 4
+    },
+    {
+      "type": "content",
+      "text": "before \u201cpicture time\u201d at the quince, Mami scolds Marlene and asks her \u201cWhat happened to your hair?",
+      "book_key": "frizzy",
+      "answer": "She says \u201c I was sweating.\u201d",
+      "page": 39
+    },
+    {
+      "type": "content",
+      "text": "what is Marlene\u2019s favorite class at school?",
+      "book_key": "frizzy",
+      "answer": "Art",
+      "page": 87
+    },
+    {
+      "type": "content",
+      "text": "what do kids in her class stick in Marlene\u2019s hair?",
+      "book_key": "frizzy",
+      "answer": "Tape",
+      "page": 104
+    },
+    {
+      "type": "content",
+      "text": "while visiting Marlene\u2019s home, cousin Diana says \u201cI am so glad I have\u2026you know\u2026\u201d What is she glad to have?",
+      "book_key": "frizzy",
+      "answer": "\u201cGood Hair\u201d",
+      "page": 114
+    },
+    {
+      "type": "content",
+      "text": "how does Marlene describe her ears after her mom braids her hair?",
+      "book_key": "frizzy",
+      "answer": "as \u201cSatellites",
+      "page": 73
+    },
+    {
+      "type": "content",
+      "text": "where is Tia Ruby\u2019s garden?",
+      "book_key": "frizzy",
+      "answer": "On the roof",
+      "page": 145
+    },
+    {
+      "type": "content",
+      "text": "when Marlene asks \u201cWhy don\u2019t we like our own hair?",
+      "book_key": "frizzy",
+      "answer": "She says \u201cBecause of something called anti-Blackness\u201d",
+      "page": 150
+    },
+    {
+      "type": "content",
+      "text": "what do Marlene and Ruby eat while waiting for Marlene\u2019s hair to dry?",
+      "book_key": "frizzy",
+      "answer": "Pizza",
+      "page": 169
+    },
+    {
+      "type": "content",
+      "text": "after Marlene lets her hair go more natural, who is the next person who stops straightening their naturally curly hair?",
+      "book_key": "frizzy",
+      "answer": "Marlene\u2019s mother",
+      "page": 207
+    },
+    {
+      "type": "content",
+      "text": "Marlene says her house is like every house, except their furniture is really big, and they have a lot of pictures of someone.",
+      "book_key": "frizzy",
+      "answer": "Jesus",
+      "page": 65
+    },
+    {
+      "type": "content",
+      "text": "during wash day 101, what comes after the product part, and before the waiting for hair to dry?",
+      "book_key": "frizzy",
+      "answer": "\u201cScrunch\u201d",
+      "page": 168
+    },
+    {
+      "type": "content",
+      "text": "the \u201creveal station\u201d is also known as what?",
+      "book_key": "frizzy",
+      "answer": "The mirror",
+      "page": 172
+    },
+    {
+      "type": "in-which-book",
+      "text": "is there a teacher named Ms. Hayley?",
+      "book_key": "fifty-four-things-wrong-with-gwendolyn-rogers",
+      "page": 16
+    },
+    {
+      "type": "in-which-book",
+      "text": "does the character have a mom named Nina?",
+      "book_key": "fifty-four-things-wrong-with-gwendolyn-rogers",
+      "page": 18
+    },
+    {
+      "type": "in-which-book",
+      "text": "does the character have the nickname Cupcake?",
+      "book_key": "fifty-four-things-wrong-with-gwendolyn-rogers",
+      "page": 29
+    },
+    {
+      "type": "in-which-book",
+      "text": "does their mom sing \u201cGood Night Sweetheart\u201d before bed?",
+      "book_key": "fifty-four-things-wrong-with-gwendolyn-rogers",
+      "page": 37
+    },
+    {
+      "type": "in-which-book",
+      "text": "is there a teacher named Mr. Olsen?",
+      "book_key": "fifty-four-things-wrong-with-gwendolyn-rogers",
+      "page": 45
+    },
+    {
+      "type": "in-which-book",
+      "text": "is there a place called Millington Sables?",
+      "book_key": "fifty-four-things-wrong-with-gwendolyn-rogers",
+      "page": 63
+    },
+    {
+      "type": "in-which-book",
+      "text": "did they throw a milk carton into the ceiling fan and sprayed the whole school?",
+      "book_key": "fifty-four-things-wrong-with-gwendolyn-rogers",
+      "page": 73
+    },
+    {
+      "type": "in-which-book",
+      "text": "does the character eat 11 carrot sticks while waiting?",
+      "book_key": "fifty-four-things-wrong-with-gwendolyn-rogers",
+      "page": 76
+    },
+    {
+      "type": "in-which-book",
+      "text": "is their principal named Principal Dickens?",
+      "book_key": "fifty-four-things-wrong-with-gwendolyn-rogers",
+      "page": 99
+    },
+    {
+      "type": "in-which-book",
+      "text": "do they bury their happy meal toys in the snow?",
+      "book_key": "fifty-four-things-wrong-with-gwendolyn-rogers",
+      "page": 128
+    },
+    {
+      "type": "in-which-book",
+      "text": "is there a map on yellow paper drawn with a pink marker?",
+      "book_key": "fifty-four-things-wrong-with-gwendolyn-rogers",
+      "page": 131
+    },
+    {
+      "type": "in-which-book",
+      "text": "do they receive a purple party invitation with sparkly gold ink?",
+      "book_key": "fifty-four-things-wrong-with-gwendolyn-rogers",
+      "page": 144
+    },
+    {
+      "type": "in-which-book",
+      "text": "do they play ultimate Uno?",
+      "book_key": "fifty-four-things-wrong-with-gwendolyn-rogers",
+      "page": 173
+    },
+    {
+      "type": "in-which-book",
+      "text": "do they hate mashed potatoes?",
+      "book_key": "fifty-four-things-wrong-with-gwendolyn-rogers",
+      "page": 208
+    },
+    {
+      "type": "in-which-book",
+      "text": "do they play ballet HORSE?",
+      "book_key": "fifty-four-things-wrong-with-gwendolyn-rogers",
+      "page": 220
+    },
+    {
+      "type": "content",
+      "text": "what is the name of the farm where the horse Summer camp is going to be?",
+      "book_key": "fifty-four-things-wrong-with-gwendolyn-rogers",
+      "answer": "Cruxman Farms",
+      "page": 6
+    },
+    {
+      "type": "content",
+      "text": "what color does Gwendolyn associate with the feeling of anger?",
+      "book_key": "fifty-four-things-wrong-with-gwendolyn-rogers",
+      "answer": "Blue",
+      "page": 28
+    },
+    {
+      "type": "content",
+      "text": "what does Gwendolyn say that fish oil smells like?",
+      "book_key": "fifty-four-things-wrong-with-gwendolyn-rogers",
+      "answer": "Poison",
+      "page": 33
+    },
+    {
+      "type": "content",
+      "text": "what color is Tyler\u2019s backpack?",
+      "book_key": "fifty-four-things-wrong-with-gwendolyn-rogers",
+      "answer": "Purple",
+      "page": 43
+    },
+    {
+      "type": "content",
+      "text": "what is the name of Gwendolyn\u2019s school?",
+      "book_key": "fifty-four-things-wrong-with-gwendolyn-rogers",
+      "answer": "Banneker Charter Middle School",
+      "page": 83
+    },
+    {
+      "type": "content",
+      "text": "what topic do Thais and Gwendolyn chose to study for their project?",
+      "book_key": "fifty-four-things-wrong-with-gwendolyn-rogers",
+      "answer": "Dolphin",
+      "page": 49
+    },
+    {
+      "type": "content",
+      "text": "during her 3rd grade assessment what does the color green signify?",
+      "book_key": "fifty-four-things-wrong-with-gwendolyn-rogers",
+      "answer": "That she\u2019s exceeding",
+      "page": 57
+    },
+    {
+      "type": "content",
+      "text": "what color is Tyler\u2019s laptop?",
+      "book_key": "fifty-four-things-wrong-with-gwendolyn-rogers",
+      "answer": "Blue",
+      "page": 86
+    },
+    {
+      "type": "content",
+      "text": "what is the name of Hettie\u2019s brother?",
+      "book_key": "fifty-four-things-wrong-with-gwendolyn-rogers",
+      "answer": "Nolan",
+      "page": 104
+    },
+    {
+      "type": "content",
+      "text": "what is Gwendolyn\u2019s higher power?",
+      "book_key": "fifty-four-things-wrong-with-gwendolyn-rogers",
+      "answer": "Confidence",
+      "page": 141
+    },
+    {
+      "type": "content",
+      "text": "what is Thais\u2019 last name?",
+      "book_key": "fifty-four-things-wrong-with-gwendolyn-rogers",
+      "answer": "Gonzalez",
+      "page": 144
+    },
+    {
+      "type": "content",
+      "text": "what is the grand prize that Gwendolyn wins in Mr.",
+      "book_key": "fifty-four-things-wrong-with-gwendolyn-rogers",
+      "answer": "A Rubik\u2019s Cube",
+      "page": 205
+    },
+    {
+      "type": "content",
+      "text": "what is Hettie\u2019s response to Gwendolyn\u2019s text \u201cU WERE RITE! I\u2019ll be at camp!\u201d?",
+      "book_key": "fifty-four-things-wrong-with-gwendolyn-rogers",
+      "answer": "I (heart emoji) you",
+      "page": 255
+    },
+    {
+      "type": "content",
+      "text": "what color glasses does Marty\u2019s mom have?",
+      "book_key": "fifty-four-things-wrong-with-gwendolyn-rogers",
+      "answer": "Pink",
+      "page": 261
+    },
+    {
+      "type": "content",
+      "text": "what does the flag say hanging in Marty\u2019s room?",
+      "book_key": "fifty-four-things-wrong-with-gwendolyn-rogers",
+      "answer": "PRIDE",
+      "page": 262
+    },
+    {
+      "type": "content",
+      "text": "what is Hettie\u2019s last name?",
+      "book_key": "fifty-four-things-wrong-with-gwendolyn-rogers",
+      "answer": "McFee",
+      "page": 295
+    },
+    {
+      "type": "content",
+      "text": "what is the first item on the Awesome Things About Ryler Rogers list?",
+      "book_key": "fifty-four-things-wrong-with-gwendolyn-rogers",
+      "answer": "Does the best tightest braids",
+      "page": 309
+    },
+    {
+      "type": "in-which-book",
+      "text": "does Big Jean, The World\u2019s Most Intelligent Elephant, solve math problems on a chalkboard?",
+      "book_key": "circus-mirandus",
+      "page": 166
+    },
+    {
+      "type": "in-which-book",
+      "text": "is Victoria also known as The Amazing Amazonian Bird Woman?",
+      "book_key": "circus-mirandus",
+      "page": 190
+    },
+    {
+      "type": "in-which-book",
+      "text": "did children chew jelly cubes that lit up whenever they bit down on them, and the candy glowed right through the skin of their cheeks?",
+      "book_key": "circus-mirandus",
+      "page": 157
+    },
+    {
+      "type": "in-which-book",
+      "text": "is the music of pipes and drums heard before a magic circus appears?",
+      "book_key": "circus-mirandus",
+      "page": 149
+    },
+    {
+      "type": "in-which-book",
+      "text": "do friends create a school project using knots like an Incan quipu?",
+      "book_key": "circus-mirandus",
+      "page": 100
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character offer someone a miracle \u201cas long as it is within my power.\u201d?",
+      "book_key": "circus-mirandus",
+      "page": 120
+    },
+    {
+      "type": "in-which-book",
+      "text": "is a character called both \u201cLightbender\u201d and the Man Who Bends Light?",
+      "book_key": "circus-mirandus",
+      "page": 133
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character twist or yank her braids when she is nervous?",
+      "book_key": "circus-mirandus",
+      "page": 46
+    },
+    {
+      "type": "in-which-book",
+      "text": "is there a menagerie where all of the animals were magical in some way, free from their cages, and very friendly?",
+      "book_key": "circus-mirandus",
+      "page": 164
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a breeze blowing through the classroom retie knots to form the message: \u201cMidnight. Follow the wind\u201d?",
+      "book_key": "circus-mirandus",
+      "page": 103
+    },
+    {
+      "type": "in-which-book",
+      "text": "does one character try to convince their friend that grandpa\u2019s stories about magic are not real?",
+      "book_key": "circus-mirandus",
+      "page": 52
+    },
+    {
+      "type": "in-which-book",
+      "text": "is a family bootlace important to the story?",
+      "book_key": "circus-mirandus",
+      "page": 272
+    },
+    {
+      "type": "in-which-book",
+      "text": "does Gertie jump off a roof believing that Victoria would catch her?",
+      "book_key": "circus-mirandus",
+      "page": 233
+    },
+    {
+      "type": "content",
+      "text": "what did Ephraim use as an entrance ticket for his first visit to the circus?",
+      "book_key": "circus-mirandus",
+      "answer": "A fish",
+      "page": 68
+    },
+    {
+      "type": "content",
+      "text": "Ephraim performs the only trick he knows for the Lightbender.",
+      "book_key": "circus-mirandus",
+      "answer": "Ephraim uses his bootlace to tie a knot of great complexity.",
+      "page": 118
+    },
+    {
+      "type": "content",
+      "text": "who is the manager of the circus?",
+      "book_key": "circus-mirandus",
+      "answer": "Mr. Head",
+      "page": 163
+    },
+    {
+      "type": "content",
+      "text": "two of the main characters are a grandfather and grandson.",
+      "book_key": "circus-mirandus",
+      "answer": "Ephraim and Micah",
+      "page": 178
+    },
+    {
+      "type": "content",
+      "text": "what did Jenny need to do to first see the magic circus?",
+      "book_key": "circus-mirandus",
+      "answer": "Just pretend for a second. (and/or) Just say, \u201cIt\u2019s a magic circus.\u201d",
+      "page": 152
+    },
+    {
+      "type": "content",
+      "text": "what are the two circus tents that are most intriguing to Ephraim?",
+      "book_key": "circus-mirandus",
+      "answer": "The tents of The Bird Woman and The Man Who Bends Light",
+      "page": 72
+    },
+    {
+      "type": "content",
+      "text": "who came all the way from Arizona to make sure things were \u201cdone correctly\u201d while Grandpa Ephraim was sick?",
+      "book_key": "circus-mirandus",
+      "answer": "Aunt Gertrudis",
+      "page": 4
+    },
+    {
+      "type": "content",
+      "text": "what type of animal is Chintzy the messenger?",
+      "book_key": "circus-mirandus",
+      "answer": "A parrot",
+      "page": 81
+    },
+    {
+      "type": "content",
+      "text": "how did Victoria Starling's parents die?",
+      "book_key": "circus-mirandus",
+      "answer": "In an airplane accident",
+      "page": 140
+    },
+    {
+      "type": "content",
+      "text": "who visited Jenny and Micah in the treehouse, smelling of sewage?",
+      "book_key": "circus-mirandus",
+      "answer": "Chintzy the parrot",
+      "page": 87
+    },
+    {
+      "type": "content",
+      "text": "Micah teaches Jean something no other elephant knows. What is it?",
+      "book_key": "circus-mirandus",
+      "answer": "How to tie knots",
+      "page": 168
+    },
+    {
+      "type": "content",
+      "text": "Grandpa Ephraim saved his miracle for his grandson. What is it?",
+      "book_key": "circus-mirandus",
+      "answer": "For the Lightbender to take Micah to Circus Mirandus",
+      "page": 288
+    }
+  ],
+  "source": {
+    "name": "Lake Oswego Public Library",
+    "link": "https://www.ci.oswego.or.us/kids/obob-practice-questions"
+  }
+}

@@ -1,7 +1,7 @@
 {
   "books": {
     "time-travelers": {
-      "title": "A Time Traveler's Theory of Relativity",
+      "title": "A Time Traveler’s Theory of Relativity",
       "author": "Nicole Valentine",
       "cover": "/cover_images/time_travelers.jpg",
       "obob_division": "3-5",
@@ -30,7 +30,7 @@
     },
     "frizzy": {
       "title": "Frizzy",
-      "author": "Claribel A. Ortega",
+      "author": "Claribel A. Ortega and Rose Bousamra",
       "cover": "/cover_images/frizzy.jpg",
       "obob_division": "3-5",
       "obob_year": "2024-2025"
@@ -70,16 +70,16 @@
       "obob_division": "3-5",
       "obob_year": "2024-2025"
     },
-    "solimar-the-sword-of-the-monarchs": {
+    "solimar": {
       "title": "Solimar: The Sword of the Monarchs",
-      "author": "Pam Munoz Ryan",
+      "author": "Pam Muñoz Ryan",
       "cover": "/cover_images/solimar.jpg",
       "obob_division": "3-5",
       "obob_year": "2024-2025"
     },
     "mystwick-school-of-musicraft": {
       "title": "The Mystwick School of Musicraft",
-      "author": "Jessica Koury",
+      "author": "Jessica Khoury",
       "cover": "/cover_images/mystwick_music.jpg",
       "obob_division": "3-5",
       "obob_year": "2024-2025"
@@ -107,7 +107,7 @@
     },
     "twins": {
       "title": "Twins",
-      "author": "Varian Johnson & Shannon Wright",
+      "author": "Varian Johnson and Shannon Wright",
       "cover": "/cover_images/twins.jpg",
       "obob_division": "3-5",
       "obob_year": "2024-2025"
