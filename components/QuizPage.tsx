@@ -332,8 +332,8 @@ export default function QuizPage({
           variant="outline"
           className="w-full flex items-center justify-center"
         >
-          <span>Skip Question</span>
-          <SkipForward className="h-5 w-5 ml-2" />
+          <span>Skip</span>
+          <SkipForward className="h-3 w-3 ml-1" />
         </Button>
       </div>
       <div className="flex items-center justify-center text-xs mt-4 text-muted-foreground">
