@@ -9,7 +9,7 @@ import {
   CardTitle,
   CardFooter,
 } from "@/components/ui/card";
-import { SkipForward, Redo, Bone } from "lucide-react";
+import { SkipForward, Redo, Bone, Loader2 } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 import { Progress } from "@/components/ui/progress";
 import { WavyUnderline } from "./WavyUnderline";
@@ -134,7 +134,11 @@ export default function QuizPage({
   const currentQuestion = questions[currentQuestionIndex];
 
   if (!currentQuestion && !quizFinished) {
-    return <div>Loading questions...</div>;
+    return (
+      <div className="h-screen flex items-center justify-center">
+        <Loader2 className="h-10 w-10 animate-spin text-gray-600" />
+      </div>
+    );
   }
 
   if (quizFinished) {

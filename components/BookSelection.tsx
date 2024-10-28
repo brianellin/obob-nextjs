@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { CheckCircle, ArrowRight } from "lucide-react";
+import { CheckCircle, ArrowRight, Loader2 } from "lucide-react";
 import Image from "next/image";
 import { Book, Books } from "../types";
 
@@ -61,19 +61,26 @@ export default function BookSelection({ onSelectBooks }: BookSelectionProps) {
   };
 
   const handleSubmit = () => {
-    const selectedBooks = selectedBookKeys.map(key => ({
+    const selectedBooks = selectedBookKeys.map((key) => ({
       ...books[key],
-      bookKey: key  // Ensure bookKey is included
+      bookKey: key, // Ensure bookKey is included
     }));
     onSelectBooks(
       selectedBooks.length === 0
-        ? Object.entries(books).map(([key, book]) => ({ ...book, bookKey: key }))
+        ? Object.entries(books).map(([key, book]) => ({
+            ...book,
+            bookKey: key,
+          }))
         : selectedBooks
     );
   };
 
   if (loading) {
-    return <div>Loading books...</div>;
+    return (
+      <div className="h-screen flex items-center justify-center">
+        <Loader2 className="h-10 w-10 animate-spin text-gray-600" />
+      </div>
+    );
   }
 
   return (
