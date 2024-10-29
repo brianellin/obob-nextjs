@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { CheckCircle, ArrowRight, Loader2 } from "lucide-react";
+import { ArrowRight, Loader2, PawPrint } from "lucide-react";
 import Image from "next/image";
 import { Book, Books } from "../types";
 import { WavyUnderline } from "./WavyUnderline";
@@ -140,7 +140,7 @@ export default function BookSelection({ onSelectBooks }: BookSelectionProps) {
                   )}
                   {selectedBookKeys.includes(key) && (
                     <div className="absolute inset-0 bg-purple-600 bg-opacity-30 flex items-center justify-center">
-                      <CheckCircle className="text-white w-8 h-8" />
+                      <PawPrint className="text-white w-8 h-8" />
                     </div>
                   )}
                 </div>
