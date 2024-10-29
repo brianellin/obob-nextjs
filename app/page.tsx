@@ -5,14 +5,14 @@ export default function Home() {
   const questionCount = 613;
 
   return (
-    <main className="min-h-screen bg-white p-2">
+    <main className=" bg-white p-2">
       <section className="max-w-2xl mx-auto space-y-4 mb-8 mt-4">
         <h1 className="text-4xl font-bold text-center">
           <WavyUnderline style={0} thickness={6} color="text-lime-400">
             obob.dog{" "}
           </WavyUnderline>
         </h1>
-        <p className="text-xl text-center text-muted-foreground">
+        <p className="text-xl text-center text-muted-foreground pt-1">
           Read, practice, and have fun with Oregon Battle of the Books
         </p>
         <div className="flex justify-center space-x-8 pt-4">

@@ -324,17 +324,20 @@ export default function QuizPage({
               <div className="flex flex-col sm:flex-row justify-between space-y-2 sm:space-y-0 sm:space-x-4 w-full">
                 <Button
                   onClick={() => handleAnswer(5)}
-                  className="bg-emerald-500"
+                  className="bg-emerald-500 hover:bg-emerald-600"
                 >
                   Correct (5 pts)
                 </Button>
                 <Button
                   onClick={() => handleAnswer(3)}
-                  className="bg-amber-500"
+                  className="bg-amber-500 hover:bg-amber-600"
                 >
                   Partially Correct (3 pts)
                 </Button>
-                <Button onClick={() => handleAnswer(0)} className="bg-red-500">
+                <Button
+                  onClick={() => handleAnswer(0)}
+                  className="bg-red-500 hover:bg-red-600"
+                >
                   Incorrect (0 pts)
                 </Button>
               </div>
