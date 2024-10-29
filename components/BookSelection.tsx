@@ -152,7 +152,7 @@ export default function BookSelection({ onSelectBooks }: BookSelectionProps) {
       <div className="fixed bottom-0 left-0 right-0 p-4 md:static md:p-0 md:mt-4 flex justify-center">
         <Button
           onClick={handleSubmit}
-          className="w-auto px-8 py-6 text-lg font-semibold group bg-cyan-400"
+          className="w-auto px-8 py-6 text-lg font-semibold group bg-cyan-400 hover:bg-cyan-500 transition-colors"
         >
           Start Battle
           <ArrowRight className="ml-2 h-8 w-8 animate-move-arrow" />

@@ -12,7 +12,7 @@ import Link from "next/link";
 
 export default function ModeSelection() {
   return (
-    <div className="space-y-8">
+    <div className="space-y-8 max-w-xl mx-auto">
       <div className="grid gap-6 md:grid-cols-2">
         <Card>
           <CardHeader>

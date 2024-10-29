@@ -9,10 +9,11 @@ import {
   CardTitle,
   CardFooter,
 } from "@/components/ui/card";
-import { SkipForward, Redo, Bone, Loader2, ExternalLink } from "lucide-react";
+import { SkipForward, Loader2, ExternalLink } from "lucide-react";
 import { Progress } from "@/components/ui/progress";
 import type { QuestionWithBook, Book } from "@/types";
 import Link from "next/link";
+import { WavyUnderline } from "./WavyUnderline";
 
 type QuizPageProps = {
   selectedBooks: Book[]; // Changed from string[] to Book[]
@@ -40,29 +41,29 @@ export default function QuizPage({
   const timerRef = useRef<NodeJS.Timeout | null>(null);
   const [isMessageVisible, setIsMessageVisible] = useState(true);
 
-  useEffect(() => {
-    const loadQuestions = async () => {
-      try {
-        const response = await fetch("/api/questions/battle", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ selectedBooks }),
-        });
+  const loadQuestions = async () => {
+    try {
+      const response = await fetch("/api/questions/battle", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ selectedBooks }),
+      });
 
-        if (!response.ok) {
-          throw new Error("Failed to load questions");
-        }
-
-        const data = await response.json();
-        setQuestions(data.questions);
-        setMessage(data.message);
-      } catch (error) {
-        console.error("Error loading questions:", error);
+      if (!response.ok) {
+        throw new Error("Failed to load questions");
       }
-    };
 
+      const data = await response.json();
+      setQuestions(data.questions);
+      setMessage(data.message);
+    } catch (error) {
+      console.error("Error loading questions:", error);
+    }
+  };
+
+  useEffect(() => {
     loadQuestions();
     boopSound.current = new Audio("/boop.mp3");
   }, [selectedBooks]);
@@ -121,13 +122,15 @@ export default function QuizPage({
     }
   };
 
-  const restartQuiz = () => {
+  const restartQuiz = async () => {
     setCurrentQuestionIndex(0);
     setScore(0);
     setShowAnswer(false);
     setQuizFinished(false);
     setIsTimerRunning(false);
     setTimeLeft(TIMER_DURATION);
+
+    await loadQuestions();
   };
 
   const currentQuestion = questions[currentQuestionIndex];
@@ -142,68 +145,76 @@ export default function QuizPage({
 
   if (quizFinished) {
     return (
-      <Card className="w-full max-w-xl mx-auto">
-        <CardHeader>
-          <CardTitle className="text-2xl font-bold text-center">
-            Quiz Finished!
-          </CardTitle>
-        </CardHeader>
-        <CardContent className="text-center">
-          <p className="text-xl mb-4">
-            Your final score: {score} out of {questions.length * 5}
-          </p>
-          <p className="text-lg mb-6">
-            {score === questions.length * 5
-              ? "Perfect score! You're an OBOB champion!"
-              : score >= questions.length * 4
-              ? "Great job! You're almost there!"
-              : score >= questions.length * 3
-              ? "Good effort! Keep practicing!"
-              : "Nice try! There's room for improvement. Keep reading!"}
-          </p>
-          <Button
-            onClick={restartQuiz}
-            className="bg-blue-500 hover:bg-blue-600"
-          >
-            <Redo className="mr-2 h-4 w-4" /> Start Another Battle
-          </Button>
-        </CardContent>
-        <CardFooter className="justify-center">
-          <Button onClick={onQuizEnd} variant="outline">
-            Back to Book Selection
-          </Button>
-        </CardFooter>
-      </Card>
+      <div className="container">
+        <Card className="w-full max-w-xl mx-auto ">
+          <CardHeader>
+            <CardTitle className="text-2xl font-bold text-center">
+              Battle Finished!
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="text-center">
+            <p className="text-xl mb-4">
+              Your score: {score} out of {questions.length * 5}
+            </p>
+            <p className="text-lg mb-6">
+              {score === questions.length * 5
+                ? "Perfect score! You're an OBOB champion!"
+                : score >= questions.length * 4
+                ? "Great job! You're almost there!"
+                : score >= questions.length * 3
+                ? "Good effort! Keep practicing!"
+                : "Nice try! There's room for improvement. Keep reading!"}
+            </p>
+          </CardContent>
+          <CardFooter className="justify-center flex gap-2 flex-col">
+            <Button
+              onClick={restartQuiz}
+              className="bg-blue-500 hover:bg-blue-600 w-full"
+            >
+              Start Another Battle
+            </Button>
+            <Button onClick={onQuizEnd} variant="outline" className="w-full">
+              Back to Book Selection
+            </Button>
+          </CardFooter>
+        </Card>
+      </div>
     );
   }
 
   return (
     <div className="container mx-auto px-4 py-8 max-w-xl">
-      {isMessageVisible && message && (
-        <Card className="mb-6 bg-yellow-50 border-yellow-200 shadow-sm">
-          <CardContent className="p-4">
-            <div className="flex items-start gap-3">
-              <div className="flex-shrink-0">
-                <Bone className="h-6 w-6 text-yellow-600 rotate-12" />
-              </div>
-              <p className="text-yellow-800 font-medium flex-grow">{message}</p>
-              <button
-                onClick={() => setIsMessageVisible(false)}
-                className="text-yellow-600 hover:text-yellow-800 text-2xl leading-none"
-              >
-                &times;
-              </button>
-            </div>
-          </CardContent>
-        </Card>
-      )}
-
       {/* New header section above the card */}
       <div className="w-full max-w-xl mx-auto">
         <div className="flex flex-col  items-center justify-between">
           <h1 className="text-2xl font-bold mb-5">
-            {quizMode === "personal" ? "Solo battle" : "Friend battle"}
+            {quizMode === "personal" ? (
+              <WavyUnderline style={0} thickness={4} color="text-purple-500">
+                Solo battle
+              </WavyUnderline>
+            ) : (
+              <WavyUnderline style={0} thickness={5} color="text-pink-500">
+                Friend battle
+              </WavyUnderline>
+            )}
           </h1>
+          {isMessageVisible && message && (
+            <Card className="mb-6 bg-yellow-50 border-yellow-200 shadow-sm">
+              <CardContent className="p-4">
+                <div className="flex items-start gap-3">
+                  <p className="text-yellow-800 font-medium flex-grow">
+                    {message}
+                  </p>
+                  <button
+                    onClick={() => setIsMessageVisible(false)}
+                    className="text-yellow-600 hover:text-yellow-800 text-2xl leading-none"
+                  >
+                    &times;
+                  </button>
+                </div>
+              </CardContent>
+            </Card>
+          )}
           <div className="w-full flex items-center justify-between gap-4 mb-2 px-1 ">
             <span className="text-lg font-semibold">
               Question: {currentQuestionIndex + 1}/{questions.length}
@@ -215,14 +226,14 @@ export default function QuizPage({
                   animateScore ? "animate-score-pop" : ""
                 }`}
               >
-                {score}
+                {score}/{questions.length * 5}
               </span>
             </span>
           </div>
         </div>
       </div>
 
-      <Card className="w-full max-w-xl mx-auto">
+      <Card className="w-full max-w-xl mx-auto drop-shadow-md">
         <CardContent className="p-6 mb-0">
           <div className="">
             <div>
@@ -329,14 +340,15 @@ export default function QuizPage({
       <div className="w-full max-w-xl mx-auto mt-4">
         <Button
           onClick={nextQuestion}
-          variant="outline"
+          variant="link"
           className="w-full flex items-center justify-center"
         >
           <span>Skip</span>
           <SkipForward className="h-3 w-3 ml-1" />
         </Button>
       </div>
-      <div className="flex items-center justify-center text-xs mt-4 text-muted-foreground">
+      <div className="flex items-center justify-center text-xs gap-1 mt-4 text-muted-foreground">
+        Source:{" "}
         <Link
           href={currentQuestion.source!.link}
           className=" flex items-center gap-1 hover:text-muted-foreground/80"
