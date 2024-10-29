@@ -145,11 +145,11 @@ export default function QuizPage({
 
   if (quizFinished) {
     return (
-      <div className="container">
-        <Card className="w-full max-w-xl mx-auto ">
+      <div className="container p-4 mt-8">
+        <Card className="w-full max-w-xl mx-auto drop-shadow-md">
           <CardHeader>
             <CardTitle className="text-2xl font-bold text-center">
-              Battle Finished!
+              Battle complete!
             </CardTitle>
           </CardHeader>
           <CardContent className="text-center">
@@ -166,15 +166,15 @@ export default function QuizPage({
                 : "Nice try! There's room for improvement. Keep reading!"}
             </p>
           </CardContent>
-          <CardFooter className="justify-center flex gap-2 flex-col">
+          <CardFooter className="justify-center flex gap-4 flex-col">
             <Button
               onClick={restartQuiz}
-              className="bg-blue-500 hover:bg-blue-600 w-full"
+              className="bg-purple-500 hover:bg-purple-600 w-full"
             >
-              Start Another Battle
+              Battle again with same books
             </Button>
             <Button onClick={onQuizEnd} variant="outline" className="w-full">
-              Back to Book Selection
+              Start over
             </Button>
           </CardFooter>
         </Card>
@@ -193,7 +193,7 @@ export default function QuizPage({
                 Solo battle
               </WavyUnderline>
             ) : (
-              <WavyUnderline style={0} thickness={5} color="text-pink-500">
+              <WavyUnderline style={0} thickness={5} color="text-violet-700">
                 Friend battle
               </WavyUnderline>
             )}

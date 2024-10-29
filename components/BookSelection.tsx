@@ -6,6 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { CheckCircle, ArrowRight, Loader2 } from "lucide-react";
 import Image from "next/image";
 import { Book, Books } from "../types";
+import { WavyUnderline } from "./WavyUnderline";
 
 type BookSelectionProps = {
   onSelectBooks: (selectedBooks: Book[]) => void;
@@ -88,7 +89,9 @@ export default function BookSelection({ onSelectBooks }: BookSelectionProps) {
       <Card className="w-full max-w-6xl mx-auto mb-4 border-none shadow-none">
         <CardHeader>
           <CardTitle className="text-2xl font-bold text-center">
-            Select Books
+            <WavyUnderline style={0} thickness={4} color="text-lime-400">
+              Select Books
+            </WavyUnderline>
           </CardTitle>
         </CardHeader>
         <CardContent className="p-2 sm:p-4">

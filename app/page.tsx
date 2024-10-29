@@ -6,7 +6,7 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-white p-2">
-      <section className="max-w-2xl mx-auto space-y-4 mb-6 mt-4">
+      <section className="max-w-2xl mx-auto space-y-4 mb-8 mt-4">
         <h1 className="text-4xl font-bold text-center">
           <WavyUnderline style={0} thickness={6} color="text-lime-400">
             obob.dog{" "}
@@ -15,7 +15,7 @@ export default function Home() {
         <p className="text-xl text-center text-muted-foreground">
           Read, practice, and have fun with Oregon Battle of the Books
         </p>
-        <div className="flex justify-center space-x-8">
+        <div className="flex justify-center space-x-8 pt-4">
           <div className="flex items-center space-x-2">
             <Zap className="h-6 w-6 text-muted-foreground" />
             <div>

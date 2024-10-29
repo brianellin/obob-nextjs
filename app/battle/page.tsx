@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, Suspense } from "react";
-import { useSearchParams } from "next/navigation";
+import { useSearchParams, useRouter } from "next/navigation";
 import ModeSelection from "@/components/ModeSelection";
 import BookSelection from "@/components/BookSelection";
 import QuizPage from "@/components/QuizPage";
@@ -9,7 +9,8 @@ import type { Book } from "@/types";
 
 function BattleContent() {
   const searchParams = useSearchParams();
-  const [selectedBooks, setSelectedBooks] = useState<Book[]>([]);  // Changed from string[] to Book[]
+  const router = useRouter();
+  const [selectedBooks, setSelectedBooks] = useState<Book[]>([]); // Changed from string[] to Book[]
   const [quizMode, setQuizMode] = useState<"personal" | "friend" | null>(null);
   const [quizStarted, setQuizStarted] = useState(false);
 
@@ -24,7 +25,8 @@ function BattleContent() {
     window.scrollTo(0, 0);
   }, [quizMode, quizStarted]);
 
-  const handleSelectBooks = (books: Book[]) => {  // Changed from string[] to Book[]
+  const handleSelectBooks = (books: Book[]) => {
+    // Changed from string[] to Book[]
     setSelectedBooks(books);
     setQuizStarted(true);
   };
@@ -33,6 +35,7 @@ function BattleContent() {
     setQuizStarted(false);
     setSelectedBooks([]);
     setQuizMode(null);
+    router.push("/battle");
   };
 
   if (quizMode === null) {
