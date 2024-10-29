@@ -187,7 +187,7 @@ export default function QuizPage({
       {/* New header section above the card */}
       <div className="w-full max-w-xl mx-auto">
         <div className="flex flex-col  items-center justify-between">
-          <h1 className="text-2xl font-bold mb-5">
+          <h1 className="text-2xl font-bold mb-7">
             {quizMode === "personal" ? (
               <WavyUnderline style={0} thickness={4} color="text-purple-500">
                 Solo battle
@@ -290,9 +290,19 @@ export default function QuizPage({
               (quizMode === "friend" && (showAnswer || isTimerRunning))) && (
               <div className="bg-slate-100 p-3 rounded-md my-4">
                 <p className="text-lg font-medium">
-                  {currentQuestion.type === "in-which-book"
-                    ? `${currentQuestion.book.title} by ${currentQuestion.book.author}`
-                    : currentQuestion.answer}
+                  {currentQuestion.type === "in-which-book" ? (
+                    <span>
+                      <span className="font-semibold">
+                        {currentQuestion.book.title}
+                      </span>{" "}
+                      by{" "}
+                      <span className="font-semibold">
+                        {currentQuestion.book.author}
+                      </span>
+                    </span>
+                  ) : (
+                    currentQuestion.answer
+                  )}
                 </p>
                 <p className="text-sm text-gray-600">
                   Page: {currentQuestion.page}
@@ -314,20 +324,17 @@ export default function QuizPage({
               <div className="flex flex-col sm:flex-row justify-between space-y-2 sm:space-y-0 sm:space-x-4 w-full">
                 <Button
                   onClick={() => handleAnswer(5)}
-                  className="bg-emerald-500 hover:bg-emerald-600 w-full"
+                  className="bg-emerald-500"
                 >
                   Correct (5 pts)
                 </Button>
                 <Button
                   onClick={() => handleAnswer(3)}
-                  className="bg-neutral-400 hover:bg-neutral-500 w-full"
+                  className="bg-amber-500"
                 >
                   Partially Correct (3 pts)
                 </Button>
-                <Button
-                  onClick={() => handleAnswer(0)}
-                  className="bg-orange-400 hover:bg-orange-500 w-full"
-                >
+                <Button onClick={() => handleAnswer(0)} className="bg-red-500">
                   Incorrect (0 pts)
                 </Button>
               </div>

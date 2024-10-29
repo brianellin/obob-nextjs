@@ -39,7 +39,11 @@ function BattleContent() {
   };
 
   if (quizMode === null) {
-    return <ModeSelection />;
+    return (
+      <div className="container max-w-xl mx-auto mt-8">
+        <ModeSelection />
+      </div>
+    );
   }
 
   if (!quizStarted) {
