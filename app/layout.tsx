@@ -7,8 +7,10 @@ import Footer from "@/components/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "obob.dog - practice oregon battle of the books with your pack",
-  description: "practice oregon battle of the books with your pack. woof!",
+  title:
+    "obob.dog - read, practice, and have fun with Oregon Battle of the Books",
+  description:
+    "obob.dog is a new way to explore Oregon Battle of the Books (OBOB) questions and test your knowledge with fun battles.",
 };
 
 export default function RootLayout({
