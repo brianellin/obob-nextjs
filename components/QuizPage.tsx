@@ -142,7 +142,7 @@ export default function QuizPage({
 
   if (quizFinished) {
     return (
-      <Card className="w-full max-w-2xl mx-auto">
+      <Card className="w-full max-w-xl mx-auto">
         <CardHeader>
           <CardTitle className="text-2xl font-bold text-center">
             Quiz Finished!
@@ -178,7 +178,7 @@ export default function QuizPage({
   }
 
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="container mx-auto px-4 py-8 max-w-xl">
       {isMessageVisible && message && (
         <Card className="mb-6 bg-yellow-50 border-yellow-200 shadow-sm">
           <CardContent className="p-4">
@@ -199,7 +199,7 @@ export default function QuizPage({
       )}
 
       {/* New header section above the card */}
-      <div className="w-full max-w-4xl mx-auto">
+      <div className="w-full max-w-xl mx-auto">
         <div className="flex flex-col  items-center justify-between">
           <h1 className="text-2xl font-bold mb-5">
             {quizMode === "personal" ? "Solo battle" : "Friend battle"}
@@ -222,7 +222,7 @@ export default function QuizPage({
         </div>
       </div>
 
-      <Card className="w-full max-w-4xl mx-auto">
+      <Card className="w-full max-w-xl mx-auto">
         <CardContent className="p-6 mb-0">
           <div className="">
             <div>
@@ -300,22 +300,22 @@ export default function QuizPage({
           ) : (
             (quizMode === "personal" ||
               (quizMode === "friend" && (isTimerRunning || showAnswer))) && (
-              <div className="flex flex-col sm:flex-row justify-center space-y-2 sm:space-y-0 sm:space-x-4 w-full">
+              <div className="flex flex-col sm:flex-row justify-between space-y-2 sm:space-y-0 sm:space-x-4 w-full">
                 <Button
                   onClick={() => handleAnswer(5)}
-                  className="bg-emerald-500 hover:bg-emerald-600"
+                  className="bg-emerald-500 hover:bg-emerald-600 w-full"
                 >
                   Correct (5 pts)
                 </Button>
                 <Button
                   onClick={() => handleAnswer(3)}
-                  className="bg-neutral-400 hover:bg-neutral-500"
+                  className="bg-neutral-400 hover:bg-neutral-500 w-full"
                 >
                   Partially Correct (3 pts)
                 </Button>
                 <Button
                   onClick={() => handleAnswer(0)}
-                  className="bg-orange-400 hover:bg-orange-500"
+                  className="bg-orange-400 hover:bg-orange-500 w-full"
                 >
                   Incorrect (0 pts)
                 </Button>
@@ -326,7 +326,7 @@ export default function QuizPage({
       </Card>
 
       {/* New skip button below the card */}
-      <div className="w-full max-w-4xl mx-auto mt-4">
+      <div className="w-full max-w-xl mx-auto mt-4">
         <Button
           onClick={nextQuestion}
           variant="outline"
