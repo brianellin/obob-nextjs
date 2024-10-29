@@ -114,7 +114,7 @@ def main():
                   "name": "Lake Oswego Public Library",
                   "link": "https://www.ci.oswego.or.us/kids/obob-practice-questions"
               }}
-    with open('lake_oswego_questions.json', 'w') as f:
+    with open('questions.json', 'w') as f:
         json.dump(output, f, indent=2)
     
     print(f"Processed {len(questions)} questions")
