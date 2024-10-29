@@ -59,7 +59,7 @@ def parse_questions(input_text, title_to_key):
 
         # Check for content questions
         elif line.startswith("In "):
-            match = re.match(r"In (.*?) by (.*?), (.*?[\?\.])", line)
+            match = re.match(r"In (.*?) by (.*?), (.+)", line)
             if match:
                 book_title = f"{match.group(1)} by {match.group(2)}"
                 question = match.group(3)

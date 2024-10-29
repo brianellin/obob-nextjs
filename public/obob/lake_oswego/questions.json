@@ -603,7 +603,7 @@
     },
     {
       "type": "content",
-      "text": "a mango is given as a thank you gift.",
+      "text": "a mango is given as a thank you gift. What for?",
       "book_key": "thirst",
       "answer": "Combing and braiding Pinky\u2019s hair",
       "page": 10
@@ -617,7 +617,7 @@
     },
     {
       "type": "content",
-      "text": "the room a brother and sister share is filled with photographs from magazines.",
+      "text": "the room a brother and sister share is filled with photographs from magazines. What are the photographs of?",
       "book_key": "thirst",
       "answer": "Mouthwatering foods and beautiful beaches",
       "page": 38
@@ -631,56 +631,56 @@
     },
     {
       "type": "content",
-      "text": "a character is told not to go into a certain room because of who lives there.",
+      "text": "a character is told not to go into a certain room because of who lives there. Who is it?",
       "book_key": "thirst",
       "answer": "Anita Ma\u2019am\u2019s mother-in-law",
       "page": 69
     },
     {
       "type": "content",
-      "text": "two characters get into trouble for playing a card game together.",
+      "text": "two characters get into trouble for playing a card game together. What is the name of the card game?",
       "book_key": "thirst",
       "answer": "Uno",
       "page": 80
     },
     {
       "type": "content",
-      "text": "a character wins a scholarship for a special kind of class.",
+      "text": "a character wins a scholarship for a special kind of class. What is the class and when does it meet?",
       "book_key": "thirst",
       "answer": "Computer class and it meets on Sundays",
       "page": 86
     },
     {
       "type": "content",
-      "text": "a character recognizes something about someone\u2019s father, and drops what they are holding.",
+      "text": "a character recognizes something about someone\u2019s father, and drops what they are holding. What did they recognize and what did they drop?",
       "book_key": "thirst",
       "answer": "The man\u2019s voice, a bowl of pudding",
       "page": 136
     },
     {
       "type": "content",
-      "text": "a character is often late for school and gets in trouble.",
+      "text": "a character is often late for school and gets in trouble. Their teacher makes a suggestion that might help, what is it?",
       "book_key": "thirst",
       "answer": "To boil their water at night",
       "page": 132
     },
     {
       "type": "content",
-      "text": "a character suggests adding something to the rotis to make them softer.",
+      "text": "a character suggests adding something to the rotis to make them softer. What is it?",
       "book_key": "thirst",
       "answer": "oil",
       "page": 127
     },
     {
       "type": "content",
-      "text": "a character\u2019s mother is diagnosed with a disease that she got from drinking water that was not boiled.",
+      "text": "a character\u2019s mother is diagnosed with a disease that she got from drinking water that was not boiled. What is the disease?",
       "book_key": "thirst",
       "answer": "Hepatitis A",
       "page": 160
     },
     {
       "type": "content",
-      "text": "a character loses their job and starts their own business.",
+      "text": "a character loses their job and starts their own business. What is the business selling and what is its name?",
       "book_key": "thirst",
       "answer": "Rotis. Rohini\u2019s Rotis",
       "page": 172
@@ -772,7 +772,7 @@
     },
     {
       "type": "content",
-      "text": "Gabi and Finn became friends when she dreamt that he was in trouble and couldn\u2019t get back home.",
+      "text": "Gabi and Finn became friends when she dreamt that he was in trouble and couldn\u2019t get back home. What did she send him?",
       "book_key": "time-travelers",
       "answer": "A ball of sunlight",
       "page": 22
@@ -793,14 +793,14 @@
     },
     {
       "type": "content",
-      "text": "Finn\u2019s mother built a portal, a way to reach her in an emergency.",
+      "text": "Finn\u2019s mother built a portal, a way to reach her in an emergency. What is the portal made from?",
       "book_key": "time-travelers",
       "answer": "A tree",
       "page": 63
     },
     {
       "type": "content",
-      "text": "Finn and Gabi come upon a cabin in the woods.",
+      "text": "Finn and Gabi come upon a cabin in the woods. What is nailed above the door?",
       "book_key": "time-travelers",
       "answer": "A rotting animal skull",
       "page": 179
@@ -814,42 +814,42 @@
     },
     {
       "type": "content",
-      "text": "Finn is told of the most powerful time traveler in their family.",
+      "text": "Finn is told of the most powerful time traveler in their family. Who is it?",
       "book_key": "time-travelers",
       "answer": "Faith, his sister",
       "page": 209
     },
     {
       "type": "content",
-      "text": "Finn finally finds his mother who then shares her plan with him.",
+      "text": "Finn finally finds his mother who then shares her plan with him. Why does resentment explode inside Finn after his mother asks for his help?",
       "book_key": "time-travelers",
       "answer": "His mother never intends to return home with him; she will stay behind to try to raise and teach his sister with love.",
       "page": 219
     },
     {
       "type": "content",
-      "text": "before time traveling to find his sister, Faith, Finn feels in his pocket for his meager arsenal of three objects.",
+      "text": "before time traveling to find his sister, Faith, Finn feels in his pocket for his meager arsenal of three objects. What are any two of the three objects?",
       "book_key": "time-travelers",
       "answer": "Gran\u2019s note, the grounding stone, and/or the skeleton key ring",
       "page": 223
     },
     {
       "type": "content",
-      "text": "Gran tells Finn that time is stubborn, and changing the outcome of time is not about the beat of a wing or catching a later bus.",
+      "text": "Gran tells Finn that time is stubborn, and changing the outcome of time is not about the beat of a wing or catching a later bus. What does Gran say is the key to changing timeline outcomes?",
       "book_key": "time-travelers",
       "answer": "If you want to change time, you must change hearts. It\u2019s about people\u2019s choices to be kind.",
       "page": 324
     },
     {
       "type": "content",
-      "text": "Gabi finally teases Finn that he should fear and respect her because she is now part machine.",
+      "text": "Gabi finally teases Finn that he should fear and respect her because she is now part machine. Why is she now \u201cpart machine?\u201d",
       "book_key": "time-travelers",
       "answer": "Gabi\u2019s serious injuries left her with metal pins inserted into her arm.",
       "page": 327
     },
     {
       "type": "content",
-      "text": "the book closes with Finn mentally connecting with an old woman who is standing in front of a bank.",
+      "text": "the book closes with Finn mentally connecting with an old woman who is standing in front of a bank. Who is she?",
       "book_key": "time-travelers",
       "answer": "Finn\u2019s sister, Faith",
       "page": 335
@@ -1188,7 +1188,7 @@
     },
     {
       "type": "content",
-      "text": "Mar\u00eda\u2019s mother was planning on making a pineapple cake for dessert, but changed her mind.",
+      "text": "Mar\u00eda\u2019s mother was planning on making a pineapple cake for dessert, but changed her mind. What does she decide to make instead?",
       "book_key": "solimar",
       "answer": "Orange flan",
       "page": 26
@@ -1412,7 +1412,7 @@
     },
     {
       "type": "content",
-      "text": "what is the name of Mr.",
+      "text": "what is the name of Mr. Martin\u2019s boat?",
       "book_key": "sam-makes-a-splash",
       "answer": "The Lovely Lilah",
       "page": 41
@@ -1468,7 +1468,7 @@
     },
     {
       "type": "content",
-      "text": "how many flukes were Mr.",
+      "text": "how many flukes were Mr. Martin and Mr. Harris each able to keep?",
       "book_key": "sam-makes-a-splash",
       "answer": "3",
       "page": 157
@@ -1560,21 +1560,21 @@
     },
     {
       "type": "content",
-      "text": "Cass has a distinguishing physical feature.",
+      "text": "Cass has a distinguishing physical feature. What is it?",
       "book_key": "the-name-of-this-book-is-secret",
       "answer": "She has rather large, pointy ears.",
       "page": 11
     },
     {
       "type": "content",
-      "text": "while Cass is being introduced we learn her two word motto.",
+      "text": "while Cass is being introduced we learn her two word motto. What is it?",
       "book_key": "the-name-of-this-book-is-secret",
       "answer": "Be Prepared",
       "page": 12
     },
     {
       "type": "content",
-      "text": "Max-Ernest repeatedly poses this riddle: What is not enough for one, just right for two, and too much for three?",
+      "text": "Max-Ernest repeatedly poses this riddle: What is not enough for one, just right for two, and too much for three? What is the answer?",
       "book_key": "the-name-of-this-book-is-secret",
       "answer": "A Secret",
       "page": 26
@@ -1588,7 +1588,7 @@
     },
     {
       "type": "content",
-      "text": "Max-Ernest defines an anagram for Cassie.",
+      "text": "Max-Ernest defines an anagram for Cassie. What is an anagram?",
       "book_key": "the-name-of-this-book-is-secret",
       "answer": "\u201cIt\u2019s when two words have all the same letters but in a different order.\u201d",
       "page": 85
@@ -1602,21 +1602,21 @@
     },
     {
       "type": "content",
-      "text": "Ms.",
+      "text": "Ms. Mauvais suggests that Cass get cosmetic surgery to change her appearance. What body part does Ms. Mauvais reference?",
       "book_key": "the-name-of-this-book-is-secret",
       "answer": "Cass\u2019 ears",
       "page": 216
     },
     {
       "type": "content",
-      "text": "Max-Ernest tells Cass that Dr.",
+      "text": "Max-Ernest tells Cass that Dr. L will cure his condition with a lobotomy using a straw entering through what body part to reach his brain?",
       "book_key": "the-name-of-this-book-is-secret",
       "answer": "His nose",
       "page": 223
     },
     {
       "type": "content",
-      "text": "Ms.",
+      "text": "Ms. Mauvais rips off her long white glove after Cass spills the contents of a wine glass upon it. What is everyone shocked to see?",
       "book_key": "the-name-of-this-book-is-secret",
       "answer": "The ungloved hand of a very old woman [thin and frail fingers, nails yellow and cracked, and skin so translucent you could see bones, ligaments and veins].",
       "page": 236
@@ -1630,14 +1630,14 @@
     },
     {
       "type": "content",
-      "text": "Max-Ernest could not swim and was afraid to cross the moat to the pyramid.",
+      "text": "Max-Ernest could not swim and was afraid to cross the moat to the pyramid. Why didn\u2019t he drown?",
       "book_key": "the-name-of-this-book-is-secret",
       "answer": "The water was only waist deep and they could wade across.",
       "page": 291
     },
     {
       "type": "content",
-      "text": "the book ends with a coded letter inviting Cass and Max-Ernest to become members of the Terces Society.",
+      "text": "the book ends with a coded letter inviting Cass and Max-Ernest to become members of the Terces Society. The letter is signed \u201cwith the greatest admiration and respect, P.B.\u201d Who is P.B.?",
       "book_key": "the-name-of-this-book-is-secret",
       "answer": "The missing magician, and twin brother to Dr.L, Pietro Bergamo",
       "page": 351
@@ -1951,28 +1951,28 @@
     },
     {
       "type": "content",
-      "text": "Jordan has two favorite basketball players.",
+      "text": "Jordan has two favorite basketball players. Who are they?",
       "book_key": "marshmallow-jordan",
       "answer": "Michael Jordan and Steph Curry",
       "page": 88
     },
     {
       "type": "content",
-      "text": "Hans brings smoothies for his sister and friend.",
+      "text": "Hans brings smoothies for his sister and friend. What kind are they?",
       "book_key": "marshmallow-jordan",
       "answer": "Avocado and chocolate",
       "page": 12
     },
     {
       "type": "content",
-      "text": "Jordan hears something whimpering in the playground on the way home from school.",
+      "text": "Jordan hears something whimpering in the playground on the way home from school. What is it?",
       "book_key": "marshmallow-jordan",
       "answer": "A white elephant",
       "page": 19
     },
     {
       "type": "content",
-      "text": "Jordan prays to an elephant god to watch over her elephant friend.",
+      "text": "Jordan prays to an elephant god to watch over her elephant friend. What is the name of the god?",
       "book_key": "marshmallow-jordan",
       "answer": "Lord Ganesh",
       "page": 55
@@ -1993,7 +1993,7 @@
     },
     {
       "type": "content",
-      "text": "Jordan\u2019s dad pretends to be shopping for Nanek\u2019s sewing club.",
+      "text": "Jordan\u2019s dad pretends to be shopping for Nanek\u2019s sewing club. What are two of the things he buys?",
       "book_key": "marshmallow-jordan",
       "answer": "Mango and durian",
       "page": 133
@@ -2014,7 +2014,7 @@
     },
     {
       "type": "content",
-      "text": "Kemala is afraid she will lose her scholarship.",
+      "text": "Kemala is afraid she will lose her scholarship. Why does she need it so badly?",
       "book_key": "marshmallow-jordan",
       "answer": "Their farm isn\u2019t doing well because of the drought",
       "page": 224
@@ -2028,7 +2028,7 @@
     },
     {
       "type": "content",
-      "text": "it turns out that the elephant is not an elephant.",
+      "text": "it turns out that the elephant is not an elephant. What is it?",
       "book_key": "marshmallow-jordan",
       "answer": "A regional rain cloud",
       "page": 340
@@ -2354,14 +2354,14 @@
     },
     {
       "type": "content",
-      "text": "Jerry finds a stash of what kind of magazines in a wardrobe full of bed linens?",
+      "text": "Jerry finds a stash of what kind of magazines in a wardrobe full of bed linens? What was the main topic of those magazines?",
       "book_key": "just-jerry",
       "answer": "Life magazine. World War II",
       "page": 34
     },
     {
       "type": "content",
-      "text": "Jerry\u2019s mother gives him something to calm his stomach before going to school.",
+      "text": "Jerry\u2019s mother gives him something to calm his stomach before going to school. What is it?",
       "book_key": "just-jerry",
       "answer": "Tums",
       "page": 46
@@ -2389,28 +2389,28 @@
     },
     {
       "type": "content",
-      "text": "the family goes to the Jersey Shore for vacation.",
+      "text": "the family goes to the Jersey Shore for vacation. What is the name of the Black section of beach?",
       "book_key": "just-jerry",
       "answer": "Chicken Bone Beach",
       "page": 79
     },
     {
       "type": "content",
-      "text": "Jerry and his friends would offer shoe-shines outside of Woolworth five-and-dime.",
+      "text": "Jerry and his friends would offer shoe-shines outside of Woolworth five-and-dime. How much did they charge?",
       "book_key": "just-jerry",
       "answer": "Fifteen cents",
       "page": 107
     },
     {
       "type": "content",
-      "text": "Jerry finds the perfect still life in a shop window.",
+      "text": "Jerry finds the perfect still life in a shop window. What is in the shop window?",
       "book_key": "just-jerry",
       "answer": "Headless mannequins in wedding dresses",
       "page": 117
     },
     {
       "type": "content",
-      "text": "Jerry meets a real artist while selling newspapers.",
+      "text": "Jerry meets a real artist while selling newspapers. What is the artist\u2019s name and what does he draw to make a living?",
       "book_key": "just-jerry",
       "answer": "John Liney. A comic strip named HENRY.",
       "page": 120
@@ -2431,7 +2431,7 @@
     },
     {
       "type": "content",
-      "text": "the Philadelphia Museum of Art mounts a solo exhibition of Jerry\u2019s work.",
+      "text": "the Philadelphia Museum of Art mounts a solo exhibition of Jerry\u2019s work. What is the name of the exhibit?",
       "book_key": "just-jerry",
       "answer": "Witness: The Art of Jerry Pinkney",
       "page": 129
@@ -2530,35 +2530,35 @@
     },
     {
       "type": "content",
-      "text": "what was the name of the college where J.",
+      "text": "what was the name of the college where J.D.\u2019s parents met as track stars?",
       "book_key": "jd-and-the-great-barber-battle",
       "answer": "Mississippi Valley State",
       "page": 13
     },
     {
       "type": "content",
-      "text": "name the town and state where J.",
+      "text": "name the town and state where J.D. lives.",
       "book_key": "jd-and-the-great-barber-battle",
       "answer": "Meridian, Mississippi",
       "page": 13
     },
     {
       "type": "content",
-      "text": "what business did J.",
+      "text": "what business did J.D.\u2019s grandfather go into after retiring from running the local JCPenney?",
       "book_key": "jd-and-the-great-barber-battle",
       "answer": "Burial insurance",
       "page": 17
     },
     {
       "type": "content",
-      "text": "what is the first and last name of the only girl on J.",
+      "text": "what is the first and last name of the only girl on J.D.\u2019s peewee football team?",
       "book_key": "jd-and-the-great-barber-battle",
       "answer": "Jessyka Fleet",
       "page": 22
     },
     {
       "type": "content",
-      "text": "what does it mean for Jordan\u2019s family to be \u201cCreasters?",
+      "text": "what does it mean for Jordan\u2019s family to be \u201cCreasters?\u201d",
       "book_key": "jd-and-the-great-barber-battle",
       "answer": "They only go to church on Christmas and Easter",
       "page": 27
@@ -2579,28 +2579,28 @@
     },
     {
       "type": "content",
-      "text": "what type of cream does J.",
+      "text": "what type of cream does J.D.\u2019s mom use monthly to straighten her hair?",
       "book_key": "jd-and-the-great-barber-battle",
       "answer": "Relaxer",
       "page": 32
     },
     {
       "type": "content",
-      "text": "how old is Justin when J.",
+      "text": "how old is Justin when J.D. cuts his hair for the first time?",
       "book_key": "jd-and-the-great-barber-battle",
       "answer": "Three",
       "page": 41
     },
     {
       "type": "content",
-      "text": "when J.",
+      "text": "when J.D. cuts Jordan\u2019s hair for the first time, what two images does he shave into the haircut?",
       "book_key": "jd-and-the-great-barber-battle",
       "answer": "Jumpman, Chicago Bulls logo",
       "page": 51
     },
     {
       "type": "content",
-      "text": "how much does J.",
+      "text": "how much does J.D. charge his friends for haircuts when he first starts his business?",
       "book_key": "jd-and-the-great-barber-battle",
       "answer": "$3.00",
       "page": 52
@@ -2614,7 +2614,7 @@
     },
     {
       "type": "content",
-      "text": "what does J.",
+      "text": "what does J.D. buy with his earnings?",
       "book_key": "jd-and-the-great-barber-battle",
       "answer": "A new video game console",
       "page": 73
@@ -2706,14 +2706,14 @@
     },
     {
       "type": "content",
-      "text": "the book opens with an extra visit to the hair salon to prepare for a special occasion.",
+      "text": "the book opens with an extra visit to the hair salon to prepare for a special occasion. What is the occasion?",
       "book_key": "frizzy",
       "answer": "Marlene\u2019s cousin\u2019s quince.",
       "page": 4
     },
     {
       "type": "content",
-      "text": "before \u201cpicture time\u201d at the quince, Mami scolds Marlene and asks her \u201cWhat happened to your hair?",
+      "text": "before \u201cpicture time\u201d at the quince, Mami scolds Marlene and asks her \u201cWhat happened to your hair?\u201d How does Marlene respond?",
       "book_key": "frizzy",
       "answer": "She says \u201c I was sweating.\u201d",
       "page": 39
@@ -2755,7 +2755,7 @@
     },
     {
       "type": "content",
-      "text": "when Marlene asks \u201cWhy don\u2019t we like our own hair?",
+      "text": "when Marlene asks \u201cWhy don\u2019t we like our own hair?\u201d, how does Tia Ruby respond?",
       "book_key": "frizzy",
       "answer": "She says \u201cBecause of something called anti-Blackness\u201d",
       "page": 150
@@ -2776,14 +2776,14 @@
     },
     {
       "type": "content",
-      "text": "Marlene says her house is like every house, except their furniture is really big, and they have a lot of pictures of someone.",
+      "text": "Marlene says her house is like every house, except their furniture is really big, and they have a lot of pictures of someone. Who do they have a lot of pictures of?",
       "book_key": "frizzy",
       "answer": "Jesus",
       "page": 65
     },
     {
       "type": "content",
-      "text": "during wash day 101, what comes after the product part, and before the waiting for hair to dry?",
+      "text": "during wash day 101, what comes after the product part, and before the waiting for hair to dry? You flip your hair over and do what?",
       "book_key": "frizzy",
       "answer": "\u201cScrunch\u201d",
       "page": 168
@@ -2964,7 +2964,7 @@
     },
     {
       "type": "content",
-      "text": "what is the grand prize that Gwendolyn wins in Mr.",
+      "text": "what is the grand prize that Gwendolyn wins in Mr. Olsen\u2019s class?",
       "book_key": "fifty-four-things-wrong-with-gwendolyn-rogers",
       "answer": "A Rubik\u2019s Cube",
       "page": 205
@@ -3091,7 +3091,7 @@
     },
     {
       "type": "content",
-      "text": "Ephraim performs the only trick he knows for the Lightbender.",
+      "text": "Ephraim performs the only trick he knows for the Lightbender. What is it?",
       "book_key": "circus-mirandus",
       "answer": "Ephraim uses his bootlace to tie a knot of great complexity.",
       "page": 118
@@ -3105,7 +3105,7 @@
     },
     {
       "type": "content",
-      "text": "two of the main characters are a grandfather and grandson.",
+      "text": "two of the main characters are a grandfather and grandson. What are their first names?",
       "book_key": "circus-mirandus",
       "answer": "Ephraim and Micah",
       "page": 178
@@ -3161,7 +3161,7 @@
     },
     {
       "type": "content",
-      "text": "Grandpa Ephraim saved his miracle for his grandson. What is it?",
+      "text": "Grandpa Ephraim saved his miracle for his grandson. What was Grandpa Ephraim\u2019s last wish?",
       "book_key": "circus-mirandus",
       "answer": "For the Lightbender to take Micah to Circus Mirandus",
       "page": 288
