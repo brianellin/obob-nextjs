@@ -1,13 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
-import { BookOpen, Github, Heart } from "lucide-react";
+import { BookOpen, Github } from "lucide-react";
 import { WavyUnderline } from "@/components/WavyUnderline";
 import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
@@ -35,7 +34,8 @@ export default function AboutPage() {
               Battles are 8 questions: 4{" "}
               <span className="font-bold">in which book</span> questions,
               followed by 4 <span className="font-bold">content</span>{" "}
-              questions, similar to what you'd experience in a real OBOB battle.
+              questions, similar to what you&apos;d experience in a real OBOB
+              battle.
             </p>
             <p className="leading-7 [&:not(:first-child)]:mt-6">
               Questions are currently only available for the grade 3-5 division,
