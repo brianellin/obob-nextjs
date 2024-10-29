@@ -7,6 +7,7 @@ import {
   Card,
   CardContent,
   CardDescription,
+  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
@@ -35,6 +36,10 @@ export default function AboutPage() {
               <span className="font-bold">in which book</span> questions,
               followed by 4 <span className="font-bold">content</span>{" "}
               questions, similar to what you'd experience in a real OBOB battle.
+            </p>
+            <p className="leading-7 [&:not(:first-child)]:mt-6">
+              Questions are currently only available for the grade 3-5 division,
+              though may expand in the future.
             </p>
             <Button asChild className="w-full mt-4">
               <Link
