@@ -361,7 +361,7 @@ export default function QuizPage({
       <div className="w-full max-w-xl mx-auto mt-4">
         <Button
           onClick={nextQuestion}
-          variant="link"
+          variant="outline"
           className="w-full flex items-center justify-center"
         >
           <span>Skip</span>
