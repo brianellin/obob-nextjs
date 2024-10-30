@@ -17,17 +17,17 @@ export default function Home() {
         </p>
         <div className="flex justify-center space-x-8 pt-4">
           <div className="flex items-center space-x-2">
-            <Zap className="h-6 w-6 text-muted-foreground" />
-            <div>
-              <p className="text-2xl font-bold">{questionCount}</p>
-              <p className="text-sm text-muted-foreground">Questions</p>
-            </div>
-          </div>
-          <div className="flex items-center space-x-2">
             <BookOpen className="h-6 w-6 text-muted-foreground" />
             <div>
               <p className="text-2xl font-bold">16</p>
               <p className="text-sm text-muted-foreground">Books</p>
+            </div>
+          </div>
+          <div className="flex items-center space-x-2">
+            <Zap className="h-6 w-6 text-muted-foreground" />
+            <div>
+              <p className="text-2xl font-bold">{questionCount}</p>
+              <p className="text-sm text-muted-foreground">Questions</p>
             </div>
           </div>
           <div className="flex items-center space-x-2">

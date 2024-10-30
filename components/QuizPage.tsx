@@ -343,6 +343,17 @@ export default function QuizPage({
               </div>
             )
           )}
+          <div className="flex items-center justify-center text-xs gap-1 mt-4 text-muted-foreground">
+            Source:{" "}
+            <Link
+              href={currentQuestion.source!.link}
+              className=" flex items-center gap-1 hover:text-muted-foreground/80"
+              target="_blank"
+            >
+              {currentQuestion.source?.name}
+              <ExternalLink className="h-3 w-3" />
+            </Link>
+          </div>
         </CardContent>
       </Card>
 
@@ -356,17 +367,6 @@ export default function QuizPage({
           <span>Skip</span>
           <SkipForward className="h-3 w-3 ml-1" />
         </Button>
-      </div>
-      <div className="flex items-center justify-center text-xs gap-1 mt-4 text-muted-foreground">
-        Source:{" "}
-        <Link
-          href={currentQuestion.source!.link}
-          className=" flex items-center gap-1 hover:text-muted-foreground/80"
-          target="_blank"
-        >
-          {currentQuestion.source?.name}
-          <ExternalLink className="h-3 w-3" />
-        </Link>
       </div>
     </div>
   );
