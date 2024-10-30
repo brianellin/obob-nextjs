@@ -13,14 +13,14 @@ import {
 
 export default function AboutPage() {
   return (
-    <div className="container mx-auto px-4 py-4">
+    <div className="container mx-auto max-w-2xl px-4 py-4">
       <h1 className="text-4xl font-bold text-center mb-8">
         <WavyUnderline style={0} thickness={4} color="text-yellow-900">
           Woof!
         </WavyUnderline>
       </h1>
 
-      <div className="grid gap-8 md:grid-cols-2">
+      <div className="flex flex-col gap-8">
         <Card>
           <CardHeader>
             <CardTitle>What the ruff?</CardTitle>
@@ -54,16 +54,44 @@ export default function AboutPage() {
 
         <Card>
           <CardHeader>
-            <CardTitle>OBOB Questions</CardTitle>
+            <CardTitle>Where do the questions come from?</CardTitle>
           </CardHeader>
           <CardContent>
             <p className="leading-7 [&:not(:first-child)]:mt-6">
-              We collect questions from public libary soruces across Oregon.
-              Each question cites its source within the battle.
+              We collect questions from various schools and libraries across
+              Oregon that have posted them publicly (usually as PDFs or
+              spreadsheets). Here&apos;s the current list of sources:
             </p>
+            <ul className="my-6 ml-6 list-disc [&>li]:mt-2">
+              <li>
+                <Link
+                  href="https://library.cedarmill.org/kids/obob/"
+                  className="hover:underline"
+                >
+                  Cedar Mill Library
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="https://www.ci.oswego.or.us/kids/obob-practice-questions"
+                  className="hover:underline"
+                >
+                  Lake Oswego Library
+                </Link>
+              </li>
+
+              <li>
+                <Link
+                  href="https://www.glencoeelementarypta.com/obob"
+                  className="hover:underline"
+                >
+                  Glencoe Elementary
+                </Link>
+              </li>
+            </ul>
             <p className="leading-7 [&:not(:first-child)]:mt-6">
-              If you are interested in contributing questions, please get in
-              touch!
+              Each question in the battle cites its source. If you are
+              interested in contributing questions, please get in touch!
             </p>
           </CardContent>
         </Card>

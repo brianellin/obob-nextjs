@@ -17,7 +17,7 @@ function shuffle<T>(array: T[]): T[] {
 const QUESTION_SOURCES = [
   { path: 'obob/lake_oswego/questions.json', name: 'Lake Oswego Library', link: 'https://www.ci.oswego.or.us/kids/obob-practice-questions' },
   { path: 'obob/cedar_mill/questions.json', name: 'Cedar Mill Library', link: 'https://library.cedarmill.org/kids/obob/' },
-  // Add more sources here as needed
+  { path: 'obob/glencoe/glencoe_questions.json', name: 'Glencoe Elementary', link: 'https://www.glencoeelementarypta.com/obob' },
 ];
 
 export async function POST(request: Request) {

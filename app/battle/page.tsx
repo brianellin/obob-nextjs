@@ -40,7 +40,7 @@ function BattleContent() {
 
   if (quizMode === null) {
     return (
-      <div className="container max-w-xl mx-auto mt-8">
+      <div className="container max-w-2xl mx-auto mt-8">
         <ModeSelection />
       </div>
     );

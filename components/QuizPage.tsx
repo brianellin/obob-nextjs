@@ -301,7 +301,8 @@ export default function QuizPage({
                       </span>
                     </span>
                   ) : (
-                    currentQuestion.answer
+                    currentQuestion.answer.charAt(0).toUpperCase() +
+                    currentQuestion.answer.slice(1)
                   )}
                 </p>
                 <p className="text-sm text-gray-600">

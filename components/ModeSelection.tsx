@@ -12,8 +12,8 @@ import Link from "next/link";
 
 export default function ModeSelection() {
   return (
-    <div className="space-y-8 max-w-xl mx-auto">
-      <div className="grid gap-6 md:grid-cols-2">
+    <div className="space-y-8 max-w-3xl mx-auto">
+      <div className="flex gap-4 flex-col md:flex-row">
         <Card>
           <CardHeader>
             <CardTitle>Solo battle</CardTitle>
