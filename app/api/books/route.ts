@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 import path from 'path';
 import fs from 'fs/promises';
-import { Book, Books } from '@/types';
+import { Books } from '@/types';
 
 export async function GET() {
   try {
@@ -9,15 +9,7 @@ export async function GET() {
     const fileContents = await fs.readFile(filePath, 'utf8');
     const data = JSON.parse(fileContents) as { books: Books };
 
-    // Add book_key to each book object
-    const booksWithKeys = Object.fromEntries(
-      Object.entries(data.books).map(([key, book]: [string, Book]) => [
-        key,
-        { ...book, book_key: key }
-      ])
-    );
-
-    return NextResponse.json({ books: booksWithKeys });
+    return NextResponse.json({ books: data.books });
   } catch (error) {
     return NextResponse.json(
       { error: 'Failed to load books' },

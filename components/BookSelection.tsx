@@ -3,20 +3,20 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { ArrowRight, Loader2, PawPrint } from "lucide-react";
+import { ArrowRight, PawPrint } from "lucide-react";
 import Image from "next/image";
 import { Book, Books } from "../types";
 import { WavyUnderline } from "./WavyUnderline";
+import booksJson from "@/public/obob/books.json";
 
 type BookSelectionProps = {
   onSelectBooks: (selectedBooks: Book[]) => void;
 };
 
 export default function BookSelection({ onSelectBooks }: BookSelectionProps) {
-  const [books, setBooks] = useState<Books>({});
+  const books: Books = booksJson.books as Books;
   const [selectedBookKeys, setSelectedBookKeys] = useState<string[]>([]);
   const [isMobile, setIsMobile] = useState(false);
-  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -27,20 +27,6 @@ export default function BookSelection({ onSelectBooks }: BookSelectionProps) {
 
     checkIfMobile();
     window.addEventListener("resize", checkIfMobile);
-
-    const fetchBooks = async () => {
-      try {
-        const response = await fetch("/api/books");
-        const data = await response.json();
-        setBooks(data.books);
-      } catch (error) {
-        console.error("Error loading books:", error);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchBooks();
 
     return () => window.removeEventListener("resize", checkIfMobile);
   }, []);
@@ -75,14 +61,6 @@ export default function BookSelection({ onSelectBooks }: BookSelectionProps) {
         : selectedBooks
     );
   };
-
-  if (loading) {
-    return (
-      <div className="h-screen flex items-center justify-center">
-        <Loader2 className="h-10 w-10 animate-spin text-gray-600" />
-      </div>
-    );
-  }
 
   return (
     <div className="min-h-screen pb-20 md:pb-0 relative">

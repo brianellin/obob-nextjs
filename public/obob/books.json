@@ -1,6 +1,7 @@
 {
   "books": {
     "time-travelers": {
+      "book_key": "time-travelers",
       "title": "A Time Traveler's Theory of Relativity",
       "author": "Nicole Valentine",
       "cover": "/cover_images/time_travelers.jpg",
@@ -8,6 +9,7 @@
       "obob_year": "2024-2025"
     },
     "before-ever-after": {
+      "book_key": "before-ever-after",
       "title": "Before the Ever After",
       "author": "Jacqueline Woodson",
       "cover": "/cover_images/before_the_ever_after.jpg",
@@ -15,6 +17,7 @@
       "obob_year": "2024-2025"
     },
     "circus-mirandus": {
+      "book_key": "circus-mirandus",
       "title": "Circus Mirandus",
       "author": "Cassie Beasley",
       "cover": "/cover_images/circus_mirandus.jpg",
@@ -22,6 +25,7 @@
       "obob_year": "2024-2025"
     },
     "fifty-four-things-wrong-with-gwendolyn-rogers": {
+      "book_key": "fifty-four-things-wrong-with-gwendolyn-rogers",
       "title": "Fifty-Four Things Wrong with Gwendolyn Rogers",
       "author": "Caela Carter",
       "cover": "/cover_images/54_things.jpg",
@@ -29,6 +33,7 @@
       "obob_year": "2024-2025"
     },
     "frizzy": {
+      "book_key": "frizzy",
       "title": "Frizzy",
       "author": "Claribel A. Ortega and Rose Bousamra",
       "cover": "/cover_images/frizzy.jpg",
@@ -36,6 +41,7 @@
       "obob_year": "2024-2025"
     },
     "jd-and-the-great-barber-battle": {
+      "book_key": "jd-and-the-great-barber-battle",
       "title": "J.D. and the Great Barber Battle",
       "author": "J. Dillard",
       "cover": "/cover_images/jd_barber.jpg",
@@ -43,6 +49,7 @@
       "obob_year": "2024-2025"
     },
     "just-jerry": {
+      "book_key": "just-jerry",
       "title": "Just Jerry: How Drawing Shaped My Life",
       "author": "Jerry Pinkney",
       "cover": "/cover_images/just_jerry.jpg",
@@ -50,6 +57,7 @@
       "obob_year": "2024-2025"
     },
     "leonard-my-life-as-a-cat": {
+      "book_key": "leonard-my-life-as-a-cat",
       "title": "Leonard (My Life as a Cat)",
       "author": "Carlie Sorosiak",
       "cover": "/cover_images/leonard_cat.jpg",
@@ -57,6 +65,7 @@
       "obob_year": "2024-2025"
     },
     "marshmallow-jordan": {
+      "book_key": "marshmallow-jordan",
       "title": "Marshmallow & Jordan",
       "author": "Alina Chau",
       "cover": "/cover_images/marshmallow_jordan.jpg",
@@ -64,6 +73,7 @@
       "obob_year": "2024-2025"
     },
     "sam-makes-a-splash": {
+      "book_key": "sam-makes-a-splash",
       "title": "Sam Makes a Splash",
       "author": "Nicole Melleby",
       "cover": "/cover_images/sam_makes_a_splash.jpg",
@@ -71,6 +81,7 @@
       "obob_year": "2024-2025"
     },
     "solimar": {
+      "book_key": "solimar",
       "title": "Solimar: The Sword of the Monarchs",
       "author": "Pam Muñoz Ryan",
       "cover": "/cover_images/solimar.jpg",
@@ -78,6 +89,7 @@
       "obob_year": "2024-2025"
     },
     "mystwick-school-of-musicraft": {
+      "book_key": "mystwick-school-of-musicraft",
       "title": "The Mystwick School of Musicraft",
       "author": "Jessica Khoury",
       "cover": "/cover_images/mystwick_music.jpg",
@@ -85,6 +97,7 @@
       "obob_year": "2024-2025"
     },
     "the-name-of-this-book-is-secret": {
+      "book_key": "the-name-of-this-book-is-secret",
       "title": "The Name of This Book Is Secret",
       "author": "Pseudonymous Bosch",
       "cover": "/cover_images/the_name_of_this_book_is_secret.jpg",
@@ -92,6 +105,7 @@
       "obob_year": "2024-2025"
     },
     "the-wild-robot": {
+      "book_key": "the-wild-robot",
       "title": "The Wild Robot",
       "author": "Peter Brown",
       "cover": "/cover_images/wild_robot.jpg",
@@ -99,6 +113,7 @@
       "obob_year": "2024-2025"
     },
     "thirst": {
+      "book_key": "thirst",
       "title": "Thirst",
       "author": "Varsha Bajaj",
       "cover": "/cover_images/thirst.jpg",
@@ -106,6 +121,7 @@
       "obob_year": "2024-2025"
     },
     "twins": {
+      "book_key": "twins",
       "title": "Twins",
       "author": "Varian Johnson and Shannon Wright",
       "cover": "/cover_images/twins.jpg",
