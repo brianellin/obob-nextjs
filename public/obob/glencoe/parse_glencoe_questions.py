@@ -62,7 +62,11 @@ def clean_iwb_question(text, book_title):
         text = text[len('in which book'):].strip()
         text = text.lstrip('.')
         text = text.strip()
-    
+    elif text_lower.startswith('iwb'):
+        text = text[len('iwb'):].strip()
+        text = text.lstrip('.')
+        text = text.strip()
+
     # Only add question mark if original text had one
     text = text.strip('?').strip()
     if had_question_mark:
