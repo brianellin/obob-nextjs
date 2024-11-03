@@ -93,3 +93,14 @@
 .animate-score-pop {
   animation: score-pop 0.3s ease-in-out;
 }
+
+/* Prevent tap highlight on mobile safari */
+@media (hover: none) {
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  *:active {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
