@@ -20,6 +20,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <link
+          rel="icon"
+          href="/icon?<generated>"
+          type="image/png"
+          sizes="32x32"
+        />
+      </head>
       <body className={inter.className}>
         <Header />
         <main className="container mx-auto px-2 py-2">{children}</main>
