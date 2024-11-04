@@ -82,7 +82,7 @@
     transform: scale(1);
   }
   50% {
-    transform: scale(1.3);
+    transform: scale(3.0);
     color: #8b5cf6; /* Purple color for emphasis */
   }
   100% {

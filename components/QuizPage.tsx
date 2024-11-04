@@ -9,7 +9,7 @@ import {
   CardTitle,
   CardFooter,
 } from "@/components/ui/card";
-import { SkipForward, Loader2, ExternalLink } from "lucide-react";
+import { SkipForward, Loader2, ExternalLink, ArrowLeft } from "lucide-react";
 import { Progress } from "@/components/ui/progress";
 import type { QuestionWithBook, Book } from "@/types";
 import Link from "next/link";
@@ -23,6 +23,11 @@ type QuizPageProps = {
 
 const TIMER_DURATION = 15; // 15 seconds
 
+type QuestionResult = {
+  question: QuestionWithBook;
+  pointsAwarded: number;
+};
+
 export default function QuizPage({
   selectedBooks,
   quizMode,
@@ -31,7 +36,6 @@ export default function QuizPage({
   const [questions, setQuestions] = useState<QuestionWithBook[]>([]);
   const [message, setMessage] = useState<string | null>(null);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
-  const [score, setScore] = useState(0);
   const [showAnswer, setShowAnswer] = useState(false);
   const [quizFinished, setQuizFinished] = useState(false);
   const [animateScore, setAnimateScore] = useState(false);
@@ -40,6 +44,7 @@ export default function QuizPage({
   const boopSound = useRef<HTMLAudioElement | null>(null);
   const timerRef = useRef<NodeJS.Timeout | null>(null);
   const [isMessageVisible, setIsMessageVisible] = useState(true);
+  const [questionResults, setQuestionResults] = useState<QuestionResult[]>([]);
 
   const loadQuestions = async () => {
     try {
@@ -105,13 +110,35 @@ export default function QuizPage({
   };
 
   const handleAnswer = (points: number) => {
-    setScore((prevScore) => prevScore + points);
     setAnimateScore(true);
+    
+    // Update or add the result for the current question
+    setQuestionResults(prev => {
+      const newResults = [...prev];
+      newResults[currentQuestionIndex] = {
+        question: currentQuestion,
+        pointsAwarded: points
+      };
+      return newResults;
+    });
+    
     setTimeout(() => setAnimateScore(false), 300);
     nextQuestion();
   };
 
   const nextQuestion = () => {
+    // Record the skip if there's no existing result
+    setQuestionResults(prev => {
+      const newResults = [...prev];
+      if (!newResults[currentQuestionIndex]) {
+        newResults[currentQuestionIndex] = {
+          question: currentQuestion,
+          pointsAwarded: -1 // Using -1 to indicate a skip
+        };
+      }
+      return newResults;
+    });
+
     if (currentQuestionIndex < questions.length - 1) {
       setCurrentQuestionIndex(currentQuestionIndex + 1);
       setShowAnswer(false);
@@ -124,16 +151,33 @@ export default function QuizPage({
 
   const restartQuiz = async () => {
     setCurrentQuestionIndex(0);
-    setScore(0);
     setShowAnswer(false);
     setQuizFinished(false);
     setIsTimerRunning(false);
     setTimeLeft(TIMER_DURATION);
-
+    setQuestionResults([]); // This will effectively reset the score
+    
     await loadQuestions();
   };
 
+  const previousQuestion = () => {
+    if (currentQuestionIndex > 0) {
+      setCurrentQuestionIndex(currentQuestionIndex - 1);
+      setShowAnswer(false);
+      setIsTimerRunning(false);
+      setTimeLeft(TIMER_DURATION);
+    } else {
+      onQuizEnd();
+    }
+  };
+
   const currentQuestion = questions[currentQuestionIndex];
+
+  const calculateScore = () => {
+    return questionResults.reduce((total, result) => {
+      return total + (result.pointsAwarded >= 0 ? result.pointsAwarded : 0);
+    }, 0);
+  };
 
   if (!currentQuestion && !quizFinished) {
     return (
@@ -152,31 +196,73 @@ export default function QuizPage({
               Battle complete!
             </CardTitle>
           </CardHeader>
-          <CardContent className="text-center">
-            <p className="text-xl mb-4">
-              Your score: {score} out of {questions.length * 5}
-            </p>
-            <p className="text-lg mb-6">
-              {score === questions.length * 5
-                ? "Perfect score! You're an OBOB champion!"
-                : score >= questions.length * 4
-                ? "Great job! You're almost there!"
-                : score >= questions.length * 3
-                ? "Good effort! Keep practicing!"
-                : "Nice try! There's room for improvement. Keep reading!"}
-            </p>
+          <CardContent>
+            <div className="text-center mb-6">
+              <p className="text-xl mb-4">
+                Your score: {calculateScore()} out of {questions.length * 5}
+              </p>
+              <p className="text-lg mb-6">
+                {calculateScore() === questions.length * 5
+                  ? "Perfect score! You're an OBOB champion!"
+                  : calculateScore() >= questions.length * 4
+                  ? "Great job! You're almost there!"
+                  : calculateScore() >= questions.length * 3
+                  ? "Good effort! Keep practicing!"
+                  : "Nice try! There's room for improvement. Keep reading!"}
+              </p>
+            </div>
+
+            <div className="justify-center flex gap-4 flex-col mb-8">
+              <Button
+                onClick={restartQuiz}
+                className="bg-purple-500 hover:bg-purple-600 w-full"
+              >
+                Battle again with same books
+              </Button>
+              <Button onClick={onQuizEnd} variant="outline" className="w-full">
+                Start over
+              </Button>
+            </div>
+
+            <div className="space-y-4">
+              <h3 className="font-semibold text-lg">Battle review:</h3>
+              {questionResults.map((result, index) => (
+                <div key={index} className="border rounded-lg p-4 space-y-2">
+                  <div className="flex justify-between items-start">
+                    <div className="flex-1">
+                      <p className="font-medium">Question {index + 1}:</p>
+                      <p className="text-sm text-gray-600">
+                        {result.question.type === "in-which-book"
+                          ? `In which book ${result.question.text}`
+                          : `In ${result.question.book.title}: ${result.question.text}`}
+                      </p>
+                    </div>
+                    <span
+                      className={`px-2 py-1 rounded text-sm ${
+                        result.pointsAwarded === 5
+                          ? "bg-emerald-100 text-emerald-700"
+                          : result.pointsAwarded === 3
+                          ? "bg-amber-100 text-amber-700"
+                          : result.pointsAwarded === -1
+                          ? "bg-gray-100 text-gray-700"
+                          : "bg-red-100 text-red-700"
+                      }`}
+                    >
+                      {result.pointsAwarded === -1
+                        ? "Skipped"
+                        : `${result.pointsAwarded} pts`}
+                    </span>
+                  </div>
+                  <p className="text-sm font-medium">
+                    Answer:{" "}
+                    {result.question.type === "in-which-book"
+                      ? `${result.question.book.title} by ${result.question.book.author}`
+                      : result.question.answer}
+                  </p>
+                </div>
+              ))}
+            </div>
           </CardContent>
-          <CardFooter className="justify-center flex gap-4 flex-col">
-            <Button
-              onClick={restartQuiz}
-              className="bg-purple-500 hover:bg-purple-600 w-full"
-            >
-              Battle again with same books
-            </Button>
-            <Button onClick={onQuizEnd} variant="outline" className="w-full">
-              Start over
-            </Button>
-          </CardFooter>
         </Card>
       </div>
     );
@@ -226,7 +312,7 @@ export default function QuizPage({
                   animateScore ? "animate-score-pop" : ""
                 }`}
               >
-                {score}/{questions.length * 5}
+                {calculateScore()}/{questions.length * 5}
               </span>
             </span>
           </div>
@@ -359,11 +445,19 @@ export default function QuizPage({
       </Card>
 
       {/* New skip button below the card */}
-      <div className="w-full max-w-xl mx-auto mt-4">
+      <div className="w-full max-w-xl mx-auto mt-4 flex gap-2">
+        <Button
+          onClick={previousQuestion}
+          variant="outline"
+          className="w-full flex items-center justify-center touch-none"
+        >
+          <ArrowLeft className="h-3 w-3 mr-1" />
+          <span>Back</span>
+        </Button>
         <Button
           onClick={nextQuestion}
           variant="outline"
-          className="w-full flex items-center justify-center"
+          className="w-full flex items-center justify-center touch-none"
         >
           <span>Skip</span>
           <SkipForward className="h-3 w-3 ml-1" />
