@@ -2,13 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-  CardFooter,
-} from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { SkipForward, Loader2, ExternalLink, ArrowLeft } from "lucide-react";
 import { Progress } from "@/components/ui/progress";
 import type { QuestionWithBook, Book } from "@/types";
@@ -111,29 +105,29 @@ export default function QuizPage({
 
   const handleAnswer = (points: number) => {
     setAnimateScore(true);
-    
+
     // Update or add the result for the current question
-    setQuestionResults(prev => {
+    setQuestionResults((prev) => {
       const newResults = [...prev];
       newResults[currentQuestionIndex] = {
         question: currentQuestion,
-        pointsAwarded: points
+        pointsAwarded: points,
       };
       return newResults;
     });
-    
+
     setTimeout(() => setAnimateScore(false), 300);
     nextQuestion();
   };
 
   const nextQuestion = () => {
     // Record the skip if there's no existing result
-    setQuestionResults(prev => {
+    setQuestionResults((prev) => {
       const newResults = [...prev];
       if (!newResults[currentQuestionIndex]) {
         newResults[currentQuestionIndex] = {
           question: currentQuestion,
-          pointsAwarded: -1 // Using -1 to indicate a skip
+          pointsAwarded: -1, // Using -1 to indicate a skip
         };
       }
       return newResults;
@@ -156,7 +150,7 @@ export default function QuizPage({
     setIsTimerRunning(false);
     setTimeLeft(TIMER_DURATION);
     setQuestionResults([]); // This will effectively reset the score
-    
+
     await loadQuestions();
   };
 
