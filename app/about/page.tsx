@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { BookOpen, Github } from "lucide-react";
+import { BookOpen, Github, Mail } from "lucide-react";
 import { WavyUnderline } from "@/components/WavyUnderline";
 import { Button } from "@/components/ui/button";
 import {
@@ -91,7 +91,9 @@ export default function AboutPage() {
             </ul>
             <p className="leading-7 [&:not(:first-child)]:mt-6">
               Each question in the battle cites its source. If you are
-              interested in contributing questions, please get in touch!
+              interested in contributing questions, please get in touch! Email
+              us at{" "}
+              <a href="mailto:obobdotdog@gmail.com">obobdotdog@gmail.com</a>
             </p>
 
             <p className="leading-7 [&:not(:first-child)]:mt-6">
@@ -132,6 +134,15 @@ export default function AboutPage() {
                 className="inline-flex items-center"
               >
                 <Github className="mr-2 h-4 w-4" /> View on GitHub
+              </Link>
+            </Button>
+
+            <Button asChild variant="outline">
+              <Link
+                href="mailto:obobdotdog@gmail.com"
+                className="inline-flex items-center"
+              >
+                <Mail className="mr-2 h-4 w-4" /> Email Us
               </Link>
             </Button>
           </CardContent>
