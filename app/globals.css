@@ -104,3 +104,21 @@
     -webkit-tap-highlight-color: transparent;
   }
 }
+
+@layer base {
+  :root {
+    --chart-1: 0 0% 0%;      /* Pure black */
+    --chart-2: 0 0% 20%;     /* Dark gray */
+    --chart-3: 0 0% 40%;     /* Medium gray */
+    --chart-4: 0 0% 60%;     /* Light gray */
+    --chart-5: 0 0% 80%;     /* Very light gray */
+  }
+ 
+  .dark {
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
