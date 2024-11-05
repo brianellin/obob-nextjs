@@ -93,6 +93,15 @@ export default function AboutPage() {
               Each question in the battle cites its source. If you are
               interested in contributing questions, please get in touch!
             </p>
+
+            <p className="leading-7 [&:not(:first-child)]:mt-6">
+              Take a look at the{" "}
+              <Link href="/books" className="hover:underline">
+                Books
+              </Link>{" "}
+              page to see a summary of questions by book, and where each one
+              comes from.
+            </p>
           </CardContent>
         </Card>
 

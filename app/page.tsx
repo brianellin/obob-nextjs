@@ -1,6 +1,8 @@
 import { BookOpen, Dog, Zap } from "lucide-react";
 import ModeSelection from "@/components/ModeSelection";
 import { WavyUnderline } from "@/components/WavyUnderline";
+import Link from "next/link";
+
 export default function Home() {
   return (
     <main className=" bg-white p-2">
@@ -14,13 +16,16 @@ export default function Home() {
           Read, practice, and have fun with Oregon Battle of the Books
         </p>
         <div className="flex justify-center space-x-8 pt-4">
-          <div className="flex items-center space-x-2">
+          <Link
+            href="/books"
+            className="flex items-center space-x-2 hover:opacity-80 transition-opacity"
+          >
             <BookOpen className="h-6 w-6 text-muted-foreground" />
             <div>
               <p className="text-2xl font-bold">16</p>
               <p className="text-sm text-muted-foreground">Books</p>
             </div>
-          </div>
+          </Link>
           <div className="flex items-center space-x-2">
             <Zap className="h-6 w-6 text-muted-foreground" />
             <div>
