@@ -7,12 +7,16 @@ import BookSelection from "@/components/BookSelection";
 import QuizPage from "@/components/QuizPage";
 import type { Book } from "@/types";
 
+type QuestionType = "in-which-book" | "content" | "both";
+
 function BattleContent() {
   const searchParams = useSearchParams();
   const router = useRouter();
-  const [selectedBooks, setSelectedBooks] = useState<Book[]>([]); // Changed from string[] to Book[]
+  const [selectedBooks, setSelectedBooks] = useState<Book[]>([]);
   const [quizMode, setQuizMode] = useState<"personal" | "friend" | null>(null);
   const [quizStarted, setQuizStarted] = useState(false);
+  const [questionCount, setQuestionCount] = useState<number>(16);
+  const [questionType, setQuestionType] = useState<QuestionType>("both");
 
   useEffect(() => {
     const mode = searchParams.get("mode") as "personal" | "friend" | null;
@@ -25,9 +29,14 @@ function BattleContent() {
     window.scrollTo(0, 0);
   }, [quizMode, quizStarted]);
 
-  const handleSelectBooks = (books: Book[]) => {
-    // Changed from string[] to Book[]
+  const handleSelectBooks = (
+    books: Book[], 
+    count: number,
+    type: QuestionType
+  ) => {
     setSelectedBooks(books);
+    setQuestionCount(count);
+    setQuestionType(type);
     setQuizStarted(true);
   };
 
@@ -35,6 +44,8 @@ function BattleContent() {
     setQuizStarted(false);
     setSelectedBooks([]);
     setQuizMode(null);
+    setQuestionCount(16);
+    setQuestionType("both");
     router.push("/battle");
   };
 
@@ -55,6 +66,8 @@ function BattleContent() {
       selectedBooks={selectedBooks}
       quizMode={quizMode}
       onQuizEnd={handleQuizEnd}
+      questionCount={questionCount}
+      questionType={questionType}
     />
   );
 }

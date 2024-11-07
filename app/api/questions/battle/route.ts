@@ -2,24 +2,22 @@ import { NextResponse } from 'next/server';
 import path from 'path';
 import fs from 'fs/promises';
 import { Book, Question, QuestionWithBook } from '@/types';
-import { getAllQuestions } from '@/lib/questions';
-
-function shuffle<T>(array: T[]): T[] {
-    const shuffled = [...array];
-    for (let i = shuffled.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
-    }
-    return shuffled;
-}
+import { getAllQuestions, selectQuestions } from '@/lib/questions';
 
 export async function POST(request: Request) {
   try {
-    const { selectedBooks } = await request.json() as { selectedBooks: Book[] };
+    const { 
+      selectedBooks, 
+      questionCount = 16,
+      questionType = "both" 
+    } = await request.json() as { 
+      selectedBooks: Book[],
+      questionCount: number,
+      questionType: "in-which-book" | "content" | "both"
+    };
     
     const booksPath = path.join(process.cwd(), 'public', 'obob/books.json');
     
-    // Use the new getAllQuestions function
     const [allQuestions, booksFile] = await Promise.all([
       getAllQuestions(),
       fs.readFile(booksPath, 'utf8')
@@ -27,9 +25,7 @@ export async function POST(request: Request) {
 
     const booksData = JSON.parse(booksFile) as { books: Record<string, Book> };
 
-    console.log(`Loaded ${allQuestions.length} questions`);
-
-    // Rest of the code remains the same...
+    // Filter questions for selected books
     const filteredQuestions = allQuestions.filter((q: Question) =>
       selectedBooks.some(book => book.book_key === q.book_key)
     );
@@ -37,31 +33,20 @@ export async function POST(request: Request) {
     let questionsWithBooks: QuestionWithBook[];
     let message: string | null = null;
 
-    if (selectedBooks.length < 4) {
-      const contentQuestions = shuffle(
-        filteredQuestions.filter((q: Question) => q.type === 'content')
-      ).slice(0, 8);
-
-      questionsWithBooks = contentQuestions.map((q: Question) => ({
+    // Only allow "in-which-book" questions if 4 or more books are selected
+    if (selectedBooks.length < 4 && (questionType === "in-which-book" || questionType === "both")) {
+      const selectedQuestions = selectQuestions(filteredQuestions, questionCount, "content");
+      questionsWithBooks = selectedQuestions.map((q: Question) => ({
         ...q,
         book: booksData.books[q.book_key]
       }));
-
-      message = "Choose at least 4 books to add 'In Which Book' questions to your battle!";
+      message = "Choose at least 4 books to include 'In Which Book' questions in your battle!";
     } else {
-      const inWhichBookQuestions = shuffle(
-        filteredQuestions.filter((q: Question) => q.type === 'in-which-book')
-      ).slice(0, 4);
-
-      const contentQuestions = shuffle(
-        filteredQuestions.filter((q: Question) => q.type === 'content')
-      ).slice(0, 4);
-
-      questionsWithBooks = [...inWhichBookQuestions, ...contentQuestions]
-        .map((q: Question) => ({
-          ...q,
-          book: booksData.books[q.book_key]
-        }));
+      const selectedQuestions = selectQuestions(filteredQuestions, questionCount, questionType);
+      questionsWithBooks = selectedQuestions.map((q: Question) => ({
+        ...q,
+        book: booksData.books[q.book_key]
+      }));
     }
 
     return NextResponse.json({ 

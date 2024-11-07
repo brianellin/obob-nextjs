@@ -9,6 +9,15 @@ export const QUESTION_SOURCES = [
   { path: 'obob/glencoe/glencoe_questions.json', name: 'Glencoe Elementary', link: 'https://www.glencoeelementarypta.com/obob' },
 ];
 
+function shuffle<T>(array: T[]): T[] {
+  const shuffled = [...array];
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+  return shuffled;
+}
+
 export async function getAllQuestions(): Promise<Question[]> {
   try {
     // Map paths to full system paths
@@ -39,5 +48,29 @@ export async function getAllQuestions(): Promise<Question[]> {
     console.error('Error loading questions:', error);
     throw new Error('Failed to load questions');
   }
-} 
+}
+
+export function selectQuestions(
+  questions: Question[], 
+  count: number, 
+  type: "in-which-book" | "content" | "both"
+): Question[] {
+  if (type === "both") {
+    const iwbQuestions = questions.filter(q => q.type === "in-which-book");
+    const contentQuestions = questions.filter(q => q.type === "content");
+    
+    const halfCount = Math.floor(count / 2);
+    const iwbCount = Math.min(halfCount, iwbQuestions.length);
+    const contentCount = count - iwbCount;
+
+    return shuffle([
+      ...shuffle(iwbQuestions).slice(0, iwbCount),
+      ...shuffle(contentQuestions).slice(0, contentCount)
+    ]);
+  } else {
+    return shuffle(
+      questions.filter(q => q.type === type)
+    ).slice(0, count);
+  }
+}
 

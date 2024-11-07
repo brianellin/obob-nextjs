@@ -8,11 +8,14 @@ import { Progress } from "@/components/ui/progress";
 import type { QuestionWithBook, Book } from "@/types";
 import Link from "next/link";
 import { WavyUnderline } from "./WavyUnderline";
+import { useToast } from "@/hooks/use-toast";
 
 type QuizPageProps = {
-  selectedBooks: Book[]; // Changed from string[] to Book[]
+  selectedBooks: Book[];
   quizMode: "personal" | "friend";
   onQuizEnd: () => void;
+  questionCount: number;
+  questionType: "in-which-book" | "content" | "both";
 };
 
 const TIMER_DURATION = 15; // 15 seconds
@@ -26,8 +29,11 @@ export default function QuizPage({
   selectedBooks,
   quizMode,
   onQuizEnd,
+  questionCount,
+  questionType,
 }: QuizPageProps) {
   const [questions, setQuestions] = useState<QuestionWithBook[]>([]);
+  const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState<string | null>(null);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [showAnswer, setShowAnswer] = useState(false);
@@ -39,33 +45,50 @@ export default function QuizPage({
   const timerRef = useRef<NodeJS.Timeout | null>(null);
   const [isMessageVisible, setIsMessageVisible] = useState(true);
   const [questionResults, setQuestionResults] = useState<QuestionResult[]>([]);
-
-  const loadQuestions = async () => {
-    try {
-      const response = await fetch("/api/questions/battle", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ selectedBooks }),
-      });
-
-      if (!response.ok) {
-        throw new Error("Failed to load questions");
-      }
-
-      const data = await response.json();
-      setQuestions(data.questions);
-      setMessage(data.message);
-    } catch (error) {
-      console.error("Error loading questions:", error);
-    }
-  };
+  const { toast } = useToast();
 
   useEffect(() => {
-    loadQuestions();
-    boopSound.current = new Audio("/boop.mp3");
-  }, [selectedBooks]);
+    const fetchQuestions = async () => {
+      try {
+        setLoading(true);
+        const response = await fetch("/api/questions/battle", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            selectedBooks,
+            questionCount,
+            questionType,
+          }),
+        });
+
+        if (!response.ok) {
+          throw new Error("Failed to fetch questions");
+        }
+
+        const data = await response.json();
+        if (data.message) {
+          toast({
+            title: "Note",
+            description: data.message,
+          });
+        }
+        setQuestions(data.questions);
+      } catch (error) {
+        console.error("Error fetching questions:", error);
+        toast({
+          title: "Error",
+          description: "Failed to load questions. Please try again.",
+          variant: "destructive",
+        });
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchQuestions();
+  }, [selectedBooks, questionCount, questionType]);
 
   useEffect(() => {
     if (isTimerRunning && timeLeft > 0) {

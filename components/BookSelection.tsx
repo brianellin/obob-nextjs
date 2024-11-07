@@ -8,15 +8,25 @@ import Image from "next/image";
 import { Book, Books } from "../types";
 import { WavyUnderline } from "./WavyUnderline";
 import booksJson from "@/public/obob/books.json";
+import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
+
+type QuestionType = "in-which-book" | "content" | "both";
 
 type BookSelectionProps = {
-  onSelectBooks: (selectedBooks: Book[]) => void;
+  onSelectBooks: (
+    selectedBooks: Book[],
+    questionCount: number,
+    questionType: QuestionType
+  ) => void;
 };
 
 export default function BookSelection({ onSelectBooks }: BookSelectionProps) {
   const books: Books = booksJson.books as Books;
   const [selectedBookKeys, setSelectedBookKeys] = useState<string[]>([]);
   const [isMobile, setIsMobile] = useState(false);
+  const [questionCount, setQuestionCount] = useState<string>("16");
+  const [questionType, setQuestionType] = useState<QuestionType>("both");
+  const [selectAll, setSelectAll] = useState(false);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -47,18 +57,29 @@ export default function BookSelection({ onSelectBooks }: BookSelectionProps) {
     setSelectedBookKeys([]);
   };
 
+  const handleToggleAll = () => {
+    setSelectAll(!selectAll);
+    if (!selectAll) {
+      handleSelectAll();
+    } else {
+      handleDeselectAll();
+    }
+  };
+
   const handleSubmit = () => {
     const selectedBooks = selectedBookKeys.map((key) => ({
       ...books[key],
-      book_key: key, // Changed from bookKey to book_key
+      book_key: key,
     }));
     onSelectBooks(
       selectedBooks.length === 0
         ? Object.entries(books).map(([key, book]) => ({
             ...book,
-            book_key: key, // Changed from bookKey to book_key
+            book_key: key,
           }))
-        : selectedBooks
+        : selectedBooks,
+      parseInt(questionCount),
+      questionType
     );
   };
 
@@ -68,34 +89,78 @@ export default function BookSelection({ onSelectBooks }: BookSelectionProps) {
         <CardHeader>
           <CardTitle className="text-2xl font-bold text-center">
             <WavyUnderline style={0} thickness={4} color="text-lime-400">
-              Select Books
+              Pick your battle{" "}
             </WavyUnderline>
           </CardTitle>
         </CardHeader>
         <CardContent className="p-2 sm:p-4">
-          <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-8 gap-3">
-            <div className="col-span-full flex justify-between mb-4">
+          <div className="col-span-full flex flex-col items-center mb-6 space-y-6">
+            <div className="flex flex-col items-center">
+              <p className="text-sm font-medium mb-2">Number of Questions</p>
+              <ToggleGroup
+                type="single"
+                value={questionCount}
+                onValueChange={(value) => {
+                  if (value) setQuestionCount(value);
+                }}
+                className="justify-center"
+              >
+                <ToggleGroupItem value="8" aria-label="8 questions">
+                  8
+                </ToggleGroupItem>
+                <ToggleGroupItem value="16" aria-label="16 questions">
+                  16
+                </ToggleGroupItem>
+                <ToggleGroupItem value="32" aria-label="32 questions">
+                  32
+                </ToggleGroupItem>
+              </ToggleGroup>
+            </div>
+
+            <div className="flex flex-col items-center">
+              <p className="text-sm font-medium mb-2">Question Type</p>
+              <ToggleGroup
+                type="single"
+                value={questionType}
+                onValueChange={(value: QuestionType) => {
+                  if (value) setQuestionType(value);
+                }}
+                className="justify-center"
+              >
+                <ToggleGroupItem
+                  value="in-which-book"
+                  aria-label="In which book questions"
+                >
+                  In Which Book
+                </ToggleGroupItem>
+                <ToggleGroupItem value="content" aria-label="Content questions">
+                  Content
+                </ToggleGroupItem>
+                <ToggleGroupItem
+                  value="both"
+                  aria-label="Both types of questions"
+                >
+                  Both
+                </ToggleGroupItem>
+              </ToggleGroup>
+            </div>
+          </div>
+          <div className="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-8 gap-2">
+            <div className="col-span-full flex justify-center mb-4">
+              Select your books
               <Button
-                onClick={handleSelectAll}
+                onClick={handleToggleAll}
                 variant="outline"
                 size="sm"
-                className="w-[calc(50%-0.375rem)]"
+                className="w-32"
               >
-                Select All
-              </Button>
-              <Button
-                onClick={handleDeselectAll}
-                variant="outline"
-                size="sm"
-                className="w-[calc(50%-0.375rem)]"
-              >
-                Deselect All
+                {selectAll ? "Clear All" : "Select All"}
               </Button>
             </div>
             {Object.entries(books).map(([key, book]) => (
               <div key={key} className="flex flex-col items-center">
                 <div
-                  className={`relative w-24 h-36 cursor-pointer transition-all duration-200 rounded-md overflow-hidden ${
+                  className={`relative w-20 h-28 cursor-pointer transition-all duration-200 rounded-md overflow-hidden ${
                     selectedBookKeys.includes(key)
                       ? "ring-4 ring-purple-600"
                       : ""
@@ -118,11 +183,11 @@ export default function BookSelection({ onSelectBooks }: BookSelectionProps) {
                   )}
                   {selectedBookKeys.includes(key) && (
                     <div className="absolute inset-0 bg-purple-600 bg-opacity-30 flex items-center justify-center">
-                      <PawPrint className="text-white w-8 h-8" />
+                      <PawPrint className="text-white w-6 h-6" />
                     </div>
                   )}
                 </div>
-                <p className="mt-1 text-xs font-medium text-center line-clamp-2 w-24">
+                <p className="mt-1 text-xs font-medium text-center line-clamp-2 w-20">
                   {book.title}
                 </p>
               </div>
