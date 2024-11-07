@@ -24,7 +24,7 @@ export default function BookSelection({ onSelectBooks }: BookSelectionProps) {
   const books: Books = booksJson.books as Books;
   const [selectedBookKeys, setSelectedBookKeys] = useState<string[]>([]);
   const [isMobile, setIsMobile] = useState(false);
-  const [questionCount, setQuestionCount] = useState<string>("16");
+  const [questionCount, setQuestionCount] = useState<string>("8");
   const [questionType, setQuestionType] = useState<QuestionType>("both");
   const [selectAll, setSelectAll] = useState(false);
 
@@ -85,7 +85,7 @@ export default function BookSelection({ onSelectBooks }: BookSelectionProps) {
 
   return (
     <div className="min-h-screen pb-20 md:pb-0 relative">
-      <Card className="w-full max-w-6xl mx-auto mb-4 border-none shadow-none">
+      <Card className="w-full max-w-6xl mx-auto border-none shadow-none">
         <CardHeader>
           <CardTitle className="text-2xl font-bold text-center">
             <WavyUnderline style={0} thickness={4} color="text-lime-400">
@@ -94,67 +94,16 @@ export default function BookSelection({ onSelectBooks }: BookSelectionProps) {
           </CardTitle>
         </CardHeader>
         <CardContent className="p-2 sm:p-4">
-          <div className="col-span-full flex flex-col items-center mb-6 space-y-6">
-            <div className="flex flex-col items-center">
-              <p className="text-sm font-medium mb-2">Number of Questions</p>
-              <ToggleGroup
-                type="single"
-                value={questionCount}
-                onValueChange={(value) => {
-                  if (value) setQuestionCount(value);
-                }}
-                className="justify-center"
-              >
-                <ToggleGroupItem value="8" aria-label="8 questions">
-                  8
-                </ToggleGroupItem>
-                <ToggleGroupItem value="16" aria-label="16 questions">
-                  16
-                </ToggleGroupItem>
-                <ToggleGroupItem value="32" aria-label="32 questions">
-                  32
-                </ToggleGroupItem>
-              </ToggleGroup>
-            </div>
-
-            <div className="flex flex-col items-center">
-              <p className="text-sm font-medium mb-2">Question Type</p>
-              <ToggleGroup
-                type="single"
-                value={questionType}
-                onValueChange={(value: QuestionType) => {
-                  if (value) setQuestionType(value);
-                }}
-                className="justify-center"
-              >
-                <ToggleGroupItem
-                  value="in-which-book"
-                  aria-label="In which book questions"
-                >
-                  In Which Book
-                </ToggleGroupItem>
-                <ToggleGroupItem value="content" aria-label="Content questions">
-                  Content
-                </ToggleGroupItem>
-                <ToggleGroupItem
-                  value="both"
-                  aria-label="Both types of questions"
-                >
-                  Both
-                </ToggleGroupItem>
-              </ToggleGroup>
-            </div>
-          </div>
-          <div className="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-8 gap-2">
-            <div className="col-span-full flex justify-center mb-4">
-              Select your books
+          <div className="grid grid-cols-4 md:grid-cols-8 gap-2">
+            <div className="col-span-full flex justify-between items-center mb-4">
+              <h2 className="text-lg font-semibold">Select your books</h2>
               <Button
                 onClick={handleToggleAll}
                 variant="outline"
                 size="sm"
                 className="w-32"
               >
-                {selectAll ? "Clear All" : "Select All"}
+                {selectAll ? "Clear" : "Select All"}
               </Button>
             </div>
             {Object.entries(books).map(([key, book]) => (
@@ -193,9 +142,80 @@ export default function BookSelection({ onSelectBooks }: BookSelectionProps) {
               </div>
             ))}
           </div>
+          <div className="bg-slate-50 p-4 rounded-md mt-6 md:mt-8  md:max-w-lg md:mx-auto">
+            <div className="col-span-full flex flex-col items-center space-y-6 ">
+              <div className="flex flex-row items-center justify-between w-full">
+                <p className="text-sm font-bold">How many questions?</p>
+                <ToggleGroup
+                  type="single"
+                  value={questionCount}
+                  onValueChange={(value) => {
+                    if (value) setQuestionCount(value);
+                  }}
+                  className="justify-center"
+                >
+                  <ToggleGroupItem
+                    value="8"
+                    aria-label="8 questions"
+                    className="data-[state=on]:bg-purple-600 data-[state=on]:text-white"
+                  >
+                    8
+                  </ToggleGroupItem>
+                  <ToggleGroupItem
+                    value="16"
+                    aria-label="16 questions"
+                    className="data-[state=on]:bg-purple-600 data-[state=on]:text-white"
+                  >
+                    16
+                  </ToggleGroupItem>
+                  <ToggleGroupItem
+                    value="32"
+                    aria-label="32 questions"
+                    className="data-[state=on]:bg-purple-600 data-[state=on]:text-white"
+                  >
+                    32
+                  </ToggleGroupItem>
+                </ToggleGroup>
+              </div>
+
+              <div className="flex flex-row items-center justify-between w-full">
+                <p className="text-sm font-bold">Type</p>
+                <ToggleGroup
+                  type="single"
+                  value={questionType}
+                  onValueChange={(value: QuestionType) => {
+                    if (value) setQuestionType(value);
+                  }}
+                  className="justify-center"
+                >
+                  <ToggleGroupItem
+                    value="in-which-book"
+                    aria-label="In which book questions"
+                    className="data-[state=on]:bg-purple-600 data-[state=on]:text-white"
+                  >
+                    In Which Book
+                  </ToggleGroupItem>
+                  <ToggleGroupItem
+                    value="content"
+                    aria-label="Content questions"
+                    className="data-[state=on]:bg-purple-600 data-[state=on]:text-white"
+                  >
+                    Content
+                  </ToggleGroupItem>
+                  <ToggleGroupItem
+                    value="both"
+                    aria-label="Both types of questions"
+                    className="data-[state=on]:bg-purple-600 data-[state=on]:text-white"
+                  >
+                    All
+                  </ToggleGroupItem>
+                </ToggleGroup>
+              </div>
+            </div>
+          </div>
         </CardContent>
       </Card>
-      <div className="fixed bottom-0 left-0 right-0 p-4 md:static md:p-0 md:mt-4 flex justify-center">
+      <div className="p-4 flex justify-center">
         <Button
           onClick={handleSubmit}
           className="w-auto px-8 py-6 text-lg font-semibold group bg-cyan-400 hover:bg-cyan-500 transition-colors"

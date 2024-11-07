@@ -88,6 +88,7 @@ export default function QuizPage({
     };
 
     fetchQuestions();
+    setMessage(null);
   }, [selectedBooks, questionCount, questionType]);
 
   useEffect(() => {
@@ -173,8 +174,6 @@ export default function QuizPage({
     setIsTimerRunning(false);
     setTimeLeft(TIMER_DURATION);
     setQuestionResults([]); // This will effectively reset the score
-
-    await loadQuestions();
   };
 
   const previousQuestion = () => {
@@ -196,7 +195,7 @@ export default function QuizPage({
     }, 0);
   };
 
-  if (!currentQuestion && !quizFinished) {
+  if (loading) {
     return (
       <div className="h-screen flex items-center justify-center">
         <Loader2 className="h-10 w-10 animate-spin text-gray-600" />

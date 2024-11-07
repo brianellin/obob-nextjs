@@ -2,10 +2,6 @@ import { BookOpen, Dog, Zap } from "lucide-react";
 import ModeSelection from "@/components/ModeSelection";
 import { WavyUnderline } from "@/components/WavyUnderline";
 import Link from "next/link";
-import BookSelection from "@/components/BookSelection";
-import { Book } from "@/types";
-
-type QuestionType = "iwb" | "content" | "both";
 
 export default function Home() {
   return (
