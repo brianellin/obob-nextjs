@@ -25,6 +25,31 @@ type QuestionResult = {
   pointsAwarded: number;
 };
 
+// Add this function outside the component
+async function fetchQuestionsFromAPI(
+  selectedBooks: Book[],
+  questionCount: number,
+  questionType: "in-which-book" | "content" | "both"
+) {
+  const response = await fetch("/api/questions/battle", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      selectedBooks,
+      questionCount,
+      questionType,
+    }),
+  });
+
+  if (!response.ok) {
+    throw new Error("Failed to fetch questions");
+  }
+
+  return response.json();
+}
+
 export default function QuizPage({
   selectedBooks,
   quizMode,
@@ -33,8 +58,7 @@ export default function QuizPage({
   questionType,
 }: QuizPageProps) {
   const [questions, setQuestions] = useState<QuestionWithBook[]>([]);
-  const [loading, setLoading] = useState(false);
-  const [message, setMessage] = useState<string | null>(null);
+  const [loading, setLoading] = useState(true);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [showAnswer, setShowAnswer] = useState(false);
   const [quizFinished, setQuizFinished] = useState(false);
@@ -43,52 +67,38 @@ export default function QuizPage({
   const [isTimerRunning, setIsTimerRunning] = useState(false);
   const boopSound = useRef<HTMLAudioElement | null>(null);
   const timerRef = useRef<NodeJS.Timeout | null>(null);
-  const [isMessageVisible, setIsMessageVisible] = useState(true);
   const [questionResults, setQuestionResults] = useState<QuestionResult[]>([]);
   const { toast } = useToast();
 
-  useEffect(() => {
-    const fetchQuestions = async () => {
-      try {
-        setLoading(true);
-        const response = await fetch("/api/questions/battle", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            selectedBooks,
-            questionCount,
-            questionType,
-          }),
-        });
-
-        if (!response.ok) {
-          throw new Error("Failed to fetch questions");
-        }
-
-        const data = await response.json();
-        if (data.message) {
-          toast({
-            title: "Note",
-            description: data.message,
-          });
-        }
-        setQuestions(data.questions);
-      } catch (error) {
-        console.error("Error fetching questions:", error);
+  const loadQuestions = async () => {
+    try {
+      setLoading(true);
+      const data = await fetchQuestionsFromAPI(
+        selectedBooks,
+        questionCount,
+        questionType
+      );
+      if (data.message) {
         toast({
-          title: "Error",
-          description: "Failed to load questions. Please try again.",
-          variant: "destructive",
+          title: "Note",
+          description: data.message,
         });
-      } finally {
-        setLoading(false);
       }
-    };
+      setQuestions(data.questions);
+    } catch (error) {
+      console.error("Error fetching questions:", error);
+      toast({
+        title: "Error",
+        description: "Failed to load questions. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setLoading(false);
+    }
+  };
 
-    fetchQuestions();
-    setMessage(null);
+  useEffect(() => {
+    loadQuestions();
   }, [selectedBooks, questionCount, questionType]);
 
   useEffect(() => {
@@ -168,12 +178,13 @@ export default function QuizPage({
   };
 
   const restartQuiz = async () => {
+    await loadQuestions(); // Fetch new questions
     setCurrentQuestionIndex(0);
     setShowAnswer(false);
     setQuizFinished(false);
     setIsTimerRunning(false);
     setTimeLeft(TIMER_DURATION);
-    setQuestionResults([]); // This will effectively reset the score
+    setQuestionResults([]);
   };
 
   const previousQuestion = () => {
@@ -187,14 +198,6 @@ export default function QuizPage({
     }
   };
 
-  const currentQuestion = questions[currentQuestionIndex];
-
-  const calculateScore = () => {
-    return questionResults.reduce((total, result) => {
-      return total + (result.pointsAwarded >= 0 ? result.pointsAwarded : 0);
-    }, 0);
-  };
-
   if (loading) {
     return (
       <div className="h-screen flex items-center justify-center">
@@ -202,6 +205,16 @@ export default function QuizPage({
       </div>
     );
   }
+
+  const currentQuestion = questions[currentQuestionIndex];
+  console.log(`currentQuestionIndex: ${currentQuestionIndex}`);
+  console.log(questions);
+
+  const calculateScore = () => {
+    return questionResults.reduce((total, result) => {
+      return total + (result.pointsAwarded >= 0 ? result.pointsAwarded : 0);
+    }, 0);
+  };
 
   if (quizFinished) {
     return (
@@ -300,23 +313,7 @@ export default function QuizPage({
               </WavyUnderline>
             )}
           </h1>
-          {isMessageVisible && message && (
-            <Card className="mb-6 bg-yellow-50 border-yellow-200 shadow-sm">
-              <CardContent className="p-4">
-                <div className="flex items-start gap-3">
-                  <p className="text-yellow-800 font-medium flex-grow">
-                    {message}
-                  </p>
-                  <button
-                    onClick={() => setIsMessageVisible(false)}
-                    className="text-yellow-600 hover:text-yellow-800 text-2xl leading-none"
-                  >
-                    &times;
-                  </button>
-                </div>
-              </CardContent>
-            </Card>
-          )}
+
           <div className="w-full flex items-center justify-between gap-4 mb-2 px-1 ">
             <span className="text-lg font-semibold">
               Question: {currentQuestionIndex + 1}/{questions.length}
