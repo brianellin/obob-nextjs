@@ -41,7 +41,7 @@ export default function ModeSelection() {
           </CardHeader>
           <CardContent>
             <p>
-              Have a friend or parent read timed questions aloud to your or your
+              Have a friend or parent read timed questions aloud to you or your
               team.
             </p>
           </CardContent>
