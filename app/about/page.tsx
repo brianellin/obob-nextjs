@@ -37,10 +37,7 @@ export default function AboutPage() {
               questions, similar to what you&apos;d experience in a real OBOB
               battle.
             </p>
-            <p className="leading-7 [&:not(:first-child)]:mt-6">
-              Questions are currently only available for the grade 3-5 division,
-              though may expand in the future.
-            </p>
+
             <Button asChild className="w-full mt-4">
               <Link
                 href="https://www.oregonbattleofthebooks.org/"
@@ -86,6 +83,15 @@ export default function AboutPage() {
                   className="hover:underline"
                 >
                   Glencoe Elementary
+                </Link>
+              </li>
+
+              <li>
+                <Link
+                  href="https://www.pps.net/Page/15384"
+                  className="hover:underline"
+                >
+                  Mt Tabor Middle School
                 </Link>
               </li>
             </ul>
