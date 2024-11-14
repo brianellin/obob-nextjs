@@ -26,7 +26,7 @@ export default function ModeSelection() {
           </CardContent>
           <CardFooter>
             <Link
-              href="/2024-2025/3-5/battle?mode=personal"
+              href="/battle/2024-2025/3-5?mode=personal"
               passHref
               className="w-full"
             >
@@ -51,7 +51,7 @@ export default function ModeSelection() {
           </CardContent>
           <CardFooter>
             <Link
-              href="/2024-2025/3-5/battle?mode=friend"
+              href="/battle/2024-2025/3-5?mode=friend"
               passHref
               className="w-full"
             >
