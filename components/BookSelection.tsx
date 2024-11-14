@@ -116,7 +116,9 @@ export default function BookSelection({
         <CardHeader>
           <CardTitle className="text-2xl font-bold text-center">
             <WavyUnderline style={0} thickness={4} color="text-lime-400">
-              Pick your battle{" "}
+              {division === "3-5"
+                ? "Elementary Battle!"
+                : "Middle School Battle!"}
             </WavyUnderline>
           </CardTitle>
         </CardHeader>

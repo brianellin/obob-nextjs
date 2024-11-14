@@ -10,7 +10,12 @@ import { Button } from "@/components/ui/button";
 import { User, Users } from "lucide-react";
 import Link from "next/link";
 
-export default function ModeSelection() {
+type ModeSelectionProps = {
+  year: string;
+  division: string;
+};
+
+export default function ModeSelection({ year, division }: ModeSelectionProps) {
   return (
     <div className="space-y-8 max-w-3xl mx-auto">
       <div className="flex gap-4 flex-col md:flex-row">
@@ -26,7 +31,7 @@ export default function ModeSelection() {
           </CardContent>
           <CardFooter>
             <Link
-              href="/battle/2024-2025/3-5?mode=personal"
+              href={`/battle/${year}/${division}?mode=personal`}
               passHref
               className="w-full"
             >
@@ -51,7 +56,7 @@ export default function ModeSelection() {
           </CardContent>
           <CardFooter>
             <Link
-              href="/battle/2024-2025/3-5?mode=friend"
+              href={`/battle/${year}/${division}?mode=friend`}
               passHref
               className="w-full"
             >

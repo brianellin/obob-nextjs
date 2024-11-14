@@ -13,7 +13,7 @@ function BattleContent() {
   const searchParams = useSearchParams();
   const router = useRouter();
   const params = useParams();
-  
+
   // Extract and validate year and division
   const year = params.year as string;
   const division = params.division as string;
@@ -43,7 +43,7 @@ function BattleContent() {
   }, [quizMode, quizStarted]);
 
   const handleSelectBooks = (
-    books: Book[], 
+    books: Book[],
     count: number,
     type: QuestionType
   ) => {
@@ -59,21 +59,21 @@ function BattleContent() {
     setQuizMode(null);
     setQuestionCount(16);
     setQuestionType("both");
-    router.push("/battle");
+    router.push(`/battle/${year}/${division}`);
   };
 
   if (quizMode === null) {
     return (
       <div className="container max-w-2xl mx-auto mt-8">
-        <ModeSelection />
+        <ModeSelection year={year} division={division} />
       </div>
     );
   }
 
   if (!quizStarted) {
     return (
-      <BookSelection 
-        onSelectBooks={handleSelectBooks} 
+      <BookSelection
+        onSelectBooks={handleSelectBooks}
         year={year}
         division={division}
       />
