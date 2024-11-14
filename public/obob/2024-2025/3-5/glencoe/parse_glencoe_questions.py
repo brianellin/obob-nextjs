@@ -200,7 +200,7 @@ def main():
     
     # Write to JSON file
     output = {"questions": all_questions}
-    output_file = base_dir / "glencoe_questions.json"
+    output_file = base_dir / "questions.json"
     
     with open(output_file, 'w', encoding='utf-8') as f:
         json.dump(output, f, indent=2, ensure_ascii=False)

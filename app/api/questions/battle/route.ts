@@ -9,17 +9,21 @@ export async function POST(request: Request) {
     const { 
       selectedBooks, 
       questionCount = 16,
-      questionType = "both" 
+      questionType = "both",
+      year,
+      division
     } = await request.json() as { 
       selectedBooks: Book[],
       questionCount: number,
-      questionType: "in-which-book" | "content" | "both"
+      questionType: "in-which-book" | "content" | "both",
+      year: string,
+      division: string
     };
     
-    const booksPath = path.join(process.cwd(), 'public', 'obob/books.json');
+    const booksPath = path.join(process.cwd(), 'public', 'obob', year, division, 'books.json');
     
     const [allQuestions, booksFile] = await Promise.all([
-      getAllQuestions(),
+      getAllQuestions(year, division),
       fs.readFile(booksPath, 'utf8')
     ]);
 

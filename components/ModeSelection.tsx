@@ -25,7 +25,11 @@ export default function ModeSelection() {
             </p>
           </CardContent>
           <CardFooter>
-            <Link href="/battle?mode=personal" passHref className="w-full">
+            <Link
+              href="/2024-2025/3-5/battle?mode=personal"
+              passHref
+              className="w-full"
+            >
               <Button className="w-full bg-purple-500 text-white hover:bg-purple-600 transition-colors">
                 <User className="mr-2 h-4 w-4" /> Play solo
               </Button>
@@ -46,7 +50,11 @@ export default function ModeSelection() {
             </p>
           </CardContent>
           <CardFooter>
-            <Link href="/battle?mode=friend" passHref className="w-full">
+            <Link
+              href="/2024-2025/3-5/battle?mode=friend"
+              passHref
+              className="w-full"
+            >
               <Button className="w-full bg-cyan-400 hover:bg-cyan-500 transition-colors">
                 <Users className="mr-2 h-4 w-4" /> Play with friends
               </Button>

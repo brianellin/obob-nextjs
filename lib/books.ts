@@ -13,10 +13,10 @@ export type BookStats = {
   bySource: Record<string, number>;
 };
 
-export async function getBooksWithStats(): Promise<BookStats[]> {
-  const booksPath = path.join(process.cwd(), 'public', 'obob/books.json');
+export async function getBooksWithStats(year: string, division: string): Promise<BookStats[]> {
+  const booksPath = path.join(process.cwd(), 'public', 'obob', year, division, 'books.json');
   const [questions, booksFile] = await Promise.all([
-    getAllQuestions(),
+    getAllQuestions(year, division),
     fs.readFile(booksPath, 'utf8'),
   ]);
 

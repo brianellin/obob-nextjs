@@ -16,6 +16,8 @@ type QuizPageProps = {
   onQuizEnd: () => void;
   questionCount: number;
   questionType: "in-which-book" | "content" | "both";
+  year: string;
+  division: string;
 };
 
 const TIMER_DURATION = 15; // 15 seconds
@@ -29,7 +31,9 @@ type QuestionResult = {
 async function fetchQuestionsFromAPI(
   selectedBooks: Book[],
   questionCount: number,
-  questionType: "in-which-book" | "content" | "both"
+  questionType: "in-which-book" | "content" | "both",
+  year: string,
+  division: string
 ) {
   const response = await fetch("/api/questions/battle", {
     method: "POST",
@@ -40,6 +44,8 @@ async function fetchQuestionsFromAPI(
       selectedBooks,
       questionCount,
       questionType,
+      year,
+      division,
     }),
   });
 
@@ -56,6 +62,8 @@ export default function QuizPage({
   onQuizEnd,
   questionCount,
   questionType,
+  year,
+  division,
 }: QuizPageProps) {
   const [questions, setQuestions] = useState<QuestionWithBook[]>([]);
   const [loading, setLoading] = useState(true);
@@ -76,7 +84,9 @@ export default function QuizPage({
       const data = await fetchQuestionsFromAPI(
         selectedBooks,
         questionCount,
-        questionType
+        questionType,
+        year,
+        division
       );
       if (data.message) {
         toast({
@@ -99,7 +109,7 @@ export default function QuizPage({
 
   useEffect(() => {
     loadQuestions();
-  }, [selectedBooks, questionCount, questionType]);
+  }, [selectedBooks, questionCount, questionType, year, division]);
 
   useEffect(() => {
     if (isTimerRunning && timeLeft > 0) {

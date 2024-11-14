@@ -7,7 +7,6 @@ import { ArrowRight, PawPrint } from "lucide-react";
 import Image from "next/image";
 import { Book, Books } from "../types";
 import { WavyUnderline } from "./WavyUnderline";
-import booksJson from "@/public/obob/books.json";
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 
 type QuestionType = "in-which-book" | "content" | "both";
@@ -18,10 +17,16 @@ type BookSelectionProps = {
     questionCount: number,
     questionType: QuestionType
   ) => void;
+  year: string;
+  division: string;
 };
 
-export default function BookSelection({ onSelectBooks }: BookSelectionProps) {
-  const books: Books = booksJson.books as Books;
+export default function BookSelection({
+  onSelectBooks,
+  year,
+  division,
+}: BookSelectionProps) {
+  const [books, setBooks] = useState<Books>({});
   const [selectedBookKeys, setSelectedBookKeys] = useState<string[]>([]);
   const [isMobile, setIsMobile] = useState(false);
   const [questionCount, setQuestionCount] = useState<string>("8");
@@ -40,6 +45,20 @@ export default function BookSelection({ onSelectBooks }: BookSelectionProps) {
 
     return () => window.removeEventListener("resize", checkIfMobile);
   }, []);
+
+  useEffect(() => {
+    const loadBooks = async () => {
+      try {
+        const response = await fetch(`/obob/${year}/${division}/books.json`);
+        const data = await response.json();
+        setBooks(data.books);
+      } catch (error) {
+        console.error("Error loading books:", error);
+      }
+    };
+
+    loadBooks();
+  }, [year, division]);
 
   const handleToggleBook = (bookKey: string) => {
     setSelectedBookKeys((prev) =>
@@ -82,6 +101,14 @@ export default function BookSelection({ onSelectBooks }: BookSelectionProps) {
       questionType
     );
   };
+
+  if (Object.keys(books).length === 0) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <p>Loading books...</p>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen pb-20 md:pb-0 relative">
@@ -179,7 +206,7 @@ export default function BookSelection({ onSelectBooks }: BookSelectionProps) {
               </div>
 
               <div className="flex flex-row items-center justify-between w-full">
-                <p className="text-sm font-bold">Type</p>
+                <p className="text-sm font-bold">Question type</p>
                 <ToggleGroup
                   type="single"
                   value={questionType}

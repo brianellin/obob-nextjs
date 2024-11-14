@@ -7,11 +7,39 @@ import { Separator } from "@/components/ui/separator";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { QuestionHeatmapInline } from "@/components/QuestionHeatmapInline";
 import { getAllQuestions } from "@/lib/questions";
+import { notFound } from "next/navigation";
 
-export default async function BooksPage() {
+type Props = {
+  params: Promise<{
+    year: string;
+    division: string;
+  }>;
+};
+
+export function generateStaticParams() {
+  return [
+    { year: "2024-2025", division: "3-5" },
+    { year: "2024-2025", division: "6-8" },
+  ];
+}
+
+export default async function BooksPage({ params }: Props) {
+  const resolvedParams = await params;
+  const { year, division } = resolvedParams;
+
+  // Validate parameters
+  if (!year || !division) {
+    notFound();
+  }
+
+  // Validate the specific values
+  if (year !== "2024-2025" || !["3-5", "6-8"].includes(division)) {
+    notFound();
+  }
+
   const [booksStats, allQuestions] = await Promise.all([
-    getBooksWithStats(),
-    getAllQuestions()
+    getBooksWithStats(year, division),
+    getAllQuestions(year, division),
   ]);
 
   // Calculate summary statistics
@@ -34,7 +62,9 @@ export default async function BooksPage() {
 
   return (
     <div className="container mx-auto px-4 py-8 space-y-8">
-      <h1 className="text-4xl font-bold">OBOB Books and Questions</h1>
+      <h1 className="text-4xl font-bold">
+        OBOB {year} Division {division}
+      </h1>
 
       {/* Summary Statistics Section */}
       <Card>
@@ -157,8 +187,10 @@ export default async function BooksPage() {
 
                   <Separator />
 
-                  <QuestionHeatmapInline 
-                    questions={allQuestions.filter(q => q.book_key === book.book_key)}
+                  <QuestionHeatmapInline
+                    questions={allQuestions.filter(
+                      (q) => q.book_key === book.book_key
+                    )}
                   />
                 </div>
               </div>

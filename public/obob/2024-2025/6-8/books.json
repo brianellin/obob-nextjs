@@ -1,0 +1,133 @@
+{
+    "books": {
+      "candidly-cline": {
+        "book_key": "candidly-cline",
+        "title": "Candidly Cline",
+        "author": "Kathryn Ormsbee",
+        "cover": "/cover_images/candidly_cline.jpg",
+        "obob_division": "6-8",
+        "obob_year": "2024-2025"
+      },
+      "counting-by-7s": {
+        "book_key": "counting-by-7s",
+        "title": "Counting by 7s",
+        "author": "Holly Goldberg Sloan",
+        "cover": "/cover_images/counting_by_7s.jpg",
+        "obob_division": "6-8",
+        "obob_year": "2024-2025"
+      },
+      "daughter-of-the-deep": {
+        "book_key": "daughter-of-the-deep",
+        "title": "Daughter of the Deep",
+        "author": "Rick Riordan",
+        "cover": "/cover_images/daughter_of_the_deep.jpg",
+        "obob_division": "6-8",
+        "obob_year": "2024-2025"
+      },
+      "every-falling-star": {
+        "book_key": "every-falling-star",
+        "title": "Every Falling Star",
+        "author": "Sungju Lee & Susan Elizabeth McClelland",
+        "cover": "/cover_images/every_falling_star.jpg",
+        "obob_division": "6-8",
+        "obob_year": "2024-2025"
+      },
+      "freewater": {
+        "book_key": "freewater",
+        "title": "Freewater",
+        "author": "Amina Luqman-Dawson",
+        "cover": "/cover_images/freewater.jpg",
+        "obob_division": "6-8",
+        "obob_year": "2024-2025"
+      },
+      "lo-and-behold": {
+        "book_key": "lo-and-behold",
+        "title": "Lo & Behold",
+        "author": "Wendy Mass and Gabi Mendez",
+        "cover": "/cover_images/lo_and_behold.jpg",
+        "obob_division": "6-8",
+        "obob_year": "2024-2025"
+      },
+      "scary-stories-for-young-foxes": {
+        "book_key": "scary-stories-for-young-foxes",
+        "title": "Scary Stories for Young Foxes",
+        "author": "Christian McKay-Heidicker",
+        "cover": "/cover_images/scary_stories_for_young_foxes.jpg",
+        "obob_division": "6-8",
+        "obob_year": "2024-2025"
+      },
+      "starfish": {
+        "book_key": "starfish",
+        "title": "Starfish",
+        "author": "Lisa Fipps",
+        "cover": "/cover_images/starfish.jpg",
+        "obob_division": "6-8",
+        "obob_year": "2024-2025"
+      },
+      "seventh-grade-lizard-boy": {
+        "book_key": "seventh-grade-lizard-boy",
+        "title": "Tales of a Seventh Grade Lizard Boy",
+        "author": "Jonathan Hill",
+        "cover": "/cover_images/tales_of_a_seventh_grade_lizard_boy.jpg",
+        "obob_division": "6-8",
+        "obob_year": "2024-2025"
+      },
+      "inquisitors-tale": {
+        "book_key": "inquisitors-tale",
+        "title": "The Inquisitor's Tale",
+        "author": "Adam Gidwitz",
+        "cover": "/cover_images/inquisitors_tale.jpg",
+        "obob_division": "6-8",
+        "obob_year": "2024-2025"
+      },
+      "the-last-cuentista": {
+        "book_key": "the-last-cuentista",
+        "title": "The Last Cuentista",
+        "author": "Donna Barba Higuera",
+        "cover": "/cover_images/the_last_cuentista.jpg",
+        "obob_division": "6-8",
+        "obob_year": "2024-2025"
+      },
+      "losers-at-the-center-of-the-galaxy": {
+        "book_key": "losers-at-the-center-of-the-galaxy",
+        "title": "The Losers at the Center of the Galaxy",
+        "author": "Mary Winn Heider",
+        "cover": "/cover_images/losers_at_the_center.jpg",
+        "obob_division": "6-8",
+        "obob_year": "2024-2025"
+      },
+      "the-magical-imperfect": {
+        "book_key": "the-magical-imperfect",
+        "title": "The Magical Imperfect",
+        "author": "Chris Baron",
+        "cover": "/cover_images/magical_imperfect.jpg",
+        "obob_division": "6-8",
+        "obob_year": "2024-2025"
+      },
+      "mighty-hearth": {
+        "book_key": "mighty-hearth",
+        "title": "The Mighty Heart of Sunny St. James",
+        "author": "Ashley Herring Blake",
+        "cover": "/cover_images/mighty_heart.jpg",
+        "obob_division": "6-8",
+        "obob_year": "2024-2025"
+      },
+      "serpents-secret": {
+        "book_key": "serpents-secret",
+        "title": "The Serpent's Secret",
+        "author": "Sayantani DasGupta",
+        "cover": "/cover_images/serpents_secret.jpg",
+        "obob_division": "6-8",
+        "obob_year": "2024-2025"
+      },
+      "the-story-that-cannot-be-told": {
+        "book_key": "the-story-that-cannot-be-told",
+        "title": "The Story That Cannot Be Told",
+        "author": "J. Kasper Kramer",
+        "cover": "/cover_images/story_cannot_be_told.jpg",
+        "obob_division": "6-8",
+        "obob_year": "2024-2025"
+      }
+    }
+  }
+  
