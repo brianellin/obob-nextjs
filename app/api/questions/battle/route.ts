@@ -46,19 +46,19 @@ export async function POST(request: Request) {
     }
 
     // Add logging for debugging
-    const questionCounts = selectedQuestions.reduce((acc: Record<string, number>, q) => {
-      const bookTitle = booksData.books[q.book_key].title;
-      acc[bookTitle] = (acc[bookTitle] || 0) + 1;
-      return acc;
-    }, {});
-    console.log('Questions per book:', questionCounts);
+    // const questionCounts = selectedQuestions.reduce((acc: Record<string, number>, q) => {
+    //   const bookTitle = booksData.books[q.book_key].title;
+    //   acc[bookTitle] = (acc[bookTitle] || 0) + 1;
+    //   return acc;
+    // }, {});
+    // console.log('Questions per book:', questionCounts);
 
-    // Log question types
-    const questionTypeCount = selectedQuestions.reduce((acc: Record<string, number>, q) => {
-      acc[q.type] = (acc[q.type] || 0) + 1;
-      return acc;
-    }, {});
-    console.log('Questions by type:', questionTypeCount);
+    // // Log question types
+    // const questionTypeCount = selectedQuestions.reduce((acc: Record<string, number>, q) => {
+    //   acc[q.type] = (acc[q.type] || 0) + 1;
+    //   return acc;
+    // }, {});
+    // console.log('Questions by type:', questionTypeCount);
 
     // Map questions to include the full book data after the conditional logic
     const questionsWithBooks = selectedQuestions.map((q: Question) => ({
