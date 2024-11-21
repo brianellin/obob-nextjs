@@ -75,22 +75,75 @@ export function selectQuestions(
   count: number, 
   type: "in-which-book" | "content" | "both"
 ): Question[] {
+  // Helper function to select questions with book distribution
+  function selectDistributedQuestions(questionPool: Question[], selectionCount: number): Question[] {
+    const byBook = questionPool.reduce((acc, q) => {
+      if (!acc[q.book_key]) acc[q.book_key] = [];
+      acc[q.book_key].push(q);
+      return acc;
+    }, {} as Record<string, Question[]>);
+
+    const uniqueBooks = Object.keys(byBook);
+    let selected: Question[] = [];
+
+    if (selectionCount > uniqueBooks.length) {
+      // We need multiple questions per book
+      const questionsNeededPerBook = Math.ceil(selectionCount / uniqueBooks.length);
+      
+      // Process each book
+      for (const book of shuffle(uniqueBooks)) {
+        const bookQuestions = shuffle(byBook[book]);
+        // Take up to questionsNeededPerBook questions from this book
+        selected.push(...bookQuestions.slice(0, questionsNeededPerBook));
+        
+        if (selected.length >= selectionCount) {
+          break;
+        }
+      }
+
+      // Trim to exact count needed
+      selected = selected.slice(0, selectionCount);
+    } else {
+      // We need one question per book
+      const selectedBooks = shuffle(uniqueBooks).slice(0, selectionCount);
+      selected = selectedBooks.map(book => shuffle(byBook[book])[0]);
+    }
+
+    return shuffle(selected);
+  }
+
   if (type === "both") {
     const iwbQuestions = questions.filter(q => q.type === "in-which-book");
     const contentQuestions = questions.filter(q => q.type === "content");
     
-    const halfCount = Math.floor(count / 2);
+    const halfCount = Math.ceil(count / 2);
     const iwbCount = Math.min(halfCount, iwbQuestions.length);
-    const contentCount = count - iwbCount;
+    const contentCount = Math.min(halfCount, contentQuestions.length);
 
-    return shuffle([
-      ...shuffle(iwbQuestions).slice(0, iwbCount),
-      ...shuffle(contentQuestions).slice(0, contentCount)
-    ]);
+    // Select IWB questions first
+    const selectedIwb = selectDistributedQuestions(iwbQuestions, iwbCount);
+    
+    // Only filter out used books if we're requesting fewer questions than available books
+    const usedBooks = new Set(selectedIwb.map(q => q.book_key));
+    let remainingContentQuestions = contentQuestions;
+    
+    if (contentCount <= usedBooks.size) {
+      // If we need fewer questions than books, filter out used books
+      remainingContentQuestions = contentQuestions.filter(q => !usedBooks.has(q.book_key));
+    }
+    
+    // If we don't have enough remaining content questions after filtering,
+    // fall back to using all content questions
+    if (remainingContentQuestions.length < contentCount) {
+      remainingContentQuestions = contentQuestions;
+    }
+    
+    const selectedContent = selectDistributedQuestions(remainingContentQuestions, contentCount);
+
+    return [...selectedIwb, ...selectedContent];
   } else {
-    return shuffle(
-      questions.filter(q => q.type === type)
-    ).slice(0, count);
+    const filteredQuestions = questions.filter(q => q.type === type);
+    return selectDistributedQuestions(filteredQuestions, count);
   }
 }
 

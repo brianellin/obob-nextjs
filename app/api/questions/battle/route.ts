@@ -34,24 +34,37 @@ export async function POST(request: Request) {
       selectedBooks.some(book => book.book_key === q.book_key)
     );
 
-    let questionsWithBooks: QuestionWithBook[];
+    let selectedQuestions: Question[];
     let message: string | null = null;
 
     // Only allow "in-which-book" questions if 4 or more books are selected
     if (selectedBooks.length < 4 && (questionType === "in-which-book" || questionType === "both")) {
-      const selectedQuestions = selectQuestions(filteredQuestions, questionCount, "content");
-      questionsWithBooks = selectedQuestions.map((q: Question) => ({
-        ...q,
-        book: booksData.books[q.book_key]
-      }));
+      selectedQuestions = selectQuestions(filteredQuestions, questionCount, "content");
       message = "Choose at least 4 books to include 'In Which Book' questions in your battle!";
     } else {
-      const selectedQuestions = selectQuestions(filteredQuestions, questionCount, questionType);
-      questionsWithBooks = selectedQuestions.map((q: Question) => ({
-        ...q,
-        book: booksData.books[q.book_key]
-      }));
+      selectedQuestions = selectQuestions(filteredQuestions, questionCount, questionType);
     }
+
+    // Add logging for debugging
+    const questionCounts = selectedQuestions.reduce((acc: Record<string, number>, q) => {
+      const bookTitle = booksData.books[q.book_key].title;
+      acc[bookTitle] = (acc[bookTitle] || 0) + 1;
+      return acc;
+    }, {});
+    console.log('Questions per book:', questionCounts);
+
+    // Log question types
+    const questionTypeCount = selectedQuestions.reduce((acc: Record<string, number>, q) => {
+      acc[q.type] = (acc[q.type] || 0) + 1;
+      return acc;
+    }, {});
+    console.log('Questions by type:', questionTypeCount);
+
+    // Map questions to include the full book data after the conditional logic
+    const questionsWithBooks = selectedQuestions.map((q: Question) => ({
+      ...q,
+      book: booksData.books[q.book_key]
+    }));
 
     return NextResponse.json({ 
       questions: questionsWithBooks,
