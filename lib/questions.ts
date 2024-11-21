@@ -78,7 +78,7 @@ function selectDistributedQuestions(questionPool: Question[], selectionCount: nu
   }, {} as Record<string, Question[]>);
 
   const uniqueBooks = Object.keys(byBook);
-  let selected: Set<Question> = new Set();
+  const selected: Set<Question> = new Set();
 
   if (selectionCount > uniqueBooks.length) {
     // Calculate questions needed per book to distribute evenly

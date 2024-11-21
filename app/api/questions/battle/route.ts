@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 import path from 'path';
 import fs from 'fs/promises';
-import { Book, Question, QuestionWithBook } from '@/types';
+import { Book, Question } from '@/types';
 import { getAllQuestions, selectQuestions } from '@/lib/questions';
 
 export async function POST(request: Request) {
@@ -45,7 +45,7 @@ export async function POST(request: Request) {
       selectedQuestions = selectQuestions(filteredQuestions, questionCount, questionType);
     }
 
-    // Add logging for debugging
+    // // Add logging for debugging
     // const questionCounts = selectedQuestions.reduce((acc: Record<string, number>, q) => {
     //   const bookTitle = booksData.books[q.book_key].title;
     //   acc[bookTitle] = (acc[bookTitle] || 0) + 1;
@@ -53,7 +53,7 @@ export async function POST(request: Request) {
     // }, {});
     // console.log('Questions per book:', questionCounts);
 
-    // // Log question types
+    // // // Log question types
     // const questionTypeCount = selectedQuestions.reduce((acc: Record<string, number>, q) => {
     //   acc[q.type] = (acc[q.type] || 0) + 1;
     //   return acc;
