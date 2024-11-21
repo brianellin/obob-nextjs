@@ -9,6 +9,8 @@ import type { QuestionWithBook, Book } from "@/types";
 import Link from "next/link";
 import { WavyUnderline } from "./WavyUnderline";
 import { useToast } from "@/hooks/use-toast";
+import Confetti from "react-confetti";
+import { useWindowSize } from "react-use";
 
 type QuizPageProps = {
   selectedBooks: Book[];
@@ -77,6 +79,7 @@ export default function QuizPage({
   const timerRef = useRef<NodeJS.Timeout | null>(null);
   const [questionResults, setQuestionResults] = useState<QuestionResult[]>([]);
   const { toast } = useToast();
+  const { width, height } = useWindowSize();
 
   const loadQuestions = async () => {
     try {
@@ -148,7 +151,11 @@ export default function QuizPage({
   };
 
   const handleAnswer = (points: number) => {
-    setAnimateScore(true);
+    // Only animate score for perfect answers
+    if (points === 5) {
+      setAnimateScore(true);
+      setTimeout(() => setAnimateScore(false), 300);
+    }
 
     // Update or add the result for the current question
     setQuestionResults((prev) => {
@@ -160,7 +167,6 @@ export default function QuizPage({
       return newResults;
     });
 
-    setTimeout(() => setAnimateScore(false), 300);
     nextQuestion();
   };
 
@@ -229,6 +235,14 @@ export default function QuizPage({
   if (quizFinished) {
     return (
       <div className="container p-4 mt-8">
+        {calculateScore() === questions.length * 5 && (
+          <Confetti
+            width={width}
+            height={height}
+            recycle={false}
+            numberOfPieces={200}
+          />
+        )}
         <Card className="w-full max-w-xl mx-auto drop-shadow-md">
           <CardHeader>
             <CardTitle className="text-2xl font-bold text-center">
