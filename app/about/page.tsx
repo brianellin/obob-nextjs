@@ -77,23 +77,7 @@ export default function AboutPage() {
                 </Link>
               </li>
 
-              <li>
-                <Link
-                  href="https://www.glencoeelementarypta.com/obob"
-                  className="hover:underline"
-                >
-                  Glencoe Elementary
-                </Link>
-              </li>
-
-              <li>
-                <Link
-                  href="https://www.pps.net/Page/15384"
-                  className="hover:underline"
-                >
-                  Mt Tabor Middle School
-                </Link>
-              </li>
+              <li>OBOB Practice-Question Coalition</li>
             </ul>
             <p className="leading-7 [&:not(:first-child)]:mt-6">
               Each question in the battle cites its source. If you are

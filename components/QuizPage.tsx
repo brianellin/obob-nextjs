@@ -469,14 +469,18 @@ export default function QuizPage({
           )}
           <div className="flex items-center justify-center text-xs gap-1 mt-4 text-muted-foreground">
             Source:{" "}
-            <Link
-              href={currentQuestion.source!.link}
-              className=" flex items-center gap-1 hover:text-muted-foreground/80"
-              target="_blank"
-            >
-              {currentQuestion.source?.name}
-              <ExternalLink className="h-3 w-3" />
-            </Link>
+            {currentQuestion.source!.link ? (
+              <Link
+                href={currentQuestion.source!.link}
+                className=" flex items-center gap-1 hover:text-muted-foreground/80"
+                target="_blank"
+              >
+                {currentQuestion.source?.name}
+                <ExternalLink className="h-3 w-3" />
+              </Link>
+            ) : (
+              <span> {currentQuestion.source?.name}</span>
+            )}
           </div>
         </CardContent>
       </Card>

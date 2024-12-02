@@ -13,7 +13,7 @@ export type Books = {
 
 export type QuestionSource = {
   name: string;
-  link: string;
+  link: string | null;
 };
 
 export type BaseQuestion = {
