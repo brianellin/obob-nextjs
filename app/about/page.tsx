@@ -105,7 +105,7 @@ export default function AboutPage() {
           <CardContent className="flex gap-2 flex-col">
             <p className="">
               {" "}
-              Made with 💚 by Rosie, Gianna, and Brian (Glencoe Elementary).
+              Made with 💚 by Rosie, Gianna, Simone, and Brian (Glencoe Elementary).
             </p>
             <Image
               src="/rosie.jpeg"
