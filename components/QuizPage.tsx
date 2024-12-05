@@ -11,6 +11,7 @@ import { WavyUnderline } from "./WavyUnderline";
 import { useToast } from "@/hooks/use-toast";
 import Confetti from "react-confetti";
 import { useWindowSize } from "react-use";
+import { track } from "@vercel/analytics";
 
 type QuizPageProps = {
   selectedBooks: Book[];
@@ -140,6 +141,32 @@ export default function QuizPage({
     };
   }, [isTimerRunning, timeLeft]);
 
+  useEffect(() => {
+    if (quizFinished) {
+      console.log("tracking battleFinished");
+      track("battleFinished", {
+        quizMode,
+        questionCount,
+        questionType,
+        year,
+        division,
+        numBooks: selectedBooks.length,
+        score: calculateScore(),
+        possibleScore: questions.length * 5,
+      });
+    } else {
+      console.log("tracking battleStarted");
+      track("battleStarted", {
+        quizMode,
+        questionCount,
+        questionType,
+        year,
+        division,
+        numBooks: selectedBooks.length,
+      });
+    }
+  }, [quizFinished]);
+
   const handleShowAnswer = () => {
     setShowAnswer(true);
   };
@@ -223,8 +250,6 @@ export default function QuizPage({
   }
 
   const currentQuestion = questions[currentQuestionIndex];
-  console.log(`currentQuestionIndex: ${currentQuestionIndex}`);
-  console.log(questions);
 
   const calculateScore = () => {
     return questionResults.reduce((total, result) => {
