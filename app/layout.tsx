@@ -8,9 +8,9 @@ import { Analytics } from "@vercel/analytics/react";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "obob.dog - Oregon Battle of the Books Practice Questions and Battles",
+  title: "OBOB Practice Questions and Interactive Battles - obob.dog",
   description:
-    "Practice questions and battles for Oregon Battle of the Books (OBOB)! Test your knowledge in solo or friend/parent battles.",
+    "Practice questions and interactive battles for Oregon Battle of the Books (OBOB)! Test your knowledge and battle on your own or with a friend/parent.",
 };
 
 export default function RootLayout({
