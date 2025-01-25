@@ -4,12 +4,14 @@ import { useState, useEffect } from "react";
 import { track } from "@vercel/analytics";
 
 export default function DonationBanner() {
-  const [isVisible, setIsVisible] = useState(true);
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     const bannerDismissed = localStorage.getItem("donationBannerDismissed");
     if (bannerDismissed) {
       setIsVisible(false);
+    } else {
+      setIsVisible(true);
     }
   }, []);
 
