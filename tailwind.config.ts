@@ -72,11 +72,16 @@ module.exports = {
 			"0%, 100%": { transform: "translateX(0)" },
 			"50%": { transform: "translateX(4px)" },
 		  },
+		  wave: {
+			'from': { transform: 'rotate(-10deg)' },
+			'to': { transform: 'rotate(30deg)' }
+		  }
 		},
 		animation: {
 		  "accordion-down": "accordion-down 0.2s ease-out",
 		  "accordion-up": "accordion-up 0.2s ease-out",
 		  "move-arrow": "move-arrow 1s ease-in-out infinite",
+		  wave: 'wave 1s infinite alternate ease-in-out'
 		},
 	  },
 	},
