@@ -21,7 +21,7 @@ export default function AboutPage() {
       </h1>
 
       <div>
-        <BlueskyPostEmbed uri="https://bsky.app/profile/did:plc:5krwzfgf2m7vclvxsoh7hlz6/post/3lgm4qt6cj22c?ref_src=embed" />
+        <BlueskyPostEmbed uri="at://did:plc:5krwzfgf2m7vclvxsoh7hlz6/app.bsky.feed.post/3lgm4qt6cj22c" />
       </div>
 
       <div className="flex flex-col gap-8">
