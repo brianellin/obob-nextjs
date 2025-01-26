@@ -10,7 +10,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-
+import BlueskyPostEmbed from "@/components/BlueskyEmbed";
 export default function AboutPage() {
   return (
     <div className="container mx-auto max-w-2xl px-4 py-4">
@@ -19,6 +19,10 @@ export default function AboutPage() {
           Woof!
         </WavyUnderline>
       </h1>
+
+      <div>
+        <BlueskyPostEmbed uri="https://bsky.app/profile/did:plc:5krwzfgf2m7vclvxsoh7hlz6/post/3lgm4qt6cj22c?ref_src=embed" />
+      </div>
 
       <div className="flex flex-col gap-8">
         <Card>
@@ -105,7 +109,8 @@ export default function AboutPage() {
           <CardContent className="flex gap-2 flex-col">
             <p className="">
               {" "}
-              Made with 💚 by Rosie, Gianna, Simone, and Brian (Glencoe Elementary).
+              Made with 💚 by Rosie, Gianna, Simone, and Brian (Glencoe
+              Elementary).
             </p>
             <Image
               src="/rosie.jpeg"
