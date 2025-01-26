@@ -20,11 +20,11 @@ export default function AboutPage() {
         </WavyUnderline>
       </h1>
 
-      <div>
-        <BlueskyPostEmbed uri="at://did:plc:5krwzfgf2m7vclvxsoh7hlz6/app.bsky.feed.post/3lgm4qt6cj22c" />
-      </div>
-
       <div className="flex flex-col gap-8">
+        <div>
+          <BlueskyPostEmbed uri="at://did:plc:5krwzfgf2m7vclvxsoh7hlz6/app.bsky.feed.post/3lgm4qt6cj22c" />
+        </div>
+
         <Card>
           <CardHeader>
             <CardTitle>What the ruff?</CardTitle>
