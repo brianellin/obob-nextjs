@@ -21,10 +21,6 @@ export default function AboutPage() {
       </h1>
 
       <div className="flex flex-col gap-8">
-        <div>
-          <BlueskyPostEmbed uri="at://did:plc:5krwzfgf2m7vclvxsoh7hlz6/app.bsky.feed.post/3lgm4qt6cj22c" />
-        </div>
-
         <Card>
           <CardHeader>
             <CardTitle>What the ruff?</CardTitle>
@@ -119,6 +115,10 @@ export default function AboutPage() {
               width={1527}
               height={1422}
             />
+            <div>
+              <BlueskyPostEmbed uri="at://did:plc:5krwzfgf2m7vclvxsoh7hlz6/app.bsky.feed.post/3lgm4qt6cj22c" />
+            </div>
+
             <p className="mt-4">
               obob.dog is open source. Feel free to contribute, report issues,
               or make your own version!
