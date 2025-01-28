@@ -1,0 +1,648 @@
+{
+    "questions": [
+        {
+            "type": "in-which-book",
+            "text": "does a character call their truck brenda?",
+            "book_key": "candidly-cline"
+        },
+        {
+            "type": "in-which-book",
+            "text": "does a character love watching the great british bake off?",
+            "book_key": "daughter-of-the-deep"
+        },
+        {
+            "type": "in-which-book",
+            "text": "does a knife get lost in a fire?",
+            "book_key": "freewater"
+        },
+        {
+            "type": "in-which-book",
+            "text": "does a character have a pet turtle?",
+            "book_key": "the-last-cuentista"
+        },
+        {
+            "type": "in-which-book",
+            "text": "does a character's dad disappear?",
+            "book_key": "losers-at-the-center-of-the-galaxy"
+        },
+        {
+            "type": "content",
+            "text": "what is Willow Chance's favorite color?",
+            "book_key": "counting-by-7s",
+            "answer": "Red",
+            "page": 20
+        },
+        {
+            "type": "content",
+            "text": "what term is North Korea also referenced as?",
+            "book_key": "every-falling-star",
+            "answer": "Joseon",
+            "page": 2
+        },
+        {
+            "type": "content",
+            "text": "who proclaims that the children are saints?",
+            "book_key": "inquisitors-tale",
+            "answer": "Michelangelo",
+            "page": 177
+        },
+        {
+            "type": "content",
+            "text": "what does Addie's dad call their road trip to his summer job location?",
+            "book_key": "lo-and-behold",
+            "answer": "Dad and Addie's Road Trip of Fun",
+            "page": 11
+        },
+        {
+            "type": "content",
+            "text": "who is the librarian that helps Etan find books?",
+            "book_key": "the-magical-imperfect",
+            "answer": "Mrs. McClellan"
+        },
+        {
+            "type": "in-which-book",
+            "text": "is a character kicked out of the same school twice?",
+            "book_key": "counting-by-7s"
+        },
+        {
+            "type": "in-which-book",
+            "text": "does a character have a dog whose name means 'guard'?",
+            "book_key": "every-falling-star"
+        },
+        {
+            "type": "in-which-book",
+            "text": "does a character meet 'the wicked one'?",
+            "book_key": "inquisitors-tale"
+        },
+        {
+            "type": "in-which-book",
+            "text": "does a character have a tradition of taking family photos next to a tree they planted?",
+            "book_key": "lo-and-behold"
+        },
+        {
+            "type": "in-which-book",
+            "text": "is a character hesitant to speak after their mom gets sick?",
+            "book_key": "the-magical-imperfect"
+        },
+        {
+            "type": "content",
+            "text": "what is the name of the room Cline works in at the New Hope Nursery?",
+            "book_key": "candidly-cline",
+            "answer": "Elephant room",
+            "page": 61
+        },
+        {
+            "type": "content",
+            "text": "what was Dev's nickname for Ana?",
+            "book_key": "daughter-of-the-deep",
+            "answer": "Ana Banana",
+            "page": 2
+        },
+        {
+            "type": "content",
+            "text": "what is the name of the character who brings Homer and Ada to Freewater?",
+            "book_key": "freewater",
+            "answer": "Suleman",
+            "page": 61
+        },
+        {
+            "type": "content",
+            "text": "what is the name of the planet that everyone escapes to?",
+            "book_key": "the-last-cuentista",
+            "answer": "Planet Sagan",
+            "page": 10
+        },
+        {
+            "type": "content",
+            "text": "what does Frenchie name her tuba?",
+            "book_key": "losers-at-the-center-of-the-galaxy",
+            "answer": "Canary"
+        },
+        {
+            "type": "in-which-book",
+            "text": "do characters get married and rent an apartment 'the size of a walk-in closet'?",
+            "book_key": "mighty-heart",
+            "page": null
+        },
+        {
+            "type": "in-which-book",
+            "text": "does a character have a scar that is shaped like a pair of saggy sunglasses?",
+            "book_key": "serpents-secret",
+            "page": null
+        },
+        {
+            "type": "in-which-book",
+            "text": "does a character fill their notebook with drawings from around the city they live in?",
+            "book_key": "the-magical-imperfect",
+            "page": null
+        },
+        {
+            "type": "in-which-book",
+            "text": "is a character not interested in the school dance even though their friends are?",
+            "book_key": "candidly-cline",
+            "page": null
+        },
+        {
+            "type": "in-which-book",
+            "text": "is a character accredited with the invention of the microwave?",
+            "book_key": "daughter-of-the-deep",
+            "page": null
+        },
+        {
+            "type": "content",
+            "text": "why does Two Shoes betray the town?",
+            "book_key": "freewater",
+            "answer": "To save his wife and son",
+            "page": 436
+        },
+        {
+            "type": "content",
+            "text": "what animal does Petra & the Zeta squad have to avoid?",
+            "book_key": "the-last-cuentista",
+            "answer": "The Colombian poison frog",
+            "two_part": false
+        },
+        {
+            "type": "content",
+            "text": "name 2 things Addie tries at her dad's job?",
+            "book_key": "lo-and-behold",
+            "answer": "Robot student (pg. 11), self-driving car (pg. 11), augmented reality glasses (pg. 27)",
+            "two_part": true
+        },
+        {
+            "type": "content",
+            "text": "what does the Yo-Yo Ma quote say in the band and orchestra room?",
+            "book_key": "losers-at-the-center-of-the-galaxy",
+            "answer": "'When music called, I said \"CELLO!\"'",
+            "page": null
+        },
+        {
+            "type": "content",
+            "text": "what color do fox eyes grow fuzzy with when facing north?",
+            "book_key": "scary-stories-for-young-foxes",
+            "answer": "Purple",
+            "page": 23
+        },
+        {
+            "type": "in-which-book",
+            "text": "is a wedding interrupted by a fire?",
+            "book_key": "freewater",
+            "page": null
+        },
+        {
+            "type": "in-which-book",
+            "text": "does a character have the condition retinitis pigmentosa?",
+            "book_key": "the-last-cuentista",
+            "page": null
+        },
+        {
+            "type": "in-which-book",
+            "text": "does a character go geocaching in duck print pajamas?",
+            "book_key": "lo-and-behold",
+            "page": null
+        },
+        {
+            "type": "in-which-book",
+            "text": "does a character come up with lyrics to a song from Star Wars?",
+            "book_key": "losers-at-the-center-of-the-galaxy",
+            "page": null
+        },
+        {
+            "type": "in-which-book",
+            "text": "do characters race to catch a dragonfly, hoping to become 'emperor supreme'?",
+            "book_key": "scary-stories-for-young-foxes",
+            "page": null
+        },
+        {
+            "type": "content",
+            "text": "how does Sunny get hurt surfing?",
+            "book_key": "mighty-heart",
+            "answer": "She cuts her arm on a rock",
+            "page": 246
+        },
+        {
+            "type": "content",
+            "text": "what are the two homemade sweets Kiranmala's Ma gives out to the trick or treaters?",
+            "book_key": "serpents-secret",
+            "answer": "Rasagollas and Sandesh",
+            "two_part": true,
+            "page": 14
+        },
+        {
+            "type": "content",
+            "text": "what does Ileana find in her bedroom before she leaves her hometown for her safety?",
+            "book_key": "the-story-that-cannot-be-told",
+            "answer": "A bug",
+            "page": 43
+        },
+        {
+            "type": "content",
+            "text": "how old is Cline when she starts teaching herself how to play the guitar?",
+            "book_key": "candidly-cline",
+            "answer": "Nine years old",
+            "page": 100
+        },
+        {
+            "type": "content",
+            "text": "what type of dolphin is Socrates?",
+            "book_key": "daughter-of-the-deep",
+            "answer": "Bottlenose Dolphin",
+            "page": 5
+        },
+        {
+            "type": "in-which-book",
+            "text": "does a character have a dog named Gigi?",
+            "book_key": "starfish",
+            "page": 61
+        },
+        {
+            "type": "in-which-book",
+            "text": "do characters attend Eagle Valley Middle School?",
+            "book_key": "seventh-grade-lizard-boy",
+            "page": null
+        },
+        {
+            "type": "in-which-book",
+            "text": "does a character's counselor think they are a genius?",
+            "book_key": "counting-by-7s",
+            "page": null
+        },
+        {
+            "type": "in-which-book",
+            "text": "does a character sell their books?",
+            "book_key": "every-falling-star",
+            "page": null
+        },
+        {
+            "type": "in-which-book",
+            "text": "does a character claim they saw a dragon?",
+            "book_key": "inquisitors-tale",
+            "page": null
+        },
+        {
+            "type": "content",
+            "text": "who is in the stasis pod next to Petra?",
+            "book_key": "the-last-cuentista",
+            "answer": "Suma",
+            "page": null
+        },
+        {
+            "type": "content",
+            "text": "What are two ways Sunny thinks of to finally destroy Margot's toothbrush?",
+            "book_key": "mighty-heart",
+            "answer": "Snapping it in half and setting fire to it",
+            "two_part": true,
+            "page": 95
+        },
+        {
+            "type": "content",
+            "text": "what do Kiran's parents want her to dress up as for Halloween?",
+            "book_key": "serpents-secret",
+            "answer": "An Indian princess",
+            "page": 3
+        },
+        {
+            "type": "content",
+            "text": "what is the name of the teacher Mamaie and Tataie introduce Ileana to in the village?",
+            "book_key": "the-story-that-cannot-be-told",
+            "answer": "Mrs. Sala",
+            "page": 124
+        },
+        {
+            "type": "content",
+            "text": "what place is Thomas originally from?",
+            "book_key": "seventh-grade-lizard-boy",
+            "answer": "Elberon",
+            "page": 120
+        },
+        {
+            "type": "in-which-book",
+            "text": "does a character create an airborne toxin?",
+            "book_key": "the-last-cuentista",
+            "page": null
+        },
+        {
+            "type": "in-which-book",
+            "text": "is an island described as the size of a teacup?",
+            "book_key": "mighty-heart",
+            "page": null
+        },
+        {
+            "type": "in-which-book",
+            "text": "does a character almost get eaten by a transit officer?",
+            "book_key": "serpents-secret",
+            "page": null
+        },
+        {
+            "type": "in-which-book",
+            "text": "does the story take place in Romania?",
+            "book_key": "the-story-that-cannot-be-told",
+            "page": null
+        },
+        {
+            "type": "in-which-book",
+            "text": "does a character wear a Cyborg of Shanghai costume on Halloween?",
+            "book_key": "seventh-grade-lizard-boy",
+            "page": null
+        },
+        {
+            "type": "content",
+            "text": "what grade is Ellie's sister in?",
+            "book_key": "starfish",
+            "answer": "12th grade",
+            "page": 22
+        },
+        {
+            "type": "content",
+            "text": "name two of the jobs that Tommy lists in his brainstorm?",
+            "book_key": "seventh-grade-lizard-boy",
+            "answer": "Doctor, Mail Person, Grocery Person, Police, Lawyer, Firefighter",
+            "two_part": true,
+            "page": 61
+        },
+        {
+            "type": "content",
+            "text": "what is Willow accused of when called into the principal's office?",
+            "book_key": "counting-by-7s",
+            "answer": "Because she is accused of cheating",
+            "page": 31
+        },
+        {
+            "type": "content",
+            "text": "who does Sungju refer to as the eternal father of North Korea?",
+            "book_key": "every-falling-star",
+            "answer": "Kim il-Sung",
+            "page": null
+        },
+        {
+            "type": "content",
+            "text": "what object is stolen from the king?",
+            "book_key": "inquisitors-tale",
+            "answer": "The Holy Nail",
+            "page": 209
+        },
+        {
+            "type": "in-which-book",
+            "text": "does a character suffer from advanced pancreatic cancer?",
+            "book_key": "daughter-of-the-deep",
+            "page": null
+        },
+        {
+            "type": "in-which-book",
+            "text": "does a character escape capture by jumping in a river?",
+            "book_key": "freewater",
+            "page": null
+        },
+        {
+            "type": "in-which-book",
+            "text": "does a character adopt a dog in virtual reality?",
+            "book_key": "lo-and-behold",
+            "page": null
+        },
+        {
+            "type": "in-which-book",
+            "text": "does a character play baseball in Little League?",
+            "book_key": "the-magical-imperfect",
+            "page": null
+        },
+        {
+            "type": "in-which-book",
+            "text": "does a character have the tip of their ear damaged?",
+            "book_key": "scary-stories-for-young-foxes",
+            "page": null
+        },
+        {
+            "type": "content",
+            "text": "what is the name of Kiran's assistant gym teacher whom she accidentally hits with an arrow during archery practice?",
+            "book_key": "serpents-secret",
+            "answer": "Mr. Taylor",
+            "page": 87
+        },
+        {
+            "type": "content",
+            "text": "what accent does the school librarian speak in?",
+            "book_key": "starfish",
+            "answer": "Canadian",
+            "page": 31
+        },
+        {
+            "type": "content",
+            "text": "name two of the other non-humans at Tommy's Middle School?",
+            "book_key": "seventh-grade-lizard-boy",
+            "answer": "Sasquatch, Robot, A bunch of Snakes",
+            "two_part": true,
+            "page": 256
+        },
+        {
+            "type": "content",
+            "text": "what is the name of the massive sleepover that Cline attends at Hollie's church?",
+            "book_key": "candidly-cline",
+            "answer": "New Hope lock-in",
+            "page": 144
+        },
+        {
+            "type": "content",
+            "text": "what reason is Sungju given for why their family left Pyongyang?",
+            "book_key": "every-falling-star",
+            "answer": "They were going on a vacation",
+            "page": 22
+        },
+        {
+            "type": "in-which-book",
+            "text": "does a character perform CPR on a bird?",
+            "book_key": "serpents-secret",
+            "page": null
+        },
+        {
+            "type": "in-which-book",
+            "text": "does a character's mother have one blue eye and one brown eye?",
+            "book_key": "starfish",
+            "page": 60
+        },
+        {
+            "type": "in-which-book",
+            "text": "do characters plan a fight at four o'clock by Old Creek?",
+            "book_key": "seventh-grade-lizard-boy",
+            "page": null
+        },
+        {
+            "type": "in-which-book",
+            "text": "does a character get puked on during the trial run at their new job?",
+            "book_key": "candidly-cline",
+            "page": null
+        },
+        {
+            "type": "in-which-book",
+            "text": "do characters forage for mushrooms?",
+            "book_key": "every-falling-star",
+            "page": null
+        },
+        {
+            "type": "content",
+            "text": "what was the name of the place Ana's parents wanted their ashes to be spread?",
+            "book_key": "daughter-of-the-deep",
+            "answer": "San Alejandro Botanical Gardens",
+            "page": 141
+        },
+        {
+            "type": "content",
+            "text": "where does Anna go after running away from the plantation?",
+            "book_key": "freewater",
+            "answer": "North",
+            "page": 489
+        },
+        {
+            "type": "content",
+            "text": "what is the name of Addie's stuffed tortoise?",
+            "book_key": "lo-and-behold",
+            "answer": "Shelly",
+            "page": 12
+        },
+        {
+            "type": "content",
+            "text": "why does Etan play tic-tac-toe with Malia through her front door?",
+            "book_key": "the-magical-imperfect",
+            "answer": "She's embarrassed of her eczema",
+            "page": null
+        },
+        {
+            "type": "content",
+            "text": "what are two animals that Mia discovered in Ms. Potter's room?",
+            "book_key": "scary-stories-for-young-foxes",
+            "answer": "Squirrel, Duck, Bullfrog, Badger, Rabbit",
+            "two_part": true,
+            "page": 168
+        },
+        {
+            "type": "in-which-book",
+            "text": "does a bench explode?",
+            "book_key": "inquisitors-tale",
+            "page": 40
+        },
+        {
+            "type": "in-which-book",
+            "text": "does a pop star named Kittentown Dynamo perform?",
+            "book_key": "losers-at-the-center-of-the-galaxy",
+            "page": null
+        },
+        {
+            "type": "in-which-book",
+            "text": "does someone have tattoos of suns in various sizes and shapes?",
+            "book_key": "mighty-heart",
+            "page": null
+        },
+        {
+            "type": "in-which-book",
+            "text": "is a character's dog held for ransom?",
+            "book_key": "starfish",
+            "page": null
+        },
+        {
+            "type": "in-which-book",
+            "text": "do characters undergo hardships like censorship and surveillance while trying to stand up for what they believe in?",
+            "book_key": "the-story-that-cannot-be-told",
+            "page": null
+        },
+        {
+            "type": "content",
+            "text": "what is the language that Willow learned 85 phrases of in a week?",
+            "book_key": "counting-by-7s",
+            "answer": "Vietnamese",
+            "page": 67
+        },
+        {
+            "type": "content",
+            "text": "what does Mrs. Li ask Etan to bring to Malia?",
+            "book_key": "the-magical-imperfect",
+            "answer": "A plastic bag with medicinal paste and a paper bag with tea leaves",
+            "page": null
+        },
+        {
+            "type": "content",
+            "text": "what does the raccoon offer Uly when they first meet?",
+            "book_key": "scary-stories-for-young-foxes",
+            "answer": "An egg",
+            "page": 263
+        },
+        {
+            "type": "content",
+            "text": "why does Ileana's dad destroy the Great Tome?",
+            "book_key": "the-story-that-cannot-be-told",
+            "answer": "To make sure that the book does not fall into the wrong hands/keep his family and community safe",
+            "page": 41
+        },
+        {
+            "type": "content",
+            "text": "name two of the original 6 people who found the Big Tree?",
+            "book_key": "freewater",
+            "answer": "David, Mrs. Light, Suleman, Jupiter, Gus, or Mrs. Faith",
+            "two_part": true,
+            "page": null
+        },
+        {
+            "type": "in-which-book",
+            "text": "did a character disappear in a library?",
+            "book_key": "counting-by-7s",
+            "page": null
+        },
+        {
+            "type": "in-which-book",
+            "text": "does a character's father build houses?",
+            "book_key": "the-magical-imperfect",
+            "page": null
+        },
+        {
+            "type": "in-which-book",
+            "text": "does a character adopt a group of orphans?",
+            "book_key": "scary-stories-for-young-foxes",
+            "page": null
+        },
+        {
+            "type": "in-which-book",
+            "text": "is a character sent off to live with their grandparents?",
+            "book_key": "the-story-that-cannot-be-told",
+            "page": null
+        },
+        {
+            "type": "in-which-book",
+            "text": "do people live in a secret community?",
+            "book_key": "freewater",
+            "page": null
+        },
+        {
+            "type": "content",
+            "text": "which character is revealed to be Jewish?",
+            "book_key": "inquisitors-tale",
+            "answer": "William",
+            "page": 87
+        },
+        {
+            "type": "content",
+            "text": "what does G.L.O.P stand for?",
+            "book_key": "losers-at-the-center-of-the-galaxy",
+            "answer": "Greater Levels of Oxygen Project",
+            "page": null
+        },
+        {
+            "type": "content",
+            "text": "what extra sense does Kate have?",
+            "book_key": "mighty-heart",
+            "answer": "Sixth sunny sense to alert her to a daring escape",
+            "page": 299
+        },
+        {
+            "type": "content",
+            "text": "which state does a character's best friend move to?",
+            "book_key": "starfish",
+            "answer": "Indiana",
+            "page": 8
+        },
+        {
+            "type": "content",
+            "text": "what is the name of Cline's favorite old music artist?",
+            "book_key": "candidly-cline",
+            "answer": "Emmylou Harris",
+            "page": 100
+        }
+    ]
+}
