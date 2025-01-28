@@ -2568,19 +2568,19 @@
     },
     {
       "type": "in-which-book",
-      "text": "is a character\u2019s birthday on halloween?",
+      "text": "is a character's birthday on halloween?",
       "book_key": "serpents-secret",
       "page": 2
     },
     {
       "type": "in-which-book",
-      "text": "does a character\u2019s parents insist that she be a princess for every halloween?",
+      "text": "does a character's parents insist that she be a princess for every halloween?",
       "book_key": "serpents-secret",
       "page": 3
     },
     {
       "type": "in-which-book",
-      "text": "does a character\u2019s parents own a 'quickie mart?'",
+      "text": "does a character's parents own a 'quickie mart?'",
       "book_key": "serpents-secret",
       "page": 4
     },
@@ -2592,7 +2592,7 @@
     },
     {
       "type": "in-which-book",
-      "text": "do two handsome indian boys show up at a character\u2019s house?",
+      "text": "do two handsome indian boys show up at a character's house?",
       "book_key": "serpents-secret",
       "page": 19
     },
@@ -2640,7 +2640,7 @@
     },
     {
       "type": "in-which-book",
-      "text": "is a state\u2019s flower the thorn?",
+      "text": "is a state's flower the thorn?",
       "book_key": "serpents-secret",
       "page": 259
     },
@@ -2664,21 +2664,21 @@
     },
     {
       "type": "content",
-      "text": "In The Serpent\u2019s Secret by Sayantani DasGupta, what is the name of Kiran\u2019s archnemesis?",
+      "text": "what is the name of Kiran's archnemesis?",
       "book_key": "serpents-secret",
       "answer": "Jovi",
       "page": 2
     },
     {
       "type": "content",
-      "text": "In The Serpent\u2019s Secret by Sayantani DasGupta, what are the sweet syrupy treats that Kiran\u2019s mom makes called?",
+      "text": "what are the sweet syrupy treats that Kiran's mom makes called?",
       "book_key": "serpents-secret",
       "answer": "Rasagollas",
       "page": 15
     },
     {
       "type": "content",
-      "text": "In The Serpent\u2019s Secret by Sayantani DasGupta, in the birthday card Kiran\u2019s mom leaves, what is unusual about the card and name one of two things left in the card?",
+      "text": "in the birthday card Kiran's mom leaves, what is unusual about the card and name one of two things left in the card?",
       "book_key": "serpents-secret",
       "answer": "1) The note stops at an inkblot, (2) there were a wad of bills and a yellow sheet of blank paper",
       "two_part": true,
@@ -2686,21 +2686,21 @@
     },
     {
       "type": "content",
-      "text": "In The Serpent\u2019s Secret by Sayantani DasGupta, which brother is older between the two princes?",
+      "text": "which brother is older between the two princes?",
       "book_key": "serpents-secret",
       "answer": "Neel",
       "page": 19
     },
     {
       "type": "content",
-      "text": "In The Serpent\u2019s Secret by Sayantani DasGupta, how do rakkhoshs speak?",
+      "text": "how do rakkhoshs speak?",
       "book_key": "serpents-secret",
       "answer": "In rhymes",
       "page": 31
     },
     {
       "type": "content",
-      "text": "In The Serpent's Secret Kiranmala and the Kingdom Beyond by Sayantani Dasgupta, what are Neel and Lal\u2019s horse's names?",
+      "text": "In The Serpent's Secret Kiranmala and the Kingdom Beyond by Sayantani Dasgupta, what are Neel and Lal's horse's names?",
       "book_key": "serpents-secret",
       "answer": "Midnight and Snowy",
       "two_part": true,
@@ -2708,77 +2708,77 @@
     },
     {
       "type": "content",
-      "text": "In The Serpent\u2019s Secret by Sayantani DasGupta, what is the answer to the riddle, 'The ocean\u2019s pearl, a grain of sand. More precious than all the gold in the land. Life would be flat, life would be bland. Without this diamond in your hand,' that the transit officer asks Kiran?",
+      "text": "what is the answer to the riddle, 'The ocean's pearl, a grain of sand. More precious than all the gold in the land. Life would be flat, life would be bland. Without this diamond in your hand,' that the transit officer asks Kiran?",
       "book_key": "serpents-secret",
       "answer": "Salt",
       "page": 71
     },
     {
       "type": "content",
-      "text": "In The Serpent\u2019s Secret by Sayantani DasGupta, what mark is on Kiran\u2019s upper arm?",
+      "text": "what mark is on Kiran's upper arm?",
       "book_key": "serpents-secret",
       "answer": "A U-shaped scar",
       "page": 75
     },
     {
       "type": "content",
-      "text": "In The Serpent\u2019s Secret by Sayantani DasGupta, a lady demands she help Kiran find a color in the item she is selling at the marketplace. What is that item?",
+      "text": "a lady demands she help Kiran find a color in the item she is selling at the marketplace. What is that item?",
       "book_key": "serpents-secret",
       "answer": "Bangles",
       "page": 78
     },
     {
       "type": "content",
-      "text": "In The Serpent\u2019s Secret by Sayantani DasGupta, what does the name 'Chhaya Devi' translate to?",
+      "text": "what does the name 'Chhaya Devi' translate to?",
       "book_key": "serpents-secret",
       "answer": "The shadow goddess",
       "page": 92
     },
     {
       "type": "content",
-      "text": "In The Serpent\u2019s Secret by Sayantani DasGupta, how does Kiran figure out Neel\u2019s and Lal\u2019s horses\u2019 names?",
+      "text": "how does Kiran figure out Neel's and Lal's horses' names?",
       "book_key": "serpents-secret",
       "answer": "The horses told Kiran",
       "page": 105
     },
     {
       "type": "content",
-      "text": "In The Serpent\u2019s Secret by Sayantani DasGupta, what is Kiran\u2019s least favorite color?",
+      "text": "what is Kiran's least favorite color?",
       "book_key": "serpents-secret",
       "answer": "Pink",
       "page": 128
     },
     {
       "type": "content",
-      "text": "In The Serpent\u2019s Secret by Sayantani DasGupta, what is Lord Bulbul\u2019s title?",
+      "text": "what is Lord Bulbul's title?",
       "book_key": "serpents-secret",
       "answer": "The Minister of Sweets",
       "page": 159
     },
     {
       "type": "content",
-      "text": "In The Serpent\u2019s Secret by Sayantani DasGupta, what item does Kiran not tell Neel about for about half of their journey, that Neel says can be helpful?",
+      "text": "what item does Kiran not tell Neel about for about half of their journey, that Neel says can be helpful?",
       "book_key": "serpents-secret",
       "answer": "The Moving Map",
       "page": 163
     },
     {
       "type": "content",
-      "text": "In The Serpent\u2019s Secret by Sayantani DasGupta, what is Neel\u2019s best subject?",
+      "text": "what is Neel's best subject?",
       "book_key": "serpents-secret",
       "answer": "Demon slaying",
       "page": 168
     },
     {
       "type": "content",
-      "text": "In The Serpent\u2019s Secret by Sayantani DasGupta, at the beginning of the book, how does Lal decode the map by mistake to find Kiran?",
+      "text": "at the beginning of the book, how does Lal decode the map by mistake to find Kiran?",
       "book_key": "serpents-secret",
       "answer": "He spilt his Giant Glupie on the map",
       "page": 171
     },
     {
       "type": "content",
-      "text": "In The Serpent\u2019s Secret by Sayantani DasGupta, who is Neel\u2019s sister?",
+      "text": "who is Neel's sister?",
       "book_key": "serpents-secret",
       "answer": "Bogli",
       "page": 322
