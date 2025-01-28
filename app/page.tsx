@@ -63,7 +63,7 @@ export default function Home() {
             <Zap className="h-6 w-6 text-muted-foreground" />
             <div>
               <p className="text-2xl font-bold">
-                {division === "6-8" ? "3,175" : "3,851"}
+                {division === "6-8" ? "3,720" : "3,851"}
               </p>
               <p className="text-sm text-muted-foreground">Questions</p>
             </div>

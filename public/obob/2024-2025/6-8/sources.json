@@ -9,6 +9,11 @@
       "path": "lake-oswego/questions.json",
       "name": "Lake Oswego Public Library",
       "link": "https://www.ci.oswego.or.us/kids/obob-practice-questions"
+    },
+    {
+      "path": "beaverton/questions.json",
+      "name": "Beaverton City Library",
+      "link": "https://www.beavertonlibrary.org/370/Oregon-Battle-of-the-Books"
     }
   ]
 }
