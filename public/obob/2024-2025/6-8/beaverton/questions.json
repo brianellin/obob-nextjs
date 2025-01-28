@@ -1,0 +1,466 @@
+{
+  "questions": [
+    {
+      "type": "content",
+      "text": "what language is Willow learning?",
+      "book_key": "counting-by-7s",
+      "answer": "Vietnamese",
+      "page": 2
+    },
+    {
+      "type": "content",
+      "text": "what are Willow's two other obsessions aside the number 7?",
+      "book_key": "counting-by-7s",
+      "answer": "Medical conditions and plants",
+      "page": 12,
+      "two_part": true
+    },
+    {
+      "type": "content",
+      "text": "what region of California does Willow's family live in?",
+      "book_key": "counting-by-7s",
+      "answer": "The central valley",
+      "page": 14
+    },
+    {
+      "type": "content",
+      "text": "what kind of birds does Willow remember building a nest in her yard?",
+      "book_key": "counting-by-7s",
+      "answer": "Parrots",
+      "page": 21
+    },
+    {
+      "type": "content",
+      "text": "what is the name of Willow's friend from elementary school?",
+      "book_key": "counting-by-7s",
+      "answer": "Margaret Z Buckle",
+      "page": 22
+    },
+    {
+      "type": "content",
+      "text": "what kind of flowers does Willow grow before middle school starts?",
+      "book_key": "counting-by-7s",
+      "answer": "Corpse flowers",
+      "page": 24
+    },
+    {
+      "type": "content",
+      "text": "what is the name for Dell's classification of \"the kooky kids who just couldn't help but dress different and act like fish out of water?\"",
+      "book_key": "counting-by-7s",
+      "answer": "The misfits",
+      "page": 44
+    },
+    {
+      "type": "content",
+      "text": "what kind of candy does Dell Duke keep on his desk?",
+      "book_key": "counting-by-7s",
+      "answer": "Jellybeans",
+      "page": 49
+    },
+    {
+      "type": "content",
+      "text": "what does Willow call the principal?",
+      "book_key": "counting-by-7s",
+      "answer": "Principal Eczema",
+      "page": 62
+    },
+    {
+      "type": "content",
+      "text": "what Chinese zodiac year was Mai born in?",
+      "book_key": "counting-by-7s",
+      "answer": "The year of the dragon",
+      "page": 69
+    },
+    {
+      "type": "content",
+      "text": "what is the name of Dell Duke's cat?",
+      "book_key": "counting-by-7s",
+      "answer": "Cheddar",
+      "page": 75
+    },
+    {
+      "type": "content",
+      "text": "what was the first language that Willow learned after English?",
+      "book_key": "counting-by-7s",
+      "answer": "Spanish",
+      "page": 87
+    },
+    {
+      "type": "content",
+      "text": "what does Willow notice on Jairo Hernandez's neck?",
+      "book_key": "counting-by-7s",
+      "answer": "A mole",
+      "page": 96
+    },
+    {
+      "type": "content",
+      "text": "what is the name of the Nguyen family's nail salon?",
+      "book_key": "counting-by-7s",
+      "answer": "Happy Polish Nail Salon",
+      "page": 137
+    },
+    {
+      "type": "content",
+      "text": "what DVD movie does Willow request from her house?",
+      "book_key": "counting-by-7s",
+      "answer": "Adaptation",
+      "page": 136
+    },
+    {
+      "type": "content",
+      "text": "what are the names of Willow's parents?",
+      "book_key": "counting-by-7s",
+      "answer": "Jimmy and Roberta",
+      "page": 142,
+      "two_part": true
+    },
+    {
+      "type": "content",
+      "text": "what does Dell Duke categorize himself as in his 'system of the strange?'",
+      "book_key": "counting-by-7s",
+      "answer": "Mutant",
+      "page": 358
+    },
+    {
+      "type": "content",
+      "text": "what is the name of the apartment complex?",
+      "book_key": "counting-by-7s",
+      "answer": "Gardens of Glenwood",
+      "page": 300
+    },
+    {
+      "type": "content",
+      "text": "what is the name of the diner that Willow and Mai go to?",
+      "book_key": "counting-by-7s",
+      "answer": "Happy Jack's",
+      "page": 160
+    },
+    {
+      "type": "content",
+      "text": "what kind of flowers does Willow want to plant under the red lava rocks at the apartments?",
+      "book_key": "counting-by-7s",
+      "answer": "Sunflowers",
+      "page": 280
+    },
+    {
+      "type": "in-which-book",
+      "text": "does someone win by being the 1,000,000th customer?",
+      "book_key": "counting-by-7s",
+      "page": 248
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character say that they once played chess for 20 hours straight?",
+      "book_key": "counting-by-7s",
+      "page": 52
+    },
+    {
+      "type": "in-which-book",
+      "text": "does someone discover an issue of Teen Vogue?",
+      "book_key": "counting-by-7s",
+      "page": 29
+    },
+    {
+      "type": "in-which-book",
+      "text": "does someone get their first pair of glasses?",
+      "book_key": "counting-by-7s",
+      "page": 26
+    },
+    {
+      "type": "in-which-book",
+      "text": "does someone quote a William Carlos Williams poem?",
+      "book_key": "counting-by-7s",
+      "page": 286
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character worry about helium balloons causing an environmental problem?",
+      "book_key": "counting-by-7s",
+      "page": 172
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character like prime numbers?",
+      "book_key": "counting-by-7s",
+      "page": 11
+    },
+    {
+      "type": "in-which-book",
+      "text": "is there a \"system of the strange?\"",
+      "book_key": "counting-by-7s",
+      "page": 358
+    },
+    {
+      "type": "in-which-book",
+      "text": "does someone become an expert in green garden trash cans?",
+      "book_key": "counting-by-7s",
+      "page": 327
+    },
+    {
+      "type": "in-which-book",
+      "text": "does someone test the pH of soil?",
+      "book_key": "counting-by-7s",
+      "page": 303
+    },
+    {
+      "type": "in-which-book",
+      "text": "does someone live in unit 28?",
+      "book_key": "counting-by-7s",
+      "page": 296
+    },
+    {
+      "type": "in-which-book",
+      "text": "does someone say \"books = comfort?\"",
+      "book_key": "counting-by-7s",
+      "page": 151
+    },
+    {
+      "type": "in-which-book",
+      "text": "does someone choose numbers from an ID number to play the lottery for the rest of their life?",
+      "book_key": "counting-by-7s",
+      "page": 147
+    },
+    {
+      "type": "in-which-book",
+      "text": "has someone memorized the digits of pi?",
+      "book_key": "counting-by-7s",
+      "page": 53
+    },
+    {
+      "type": "in-which-book",
+      "text": "does someone calculate the volume of jellybeans?",
+      "book_key": "counting-by-7s",
+      "page": 50
+    },
+    {
+      "type": "content",
+      "text": "what language do members of House Dolphin use to communicate secretly?",
+      "book_key": "daughter-of-the-deep",
+      "answer": "Irish",
+      "page": 33
+    },
+    {
+      "type": "content",
+      "text": "what book did members of House Dolphin have to read?",
+      "book_key": "daughter-of-the-deep",
+      "answer": "20,000 Leagues Under the Sea by Jules Verne",
+      "page": 42
+    },
+    {
+      "type": "content",
+      "text": "what is the name of the dolphin?",
+      "book_key": "daughter-of-the-deep",
+      "answer": "Socrates",
+      "page": 72
+    },
+    {
+      "type": "content",
+      "text": "what is the name of the Land Institute's submarine?",
+      "book_key": "daughter-of-the-deep",
+      "answer": "Aronnax",
+      "page": 96
+    },
+    {
+      "type": "content",
+      "text": "whose DNA does Ana share?",
+      "book_key": "daughter-of-the-deep",
+      "answer": "Captain Nemo",
+      "page": 103
+    },
+    {
+      "type": "content",
+      "text": "what is the name of the training ship the Dolphins are on?",
+      "book_key": "daughter-of-the-deep",
+      "answer": "The Varuna",
+      "page": 109
+    },
+    {
+      "type": "content",
+      "text": "what kind of necklace did Ana get from her mother?",
+      "book_key": "daughter-of-the-deep",
+      "answer": "A black pearl pendant",
+      "page": 236
+    },
+    {
+      "type": "content",
+      "text": "what TV show do the characters talk about watching?",
+      "book_key": "daughter-of-the-deep",
+      "answer": "The Great British Bake Off",
+      "page": 163
+    },
+    {
+      "type": "content",
+      "text": "what is the name of the Octopus?",
+      "book_key": "daughter-of-the-deep",
+      "answer": "Romeo",
+      "page": 272
+    },
+    {
+      "type": "content",
+      "text": "what instrument does Ana play?",
+      "book_key": "daughter-of-the-deep",
+      "answer": "The organ",
+      "page": 199
+    },
+    {
+      "type": "content",
+      "text": "what substance can be used as armor by creating a near-freezing covering of water around the hull?",
+      "book_key": "daughter-of-the-deep",
+      "answer": "Leidenfrost",
+      "page": 264
+    },
+    {
+      "type": "content",
+      "text": "who screams that they want to 'rebuild Harding-Pencroft?'",
+      "book_key": "daughter-of-the-deep",
+      "answer": "Ester",
+      "page": 327
+    },
+    {
+      "type": "content",
+      "text": "what house is made up of \"frontline fighters, tacticians, weapons specialists, commanders?\"",
+      "book_key": "daughter-of-the-deep",
+      "answer": "Sharks",
+      "page": 164
+    },
+    {
+      "type": "content",
+      "text": "how many nautical miles did Captain Nemo cover?",
+      "book_key": "daughter-of-the-deep",
+      "answer": "6,000",
+      "page": 42
+    },
+    {
+      "type": "content",
+      "text": "what singalong does Ana try to teach the dolphin?",
+      "book_key": "daughter-of-the-deep",
+      "answer": "Hokey Pokey",
+      "page": 121
+    },
+    {
+      "type": "content",
+      "text": "who is the last of the Hardings?",
+      "book_key": "daughter-of-the-deep",
+      "answer": "Ester",
+      "page": 115
+    },
+    {
+      "type": "content",
+      "text": "what is the name of Nemo's ship?",
+      "book_key": "daughter-of-the-deep",
+      "answer": "The Nautilus",
+      "page": 183
+    },
+    {
+      "type": "content",
+      "text": "what language is the inscription on Nemo's ship in?",
+      "book_key": "daughter-of-the-deep",
+      "answer": "Latin",
+      "page": 184
+    },
+    {
+      "type": "content",
+      "text": "what plant is a main food source?",
+      "book_key": "daughter-of-the-deep",
+      "answer": "Macroalgae",
+      "page": 201
+    },
+    {
+      "type": "content",
+      "text": "who is the leader of the Sharks?",
+      "book_key": "daughter-of-the-deep",
+      "answer": "Gem",
+      "page": 220
+    },
+    {
+      "type": "in-which-book",
+      "text": "is there a list called \"How to make twenty freshmen hyperactive?\"",
+      "book_key": "daughter-of-the-deep",
+      "page": 161
+    },
+    {
+      "type": "in-which-book",
+      "text": "does someone play Bach's fugue in D minor?",
+      "book_key": "daughter-of-the-deep",
+      "page": 199
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character read the book The Mysterious Island?",
+      "book_key": "daughter-of-the-deep",
+      "page": 113
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character speak Italian?",
+      "book_key": "daughter-of-the-deep",
+      "page": 144
+    },
+    {
+      "type": "in-which-book",
+      "text": "is there a dog named Top?",
+      "book_key": "daughter-of-the-deep",
+      "page": 86
+    },
+    {
+      "type": "in-which-book",
+      "text": "is there a character with the last name 'Twain?'",
+      "book_key": "daughter-of-the-deep",
+      "page": 22
+    },
+    {
+      "type": "in-which-book",
+      "text": "are people divided into four 'houses?'",
+      "book_key": "daughter-of-the-deep",
+      "page": 3
+    },
+    {
+      "type": "in-which-book",
+      "text": "is there an orangutan?",
+      "book_key": "daughter-of-the-deep",
+      "page": 150
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character communicate in Bundeli?",
+      "book_key": "daughter-of-the-deep",
+      "page": 333
+    },
+    {
+      "type": "in-which-book",
+      "text": "is there a group called \"cephalopod?\"",
+      "book_key": "daughter-of-the-deep",
+      "page": 3
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character quote Eisenhower – Plans are worthless, but planning is everything?",
+      "book_key": "daughter-of-the-deep",
+      "page": 279
+    },
+    {
+      "type": "in-which-book",
+      "text": "do people use dragonfly-shaped drones?",
+      "book_key": "daughter-of-the-deep",
+      "page": 153
+    },
+    {
+      "type": "in-which-book",
+      "text": "does an attack get called a \"landslide\" on the news?",
+      "book_key": "daughter-of-the-deep",
+      "page": 108
+    },
+    {
+      "type": "in-which-book",
+      "text": "is there a keytar?",
+      "book_key": "daughter-of-the-deep",
+      "page": 255
+    },
+    {
+      "type": "in-which-book",
+      "text": "is there a character named Ophelia?",
+      "book_key": "daughter-of-the-deep",
+      "page": 212
+    }
+  ]
+} 
