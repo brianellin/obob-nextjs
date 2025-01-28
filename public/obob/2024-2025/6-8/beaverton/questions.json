@@ -461,6 +461,1517 @@
       "text": "is there a character named Ophelia?",
       "book_key": "daughter-of-the-deep",
       "page": 212
+    },
+    {
+      "type": "content",
+      "text": "what is the name of Sungju's dog?",
+      "book_key": "every-falling-star",
+      "answer": "Bo-Cho",
+      "page": 3
+    },
+    {
+      "type": "content",
+      "text": "what month was Sungju born?",
+      "book_key": "every-falling-star",
+      "answer": "March",
+      "page": 8
+    },
+    {
+      "type": "content",
+      "text": "what is the name of North Korea that the natives refer to it as?",
+      "book_key": "every-falling-star",
+      "answer": "Joseon",
+      "page": 13
+    },
+    {
+      "type": "content",
+      "text": "what kind of martial art does Sungju remember studying?",
+      "book_key": "every-falling-star",
+      "answer": "Tae kwon do",
+      "page": 7
+    },
+    {
+      "type": "content",
+      "text": "what is the significance of July 8, 1994?",
+      "book_key": "every-falling-star",
+      "answer": "It was the day Kim Il-sung (the 'grand leader') died",
+      "page": 10
+    },
+    {
+      "type": "content",
+      "text": "what food does Young-bum give to Sungju when he is starving?",
+      "book_key": "every-falling-star",
+      "answer": "A potato",
+      "page": 85
+    },
+    {
+      "type": "content",
+      "text": "what is the Korean term for a boy who lives on the street?",
+      "book_key": "every-falling-star",
+      "answer": "Kotjebi",
+      "page": 100
+    },
+    {
+      "type": "content",
+      "text": "what is the name of the alcoholic beverage consumed in North Korea?",
+      "book_key": "every-falling-star",
+      "answer": "Sool",
+      "page": 161
+    },
+    {
+      "type": "content",
+      "text": "what country did a lot of North Koreans try to go to?",
+      "book_key": "every-falling-star",
+      "answer": "China",
+      "page": 57
+    },
+    {
+      "type": "content",
+      "text": "what year was North Korea founded?",
+      "book_key": "every-falling-star",
+      "answer": "1948",
+      "page": 6
+    },
+    {
+      "type": "content",
+      "text": "what weapon does Big Brother talk about all of the street kids using?",
+      "book_key": "every-falling-star",
+      "answer": "Nunchakus",
+      "page": 204
+    },
+    {
+      "type": "content",
+      "text": "what does Sungju's father tell the family when they are kicked out of Pyongyang?",
+      "book_key": "every-falling-star",
+      "answer": "That they are going on vacation",
+      "page": 216
+    },
+    {
+      "type": "content",
+      "text": "what kind of fruit do Sungju and his friends plan to steal from the farm called Ilho?",
+      "book_key": "every-falling-star",
+      "answer": "Pears",
+      "page": 220
+    },
+    {
+      "type": "content",
+      "text": "what two foods do they leave on Young-bum's grave?",
+      "book_key": "every-falling-star",
+      "answer": "Potatoes and berries",
+      "page": 250,
+      "two_part": true
+    },
+    {
+      "type": "content",
+      "text": "what is the name of Sungju's gang?",
+      "book_key": "every-falling-star",
+      "answer": "Chang-pa",
+      "page": 251
+    },
+    {
+      "type": "content",
+      "text": "what animal does Sungju's grandfather slaughter for them?",
+      "book_key": "every-falling-star",
+      "answer": "A goat",
+      "page": 265
+    },
+    {
+      "type": "content",
+      "text": "what does Sungju's father tell him that he taught him when he was a child?",
+      "book_key": "every-falling-star",
+      "answer": "Military tactics",
+      "page": 276
+    },
+    {
+      "type": "content",
+      "text": "how old was Sungju when he left North Korea?",
+      "book_key": "every-falling-star",
+      "answer": "Sixteen",
+      "page": 300
+    },
+    {
+      "type": "content",
+      "text": "what does Sungju say he studied at Arizona State University?",
+      "book_key": "every-falling-star",
+      "answer": "English",
+      "page": 305
+    },
+    {
+      "type": "content",
+      "text": "what does 'abeoji' mean?",
+      "book_key": "every-falling-star",
+      "answer": "Grandfather",
+      "page": 12
+    },
+    {
+      "type": "in-which-book",
+      "text": "does someone remember watching a show called Boy General?",
+      "book_key": "every-falling-star",
+      "page": 33
+    },
+    {
+      "type": "in-which-book",
+      "text": "does someone dream about being a general in the army?",
+      "book_key": "every-falling-star",
+      "page": 154
+    },
+    {
+      "type": "in-which-book",
+      "text": "does someone climb a mountain?",
+      "book_key": "every-falling-star",
+      "page": 243
+    },
+    {
+      "type": "in-which-book",
+      "text": "do people live in a train station?",
+      "book_key": "every-falling-star",
+      "page": 244
+    },
+    {
+      "type": "in-which-book",
+      "text": "is the currency 'won?'",
+      "book_key": "every-falling-star",
+      "page": 112
+    },
+    {
+      "type": "in-which-book",
+      "text": "do characters reference a cartoon called Squirrel and Hedgehog?",
+      "book_key": "every-falling-star",
+      "page": 62
+    },
+    {
+      "type": "in-which-book",
+      "text": "do characters hitch a ride on a coal train?",
+      "book_key": "every-falling-star",
+      "page": 160
+    },
+    {
+      "type": "in-which-book",
+      "text": "do characters use a \"double razor trick\" to steal purses?",
+      "book_key": "every-falling-star",
+      "page": 162
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character take the nickname 'Chang' for themself?",
+      "book_key": "every-falling-star",
+      "page": 178
+    },
+    {
+      "type": "in-which-book",
+      "text": "do people store vegetables in an underground cupboard?",
+      "book_key": "every-falling-star",
+      "page": 69
+    },
+    {
+      "type": "content",
+      "text": "what is the name of the plantation that Homer and Ada escape from?",
+      "book_key": "freewater",
+      "answer": "Southerland Plantation",
+      "page": 30
+    },
+    {
+      "type": "content",
+      "text": "what is the \"most important\" day of the year that everyone celebrates in Freewater?",
+      "book_key": "freewater",
+      "answer": "Remembering Day",
+      "page": 118
+    },
+    {
+      "type": "content",
+      "text": "what is Sanzi's prized weapon?",
+      "book_key": "freewater",
+      "answer": "A bow and arrows",
+      "page": 126
+    },
+    {
+      "type": "content",
+      "text": "what kind of bird did Sanzi choose for her swamp sound?",
+      "book_key": "freewater",
+      "answer": "An osprey",
+      "page": 131
+    },
+    {
+      "type": "content",
+      "text": "what instrument does Billy play?",
+      "book_key": "freewater",
+      "answer": "Drums",
+      "page": 119
+    },
+    {
+      "type": "content",
+      "text": "which character is nearly blind?",
+      "book_key": "freewater",
+      "answer": "Mrs. Petunia",
+      "page": 167
+    },
+    {
+      "type": "content",
+      "text": "what kind of flower does Anna use to make a sleeping aid?",
+      "book_key": "freewater",
+      "answer": "Maypop",
+      "page": 253
+    },
+    {
+      "type": "content",
+      "text": "who burns the barn?",
+      "book_key": "freewater",
+      "answer": "Suleman",
+      "page": 139
+    },
+    {
+      "type": "content",
+      "text": "what does Sanzi steal from Ferdinand?",
+      "book_key": "freewater",
+      "answer": "A knife",
+      "page": 222
+    },
+    {
+      "type": "content",
+      "text": "who does Mrs. Crumb send to the market?",
+      "book_key": "freewater",
+      "answer": "Old Joe",
+      "page": 216
+    },
+    {
+      "type": "content",
+      "text": "what does Two Shoes take from the fire pit?",
+      "book_key": "freewater",
+      "answer": "Coal ash",
+      "page": 225
+    },
+    {
+      "type": "content",
+      "text": "who falls off the bridge?",
+      "book_key": "freewater",
+      "answer": "Billy",
+      "page": 247
+    },
+    {
+      "type": "content",
+      "text": "what does Homer find in one of Two Shoes' shoes?",
+      "book_key": "freewater",
+      "answer": "A map to Freewater",
+      "page": 256
+    },
+    {
+      "type": "content",
+      "text": "what does Billy make out of corn husk?",
+      "book_key": "freewater",
+      "answer": "A sash",
+      "page": 259
+    },
+    {
+      "type": "content",
+      "text": "who catches the pig for the wedding feast?",
+      "book_key": "freewater",
+      "answer": "Homer",
+      "page": 265
+    },
+    {
+      "type": "content",
+      "text": "which two characters get married in Freewater?",
+      "book_key": "freewater",
+      "answer": "Daria and Ibra",
+      "page": 264,
+      "two_part": true
+    },
+    {
+      "type": "content",
+      "text": "who disappears after the fire in the field?",
+      "book_key": "freewater",
+      "answer": "Two Shoes",
+      "page": 285
+    },
+    {
+      "type": "content",
+      "text": "who gets bit by a snake?",
+      "book_key": "freewater",
+      "answer": "Adam",
+      "page": 300
+    },
+    {
+      "type": "content",
+      "text": "who does Nora help free?",
+      "book_key": "freewater",
+      "answer": "Rose",
+      "page": 314
+    },
+    {
+      "type": "content",
+      "text": "who cuts a militiaman with a knife?",
+      "book_key": "freewater",
+      "answer": "Sanzi",
+      "page": 369
+    },
+    {
+      "type": "in-which-book",
+      "text": "do they eat cornbread?",
+      "book_key": "freewater",
+      "page": 229
+    },
+    {
+      "type": "in-which-book",
+      "text": "do characters form a memory circle?",
+      "book_key": "freewater",
+      "page": 121
+    },
+    {
+      "type": "in-which-book",
+      "text": "do characters eat berries and acorns?",
+      "book_key": "freewater",
+      "page": 125
+    },
+    {
+      "type": "in-which-book",
+      "text": "is there a sky bridge?",
+      "book_key": "freewater",
+      "page": 129
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character say, \"Fire speaks. It starts out murmuring?\"",
+      "book_key": "freewater",
+      "page": 139
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character use the North Star to navigate?",
+      "book_key": "freewater",
+      "page": 33
+    },
+    {
+      "type": "in-which-book",
+      "text": "do people keep track of time on the trunk of a tree?",
+      "book_key": "freewater",
+      "page": 123
+    },
+    {
+      "type": "in-which-book",
+      "text": "does someone eat ginger root?",
+      "book_key": "freewater",
+      "page": 177
+    },
+    {
+      "type": "in-which-book",
+      "text": "does someone have an octopus-shaped birthmark?",
+      "book_key": "freewater",
+      "page": 45
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character use a slingshot?",
+      "book_key": "freewater",
+      "page": 200
+    },
+    {
+      "type": "content",
+      "text": "what year does the story take place?",
+      "book_key": "inquisitors-tale",
+      "answer": "1242",
+      "page": 2
+    },
+    {
+      "type": "content",
+      "text": "what kind of snake does Gwenforte save baby Jeanne from?",
+      "book_key": "inquisitors-tale",
+      "answer": "An adder",
+      "page": 2
+    },
+    {
+      "type": "content",
+      "text": "what word does Bartholomew use for foreigners?",
+      "book_key": "inquisitors-tale",
+      "answer": "Saracen",
+      "page": 37
+    },
+    {
+      "type": "content",
+      "text": "what does a 'jongleur' do?",
+      "book_key": "inquisitors-tale",
+      "answer": "Juggle and sing songs",
+      "page": 104
+    },
+    {
+      "type": "content",
+      "text": "what is the name of the forest where the foul fiends live?",
+      "book_key": "inquisitors-tale",
+      "answer": "Malesherbes",
+      "page": 43
+    },
+    {
+      "type": "content",
+      "text": "what kind of dog is Gwenforte?",
+      "book_key": "inquisitors-tale",
+      "answer": "Greyhound",
+      "page": 13
+    },
+    {
+      "type": "content",
+      "text": "what is Chrétien's profession?",
+      "book_key": "inquisitors-tale",
+      "answer": "Troubador",
+      "page": 286
+    },
+    {
+      "type": "content",
+      "text": "what does the Wicked One want to take from William?",
+      "book_key": "inquisitors-tale",
+      "answer": "A gold belt",
+      "page": 52
+    },
+    {
+      "type": "content",
+      "text": "what is the name of the knight who tried to fight the dragon in Burgundy?",
+      "book_key": "inquisitors-tale",
+      "answer": "Sir Ewan the Bold",
+      "page": 129
+    },
+    {
+      "type": "content",
+      "text": "what is the church that all of the other great cathedrals were modeled on?",
+      "book_key": "inquisitors-tale",
+      "answer": "Saint-Denis",
+      "page": 160
+    },
+    {
+      "type": "content",
+      "text": "who saves the group from Hubert?",
+      "book_key": "inquisitors-tale",
+      "answer": "Michelangelo di Bologna",
+      "page": 174
+    },
+    {
+      "type": "content",
+      "text": "what book is the collected wisdom of the rabbis?",
+      "book_key": "inquisitors-tale",
+      "answer": "The Talmud",
+      "page": 192
+    },
+    {
+      "type": "content",
+      "text": "what are the silent monks called?",
+      "book_key": "inquisitors-tale",
+      "answer": "Grandmontines",
+      "page": 197
+    },
+    {
+      "type": "content",
+      "text": "where does Gwenforte poop?",
+      "book_key": "inquisitors-tale",
+      "answer": "The fireplace",
+      "page": 232
+    },
+    {
+      "type": "content",
+      "text": "who fights the fiends?",
+      "book_key": "inquisitors-tale",
+      "answer": "William",
+      "page": 53
+    },
+    {
+      "type": "content",
+      "text": "how was Saint Denis martyred?",
+      "book_key": "inquisitors-tale",
+      "answer": "He had his head cut off",
+      "page": 189
+    },
+    {
+      "type": "content",
+      "text": "who bows to the wrong person when the group meets the king?",
+      "book_key": "inquisitors-tale",
+      "answer": "Jeanne",
+      "page": 200
+    },
+    {
+      "type": "content",
+      "text": "who tells the story about the dragon with deadly farts?",
+      "book_key": "inquisitors-tale",
+      "answer": "Gerald the Scot, the chronicler",
+      "page": 125
+    },
+    {
+      "type": "content",
+      "text": "where does Jeanne's mother tell the knights she is hiding?",
+      "book_key": "inquisitors-tale",
+      "answer": "In a dung heap",
+      "page": 23
+    },
+    {
+      "type": "in-which-book",
+      "text": "is there a visit to the street of the bakers?",
+      "book_key": "inquisitors-tale",
+      "page": 254
+    },
+    {
+      "type": "in-which-book",
+      "text": "is there an illustration of a 'great whale?'",
+      "book_key": "inquisitors-tale",
+      "page": 281
+    },
+    {
+      "type": "in-which-book",
+      "text": "is there a hunchback?",
+      "book_key": "inquisitors-tale",
+      "page": 154
+    },
+    {
+      "type": "in-which-book",
+      "text": "is the Holy Nail stolen?",
+      "book_key": "inquisitors-tale",
+      "page": 209
+    },
+    {
+      "type": "in-which-book",
+      "text": "does someone get accused of being possessed?",
+      "book_key": "inquisitors-tale",
+      "page": 59
+    },
+    {
+      "type": "in-which-book",
+      "text": "do characters enjoy a classic meal of French lords?",
+      "book_key": "inquisitors-tale",
+      "page": 134
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character mention the legend of St. George and the dragon?",
+      "book_key": "inquisitors-tale",
+      "page": 194
+    },
+    {
+      "type": "in-which-book",
+      "text": "is there an innkeeper named Clotho?",
+      "book_key": "inquisitors-tale",
+      "page": 316
+    },
+    {
+      "type": "in-which-book",
+      "text": "does someone manage to save five books from burning?",
+      "book_key": "inquisitors-tale",
+      "page": 305
+    },
+    {
+      "type": "in-which-book",
+      "text": "do characters chew leaves to treat burns?",
+      "book_key": "inquisitors-tale",
+      "page": 144
+    },
+    {
+      "type": "in-which-book",
+      "text": "is there an enormous boiled peacock?",
+      "book_key": "inquisitors-tale",
+      "page": 245
+    },
+    {
+      "type": "in-which-book",
+      "text": "is there a character who pronounces 'w' like 'v?'",
+      "book_key": "inquisitors-tale",
+      "page": 153
+    },
+    {
+      "type": "in-which-book",
+      "text": "is there 'yellow goop?'",
+      "book_key": "inquisitors-tale",
+      "page": 148
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a baby get dropped off at a monastery?",
+      "book_key": "inquisitors-tale",
+      "page": 32
+    },
+    {
+      "type": "in-which-book",
+      "text": "does one character ask another if they worship dogs?",
+      "book_key": "inquisitors-tale",
+      "page": 87
+    },
+    {
+      "type": "content",
+      "text": "what grade was Addie in when she planted the tree in her backyard?",
+      "book_key": "lo-and-behold",
+      "answer": "kindergarten",
+      "page": 1
+    },
+    {
+      "type": "content",
+      "text": "what is Addie's dad's job?",
+      "book_key": "lo-and-behold",
+      "answer": "a futurist",
+      "page": 12
+    },
+    {
+      "type": "content",
+      "text": "what is the name of Addie's stuffed tortoise?",
+      "book_key": "lo-and-behold",
+      "answer": "Shelly",
+      "page": 14
+    },
+    {
+      "type": "content",
+      "text": "what is the name of the university where Addie and her father go for the summer?",
+      "book_key": "lo-and-behold",
+      "answer": "Spring Haven University",
+      "page": 29
+    },
+    {
+      "type": "content",
+      "text": "what is the name of the boy who lives next door to Addie and her father at Spring Haven University?",
+      "book_key": "lo-and-behold",
+      "answer": "Mateo",
+      "page": 39
+    },
+    {
+      "type": "content",
+      "text": "what is the mascot of Spring Haven University?",
+      "book_key": "lo-and-behold",
+      "answer": "Bee",
+      "page": 44
+    },
+    {
+      "type": "content",
+      "text": "why did Addie's mom have to get major surgery?",
+      "book_key": "lo-and-behold",
+      "answer": "She fell off her bike",
+      "page": 5
+    },
+    {
+      "type": "content",
+      "text": "what did Addie get to escort to school?",
+      "book_key": "lo-and-behold",
+      "answer": "A Robot student",
+      "page": 12
+    },
+    {
+      "type": "content",
+      "text": "what is the name of the astronaut who conducted an experiment by taking seeds into space?",
+      "book_key": "lo-and-behold",
+      "answer": "Stuart Roosa",
+      "page": 18
+    },
+    {
+      "type": "content",
+      "text": "what song do Addie and her dad sing in the car?",
+      "book_key": "lo-and-behold",
+      "answer": "Girls Just Wanna Have Fun",
+      "page": 22
+    },
+    {
+      "type": "content",
+      "text": "what does the pillow from Addie's parents say?",
+      "book_key": "lo-and-behold",
+      "answer": "Love you to the moon and back",
+      "page": 41
+    },
+    {
+      "type": "content",
+      "text": "what was the name of the tortoise that lived for 250 years?",
+      "book_key": "lo-and-behold",
+      "answer": "Adwaitya",
+      "page": 51
+    },
+    {
+      "type": "content",
+      "text": "what did Mateo have to hold during his mom's lesson on global warming?",
+      "book_key": "lo-and-behold",
+      "answer": "An ice pop",
+      "page": 57
+    },
+    {
+      "type": "content",
+      "text": "what activity do Addie and Mateo do on campus?",
+      "book_key": "lo-and-behold",
+      "answer": "Geocaching",
+      "page": 71
+    },
+    {
+      "type": "content",
+      "text": "what kind of pajamas does Mateo wear?",
+      "book_key": "lo-and-behold",
+      "answer": "Duck",
+      "page": 72
+    },
+    {
+      "type": "content",
+      "text": "what is Addie's geocaching name?",
+      "book_key": "lo-and-behold",
+      "answer": "Tortiebutt-in-space",
+      "page": 75
+    },
+    {
+      "type": "content",
+      "text": "what do Mateo and Addie get from the food truck?",
+      "book_key": "lo-and-behold",
+      "answer": "churros",
+      "page": 76
+    },
+    {
+      "type": "content",
+      "text": "what is Surekha trying to inspire with her VR project?",
+      "book_key": "lo-and-behold",
+      "answer": "Empathy",
+      "page": 83
+    },
+    {
+      "type": "content",
+      "text": "what two things does Addie have to fight in the VR game?",
+      "book_key": "lo-and-behold",
+      "answer": "Ghosts and vegetables",
+      "page": 90,
+      "two_part": true
+    },
+    {
+      "type": "content",
+      "text": "what instrument does Mateo play?",
+      "book_key": "lo-and-behold",
+      "answer": "piano",
+      "page": 157
+    },
+    {
+      "type": "in-which-book",
+      "text": "is a character named after a tortoise?",
+      "book_key": "lo-and-behold",
+      "page": 13
+    },
+    {
+      "type": "in-which-book",
+      "text": "does one character say, \"trust me, I'm always the tortoise?\"",
+      "book_key": "lo-and-behold",
+      "page": 49
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character make a virtual omelet?",
+      "book_key": "lo-and-behold",
+      "page": 104
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character find a tree with a plaque that has a quote from president Gerald Ford?",
+      "book_key": "lo-and-behold",
+      "page": 183
+    },
+    {
+      "type": "in-which-book",
+      "text": "is a character gifted taffy?",
+      "book_key": "lo-and-behold",
+      "page": 191
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character find finger puppets?",
+      "book_key": "lo-and-behold",
+      "page": 74
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character get motion sickness?",
+      "book_key": "lo-and-behold",
+      "page": 15
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character see an eclipse?",
+      "book_key": "lo-and-behold",
+      "page": 203
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character plant a tree?",
+      "book_key": "lo-and-behold",
+      "page": 205
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character get to experience augmented reality?",
+      "book_key": "lo-and-behold",
+      "page": 45
+    },
+    {
+      "type": "in-which-book",
+      "text": "do people play hacky sack?",
+      "book_key": "lo-and-behold",
+      "page": 34
+    },
+    {
+      "type": "in-which-book",
+      "text": "does someone create an avatar for themselves?",
+      "book_key": "lo-and-behold",
+      "page": 117
+    },
+    {
+      "type": "in-which-book",
+      "text": "does someone have a project about plastic pollution in the ocean?",
+      "book_key": "lo-and-behold",
+      "page": 69
+    },
+    {
+      "type": "in-which-book",
+      "text": "does someone play a game where they herd cats?",
+      "book_key": "lo-and-behold",
+      "page": 102
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character have an action figure of the first girl to join the Teenage Mutant Ninja Turtles?",
+      "book_key": "lo-and-behold",
+      "page": 14
+    },
+    {
+      "type": "content",
+      "text": "where was the center of the galaxy?",
+      "book_key": "losers-at-the-center-of-the-galaxy",
+      "answer": "At the fifty-yard line",
+      "page": 1
+    },
+    {
+      "type": "content",
+      "text": "who gave the owner of Chicago Horribles a nosebleed for making a terrible joke?",
+      "book_key": "losers-at-the-center-of-the-galaxy",
+      "answer": "Louise",
+      "page": 9
+    },
+    {
+      "type": "content",
+      "text": "what first song did Winston play when he was assigned the tuba?",
+      "book_key": "losers-at-the-center-of-the-galaxy",
+      "answer": "Darth Vader's theme song",
+      "page": 11
+    },
+    {
+      "type": "content",
+      "text": "how many years passed since Winston and Louise's dad disappeared?",
+      "book_key": "losers-at-the-center-of-the-galaxy",
+      "answer": "Two",
+      "page": 12
+    },
+    {
+      "type": "content",
+      "text": "what did Winston name his tuba?",
+      "book_key": "losers-at-the-center-of-the-galaxy",
+      "answer": "The Lonesome",
+      "page": 16
+    },
+    {
+      "type": "content",
+      "text": "who was the only other person that knew Winston named his Tuba?",
+      "book_key": "losers-at-the-center-of-the-galaxy",
+      "answer": "Frenchie",
+      "page": 19
+    },
+    {
+      "type": "content",
+      "text": "what suspicious thing did Frenchie think the teachers were involved with?",
+      "book_key": "losers-at-the-center-of-the-galaxy",
+      "answer": "Being in a criminal ring",
+      "page": 21
+    },
+    {
+      "type": "content",
+      "text": "what was Tib's favorite joke of Louise?",
+      "book_key": "losers-at-the-center-of-the-galaxy",
+      "answer": "The Mad Scientist",
+      "page": 31
+    },
+    {
+      "type": "content",
+      "text": "what was Louise working on a cure for?",
+      "book_key": "losers-at-the-center-of-the-galaxy",
+      "answer": "Brain injuries",
+      "page": 35
+    },
+    {
+      "type": "content",
+      "text": "how long was the walk to school from Winston and Louise's house?",
+      "book_key": "losers-at-the-center-of-the-galaxy",
+      "answer": "A five-block walk",
+      "page": 44
+    },
+    {
+      "type": "content",
+      "text": "who's face was on all the school papers as a prank?",
+      "book_key": "losers-at-the-center-of-the-galaxy",
+      "answer": "Brian Dolph",
+      "page": 55
+    },
+    {
+      "type": "content",
+      "text": "what lake was the Chicago Horribles stadium right next to?",
+      "book_key": "losers-at-the-center-of-the-galaxy",
+      "answer": "Lake Michigan",
+      "page": 61
+    },
+    {
+      "type": "content",
+      "text": "who was head of security for the Chicago Horribles?",
+      "book_key": "losers-at-the-center-of-the-galaxy",
+      "answer": "Tybalt Rawls",
+      "page": 71
+    },
+    {
+      "type": "content",
+      "text": "what game did Frenchie associate with the teachers?",
+      "book_key": "losers-at-the-center-of-the-galaxy",
+      "answer": "Sardines",
+      "page": 95
+    },
+    {
+      "type": "content",
+      "text": "what fruit did Winston compare mysteries to?",
+      "book_key": "losers-at-the-center-of-the-galaxy",
+      "answer": "Pineapples",
+      "page": 110
+    },
+    {
+      "type": "content",
+      "text": "what was the inscription that was written on the side of the truck that carried the bear?",
+      "book_key": "losers-at-the-center-of-the-galaxy",
+      "answer": "Mr. Elegant's Exotic Animals",
+      "page": 115
+    },
+    {
+      "type": "content",
+      "text": "what terrible thing happened to Winston and Frenchie's tubas?",
+      "book_key": "losers-at-the-center-of-the-galaxy",
+      "answer": "They were pushed off the roof",
+      "page": 120
+    },
+    {
+      "type": "content",
+      "text": "what did Frenchie do for the destroyed tubas?",
+      "book_key": "losers-at-the-center-of-the-galaxy",
+      "answer": "Throw a funeral",
+      "page": 163
+    },
+    {
+      "type": "content",
+      "text": "how old was Louise when her dad left?",
+      "book_key": "losers-at-the-center-of-the-galaxy",
+      "answer": "Nine",
+      "page": 187
+    },
+    {
+      "type": "content",
+      "text": "what was a marching tuba called?",
+      "book_key": "losers-at-the-center-of-the-galaxy",
+      "answer": "A Sousaphone",
+      "page": 190
+    },
+    {
+      "type": "in-which-book",
+      "text": "does two characters' dad go missing?",
+      "book_key": "losers-at-the-center-of-the-galaxy",
+      "page": 4
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character invents a song to the tune of the Imperial March?",
+      "book_key": "losers-at-the-center-of-the-galaxy",
+      "page": 12
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character lose their skin pigment in the sun without pattern or reason?",
+      "book_key": "losers-at-the-center-of-the-galaxy",
+      "page": 19
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character has an instrument named The Canary?",
+      "book_key": "losers-at-the-center-of-the-galaxy",
+      "page": 20
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character invent a mysterious glowing substance called G.L.O.P?",
+      "book_key": "losers-at-the-center-of-the-galaxy",
+      "page": 40
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character vandalize a football team's helmets?",
+      "book_key": "losers-at-the-center-of-the-galaxy",
+      "page": 65
+    },
+    {
+      "type": "in-which-book",
+      "text": "do two characters sneak in on a teacher's meeting?",
+      "book_key": "losers-at-the-center-of-the-galaxy",
+      "page": 97
+    },
+    {
+      "type": "in-which-book",
+      "text": "do protestors protest the bondage of a bear?",
+      "book_key": "losers-at-the-center-of-the-galaxy",
+      "page": 113
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character bake cookies attempting to raise money?",
+      "book_key": "losers-at-the-center-of-the-galaxy",
+      "page": 132
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character attempt to take a dance class instead of music?",
+      "book_key": "losers-at-the-center-of-the-galaxy",
+      "page": 162
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character put out a fire that started in the kitchen?",
+      "book_key": "losers-at-the-center-of-the-galaxy",
+      "page": 187
+    },
+    {
+      "type": "in-which-book",
+      "text": "does two characters meet a celebrity singer accidentally?",
+      "book_key": "losers-at-the-center-of-the-galaxy",
+      "page": 199
+    },
+    {
+      "type": "in-which-book",
+      "text": "do teachers get involved with a singer's choreography?",
+      "book_key": "losers-at-the-center-of-the-galaxy",
+      "page": 208
+    },
+    {
+      "type": "in-which-book",
+      "text": "is a science teacher the aunt of a popular singer?",
+      "book_key": "losers-at-the-center-of-the-galaxy",
+      "page": 215
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character give a bear cookies to move it to safety?",
+      "book_key": "losers-at-the-center-of-the-galaxy",
+      "page": 266
+    },
+    {
+      "type": "content",
+      "text": "what kind of drill does Etan's school make the kids do each week?",
+      "book_key": "magical-imperfect",
+      "answer": "Earthquake",
+      "page": 1
+    },
+    {
+      "type": "content",
+      "text": "what job does Etan's father work?",
+      "book_key": "magical-imperfect",
+      "answer": "A builder",
+      "page": 3
+    },
+    {
+      "type": "content",
+      "text": "what was Etan's favorite ice cream flavor?",
+      "book_key": "magical-imperfect",
+      "answer": "Rocky Road",
+      "page": 4
+    },
+    {
+      "type": "content",
+      "text": "what did Etan's mother say the city's heart was?",
+      "book_key": "magical-imperfect",
+      "answer": "The hospital",
+      "page": 5
+    },
+    {
+      "type": "content",
+      "text": "what street has the oldest shops in Ship's Haven?",
+      "book_key": "magical-imperfect",
+      "answer": "Main Street",
+      "page": 7
+    },
+    {
+      "type": "content",
+      "text": "what is Etan's favorite errand to do for his neighbor?",
+      "book_key": "magical-imperfect",
+      "answer": "Walking the dog",
+      "page": 21
+    },
+    {
+      "type": "content",
+      "text": "how many years has it been since Etan's grandfather came Angel Island?",
+      "book_key": "magical-imperfect",
+      "answer": "Fifty years",
+      "page": 32
+    },
+    {
+      "type": "content",
+      "text": "what made a terrible monster that aided the Jewish people in times of need?",
+      "book_key": "magical-imperfect",
+      "answer": "The clay of the golem",
+      "page": 36
+    },
+    {
+      "type": "content",
+      "text": "what is also known as an emerald?",
+      "book_key": "magical-imperfect",
+      "answer": "Baraket",
+      "page": 75
+    },
+    {
+      "type": "content",
+      "text": "where did Etan learn that plants can sense vibrations?",
+      "book_key": "magical-imperfect",
+      "answer": "A field trip to Golden State Park",
+      "page": 88
+    },
+    {
+      "type": "content",
+      "text": "what is the name of the fluffy, bread rolls baked with cheese or raisins?",
+      "book_key": "magical-imperfect",
+      "answer": "Pandesal",
+      "page": 101
+    },
+    {
+      "type": "content",
+      "text": "what food did Malia request Etan to bring her?",
+      "book_key": "magical-imperfect",
+      "answer": "A pumpkin",
+      "page": 51
+    },
+    {
+      "type": "content",
+      "text": "what does Etan's grandfather use to heal his injury?",
+      "book_key": "magical-imperfect",
+      "answer": "Clay from the Holy land",
+      "page": 113
+    },
+    {
+      "type": "content",
+      "text": "who was the rabbi at Etan's church?",
+      "book_key": "magical-imperfect",
+      "answer": "Rabbi Rosenthal",
+      "page": 123
+    },
+    {
+      "type": "content",
+      "text": "where did Etan's family go to see the ball game?",
+      "book_key": "magical-imperfect",
+      "answer": "Candlestick Park",
+      "page": 149
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character refuse to speak?",
+      "book_key": "magical-imperfect",
+      "page": 3
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character's mom is in the hospital and needs to get treatment for her illness?",
+      "book_key": "magical-imperfect",
+      "page": 4
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character threw pennies in a fountain surrounded by rose bushes?",
+      "book_key": "magical-imperfect",
+      "page": 5
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character say that the \"Shabaat candles makes them Jews?\"",
+      "book_key": "magical-imperfect",
+      "page": 12
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character work at a jewelry shop?",
+      "book_key": "magical-imperfect",
+      "page": 13
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character call the fountain by the library \"the Lion of Wisdom?\"",
+      "book_key": "magical-imperfect",
+      "page": 42
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character play tic-tac-toe through a doorway?",
+      "book_key": "magical-imperfect",
+      "page": 51
+    },
+    {
+      "type": "in-which-book",
+      "text": "is a character the daughter of a really good inventor?",
+      "book_key": "magical-imperfect",
+      "page": 107
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character use an emerald gem to help them speak?",
+      "book_key": "magical-imperfect",
+      "page": 75
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character try to heal their sick friend?",
+      "book_key": "magical-imperfect",
+      "page": 132
+    },
+    {
+      "type": "in-which-book",
+      "text": "is a character allergic to dogs?",
+      "book_key": "magical-imperfect",
+      "page": 134
+    },
+    {
+      "type": "in-which-book",
+      "text": "is a character really good at singing?",
+      "book_key": "magical-imperfect",
+      "page": 139
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character meet their friend at a baseball game?",
+      "book_key": "magical-imperfect",
+      "page": 151
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character signs up for a talent contest?",
+      "book_key": "magical-imperfect",
+      "page": 156
+    },
+    {
+      "type": "in-which-book",
+      "text": "does the baseball team Giants win the big game?",
+      "book_key": "magical-imperfect",
+      "page": 174
+    },
+    {
+      "type": "content",
+      "text": "what does Sunny say she dreamed about while in the hospital?",
+      "book_key": "mighty-heart",
+      "answer": "Mermaids",
+      "page": 20
+    },
+    {
+      "type": "content",
+      "text": "what band does Sunny like?",
+      "book_key": "mighty-heart",
+      "answer": "Truth Lies Low",
+      "page": 23
+    },
+    {
+      "type": "content",
+      "text": "what does Sunny call her plan?",
+      "book_key": "mighty-heart",
+      "answer": "New Life",
+      "page": 38
+    },
+    {
+      "type": "content",
+      "text": "what is Quinn's mom's job?",
+      "book_key": "mighty-heart",
+      "answer": "Underwater photographer",
+      "page": 54
+    },
+    {
+      "type": "content",
+      "text": "what is step 3 of Sunny's plan?",
+      "book_key": "mighty-heart",
+      "answer": "Find a boy and kiss him",
+      "page": 72
+    },
+    {
+      "type": "content",
+      "text": "what does Sam call \"water roaches?\"",
+      "book_key": "mighty-heart",
+      "answer": "Shrimp",
+      "page": 124
+    },
+    {
+      "type": "content",
+      "text": "what food does Margot describe as \"sponges soaked in grease?\"",
+      "book_key": "mighty-heart",
+      "answer": "Funnel cakes",
+      "page": 76
+    },
+    {
+      "type": "content",
+      "text": "how did Sunny's dad die?",
+      "book_key": "mighty-heart",
+      "answer": "Motorcycle accident",
+      "page": 119
+    },
+    {
+      "type": "content",
+      "text": "whose nose does Sunny accidentally break?",
+      "book_key": "mighty-heart",
+      "answer": "Sam",
+      "page": 126
+    },
+    {
+      "type": "content",
+      "text": "what is Sunny's legal first name?",
+      "book_key": "mighty-heart",
+      "answer": "Sunshine",
+      "page": 135
+    },
+    {
+      "type": "content",
+      "text": "what is the title of the book at the bookstore that Sunny sticks one of her songs into?",
+      "book_key": "mighty-heart",
+      "answer": "Hello, Universe",
+      "page": 152
+    },
+    {
+      "type": "content",
+      "text": "what is the name of the album that Lena recorded?",
+      "book_key": "mighty-heart",
+      "answer": "Shallows",
+      "page": 164
+    },
+    {
+      "type": "content",
+      "text": "what state did Lena live in when she started surfing?",
+      "book_key": "mighty-heart",
+      "answer": "New York",
+      "page": 178
+    },
+    {
+      "type": "content",
+      "text": "what instrument did Sunny's dad play on Lena's album?",
+      "book_key": "mighty-heart",
+      "answer": "Drums",
+      "page": 176
+    },
+    {
+      "type": "content",
+      "text": "what is the name of the heart condition that Sunny has?",
+      "book_key": "mighty-heart",
+      "answer": "Dilated cardiomyopathy",
+      "page": 196
+    },
+    {
+      "type": "content",
+      "text": "what statue does Sunny climb on?",
+      "book_key": "mighty-heart",
+      "answer": "The humpback whale sculpture",
+      "page": 197
+    },
+    {
+      "type": "content",
+      "text": "what does Sunny hide around the island?",
+      "book_key": "mighty-heart",
+      "answer": "Poems",
+      "page": 228
+    },
+    {
+      "type": "content",
+      "text": "what color does Sunny dye her hair?",
+      "book_key": "mighty-heart",
+      "answer": "Aquamarine",
+      "page": 257
+    },
+    {
+      "type": "content",
+      "text": "what is Quinn's full name?",
+      "book_key": "mighty-heart",
+      "answer": "Quinn Rios Rivera",
+      "page": 260
+    },
+    {
+      "type": "content",
+      "text": "what is the name of Sunny's sister?",
+      "book_key": "mighty-heart",
+      "answer": "Samaira",
+      "page": 333
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character drink Ensure?",
+      "book_key": "mighty-heart",
+      "page": 37
+    },
+    {
+      "type": "in-which-book",
+      "text": "is someone's mom an underwater photographer?",
+      "book_key": "mighty-heart",
+      "page": 54
+    },
+    {
+      "type": "in-which-book",
+      "text": "does someone mix popcorn with M&Ms?",
+      "book_key": "mighty-heart",
+      "page": 67
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character read the Lumberjanes comic book?",
+      "book_key": "mighty-heart",
+      "page": 201
+    },
+    {
+      "type": "in-which-book",
+      "text": "is the main character's parent an alcoholic?",
+      "book_key": "mighty-heart",
+      "page": 171
+    },
+    {
+      "type": "in-which-book",
+      "text": "is someone given the advice, \"never kiss someone who doesn't ask?\"",
+      "book_key": "mighty-heart",
+      "page": 144
+    },
+    {
+      "type": "in-which-book",
+      "text": "does someone run a bookstore called \"Cherry Picked Books?\"",
+      "book_key": "mighty-heart",
+      "page": 23
+    },
+    {
+      "type": "in-which-book",
+      "text": "does someone go on a \"kissing quest?\"",
+      "book_key": "mighty-heart",
+      "page": 129
+    },
+    {
+      "type": "in-which-book",
+      "text": "does the main character put on \"black stomping boots?\"",
+      "book_key": "mighty-heart",
+      "page": 362
+    },
+    {
+      "type": "in-which-book",
+      "text": "do characters make s'mores?",
+      "book_key": "mighty-heart",
+      "page": 366
+    },
+    {
+      "type": "in-which-book",
+      "text": "do they celebrate the 4th of July with a bonfire?",
+      "book_key": "mighty-heart",
+      "page": 361
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character spend time in the Port Hope Children's Hospital?",
+      "book_key": "mighty-heart",
+      "page": 19
+    },
+    {
+      "type": "in-which-book",
+      "text": "do characters apply suntan lotion?",
+      "book_key": "mighty-heart",
+      "page": 37
+    },
+    {
+      "type": "in-which-book",
+      "text": "does the main character put a poem in a bottle?",
+      "book_key": "mighty-heart",
+      "page": 45
+    },
+    {
+      "type": "in-which-book",
+      "text": "is there a character from Puerto Rico?",
+      "book_key": "mighty-heart",
+      "page": 53
     }
   ]
 } 

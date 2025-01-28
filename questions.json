@@ -1,0 +1,241 @@
+{
+  "questions": [
+    {
+      "type": "in-which-book",
+      "text": "is there a character from puerto rico?",
+      "book_key": "mighty-heart",
+      "page": 53
+    },
+    {
+      "type": "content",
+      "text": "what creature swallowed up kiranmala's parents?",
+      "book_key": "serpents-secret",
+      "answer": "Rakkhosh",
+      "page": 1
+    },
+    {
+      "type": "content",
+      "text": "who was supposed to be kiranmala's archnemesis?",
+      "book_key": "serpents-secret",
+      "answer": "Jovi",
+      "page": 2
+    },
+    {
+      "type": "content",
+      "text": "what kind of birthday would kiranmala always have?",
+      "book_key": "serpents-secret",
+      "answer": "A Halloween birthday",
+      "page": 2
+    },
+    {
+      "type": "content",
+      "text": "what were the two sweets that kiranmala's mother liked to make for the trick-or-treaters?",
+      "book_key": "serpents-secret",
+      "answer": "Rasagollas and Sandesh",
+      "page": 14,
+      "two_part": true
+    },
+    {
+      "type": "content",
+      "text": "what kingdom were lal and neel from?",
+      "book_key": "serpents-secret",
+      "answer": "The Kingdom Beyond Seven Oceans and Thirteen Rivers",
+      "page": 27
+    },
+    {
+      "type": "content",
+      "text": "what mountain was known as the mountain of concentration?",
+      "book_key": "serpents-secret",
+      "answer": "Mandhara",
+      "page": 59
+    },
+    {
+      "type": "content",
+      "text": "which school did kiran go to?",
+      "book_key": "serpents-secret",
+      "answer": "Alexander Hamilton Middle School",
+      "page": 66
+    },
+    {
+      "type": "content",
+      "text": "what was the answer to the transit officer's last riddle?",
+      "book_key": "serpents-secret",
+      "answer": "Salt",
+      "page": 71
+    },
+    {
+      "type": "content",
+      "text": "what did kiran eat at the marketplace when she first arrived?",
+      "book_key": "serpents-secret",
+      "answer": "Kati rolls",
+      "page": 80
+    },
+    {
+      "type": "content",
+      "text": "who was known as \"the purveyor of the shadows?\"",
+      "book_key": "serpents-secret",
+      "answer": "Chhaya Devi",
+      "page": 92
+    },
+    {
+      "type": "content",
+      "text": "what was a type of flying horse also called?",
+      "book_key": "serpents-secret",
+      "answer": "Pakkhiraj",
+      "page": 102
+    },
+    {
+      "type": "content",
+      "text": "what object did mati and lal turn into?",
+      "book_key": "serpents-secret",
+      "answer": "Glowing spheres",
+      "page": 128
+    },
+    {
+      "type": "content",
+      "text": "who was kiran's biological father?",
+      "book_key": "serpents-secret",
+      "answer": "The serpent king of the underworld",
+      "page": 130
+    },
+    {
+      "type": "content",
+      "text": "what are three ways to uncover an invisible moving map?",
+      "book_key": "serpents-secret",
+      "answer": "Blow a powder made from ground-up rakkhosh bones, dip the map in the waters from the River Jogai, and look at it through the prism of a python jewel",
+      "page": 169
+    },
+    {
+      "type": "content",
+      "text": "what creatures were similar to the rakkhosh but not as smart?",
+      "book_key": "serpents-secret",
+      "answer": "Khokkosh",
+      "page": 241
+    },
+    {
+      "type": "content",
+      "text": "what did neel call his grandma?",
+      "book_key": "serpents-secret",
+      "answer": "Ai-Ma",
+      "page": 251
+    },
+    {
+      "type": "content",
+      "text": "who was the first human to predict dark matter?",
+      "book_key": "serpents-secret",
+      "answer": "Albert Einstein",
+      "page": 274
+    },
+    {
+      "type": "content",
+      "text": "what was the name of the baby rakkhosh that was morn at the new moon?",
+      "book_key": "serpents-secret",
+      "answer": "Bogli",
+      "page": 293
+    },
+    {
+      "type": "content",
+      "text": "which one of kiran's family members is related to the stable master?",
+      "book_key": "serpents-secret",
+      "answer": "Kiran's adoptive mother",
+      "page": 301
+    },
+    {
+      "type": "content",
+      "text": "what was the name of kiran's brothers?",
+      "book_key": "serpents-secret",
+      "answer": "Naga",
+      "page": 214
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character fight a demon in new jersey?",
+      "book_key": "serpents-secret",
+      "page": 1
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character own a quickie mart for their job?",
+      "book_key": "serpents-secret",
+      "page": 2
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character get saved by two princes?",
+      "book_key": "serpents-secret",
+      "page": 30
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character have to answer riddles in order to pass onto the next world?",
+      "book_key": "serpents-secret",
+      "page": 54
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character accidentally let in a horrible creature into a palace?",
+      "book_key": "serpents-secret",
+      "page": 133
+    },
+    {
+      "type": "in-which-book",
+      "text": "is a character related to snakes?",
+      "book_key": "serpents-secret",
+      "page": 141
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character make sweets for the king to eat?",
+      "book_key": "serpents-secret",
+      "page": 152
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character spill soda and reveal a hidden map?",
+      "book_key": "serpents-secret",
+      "page": 171
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character slide down the back of a snake?",
+      "book_key": "serpents-secret",
+      "page": 200
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character heal a bird?",
+      "book_key": "serpents-secret",
+      "page": 223
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character have to pretend to be a demon to cross the land?",
+      "book_key": "serpents-secret",
+      "page": 243
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character teach a class of literal stars?",
+      "book_key": "serpents-secret",
+      "page": 265
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character save their parents by throwing rubies in a well?",
+      "book_key": "serpents-secret",
+      "page": 286
+    },
+    {
+      "type": "in-which-book",
+      "text": "is a character the daughter of the moon?",
+      "book_key": "serpents-secret",
+      "page": 233
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character make funny puns and jokes?",
+      "book_key": "serpents-secret",
+      "page": 114
+    }
+  ]
+} 
