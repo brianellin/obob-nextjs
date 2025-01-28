@@ -4,6 +4,11 @@
       "path": "tabor-middle/questions.json",
       "name": "OBOB Practice-Question Coalition",
       "link": null
+    },
+    {
+      "path": "lake-oswego/questions.json",
+      "name": "Lake Oswego Public Library",
+      "link": "https://www.ci.oswego.or.us/kids/obob-practice-questions"
     }
   ]
 }
