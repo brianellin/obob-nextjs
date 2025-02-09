@@ -81,7 +81,7 @@ export default function Home() {
 
       <section className="max-w-2xl mx-auto space-y-4 mb-8 mt-4">
         {division === "3-5" && (
-          <Alert>
+          <Alert className="bg-gradient-to-br from-gray-100 to-gray-50 border-0 shadow-lg">
             <Megaphone className="h-6 w-6" />
             <AlertTitle className="ml-2">New Questions Alert</AlertTitle>
             <AlertDescription className="ml-2">
