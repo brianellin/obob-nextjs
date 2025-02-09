@@ -1,9 +1,10 @@
 "use client";
-import { BookOpen, Dog, Zap } from "lucide-react";
+import { BookOpen, Dog, Info, Zap, Megaphone } from "lucide-react";
 import ModeSelection from "@/components/ModeSelection";
 import { WavyUnderline } from "@/components/WavyUnderline";
 import Link from "next/link";
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { useState } from "react";
 
 export default function Home() {
@@ -63,7 +64,7 @@ export default function Home() {
             <Zap className="h-6 w-6 text-muted-foreground" />
             <div>
               <p className="text-2xl font-bold">
-                {division === "6-8" ? "3,820" : "3,851"}
+                {division === "6-8" ? "3,820" : "4,365"}
               </p>
               <p className="text-sm text-muted-foreground">Questions</p>
             </div>
@@ -76,6 +77,19 @@ export default function Home() {
             </div>
           </div>
         </div>
+      </section>
+
+      <section className="max-w-2xl mx-auto space-y-4 mb-8 mt-4">
+        {division === "3-5" && (
+          <Alert>
+            <Megaphone className="h-6 w-6" />
+            <AlertTitle className="ml-2">New Questions Alert</AlertTitle>
+            <AlertDescription className="ml-2">
+              We just added 514 new questions from Beaverton City Library for
+              the 3-5 division. Enjoy!
+            </AlertDescription>
+          </Alert>
+        )}
       </section>
 
       <ModeSelection year={year} division={division} />
