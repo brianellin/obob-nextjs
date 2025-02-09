@@ -14,6 +14,11 @@
       "path": "glencoe/questions.json",
       "name": "OBOB Practice-Question Coalition",
       "link": null
+    },
+    {
+      "path": "beaverton/questions.json",
+      "name": "Beaverton City Library",
+      "link": "https://www.beavertonlibrary.org/370/Oregon-Battle-of-the-Books"
     }
   ]
 } 
