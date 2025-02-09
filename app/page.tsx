@@ -1,5 +1,5 @@
 "use client";
-import { BookOpen, Dog, Info, Zap, Megaphone } from "lucide-react";
+import { BookOpen, Dog, Zap, Megaphone } from "lucide-react";
 import ModeSelection from "@/components/ModeSelection";
 import { WavyUnderline } from "@/components/WavyUnderline";
 import Link from "next/link";
