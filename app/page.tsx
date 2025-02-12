@@ -79,19 +79,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="max-w-2xl mx-auto space-y-4 mb-8 mt-4">
-        {division === "3-5" && (
-          <Alert className="bg-gradient-to-br from-gray-100 to-gray-50 border-0 shadow-lg">
-            <Megaphone className="h-6 w-6" />
-            <AlertTitle className="ml-2">New Questions Alert</AlertTitle>
-            <AlertDescription className="ml-2">
-              We just added 514 new questions from Beaverton City Library for
-              the 3-5 division. Enjoy!
-            </AlertDescription>
-          </Alert>
-        )}
-      </section>
-
       <ModeSelection year={year} division={division} />
     </main>
   );
