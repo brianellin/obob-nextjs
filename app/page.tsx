@@ -1,10 +1,9 @@
 "use client";
-import { BookOpen, Dog, Zap, Megaphone } from "lucide-react";
+import { BookOpen, Dog, Zap } from "lucide-react";
 import ModeSelection from "@/components/ModeSelection";
 import { WavyUnderline } from "@/components/WavyUnderline";
 import Link from "next/link";
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
-import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { useState } from "react";
 
 export default function Home() {
