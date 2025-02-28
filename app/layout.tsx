@@ -4,7 +4,6 @@ import { Inter } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Analytics } from "@vercel/analytics/react";
-import SurveyBanner from "@/components/SurveyBanner";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -30,7 +29,6 @@ export default function RootLayout({
         />
       </head>
       <body className={inter.className}>
-        <SurveyBanner />
         <Header />
         <main className="container mx-auto px-2 py-2">{children}</main>
         <Footer />

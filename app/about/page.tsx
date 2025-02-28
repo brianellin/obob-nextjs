@@ -142,6 +142,40 @@ export default function AboutPage() {
             </Button>
           </CardContent>
         </Card>
+
+        <Card>
+          <CardHeader className="flex flex-row items-center gap-2">
+            <CardTitle>Privacy Policy</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p className="leading-7 mb-4">
+              OBOB.dog values the privacy of its users, especially our unique
+              audience of students studying for Oregon Battle of the Books.
+            </p>
+            <p className="leading-7 mb-4">
+              We&apos;ve designed the site to be COPPA compliant with the
+              following principles:
+            </p>
+            <ul className="my-4 ml-6 list-disc [&>li]:mt-2 text-slate-700">
+              <li>
+                OBOB.dog is a read-only with no login or signup required for
+                use.
+              </li>
+              <li>
+                There are no forms and we do not collect personal data of any
+                kind.
+              </li>
+              <li>
+                All questions have been written and reviewed by parent OBOB
+                volunteers and reviewed for safety.
+              </li>
+            </ul>
+            <p className="leading-7 text-slate-700 italic">
+              We&apos;re committed to providing a safe, private learning
+              environment for all OBOB participants.
+            </p>
+          </CardContent>
+        </Card>
       </div>
     </div>
   );
