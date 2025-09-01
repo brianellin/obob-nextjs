@@ -1,0 +1,100 @@
+{
+  "books": {
+    "all-my-rage": {
+      "book_key": "all-my-rage",
+      "title": "All My Rage",
+      "author": "Sabaa Tahir",
+      "cover": "/covers/2025-2026/9-12/all-my-rage.jpg",
+      "obob_division": "9-12",
+      "obob_year": "2025-2026"
+    },
+    "an-appetite-for-miracles": {
+      "book_key": "an-appetite-for-miracles",
+      "title": "An Appetite for Miracles",
+      "author": "Laekan Zea Kemp",
+      "cover": "/covers/2025-2026/9-12/an-appetite-for-miracles.jpg",
+      "obob_division": "9-12",
+      "obob_year": "2025-2026"
+    },
+    "cemetery-boys": {
+      "book_key": "cemetery-boys",
+      "title": "Cemetery Boys",
+      "author": "Aiden Thomas",
+      "cover": "/covers/2025-2026/9-12/cemetery-boys.jpg",
+      "obob_division": "9-12",
+      "obob_year": "2025-2026"
+    },
+    "a-crane-among-wolves": {
+      "book_key": "a-crane-among-wolves",
+      "title": "A Crane Among Wolves",
+      "author": "June Hur",
+      "cover": "/covers/2025-2026/9-12/a-crane-among-wolves.jpg",
+      "obob_division": "9-12",
+      "obob_year": "2025-2026"
+    },
+    "dragon-hoops": {
+      "book_key": "dragon-hoops",
+      "title": "Dragon Hoops",
+      "author": "Gene Luen Yang",
+      "cover": "/covers/2025-2026/9-12/dragon-hoops.jpg",
+      "obob_division": "9-12",
+      "obob_year": "2025-2026"
+    },
+    "legends-and-lattes": {
+      "book_key": "legends-and-lattes",
+      "title": "Legends & Lattes",
+      "author": "Travis Baldree",
+      "cover": "/covers/2025-2026/9-12/legends-and-lattes.jpg",
+      "obob_division": "9-12",
+      "obob_year": "2025-2026"
+    },
+    "promise-boys": {
+      "book_key": "promise-boys",
+      "title": "Promise Boys",
+      "author": "Nick Brooks",
+      "cover": "/covers/2025-2026/9-12/promise-boys.jpg",
+      "obob_division": "9-12",
+      "obob_year": "2025-2026"
+    },
+    "seven-percent-of-ro-devereux": {
+      "book_key": "seven-percent-of-ro-devereux",
+      "title": "Seven Percent of Ro Devereux",
+      "author": "Ellen O'Clover",
+      "cover": "/covers/2025-2026/9-12/seven-percent-of-ro-devereux.jpg",
+      "obob_division": "9-12",
+      "obob_year": "2025-2026"
+    },
+    "ship-breaker": {
+      "book_key": "ship-breaker",
+      "title": "Ship Breaker",
+      "author": "Paolo Bacigalupi",
+      "cover": "/covers/2025-2026/9-12/ship-breaker.jpg",
+      "obob_division": "9-12",
+      "obob_year": "2025-2026"
+    },
+    "six-crimson-cranes": {
+      "book_key": "six-crimson-cranes",
+      "title": "Six Crimson Cranes",
+      "author": "Elizabeth Lim",
+      "cover": "/covers/2025-2026/9-12/six-crimson-cranes.jpg",
+      "obob_division": "9-12",
+      "obob_year": "2025-2026"
+    },
+    "the-sunbearer-trials": {
+      "book_key": "the-sunbearer-trials",
+      "title": "The Sunbearer Trials",
+      "author": "Aiden Thomas",
+      "cover": "/covers/2025-2026/9-12/the-sunbearer-trials.jpg",
+      "obob_division": "9-12",
+      "obob_year": "2025-2026"
+    },
+    "when-we-make-it": {
+      "book_key": "when-we-make-it",
+      "title": "When We Make It",
+      "author": "Elisabet Velasquez",
+      "cover": "/covers/2025-2026/9-12/when-we-make-it.jpg",
+      "obob_division": "9-12",
+      "obob_year": "2025-2026"
+    }
+  }
+}

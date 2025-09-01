@@ -118,7 +118,9 @@ export default function BookSelection({
             <WavyUnderline style={0} thickness={4} color="text-lime-400">
               {division === "3-5"
                 ? "Elementary Battle!"
-                : "Middle School Battle!"}
+                : division === "6-8"
+                ? "Middle School Battle!"
+                : "High School Battle!"}
             </WavyUnderline>
           </CardTitle>
         </CardHeader>

@@ -22,6 +22,7 @@ export function generateStaticParams() {
     { year: "2024-2025", division: "6-8" },
     { year: "2025-2026", division: "3-5" },
     { year: "2025-2026", division: "6-8" },
+    { year: "2025-2026", division: "9-12" },
   ];
 }
 
@@ -37,7 +38,7 @@ export default async function BooksPage({ params }: Props) {
   // Validate the specific values
   if (
     !["2024-2025", "2025-2026"].includes(year) ||
-    !["3-5", "6-8"].includes(division)
+    !["3-5", "6-8", "9-12"].includes(division)
   ) {
     notFound();
   }
