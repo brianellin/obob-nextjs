@@ -20,6 +20,8 @@ export function generateStaticParams() {
   return [
     { year: "2024-2025", division: "3-5" },
     { year: "2024-2025", division: "6-8" },
+    { year: "2025-2026", division: "3-5" },
+    { year: "2025-2026", division: "6-8" },
   ];
 }
 
@@ -33,32 +35,71 @@ export default async function BooksPage({ params }: Props) {
   }
 
   // Validate the specific values
-  if (year !== "2024-2025" || !["3-5", "6-8"].includes(division)) {
+  if (
+    !["2024-2025", "2025-2026"].includes(year) ||
+    !["3-5", "6-8"].includes(division)
+  ) {
     notFound();
   }
 
-  const [booksStats, allQuestions] = await Promise.all([
-    getBooksWithStats(year, division),
-    getAllQuestions(year, division),
-  ]);
+  let booksStats, allQuestions;
+  try {
+    [booksStats, allQuestions] = await Promise.all([
+      getBooksWithStats(year, division),
+      getAllQuestions(year, division),
+    ]);
+  } catch (error) {
+    console.error("Error loading data:", error);
+    notFound();
+  }
 
-  // Calculate summary statistics
-  const summaryStats = booksStats.reduce(
-    (acc, { totalQuestions, byType, bySource }) => {
-      acc.totalQuestions += totalQuestions;
-      acc.byType.content += byType.content;
-      acc.byType["in-which-book"] += byType["in-which-book"];
-      Object.entries(bySource).forEach(([source, count]) => {
-        acc.bySource[source] = (acc.bySource[source] || 0) + count;
-      });
-      return acc;
-    },
-    {
-      totalQuestions: 0,
-      byType: { content: 0, "in-which-book": 0 },
-      bySource: {} as Record<string, number>,
+  // Early return if no data
+  if (!booksStats || !allQuestions) {
+    notFound();
+  }
+
+  // Calculate summary statistics more efficiently
+  let totalQuestions = 0;
+  let contentQuestions = 0;
+  let inWhichBookQuestions = 0;
+  const sourceCount: Record<string, number> = {};
+
+  for (const bookStat of booksStats) {
+    if (bookStat?.totalQuestions) {
+      totalQuestions += bookStat.totalQuestions;
     }
-  );
+    if (bookStat?.byType) {
+      contentQuestions += bookStat.byType.content || 0;
+      inWhichBookQuestions += bookStat.byType["in-which-book"] || 0;
+    }
+    if (bookStat?.bySource) {
+      for (const [source, count] of Object.entries(bookStat.bySource)) {
+        if (typeof count === "number") {
+          sourceCount[source] = (sourceCount[source] || 0) + count;
+        }
+      }
+    }
+  }
+
+  const summaryStats = {
+    totalQuestions,
+    byType: {
+      content: contentQuestions,
+      "in-which-book": inWhichBookQuestions,
+    },
+    bySource: sourceCount,
+  };
+
+  // Pre-group questions by book_key for better performance
+  const questionsByBook = allQuestions.reduce((acc, question) => {
+    if (question?.book_key) {
+      if (!acc[question.book_key]) {
+        acc[question.book_key] = [];
+      }
+      acc[question.book_key].push(question);
+    }
+    return acc;
+  }, {} as Record<string, typeof allQuestions>);
 
   return (
     <div className="container mx-auto px-4 py-8 space-y-8">
@@ -188,9 +229,7 @@ export default async function BooksPage({ params }: Props) {
                   <Separator />
 
                   <QuestionHeatmapInline
-                    questions={allQuestions.filter(
-                      (q) => q.book_key === book.book_key
-                    )}
+                    questions={questionsByBook[book.book_key] || []}
                   />
                 </div>
               </div>

@@ -22,26 +22,66 @@ export function QuestionHeatmapInline({
 }: QuestionHeatmapInlineProps) {
   const [selectedPage, setSelectedPage] = useState<number | null>(null);
 
-  // Group questions by page
-  const pageMap = questions.reduce((acc, question) => {
+  // Early return if no questions
+  if (!questions || questions.length === 0) {
+    return (
+      <div className="space-y-6">
+        <div className="flex items-center justify-between">
+          <h3 className="text-sm font-medium text-muted-foreground">
+            Question Heatmap
+          </h3>
+          <Badge variant="outline">No questions</Badge>
+        </div>
+        <div className="text-sm text-muted-foreground flex items-center gap-2">
+          <InfoIcon className="h-4 w-4" />
+          No questions available for this book
+        </div>
+      </div>
+    );
+  }
+
+  // Group questions by page and find min/max in single pass for better performance
+  const pageMap: Record<number, PageData> = {};
+  let minPage = Infinity;
+  let maxPage = -Infinity;
+
+  for (const question of questions) {
     const page = question.page || 0;
-    if (!acc[page]) {
-      acc[page] = { page, count: 0, questions: [] };
+
+    // Update min/max
+    if (page < minPage) minPage = page;
+    if (page > maxPage) maxPage = page;
+
+    // Group by page
+    if (!pageMap[page]) {
+      pageMap[page] = { page, count: 0, questions: [] };
     }
-    acc[page].count++;
-    acc[page].questions.push(question);
-    return acc;
-  }, {} as Record<number, PageData>);
+    pageMap[page].count++;
+    pageMap[page].questions.push(question);
+  }
 
-  // Find min and max pages
-  const minPage = Math.min(...questions.map((q) => q.page || 0));
-  const maxPage = Math.max(...questions.map((q) => q.page || 0));
+  // Handle edge case where no questions have pages
+  if (minPage === Infinity) {
+    minPage = 0;
+    maxPage = 0;
+  }
 
-  // Create array of all pages in range
-  const pages = Array.from({ length: maxPage - minPage + 1 }, (_, i) => {
-    const page = minPage + i;
-    return pageMap[page] || { page, count: 0, questions: [] };
-  }).sort((a, b) => a.page - b.page);
+  // Create array of pages, but limit to reasonable range to prevent performance issues
+  const pageRange = maxPage - minPage + 1;
+  const MAX_PAGES = 500; // Prevent huge arrays if page numbers are sparse
+
+  let pages: PageData[];
+
+  if (pageRange > MAX_PAGES) {
+    // If range is too large, just show pages that actually have questions
+    pages = Object.values(pageMap).sort((a, b) => a.page - b.page);
+  } else {
+    // Normal case: show all pages in range
+    pages = Array.from({ length: pageRange }, (_, i) => {
+      const page = minPage + i;
+      return pageMap[page] || { page, count: 0, questions: [] };
+    }).sort((a, b) => a.page - b.page);
+  }
 
   // Get color class based on question count
   const getColorClass = (count: number) => {
