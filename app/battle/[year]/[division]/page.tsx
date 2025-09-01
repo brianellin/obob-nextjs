@@ -34,7 +34,10 @@ function BattleContent() {
 
   // Validate parameters
   useEffect(() => {
-    if (year !== "2024-2025" || !["3-5", "6-8", "9-12"].includes(division)) {
+    if (
+      !["2024-2025", "2025-2026"].includes(year) ||
+      !["3-5", "6-8", "9-12"].includes(division)
+    ) {
       router.push("/battle");
     }
   }, [year, division, router]);
