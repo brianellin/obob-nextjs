@@ -1,0 +1,132 @@
+{
+  "books": {
+    "aru-shah-and-the-end-of-time": {
+      "book_key": "aru-shah-and-the-end-of-time",
+      "title": "Aru Shah and the End of Time",
+      "author": "Roshani Chokshi",
+      "cover": "/covers/2025-2026/6-8/aru-shah-and-the-end-of-time.jpg",
+      "obob_division": "6-8",
+      "obob_year": "2025-2026"
+    },
+    "asha-and-the-spirit-bird": {
+      "book_key": "asha-and-the-spirit-bird",
+      "title": "Asha and the Spirit Bird",
+      "author": "Jasbinder Bilan",
+      "cover": "/covers/2025-2026/6-8/asha-and-the-spirit-bird.jpg",
+      "obob_division": "6-8",
+      "obob_year": "2025-2026"
+    },
+    "dealing-with-dragons": {
+      "book_key": "dealing-with-dragons",
+      "title": "Dealing with Dragons",
+      "author": "Patricia C. Wrede",
+      "cover": "/covers/2025-2026/6-8/dealing-with-dragons.jpg",
+      "obob_division": "6-8",
+      "obob_year": "2025-2026"
+    },
+    "a-dictionary-of-scoundrels": {
+      "book_key": "a-dictionary-of-scoundrels",
+      "title": "A Dictionary of Scoundrels",
+      "author": "Beth Lincoln",
+      "cover": "/covers/2025-2026/6-8/a-dictionary-of-scoundrels.jpg",
+      "obob_division": "6-8",
+      "obob_year": "2025-2026"
+    },
+    "dragon-pearl": {
+      "book_key": "dragon-pearl",
+      "title": "Dragon Pearl",
+      "author": "Yoon Ha Lee",
+      "cover": "/covers/2025-2026/6-8/dragon-pearl.jpg",
+      "obob_division": "6-8",
+      "obob_year": "2025-2026"
+    },
+    "ellen-outside-the-lines": {
+      "book_key": "ellen-outside-the-lines",
+      "title": "Ellen Outside the Lines",
+      "author": "A.J. Sass",
+      "cover": "/covers/2025-2026/6-8/ellen-outside-the-lines.jpg",
+      "obob_division": "6-8",
+      "obob_year": "2025-2026"
+    },
+    "the-eyes-and-the-impossible": {
+      "book_key": "the-eyes-and-the-impossible",
+      "title": "The Eyes and the Impossible",
+      "author": "Dave Eggers",
+      "cover": "/covers/2025-2026/6-8/the-eyes-and-the-impossible.jpg",
+      "obob_division": "6-8",
+      "obob_year": "2025-2026"
+    },
+    "mexikid-a-graphic-memoir": {
+      "book_key": "mexikid-a-graphic-memoir",
+      "title": "Mexikid: A Graphic Memoir",
+      "author": "Pedro Martín",
+      "cover": "/covers/2025-2026/6-8/mexikid-a-graphic-memoir.jpg",
+      "obob_division": "6-8",
+      "obob_year": "2025-2026"
+    },
+    "an-occasionally-happy-family": {
+      "book_key": "an-occasionally-happy-family",
+      "title": "An Occasionally Happy Family",
+      "author": "Cliff Burke",
+      "cover": "/covers/2025-2026/6-8/an-occasionally-happy-family.jpg",
+      "obob_division": "6-8",
+      "obob_year": "2025-2026"
+    },
+    "projekt-1065-a-novel-of-world-war-ii": {
+      "book_key": "projekt-1065-a-novel-of-world-war-ii",
+      "title": "Projekt 1065: A Novel of World War II",
+      "author": "Alan Gratz",
+      "cover": "/covers/2025-2026/6-8/projekt-1065-a-novel-of-world-war-ii.jpg",
+      "obob_division": "6-8",
+      "obob_year": "2025-2026"
+    },
+    "rain-rising": {
+      "book_key": "rain-rising",
+      "title": "Rain Rising",
+      "author": "Courtne Comrie",
+      "cover": "/covers/2025-2026/6-8/rain-rising.jpg",
+      "obob_division": "6-8",
+      "obob_year": "2025-2026"
+    },
+    "remember-my-story": {
+      "book_key": "remember-my-story",
+      "title": "Remember My Story",
+      "author": "Claire Sarnowski and Sarah Durand",
+      "cover": "/covers/2025-2026/6-8/remember-my-story.jpg",
+      "obob_division": "6-8",
+      "obob_year": "2025-2026"
+    },
+    "soar": {
+      "book_key": "soar",
+      "title": "Soar",
+      "author": "Joan Bauer",
+      "cover": "/covers/2025-2026/6-8/soar.jpg",
+      "obob_division": "6-8",
+      "obob_year": "2025-2026"
+    },
+    "tagging-freedom": {
+      "book_key": "tagging-freedom",
+      "title": "Tagging Freedom",
+      "author": "Rhonda Roumani",
+      "cover": "/covers/2025-2026/6-8/tagging-freedom.jpg",
+      "obob_division": "6-8",
+      "obob_year": "2025-2026"
+    },
+    "tumble": {
+      "book_key": "tumble",
+      "title": "Tumble",
+      "author": "Celia C. Pérez",
+      "cover": "/covers/2025-2026/6-8/tumble.jpg",
+      "obob_division": "6-8",
+      "obob_year": "2025-2026"
+    },
+    "uprooted": {
+      "book_key": "uprooted",
+      "title": "Uprooted: A Memoir About What Happens When Your Family Moves Back",
+      "author": "Ruth Chan",
+      "cover": "/covers/2025-2026/6-8/uprooted.jpg",
+      "obob_division": "6-8",
+      "obob_year": "2025-2026"
+    }
+  }
+}
