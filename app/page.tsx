@@ -8,7 +8,7 @@ import { useState } from "react";
 
 export default function Home() {
   const [division, setDivision] = useState<string>("3-5");
-  const year = "2024-2025"; // Could make this dynamic later
+  const year = "2025-2026"; // Could make this dynamic later
 
   return (
     <main className="bg-white p-2">
