@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Flag, Send } from "lucide-react";
+import { Flag, Send, PawPrint } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Sheet,
@@ -64,7 +64,7 @@ export default function QuestionFeedback({
         setTimeout(() => {
           setIsOpen(false);
           setIsSubmitted(false);
-        }, 2000);
+        }, 5000);
       } else {
         console.error("Failed to submit feedback");
       }
@@ -97,9 +97,14 @@ export default function QuestionFeedback({
 
         {isSubmitted ? (
           <div className="py-6 text-center">
-            <p className="text-lg font-medium text-green-600">Thank you!</p>
+            <div className="flex items-center justify-center gap-2 mb-2">
+              <PawPrint className="h-5 w-5 text-black" />
+              <p className="text-lg font-medium text-green-600">
+                Thanks! Woof!
+              </p>
+            </div>
             <p className="text-sm text-gray-600 mt-2">
-              Your feedback has been submitted successfully.
+              Thanks for helping us make obob.dog better. Keep reading!
             </p>
           </div>
         ) : (
