@@ -92,7 +92,7 @@ export default function QuestionFeedbackForm({
             <PawPrint className="h-5 w-5 text-black" />
           </div>
           <p className="text-sm text-gray-600">
-            Thanks for helping us make obob.dog better. Keep reading!
+            Thanks for helping make obob.dog better. Keep reading!
           </p>
         </div>
       ) : (
@@ -100,14 +100,14 @@ export default function QuestionFeedbackForm({
           <div className="mb-3">
             <h3 className="text-lg font-semibold text-gray-900">Ruh Roh!</h3>
             <p className="text-sm text-gray-600">
-              Something wrong with this question?
+              Is something wrong with this question?
             </p>
           </div>
 
           <div className="mb-4">
             <Textarea
               ref={textareaRef}
-              placeholder="Describe the issue with this question..."
+              placeholder="Describe the issue so we can fix it..."
               value={feedback}
               onChange={(e) => setFeedback(e.target.value)}
               className="min-h-[80px] bg-white"
