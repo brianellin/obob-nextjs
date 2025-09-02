@@ -31,6 +31,7 @@ export default function QuestionFeedback({
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const [keyboardHeight, setKeyboardHeight] = useState(0);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
 
   // Detect if device is mobile/touch device
@@ -47,6 +48,33 @@ export default function QuestionFeedback({
     return () => window.removeEventListener("resize", checkIfMobile);
   }, []);
 
+  // Handle visual viewport changes (keyboard open/close on mobile)
+  useEffect(() => {
+    if (!isMobile) return;
+
+    const handleViewportChange = () => {
+      if (window.visualViewport) {
+        const keyboardOpen = window.visualViewport.height < window.innerHeight;
+        if (keyboardOpen) {
+          const kbHeight = window.innerHeight - window.visualViewport.height;
+          setKeyboardHeight(kbHeight);
+        } else {
+          setKeyboardHeight(0);
+        }
+      }
+    };
+
+    if (window.visualViewport) {
+      window.visualViewport.addEventListener("resize", handleViewportChange);
+      return () => {
+        window.visualViewport?.removeEventListener(
+          "resize",
+          handleViewportChange
+        );
+      };
+    }
+  }, [isMobile]);
+
   // Handle focus when sheet opens (desktop only)
   useEffect(() => {
     if (isOpen && !isMobile && !isSubmitted) {
@@ -62,8 +90,22 @@ export default function QuestionFeedback({
   useEffect(() => {
     if (!isOpen) {
       setFeedback("");
+      setKeyboardHeight(0);
     }
   }, [isOpen]);
+
+  // Handle textarea focus on mobile to ensure visibility
+  const handleTextareaFocus = () => {
+    if (isMobile) {
+      // Delay to let keyboard animation start
+      setTimeout(() => {
+        textareaRef.current?.scrollIntoView({
+          behavior: "smooth",
+          block: "center",
+        });
+      }, 150);
+    }
+  };
 
   const handleSubmit = async () => {
     if (!feedback.trim()) return;
@@ -121,7 +163,18 @@ export default function QuestionFeedback({
           <span className="sr-only">Report question issue</span>
         </Button>
       </SheetTrigger>
-      <SheetContent side="bottom" className="max-h-[80vh]">
+      <SheetContent
+        side="bottom"
+        className="max-h-[80vh]"
+        style={
+          keyboardHeight > 0
+            ? {
+                paddingBottom: `${keyboardHeight}px`,
+                maxHeight: `calc(80vh - ${keyboardHeight}px)`,
+              }
+            : {}
+        }
+      >
         <SheetHeader className="text-left">
           <SheetTitle>Report Question Issue</SheetTitle>
           <SheetDescription>
@@ -149,6 +202,7 @@ export default function QuestionFeedback({
                 placeholder="Describe the issue with this question..."
                 value={feedback}
                 onChange={(e) => setFeedback(e.target.value)}
+                onFocus={handleTextareaFocus}
                 className="min-h-[100px]"
                 disabled={isSubmitting}
               />
