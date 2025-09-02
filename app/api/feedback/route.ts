@@ -10,6 +10,7 @@ export async function POST(request: NextRequest) {
     const feedbackDataForSheet = {
       timestamp: new Date().toISOString(),
       feedback,
+      status: "pending",
       year: questionData.year,
       division: questionData.division,
       book: questionData.book,
