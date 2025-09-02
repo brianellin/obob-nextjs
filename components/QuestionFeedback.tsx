@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Flag, Send, PawPrint } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
@@ -31,6 +31,7 @@ export default function QuestionFeedback({
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const textareaRef = useRef<HTMLTextAreaElement>(null);
 
   // Detect if device is mobile/touch device
   useEffect(() => {
@@ -45,6 +46,17 @@ export default function QuestionFeedback({
     window.addEventListener("resize", checkIfMobile);
     return () => window.removeEventListener("resize", checkIfMobile);
   }, []);
+
+  // Handle focus when sheet opens
+  useEffect(() => {
+    if (isOpen && !isMobile && !isSubmitted) {
+      // For desktop, focus after a short delay to let the sheet animation complete
+      const timer = setTimeout(() => {
+        textareaRef.current?.focus();
+      }, 150);
+      return () => clearTimeout(timer);
+    }
+  }, [isOpen, isMobile, isSubmitted]);
 
   const handleSubmit = async () => {
     if (!feedback.trim()) return;
@@ -126,12 +138,12 @@ export default function QuestionFeedback({
           <>
             <div className="py-4">
               <Textarea
+                ref={textareaRef}
                 placeholder="Describe the issue with this question..."
                 value={feedback}
                 onChange={(e) => setFeedback(e.target.value)}
                 className="min-h-[100px]"
                 disabled={isSubmitting}
-                autoFocus={!isMobile}
               />
             </div>
 
