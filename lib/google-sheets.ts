@@ -3,6 +3,7 @@ import { JWT } from 'google-auth-library';
 
 export async function appendFeedbackToSheet(feedbackData: {
   timestamp: string;
+  status: string;
   feedback: string;
   year: string;
   division: string;
@@ -39,6 +40,7 @@ export async function appendFeedbackToSheet(feedbackData: {
 
     await sheet.addRow({
       timestamp: feedbackData.timestamp,
+      status: feedbackData.status,
       feedback: feedbackData.feedback,
       year: feedbackData.year,
       division: feedbackData.division,
