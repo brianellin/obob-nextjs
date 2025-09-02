@@ -7,8 +7,40 @@ import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 import { useState } from "react";
 
 export default function Home() {
+  const [year, setYear] = useState<string>("2025-2026");
   const [division, setDivision] = useState<string>("3-5");
-  const year = "2025-2026"; // Could make this dynamic later
+
+  // Handle year change and reset division if not available in new year
+  const handleYearChange = (newYear: string) => {
+    if (newYear) {
+      setYear(newYear);
+      // If switching to 2024-2025 and current division is 9-12, reset to 3-5
+      if (newYear === "2024-2025" && division === "9-12") {
+        setDivision("3-5");
+      }
+    }
+  };
+
+  // Get available divisions for the selected year
+  const getAvailableDivisions = () => {
+    if (year === "2024-2025") {
+      return ["3-5", "6-8"];
+    }
+    return ["3-5", "6-8", "9-12"];
+  };
+
+  // Get question count for current year/division
+  const getQuestionCount = () => {
+    if (year === "2024-2025") {
+      return division === "3-5" ? "4,365" : "3,820";
+    } else {
+      return division === "3-5"
+        ? "3,983"
+        : division === "6-8"
+        ? "2,774"
+        : "1,721";
+    }
+  };
 
   return (
     <main className="bg-white p-2">
@@ -21,6 +53,30 @@ export default function Home() {
         <p className="text-xl text-center text-muted-foreground pt-1">
           Read, practice, and have fun with Oregon Battle of the Books
         </p>
+
+        <div className="flex justify-center pt-2">
+          <ToggleGroup
+            type="single"
+            value={year}
+            onValueChange={handleYearChange}
+            className="justify-center"
+          >
+            <ToggleGroupItem
+              value="2024-2025"
+              aria-label="2024-2025 School Year"
+              className="data-[state=on]:bg-black data-[state=on]:text-white"
+            >
+              2024-2025
+            </ToggleGroupItem>
+            <ToggleGroupItem
+              value="2025-2026"
+              aria-label="2025-2026 School Year"
+              className="data-[state=on]:bg-black data-[state=on]:text-white"
+            >
+              2025-2026
+            </ToggleGroupItem>
+          </ToggleGroup>
+        </div>
 
         <div className="flex justify-center pt-2">
           <ToggleGroup
@@ -43,15 +99,17 @@ export default function Home() {
               aria-label="Middle School Division"
               className="data-[state=on]:bg-black data-[state=on]:text-white"
             >
-              Middle School (6-8)
+              Middle (6-8)
             </ToggleGroupItem>
-            <ToggleGroupItem
-              value="9-12"
-              aria-label="High School Division"
-              className="data-[state=on]:bg-black data-[state=on]:text-white"
-            >
-              High School (9-12)
-            </ToggleGroupItem>
+            {getAvailableDivisions().includes("9-12") && (
+              <ToggleGroupItem
+                value="9-12"
+                aria-label="High School Division"
+                className="data-[state=on]:bg-black data-[state=on]:text-white"
+              >
+                High (9-12)
+              </ToggleGroupItem>
+            )}
           </ToggleGroup>
         </div>
 
@@ -71,13 +129,7 @@ export default function Home() {
           <div className="flex items-center space-x-2">
             <Zap className="h-6 w-6 text-muted-foreground" />
             <div>
-              <p className="text-2xl font-bold">
-                {division === "3-5"
-                  ? "3,983"
-                  : division === "6-8"
-                  ? "2,774"
-                  : "1,721"}
-              </p>
+              <p className="text-2xl font-bold">{getQuestionCount()}</p>
               <p className="text-sm text-muted-foreground">Questions</p>
             </div>
           </div>
