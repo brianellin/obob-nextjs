@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Flag, Send, PawPrint } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
@@ -30,6 +30,21 @@ export default function QuestionFeedback({
   const [feedback, setFeedback] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Detect if device is mobile/touch device
+  useEffect(() => {
+    const checkIfMobile = () => {
+      const isTouchDevice =
+        "ontouchstart" in window || navigator.maxTouchPoints > 0;
+      const isSmallScreen = window.innerWidth <= 768;
+      setIsMobile(isTouchDevice && isSmallScreen);
+    };
+
+    checkIfMobile();
+    window.addEventListener("resize", checkIfMobile);
+    return () => window.removeEventListener("resize", checkIfMobile);
+  }, []);
 
   const handleSubmit = async () => {
     if (!feedback.trim()) return;
@@ -116,6 +131,7 @@ export default function QuestionFeedback({
                 onChange={(e) => setFeedback(e.target.value)}
                 className="min-h-[100px]"
                 disabled={isSubmitting}
+                autoFocus={!isMobile}
               />
             </div>
 
