@@ -163,18 +163,7 @@ export default function QuestionFeedback({
           <span className="sr-only">Report question issue</span>
         </Button>
       </SheetTrigger>
-      <SheetContent
-        side="bottom"
-        className="max-h-[80vh]"
-        style={
-          keyboardHeight > 0
-            ? {
-                paddingBottom: `${keyboardHeight}px`,
-                maxHeight: `calc(80vh - ${keyboardHeight}px)`,
-              }
-            : {}
-        }
-      >
+      <SheetContent side="right">
         <SheetHeader className="text-left">
           <SheetTitle>Report Question Issue</SheetTitle>
           <SheetDescription>
