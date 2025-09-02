@@ -12,6 +12,7 @@ import { useToast } from "@/hooks/use-toast";
 import Confetti from "react-confetti";
 import { useWindowSize } from "react-use";
 import { track } from "@vercel/analytics";
+import QuestionFeedback from "./QuestionFeedback";
 
 type QuizPageProps = {
   selectedBooks: Book[];
@@ -381,8 +382,8 @@ export default function QuizPage({
         </div>
       </div>
 
-      <Card className="w-full max-w-xl mx-auto drop-shadow-md">
-        <CardContent className="p-6 mb-0">
+      <Card className="w-full max-w-xl mx-auto drop-shadow-md relative">
+        <CardContent className="p-5 mb-0">
           <div className="">
             <div>
               <p className="text-xl mb-4">
@@ -492,20 +493,33 @@ export default function QuizPage({
               </div>
             )
           )}
-          <div className="flex items-center justify-center text-xs gap-1 mt-4 text-muted-foreground">
-            Source:{" "}
-            {currentQuestion.source!.link ? (
-              <Link
-                href={currentQuestion.source!.link}
-                className=" flex items-center gap-1 hover:text-muted-foreground/80"
-                target="_blank"
-              >
-                {currentQuestion.source?.name}
-                <ExternalLink className="h-3 w-3" />
-              </Link>
-            ) : (
-              <span> {currentQuestion.source?.name}</span>
-            )}
+          <div className="flex items-center justify-between mt-4">
+            {/* Invisible spacer to balance the flag on the right */}
+            <div className="w-6"></div>
+
+            {/* Centered source text */}
+            <div className="flex items-center justify-center text-xs gap-1 text-muted-foreground">
+              Source:{" "}
+              {currentQuestion.source!.link ? (
+                <Link
+                  href={currentQuestion.source!.link}
+                  className=" flex items-center gap-1 hover:text-muted-foreground/80"
+                  target="_blank"
+                >
+                  {currentQuestion.source?.name}
+                  <ExternalLink className="h-3 w-3" />
+                </Link>
+              ) : (
+                <span> {currentQuestion.source?.name}</span>
+              )}
+            </div>
+
+            {/* Flag on the right */}
+            <QuestionFeedback
+              question={currentQuestion}
+              year={year}
+              division={division}
+            />
           </div>
         </CardContent>
       </Card>
