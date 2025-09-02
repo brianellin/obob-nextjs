@@ -89,7 +89,10 @@ export default function QuestionFeedbackForm({
         <div className="py-4 text-center">
           <div className="flex items-center justify-center gap-2 mb-2">
             <p className="text-lg font-medium text-green-600">Woof! Thanks!</p>
-            <PawPrint className="h-5 w-5 text-black" />
+            <PawPrint
+              className="h-5 w-5 text-black drop-shadow-[0_0_3px_rgba(255,255,255,0.8)]"
+              style={{ filter: "drop-shadow(0 0 2px rgba(255,255,255,0.9))" }}
+            />
           </div>
           <p className="text-sm text-gray-600">
             Thanks for helping make obob.dog better. Keep reading!

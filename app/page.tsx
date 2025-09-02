@@ -75,7 +75,12 @@ export default function Home() {
             >
               2025-2026
               {year === "2025-2026" && (
-                <span className="absolute -top-2 -right-2 text-2xl animate-bounce">
+                <span
+                  className="absolute -top-2 -right-2 text-2xl animate-bounce drop-shadow-[0_0_4px_rgba(255,255,255,0.8)]"
+                  style={{
+                    filter: "drop-shadow(0 0 3px rgba(255,255,255,0.9))",
+                  }}
+                >
                   🥳
                 </span>
               )}
