@@ -30,7 +30,6 @@ export default function RootLayout({
         />
       </head>
       <body className={inter.className}>
-        <ComingSoonBanner />
         <Header />
         <main className="container mx-auto px-2 py-2">{children}</main>
         <Footer />
