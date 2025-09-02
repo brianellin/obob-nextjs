@@ -13,6 +13,7 @@ import Confetti from "react-confetti";
 import { useWindowSize } from "react-use";
 import { track } from "@vercel/analytics";
 import QuestionFeedback from "./QuestionFeedback";
+import QuestionFeedbackForm from "./QuestionFeedbackForm";
 
 type QuizPageProps = {
   selectedBooks: Book[];
@@ -82,6 +83,7 @@ export default function QuizPage({
   const [questionResults, setQuestionResults] = useState<QuestionResult[]>([]);
   const { toast } = useToast();
   const { width, height } = useWindowSize();
+  const [showFeedbackForm, setShowFeedbackForm] = useState(false);
 
   const loadQuestions = async () => {
     try {
@@ -216,6 +218,7 @@ export default function QuizPage({
       setShowAnswer(false);
       setIsTimerRunning(false);
       setTimeLeft(TIMER_DURATION);
+      setShowFeedbackForm(false); // Close feedback form on question change
     } else {
       setQuizFinished(true);
     }
@@ -229,6 +232,7 @@ export default function QuizPage({
     setIsTimerRunning(false);
     setTimeLeft(TIMER_DURATION);
     setQuestionResults([]);
+    setShowFeedbackForm(false); // Close feedback form on restart
   };
 
   const previousQuestion = () => {
@@ -237,6 +241,7 @@ export default function QuizPage({
       setShowAnswer(false);
       setIsTimerRunning(false);
       setTimeLeft(TIMER_DURATION);
+      setShowFeedbackForm(false); // Close feedback form on question change
     } else {
       onQuizEnd();
     }
@@ -493,33 +498,43 @@ export default function QuizPage({
               </div>
             )
           )}
-          <div className="flex items-center justify-between mt-4">
-            {/* Invisible spacer to balance the flag on the right */}
-            <div className="w-6"></div>
+          <div>
+            <div className="flex items-center justify-between mt-4">
+              {/* Invisible spacer to balance the flag on the right */}
+              <div className="w-6"></div>
 
-            {/* Centered source text */}
-            <div className="flex items-center justify-center text-xs gap-1 text-muted-foreground">
-              Source:{" "}
-              {currentQuestion.source!.link ? (
-                <Link
-                  href={currentQuestion.source!.link}
-                  className=" flex items-center gap-1 hover:text-muted-foreground/80"
-                  target="_blank"
-                >
-                  {currentQuestion.source?.name}
-                  <ExternalLink className="h-3 w-3" />
-                </Link>
-              ) : (
-                <span> {currentQuestion.source?.name}</span>
-              )}
+              {/* Centered source text */}
+              <div className="flex items-center justify-center text-xs gap-1 text-muted-foreground">
+                Source:{" "}
+                {currentQuestion.source!.link ? (
+                  <Link
+                    href={currentQuestion.source!.link}
+                    className=" flex items-center gap-1 hover:text-muted-foreground/80"
+                    target="_blank"
+                  >
+                    {currentQuestion.source?.name}
+                    <ExternalLink className="h-3 w-3" />
+                  </Link>
+                ) : (
+                  <span> {currentQuestion.source?.name}</span>
+                )}
+              </div>
+
+              {/* Flag on the right */}
+              <QuestionFeedback
+                onClick={() => setShowFeedbackForm(!showFeedbackForm)}
+              />
             </div>
 
-            {/* Flag on the right */}
-            <QuestionFeedback
-              question={currentQuestion}
-              year={year}
-              division={division}
-            />
+            {/* Feedback Form below source section */}
+            {showFeedbackForm && (
+              <QuestionFeedbackForm
+                question={currentQuestion}
+                year={year}
+                division={division}
+                onClose={() => setShowFeedbackForm(false)}
+              />
+            )}
           </div>
         </CardContent>
       </Card>
