@@ -64,14 +64,14 @@ export default function Home() {
             <ToggleGroupItem
               value="2024-2025"
               aria-label="2024-2025 School Year"
-              className="data-[state=on]:bg-black data-[state=on]:text-white"
+              className="data-[state=on]:bg-gray-500 data-[state=on]:text-white"
             >
               2024-2025
             </ToggleGroupItem>
             <ToggleGroupItem
               value="2025-2026"
               aria-label="2025-2026 School Year"
-              className="data-[state=on]:bg-black data-[state=on]:text-white"
+              className="data-[state=on]:bg-gray-500 data-[state=on]:text-white"
             >
               2025-2026
             </ToggleGroupItem>
