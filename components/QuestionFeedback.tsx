@@ -4,14 +4,14 @@ import { useState, useEffect, useRef } from "react";
 import { Flag, Send, PawPrint } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
-  Sheet,
-  SheetContent,
-  SheetDescription,
-  SheetFooter,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from "@/components/ui/sheet";
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 import { Textarea } from "@/components/ui/textarea";
 import type { QuestionWithBook } from "@/types";
 
@@ -94,8 +94,8 @@ export default function QuestionFeedback({
   };
 
   return (
-    <Sheet open={isOpen} onOpenChange={setIsOpen}>
-      <SheetTrigger asChild>
+    <Dialog open={isOpen} onOpenChange={setIsOpen}>
+      <DialogTrigger asChild>
         <Button
           variant="ghost"
           size="sm"
@@ -104,14 +104,14 @@ export default function QuestionFeedback({
           <Flag className="h-4 w-4" />
           <span className="sr-only">Report question issue</span>
         </Button>
-      </SheetTrigger>
-      <SheetContent side="right">
-        <SheetHeader className="text-left">
-          <SheetTitle>Report Question Issue</SheetTitle>
-          <SheetDescription>
+      </DialogTrigger>
+      <DialogContent className="sm:max-w-[425px]">
+        <DialogHeader>
+          <DialogTitle>Report Question Issue</DialogTitle>
+          <DialogDescription>
             Help us improve by reporting any issues with this question.
-          </SheetDescription>
-        </SheetHeader>
+          </DialogDescription>
+        </DialogHeader>
 
         {isSubmitted ? (
           <div className="py-6 text-center">
@@ -138,7 +138,7 @@ export default function QuestionFeedback({
               />
             </div>
 
-            <SheetFooter>
+            <DialogFooter>
               <Button
                 onClick={handleSubmit}
                 disabled={!feedback.trim() || isSubmitting}
@@ -153,10 +153,10 @@ export default function QuestionFeedback({
                   </>
                 )}
               </Button>
-            </SheetFooter>
+            </DialogFooter>
           </>
         )}
-      </SheetContent>
-    </Sheet>
+      </DialogContent>
+    </Dialog>
   );
 }
