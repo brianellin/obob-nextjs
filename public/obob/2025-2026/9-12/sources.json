@@ -1,3 +1,9 @@
 {
-  "sources": []
+  "sources": [
+    {
+      "path": "parent_group/questions.json",
+      "name": "OBOB Parent Group",
+      "link": null
+    }
+  ]
 }

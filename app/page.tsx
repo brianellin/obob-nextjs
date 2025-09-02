@@ -34,16 +34,23 @@ export default function Home() {
             <ToggleGroupItem
               value="3-5"
               aria-label="Elementary Division"
-              className="data-[state=on]:bg-purple-600 data-[state=on]:text-white"
+              className="data-[state=on]:bg-black data-[state=on]:text-white"
             >
               Elementary (3-5)
             </ToggleGroupItem>
             <ToggleGroupItem
               value="6-8"
               aria-label="Middle School Division"
-              className="data-[state=on]:bg-purple-600 data-[state=on]:text-white"
+              className="data-[state=on]:bg-black data-[state=on]:text-white"
             >
               Middle School (6-8)
+            </ToggleGroupItem>
+            <ToggleGroupItem
+              value="9-12"
+              aria-label="High School Division"
+              className="data-[state=on]:bg-black data-[state=on]:text-white"
+            >
+              High School (9-12)
             </ToggleGroupItem>
           </ToggleGroup>
         </div>
@@ -55,7 +62,9 @@ export default function Home() {
           >
             <BookOpen className="h-6 w-6 text-muted-foreground" />
             <div>
-              <p className="text-2xl font-bold">16</p>
+              <p className="text-2xl font-bold">
+                {division === "9-12" ? "12" : "16"}
+              </p>
               <p className="text-sm text-muted-foreground">Books</p>
             </div>
           </Link>
@@ -63,7 +72,11 @@ export default function Home() {
             <Zap className="h-6 w-6 text-muted-foreground" />
             <div>
               <p className="text-2xl font-bold">
-                {division === "6-8" ? "3,820" : "4,365"}
+                {division === "3-5"
+                  ? "3,983"
+                  : division === "6-8"
+                  ? "2,774"
+                  : "1,721"}
               </p>
               <p className="text-sm text-muted-foreground">Questions</p>
             </div>
