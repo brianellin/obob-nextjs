@@ -31,11 +31,9 @@ export default function QuestionFeedback({
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
-  const [isSafari, setIsSafari] = useState(false);
-  const [isTextareaActive, setIsTextareaActive] = useState(false);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
 
-  // Detect if device is mobile/touch device and if Safari
+  // Detect if device is mobile/touch device
   useEffect(() => {
     const checkIfMobile = () => {
       const isTouchDevice =
@@ -44,50 +42,28 @@ export default function QuestionFeedback({
       setIsMobile(isTouchDevice && isSmallScreen);
     };
 
-    const checkIfSafari = () => {
-      const userAgent = navigator.userAgent.toLowerCase();
-      const isSafariMobile =
-        /safari/.test(userAgent) &&
-        /mobile/.test(userAgent) &&
-        !/chrome/.test(userAgent) &&
-        !/crios/.test(userAgent) &&
-        !/fxios/.test(userAgent);
-      setIsSafari(isSafariMobile);
-    };
-
     checkIfMobile();
-    checkIfSafari();
     window.addEventListener("resize", checkIfMobile);
     return () => window.removeEventListener("resize", checkIfMobile);
   }, []);
 
-  // Handle focus when sheet opens
+  // Handle focus when sheet opens (desktop only)
   useEffect(() => {
-    if (isOpen && !isMobile && !isSubmitted && !isSafari) {
-      // For desktop (non-Safari), focus after a short delay to let the sheet animation complete
+    if (isOpen && !isMobile && !isSubmitted) {
+      // For desktop, focus after a short delay to let the sheet animation complete
       const timer = setTimeout(() => {
         textareaRef.current?.focus();
       }, 150);
       return () => clearTimeout(timer);
     }
-  }, [isOpen, isMobile, isSubmitted, isSafari]);
+  }, [isOpen, isMobile, isSubmitted]);
 
-  // Reset textarea state when sheet closes
+  // Reset state when sheet closes
   useEffect(() => {
     if (!isOpen) {
-      setIsTextareaActive(false);
+      setFeedback("");
     }
   }, [isOpen]);
-
-  const handleTextareaClick = () => {
-    if (isSafari || isMobile) {
-      setIsTextareaActive(true);
-      // Focus after making it active to ensure it's editable
-      setTimeout(() => {
-        textareaRef.current?.focus();
-      }, 100);
-    }
-  };
 
   const handleSubmit = async () => {
     if (!feedback.trim()) return;
@@ -170,17 +146,11 @@ export default function QuestionFeedback({
             <div className="py-4">
               <Textarea
                 ref={textareaRef}
-                placeholder={
-                  (isSafari || isMobile) && !isTextareaActive
-                    ? "Tap here to describe the issue with this question..."
-                    : "Describe the issue with this question..."
-                }
+                placeholder="Describe the issue with this question..."
                 value={feedback}
                 onChange={(e) => setFeedback(e.target.value)}
-                onClick={handleTextareaClick}
                 className="min-h-[100px]"
                 disabled={isSubmitting}
-                readOnly={(isSafari || isMobile) && !isTextareaActive}
               />
             </div>
 
