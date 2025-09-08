@@ -51,6 +51,14 @@ export default function Header() {
                 </SheetClose>
                 <SheetClose asChild>
                   <Link
+                    href="/books"
+                    className="text-lg hover:text-gray-600 transition-colors"
+                  >
+                    Books &amp; Questions
+                  </Link>
+                </SheetClose>
+                <SheetClose asChild>
+                  <Link
                     href="/about"
                     className="text-lg hover:text-gray-600 transition-colors"
                   >
@@ -58,22 +66,17 @@ export default function Header() {
                   </Link>
                 </SheetClose>
                 <SheetClose asChild>
-                  <Link
-                    href="/"
-                    className="text-lg hover:text-gray-600 transition-colors"
-                  >
-                    Get the books
-                  </Link>
-                </SheetClose>
-                <SheetClose asChild>
                   <button
                     onClick={handleBlueskyClick}
                     className="text-lg hover:text-gray-600 transition-colors text-left"
                   >
-                    @obob.dog
+                    Follow @obob.dog
                   </button>
                 </SheetClose>
               </nav>
+              <div className="mt-8 flex justify-center">
+                <RosieIcon className="w-8 h-8" />
+              </div>
             </SheetContent>
           </Sheet>
         </div>
