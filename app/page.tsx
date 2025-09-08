@@ -47,7 +47,7 @@ export default function Home() {
       <section className="max-w-2xl mx-auto space-y-4 mb-8 mt-4">
         <h1 className="text-4xl font-bold text-center">
           <WavyUnderline style={0} thickness={6} color="text-lime-400">
-            obob.dog{" "}
+            OBOB.dog{" "}
           </WavyUnderline>
         </h1>
         <p className="text-xl text-center text-muted-foreground pt-1">
@@ -55,72 +55,79 @@ export default function Home() {
         </p>
 
         <div className="flex justify-center pt-2">
-          <ToggleGroup
-            type="single"
-            value={year}
-            onValueChange={handleYearChange}
-            className="justify-center"
-          >
-            <ToggleGroupItem
-              value="2024-2025"
-              aria-label="2024-2025 School Year"
-              className="data-[state=on]:bg-pink-400 data-[state=on]:text-white"
-            >
-              2024-2025
-            </ToggleGroupItem>
-            <ToggleGroupItem
-              value="2025-2026"
-              aria-label="2025-2026 School Year"
-              className="data-[state=on]:bg-pink-400 data-[state=on]:text-white relative"
-            >
-              2025-2026
-              {year === "2025-2026" && (
-                <span
-                  className="absolute -top-2 -right-2 text-2xl animate-bounce drop-shadow-[0_0_4px_rgba(255,255,255,0.8)]"
-                  style={{
-                    filter: "drop-shadow(0 0 3px rgba(255,255,255,0.9))",
-                  }}
-                >
-                  🥳
-                </span>
-              )}
-            </ToggleGroupItem>
-          </ToggleGroup>
-        </div>
-
-        <div className="flex justify-center pt-2">
-          <ToggleGroup
-            type="single"
-            value={division}
-            onValueChange={(value) => {
-              if (value) setDivision(value);
-            }}
-            className="justify-center"
-          >
-            <ToggleGroupItem
-              value="3-5"
-              aria-label="Elementary Division"
-              className="data-[state=on]:bg-black data-[state=on]:text-white"
-            >
-              Elementary (3-5)
-            </ToggleGroupItem>
-            <ToggleGroupItem
-              value="6-8"
-              aria-label="Middle School Division"
-              className="data-[state=on]:bg-black data-[state=on]:text-white"
-            >
-              Middle (6-8)
-            </ToggleGroupItem>
-            {getAvailableDivisions().includes("9-12") && (
-              <ToggleGroupItem
-                value="9-12"
-                aria-label="High School Division"
-                className="data-[state=on]:bg-black data-[state=on]:text-white"
+          <div className="bg-gray-50 border border-gray-200 rounded-lg p-4 shadow-sm space-y-4">
+            <div>
+              <p className="text-sm font-medium text-gray-700 text-center mb-3">
+                Pick your division
+              </p>
+              <ToggleGroup
+                type="single"
+                value={year}
+                onValueChange={handleYearChange}
+                className="justify-center"
               >
-                High (9-12)
-              </ToggleGroupItem>
-            )}
-          </ToggleGroup>
+                <ToggleGroupItem
+                  value="2024-2025"
+                  aria-label="2024-2025 School Year"
+                  className="data-[state=on]:bg-pink-400 data-[state=on]:text-white"
+                >
+                  2024-2025
+                </ToggleGroupItem>
+                <ToggleGroupItem
+                  value="2025-2026"
+                  aria-label="2025-2026 School Year"
+                  className="data-[state=on]:bg-pink-400 data-[state=on]:text-white relative"
+                >
+                  2025-2026
+                  {year === "2025-2026" && (
+                    <span
+                      className="absolute -top-2 -right-2 text-2xl animate-bounce drop-shadow-[0_0_4px_rgba(255,255,255,0.8)]"
+                      style={{
+                        filter: "drop-shadow(0 0 3px rgba(255,255,255,0.9))",
+                      }}
+                    >
+                      🥳
+                    </span>
+                  )}
+                </ToggleGroupItem>
+              </ToggleGroup>
+            </div>
+
+            <div>
+              <ToggleGroup
+                type="single"
+                value={division}
+                onValueChange={(value) => {
+                  if (value) setDivision(value);
+                }}
+                className="justify-center"
+              >
+                <ToggleGroupItem
+                  value="3-5"
+                  aria-label="Elementary Division"
+                  className="data-[state=on]:bg-black data-[state=on]:text-white"
+                >
+                  Elementary
+                </ToggleGroupItem>
+                <ToggleGroupItem
+                  value="6-8"
+                  aria-label="Middle School Division"
+                  className="data-[state=on]:bg-black data-[state=on]:text-white"
+                >
+                  Middle
+                </ToggleGroupItem>
+                {getAvailableDivisions().includes("9-12") && (
+                  <ToggleGroupItem
+                    value="9-12"
+                    aria-label="High School Division"
+                    className="data-[state=on]:bg-black data-[state=on]:text-white"
+                  >
+                    High
+                  </ToggleGroupItem>
+                )}
+              </ToggleGroup>
+            </div>
+          </div>
         </div>
 
         <div className="flex justify-center space-x-8 pt-4">

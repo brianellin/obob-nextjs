@@ -38,9 +38,17 @@ export default function Header() {
             </SheetTrigger>
             <SheetContent side="right" className="w-80">
               <SheetHeader>
-                <SheetTitle>Menu</SheetTitle>
+                <SheetTitle>OBOB.dog</SheetTitle>
               </SheetHeader>
               <nav className="flex flex-col space-y-6 mt-8">
+                <SheetClose asChild>
+                  <Link
+                    href="/"
+                    className="text-lg hover:text-gray-600 transition-colors"
+                  >
+                    Home / New Battle
+                  </Link>
+                </SheetClose>
                 <SheetClose asChild>
                   <Link
                     href="/about"
@@ -51,7 +59,7 @@ export default function Header() {
                 </SheetClose>
                 <SheetClose asChild>
                   <Link
-                    href="/get-the-book"
+                    href="/"
                     className="text-lg hover:text-gray-600 transition-colors"
                   >
                     Get the books
