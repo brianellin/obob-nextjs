@@ -37,14 +37,24 @@ export default function BookDetailPage({
     return grouped;
   }, [questions]);
 
-  // Get all page numbers sorted
-  const pageNumbers = useMemo(
-    () =>
-      Object.keys(questionsByPage)
-        .map(Number)
-        .sort((a, b) => a - b),
-    [questionsByPage]
-  );
+  // Get all page numbers in range (including pages with no questions)
+  const pageNumbers = useMemo(() => {
+    if (questions.length === 0) return [];
+
+    // Extract page numbers directly from questions
+    const pagesWithQuestions = questions
+      .map((q) => q.page)
+      .filter((page) => typeof page === "number" && page > 0)
+      .sort((a, b) => a - b);
+
+    if (pagesWithQuestions.length === 0) return [];
+
+    const minPage = Math.min(...pagesWithQuestions);
+    const maxPage = Math.max(...pagesWithQuestions);
+
+    // Create array of all pages from min to max
+    return Array.from({ length: maxPage - minPage + 1 }, (_, i) => minPage + i);
+  }, [questions]);
 
   const [currentPageIndex, setCurrentPageIndex] = useState(0);
   const [pageInput, setPageInput] = useState("");
@@ -107,6 +117,17 @@ export default function BookDetailPage({
   const handleKeyPress = (e: React.KeyboardEvent) => {
     if (e.key === "Enter") {
       handlePageJump();
+    }
+  };
+
+  // Handle page selection from heatmap
+  const handleHeatmapPageSelect = (page: number | null) => {
+    if (page !== null) {
+      const targetIndex = pageNumbers.findIndex((p) => p === page);
+      if (targetIndex !== -1) {
+        setCurrentPageIndex(targetIndex);
+        setPageInput("");
+      }
     }
   };
 
@@ -197,129 +218,152 @@ export default function BookDetailPage({
                   </div>
                 </div>
               </div>
-
-              <Separator />
-
-              {/* Question Heatmap */}
-              <div>
-                <h3 className="font-semibold text-lg mb-4">
-                  Questions by Page
-                </h3>
-                <QuestionHeatmapInline questions={questions} />
-              </div>
             </div>
           </div>
         </CardContent>
       </Card>
 
-      {/* Page Navigation */}
+      {/* Questions Browser */}
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center justify-between">
-            <span>Navigate Pages</span>
-            <div className="flex items-center gap-2 text-sm text-muted-foreground">
-              Page {currentPage} ({currentPageIndex + 1} of {pageNumbers.length}
-              )
-            </div>
+            <span>Questions by Page</span>
+            {pageNumbers.length > 0 && (
+              <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                Page {currentPage} ({currentPageIndex + 1} of{" "}
+                {pageNumbers.length})
+              </div>
+            )}
           </CardTitle>
         </CardHeader>
-        <CardContent>
-          <div className="flex items-center justify-between gap-4">
-            <Button
-              variant="outline"
-              onClick={handlePreviousPage}
-              disabled={currentPageIndex === 0}
-            >
-              <ChevronLeft className="h-4 w-4 mr-1" />
-              Previous
-            </Button>
-
-            <div className="flex items-center gap-2">
-              <span className="text-sm text-muted-foreground">
-                Jump to page:
-              </span>
-              <Input
-                type="number"
-                placeholder="Page #"
-                value={pageInput}
-                onChange={(e) => setPageInput(e.target.value)}
-                onKeyPress={handleKeyPress}
-                className="w-24"
-                min={Math.min(...pageNumbers)}
-                max={Math.max(...pageNumbers)}
-              />
-              <Button onClick={handlePageJump} size="sm">
-                Go
-              </Button>
-            </div>
-
-            <Button
-              variant="outline"
-              onClick={handleNextPage}
-              disabled={currentPageIndex === pageNumbers.length - 1}
-            >
-              Next
-              <ChevronRight className="h-4 w-4 ml-1" />
-            </Button>
+        <CardContent className="space-y-6">
+          {/* Question Heatmap */}
+          <div>
+            <QuestionHeatmapInline
+              questions={questions}
+              selectedPage={currentPage}
+              onPageSelect={handleHeatmapPageSelect}
+            />
           </div>
-        </CardContent>
-      </Card>
 
-      {/* Questions for Current Page */}
-      <Card>
-        <CardHeader>
-          <CardTitle>
-            Questions from Page {currentPage} ({currentQuestions.length}{" "}
-            questions)
-          </CardTitle>
-        </CardHeader>
-        <CardContent className="space-y-4">
-          {currentQuestions.length === 0 ? (
-            <p className="text-muted-foreground text-center py-8">
-              No questions found for page {currentPage}
-            </p>
-          ) : (
-            currentQuestions.map((question, index) => (
-              <Card key={index} className="border-l-4 border-l-primary/20">
-                <CardContent className="p-4">
-                  <div className="flex items-start justify-between gap-4">
-                    <div className="flex-grow">
-                      <div className="flex items-center gap-2 mb-2">
-                        <Badge
-                          variant={
-                            question.type === "content"
-                              ? "default"
-                              : "secondary"
-                          }
-                        >
-                          {question.type === "content"
-                            ? "Content"
-                            : "In Which Book"}
-                        </Badge>
-                        <span className="text-sm text-muted-foreground">
-                          Page {question.page}
-                        </span>
-                        {question.source && (
-                          <Badge variant="outline" className="text-xs">
-                            {question.source.name}
-                          </Badge>
-                        )}
-                      </div>
+          {pageNumbers.length > 0 && (
+            <>
+              <Separator />
 
-                      <p className="text-sm leading-relaxed mb-2">
-                        <strong>Q:</strong> {question.text}
-                      </p>
+              {/* Page Navigation Controls */}
+              <div className="flex items-center justify-between gap-4">
+                <Button
+                  variant="outline"
+                  onClick={handlePreviousPage}
+                  disabled={currentPageIndex === 0}
+                >
+                  <ChevronLeft className="h-4 w-4 mr-1" />
+                  Previous
+                </Button>
 
-                      {question.type === "content" && "answer" in question && (
-                        <p className="text-sm text-muted-foreground">
-                          <strong>A:</strong> {question.answer}
-                        </p>
-                      )}
-                    </div>
+                <div className="flex items-center gap-2">
+                  <span className="text-sm text-muted-foreground">
+                    Jump to page:
+                  </span>
+                  <Input
+                    type="number"
+                    placeholder="Page #"
+                    value={pageInput}
+                    onChange={(e) => setPageInput(e.target.value)}
+                    onKeyPress={handleKeyPress}
+                    className="w-24"
+                    min={pageNumbers.length > 0 ? Math.min(...pageNumbers) : 1}
+                    max={pageNumbers.length > 0 ? Math.max(...pageNumbers) : 1}
+                  />
+                  <Button onClick={handlePageJump} size="sm">
+                    Go
+                  </Button>
+                </div>
+
+                <Button
+                  variant="outline"
+                  onClick={handleNextPage}
+                  disabled={currentPageIndex === pageNumbers.length - 1}
+                >
+                  Next
+                  <ChevronRight className="h-4 w-4 ml-1" />
+                </Button>
+              </div>
+
+              <Separator />
+
+              {/* Questions for Current Page */}
+              <div className="space-y-4">
+                <h3 className="text-lg font-semibold">
+                  Questions from Page {currentPage} ({currentQuestions.length}{" "}
+                  questions)
+                </h3>
+                {currentQuestions.length === 0 ? (
+                  <div className="text-center py-8">
+                    <p className="text-muted-foreground mb-2">
+                      No questions available for page {currentPage} yet.
+                    </p>
+                    <p className="text-sm text-muted-foreground">
+                      Try navigating to other pages to find questions.
+                    </p>
                   </div>
-                </CardContent>
-              </Card>
-            ))
+                ) : (
+                  currentQuestions.map((question, index) => (
+                    <Card
+                      key={index}
+                      className="border-l-4 border-l-primary/20"
+                    >
+                      <CardContent className="p-4">
+                        <div className="flex items-start justify-between gap-4">
+                          <div className="flex-grow">
+                            <div className="flex items-center gap-2 mb-2">
+                              <Badge
+                                variant={
+                                  question.type === "content"
+                                    ? "default"
+                                    : "secondary"
+                                }
+                              >
+                                {question.type === "content"
+                                  ? "Content"
+                                  : "In Which Book"}
+                              </Badge>
+                              <span className="text-sm text-muted-foreground">
+                                Page {question.page}
+                              </span>
+                              {question.source && (
+                                <Badge variant="outline" className="text-xs">
+                                  {question.source.name}
+                                </Badge>
+                              )}
+                            </div>
+
+                            <p className="text-sm leading-relaxed mb-2">
+                              <strong>Q:</strong> {question.text}
+                            </p>
+
+                            {question.type === "content" &&
+                              "answer" in question && (
+                                <p className="text-sm text-muted-foreground">
+                                  <strong>A:</strong> {question.answer}
+                                </p>
+                              )}
+                          </div>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  ))
+                )}
+              </div>
+            </>
+          )}
+
+          {pageNumbers.length === 0 && (
+            <div className="text-center py-8">
+              <p className="text-muted-foreground mb-2">
+                No questions available for this book.
+              </p>
+            </div>
           )}
         </CardContent>
       </Card>

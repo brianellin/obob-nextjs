@@ -1,14 +1,15 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import { Question } from "@/types";
 import { cn } from "@/lib/utils";
 import { Badge } from "@/components/ui/badge";
-import { ScrollArea } from "@/components/ui/scroll-area";
 import { InfoIcon } from "lucide-react";
 
 interface QuestionHeatmapInlineProps {
   questions: Question[];
+  selectedPage?: number | null;
+  onPageSelect?: (page: number | null) => void;
 }
 
 interface PageData {
@@ -19,9 +20,9 @@ interface PageData {
 
 export function QuestionHeatmapInline({
   questions,
+  selectedPage = null,
+  onPageSelect,
 }: QuestionHeatmapInlineProps) {
-  const [selectedPage, setSelectedPage] = useState<number | null>(null);
-
   // Early return if no questions
   if (!questions || questions.length === 0) {
     return (
@@ -105,7 +106,7 @@ export function QuestionHeatmapInline({
             <button
               key={page}
               onClick={() =>
-                setSelectedPage(selectedPage === page ? null : page)
+                onPageSelect?.(selectedPage === page ? null : page)
               }
               className={cn(
                 "h-3 w-2 rounded-sm transition-all shrink-0",
@@ -117,53 +118,6 @@ export function QuestionHeatmapInline({
           ))}
         </div>
       </div>
-
-      {selectedPage !== null && (
-        <div className="space-y-2">
-          <div className="flex items-center justify-between">
-            <h3 className="text-lg font-semibold">Page {selectedPage + 1}</h3>
-            <Badge variant="secondary">
-              {pageMap[selectedPage]?.count || 0} question
-              {(pageMap[selectedPage]?.count || 0) !== 1 ? "s" : ""}
-            </Badge>
-          </div>
-          <ScrollArea className="h-[250px] w-full border rounded-md p-4">
-            {pageMap[selectedPage]?.questions.length > 0 ? (
-              <ul className="space-y-4">
-                {pageMap[selectedPage].questions.map(
-                  (q: Question, i: number) => (
-                    <li key={i} className="space-y-1">
-                      <div className="flex items-start gap-2">
-                        <Badge
-                          variant={
-                            q.type === "content" ? "default" : "secondary"
-                          }
-                        >
-                          {q.type === "content" ? "C" : "IWB"}
-                        </Badge>
-                        <span className="text-sm">{q.text}</span>
-                      </div>
-                      {q.type === "content" && q.answer && (
-                        <div className="text-sm text-muted-foreground pl-8">
-                          Answer: {q.answer}
-                        </div>
-                      )}
-                      <div className="text-xs text-muted-foreground pl-8">
-                        Source: {String(q.source?.name || "Unknown")}
-                      </div>
-                    </li>
-                  )
-                )}
-              </ul>
-            ) : (
-              <div className="text-sm text-muted-foreground flex items-center gap-2">
-                <InfoIcon className="h-4 w-4" />
-                No questions on this page
-              </div>
-            )}
-          </ScrollArea>
-        </div>
-      )}
     </div>
   );
 }
