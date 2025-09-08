@@ -1,13 +1,15 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { getBooksWithStats } from "@/lib/books";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import { QuestionHeatmapInline } from "@/components/QuestionHeatmapInline";
 import { getAllQuestions } from "@/lib/questions";
 import { notFound } from "next/navigation";
+import { BookOpen } from "lucide-react";
 
 type Props = {
   params: Promise<{
@@ -91,17 +93,6 @@ export default async function BooksPage({ params }: Props) {
     bySource: sourceCount,
   };
 
-  // Pre-group questions by book_key for better performance
-  const questionsByBook = allQuestions.reduce((acc, question) => {
-    if (question?.book_key) {
-      if (!acc[question.book_key]) {
-        acc[question.book_key] = [];
-      }
-      acc[question.book_key].push(question);
-    }
-    return acc;
-  }, {} as Record<string, typeof allQuestions>);
-
   return (
     <div className="container mx-auto px-4 py-8 space-y-8">
       <h1 className="text-4xl font-bold">
@@ -180,9 +171,17 @@ export default async function BooksPage({ params }: Props) {
                 </div>
 
                 <div className="flex-grow space-y-4">
-                  <div>
-                    <h2 className="text-2xl font-bold">{book.title}</h2>
-                    <p className="text-muted-foreground">by {book.author}</p>
+                  <div className="flex items-start justify-between">
+                    <div>
+                      <h2 className="text-2xl font-bold">{book.title}</h2>
+                      <p className="text-muted-foreground">by {book.author}</p>
+                    </div>
+                    <Link href={`/books/${year}/${division}/${book.book_key}`}>
+                      <Button variant="outline" size="sm">
+                        <BookOpen className="h-4 w-4 mr-2" />
+                        View Questions
+                      </Button>
+                    </Link>
                   </div>
 
                   <Separator />
@@ -226,12 +225,6 @@ export default async function BooksPage({ params }: Props) {
                       </ScrollArea>
                     </div>
                   </div>
-
-                  <Separator />
-
-                  <QuestionHeatmapInline
-                    questions={questionsByBook[book.book_key] || []}
-                  />
                 </div>
               </div>
             </CardContent>
