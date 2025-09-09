@@ -306,17 +306,30 @@ export default function BookDetailPage({
               <Separator />
 
               {/* Page Navigation Controls */}
-              <div className="flex items-center justify-between gap-4">
-                <Button
-                  variant="outline"
-                  onClick={handlePreviousPage}
-                  disabled={currentPageIndex === 0}
-                >
-                  <ChevronLeft className="h-4 w-4 mr-1" />
-                  Previous
-                </Button>
+              <div className="flex flex-col gap-4">
+                {/* Previous/Next buttons row */}
+                <div className="flex items-center justify-between">
+                  <Button
+                    variant="outline"
+                    onClick={handlePreviousPage}
+                    disabled={currentPageIndex === 0}
+                  >
+                    <ChevronLeft className="h-4 w-4 mr-1" />
+                    Previous
+                  </Button>
 
-                <div className="flex items-center gap-2">
+                  <Button
+                    variant="outline"
+                    onClick={handleNextPage}
+                    disabled={currentPageIndex === pageNumbers.length - 1}
+                  >
+                    Next
+                    <ChevronRight className="h-4 w-4 ml-1" />
+                  </Button>
+                </div>
+
+                {/* Jump to page row - separate line on mobile, centered */}
+                <div className="flex items-center justify-center gap-2">
                   <span className="text-sm text-muted-foreground">
                     Jump to page:
                   </span>
@@ -330,19 +343,21 @@ export default function BookDetailPage({
                     min={pageNumbers.length > 0 ? Math.min(...pageNumbers) : 1}
                     max={pageNumbers.length > 0 ? Math.max(...pageNumbers) : 1}
                   />
-                  <Button onClick={handlePageJump} size="sm">
+                  <Button
+                    onClick={handlePageJump}
+                    size="sm"
+                    disabled={
+                      !pageInput ||
+                      pageInput.trim() === "" ||
+                      isNaN(Number(pageInput)) ||
+                      pageNumbers.length === 0 ||
+                      Number(pageInput) < Math.min(...pageNumbers) ||
+                      Number(pageInput) > Math.max(...pageNumbers)
+                    }
+                  >
                     Go
                   </Button>
                 </div>
-
-                <Button
-                  variant="outline"
-                  onClick={handleNextPage}
-                  disabled={currentPageIndex === pageNumbers.length - 1}
-                >
-                  Next
-                  <ChevronRight className="h-4 w-4 ml-1" />
-                </Button>
               </div>
 
               <Separator />
@@ -350,13 +365,13 @@ export default function BookDetailPage({
               {/* Questions for Current Page */}
               <div className="space-y-4">
                 <h3 className="text-lg font-semibold">
-                  Questions from page {currentPage} ({currentQuestions.length}{" "}
-                  question{currentQuestions.length === 1 ? "" : "s"})
+                  Page {currentPage}: {currentQuestions.length} question
+                  {currentQuestions.length === 1 ? "" : "s"}
                 </h3>
                 {currentQuestions.length === 0 ? (
                   <div className="text-center py-8">
                     <p className="text-muted-foreground mb-2">
-                      No questions available for page {currentPage} yet.
+                      No questions for page {currentPage} yet.
                     </p>
                     <p className="text-sm text-muted-foreground">
                       Try navigating to other pages to find questions.
