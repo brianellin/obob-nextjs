@@ -153,11 +153,11 @@ export default async function BooksPage({ params }: Props) {
       </Card>
 
       {/* Books List */}
-      <div className="space-y-4">
+      <div className="space-y-3 md:space-y-4">
         {booksStats.map(({ book, totalQuestions, byType, bySource }) => (
           <Card key={book.book_key}>
-            <CardContent className="p-6">
-              <div className="flex flex-col md:flex-row gap-6">
+            <CardContent className="px-4 py-3 md:px-6 md:py-4">
+              <div className="flex flex-col md:flex-row gap-3 md:gap-4">
                 <div className="flex-shrink-0">
                   <div className="relative w-32 h-48">
                     <Image
@@ -170,18 +170,27 @@ export default async function BooksPage({ params }: Props) {
                   </div>
                 </div>
 
-                <div className="flex-grow space-y-4">
-                  <div className="flex items-start justify-between">
-                    <div>
+                <div className="flex-grow space-y-2 md:space-y-3">
+                  {/* Title/Author and Button - responsive layout */}
+                  <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3">
+                    <div className="flex-grow">
                       <h2 className="text-2xl font-bold">{book.title}</h2>
                       <p className="text-muted-foreground">by {book.author}</p>
                     </div>
-                    <Link href={`/books/${year}/${division}/${book.book_key}`}>
-                      <Button variant="outline" size="sm">
-                        <BookOpen className="h-4 w-4 mr-2" />
-                        View Questions
-                      </Button>
-                    </Link>
+                    <div className="flex-shrink-0">
+                      <Link
+                        href={`/books/${year}/${division}/${book.book_key}`}
+                      >
+                        <Button
+                          variant="outline"
+                          size="sm"
+                          className="w-full sm:w-auto"
+                        >
+                          <BookOpen className="h-4 w-4 mr-2" />
+                          View Questions
+                        </Button>
+                      </Link>
+                    </div>
                   </div>
 
                   <Separator />
