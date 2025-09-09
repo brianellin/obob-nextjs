@@ -53,9 +53,12 @@ export default function Header() {
                 <SheetClose asChild>
                   <Link
                     href="/books"
-                    className="text-lg hover:text-gray-600 transition-colors"
+                    className="text-lg hover:text-gray-600 transition-colors flex items-center gap-2"
                   >
                     Books &amp; Questions
+                    <span className="px-2 py-1 text-xs font-bold text-white bg-pink-500 rounded-full">
+                      NEW!
+                    </span>
                   </Link>
                 </SheetClose>
                 <SheetClose asChild>
