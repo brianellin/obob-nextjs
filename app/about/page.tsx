@@ -11,7 +11,6 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import BlueskyPostEmbed from "@/components/BlueskyEmbed";
-import { Separator } from "@/components/ui/separator";
 export default function AboutPage() {
   return (
     <div className="container mx-auto max-w-2xl px-4 py-4">
@@ -33,8 +32,8 @@ export default function AboutPage() {
             </p>
 
             <p className="leading-7 [&:not(:first-child)]:mt-6">
-              Our battles consists of a mix of "in which book" and "content"
-              questions, and you can choose which books you'd like to focus on
+              Our battles consists of a mix of &ldquo;in which book&rdquo; and &ldquo;content&rdquo;
+              questions, and you can choose which books you&apos;d like to focus on
               in your battle.
             </p>
 

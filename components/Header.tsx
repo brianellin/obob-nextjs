@@ -1,6 +1,6 @@
 "use client";
 
-import { BookHeart, Dot, Menu } from "lucide-react";
+import { Dot, Menu } from "lucide-react";
 import RosieIcon from "./RosieIcon";
 import Link from "next/link";
 import { track } from "@vercel/analytics";
@@ -12,6 +12,7 @@ import {
   SheetHeader,
   SheetTitle,
 } from "@/components/ui/sheet";
+import BookHeartIcon from "./BookHeartIcon";
 
 export default function Header() {
   const handleBlueskyClick = () => {
@@ -23,7 +24,7 @@ export default function Header() {
     <header className="bg-white text-black p-4 shadow-sm">
       <div className="container mx-auto flex justify-center items-center relative">
         <Link href="/" className="inline-flex items-center">
-          <BookHeart className="w-6 h-6" />
+          <BookHeartIcon className="w-6 h-6" />
           <Dot className="w-6 h-6" />
           <RosieIcon className="w-6 h-6" />
         </Link>
