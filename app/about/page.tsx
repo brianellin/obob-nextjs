@@ -40,8 +40,8 @@ export default function AboutPage() {
             <p className="leading-7 [&:not(:first-child)]:mt-6">
               Test your knowlege on your own with a solo battle at your own
               pace, or play with your team/friends/family in a timed friend
-              battle &emdash; similar to what you might experience in a real
-              OBOB battle!
+              battle &mdash; similar to what you might experience in a real OBOB
+              battle!
             </p>
 
             <Button asChild className="w-full mt-4">

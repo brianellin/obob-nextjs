@@ -115,7 +115,7 @@ export default function BooksSelectionPage() {
             <div className="pt-4">
               <Button
                 onClick={handleViewBooks}
-                className="w-full bg-blue-600 hover:bg-blue-700 text-white"
+                className="w-full bg-cyan-400 hover:bg-cyan-500 text-white"
                 size="lg"
               >
                 <BookOpen className="w-5 h-5 mr-2" />

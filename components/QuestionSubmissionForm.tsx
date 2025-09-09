@@ -6,6 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Input } from "@/components/ui/input";
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 import { Send, PawPrint } from "lucide-react";
+import { Separator } from "@/components/ui/separator";
 
 type QuestionSubmissionFormProps = {
   year: string;
@@ -223,6 +224,17 @@ export default function QuestionSubmissionForm({
             </div>
           )}
 
+          <Separator />
+
+          {/* User Attribution Tip */}
+          <div className="my-4 p-3 bg-blue-50 border border-blue-200 rounded-md">
+            <p className="text-sm text-blue-800">
+              Submitted questions will be cited from the &quot;OBOB.dog
+              community&quot;. Include your name and email so we can let you
+              know when your question goes live!
+            </p>
+          </div>
+
           {/* Source Information */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
             <div>
@@ -250,21 +262,6 @@ export default function QuestionSubmissionForm({
                 disabled={isSubmitting}
               />
             </div>
-          </div>
-
-          {/* Optional source link */}
-          <div className="mb-4">
-            <label className="block text-sm font-medium text-gray-700 mb-2">
-              Source Link (optional)
-            </label>
-            <Input
-              type="url"
-              placeholder="https://example.com (if applicable)"
-              value={sourceLink}
-              onChange={(e) => setSourceLink(e.target.value)}
-              className="bg-white"
-              disabled={isSubmitting}
-            />
           </div>
 
           <div className="flex flex-col sm:flex-row gap-2 sm:justify-end">
