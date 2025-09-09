@@ -32,9 +32,9 @@ export default function AboutPage() {
             </p>
 
             <p className="leading-7 [&:not(:first-child)]:mt-6">
-              Our battles consists of a mix of &ldquo;in which book&rdquo; and &ldquo;content&rdquo;
-              questions, and you can choose which books you&apos;d like to focus on
-              in your battle.
+              Our battles consists of a mix of &ldquo;in which book&rdquo; and
+              &ldquo;content&rdquo; questions, and you can choose which books
+              you&apos;d like to focus on in your battle.
             </p>
 
             <p className="leading-7 [&:not(:first-child)]:mt-6">

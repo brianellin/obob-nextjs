@@ -40,13 +40,13 @@ export default function BooksSelectionPage() {
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-4">OBOB Books</h1>
           <p className="text-xl text-muted-foreground">
-            Select your division to view available books, see question stats,
-            and submit new questions!
+            Select your division to view available books, question stats,
+            questions by book and page, and submit new questions!
           </p>
         </div>
 
         <div className="flex justify-center">
-          <div className="bg-gray-50 border border-gray-200 rounded-lg p-6 shadow-sm space-y-6 w-full max-w-md">
+          <div className="bg-gray-50 border border-gray-200 rounded-lg p-6 shadow-sm space-y-6 w-full max-w-lg">
             <div>
               <p className="text-sm font-medium text-gray-700 text-center mb-3">
                 Pick your year

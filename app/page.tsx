@@ -54,11 +54,11 @@ export default function Home() {
           Read, practice, and have fun with Oregon Battle of the Books
         </p>
 
-        <div className="flex justify-center pt-2">
+        <div className="max-w-lg mx-auto pt-2">
           <div className="bg-gray-50 border border-gray-200 rounded-lg p-4 shadow-sm space-y-4">
             <div>
               <p className="text-sm font-medium text-gray-700 text-center mb-3">
-                Pick your division
+                Pick your battle division
               </p>
               <ToggleGroup
                 type="single"
