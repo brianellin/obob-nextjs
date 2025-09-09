@@ -1,6 +1,31 @@
 import { GoogleSpreadsheet } from 'google-spreadsheet';
 import { JWT } from 'google-auth-library';
 
+// Generic function to append data to any Google Sheet  
+async function appendToSheet(sheetId: string, data: Record<string, string | number>) {
+  try {
+    const SCOPES = [
+      'https://www.googleapis.com/auth/spreadsheets',
+    ];
+
+    const jwt = new JWT({
+      email: process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL,
+      key: process.env.GOOGLE_PRIVATE_KEY?.replace(/\\n/g, '\n'),
+      scopes: SCOPES,
+    });
+
+    const doc = new GoogleSpreadsheet(sheetId, jwt);
+    await doc.loadInfo();
+    const sheet = doc.sheetsByIndex[0];
+
+    await sheet.addRow(data);
+    console.log('Successfully added data to Google Sheet');
+  } catch (error) {
+    console.error('Error appending to Google Sheets:', error);
+    throw error;
+  }
+}
+
 export async function appendFeedbackToSheet(feedbackData: {
   timestamp: string;
   status: string;
@@ -23,43 +48,56 @@ export async function appendFeedbackToSheet(feedbackData: {
     link?: string;
   };
 }) {
-  try {
-    const SCOPES = [
-      'https://www.googleapis.com/auth/spreadsheets',
-    ];
+  const rowData = {
+    timestamp: feedbackData.timestamp,
+    status: feedbackData.status,
+    feedback: feedbackData.feedback,
+    year: feedbackData.year,
+    division: feedbackData.division,
+    bookTitle: feedbackData.book.title,
+    bookAuthor: feedbackData.book.author,
+    bookKey: feedbackData.book.book_key,
+    questionType: feedbackData.question.type,
+    questionText: feedbackData.question.text,
+    page: feedbackData.question.page,
+    answer: feedbackData.question.answer || '',
+    sourceName: feedbackData.source?.name || '',
+    sourceLink: feedbackData.source?.link || '',
+  };
 
-    const jwt = new JWT({
-      email: process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL,
-      key: process.env.GOOGLE_PRIVATE_KEY?.replace(/\\n/g, '\n'),
-      scopes: SCOPES,
-    });
+  return appendToSheet(process.env.GOOGLE_FEEDBACK_SHEET_ID!, rowData);
+}
 
-    const doc = new GoogleSpreadsheet(process.env.GOOGLE_SHEET_ID!, jwt);
-    await doc.loadInfo();
-    const sheet = doc.sheetsByIndex[0];
+export async function appendQuestionToSheet(questionData: {
+  timestamp: string;
+  status: string;
+  year: string;
+  division: string;
+  bookKey: string;
+  questionType: string;
+  questionText: string;
+  page: number;
+  answer?: string;
+  sourceName: string;
+  sourceLink?: string;
+  sourceEmail: string;
+}) {
+  const rowData = {
+    timestamp: questionData.timestamp,
+    status: questionData.status,
+    year: questionData.year,
+    division: questionData.division,
+    bookKey: questionData.bookKey,
+    questionType: questionData.questionType,
+    questionText: questionData.questionText,
+    page: questionData.page,
+    answer: questionData.answer || '',
+    sourceName: questionData.sourceName,
+    sourceLink: questionData.sourceLink || '',
+    sourceEmail: questionData.sourceEmail,
+  };
 
-    await sheet.addRow({
-      timestamp: feedbackData.timestamp,
-      status: feedbackData.status,
-      feedback: feedbackData.feedback,
-      year: feedbackData.year,
-      division: feedbackData.division,
-      bookTitle: feedbackData.book.title,
-      bookAuthor: feedbackData.book.author,
-      bookKey: feedbackData.book.book_key,
-      questionType: feedbackData.question.type,
-      questionText: feedbackData.question.text,
-      page: feedbackData.question.page,
-      answer: feedbackData.question.answer || '',
-      sourceName: feedbackData.source?.name || '',
-      sourceLink: feedbackData.source?.link || '',
-    });
-
-    console.log('Successfully added feedback to Google Sheet');
-  } catch (error) {
-    console.error('Error appending to Google Sheets:', error);
-    throw error;
-  }
+  return appendToSheet(process.env.GOOGLE_QUESTION_SHEET_ID!, rowData);
 }
 
 // Helper function to set up headers for the Google Sheet (run this once)
@@ -75,7 +113,7 @@ export async function setupFeedbackSheetHeaders() {
       scopes: SCOPES,
     });
 
-    const doc = new GoogleSpreadsheet(process.env.GOOGLE_SHEET_ID!, jwt);
+    const doc = new GoogleSpreadsheet(process.env.GOOGLE_FEEDBACK_SHEET_ID!, jwt);
     await doc.loadInfo();
     const sheet = doc.sheetsByIndex[0];
 

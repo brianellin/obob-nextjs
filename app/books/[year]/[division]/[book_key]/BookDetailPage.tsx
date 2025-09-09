@@ -8,9 +8,10 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { Input } from "@/components/ui/input";
-import { ChevronLeft, ChevronRight, ArrowLeft } from "lucide-react";
+import { ChevronLeft, ChevronRight, ArrowLeft, Plus } from "lucide-react";
 import { Book, Question } from "@/types";
 import { QuestionHeatmapInline } from "@/components/QuestionHeatmapInline";
+import QuestionSubmissionForm from "@/components/QuestionSubmissionForm";
 
 interface BookPageProps {
   book: Book;
@@ -60,6 +61,7 @@ export default function BookDetailPage({
 
   const [currentPageIndex, setCurrentPageIndex] = useState(0);
   const [pageInput, setPageInput] = useState("");
+  const [showSubmissionForm, setShowSubmissionForm] = useState(false);
 
   const currentPage = pageNumbers[currentPageIndex] || 1;
   const currentQuestions = questionsByPage[currentPage] || [];
@@ -364,17 +366,36 @@ export default function BookDetailPage({
 
               {/* Questions for Current Page */}
               <div className="space-y-4">
-                <h3 className="text-lg font-semibold">
-                  Page {currentPage}: {currentQuestions.length} question
-                  {currentQuestions.length === 1 ? "" : "s"}
-                </h3>
+                <div className="flex items-center justify-between">
+                  <h3 className="text-lg font-semibold">
+                    Page {currentPage}: {currentQuestions.length} question
+                    {currentQuestions.length === 1 ? "" : "s"}
+                  </h3>
+                  <Button
+                    onClick={() => setShowSubmissionForm(!showSubmissionForm)}
+                    variant="outline"
+                    size="sm"
+                    className="flex items-center gap-2"
+                  >
+                    <Plus className="h-4 w-4" />
+                    Add Question
+                  </Button>
+                </div>
+
+                {/* Question Submission Form */}
+                {showSubmissionForm && (
+                  <QuestionSubmissionForm
+                    year={year}
+                    division={division}
+                    bookKey={book.book_key}
+                    page={currentPage}
+                    onClose={() => setShowSubmissionForm(false)}
+                  />
+                )}
                 {currentQuestions.length === 0 ? (
                   <div className="text-center py-8">
                     <p className="text-muted-foreground mb-2">
                       No questions for page {currentPage} yet.
-                    </p>
-                    <p className="text-sm text-muted-foreground">
-                      Try navigating to other pages to find questions.
                     </p>
                   </div>
                 ) : (
