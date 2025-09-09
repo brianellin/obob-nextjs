@@ -307,32 +307,21 @@ export default function BookDetailPage({
             <>
               <Separator />
 
-              {/* Page Navigation Controls */}
-              <div className="flex flex-col gap-4">
-                {/* Previous/Next buttons row */}
-                <div className="flex items-center justify-between">
-                  <Button
-                    variant="outline"
-                    onClick={handlePreviousPage}
-                    disabled={currentPageIndex === 0}
-                  >
-                    <ChevronLeft className="h-4 w-4 mr-1" />
-                    Previous
-                  </Button>
+              {/* Page Navigation Controls - single row with jump controls in middle */}
+              <div className="flex items-center justify-between gap-2 md:gap-4">
+                {/* Previous Button */}
+                <Button
+                  variant="outline"
+                  onClick={handlePreviousPage}
+                  disabled={currentPageIndex === 0}
+                >
+                  <ChevronLeft className="h-4 w-4" />
+                  <span className="hidden md:inline ml-1">Previous</span>
+                </Button>
 
-                  <Button
-                    variant="outline"
-                    onClick={handleNextPage}
-                    disabled={currentPageIndex === pageNumbers.length - 1}
-                  >
-                    Next
-                    <ChevronRight className="h-4 w-4 ml-1" />
-                  </Button>
-                </div>
-
-                {/* Jump to page row - separate line on mobile, centered */}
-                <div className="flex items-center justify-center gap-2">
-                  <span className="text-sm text-muted-foreground">
+                {/* Jump to page controls in the middle */}
+                <div className="flex items-center gap-2">
+                  <span className="hidden md:inline text-sm text-muted-foreground">
                     Jump to page:
                   </span>
                   <Input
@@ -341,7 +330,7 @@ export default function BookDetailPage({
                     value={pageInput}
                     onChange={(e) => setPageInput(e.target.value)}
                     onKeyPress={handleKeyPress}
-                    className="w-24"
+                    className="w-16 md:w-24"
                     min={pageNumbers.length > 0 ? Math.min(...pageNumbers) : 1}
                     max={pageNumbers.length > 0 ? Math.max(...pageNumbers) : 1}
                   />
@@ -360,6 +349,16 @@ export default function BookDetailPage({
                     Go
                   </Button>
                 </div>
+
+                {/* Next Button */}
+                <Button
+                  variant="outline"
+                  onClick={handleNextPage}
+                  disabled={currentPageIndex === pageNumbers.length - 1}
+                >
+                  <span className="hidden md:inline mr-1">Next</span>
+                  <ChevronRight className="h-4 w-4" />
+                </Button>
               </div>
 
               <Separator />
