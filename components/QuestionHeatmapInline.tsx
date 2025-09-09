@@ -63,12 +63,15 @@ export function QuestionHeatmapInline({
 
   // Handle edge case where no questions have pages
   if (minPage === Infinity) {
-    minPage = 0;
-    maxPage = 0;
+    minPage = 1;
+    maxPage = 1;
   }
 
+  // Always start from page 1 to align with navigation
+  const startPage = 1;
+
   // Create array of pages, but limit to reasonable range to prevent performance issues
-  const pageRange = maxPage - minPage + 1;
+  const pageRange = maxPage - startPage + 1;
   const MAX_PAGES = 500; // Prevent huge arrays if page numbers are sparse
 
   let pages: PageData[];
@@ -77,9 +80,9 @@ export function QuestionHeatmapInline({
     // If range is too large, just show pages that actually have questions
     pages = Object.values(pageMap).sort((a, b) => a.page - b.page);
   } else {
-    // Normal case: show all pages in range
+    // Normal case: show all pages in range starting from page 1
     pages = Array.from({ length: pageRange }, (_, i) => {
-      const page = minPage + i;
+      const page = startPage + i;
       return pageMap[page] || { page, count: 0, questions: [] };
     }).sort((a, b) => a.page - b.page);
   }

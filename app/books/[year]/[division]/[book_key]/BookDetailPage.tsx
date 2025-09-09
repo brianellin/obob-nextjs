@@ -49,10 +49,12 @@ export default function BookDetailPage({
 
     if (pagesWithQuestions.length === 0) return [];
 
-    const minPage = Math.min(...pagesWithQuestions);
     const maxPage = Math.max(...pagesWithQuestions);
 
-    // Create array of all pages from min to max
+    // Always start from page 1 to include all pages in the book
+    const minPage = 1;
+
+    // Create array of all pages from 1 to max
     return Array.from({ length: maxPage - minPage + 1 }, (_, i) => minPage + i);
   }, [questions]);
 
