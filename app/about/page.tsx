@@ -11,6 +11,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import BlueskyPostEmbed from "@/components/BlueskyEmbed";
+import { Separator } from "@/components/ui/separator";
 export default function AboutPage() {
   return (
     <div className="container mx-auto max-w-2xl px-4 py-4">
@@ -23,19 +24,25 @@ export default function AboutPage() {
       <div className="flex flex-col gap-8">
         <Card>
           <CardHeader>
-            <CardTitle>What the ruff?</CardTitle>
+            <CardTitle>What is OBOB.dog?</CardTitle>
           </CardHeader>
           <CardContent>
             <p className="leading-7 [&:not(:first-child)]:mt-6">
-              obob.dog is a new way to explore Oregon Battle of the Books (OBOB)
-              questions and test your knowledge.
+              OBOB.dog is a new way to explore Oregon Battle of the Books (OBOB)
+              questions and test your knowledge via online battles.
             </p>
+
             <p className="leading-7 [&:not(:first-child)]:mt-6">
-              Battles are 8 questions: 4{" "}
-              <span className="font-bold">in which book</span> questions,
-              followed by 4 <span className="font-bold">content</span>{" "}
-              questions, similar to what you&apos;d experience in a real OBOB
-              battle.
+              Our battles consists of a mix of "in which book" and "content"
+              questions, and you can choose which books you'd like to focus on
+              in your battle.
+            </p>
+
+            <p className="leading-7 [&:not(:first-child)]:mt-6">
+              Test your knowlege on your own with a solo battle at your own
+              pace, or play with your team/friends/family in a timed friend
+              battle &emdash; similar to what you might experience in a real
+              OBOB battle!
             </p>
 
             <Button asChild className="w-full mt-4">
@@ -55,9 +62,10 @@ export default function AboutPage() {
           </CardHeader>
           <CardContent>
             <p className="leading-7 [&:not(:first-child)]:mt-6">
-              We collect questions from various schools and libraries across
-              Oregon that have posted them publicly (usually as PDFs or
-              spreadsheets). Here&apos;s the current list of sources:
+              We collect questions from various schools, libraries, and parent
+              volunteers across Oregon that have posted questions publicly for
+              all to use (usually as PDFs or spreadsheets). Each question in the
+              battle cites its source, for example:
             </p>
             <ul className="my-6 ml-6 list-disc [&>li]:mt-2">
               <li>
@@ -80,19 +88,14 @@ export default function AboutPage() {
               <li>OBOB Practice-Question Coalition</li>
             </ul>
             <p className="leading-7 [&:not(:first-child)]:mt-6">
-              Each question in the battle cites its source. If you are
-              interested in contributing questions, please get in touch! Email
-              us at{" "}
-              <a href="mailto:obobdotdog@gmail.com">obobdotdog@gmail.com</a>
-            </p>
-
-            <p className="leading-7 [&:not(:first-child)]:mt-6">
-              Take a look at the{" "}
-              <Link href="/books" className="hover:underline">
-                Books
+              New for the 2025-2026 school year, YOU can submit questions to the
+              OBOB.dog community! Head to the{" "}
+              <Link href="/books" className="hover:underline underline">
+                Books &amp; Questions
               </Link>{" "}
-              page to see a summary of questions by book, and where each one
-              comes from.
+              page to see a summary of questions by book and submit your own.
+              Try and fill in the gaps for areas of the books that are missing
+              questions.
             </p>
           </CardContent>
         </Card>
@@ -120,7 +123,7 @@ export default function AboutPage() {
             </div>
 
             <p className="mt-4">
-              obob.dog is open source. Feel free to contribute, report issues,
+              OBOB.dog is open source. Feel free to contribute, report issues,
               or make your own version!
             </p>
             <Button asChild>
