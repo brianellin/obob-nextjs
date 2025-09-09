@@ -196,11 +196,10 @@ export default function QuestionSubmissionForm({
               {questionType === "content"
                 ? "Tip: Ask about specific details, characters, or events on this page"
                 : "Tip: Ask a question that could apply to multiple books in the competition. Do not repeat the `In which book...` portion of the question"}
-              `
             </p>
             <p className="text-xs text-gray-500 mt-1">
               Bonus tip: Be unique! Review the existing questions below before
-              submitting to make your question isn't a duplicate.
+              submitting to make sure your question isn&apos;t a duplicate.
             </p>
           </div>
 
@@ -219,7 +218,7 @@ export default function QuestionSubmissionForm({
               />
               <p className="text-xs text-gray-500 mt-1">
                 Tip: Be brief! Your answer should be a single word or phrase
-                that can be evaluateed objectively.
+                that can be evaluated objectively.
               </p>
             </div>
           )}
