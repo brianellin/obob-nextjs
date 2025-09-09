@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, useEffect, useCallback } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
@@ -82,6 +82,18 @@ export default function BookDetailPage({
       }
     });
 
+    // Calculate page statistics
+    const pagesWithQuestions = Object.keys(questionsByPage).length;
+    const maxPage =
+      questions.length > 0
+        ? Math.max(
+            ...questions
+              .map((q) => q.page)
+              .filter((p) => typeof p === "number" && p > 0)
+          )
+        : 0;
+    const pagesWithoutQuestions = Math.max(0, maxPage - pagesWithQuestions);
+
     return {
       totalQuestions,
       byType: {
@@ -89,23 +101,25 @@ export default function BookDetailPage({
         "in-which-book": inWhichBookQuestions,
       },
       bySource,
-      totalPages: pageNumbers.length,
+      pagesWithQuestions,
+      pagesWithoutQuestions,
+      maxPage,
     };
-  }, [questions, pageNumbers.length]);
+  }, [questions, questionsByPage]);
 
-  const handlePreviousPage = () => {
+  const handlePreviousPage = useCallback(() => {
     if (currentPageIndex > 0) {
       setCurrentPageIndex(currentPageIndex - 1);
       setPageInput("");
     }
-  };
+  }, [currentPageIndex]);
 
-  const handleNextPage = () => {
+  const handleNextPage = useCallback(() => {
     if (currentPageIndex < pageNumbers.length - 1) {
       setCurrentPageIndex(currentPageIndex + 1);
       setPageInput("");
     }
-  };
+  }, [currentPageIndex, pageNumbers.length]);
 
   const handlePageJump = () => {
     const targetPage = parseInt(pageInput);
@@ -132,6 +146,38 @@ export default function BookDetailPage({
       }
     }
   };
+
+  // Keyboard navigation
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      // Only handle arrow keys when not typing in an input field
+      if (
+        event.target instanceof HTMLInputElement ||
+        event.target instanceof HTMLTextAreaElement
+      ) {
+        return;
+      }
+
+      switch (event.key) {
+        case "ArrowLeft":
+          event.preventDefault();
+          handlePreviousPage();
+          break;
+        case "ArrowRight":
+          event.preventDefault();
+          handleNextPage();
+          break;
+      }
+    };
+
+    // Add event listener
+    document.addEventListener("keydown", handleKeyDown);
+
+    // Cleanup
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [handlePreviousPage, handleNextPage]); // Dependencies for the navigation functions
 
   return (
     <div className="container mx-auto px-4 py-8 space-y-8">
@@ -185,7 +231,15 @@ export default function BookDetailPage({
                     </div>
                     <div className="flex justify-between">
                       <span>Pages with Questions:</span>
-                      <Badge variant="secondary">{stats.totalPages}</Badge>
+                      <Badge variant="secondary">
+                        {stats.pagesWithQuestions}
+                      </Badge>
+                    </div>
+                    <div className="flex justify-between">
+                      <span>Pages without Questions:</span>
+                      <Badge variant="outline">
+                        {stats.pagesWithoutQuestions}
+                      </Badge>
                     </div>
                   </div>
                 </div>
@@ -229,11 +283,10 @@ export default function BookDetailPage({
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center justify-between">
-            <span>Questions by Page</span>
+            <span>Questions by page</span>
             {pageNumbers.length > 0 && (
               <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                Page {currentPage} ({currentPageIndex + 1} of{" "}
-                {pageNumbers.length})
+                Page {currentPage}{" "}
               </div>
             )}
           </CardTitle>
@@ -297,8 +350,8 @@ export default function BookDetailPage({
               {/* Questions for Current Page */}
               <div className="space-y-4">
                 <h3 className="text-lg font-semibold">
-                  Questions from Page {currentPage} ({currentQuestions.length}{" "}
-                  questions)
+                  Questions from page {currentPage} ({currentQuestions.length}{" "}
+                  question{currentQuestions.length === 1 ? "" : "s"})
                 </h3>
                 {currentQuestions.length === 0 ? (
                   <div className="text-center py-8">

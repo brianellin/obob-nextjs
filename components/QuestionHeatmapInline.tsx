@@ -103,7 +103,6 @@ export function QuestionHeatmapInline({
   return (
     <div className="space-y-6">
       <div className="space-y-2">
-        <div className="text-sm font-medium">Questions by Page</div>
         <div className="flex flex-wrap gap-0.5 items-center w-full">
           {pages.map(({ page, count }) => (
             <button
