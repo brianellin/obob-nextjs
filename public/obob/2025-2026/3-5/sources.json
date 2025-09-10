@@ -9,6 +9,11 @@
         "path": "lake_oswego/questions.json",
         "name": "Lake Oswego Public Library",
         "link": "https://www.ci.oswego.or.us/kids/obob-practice-questions"
+      },
+      {
+        "path": "cedar_mill/questions.json",
+        "name": "Cedar Mill Public Library",
+        "link": "https://library.cedarmill.org/kids/obob/"
       }
     ]
   } 

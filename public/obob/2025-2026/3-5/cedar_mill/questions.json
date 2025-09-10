@@ -1,0 +1,420 @@
+{
+    "questions": [
+      {
+        "type": "in-which-book",
+        "text": "does a character not like light?",
+        "book_key": "elf-dog-and-owl-head",
+        "page": 79
+      },
+      {
+        "type": "in-which-book",
+        "text": "is a character’s last name Mayfleet?",
+        "book_key": "city-of-ember",
+        "page": 5
+      },
+      {
+        "type": "in-which-book",
+        "text": "are characters drugged with doughnuts?",
+        "book_key": "the-tail-of-emily-windsnap",
+        "page": 125
+      },
+      {
+        "type": "in-which-book",
+        "text": "does a family flee their country on a ship?",
+        "book_key": "inside-out-and-back-again",
+        "page": 65
+      },
+      {
+        "type": "in-which-book",
+        "text": "is there a six-toed cat?",
+        "book_key": "the-lost-library",
+        "page": 13
+      },
+      {
+        "type": "in-which-book",
+        "text": "is a character’s mom a public defender?",
+        "book_key": "the-million-dollar-race",
+        "page": 14
+      },
+      {
+        "type": "in-which-book",
+        "text": "does a character milk a cow for the first time?",
+        "book_key": "number-the-stars",
+        "page": 121
+      },
+      {
+        "type": "in-which-book",
+        "text": "does a character have a comb with a dragonfly on it?",
+        "book_key": "the-remarkable-rescue-at-milkweed-meadow",
+        "page": 29
+      },
+      {
+        "type": "content",
+        "text": "what does Marvel call her worries?",
+        "book_key": "better-with-butter",
+        "answer": "An armor.",
+        "page": 2
+      },
+      {
+        "type": "content",
+        "text": "what is the full name of the most famous librarian in the whole world?",
+        "book_key": "escape-from-mr-lemoncellos-library",
+        "answer": "Dr. Yanina Zinchenko.",
+        "page": 33
+      },
+      {
+        "type": "content",
+        "text": "what are the names of Celia and Jacey's horses?",
+        "book_key": "just-like-click",
+        "answer": "Bilbo AND Frodo.",
+        "page": 138
+      },
+      {
+        "type": "content",
+        "text": "which mail slot has a letter for his Daddy sticking out of it?",
+        "book_key": "finding-langston",
+        "answer": "4D.",
+        "page": 14
+      },
+      {
+        "type": "content",
+        "text": "what does Brian call the berries he finds?",
+        "book_key": "hatchet",
+        "answer": "Gut cherries.",
+        "page": 65
+      },
+      {
+        "type": "content",
+        "text": "what is the name of the point where the slough empties into the far deeper bay?",
+        "book_key": "odder",
+        "answer": "The Drop.",
+        "page": 39
+      },
+      {
+        "type": "content",
+        "text": "name the character who doesn’t know how to cook oatmeal.",
+        "book_key": "the-secret-garden-on-81st-street",
+        "answer": "Mary (Lennox).",
+        "page": 19
+      },
+      {
+        "type": "content",
+        "text": "what is the name of the flower festival Avery Lee goes to?",
+        "book_key": "squished",
+        "answer": "The Hickory Valley Flower Festival.",
+        "page": 192
+      },
+      {
+        "type": "in-which-book",
+        "text": "is there a phone call about a missing Capybara?",
+        "book_key": "better-with-butter",
+        "page": 201
+      },
+      {
+        "type": "in-which-book",
+        "text": "does it help characters to be familiar with the Dewey Decimal System?",
+        "book_key": "escape-from-mr-lemoncellos-library",
+        "page": 55
+      },
+      {
+        "type": "in-which-book",
+        "text": "do characters turn the ropes for double Dutch on the sidewalk?",
+        "book_key": "finding-langston",
+        "page": 5
+      },
+      {
+        "type": "in-which-book",
+        "text": "is there a parrot named Fletcher?",
+        "book_key": "just-like-click",
+        "page": 17
+      },
+      {
+        "type": "in-which-book",
+        "text": "is a character sprayed by a skunk?",
+        "book_key": "hatchet",
+        "page": 122
+      },
+      {
+        "type": "in-which-book",
+        "text": "is the main character also known as #156?",
+        "book_key": "odder",
+        "page": 10
+      },
+      {
+        "type": "in-which-book",
+        "text": "does someone go on a special outing to Central Park Zoo with friends?",
+        "book_key": "the-secret-garden-on-81st-street",
+        "page": 192
+      },
+      {
+        "type": "in-which-book",
+        "text": "is someone embarrassed because of mashed peas?",
+        "book_key": "squished",
+        "page": 22
+      },
+      {
+        "type": "content",
+        "text": "TWO PARTS: In The Tail of Emily Windsnap, what are Mr. Beeston’s two jobs?",
+        "book_key": "the-tail-of-emily-windsnap",
+        "answer": "Lighthouse keeper AND Adviser to Neptune.",
+        "page": 11
+      },
+      {
+        "type": "content",
+        "text": "In Elf Dog and Owl Head, what is the name of Clay’s best friend?",
+        "book_key": "elf-dog-and-owl-head",
+        "answer": "Levi.",
+        "page": 11
+      },
+      {
+        "type": "content",
+        "text": "In Inside Out and Back Again, what state does Hà’s family get sponsored to?",
+        "book_key": "inside-out-and-back-again",
+        "answer": "Alabama.",
+        "page": 109
+      },
+      {
+        "type": "content",
+        "text": "In The Lost Library, what is the date the library burns down?",
+        "book_key": "the-lost-library",
+        "answer": "November 5, 1999.",
+        "page": 90
+      },
+      {
+        "type": "content",
+        "text": "In The Million Dollar Race, what is the name of the late-night talk show Grant appears on?",
+        "book_key": "the-million-dollar-race",
+        "answer": "The Midnight Show.",
+        "page": 131
+      },
+      {
+        "type": "content",
+        "text": "In Number the Stars, what is the illegal newspaper called?",
+        "book_key": "number-the-stars",
+        "answer": "De Frie Danske OR The Free Danes.",
+        "page": 7
+      },
+      {
+        "type": "content",
+        "text": "In The Remarkable Rescue at Milkweed Meadow, where do the rabbits have their lessons?",
+        "book_key": "the-remarkable-rescue-at-milkweed-meadow",
+        "answer": "The root room.",
+        "page": 8
+      },
+      {
+        "type": "content",
+        "text": "In The City of Ember, what job does Lina draw from the bag?",
+        "book_key": "city-of-ember",
+        "answer": "Pipeworks laborer.",
+        "page": 11
+      },
+      {
+        "type": "in-which-book",
+        "text": "does a tutor make a character memorize a new word each day?",
+        "book_key": "inside-out-and-back-again",
+        "page": 166
+      },
+      {
+        "type": "in-which-book",
+        "text": "does a squirrel smoke a cigarette?",
+        "book_key": "elf-dog-and-owl-head",
+        "page": 168
+      },
+      {
+        "type": "in-which-book",
+        "text": "is there a river north of a city?",
+        "book_key": "city-of-ember",
+        "page": 43
+      },
+      {
+        "type": "in-which-book",
+        "text": "is a character supposed to write in a journal every day for school?",
+        "book_key": "the-lost-library",
+        "page": 15
+      },
+      {
+        "type": "in-which-book",
+        "text": "is an animal named after the God of Thunder?",
+        "book_key": "number-the-stars",
+        "page": 67
+      },
+      {
+        "type": "in-which-book",
+        "text": "does a character falsely claim to have a sprained ankle?",
+        "book_key": "the-tail-of-emily-windsnap",
+        "page": 96
+      },
+      {
+        "type": "in-which-book",
+        "text": "is there a sibling who films everything for their YouTube channel?",
+        "book_key": "the-million-dollar-race",
+        "page": 31
+      },
+      {
+        "type": "in-which-book",
+        "text": "does a character accidentally step on someone's house?",
+        "book_key": "the-remarkable-rescue-at-milkweed-meadow",
+        "page": 63
+      },
+      {
+        "type": "content",
+        "text": "In Escape from Mr. Lemoncello’s Library, what prize does Charles win on the first night of the sleepover?",
+        "book_key": "escape-from-mr-lemoncellos-library",
+        "answer": "A key (to a private suite).",
+        "page": 61
+      },
+      {
+        "type": "content",
+        "text": "In Better with Butter, what is Theo’s costume in the Famous Californian presentation?",
+        "book_key": "better-with-butter",
+        "answer": "Steven Spielberg.",
+        "page": 90
+      },
+      {
+        "type": "content",
+        "text": "In Finding Langston, what is the name of Langston’s first friend in Chicago?",
+        "book_key": "finding-langston",
+        "answer": "Clem.",
+        "page": 99
+      },
+      {
+        "type": "content",
+        "text": "In Just Like Click, what is Nick's middle name?",
+        "book_key": "just-like-click",
+        "answer": "Zeus.",
+        "page": 105
+      },
+      {
+        "type": "content",
+        "text": "In Odder, Odder meets two elderly otters in the aquarium. What are their names?",
+        "book_key": "odder",
+        "answer": "Holly AND Gracie.",
+        "page": 151
+      },
+      {
+        "type": "content",
+        "text": "In The Secret Garden on 81st Street, who suggests that Colin help Mary and Dickon in the rooftop garden?",
+        "book_key": "the-secret-garden-on-81st-street",
+        "answer": "Colin’s therapist OR Dr. Sarkisian.",
+        "page": 160
+      },
+      {
+        "type": "content",
+        "text": "In Hatchet, what kind of eggs does Brian find?",
+        "book_key": "hatchet",
+        "answer": "(Snapping) turtle eggs.",
+        "page": 94
+      },
+      {
+        "type": "content",
+        "text": "In TWO PARTS: In Squished, name any two instruments that Pearl plays.",
+        "book_key": "squished",
+        "answer": "ANY TWO: Violin (p. 6), Harmonica (p. 114), Clarinet (p. 144).",
+        "page": 6
+      },
+      {
+        "type": "in-which-book",
+        "text": "is there an Author’s Note prompting the reader to solve a puzzle that wasn’t in the story?",
+        "book_key": "escape-from-mr-lemoncellos-library",
+        "page": 289
+      },
+      {
+        "type": "in-which-book",
+        "text": "is a character called “country boy”?",
+        "book_key": "finding-langston",
+        "page": 8
+      },
+      {
+        "type": "in-which-book",
+        "text": "is a character duped by a rubber snake?",
+        "book_key": "just-like-click",
+        "page": 100
+      },
+      {
+        "type": "in-which-book",
+        "text": "does the main character use rocks to prepare their meal?",
+        "book_key": "odder",
+        "page": 94
+      },
+      {
+        "type": "in-which-book",
+        "text": "is there a Famous Californian presentation?",
+        "book_key": "better-with-butter",
+        "page": 3
+      },
+      {
+        "type": "in-which-book",
+        "text": "does a character build a wooden raft?",
+        "book_key": "hatchet",
+        "page": 155
+      },
+      {
+        "type": "in-which-book",
+        "text": "do three kids paint their nails instead of swimming?",
+        "book_key": "squished",
+        "page": 109
+      },
+      {
+        "type": "in-which-book",
+        "text": "does a character get money from an uncle to buy plants?",
+        "book_key": "the-secret-garden-on-81st-street",
+        "page": 108
+      },
+      {
+        "type": "content",
+        "text": "In Number the Stars, what is Uncle Henrik’s boat called?",
+        "book_key": "number-the-stars",
+        "answer": "Ingeborg.",
+        "page": 62
+      },
+      {
+        "type": "content",
+        "text": "In The Tail of Emily Windsnap, how old is Shona Silkfin?",
+        "book_key": "the-tail-of-emily-windsnap",
+        "answer": "Twelve.",
+        "page": 34
+      },
+      {
+        "type": "content",
+        "text": "In The Remarkable Rescue at Milkweed Meadow, how does Blue help with the big rescue?",
+        "book_key": "the-remarkable-rescue-at-milkweed-meadow",
+        "answer": "He fends off an owl.",
+        "page": 154
+      },
+      {
+        "type": "content",
+        "text": "In Elf Dog and Owl Head, what color mask does Clay make for the Midsummer Party?",
+        "book_key": "elf-dog-and-owl-head",
+        "answer": "Red.",
+        "page": 160
+      },
+      {
+        "type": "content",
+        "text": "In The Lost Library, how many mice parade in a circle around the dear cat?",
+        "book_key": "the-lost-library",
+        "answer": "Nine.",
+        "page": 202
+      },
+      {
+        "type": "content",
+        "text": "In Inside Out and Back Again, what important thing does Hà’s mother lose?",
+        "book_key": "inside-out-and-back-again",
+        "answer": "The amethyst (in her ring).",
+        "page": 248
+      },
+      {
+        "type": "content",
+        "text": "TWO PARTS: In The City of Ember, what colors are the two pencils Lina buys?",
+        "book_key": "city-of-ember",
+        "answer": "Blue AND Green.",
+        "page": 77
+      },
+      {
+        "type": "content",
+        "text": "In The Million Dollar Race, who is obsessed with seashells?",
+        "book_key": "the-million-dollar-race",
+        "answer": "Mrs. Fa’atasi OR Jay’s mom.",
+        "page": 9
+      }
+    ]
+  }
