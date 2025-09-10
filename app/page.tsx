@@ -35,9 +35,9 @@ export default function Home() {
       return division === "3-5" ? "4,365" : "3,820";
     } else {
       return division === "3-5"
-        ? "3,983"
+        ? "4,559"
         : division === "6-8"
-        ? "2,774"
+        ? "3,290"
         : "1,721";
     }
   };
