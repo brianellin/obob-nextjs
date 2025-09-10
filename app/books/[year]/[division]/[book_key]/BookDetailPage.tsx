@@ -426,6 +426,14 @@ export default function BookDetailPage({
                                   {question.source.name}
                                 </Badge>
                               )}
+                              {question.contributor && (
+                                <Badge
+                                  variant="outline"
+                                  className="text-xs bg-blue-50 text-blue-700 border-blue-200"
+                                >
+                                  {question.contributor}
+                                </Badge>
+                              )}
                             </div>
 
                             <p className="text-sm leading-relaxed mb-2">

@@ -1,0 +1,20 @@
+{
+    "questions": [
+      {
+        "type": "content",
+        "text": "What state does Samira live in?",
+        "answer": "Massachusetts",
+        "book_key": "tagging-freedom",
+        "page": 8,
+        "contributor": "Alba"
+      },
+      {
+        "type": "in-which-book",
+        "text": "does a character say ‘Alas, Kiddo. Change is always weird’?",
+        "book_key": "uprooted",
+        "page": 46,
+        "contributor": "Isabel"
+      }
+    ]
+  }
+  

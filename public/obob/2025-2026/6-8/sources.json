@@ -4,6 +4,11 @@
         "path": "parent_group/questions.json",
         "name": "OBOB Parent Group",
         "link": null
+      },
+      {
+        "path": "obobdog_community/questions.json",
+        "name": "OBOB.dog Community",
+        "link": "https://blog.obob.dog/"
       }
     ]
   } 

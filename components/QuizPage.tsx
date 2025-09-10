@@ -513,10 +513,16 @@ export default function QuizPage({
                     target="_blank"
                   >
                     {currentQuestion.source?.name}
+                    {currentQuestion.contributor &&
+                      ` - ${currentQuestion.contributor}`}
                     <ExternalLink className="h-3 w-3" />
                   </Link>
                 ) : (
-                  <span> {currentQuestion.source?.name}</span>
+                  <span>
+                    {currentQuestion.source?.name}
+                    {currentQuestion.contributor &&
+                      ` - ${currentQuestion.contributor}`}
+                  </span>
                 )}
               </div>
 

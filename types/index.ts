@@ -22,6 +22,7 @@ export type BaseQuestion = {
   book_key: string;
   page: number;
   source?: QuestionSource;
+  contributor?: string;
 };
 
 export type InWhichBookQuestion = BaseQuestion & {
@@ -40,6 +41,7 @@ export type QuestionWithBook = {
   page: number;
   text: string;
   source?: QuestionSource;
+  contributor?: string;
 } & (
   | { type: "in-which-book" }
   | { type: "content"; answer: string }
