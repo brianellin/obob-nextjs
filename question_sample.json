@@ -1,0 +1,1000 @@
+{
+  "questions": [
+    {
+      "type": "in-which-book",
+      "text": "does a character have to give a \"Famous Californian\" presentation?",
+      "book_key": "better-with-butter",
+      "page": 3
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character dress up like Stephen Spielberg?",
+      "book_key": "better-with-butter",
+      "page": 9
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character use a flashlight to signal as each kid walks to recite their speech?",
+      "book_key": "better-with-butter",
+      "page": 13
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character freeze on stage in front of the entire school?",
+      "book_key": "better-with-butter",
+      "page": 18
+    },
+    {
+      "type": "in-which-book",
+      "text": "is a character hoisted and carried off stage like a rolled up rug?",
+      "book_key": "better-with-butter",
+      "page": 19
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character beg to be homeschooled?",
+      "book_key": "better-with-butter",
+      "page": 22
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character decide that they are \"100% earthworm\"?",
+      "book_key": "better-with-butter",
+      "page": 28
+    },
+    {
+      "type": "in-which-book",
+      "text": "do two characters record an animal to make a hilarious montage?",
+      "book_key": "better-with-butter",
+      "page": 36
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character's father almost finish making a puppet theater stage?",
+      "book_key": "better-with-butter",
+      "page": 49
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character bring a forager into the family garden?",
+      "book_key": "better-with-butter",
+      "page": 59
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character get the nickname \"Frosty\"?",
+      "book_key": "better-with-butter",
+      "page": 93
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character reluctantly go to a lunchtime friendship group?",
+      "book_key": "better-with-butter",
+      "page": 133
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character go shopping for an ESA vest?",
+      "book_key": "better-with-butter",
+      "page": 149
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character get up early for weekends and vacation days but never for school?",
+      "book_key": "better-with-butter",
+      "page": 155
+    },
+    {
+      "type": "in-which-book",
+      "text": "does an animal have the edge of a beanbag in their mouth?",
+      "book_key": "better-with-butter",
+      "page": 174
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a school board honor principals who innovate ways to help promote awareness of mental health?",
+      "book_key": "better-with-butter",
+      "page": 179
+    },
+    {
+      "type": "in-which-book",
+      "text": "does the zoo call to ask if a missing capybara was found?",
+      "book_key": "better-with-butter",
+      "page": 201
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character visit a kindergarten class?",
+      "book_key": "better-with-butter",
+      "page": 214
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character ask how the kissing trick is coming along?",
+      "book_key": "better-with-butter",
+      "page": 228
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a live animal have a part in a student show?",
+      "book_key": "better-with-butter",
+      "page": 229
+    },
+    {
+      "type": "in-which-book",
+      "text": "does Dad tell a character \"we can't ignore the hard stuff\"?",
+      "book_key": "better-with-butter",
+      "page": 243
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a father have to head out to sea again?",
+      "book_key": "better-with-butter",
+      "page": 243
+    },
+    {
+      "type": "in-which-book",
+      "text": "do the state test papers accidentally get destroyed?",
+      "book_key": "better-with-butter",
+      "page": 249
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character Google \"can you die of heartbreak?\"",
+      "book_key": "better-with-butter",
+      "page": 258
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character say, \"Without the goodbyes, there are no joyful hellos\"?",
+      "book_key": "better-with-butter",
+      "page": 263
+    },
+    {
+      "type": "in-which-book",
+      "text": "does group therapy meet in the school basement?",
+      "book_key": "better-with-butter",
+      "page": 269
+    },
+    {
+      "type": "in-which-book",
+      "text": "is a character encouraged to write a list of facts to challenge their fears?",
+      "book_key": "better-with-butter",
+      "page": 269
+    },
+    {
+      "type": "in-which-book",
+      "text": "is a character told to try to be more cordial three times a week?",
+      "book_key": "better-with-butter",
+      "page": 272
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character hate the bus because \"the schedule is a confusing puzzle of numbers and tables\"?",
+      "book_key": "better-with-butter",
+      "page": 277
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character get a cell phone as surprise present before the end of the school year?",
+      "book_key": "better-with-butter",
+      "page": 279
+    },
+    {
+      "type": "in-which-book",
+      "text": "is a character nicknamed Goth Girl?",
+      "book_key": "better-with-butter",
+      "page": 281
+    },
+    {
+      "type": "in-which-book",
+      "text": "are characters assigned to give a presentation on a famous Californian?",
+      "book_key": "better-with-butter",
+      "page": 6
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character freeze up and forget their speech when they get on stage?",
+      "book_key": "better-with-butter",
+      "page": 16
+    },
+    {
+      "type": "in-which-book",
+      "text": "is a puppet theatre used as part of a make shift enclosure?",
+      "book_key": "better-with-butter",
+      "page": 50
+    },
+    {
+      "type": "in-which-book",
+      "text": "do people address a parent as Captain McKenna?",
+      "book_key": "better-with-butter",
+      "page": 79
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character do homework assignments over and over again until they are flawless?",
+      "book_key": "better-with-butter",
+      "page": 80
+    },
+    {
+      "type": "in-which-book",
+      "text": "is a character asked to meet with the pricipal for a quick chat before school?",
+      "book_key": "better-with-butter",
+      "page": 76
+    },
+    {
+      "type": "in-which-book",
+      "text": "is a character told they might not pass 6th grade?",
+      "book_key": "better-with-butter",
+      "page": 83
+    },
+    {
+      "type": "in-which-book",
+      "text": "is a character nicknamed Frosty?",
+      "book_key": "better-with-butter",
+      "page": 93
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character purposely post a blury vague lost and found photo?",
+      "book_key": "better-with-butter",
+      "page": 121
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character build an enclosure?",
+      "book_key": "better-with-butter",
+      "page": 123
+    },
+    {
+      "type": "in-which-book",
+      "text": "is a scrimmage pinnie taken from a soccer bag?",
+      "book_key": "better-with-butter",
+      "page": 154
+    },
+    {
+      "type": "in-which-book",
+      "text": "is a ESA animal brought to class?",
+      "book_key": "better-with-butter",
+      "page": 161
+    },
+    {
+      "type": "in-which-book",
+      "text": "are there twins named Kiera and Kylie?",
+      "book_key": "better-with-butter",
+      "page": 188
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a teacher ask for a student to go down to the lower school to help the kids with thier anxiety?",
+      "book_key": "better-with-butter",
+      "page": 210
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character freeze up and faint when they are scared.",
+      "book_key": "better-with-butter",
+      "page": 218
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character construct a wooden cut the Swiss Alps?",
+      "book_key": "better-with-butter",
+      "page": 241
+    },
+    {
+      "type": "in-which-book",
+      "text": "is a character sent home from school after state tests are destroyed?",
+      "book_key": "better-with-butter",
+      "page": 249
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character consider themself not brave without their beloved pet?",
+      "book_key": "better-with-butter",
+      "page": 257
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character google \"Can you die of a heartbreak?\"",
+      "book_key": "better-with-butter",
+      "page": 258
+    },
+    {
+      "type": "in-which-book",
+      "text": "is a character's father in the Navy?",
+      "book_key": "better-with-butter",
+      "page": 262
+    },
+    {
+      "type": "in-which-book",
+      "text": "is a character scared that a building will collapse and kill them during an earthquake?",
+      "book_key": "better-with-butter",
+      "page": 270
+    },
+    {
+      "type": "in-which-book",
+      "text": "does an animal stop eating because they miss the one person they bonded with and loved?",
+      "book_key": "better-with-butter",
+      "page": 275
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character have a fear of getting on the wrong bus and not ringing the bell in time?",
+      "book_key": "better-with-butter",
+      "page": 277
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character learn that courage's most powerful source is love?",
+      "book_key": "better-with-butter",
+      "page": 278
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character recieve a cell phone for the first time?",
+      "book_key": "better-with-butter",
+      "page": 279
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character have a thermos of hot chocolate and a coat to give to another character when they get off the bus?",
+      "book_key": "better-with-butter",
+      "page": 285
+    },
+    {
+      "type": "in-which-book",
+      "text": "is a character offered a job to help on the weekends around a farm?",
+      "book_key": "better-with-butter",
+      "page": 295
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character who makes fun of another for having stage fright, forget their own lines in a play?",
+      "book_key": "better-with-butter",
+      "page": 300
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a principal change their mind about a certain pet at school?",
+      "book_key": "better-with-butter",
+      "page": 302
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a pet wear a red support vest?",
+      "book_key": "better-with-butter",
+      "page": 304
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character sign up for dance classes?",
+      "book_key": "better-with-butter",
+      "page": 303
+    },
+    {
+      "type": "in-which-book",
+      "text": "does the main character describe themselves as a coward?",
+      "book_key": "better-with-butter",
+      "page": 1
+    },
+    {
+      "type": "in-which-book",
+      "text": "does the main character freeze before the school when giving a presentation?",
+      "book_key": "better-with-butter",
+      "page": 15
+    },
+    {
+      "type": "in-which-book",
+      "text": "do a group of 8th graders  frighten a baby goat?",
+      "book_key": "better-with-butter",
+      "page": 32
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a baby animal escape its enclosure and eat a bunch of plants in the garden?",
+      "book_key": "better-with-butter",
+      "page": 59
+    },
+    {
+      "type": "in-which-book",
+      "text": "is there a parent-teacher conference to come up with a plan so the student doesn't fail school?",
+      "book_key": "better-with-butter",
+      "page": 81
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a boy tease the main character and call her an icicle?",
+      "book_key": "better-with-butter",
+      "page": 93
+    },
+    {
+      "type": "in-which-book",
+      "text": "does the main character take blurry photos of a lost animal so it doesn't get found?",
+      "book_key": "better-with-butter",
+      "page": 121
+    },
+    {
+      "type": "in-which-book",
+      "text": "does the dad build an enclosure for the main character's new pet?",
+      "book_key": "better-with-butter",
+      "page": 123
+    },
+    {
+      "type": "in-which-book",
+      "text": "does the main character bring an emotional support animal to school?",
+      "book_key": "better-with-butter",
+      "page": 162
+    },
+    {
+      "type": "in-which-book",
+      "text": "does an emotional support animal play a main character in the school play?",
+      "book_key": "better-with-butter",
+      "page": 189
+    },
+    {
+      "type": "in-which-book",
+      "text": "does the main character post on Nextdoor about a lost animal?",
+      "book_key": "better-with-butter",
+      "page": 203
+    },
+    {
+      "type": "in-which-book",
+      "text": "does an ESA struggle with the command \"leave it\"?",
+      "book_key": "better-with-butter",
+      "page": 213
+    },
+    {
+      "type": "in-which-book",
+      "text": "does the main character mistake pride for a heart attack?",
+      "book_key": "better-with-butter",
+      "page": 225
+    },
+    {
+      "type": "in-which-book",
+      "text": "do they use words like \"stage right\", \"doofer\", and \"on your mark\"?",
+      "book_key": "better-with-butter",
+      "page": 226
+    },
+    {
+      "type": "in-which-book",
+      "text": "does the main character have to be in the school play so they don't fail school?",
+      "book_key": "better-with-butter",
+      "page": 86
+    },
+    {
+      "type": "in-which-book",
+      "text": "does the dad get deployed and have to fly to San Diego the next morning?",
+      "book_key": "better-with-butter",
+      "page": 262
+    },
+    {
+      "type": "in-which-book",
+      "text": "does the main character's brother pay more attention to them once the dad gets deployed?",
+      "book_key": "better-with-butter",
+      "page": 266
+    },
+    {
+      "type": "in-which-book",
+      "text": "does teh main character make a list of facts to challenge their fears?",
+      "book_key": "better-with-butter",
+      "page": 269
+    },
+    {
+      "type": "in-which-book",
+      "text": "does the main characterwalk home with her bully toawrds the end of the school year?",
+      "book_key": "better-with-butter",
+      "page": 273
+    },
+    {
+      "type": "in-which-book",
+      "text": "does the main character overcome their fear and ride the bus?",
+      "book_key": "better-with-butter",
+      "page": 278
+    },
+    {
+      "type": "in-which-book",
+      "text": "does the main character save a goat's life?",
+      "book_key": "better-with-butter",
+      "page": 290
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character's mind \"whirl like one of those miserable spinning rides at amusement parks\"?",
+      "book_key": "better-with-butter",
+      "page": 1
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character and their mom both have hazel eyes?",
+      "book_key": "better-with-butter",
+      "page": 4
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character give another \"her biggest smile and two thumbs-ups\" before speeding away?",
+      "book_key": "better-with-butter",
+      "page": 7
+    },
+    {
+      "type": "in-which-book",
+      "text": "is there a chapter titled \"Blank Slate?\"",
+      "book_key": "better-with-butter",
+      "page": 8
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character wish they had \"a broken arm or something\" so that people could see what's wrong with them?",
+      "book_key": "better-with-butter",
+      "page": 9
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character describe themselves as \"a salmon swimming downstream while the rest of the school is swimming up\"?",
+      "book_key": "better-with-butter",
+      "page": 11
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character say that \"35 seconds zooms by, but it feels like hours\"?",
+      "book_key": "better-with-butter",
+      "page": 17
+    },
+    {
+      "type": "in-which-book",
+      "text": "is a character carried offstage like a rolled rug?",
+      "book_key": "better-with-butter",
+      "page": 19
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character sounds like they are reading quotes from inspirational posters?",
+      "book_key": "better-with-butter",
+      "page": 22
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character describe another as part glowworm?",
+      "book_key": "better-with-butter",
+      "page": 28
+    },
+    {
+      "type": "in-which-book",
+      "text": "is there a school district therapist named Mr. J?",
+      "book_key": "better-with-butter",
+      "page": 58
+    },
+    {
+      "type": "in-which-book",
+      "text": "is a character's Dad in the navy?",
+      "book_key": "better-with-butter",
+      "page": 63
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character say their insides are \"a whole redwood forest of concerns, one worry pollinating another\"?",
+      "book_key": "better-with-butter",
+      "page": 70
+    },
+    {
+      "type": "in-which-book",
+      "text": "is there a chapter titled \"Cheerios?\"",
+      "book_key": "better-with-butter",
+      "page": 95
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character say that \"worrying is my brain's background music?\"",
+      "book_key": "better-with-butter",
+      "page": 97
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character wear a t-shirt that says Captain Dad?",
+      "book_key": "better-with-butter",
+      "page": 97
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character Google \"walking your pet goat?",
+      "book_key": "better-with-butter",
+      "page": 100
+    },
+    {
+      "type": "in-which-book",
+      "text": "is there a dog named Sonny?",
+      "book_key": "better-with-butter",
+      "page": 114
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character want to be homeschooled?",
+      "book_key": "better-with-butter",
+      "page": 126
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character go to a friendship group?",
+      "book_key": "better-with-butter",
+      "page": 135
+    },
+    {
+      "type": "in-which-book",
+      "text": "is someone building a vegetable planter?",
+      "book_key": "better-with-butter",
+      "page": 146
+    },
+    {
+      "type": "in-which-book",
+      "text": "are students working on a school play called Heidi?",
+      "book_key": "better-with-butter",
+      "page": 187
+    },
+    {
+      "type": "in-which-book",
+      "text": "does someone get a phone call about a missing capybara?",
+      "book_key": "better-with-butter",
+      "page": 201
+    },
+    {
+      "type": "in-which-book",
+      "text": "is a character described as a \"creative and innovative leader?\"",
+      "book_key": "better-with-butter",
+      "page": 224
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character carry a book called On Directing tucked under their arm?",
+      "book_key": "better-with-butter",
+      "page": 226
+    },
+    {
+      "type": "in-which-book",
+      "text": "is a character building a mountain range out of plywood?",
+      "book_key": "better-with-butter",
+      "page": 241
+    },
+    {
+      "type": "in-which-book",
+      "text": "does an animal do tricks like kisses and high-fives for kids?",
+      "book_key": "better-with-butter",
+      "page": 246
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character have ice-blue eyes?",
+      "book_key": "better-with-butter",
+      "page": 251
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character Google Can you die of heartbreak?",
+      "book_key": "better-with-butter",
+      "page": 258
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character fear that an earthquake will cause the building to collapse and kill them?",
+      "book_key": "better-with-butter",
+      "page": 270
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character say that taking the bus alone feels as daunting as swimming across San Francisco Bay?",
+      "book_key": "better-with-butter",
+      "page": 278
+    },
+    {
+      "type": "in-which-book",
+      "text": "is a character taking a bus to Fort Cronkhite?",
+      "book_key": "better-with-butter",
+      "page": 284
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character wear pink combat boots and a fluffy tutu?",
+      "book_key": "better-with-butter",
+      "page": 304
+    },
+    {
+      "type": "content",
+      "text": "who does Marvel choose to dress up as for her \"Famous Californian\" presentation?",
+      "book_key": "better-with-butter",
+      "answer": "Grandma Prisbrey",
+      "page": 3
+    },
+    {
+      "type": "content",
+      "text": "what is the name of the school that Marvel attends?",
+      "book_key": "better-with-butter",
+      "answer": "Bayside Academy",
+      "page": 5
+    },
+    {
+      "type": "content",
+      "text": "which musical instrument does Jamie bring for his Famous Californian presentation?",
+      "book_key": "better-with-butter",
+      "answer": "Trumpet",
+      "page": 10
+    },
+    {
+      "type": "content",
+      "text": "what does Marvel say would be easier than saying her speech?",
+      "book_key": "better-with-butter",
+      "answer": "Jumping out of a plane",
+      "page": 13
+    },
+    {
+      "type": "content",
+      "text": "what is the name the first person who starts pity-clapping after Marvel's presentation?",
+      "book_key": "better-with-butter",
+      "answer": "Ms. Day",
+      "page": 18
+    },
+    {
+      "type": "content",
+      "text": "what grade is Marvel in?",
+      "book_key": "better-with-butter",
+      "answer": "6th",
+      "page": 21
+    },
+    {
+      "type": "content",
+      "text": "what is the name of the school nurse?",
+      "book_key": "better-with-butter",
+      "answer": "Skippy",
+      "page": 22
+    },
+    {
+      "type": "content",
+      "text": "what 2 things does Addie bring Marvel in the nurses's office?",
+      "book_key": "better-with-butter",
+      "answer": "Her backpack and a cookie",
+      "page": 27
+    },
+    {
+      "type": "content",
+      "text": "what is Jamie's older brother's name?",
+      "book_key": "better-with-butter",
+      "answer": "Matt",
+      "page": 35
+    },
+    {
+      "type": "content",
+      "text": "what is Reef's girlfriend's name?",
+      "book_key": "better-with-butter",
+      "answer": "Suzanna",
+      "page": 44
+    },
+    {
+      "type": "content",
+      "text": "how much money does Marvel have in her savings account?",
+      "book_key": "better-with-butter",
+      "answer": "200",
+      "page": 46
+    },
+    {
+      "type": "content",
+      "text": "what object does Butter chew on to \"prove how good she is at foraging\"?",
+      "book_key": "better-with-butter",
+      "answer": "Marvel's math book",
+      "page": 46
+    },
+    {
+      "type": "content",
+      "text": "what is a word commonly used in architecture to mean \"exit\"?",
+      "book_key": "better-with-butter",
+      "answer": "egress",
+      "page": 54
+    },
+    {
+      "type": "content",
+      "text": "what is Marvel's middle name?",
+      "book_key": "better-with-butter",
+      "answer": "Madison",
+      "page": 59
+    },
+    {
+      "type": "content",
+      "text": "which character is considered a \"chatterbox\"?",
+      "book_key": "better-with-butter",
+      "answer": "Mercedes",
+      "page": 87
+    },
+    {
+      "type": "content",
+      "text": "what is Ms. Day doing during class that prevents her from stopping the recording before it gets to Marvel?",
+      "book_key": "better-with-butter",
+      "answer": "Texting",
+      "page": 91
+    },
+    {
+      "type": "content",
+      "text": "what color leotards do Addie and Mercedes wear to dance?",
+      "book_key": "better-with-butter",
+      "answer": "Pale blue",
+      "page": 95
+    },
+    {
+      "type": "content",
+      "text": "what is Butter's reward treat when she walks on a leash?",
+      "book_key": "better-with-butter",
+      "answer": "Cheerios",
+      "page": 101
+    },
+    {
+      "type": "content",
+      "text": "what book do Addie and Marvel both love?",
+      "book_key": "better-with-butter",
+      "answer": "The Penderwicks",
+      "page": 104
+    },
+    {
+      "type": "content",
+      "text": "how long does the walk from Marvel's house to the pet store usually take?",
+      "book_key": "better-with-butter",
+      "answer": "10 minutes",
+      "page": 106
+    },
+    {
+      "type": "content",
+      "text": "how much money does dad give Marvel to buy a leash?",
+      "book_key": "better-with-butter",
+      "answer": "20",
+      "page": 106
+    },
+    {
+      "type": "content",
+      "text": "what does Marvel purchase at the pet store for Butter?",
+      "book_key": "better-with-butter",
+      "answer": "leash",
+      "page": 111
+    },
+    {
+      "type": "content",
+      "text": "what is the name of the Newfoundland that Addie and Marvel meet at the pet store?",
+      "book_key": "better-with-butter",
+      "answer": "Sonny",
+      "page": 114
+    },
+    {
+      "type": "content",
+      "text": "what is the title on the flyer Marvel makes?",
+      "book_key": "better-with-butter",
+      "answer": "Lost Creature",
+      "page": 121
+    },
+    {
+      "type": "content",
+      "text": "what page numbers did Butter eat out of Marvel's math book?",
+      "book_key": "better-with-butter",
+      "answer": "243 & 244",
+      "page": 132
+    },
+    {
+      "type": "content",
+      "text": "who does Marvel borrow a credit card from to join the ESA registry?",
+      "book_key": "better-with-butter",
+      "answer": "her brother Reef",
+      "page": 153
+    },
+    {
+      "type": "content",
+      "text": "what does Marvel use as fabric to make Butter's ESA vest?",
+      "book_key": "better-with-butter",
+      "answer": "Reef's scrimmage pinnie",
+      "page": 154
+    },
+    {
+      "type": "content",
+      "text": "which play does the sixth grade class vote to perform?",
+      "book_key": "better-with-butter",
+      "answer": "Heidi",
+      "page": 189
+    },
+    {
+      "type": "content",
+      "text": "which villain character would Theo rather be in the student show?",
+      "book_key": "better-with-butter",
+      "answer": "Aunt Dete",
+      "page": 230
+    },
+    {
+      "type": "content",
+      "text": "which character drives a white pick up truck with a trailer?",
+      "book_key": "better-with-butter",
+      "answer": "Gloria Fizzle",
+      "page": 252
+    },
+    {
+      "type": "content",
+      "text": "which bus stop does Marvel get off at to visit Gloria and Butter?",
+      "book_key": "better-with-butter",
+      "answer": "Fort Cronkhite",
+      "page": 279
+    },
+    {
+      "type": "content",
+      "text": "Who does Marvel choose to do her famous Californian speech on?",
+      "book_key": "better-with-butter",
+      "answer": "Grandma Prisbey",
+      "page": 7
+    },
+    {
+      "type": "content",
+      "text": "What was Grandma Prisbey famous for?",
+      "book_key": "better-with-butter",
+      "answer": "Building a village out of recycled garbage",
+      "page": 3
+    },
+    {
+      "type": "content",
+      "text": "What color is Marvel's wig for her famous Californian costume?",
+      "book_key": "better-with-butter",
+      "answer": "gray",
+      "page": 4
+    },
+    {
+      "type": "content",
+      "text": "Who helps Principal Huxx move Marvel off the stage?",
+      "book_key": "better-with-butter",
+      "answer": "PE teacher",
+      "page": 19
+    },
+    {
+      "type": "content",
+      "text": "What grade is Marvel's brother Reef in?",
+      "book_key": "better-with-butter",
+      "answer": "11th",
+      "page": 43
+    },
+    {
+      "type": "content",
+      "text": "What branch of the military is Marvel's dad in?",
+      "book_key": "better-with-butter",
+      "answer": "navy",
+      "page": 43
+    },
+    {
+      "type": "content",
+      "text": "Which text book did Butter try to eat?",
+      "book_key": "better-with-butter",
+      "answer": "math book",
+      "page": 46
+    },
+    {
+      "type": "content",
+      "text": "Where does Marvel's dad suggest they keep Butter for the night until he can build a proper enclosure?",
+      "book_key": "better-with-butter",
+      "answer": "the garage",
+      "page": 66
+    },
+    {
+      "type": "content",
+      "text": "What was Ms. Day doing that distracted her from not stopping the video before Marvel's turn on stage?",
+      "book_key": "better-with-butter",
+      "answer": "texting",
+      "page": 91
+    },
+    {
+      "type": "content",
+      "text": "What treat does Marvel give Butter when she was trying to train her to walk on a leash?",
+      "book_key": "better-with-butter",
+      "answer": "cheerios",
+      "page": 101
+    },
+    {
+      "type": "content",
+      "text": "What does Addie suggest that Marvel try in order to get Butter to walk on the leash?",
+      "book_key": "better-with-butter",
+      "answer": "make a trail of cheerios",
+      "page": 104
+    },
+    {
+      "type": "content",
+      "text": "What does Marvel want to buy at the pet store?",
+      "book_key": "better-with-butter",
+      "answer": "a leash",
+      "page": 105
+    },
+    {
