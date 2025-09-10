@@ -9,6 +9,11 @@
         "path": "obobdog_community/questions.json",
         "name": "OBOB.dog Community",
         "link": "https://blog.obob.dog/3lyiutdo3zk2l"
+      },
+      {
+        "path": "lake_oswego/questions.json",
+        "name": "Lake Oswego Public Library",
+        "link": "https://www.ci.oswego.or.us/kids/obob-practice-questions"
       }
     ]
   } 
