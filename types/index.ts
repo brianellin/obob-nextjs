@@ -5,6 +5,7 @@ export interface Book {
   cover: string;
   obob_division: "3-5" | "6-8" | "9-12";
   obob_year: "2024-2025";
+  author_pronunciation?: string;
 }
 
 export type Books = {

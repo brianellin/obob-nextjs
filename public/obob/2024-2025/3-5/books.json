@@ -30,7 +30,9 @@
       "author": "Caela Carter",
       "cover": "/covers/2024-2025/3-5/54_things.jpg",
       "obob_division": "3-5",
-      "obob_year": "2024-2025"
+      "obob_year": "2024-2025",
+      "author_pronunciation": "KAY-la"
+
     },
     "frizzy": {
       "book_key": "frizzy",
@@ -38,7 +40,8 @@
       "author": "Claribel A. Ortega and Rose Bousamra",
       "cover": "/covers/2024-2025/3-5/frizzy.jpg",
       "obob_division": "3-5",
-      "obob_year": "2024-2025"
+      "obob_year": "2024-2025",
+      "author_pronunciation": "boo-SAHM-rah"
     },
     "jd-and-the-great-barber-battle": {
       "book_key": "jd-and-the-great-barber-battle",
@@ -62,7 +65,8 @@
       "author": "Carlie Sorosiak",
       "cover": "/covers/2024-2025/3-5/leonard_cat.jpg",
       "obob_division": "3-5",
-      "obob_year": "2024-2025"
+      "obob_year": "2024-2025",
+      "author_pronunciation": "so-ROWS-ee-ACK"
     },
     "marshmallow-jordan": {
       "book_key": "marshmallow-jordan",
@@ -70,7 +74,8 @@
       "author": "Alina Chau",
       "cover": "/covers/2024-2025/3-5/marshmallow_jordan.jpg",
       "obob_division": "3-5",
-      "obob_year": "2024-2025"
+      "obob_year": "2024-2025",
+      "author_pronunciation": "uh-LEEN-ah CHOW"
     },
     "sam-makes-a-splash": {
       "book_key": "sam-makes-a-splash",
@@ -78,7 +83,8 @@
       "author": "Nicole Melleby",
       "cover": "/covers/2024-2025/3-5/sam_makes_a_splash.jpg",
       "obob_division": "3-5",
-      "obob_year": "2024-2025"
+      "obob_year": "2024-2025",
+      "author_pronunciation": "MELL-a-BEE"
     },
     "solimar": {
       "book_key": "solimar",
@@ -94,7 +100,8 @@
       "author": "Jessica Khoury",
       "cover": "/covers/2024-2025/3-5/mystwick_music.jpg",
       "obob_division": "3-5",
-      "obob_year": "2024-2025"
+      "obob_year": "2024-2025",
+      "author_pronunciation": "CORE-ee"
     },
     "the-name-of-this-book-is-secret": {
       "book_key": "the-name-of-this-book-is-secret",
@@ -102,7 +109,8 @@
       "author": "Pseudonymous Bosch",
       "cover": "/covers/2024-2025/3-5/the_name_of_this_book_is_secret.jpg",
       "obob_division": "3-5",
-      "obob_year": "2024-2025"
+      "obob_year": "2024-2025",
+      "author_pronunciation": "soo-DON-uh-muss BOSH"
     },
     "the-wild-robot": {
       "book_key": "the-wild-robot",
@@ -118,7 +126,8 @@
       "author": "Varsha Bajaj",
       "cover": "/covers/2024-2025/3-5/thirst.jpg",
       "obob_division": "3-5",
-      "obob_year": "2024-2025"
+      "obob_year": "2024-2025",
+      "author_pronunciation": "buh-JAJ"
     },
     "twins": {
       "book_key": "twins",
@@ -126,7 +135,8 @@
       "author": "Varian Johnson and Shannon Wright",
       "cover": "/covers/2024-2025/3-5/twins.jpg",
       "obob_division": "3-5",
-      "obob_year": "2024-2025"
+      "obob_year": "2024-2025",
+      "author_pronunciation": "VARE-ee-uhn"
     }
   }
 }
