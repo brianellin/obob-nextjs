@@ -3,13 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import {
-  SkipForward,
-  Loader2,
-  ExternalLink,
-  ArrowLeft,
-  Ear,
-} from "lucide-react";
+import { SkipForward, Loader2, ExternalLink, ArrowLeft } from "lucide-react";
 import { Progress } from "@/components/ui/progress";
 import type { QuestionWithBook, Book } from "@/types";
 import Link from "next/link";
@@ -415,15 +409,12 @@ export default function QuizPage({
                       {currentQuestion.book.title}
                     </span>{" "}
                     by{" "}
-                    <span className="font-bold">
-                      {currentQuestion.book.author}
-                    </span>
-                    {currentQuestion.book.author_pronunciation && (
+                    {currentQuestion.book.author_pronunciation ? (
                       <Popover>
                         <PopoverTrigger asChild>
-                          <button className="ml-2 inline-flex items-center justify-center p-1 rounded-sm hover:bg-gray-100 transition-colors">
-                            <Ear className="h-4 w-4 text-gray-500 hover:text-gray-700" />
-                          </button>
+                           <span className="font-bold underline decoration-dotted decoration-gray-400 underline-offset-2 hover:decoration-solid hover:decoration-gray-600 transition-all cursor-pointer" role="button" tabIndex={0}>
+                            {currentQuestion.book.author}
+                          </span>
                         </PopoverTrigger>
                         <PopoverContent
                           className="w-auto p-3 text-sm font-medium"
@@ -433,6 +424,10 @@ export default function QuizPage({
                           {currentQuestion.book.author_pronunciation}
                         </PopoverContent>
                       </Popover>
+                    ) : (
+                      <span className="font-bold">
+                        {currentQuestion.book.author}
+                      </span>
                     )}{" "}
                     <span className="pt-4 block">
                       {currentQuestion.text.charAt(0).toUpperCase() +
@@ -477,15 +472,12 @@ export default function QuizPage({
                         {currentQuestion.book.title}
                       </span>{" "}
                       by{" "}
-                      <span className="font-semibold">
-                        {currentQuestion.book.author}
-                      </span>
-                      {currentQuestion.book.author_pronunciation && (
+                      {currentQuestion.book.author_pronunciation ? (
                         <Popover>
                           <PopoverTrigger asChild>
-                            <button className="ml-2 inline-flex items-center justify-center p-1 rounded-sm hover:bg-gray-100 transition-colors">
-                              <Ear className="h-4 w-4 text-gray-500 hover:text-gray-700" />
-                            </button>
+                             <span className="font-semibold underline decoration-dotted decoration-gray-400 underline-offset-2 hover:decoration-solid hover:decoration-gray-600 transition-all cursor-pointer" role="button" tabIndex={0}>
+                              {currentQuestion.book.author}
+                            </span>
                           </PopoverTrigger>
                           <PopoverContent
                             className="w-auto p-3 text-sm font-medium"
@@ -495,6 +487,10 @@ export default function QuizPage({
                             {currentQuestion.book.author_pronunciation}
                           </PopoverContent>
                         </Popover>
+                      ) : (
+                        <span className="font-semibold">
+                          {currentQuestion.book.author}
+                        </span>
                       )}
                     </span>
                   ) : (
