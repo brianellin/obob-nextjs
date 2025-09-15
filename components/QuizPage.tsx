@@ -412,7 +412,11 @@ export default function QuizPage({
                     {currentQuestion.book.author_pronunciation ? (
                       <Popover>
                         <PopoverTrigger asChild>
-                           <span className="font-bold underline decoration-dotted decoration-gray-400 underline-offset-2 hover:decoration-solid hover:decoration-gray-600 transition-all cursor-pointer" role="button" tabIndex={0}>
+                          <span
+                            className="font-bold underline decoration-dotted decoration-gray-400 underline-offset-2 hover:decoration-gray-600 transition-all cursor-pointer"
+                            role="button"
+                            tabIndex={0}
+                          >
                             {currentQuestion.book.author}
                           </span>
                         </PopoverTrigger>
@@ -475,7 +479,11 @@ export default function QuizPage({
                       {currentQuestion.book.author_pronunciation ? (
                         <Popover>
                           <PopoverTrigger asChild>
-                             <span className="font-semibold underline decoration-dotted decoration-gray-400 underline-offset-2 hover:decoration-solid hover:decoration-gray-600 transition-all cursor-pointer" role="button" tabIndex={0}>
+                            <span
+                              className="font-semibold underline decoration-dotted decoration-gray-400 underline-offset-2 hover:decoration-gray-600 transition-all cursor-pointer"
+                              role="button"
+                              tabIndex={0}
+                            >
                               {currentQuestion.book.author}
                             </span>
                           </PopoverTrigger>
