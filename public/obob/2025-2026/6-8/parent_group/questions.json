@@ -4964,10 +4964,27 @@
     },
     {
       "type": "content",
-      "text": "Who is revealed to be behind the attacks and the hidden treasure clues?",
+      "text": "Which character is revealed to be behind the attacks?",
       "book_key": "a-dictionary-of-scoundrels",
-      "answer": "Aunt Schadenfreude",
-      "page": 320
+      "answer": "Candour",
+      "page": 320,
+      "revisionHistory": [{
+        "text": "Who is revealed to be behind the attacks and the hidden treasure clues?",
+        "answer": "Aunt Schadenfreude",
+        "revisionDate": "2025-09-15"
+      }]
+    },
+    {
+      "type": "content",
+      "text": "Who is revealed to be behind the hidden treasure clues?",
+      "book_key": "a-dictionary-of-scoundrels",
+      "answer": "Cantrip Randrup-Swift",
+      "page": 336,
+      "revisionHistory": [{
+        "text": "Who is revealed to be behind the attacks and the hidden treasure clues?",
+        "answer": "Aunt Schadenfreude",
+        "revisionDate": "2025-09-15"
+      }]
     },
     {
       "type": "content",
@@ -5592,10 +5609,15 @@
     },
     {
       "type": "content",
-      "text": "Who's mother is the Auntie Min likes least?",
+      "text": "The auntie Min dislikes most is the mother of whom?",
       "book_key": "dragon-pearl",
-      "answer": "Bora's",
-      "page": 19
+      "answer": "Bora",
+      "page": 19,
+      "revisionHistory": [{
+        "text": "Who's mother is the Auntie Min likes least?",
+        "answer": "Bora's",
+        "revisionDate": "2025-09-15"
+      }]
     },
     {
       "type": "content",
@@ -9808,9 +9830,13 @@
     },
     {
       "type": "in-which-book",
-      "text": "does a character hate the social media platform Snapchat?",
+      "text": "does a character say \"No way. Snapchat sucks.\"?",
       "book_key": "an-occasionally-happy-family",
-      "page": 74
+      "page": 74,
+      "revisionHistory": [{
+        "text": "does a character hate the social media platform Snapchat?",
+        "revisionDate": "2025-09-15"
+      }]
     },
     {
       "type": "in-which-book",
@@ -17660,10 +17686,15 @@
     },
     {
       "type": "content",
-      "text": "What drink do Bonnie and Ruth clink when they meet?",
+      "text": "What drink do Bonnie and Ruth clink when they meet? Be specific.",
       "book_key": "uprooted",
-      "answer": "Juice boxes",
-      "page": 107
+      "answer": "Lemon tea",
+      "page": 107,
+      "revisionHistory": [{
+        "text": "What drink do Bonnie and Ruth clink when they meet?",
+        "answer": "Juice boxes",
+        "revisionDate": "2025-09-15"
+      }]
     },
     {
       "type": "content",

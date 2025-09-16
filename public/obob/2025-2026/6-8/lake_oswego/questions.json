@@ -807,9 +807,14 @@
       },
       {
         "type": "in-which-book",
-        "text": "is a character afraid of a tiger?",
+        "text": "does a tiger with amber eyes make a character nervous?",
         "book_key": "dragon-pearl",
-        "page": 119
+        "page": 119,
+        "revisionHistory": [{
+          "text": "is a character afraid of a tiger?",
+          "answer": "Yes",
+          "revisionDate": "2025-09-15"
+        }]
       },
       {
         "type": "in-which-book",
