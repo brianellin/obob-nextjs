@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import { Send, PawPrint } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
+import { Input } from "@/components/ui/input";
 import type { QuestionWithBook } from "@/types";
 
 type QuestionFeedbackFormProps = {
@@ -20,9 +21,18 @@ export default function QuestionFeedbackForm({
   onClose,
 }: QuestionFeedbackFormProps) {
   const [feedback, setFeedback] = useState("");
+  const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
+
+  // Load saved email from localStorage on mount
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const savedEmail = localStorage.getItem("obob-question-form-email");
+      if (savedEmail) setEmail(savedEmail);
+    }
+  }, []);
 
   // Auto-focus textarea when form opens
   useEffect(() => {
@@ -46,6 +56,7 @@ export default function QuestionFeedbackForm({
         },
         body: JSON.stringify({
           feedback: feedback.trim(),
+          email: email.trim() || undefined,
           questionData: {
             year,
             division,
@@ -62,8 +73,14 @@ export default function QuestionFeedbackForm({
       });
 
       if (response.ok) {
+        // Save email to localStorage for future forms if provided
+        if (typeof window !== "undefined" && email.trim()) {
+          localStorage.setItem("obob-question-form-email", email.trim());
+        }
+
         setIsSubmitted(true);
         setFeedback("");
+        setEmail("");
         setTimeout(() => {
           onClose();
           setIsSubmitted(false);
@@ -80,6 +97,7 @@ export default function QuestionFeedbackForm({
 
   const handleCancel = () => {
     setFeedback("");
+    setEmail("");
     onClose();
   };
 
@@ -116,6 +134,24 @@ export default function QuestionFeedbackForm({
               className="min-h-[80px] bg-white"
               disabled={isSubmitting}
             />
+          </div>
+
+          <div className="mb-4">
+            <label className="block text-sm font-medium text-gray-700 mb-2">
+              Email (optional)
+            </label>
+            <Input
+              type="email"
+              placeholder="your.email@example.com"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className="bg-white"
+              disabled={isSubmitting}
+            />
+            <p className="text-xs text-gray-500 mt-1">
+              We'll use this to ask follow-up questions and let you know when
+              the fix is live.
+            </p>
           </div>
 
           <div className="flex gap-2">

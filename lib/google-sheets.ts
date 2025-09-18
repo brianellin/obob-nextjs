@@ -30,6 +30,7 @@ export async function appendFeedbackToSheet(feedbackData: {
   timestamp: string;
   status: string;
   feedback: string;
+  email?: string;
   year: string;
   division: string;
   book: {
@@ -52,6 +53,7 @@ export async function appendFeedbackToSheet(feedbackData: {
     timestamp: feedbackData.timestamp,
     status: feedbackData.status,
     feedback: feedbackData.feedback,
+    email: feedbackData.email || '',
     year: feedbackData.year,
     division: feedbackData.division,
     bookTitle: feedbackData.book.title,
@@ -120,7 +122,8 @@ export async function setupFeedbackSheetHeaders() {
     // Set header row
     await sheet.setHeaderRow([
       'timestamp',
-      'feedback', 
+      'feedback',
+      'email',
       'year',
       'division',
       'bookTitle',

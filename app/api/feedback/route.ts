@@ -4,12 +4,13 @@ import { appendFeedbackToSheet } from "@/lib/google-sheets";
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const { feedback, questionData } = body;
+    const { feedback, email, questionData } = body;
 
     // Prepare data for Google Sheets
     const feedbackDataForSheet = {
       timestamp: new Date().toISOString(),
       feedback,
+      email,
       status: "pending",
       year: questionData.year,
       division: questionData.division,
