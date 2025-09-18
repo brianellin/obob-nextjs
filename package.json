@@ -4,9 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "prebuild": "npx tsx scripts/generate-question-counts.ts",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "generate-counts": "npx tsx scripts/generate-question-counts.ts"
   },
   "dependencies": {
     "@radix-ui/react-checkbox": "^1.1.2",

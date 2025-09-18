@@ -5,6 +5,7 @@ import { WavyUnderline } from "@/components/WavyUnderline";
 import Link from "next/link";
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 import { useState } from "react";
+import questionCounts from "@/lib/question-counts.json";
 
 export default function Home() {
   const [year, setYear] = useState<string>("2025-2026");
@@ -31,15 +32,11 @@ export default function Home() {
 
   // Get question count for current year/division
   const getQuestionCount = () => {
-    if (year === "2024-2025") {
-      return division === "3-5" ? "4,365" : "3,820";
-    } else {
-      return division === "3-5"
-        ? "4,559"
-        : division === "6-8"
-        ? "3,290"
-        : "1,721";
-    }
+    const count =
+      questionCounts[year as keyof typeof questionCounts]?.[
+        division as keyof (typeof questionCounts)[keyof typeof questionCounts]
+      ] || 0;
+    return count.toLocaleString();
   };
 
   return (
