@@ -149,8 +149,8 @@ export default function QuestionFeedbackForm({
               disabled={isSubmitting}
             />
             <p className="text-xs text-gray-500 mt-1">
-              We'll use this to ask follow-up questions and let you know when
-              the fix is live.
+              We&apos;ll use this to ask follow-up questions and let you know
+              when the fix is live.
             </p>
           </div>
 
