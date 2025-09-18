@@ -538,9 +538,15 @@
     },
     {
       "type": "in-which-book",
-      "text": "is someone angry because a dress that took forever to sew was ruined?",
+      "text": "is someone holding onto a grudge becuase of a ruined outfit that took 'centuries' to sew?",
       "book_key": "aru-shah-and-the-end-of-time",
-      "page": 52
+      "page": 52,
+      "revisionHistory": [
+        {
+          "date": "2025-09-18",
+          "text": "is someone angry because a dress that took forever to sew was ruined?"
+        }
+      ]
     },
     {
       "type": "in-which-book",
@@ -10318,10 +10324,18 @@
     },
     {
       "type": "content",
-      "text": "when Theo's mom is sick with cancer, how does he spend time with her?",
+      "text": "During the year Theo's mom is dying of cancer, how much time each day is he given to spend with her?",
       "book_key": "an-occasionally-happy-family",
-      "answer": "He goes to school, then to his neighbors' house, but after dinner at 7:00, he gets to spend one hour with her in her room.",
-      "page": 22
+      "answer": "One hour",
+      "page": 22,
+      "revisionHistory": [
+        {
+          "date": "2025-09-18",
+          "text": "when Theo's mom is sick with cancer, how does he spend time with her?",
+          "answer": "He goes to school, then to his neighbors' house, but after dinner at 7:00, he gets to spend one hour with her in her room."
+
+        }
+      ]
     },
     {
       "type": "content",
