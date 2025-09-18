@@ -14,6 +14,30 @@
         "book_key": "uprooted",
         "page": 46,
         "contributor": "Isabel"
+      },
+      {
+        "type": "content",
+        "text": "What is the room number of the art room?",
+        "answer": "245",
+        "book_key": "tagging-freedom",
+        "page": 11,
+        "contributor": "Alba"
+      },
+      {
+        "type": "content",
+        "text": "What does Sam say is the color of Islam?",
+        "answer": "Green",
+        "book_key": "tagging-freedom",
+        "page": 24,
+        "contributor": "Alba"
+      },
+      {
+        "type": "content",
+        "text": "What is Samira’s last name?",
+        "answer": "Sukkari",
+        "book_key": "tagging-freedom",
+        "page": 9,
+        "contributor": "Alba"
       }
     ]
   }
