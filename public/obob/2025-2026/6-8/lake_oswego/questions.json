@@ -2892,10 +2892,17 @@
       },
       {
         "type": "content",
-        "text": "what kind of fight did Dylan, Sam, Amari, and Avery play?",
+        "text": "At Dylan's party, Sam, Avery, Dylan, and Amari end up in what kind of fight?",
         "book_key": "tagging-freedom",
-        "answer": "Water guns",
-        "page": 71
+        "answer": "A water fight",
+        "page": 71,
+        "revisionHistory": [
+          {
+            "text": "what kind of fight did Dylan, Sam, Amari, and Avery play?",
+            "answer": "Water guns",
+            "revisionDate": "2025-10-02"
+          }
+        ]
       },
       {
         "type": "content",

@@ -14671,10 +14671,17 @@
     },
     {
       "type": "content",
-      "text": "Who locked arms with Kareem on the left?",
+      "text": "At the protest in Syria that Kareem and his friends attend, which friend locks arms with Kareem on his left side?",
       "book_key": "tagging-freedom",
       "answer": "George",
-      "page": 17
+      "page": 17,
+      "revisionHistory": [
+        {
+          "text": "Who locked arms with Kareem on the left?",
+          "answer": "George",
+          "revisionDate": "2025-09-18"
+        }
+      ]
     },
     {
       "type": "content",
@@ -14888,10 +14895,17 @@
     },
     {
       "type": "content",
-      "text": "When Kareem screames into the night, who hears him?",
+      "text": "When Kareem screames into the night air, 'Wake up, everybody!' nobody hears him except for what creatures?",
       "book_key": "tagging-freedom",
-      "answer": "The Crickets",
-      "page": 200
+      "answer": "Crickets",
+      "page": 200,
+      "revisionHistory": [
+        {
+          "text": "When Kareem screames into the night, who hears him?",
+          "answer": "The Crickets",
+          "revisionDate": "2025-10-02"
+        }
+      ]
     },
     {
       "type": "content",
@@ -14944,10 +14958,17 @@
     },
     {
       "type": "content",
-      "text": "What time did Kareem start spraying?",
+      "text": "At what time did Kareem start spraying the 'Syria is Burning and Nobody Cares' mural on the outside of the school?",
       "book_key": "tagging-freedom",
-      "answer": "4 a.m.",
-      "page": 236
+      "answer": "4:00am in the morning",
+      "page": 236,
+      "revisionHistory": [
+        {
+          "text": "What time did Kareem start spraying?",
+          "answer": "4 a.m.",
+          "revisionDate": "2025-09-18"
+        }
+      ]
     },
     {
       "type": "content",
