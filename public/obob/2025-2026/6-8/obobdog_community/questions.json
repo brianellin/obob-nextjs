@@ -38,6 +38,14 @@
         "book_key": "tagging-freedom",
         "page": 9,
         "contributor": "Alba"
+      },
+      {
+        "type": "content",
+        "text": "In what year did Four Sisters diner open?",
+        "answer": "1963",
+        "book_key": "tumbling",
+        "page": 7,
+        "contributor": "Alba"
       }
     ]
   }
