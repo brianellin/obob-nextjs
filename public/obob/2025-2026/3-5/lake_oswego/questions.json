@@ -704,9 +704,15 @@
       },
       {
         "type": "in-which-book",
-        "text": "do they have Toaster Tarts for breakfast?",
+        "text": "do they have Toaster Tarts with frosted cupcake swirls for breakfast?",
         "book_key": "escape-from-mr-lemoncellos-library",
-        "page": 14
+        "page": 14,
+        "revisionHistory": [
+          {
+            "text": "do they have Toaster Tarts for breakfast?",
+            "revisionDate": "2025-10-02"
+          }
+        ]
       },
       {
         "type": "in-which-book",

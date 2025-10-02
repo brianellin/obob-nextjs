@@ -4486,9 +4486,16 @@
     },
     {
       "type": "in-which-book",
-      "text": "do characters eat Toaster Tarts for breakfast?",
+      "text": "do characters eat Toaster Tarts with frosted cupcake swirls for breakfast?",
       "book_key": "escape-from-mr-lemoncellos-library",
-      "page": 14
+      "page": 14,
+      "revisionHistory": [
+        {
+          "text": "do characters eat Toaster Tarts for breakfast?",
+          "answer": "Yes",
+          "revisionDate": "2025-10-02"
+        }
+      ]
     },
     {
       "type": "in-which-book",
@@ -5071,7 +5078,7 @@
       "type": "content",
       "text": "Who does Charles call using his “ask an expert”?",
       "book_key": "escape-from-mr-lemoncellos-library",
-      "answer": "Who does Charles call using his “ask an expert”",
+      "answer": "Uncle Jimmy or James F. Willoughby the Third",
       "page": 249
     },
     {
@@ -5267,7 +5274,7 @@
       "type": "content",
       "text": "[Two Part Question] What are the two book titles listed on the back of Sierra's library card?",
       "book_key": "escape-from-mr-lemoncellos-library",
-      "answer": "The Egypt Gamr AND The Westing Game",
+      "answer": "The Egypt Game AND The Westing Game",
       "page": 124
     },
     {
@@ -22618,13 +22625,6 @@
       "book_key": "the-secret-garden-on-81st-street",
       "answer": "read and draw",
       "page": 127
-    },
-    {
-      "type": "content",
-      "text": "What time does Martha run errands everyday?",
-      "book_key": "the-secret-garden-on-81st-street",
-      "answer": "2025-02-04 00:00:00",
-      "page": 134
     },
     {
       "type": "content",
