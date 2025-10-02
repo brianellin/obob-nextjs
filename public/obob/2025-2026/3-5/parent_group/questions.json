@@ -1624,9 +1624,16 @@
     },
     {
       "type": "in-which-book",
-      "text": "does a character chew up a piece of paper?",
+      "text": "does a toddler chew up a piece of paper?",
       "book_key": "city-of-ember",
-      "page": 92
+      "page": 92,
+      "revisionHistory": [
+        {
+          "text": "does a character chew up a piece of paper?",
+          "answer": "No",
+          "revisionDate": "2025-10-02"
+        }
+      ]
     },
     {
       "type": "in-which-book",
@@ -3236,7 +3243,7 @@
     },
     {
       "type": "content",
-      "text": "what disease did Clay think the Elf-Hound had a first?",
+      "text": "what disease did Clay think the Elf-Hound had at first?",
       "book_key": "elf-dog-and-owl-head",
       "answer": "Rabies",
       "page": 13
@@ -3495,10 +3502,17 @@
     },
     {
       "type": "content",
-      "text": "why was there a gasp as Elphinore was being led away?",
+      "text": "As Elphinore was being led away, what fell to the ground that caused the People Under the Mountain to gasp?",
       "book_key": "elf-dog-and-owl-head",
-      "answer": "Clay fell to the ground and his mask fell off",
-      "page": 178
+      "answer": "Clay's mask",
+      "page": 178,
+      "revisionHistory": [
+        {
+          "text": "why was there a gasp as Elphinore was being led away?",
+          "answer": "Clay fell to the ground and his mask fell off",
+          "revisionDate": "2025-10-02"
+        }
+      ]
     },
     {
       "type": "content",
@@ -4209,10 +4223,17 @@
     },
     {
       "type": "content",
-      "text": "A two part question...name the two items the boys fine with the metal detector",
+      "text": "A two part question...name the two items the boys find with the metal detector",
       "book_key": "elf-dog-and-owl-head",
       "answer": "Crushed Soda Can and Key",
-      "page": 108
+      "page": 108,
+      "revisionHistory": [
+        {
+          "text": "A two part question...name the two items the boys fine with the metal detector",
+          "answer": "Crushed Soda Can and Key",
+          "revisionDate": "2025-10-02"
+        }
+      ]
     },
     {
       "type": "content",
@@ -18274,7 +18295,7 @@
     },
     {
       "type": "content",
-      "text": "what is Annemarie's uncle's nameW",
+      "text": "what is Annemarie's uncle's name?",
       "book_key": "number-the-stars",
       "answer": "Henrik",
       "page": 51
@@ -18588,10 +18609,17 @@
     },
     {
       "type": "content",
-      "text": "On Ellen's forst night staying with Annemarie, how many Nazi officers enter their bedroom?",
+      "text": "On Ellen's first night staying with Annemarie, how many Nazi officers enter their bedroom?",
       "book_key": "number-the-stars",
       "answer": "Three",
-      "page": 45
+      "page": 45,
+      "revisionHistory": [
+        {
+          "text": "On Ellen's forst night staying with Annemarie, how many Nazi officers enter their bedroom?",
+          "answer": "Three",
+          "revisionDate": "2025-10-02"
+        }
+      ]
     },
     {
       "type": "content",
