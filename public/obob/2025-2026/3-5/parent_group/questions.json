@@ -21972,13 +21972,6 @@
     },
     {
       "type": "content",
-      "text": "What is the house number of Ben's bodega?",
-      "book_key": "the-secret-garden-on-81st-street",
-      "answer": "804",
-      "page": 28
-    },
-    {
-      "type": "content",
       "text": "What is the name of the character who owns the bodega?",
       "book_key": "the-secret-garden-on-81st-street",
       "answer": "Ben (Cordova)"
@@ -22103,7 +22096,7 @@
       "type": "content",
       "text": "How is Uncle Archie related to Mary's mother?",
       "book_key": "the-secret-garden-on-81st-street",
-      "answer": "His sister",
+      "answer": "They are siblings (he is her brother)",
       "page": 105
     },
     {
