@@ -14,7 +14,7 @@
     },
     {
       "type": "in-which-book",
-      "text": "is a main character named afer a famous Muslim general?",
+      "text": "is a main character named after a famous Muslim general?",
       "book_key": "all-my-rage",
       "page": 5
     },
@@ -116,7 +116,7 @@
     },
     {
       "type": "in-which-book",
-      "text": "is it customary to read the Qur'an at a loved ones gravside on the 40th day after their death?",
+      "text": "is it customary to read the Qur'an at a loved ones graveside on the 40th day after their death?",
       "book_key": "all-my-rage",
       "page": 210
     },
@@ -207,7 +207,7 @@
     },
     {
       "type": "content",
-      "text": "Excerpts of a poem  byu Elizabeth Bishop are repeated throughout the book.  What is the name of the Poem?",
+      "text": "Excerpts of a poem by Elizabeth Bishop are repeated throughout the book.  What is the name of the poem?",
       "book_key": "all-my-rage",
       "answer": "\"One Art\""
     },
@@ -1555,7 +1555,7 @@
     },
     {
       "type": "content",
-      "text": "what is the name of the restuarant that Grandpa put on the map with a five-hundred-word article in The New York Times?",
+      "text": "what is the name of the restaurant that Grandpa put on the map with a five-hundred-word article in The New York Times?",
       "book_key": "an-appetite-for-miracles",
       "answer": "Luchas",
       "page": 53
@@ -1693,7 +1693,7 @@
     },
     {
       "type": "content",
-      "text": "according to Mr. Rodriguez, what haleps with increasing memory, lowering stress, and fighting fatigue?",
+      "text": "according to Mr. Rodriguez, what helps with increasing memory, lowering stress, and fighting fatigue?",
       "book_key": "an-appetite-for-miracles",
       "answer": "peppermints",
       "page": 211
@@ -1839,7 +1839,7 @@
     },
     {
       "type": "content",
-      "text": "According to Grandpa, what was the fruit that Eve plicked from the Tree of Knowledge?",
+      "text": "According to Grandpa, what was the fruit that Eve picked from the Tree of Knowledge?",
       "book_key": "an-appetite-for-miracles",
       "answer": "a Pomegranate"
     },
@@ -3182,7 +3182,7 @@
     },
     {
       "type": "in-which-book",
-      "text": "is news of an assassination recieved as \"a ray of light\"?",
+      "text": "is news of an assassination received as \"a ray of light\"?",
       "book_key": "a-crane-among-wolves",
       "page": 332
     },
@@ -5293,7 +5293,7 @@
     },
     {
       "type": "in-which-book",
-      "text": "Does a character recieve threatening emails from darkgamble@anonmail.com?",
+      "text": "Does a character receive threatening emails from darkgamble@anonmail.com?",
       "book_key": "promise-boys",
       "page": 210
     },
@@ -5305,7 +5305,7 @@
     },
     {
       "type": "in-which-book",
-      "text": "Does a character recieve an envelope of cash as an down payment for a restaurant?",
+      "text": "Does a character receive an envelope of cash as an down payment for a restaurant?",
       "book_key": "promise-boys",
       "page": 238
     },
@@ -5613,7 +5613,7 @@
     },
     {
       "type": "content",
-      "text": "where is Ramon's \"future restuarant\" located?",
+      "text": "where is Ramon's \"future restaurant\" located?",
       "book_key": "promise-boys",
       "answer": "Adams Morgan",
       "page": 126
@@ -7172,7 +7172,7 @@
     },
     {
       "type": "content",
-      "text": "what is the Reddit handle of the 15-year-old whose been playing piano \"since they coudl talk,\" but was told by MASH that they would be a teacher?",
+      "text": "what is the Reddit handle of the 15-year-old whose been playing piano \"since they could talk,\" but was told by MASH that they would be a teacher?",
       "book_key": "seven-percent-of-ro-devereux",
       "answer": "Jazzhands24",
       "page": 276
@@ -9391,7 +9391,7 @@
     },
     {
       "type": "in-which-book",
-      "text": "does a character recieve a mouse skull as a thank you for a chupa chup?",
+      "text": "does a character receive a mouse skull as a thank you for a chupa chup?",
       "book_key": "the-sunbearer-trials",
       "page": 38
     },
