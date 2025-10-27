@@ -2,8 +2,10 @@
 
 import { useState, useEffect } from "react";
 import { track } from "@vercel/analytics";
+import { usePostHog } from "posthog-js/react";
 
 export default function SurveyBanner() {
+  const posthog = usePostHog();
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -17,12 +19,14 @@ export default function SurveyBanner() {
 
   const handleDismiss = () => {
     track("surveyBannerDismiss");
+    posthog.capture("surveyBannerDismiss");
     setIsVisible(false);
     localStorage.setItem("surveyBannerDismissed", "true");
   };
 
   const handleSurveyClick = () => {
     track("surveyBannerClick");
+    posthog.capture("surveyBannerClick");
     window.open(
       "https://docs.google.com/forms/d/e/1FAIpQLSfiKIe_KUUMrSHsDCjVz1K7TYVeyTsjwDfxfu6KAixq34dhEg/viewform?usp=dialog",
       "_blank"

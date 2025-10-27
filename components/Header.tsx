@@ -4,6 +4,7 @@ import { Dot, Menu } from "lucide-react";
 import RosieIcon from "./RosieIcon";
 import Link from "next/link";
 import { track } from "@vercel/analytics";
+import { usePostHog } from "posthog-js/react";
 import {
   Sheet,
   SheetContent,
@@ -15,8 +16,11 @@ import {
 import BookHeartIcon from "./BookHeartIcon";
 
 export default function Header() {
+  const posthog = usePostHog();
+
   const handleBlueskyClick = () => {
     track("blueskyClick");
+    posthog.capture("blueskyClick");
     window.open("https://bsky.app/profile/obob.dog", "_blank");
   };
 

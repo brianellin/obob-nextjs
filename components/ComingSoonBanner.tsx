@@ -2,8 +2,10 @@
 
 import { useState, useEffect } from "react";
 import { track } from "@vercel/analytics";
+import { usePostHog } from "posthog-js/react";
 
 export default function ComingSoonBanner() {
+  const posthog = usePostHog();
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -17,6 +19,7 @@ export default function ComingSoonBanner() {
 
   const handleDismiss = () => {
     track("comoingSoonDismiss");
+    posthog.capture("comingSoonDismiss");
     setIsVisible(false);
     localStorage.setItem("comingSoonDismissed", "true");
   };

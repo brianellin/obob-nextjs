@@ -2,8 +2,10 @@
 
 import { useState, useEffect } from "react";
 import { track } from "@vercel/analytics";
+import { usePostHog } from "posthog-js/react";
 
 export default function DonationBanner() {
+  const posthog = usePostHog();
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -17,12 +19,14 @@ export default function DonationBanner() {
 
   const handleDismiss = () => {
     track("donationBannerDismiss");
+    posthog.capture("donationBannerDismiss");
     setIsVisible(false);
     localStorage.setItem("donationBannerDismissed", "true");
   };
 
   const handleDonationClick = () => {
     track("donationBannerClick");
+    posthog.capture("donationBannerClick");
     window.open("https://donate.stripe.com/aEU9Eyb3nd9Q0ve9AA", "_blank");
   };
 

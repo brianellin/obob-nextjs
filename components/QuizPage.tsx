@@ -12,6 +12,7 @@ import { useToast } from "@/hooks/use-toast";
 import Confetti from "react-confetti";
 import { useWindowSize } from "react-use";
 import { track } from "@vercel/analytics";
+import { usePostHog } from "posthog-js/react";
 import QuestionFeedback from "./QuestionFeedback";
 import QuestionFeedbackForm from "./QuestionFeedbackForm";
 import {
@@ -75,6 +76,7 @@ export default function QuizPage({
   year,
   division,
 }: QuizPageProps) {
+  const posthog = usePostHog();
   const [questions, setQuestions] = useState<QuestionWithBook[]>([]);
   const [loading, setLoading] = useState(true);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -152,7 +154,7 @@ export default function QuizPage({
   useEffect(() => {
     if (quizFinished) {
       console.log("tracking battleFinished");
-      track("battleFinished", {
+      const battleFinishedData = {
         quizMode,
         questionCount,
         questionType,
@@ -161,17 +163,21 @@ export default function QuizPage({
         numBooks: selectedBooks.length,
         score: calculateScore(),
         possibleScore: questions.length * 5,
-      });
+      };
+      track("battleFinished", battleFinishedData);
+      posthog.capture("battleFinished", battleFinishedData);
     } else {
       console.log("tracking battleStarted");
-      track("battleStarted", {
+      const battleStartedData = {
         quizMode,
         questionCount,
         questionType,
         year,
         division,
         numBooks: selectedBooks.length,
-      });
+      };
+      track("battleStarted", battleStartedData);
+      posthog.capture("battleStarted", battleStartedData);
     }
   }, [quizFinished]);
 
