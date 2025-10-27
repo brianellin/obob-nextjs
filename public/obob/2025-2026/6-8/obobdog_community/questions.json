@@ -43,8 +43,63 @@
         "type": "content",
         "text": "In what year did Four Sisters diner open?",
         "answer": "1963",
-        "book_key": "tumbling",
+        "book_key": "tumble",
         "page": 7,
+        "contributor": "Alba"
+      },
+      {
+        "type": "content",
+        "text": "Who is Addie's home room teacher?",
+        "answer": "Mr Tanaka",
+        "book_key": "tumble",
+        "page": 43,
+        "contributor": "Alba"
+      },
+      {
+        "type": "content",
+        "text": "Who is Addie's science teacher?",
+        "answer": "Miss Guadet",
+        "book_key": "tumble",
+        "page": 44,
+        "contributor": "Alba"
+      },
+      {
+        "type": "content",
+        "text": "Who is the school music teacher?",
+        "answer": "Mr Pace",
+        "book_key": "tumble",
+        "page": 276,
+        "contributor": "Alba"
+      },
+      {
+        "type": "content",
+        "text": "What color is Maggie's retainer?",
+        "answer": "Pink",
+        "book_key": "tumble",
+        "page": 306,
+        "contributor": "Alba"
+      },
+      {
+        "type": "content",
+        "text": "How many pounds does Gus weigh?",
+        "answer": "119 pounds",
+        "book_key": "tumble",
+        "page": 316,
+        "contributor": "Alba"
+      },
+      {
+        "type": "content",
+        "text": "How many pounds does Brandon weigh?",
+        "answer": "100 pounds",
+        "book_key": "tumble",
+        "page": 316,
+        "contributor": "Alba"
+      },
+      {
+        "type": "in-which-book",
+        "text": "does a smoothie move down someone's throat like cold cement?",
+        "book_key": "tumble",
+        "page": 328,
         "contributor": "Alba"
       }
     ]
