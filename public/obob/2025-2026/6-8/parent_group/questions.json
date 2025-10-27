@@ -9668,7 +9668,7 @@
     },
     {
       "type": "in-which-book",
-      "text": "is a character very excited to be old enough to drive?",
+      "text": "is a character looking forward to be old enough to drive?",
       "book_key": "an-occasionally-happy-family",
       "page": 28
     },
@@ -10838,7 +10838,7 @@
     },
     {
       "type": "in-which-book",
-      "text": "in which book is the main character expecting someone to be mad but is greeted with a hug instead?",
+      "text": "is the main character expecting someone to be mad but is greeted with a hug instead?",
       "book_key": "projekt-1065-a-novel-of-world-war-ii",
       "page": 134
     },
@@ -10886,7 +10886,7 @@
     },
     {
       "type": "in-which-book",
-      "text": "do characters talk endlessly about the medals and hero's welcome they will receive?",
+      "text": "do characters talk about the medals and hero's welcome they will receive?",
       "book_key": "projekt-1065-a-novel-of-world-war-ii",
       "page": 261
     },
@@ -16963,7 +16963,7 @@
     },
     {
       "type": "in-which-book",
-      "text": "In which book is a character's favorite candy Smarties?",
+      "text": "is a character's favorite candy Smarties?",
       "book_key": "uprooted",
       "page": 220
     },
@@ -17602,7 +17602,7 @@
     },
     {
       "type": "content",
-      "text": "Which apartment is Ruth's apartment?",
+      "text": "What is Ruth's apartment number?",
       "book_key": "uprooted",
       "answer": "APT 1547",
       "page": 65
