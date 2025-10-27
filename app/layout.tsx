@@ -5,7 +5,6 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Analytics } from "@vercel/analytics/react";
 import { PostHogProvider } from "./providers";
-import { PiSquare } from "lucide-react";
 
 const inter = Inter({ subsets: ["latin"] });
 
