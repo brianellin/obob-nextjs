@@ -9209,7 +9209,7 @@
       "text": "What does Pedro make about Abuelito's life?",
       "book_key": "mexikid-a-graphic-memoir",
       "answer": "A comic book",
-      "page": 109110
+      "page": 109
     },
     {
       "type": "content",
@@ -13286,7 +13286,7 @@
     },
     {
       "type": "content",
-      "text": "who calls themself metiiculous?",
+      "text": "who calls themself meticulous?",
       "book_key": "remember-my-story",
       "answer": "Alter",
       "page": 207
@@ -13321,16 +13321,16 @@
     },
     {
       "type": "content",
-      "text": "one what date did Claire and Alter's bill pass the senate vote unanimously?",
+      "text": "on what date did Claire and Alter's bill pass the senate vote unanimously?",
       "book_key": "remember-my-story",
-      "answer": "2019-03-12 00:00:00",
+      "answer": "2019-03-12",
       "page": 221
     },
     {
       "type": "content",
       "text": "when did senate bill 664 become law?",
       "book_key": "remember-my-story",
-      "answer": "2019-07-15 00:00:00",
+      "answer": "2019-07-15",
       "page": 223
     },
     {
@@ -17227,7 +17227,7 @@
       "type": "content",
       "text": "What is the date on Ruth's first letter to her Toronto best friends?",
       "book_key": "uprooted",
-      "answer": "1993-09-21 00:00:00",
+      "answer": "1993-09-21",
       "page": 122
     },
     {

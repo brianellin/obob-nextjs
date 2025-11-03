@@ -5316,7 +5316,7 @@
       "type": "content",
       "text": "What date did Luigi Lemoncello check out the book Get to Know Your Local Library?",
       "book_key": "escape-from-mr-lemoncellos-library",
-      "answer": "1964-05-26 00:00:00",
+      "answer": "1964-05-26",
       "page": 159
     },
     {
@@ -15135,7 +15135,8 @@
     {
       "type": "in-which-book",
       "text": "does a character repeatedly say \"What Courage!\"?",
-      "book_key": "the-lost-library"
+      "book_key": "the-lost-library",
+      "page": 39
     },
     {
       "type": "in-which-book",
@@ -15158,18 +15159,20 @@
     {
       "type": "in-which-book",
       "text": "does a character refer to a library as a \"grubby giant\"?",
-      "book_key": "the-lost-library"
+      "book_key": "the-lost-library",
+      "page": 82
     },
     {
       "type": "in-which-book",
       "text": "does a character refer to a library patron as \"our dear boy\"",
       "book_key": "the-lost-library",
-      "page": 79161
+      "page": 79
     },
     {
       "type": "in-which-book",
       "text": "does a character discover their father is the famous mystery writer, H.G. Higgins?",
-      "book_key": "the-lost-library"
+      "book_key": "the-lost-library",
+      "page": 169
     },
     {
       "type": "in-which-book",
@@ -15216,7 +15219,8 @@
     {
       "type": "in-which-book",
       "text": "are an egg crate, a wagon an umbrella and a suitcase added as rooms to a little free library?",
-      "book_key": "the-lost-library"
+      "book_key": "the-lost-library",
+      "page": 63
     },
     {
       "type": "in-which-book",
@@ -15228,7 +15232,7 @@
       "type": "in-which-book",
       "text": "does a cat serve as the guardian of the library?",
       "book_key": "the-lost-library",
-      "page": 124170
+      "page": 124
     },
     {
       "type": "in-which-book",
@@ -15296,7 +15300,7 @@
       "type": "content",
       "text": "What return date is stamped inside all of the books of the little free library?",
       "book_key": "the-lost-library",
-      "answer": "1999-11-05 00:00:00",
+      "answer": "1999-11-05",
       "page": 32
     },
     {
@@ -15540,7 +15544,8 @@
       "type": "content",
       "text": "What do Al and Ms. Scoggin call Mortimer?",
       "book_key": "the-lost-library",
-      "answer": "dear cat"
+      "answer": "dear cat",
+      "page": 7
     },
     {
       "type": "content",
@@ -15657,7 +15662,7 @@
       "type": "content",
       "text": "What is the return date stamp on all of the Martinville Library books in the little free library?",
       "book_key": "the-lost-library",
-      "answer": "1999-11-05 00:00:00",
+      "answer": "1999-11-05",
       "page": 32
     },
     {
@@ -15769,7 +15774,7 @@
       "type": "content",
       "text": "What is the date that the library burned down?",
       "book_key": "the-lost-library",
-      "answer": "1999-11-05 00:00:00",
+      "answer": "1999-11-05",
       "page": 90
     },
     {
@@ -15852,7 +15857,7 @@
       "type": "content",
       "text": "What do the keys Evan found unlock?",
       "book_key": "the-lost-library",
-      "answer": "The padlock on the treehouse or treehouse",
+      "answer": "The padlock on the treehouse",
       "page": 154
     },
     {
@@ -15901,7 +15906,8 @@
       "type": "content",
       "text": "Who helped Mortimer \"show\" how the fire started in the basement?",
       "book_key": "the-lost-library",
-      "answer": "mice"
+      "answer": "mice",
+      "page": 179
     },
     {
       "type": "content",
@@ -16010,7 +16016,7 @@
       "type": "content",
       "text": "What is the last date stamped on all of the books in the little free library?",
       "book_key": "the-lost-library",
-      "answer": "1999-11-05 00:00:00",
+      "answer": "1999-11-05",
       "page": 32
     },
     {
@@ -16037,7 +16043,8 @@
       "type": "content",
       "text": "What is the name of the only person who checked out the book \"How to Write a Mystery Novel\"?",
       "book_key": "the-lost-library",
-      "answer": "H.G. Higgins"
+      "answer": "H.G. Higgins",
+      "page": 33
     },
     {
       "type": "content",
@@ -16083,14 +16090,15 @@
       "type": "content",
       "text": "On what date did the Martinville Library burn down?",
       "book_key": "the-lost-library",
-      "answer": "1999-11-05 00:00:00",
+      "answer": "1999-11-05",
       "page": 90
     },
     {
       "type": "content",
       "text": "What item falls out of the book titled \"How to Write a Mystery Novel\". Be specific.",
       "book_key": "the-lost-library",
-      "answer": "polaroid"
+      "answer": "polaroid",
+      "page": 47
     },
     {
       "type": "content",
@@ -17108,7 +17116,7 @@
       "type": "content",
       "text": "When was Grant born?",
       "book_key": "the-million-dollar-race",
-      "answer": "2008-09-14 00:00:00",
+      "answer": "2008-09-14",
       "page": 65
     },
     {
