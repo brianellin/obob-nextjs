@@ -196,8 +196,8 @@ export default function BookDetailPage({
           download
         >
           <Button variant="outline" size="sm">
-            <Download className="h-4 w-4 mr-2" />
-            Download Questions
+            <Download className="h-4 w-4 md:mr-2" />
+            <span className="hidden md:inline">Download Questions</span>
           </Button>
         </a>
       </div>

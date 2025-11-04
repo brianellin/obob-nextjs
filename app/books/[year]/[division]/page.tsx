@@ -95,8 +95,8 @@ export default async function BooksPage({ params }: Props) {
 
   return (
     <div className="container mx-auto px-4 py-8 space-y-8">
-      <div className="flex items-center justify-between gap-4">
-        <h1 className="text-4xl font-bold">
+      <div className="flex items-center justify-between gap-2 md:gap-4">
+        <h1 className="text-3xl md:text-4xl font-bold">
           OBOB {year} Division {division}
         </h1>
         <a
@@ -104,8 +104,8 @@ export default async function BooksPage({ params }: Props) {
           download
         >
           <Button variant="outline" size="sm">
-            <Download className="h-4 w-4 mr-2" />
-            Download All Questions
+            <Download className="h-4 w-4 md:mr-2" />
+            <span className="hidden md:inline">Download All Questions</span>
           </Button>
         </a>
       </div>
