@@ -8,7 +8,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { Input } from "@/components/ui/input";
-import { ChevronLeft, ChevronRight, ArrowLeft, Plus } from "lucide-react";
+import { ChevronLeft, ChevronRight, ArrowLeft, Plus, Download } from "lucide-react";
 import { Book, Question } from "@/types";
 import { QuestionHeatmapInline } from "@/components/QuestionHeatmapInline";
 import QuestionSubmissionForm from "@/components/QuestionSubmissionForm";
@@ -184,13 +184,22 @@ export default function BookDetailPage({
   return (
     <div className="container mx-auto px-4 py-8 space-y-8">
       {/* Back navigation */}
-      <div className="flex items-center gap-2">
+      <div className="flex items-center justify-between gap-2">
         <Link href={`/books/${year}/${division}`}>
           <Button variant="outline" size="sm">
             <ArrowLeft className="h-4 w-4 mr-2" />
             Back to Books
           </Button>
         </Link>
+        <a
+          href={`/exports/${year}/${division}/${book.book_key}-${year}-${division}.csv`}
+          download
+        >
+          <Button variant="outline" size="sm">
+            <Download className="h-4 w-4 mr-2" />
+            Download Questions
+          </Button>
+        </a>
       </div>
 
       {/* Book Header */}
