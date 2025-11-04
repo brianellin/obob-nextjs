@@ -152,6 +152,58 @@ async function generateCSVForBook(
   console.log(`Generated: ${filename} (${bookQuestions.length} questions)`);
 }
 
+async function generateAllQuestionsCSV(
+  books: Book[],
+  questions: Question[],
+  year: string,
+  division: string
+): Promise<void> {
+  if (questions.length === 0) {
+    console.log(`Skipping all-questions CSV - no questions`);
+    return;
+  }
+
+  // Create a map of book_key to book for quick lookup
+  const bookMap = new Map(books.map(book => [book.book_key, book]));
+
+  // Sort by book_key, question_type, and page_number
+  const sortedQuestions = [...questions].sort((a, b) => {
+    if (a.book_key !== b.book_key) return a.book_key.localeCompare(b.book_key);
+    if (a.type !== b.type) return a.type.localeCompare(b.type);
+    return a.page - b.page;
+  });
+
+  // Create CSV content
+  const headers = ['book_key', 'question_type', 'page', 'text', 'answer', 'author_name', 'book_title', 'source_name'];
+  const rows = sortedQuestions.map(q => {
+    const book = bookMap.get(q.book_key);
+    const answer = q.type === 'content' ? (q as ContentQuestion).answer : '';
+    return [
+      escapeCSV(q.book_key),
+      escapeCSV(q.type),
+      escapeCSV(q.page),
+      escapeCSV(q.text),
+      escapeCSV(answer),
+      escapeCSV(book?.author || ''),
+      escapeCSV(book?.title || ''),
+      escapeCSV((q as any).source_name || ''),
+    ].join(',');
+  });
+
+  const csvContent = [headers.join(','), ...rows].join('\n');
+
+  // Create output directory
+  const outputDir = path.join(process.cwd(), 'public', 'exports', year, division);
+  await fs.mkdir(outputDir, { recursive: true });
+
+  // Write CSV file
+  const filename = `obob-${year}-${division}-all-questions.csv`;
+  const outputPath = path.join(outputDir, filename);
+  await fs.writeFile(outputPath, csvContent, 'utf8');
+  
+  console.log(`Generated: ${filename} (${sortedQuestions.length} questions)`);
+}
+
 async function generateExportsForDivision(year: string, division: string): Promise<void> {
   console.log(`\nProcessing ${year}/${division}...`);
   
@@ -171,6 +223,9 @@ async function generateExportsForDivision(year: string, division: string): Promi
   await Promise.all(
     books.map(book => generateCSVForBook(book, questions, year, division))
   );
+
+  // Generate all-questions CSV for the division
+  await generateAllQuestionsCSV(books, questions, year, division);
 }
 
 async function main() {

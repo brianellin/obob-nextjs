@@ -9,7 +9,7 @@ import { Separator } from "@/components/ui/separator";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { getAllQuestions } from "@/lib/questions";
 import { notFound } from "next/navigation";
-import { BookOpen } from "lucide-react";
+import { BookOpen, Download } from "lucide-react";
 
 type Props = {
   params: Promise<{
@@ -95,9 +95,20 @@ export default async function BooksPage({ params }: Props) {
 
   return (
     <div className="container mx-auto px-4 py-8 space-y-8">
-      <h1 className="text-4xl font-bold">
-        OBOB {year} Division {division}
-      </h1>
+      <div className="flex items-center justify-between gap-4">
+        <h1 className="text-4xl font-bold">
+          OBOB {year} Division {division}
+        </h1>
+        <a
+          href={`/exports/${year}/${division}/obob-${year}-${division}-all-questions.csv`}
+          download
+        >
+          <Button variant="outline" size="sm">
+            <Download className="h-4 w-4 mr-2" />
+            Download All Questions
+          </Button>
+        </a>
+      </div>
 
       {/* Summary Statistics Section */}
       <Card>
