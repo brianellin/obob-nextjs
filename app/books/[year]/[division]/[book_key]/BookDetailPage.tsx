@@ -30,10 +30,13 @@ export default function BookDetailPage({
   const questionsByPage = useMemo(() => {
     const grouped: Record<number, Question[]> = {};
     questions.forEach((question) => {
-      if (!grouped[question.page]) {
-        grouped[question.page] = [];
+      // Only group questions that have a valid page number
+      if (question.page !== undefined && question.page !== null) {
+        if (!grouped[question.page]) {
+          grouped[question.page] = [];
+        }
+        grouped[question.page].push(question);
       }
-      grouped[question.page].push(question);
     });
     return grouped;
   }, [questions]);
@@ -45,7 +48,7 @@ export default function BookDetailPage({
     // Extract page numbers directly from questions
     const pagesWithQuestions = questions
       .map((q) => q.page)
-      .filter((page) => typeof page === "number" && page > 0)
+      .filter((page): page is number => typeof page === "number" && page > 0)
       .sort((a, b) => a - b);
 
     if (pagesWithQuestions.length === 0) return [];
@@ -91,7 +94,7 @@ export default function BookDetailPage({
         ? Math.max(
             ...questions
               .map((q) => q.page)
-              .filter((p) => typeof p === "number" && p > 0)
+              .filter((p): p is number => typeof p === "number" && p > 0)
           )
         : 0;
     const pagesWithoutQuestions = Math.max(0, maxPage - pagesWithQuestions);
