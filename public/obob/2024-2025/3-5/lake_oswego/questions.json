@@ -937,7 +937,7 @@
       "text": "in what year does the book begin?",
       "book_key": "before-ever-after",
       "answer": "1999",
-      "page": 0
+      "page": 1
     },
     {
       "type": "content",
@@ -2271,7 +2271,7 @@
       "type": "in-which-book",
       "text": "is the design and writing meant to be friendly to readers with dyslexia?",
       "book_key": "just-jerry",
-      "page": -1
+      "page": 1
     },
     {
       "type": "in-which-book",

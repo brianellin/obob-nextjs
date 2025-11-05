@@ -2914,7 +2914,7 @@
       "type": "in-which-book",
       "text": "is a character based on a real-life historical tyrant?",
       "book_key": "a-crane-among-wolves",
-      "page": -1
+      "page": 0
     },
     {
       "type": "in-which-book",
@@ -4375,13 +4375,6 @@
       "book_key": "legends-and-lattes",
       "answer": "Three",
       "page": 80
-    },
-    {
-      "type": "content",
-      "text": "What is the name of the Thaumic Academy?",
-      "book_key": "legends-and-lattes",
-      "answer": "Ackers",
-      "page": 84
     },
     {
       "type": "content",

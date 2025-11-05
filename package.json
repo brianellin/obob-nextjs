@@ -4,10 +4,15 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "prebuild": "npx tsx scripts/generate-question-counts.ts && npx tsx scripts/generate-question-exports.ts",
+    "prebuild": "pnpm run test && npx tsx scripts/generate-question-counts.ts && npx tsx scripts/generate-question-exports.ts",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:ui": "vitest --ui",
+    "test:validate": "vitest run tests/data-validation.test.ts",
+    "check-pages": "npx tsx scripts/check-page-numbers.ts",
     "generate-counts": "npx tsx scripts/generate-question-counts.ts",
     "generate-exports": "npx tsx scripts/generate-question-exports.ts"
   },
@@ -43,11 +48,13 @@
     "@types/node": "^20.19.24",
     "@types/react": "^18.3.26",
     "@types/react-dom": "^18.3.7",
+    "@vitest/ui": "^4.0.7",
     "eslint": "^8.57.1",
     "eslint-config-next": "15.0.0",
     "postcss": "^8.5.6",
     "tailwindcss": "^3.4.18",
-    "typescript": "^5.9.3"
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.7"
   },
   "packageManager": "pnpm@9.15.4+sha512.b2dc20e2fc72b3e18848459b37359a32064663e5627a51e4c74b2c29dd8e8e0491483c3abb40789cfd578bf362fb6ba8261b05f0387d76792ed6e23ea3b1b6a0",
   "pnpm": {
