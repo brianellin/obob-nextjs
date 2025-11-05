@@ -83,6 +83,7 @@ export default function QuizPage({
   const [showAnswer, setShowAnswer] = useState(false);
   const [quizFinished, setQuizFinished] = useState(false);
   const [animateScore, setAnimateScore] = useState(false);
+  const [showSuccessAnimation, setShowSuccessAnimation] = useState(false);
   const [timeLeft, setTimeLeft] = useState(TIMER_DURATION);
   const [isTimerRunning, setIsTimerRunning] = useState(false);
   const boopSound = useRef<HTMLAudioElement | null>(null);
@@ -195,7 +196,11 @@ export default function QuizPage({
     // Only animate score for perfect answers
     if (points === 5) {
       setAnimateScore(true);
-      setTimeout(() => setAnimateScore(false), 300);
+      setShowSuccessAnimation(true);
+      setTimeout(() => {
+        setAnimateScore(false);
+        setShowSuccessAnimation(false);
+      }, 800);
     }
 
     // Update or add the result for the current question
@@ -387,18 +392,37 @@ export default function QuizPage({
             <span className="text-lg font-semibold">
               Score:
               <span
-                className={`ml-2 inline-block ${
+                className={`ml-2 inline-block relative ${
                   animateScore ? "animate-score-pop" : ""
                 }`}
               >
                 {calculateScore()}/{questions.length * 5}
+                {/* Sparkle particles */}
+                {showSuccessAnimation && (
+                  <>
+                    <span className="absolute -top-2 -left-2 text-yellow-400 animate-sparkle-1">✨</span>
+                    <span className="absolute -top-2 -right-2 text-yellow-400 animate-sparkle-2">✨</span>
+                    <span className="absolute -bottom-2 -left-2 text-yellow-400 animate-sparkle-3">✨</span>
+                    <span className="absolute -bottom-2 -right-2 text-yellow-400 animate-sparkle-4">✨</span>
+                  </>
+                )}
               </span>
             </span>
           </div>
         </div>
       </div>
 
-      <Card className="w-full max-w-xl mx-auto drop-shadow-md relative">
+      <Card className={`w-full max-w-xl mx-auto drop-shadow-md relative transition-all duration-300 ${showSuccessAnimation ? "animate-card-success" : ""}`}>
+        {/* Success checkmark overlay */}
+        {showSuccessAnimation && (
+          <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-10">
+            <div className="animate-success-check">
+              <svg className="w-32 h-32 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
+          </div>
+        )}
         <CardContent className="p-5 mb-0">
           <div className="">
             <div>

@@ -77,13 +77,20 @@
   }
 }
 
+/* Score pop animation with bounce */
 @keyframes score-pop {
   0% {
     transform: scale(1);
   }
+  30% {
+    transform: scale(2.5);
+    color: #10b981; /* Emerald green */
+  }
   50% {
-    transform: scale(3.0);
-    color: #8b5cf6; /* Purple color for emphasis */
+    transform: scale(2.2);
+  }
+  70% {
+    transform: scale(2.4);
   }
   100% {
     transform: scale(1);
@@ -91,7 +98,122 @@
 }
 
 .animate-score-pop {
-  animation: score-pop 0.3s ease-in-out;
+  animation: score-pop 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* Card success glow animation */
+@keyframes card-success {
+  0% {
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+  }
+  50% {
+    box-shadow: 0 0 0 10px rgba(16, 185, 129, 0.4), 0 0 30px rgba(16, 185, 129, 0.3);
+    border-color: rgb(16, 185, 129);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+  }
+}
+
+.animate-card-success {
+  animation: card-success 0.8s ease-out;
+}
+
+/* Success checkmark animation */
+@keyframes success-check {
+  0% {
+    transform: scale(0) rotate(-45deg);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.2) rotate(0deg);
+    opacity: 1;
+  }
+  75% {
+    transform: scale(1.1) rotate(5deg);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(0.8) translateY(-20px);
+    opacity: 0;
+  }
+}
+
+.animate-success-check {
+  animation: success-check 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* Sparkle animations - each sparkle moves differently */
+@keyframes sparkle-1 {
+  0% {
+    transform: translate(0, 0) scale(0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-20px, -20px) scale(1.5);
+    opacity: 0;
+  }
+}
+
+@keyframes sparkle-2 {
+  0% {
+    transform: translate(0, 0) scale(0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(20px, -20px) scale(1.5);
+    opacity: 0;
+  }
+}
+
+@keyframes sparkle-3 {
+  0% {
+    transform: translate(0, 0) scale(0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-20px, 20px) scale(1.5);
+    opacity: 0;
+  }
+}
+
+@keyframes sparkle-4 {
+  0% {
+    transform: translate(0, 0) scale(0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(20px, 20px) scale(1.5);
+    opacity: 0;
+  }
+}
+
+.animate-sparkle-1 {
+  animation: sparkle-1 0.8s ease-out;
+}
+
+.animate-sparkle-2 {
+  animation: sparkle-2 0.8s ease-out 0.1s;
+}
+
+.animate-sparkle-3 {
+  animation: sparkle-3 0.8s ease-out 0.2s;
+}
+
+.animate-sparkle-4 {
+  animation: sparkle-4 0.8s ease-out 0.15s;
 }
 
 /* Prevent tap highlight on mobile safari */
