@@ -119,28 +119,40 @@
   animation: card-success 0.8s ease-out;
 }
 
-/* Success checkmark animation */
-@keyframes success-check {
+/* Card partial correct glow animation (yellow) */
+@keyframes card-partial {
   0% {
-    transform: scale(0) rotate(-45deg);
-    opacity: 0;
+    box-shadow: 0 0 0 0 rgba(245, 158, 11, 0);
   }
   50% {
-    transform: scale(1.2) rotate(0deg);
-    opacity: 1;
-  }
-  75% {
-    transform: scale(1.1) rotate(5deg);
-    opacity: 0.9;
+    box-shadow: 0 0 0 10px rgba(245, 158, 11, 0.4), 0 0 30px rgba(245, 158, 11, 0.3);
+    border-color: rgb(245, 158, 11);
   }
   100% {
-    transform: scale(0.8) translateY(-20px);
-    opacity: 0;
+    box-shadow: 0 0 0 0 rgba(245, 158, 11, 0);
   }
 }
 
-.animate-success-check {
-  animation: success-check 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+.animate-card-partial {
+  animation: card-partial 0.8s ease-out;
+}
+
+/* Card incorrect glow animation (red) */
+@keyframes card-incorrect {
+  0% {
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0);
+  }
+  50% {
+    box-shadow: 0 0 0 10px rgba(239, 68, 68, 0.4), 0 0 30px rgba(239, 68, 68, 0.3);
+    border-color: rgb(239, 68, 68);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0);
+  }
+}
+
+.animate-card-incorrect {
+  animation: card-incorrect 0.8s ease-out;
 }
 
 /* Sparkle animations - each sparkle moves differently */
