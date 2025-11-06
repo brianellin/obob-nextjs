@@ -84,6 +84,7 @@ export default function QuizPage({
   const [quizFinished, setQuizFinished] = useState(false);
   const [animateScore, setAnimateScore] = useState(false);
   const [showSuccessAnimation, setShowSuccessAnimation] = useState(false);
+  const [cardAnimationType, setCardAnimationType] = useState<'correct' | 'partial' | 'incorrect' | null>(null);
   const [timeLeft, setTimeLeft] = useState(TIMER_DURATION);
   const [isTimerRunning, setIsTimerRunning] = useState(false);
   const boopSound = useRef<HTMLAudioElement | null>(null);
@@ -193,13 +194,27 @@ export default function QuizPage({
   };
 
   const handleAnswer = (points: number) => {
-    // Only animate score for perfect answers
+    // Animate score for perfect answers
     if (points === 5) {
       setAnimateScore(true);
       setShowSuccessAnimation(true);
+      setCardAnimationType('correct');
       setTimeout(() => {
         setAnimateScore(false);
         setShowSuccessAnimation(false);
+        setCardAnimationType(null);
+      }, 800);
+    } else if (points === 3) {
+      // Partial correct - yellow glow
+      setCardAnimationType('partial');
+      setTimeout(() => {
+        setCardAnimationType(null);
+      }, 800);
+    } else if (points === 0) {
+      // Incorrect - red glow
+      setCardAnimationType('incorrect');
+      setTimeout(() => {
+        setCardAnimationType(null);
       }, 800);
     }
 
@@ -412,17 +427,11 @@ export default function QuizPage({
         </div>
       </div>
 
-      <Card className={`w-full max-w-xl mx-auto drop-shadow-md relative transition-all duration-300 ${showSuccessAnimation ? "animate-card-success" : ""}`}>
-        {/* Success checkmark overlay */}
-        {showSuccessAnimation && (
-          <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-10">
-            <div className="animate-success-check">
-              <svg className="w-32 h-32 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-              </svg>
-            </div>
-          </div>
-        )}
+      <Card className={`w-full max-w-xl mx-auto drop-shadow-md relative transition-all duration-300 ${
+        cardAnimationType === 'correct' ? "animate-card-success" :
+        cardAnimationType === 'partial' ? "animate-card-partial" :
+        cardAnimationType === 'incorrect' ? "animate-card-incorrect" : ""
+      }`}>
         <CardContent className="p-5 mb-0">
           <div className="">
             <div>
