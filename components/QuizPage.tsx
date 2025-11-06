@@ -84,7 +84,10 @@ export default function QuizPage({
   const [quizFinished, setQuizFinished] = useState(false);
   const [animateScore, setAnimateScore] = useState(false);
   const [showSuccessAnimation, setShowSuccessAnimation] = useState(false);
+  const [showPartialAnimation, setShowPartialAnimation] = useState(false);
   const [cardAnimationType, setCardAnimationType] = useState<'correct' | 'partial' | 'incorrect' | null>(null);
+  const [successEmojis, setSuccessEmojis] = useState<string[]>(['✨', '✨', '✨', '✨']);
+  const [partialEmojis, setPartialEmojis] = useState<string[]>(['👌', '👌', '👌']);
   const [timeLeft, setTimeLeft] = useState(TIMER_DURATION);
   const [isTimerRunning, setIsTimerRunning] = useState(false);
   const boopSound = useRef<HTMLAudioElement | null>(null);
@@ -193,9 +196,30 @@ export default function QuizPage({
     setShowAnswer(false);
   };
 
+  const getRandomSuccessEmojis = () => {
+    const emojiOptions = ['⭐', '🌟', '✨', '💫', '📚', '📖', '📕', '📗', '📘', '🤓', '🐶', '🐕', '🦴'];
+    const selected: string[] = [];
+    for (let i = 0; i < 4; i++) {
+      const randomIndex = Math.floor(Math.random() * emojiOptions.length);
+      selected.push(emojiOptions[randomIndex]);
+    }
+    return selected;
+  };
+
+  const getRandomPartialEmojis = () => {
+    const emojiOptions = ['👍', '👏', '😊', '🙂', '💪', '📈', '⬆️', '🎯', '💛', '🌟', '☀️', '🔥', '👌'];
+    const selected: string[] = [];
+    for (let i = 0; i < 3; i++) {
+      const randomIndex = Math.floor(Math.random() * emojiOptions.length);
+      selected.push(emojiOptions[randomIndex]);
+    }
+    return selected;
+  };
+
   const handleAnswer = (points: number) => {
     // Animate score for perfect answers
     if (points === 5) {
+      setSuccessEmojis(getRandomSuccessEmojis());
       setAnimateScore(true);
       setShowSuccessAnimation(true);
       setCardAnimationType('correct');
@@ -205,9 +229,14 @@ export default function QuizPage({
         setCardAnimationType(null);
       }, 800);
     } else if (points === 3) {
-      // Partial correct - yellow glow
+      // Partial correct - yellow glow with score animation and progress emojis
+      setPartialEmojis(getRandomPartialEmojis());
+      setAnimateScore(true);
+      setShowPartialAnimation(true);
       setCardAnimationType('partial');
       setTimeout(() => {
+        setAnimateScore(false);
+        setShowPartialAnimation(false);
         setCardAnimationType(null);
       }, 800);
     } else if (points === 0) {
@@ -386,8 +415,8 @@ export default function QuizPage({
   return (
     <div className="container mx-auto px-4 py-8 max-w-xl">
       {/* New header section above the card */}
-      <div className="w-full max-w-xl mx-auto">
-        <div className="flex flex-col  items-center justify-between">
+      <div className="w-full max-w-xl mx-auto relative z-50 overflow-visible">
+        <div className="flex flex-col  items-center justify-between overflow-visible">
           <h1 className="text-2xl font-bold mb-7">
             {quizMode === "personal" ? (
               <WavyUnderline style={0} thickness={4} color="text-purple-500">
@@ -400,25 +429,34 @@ export default function QuizPage({
             )}
           </h1>
 
-          <div className="w-full flex items-center justify-between gap-4 mb-2 px-1 ">
+          <div className="w-full flex items-center justify-between gap-4 mb-2 px-1 relative z-50">
             <span className="text-lg font-semibold">
               Question: {currentQuestionIndex + 1}/{questions.length}
             </span>
             <span className="text-lg font-semibold">
               Score:
               <span
-                className={`ml-2 inline-block relative ${
-                  animateScore ? "animate-score-pop" : ""
+                className={`ml-2 inline-block relative z-50 ${
+                  showSuccessAnimation ? "animate-score-pop" :
+                  showPartialAnimation ? "animate-score-pop-partial" : ""
                 }`}
               >
                 {calculateScore()}/{questions.length * 5}
-                {/* Sparkle particles */}
+                {/* Sparkle particles for perfect answer */}
                 {showSuccessAnimation && (
                   <>
-                    <span className="absolute -top-2 -left-2 text-yellow-400 animate-sparkle-1">✨</span>
-                    <span className="absolute -top-2 -right-2 text-yellow-400 animate-sparkle-2">✨</span>
-                    <span className="absolute -bottom-2 -left-2 text-yellow-400 animate-sparkle-3">✨</span>
-                    <span className="absolute -bottom-2 -right-2 text-yellow-400 animate-sparkle-4">✨</span>
+                    <span className="absolute -top-2 -left-2 text-yellow-400 animate-sparkle-1 z-[9999]">{successEmojis[0]}</span>
+                    <span className="absolute -top-2 -right-2 text-yellow-400 animate-sparkle-2 z-[9999]">{successEmojis[1]}</span>
+                    <span className="absolute -bottom-2 -left-2 text-yellow-400 animate-sparkle-3 z-[9999]">{successEmojis[2]}</span>
+                    <span className="absolute -bottom-2 -right-2 text-yellow-400 animate-sparkle-4 z-[9999]">{successEmojis[3]}</span>
+                  </>
+                )}
+                {/* Progress emoji particles for partial correct */}
+                {showPartialAnimation && (
+                  <>
+                    <span className="absolute -top-2 -left-2 text-amber-500 animate-sparkle-1 z-[9999]">{partialEmojis[0]}</span>
+                    <span className="absolute -top-2 -right-2 text-amber-500 animate-sparkle-2 z-[9999]">{partialEmojis[1]}</span>
+                    <span className="absolute -bottom-2 -right-2 text-amber-500 animate-sparkle-4 z-[9999]">{partialEmojis[2]}</span>
                   </>
                 )}
               </span>
