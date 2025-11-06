@@ -1,4 +1,4 @@
-# OBOB.dog
+# OBOB.dog 🐶
 
 Practice questions for Oregon Battle of the Books. Read, practice, and have fun! For more info see the about page on [obob.dog/about](https://obob.dog/about). 
 
