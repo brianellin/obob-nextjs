@@ -6879,13 +6879,6 @@
     },
     {
       "type": "content",
-      "text": "What is the name of Dr. Wood's dog?",
-      "book_key": "starfish",
-      "answer": "Patches",
-      "page": 60
-    },
-    {
-      "type": "content",
       "text": "What type of dog is Patches?",
       "book_key": "starfish",
       "answer": "border collie",

@@ -506,13 +506,6 @@
     },
     {
       "type": "content",
-      "text": "What is Amelia's Dad's name?",
-      "book_key": "mystwick-school-of-musicraft",
-      "answer": "Eric",
-      "page": 54
-    },
-    {
-      "type": "content",
       "text": "What was Amelia given aboard the zeppelin for motion sickness?",
       "book_key": "mystwick-school-of-musicraft",
       "answer": "grape gum",
@@ -615,13 +608,6 @@
       "book_key": "mystwick-school-of-musicraft",
       "answer": "The other Amelia Jones",
       "page": 207
-    },
-    {
-      "type": "content",
-      "text": "What is the name of the largest chain of spell stores in the world?",
-      "book_key": "mystwick-school-of-musicraft",
-      "answer": "Spellstones",
-      "page": 228
     },
     {
       "type": "content",
@@ -2361,13 +2347,6 @@
       "book_key": "the-wild-robot",
       "answer": "Tawny (the doe who lives over the hill)",
       "page": 88
-    },
-    {
-      "type": "content",
-      "text": "how many fawns are in the deer family?",
-      "book_key": "the-wild-robot",
-      "answer": "three",
-      "page": 91
     },
     {
       "type": "content",
@@ -5573,13 +5552,6 @@
     },
     {
       "type": "content",
-      "text": "what does Chintzy snatch off the coffee tray?",
-      "book_key": "circus-mirandus",
-      "answer": "Lemon Cookie",
-      "page": 24
-    },
-    {
-      "type": "content",
       "text": "what two things does Chintzy dodge when flapping around in the city's sewer system? (2 part question)",
       "book_key": "circus-mirandus",
       "answer": "A Dead Goldfish and Slime",
@@ -5706,13 +5678,6 @@
     },
     {
       "type": "content",
-      "text": "what is the name of Jenny's mom's dog?",
-      "book_key": "circus-mirandus",
-      "answer": "Watson",
-      "page": 124
-    },
-    {
-      "type": "content",
       "text": "what color is the suit Ephraim is wearing in the photo with Victoria?",
       "book_key": "circus-mirandus",
       "answer": "Gray",
@@ -5730,13 +5695,6 @@
       "text": "what is Victoria's last name?",
       "book_key": "circus-mirandus",
       "answer": "Starling",
-      "page": 137
-    },
-    {
-      "type": "content",
-      "text": "what is the fancy word for hat making?",
-      "book_key": "circus-mirandus",
-      "answer": "Millinery",
       "page": 137
     },
     {
@@ -7806,13 +7764,6 @@
     },
     {
       "type": "content",
-      "text": "what is Minni's favorite vegetable?",
-      "book_key": "thirst",
-      "answer": "okra",
-      "page": 44
-    },
-    {
-      "type": "content",
       "text": "what is the name of the river by Minni's house?",
       "book_key": "thirst",
       "answer": "Mithi River",
@@ -8269,13 +8220,6 @@
     },
     {
       "type": "content",
-      "text": "What is the name of the neighborhood dog?",
-      "book_key": "thirst",
-      "answer": "Moti",
-      "page": 12
-    },
-    {
-      "type": "content",
       "text": "How many times did Minni's mom get stomach viruses in the last 2 years?",
       "book_key": "thirst",
       "answer": "Three times",
@@ -8332,13 +8276,6 @@
     },
     {
       "type": "content",
-      "text": "What is Minni's childhood nickname?",
-      "book_key": "thirst",
-      "answer": "Minni Meow",
-      "page": 4
-    },
-    {
-      "type": "content",
       "text": "What is Minni's mom's name?",
       "book_key": "thirst",
       "answer": "Rohini",
@@ -8377,13 +8314,6 @@
       "text": "How many stalls are there in the bathroom in Minni's neighborhood?",
       "book_key": "thirst",
       "answer": "Seven",
-      "page": 70
-    },
-    {
-      "type": "content",
-      "text": "How old is Pinky?",
-      "book_key": "thirst",
-      "answer": "Twelve",
       "page": 70
     },
     {
@@ -8454,13 +8384,6 @@
       "text": "What does Shanti use to grab people's attention?",
       "book_key": "thirst",
       "answer": "Conch shell",
-      "page": 90
-    },
-    {
-      "type": "content",
-      "text": "What does didi mean?",
-      "book_key": "thirst",
-      "answer": "Big sister",
       "page": 90
     },
     {
@@ -10967,13 +10890,6 @@
     },
     {
       "type": "content",
-      "text": "How old is Cass?",
-      "book_key": "the-name-of-this-book-is-secret",
-      "answer": "Eleven",
-      "page": 11
-    },
-    {
-      "type": "content",
       "text": "What is Cass's motto?",
       "book_key": "the-name-of-this-book-is-secret",
       "answer": "Be prepared",
@@ -11405,13 +11321,6 @@
     },
     {
       "type": "content",
-      "text": "what did the Bergamo brothers say when they thought the lion was going to eat them?",
-      "book_key": "the-name-of-this-book-is-secret",
-      "answer": "arrivederci",
-      "page": 308
-    },
-    {
-      "type": "content",
       "text": "what does the author say are hard parts of a book to write?",
       "book_key": "the-name-of-this-book-is-secret",
       "answer": "the endings",
@@ -11662,12 +11571,6 @@
     },
     {
       "type": "in-which-book",
-      "text": "do characters live in an old abandoned fire station?",
-      "book_key": "the-name-of-this-book-is-secret",
-      "page": 14
-    },
-    {
-      "type": "in-which-book",
       "text": "is a character a real estate agent for the dead?",
       "book_key": "the-name-of-this-book-is-secret",
       "page": 19
@@ -11695,12 +11598,6 @@
       "text": "does someone think lying is an important skill to have?",
       "book_key": "the-name-of-this-book-is-secret",
       "page": 50
-    },
-    {
-      "type": "in-which-book",
-      "text": "is someone's house entirely underground?",
-      "book_key": "the-name-of-this-book-is-secret",
-      "page": 66
     },
     {
       "type": "in-which-book",
@@ -12258,13 +12155,6 @@
       "book_key": "sam-makes-a-splash",
       "answer": "Brenda Badger",
       "page": 11
-    },
-    {
-      "type": "content",
-      "text": "How old is Sonny Badger?",
-      "book_key": "sam-makes-a-splash",
-      "answer": "twelve",
-      "page": 13
     },
     {
       "type": "content",
@@ -13925,13 +13815,6 @@
       "book_key": "fifty-four-things-wrong-with-gwendolyn-rogers",
       "answer": "1. Too demanding, 2. Picky Eater, 3. Attention Seeking, 4. Lazy, 5. Will only do what she wants, 6. Socially inept",
       "page": 4
-    },
-    {
-      "type": "content",
-      "text": "What is the name of Gwendolyn's favorite horse?",
-      "book_key": "fifty-four-things-wrong-with-gwendolyn-rogers",
-      "answer": "Dandelion",
-      "page": 5
     },
     {
       "type": "content",
@@ -15957,13 +15840,6 @@
     },
     {
       "type": "content",
-      "text": "What is Marlene's favorite class?",
-      "book_key": "frizzy",
-      "answer": "Art",
-      "page": 86
-    },
-    {
-      "type": "content",
       "text": "What do the bullies put in Marlene's hair during art class?",
       "book_key": "frizzy",
       "answer": "Tape",
@@ -16238,13 +16114,6 @@
     },
     {
       "type": "content",
-      "text": "What is Marlene's favorite class?",
-      "book_key": "frizzy",
-      "answer": "Art",
-      "page": 87
-    },
-    {
-      "type": "content",
       "text": "what do the mean bullies at school put in Marlene's hair?",
       "book_key": "frizzy",
       "answer": "tape",
@@ -16319,13 +16188,6 @@
       "book_key": "frizzy",
       "answer": "Mami and the Salon",
       "page": 143
-    },
-    {
-      "type": "content",
-      "text": "What is the name of Tia Ruby's chicken?",
-      "book_key": "frizzy",
-      "answer": "Cantinflas",
-      "page": 146
     },
     {
       "type": "content",
@@ -17373,13 +17235,6 @@
       "book_key": "marshmallow-jordan",
       "answer": "Kemala",
       "page": 164
-    },
-    {
-      "type": "content",
-      "text": "What is the name of the water polo coach?",
-      "book_key": "marshmallow-jordan",
-      "answer": "Coach Ahmend",
-      "page": 175
     },
     {
       "type": "content",
@@ -19563,13 +19418,6 @@
     },
     {
       "type": "content",
-      "text": "What is the name of Norma's dog?",
-      "book_key": "leonard-my-life-as-a-cat",
-      "answer": "Stanley",
-      "page": 40
-    },
-    {
-      "type": "content",
       "text": "Where did Norma, Olive, and Leonard travel to by bus?",
       "book_key": "leonard-my-life-as-a-cat",
       "answer": "Aquarium",
@@ -20083,12 +19931,6 @@
     },
     {
       "type": "in-which-book",
-      "text": "was a character previously a Girl Scout?",
-      "book_key": "leonard-my-life-as-a-cat",
-      "page": 16
-    },
-    {
-      "type": "in-which-book",
       "text": "does a character destroy curtains out of utter devastation?",
       "book_key": "leonard-my-life-as-a-cat",
       "page": 23
@@ -20574,24 +20416,10 @@
     },
     {
       "type": "content",
-      "text": "what does Daniel call his bike?",
-      "book_key": "before-ever-after",
-      "answer": "Magic Broom",
-      "page": 14
-    },
-    {
-      "type": "content",
       "text": "what does Ollie store his \"delicate\" note in?",
       "book_key": "before-ever-after",
       "answer": "Plastic bag",
       "page": 16
-    },
-    {
-      "type": "content",
-      "text": "what is Ollie's mom's name?",
-      "book_key": "before-ever-after",
-      "answer": "Bernadette",
-      "page": 17
     },
     {
       "type": "content",

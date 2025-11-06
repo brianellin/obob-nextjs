@@ -13,6 +13,8 @@
     "test:ui": "vitest --ui",
     "test:validate": "vitest run tests/data-validation.test.ts",
     "check-pages": "npx tsx scripts/check-page-numbers.ts",
+    "analyze-duplicates": "npx tsx scripts/analyze-duplicates.ts",
+    "remove-duplicates": "npx tsx scripts/remove-duplicate-questions.ts",
     "generate-counts": "npx tsx scripts/generate-question-counts.ts",
     "generate-exports": "npx tsx scripts/generate-question-exports.ts"
   },

@@ -2115,13 +2115,6 @@
     },
     {
       "type": "content",
-      "text": "what is Mini's full name?",
-      "book_key": "aru-shah-and-the-end-of-time",
-      "answer": "Yamini Kapoor Mercado Lopez",
-      "page": 179
-    },
-    {
-      "type": "content",
       "text": "Aru jokes about them always ending up in what kind space when they go to a new place?",
       "book_key": "aru-shah-and-the-end-of-time",
       "answer": "parking lots",
@@ -3361,20 +3354,6 @@
     },
     {
       "type": "content",
-      "text": "How old is Jeevan?",
-      "book_key": "asha-and-the-spirit-bird",
-      "answer": "Twelve",
-      "page": 188
-    },
-    {
-      "type": "content",
-      "text": "How old is Asha?",
-      "book_key": "asha-and-the-spirit-bird",
-      "answer": "Eleven",
-      "page": 188
-    },
-    {
-      "type": "content",
       "text": "Where was factory that Papa was in during the fire?",
       "book_key": "asha-and-the-spirit-bird",
       "answer": "Connaught Place",
@@ -4006,13 +3985,6 @@
       "text": "Who is the youngest daughter of the King of Linderwall?",
       "book_key": "dealing-with-dragons",
       "answer": "Cimorene",
-      "page": 1
-    },
-    {
-      "type": "content",
-      "text": "How many sisters does Cimorene have?",
-      "book_key": "dealing-with-dragons",
-      "answer": "6",
       "page": 1
     },
     {
@@ -4974,11 +4946,13 @@
       "book_key": "a-dictionary-of-scoundrels",
       "answer": "Candour",
       "page": 320,
-      "revisionHistory": [{
-        "text": "Who is revealed to be behind the attacks and the hidden treasure clues?",
-        "answer": "Aunt Schadenfreude",
-        "revisionDate": "2025-09-15"
-      }]
+      "revisionHistory": [
+        {
+          "text": "Who is revealed to be behind the attacks and the hidden treasure clues?",
+          "answer": "Aunt Schadenfreude",
+          "revisionDate": "2025-09-15"
+        }
+      ]
     },
     {
       "type": "content",
@@ -4986,11 +4960,13 @@
       "book_key": "a-dictionary-of-scoundrels",
       "answer": "Cantrip Randrup-Swift",
       "page": 336,
-      "revisionHistory": [{
-        "text": "Who is revealed to be behind the attacks and the hidden treasure clues?",
-        "answer": "Aunt Schadenfreude",
-        "revisionDate": "2025-09-15"
-      }]
+      "revisionHistory": [
+        {
+          "text": "Who is revealed to be behind the attacks and the hidden treasure clues?",
+          "answer": "Aunt Schadenfreude",
+          "revisionDate": "2025-09-15"
+        }
+      ]
     },
     {
       "type": "content",
@@ -5619,11 +5595,13 @@
       "book_key": "dragon-pearl",
       "answer": "Bora",
       "page": 19,
-      "revisionHistory": [{
-        "text": "Who's mother is the Auntie Min likes least?",
-        "answer": "Bora's",
-        "revisionDate": "2025-09-15"
-      }]
+      "revisionHistory": [
+        {
+          "text": "Who's mother is the Auntie Min likes least?",
+          "answer": "Bora's",
+          "revisionDate": "2025-09-15"
+        }
+      ]
     },
     {
       "type": "content",
@@ -6952,13 +6930,6 @@
     },
     {
       "type": "content",
-      "text": "What is Laurel's last name?",
-      "book_key": "ellen-outside-the-lines",
-      "answer": "McKinley",
-      "page": 4
-    },
-    {
-      "type": "content",
       "text": "Two Part Question: What are the names of Laurel's two sisters?",
       "book_key": "ellen-outside-the-lines",
       "answer": "Dahlia and Lily"
@@ -7025,13 +6996,6 @@
       "book_key": "ellen-outside-the-lines",
       "answer": "Señor L or Mr. Liechtenstein",
       "page": 17
-    },
-    {
-      "type": "content",
-      "text": "What is Ellen's last name?",
-      "book_key": "ellen-outside-the-lines",
-      "answer": "Katz",
-      "page": 18
     },
     {
       "type": "content",
@@ -7199,13 +7163,6 @@
       "book_key": "ellen-outside-the-lines",
       "answer": "Gibs a dude",
       "page": 215
-    },
-    {
-      "type": "content",
-      "text": "What is Isa's full first name?",
-      "book_key": "ellen-outside-the-lines",
-      "answer": "Isabel",
-      "page": 234
     },
     {
       "type": "content",
@@ -9839,10 +9796,12 @@
       "text": "does a character say \"No way. Snapchat sucks.\"?",
       "book_key": "an-occasionally-happy-family",
       "page": 74,
-      "revisionHistory": [{
-        "text": "does a character hate the social media platform Snapchat?",
-        "revisionDate": "2025-09-15"
-      }]
+      "revisionHistory": [
+        {
+          "text": "does a character hate the social media platform Snapchat?",
+          "revisionDate": "2025-09-15"
+        }
+      ]
     },
     {
       "type": "in-which-book",
@@ -10333,7 +10292,6 @@
           "date": "2025-09-18",
           "text": "when Theo's mom is sick with cancer, how does he spend time with her?",
           "answer": "He goes to school, then to his neighbors' house, but after dinner at 7:00, he gets to spend one hour with her in her room."
-
         }
       ]
     },
@@ -10427,13 +10385,6 @@
       "book_key": "an-occasionally-happy-family",
       "answer": "He has to photograph 785 different birds in one year to set the record.",
       "page": 61
-    },
-    {
-      "type": "content",
-      "text": "what is Theo's dad's first name?",
-      "book_key": "an-occasionally-happy-family",
-      "answer": "His name is Stanley.",
-      "page": 64
     },
     {
       "type": "content",
@@ -12205,13 +12156,6 @@
       "book_key": "rain-rising",
       "answer": "Smith University",
       "page": 53
-    },
-    {
-      "type": "content",
-      "text": "What is Rain's last name?",
-      "book_key": "rain-rising",
-      "answer": "Washington",
-      "page": 68
     },
     {
       "type": "content",
@@ -14119,13 +14063,6 @@
       "book_key": "soar",
       "answer": "Recorder",
       "page": 50
-    },
-    {
-      "type": "content",
-      "text": "What does SARB stand for?",
-      "book_key": "soar",
-      "answer": "Search and Report Back",
-      "page": 60
     },
     {
       "type": "content",
@@ -17725,11 +17662,13 @@
       "book_key": "uprooted",
       "answer": "Lemon tea",
       "page": 107,
-      "revisionHistory": [{
-        "text": "What drink do Bonnie and Ruth clink when they meet?",
-        "answer": "Juice boxes",
-        "revisionDate": "2025-09-15"
-      }]
+      "revisionHistory": [
+        {
+          "text": "What drink do Bonnie and Ruth clink when they meet?",
+          "answer": "Juice boxes",
+          "revisionDate": "2025-09-15"
+        }
+      ]
     },
     {
       "type": "content",

@@ -4139,12 +4139,6 @@
     },
     {
       "type": "in-which-book",
-      "text": "does someone steal a fig cake?",
-      "book_key": "legends-and-lattes",
-      "page": 71
-    },
-    {
-      "type": "in-which-book",
       "text": "does a character claim to have an \"artistic bent\"?",
       "book_key": "legends-and-lattes",
       "page": 77
@@ -4528,13 +4522,6 @@
       "book_key": "legends-and-lattes",
       "answer": "the Scalvert's Stone",
       "page": 14
-    },
-    {
-      "type": "content",
-      "text": "What is Cal's full first name?",
-      "book_key": "legends-and-lattes",
-      "answer": "Calamity",
-      "page": 19
     },
     {
       "type": "content",
@@ -6605,12 +6592,6 @@
     },
     {
       "type": "in-which-book",
-      "text": "is there a coffee shop named Beans on the Lake?",
-      "book_key": "seven-percent-of-ro-devereux",
-      "page": 7
-    },
-    {
-      "type": "in-which-book",
       "text": "does a character eat a celebratory plate of pasta carbonara?",
       "book_key": "seven-percent-of-ro-devereux",
       "page": 10
@@ -6689,12 +6670,6 @@
     {
       "type": "in-which-book",
       "text": "is a character called \"Flower\" by another character?",
-      "book_key": "seven-percent-of-ro-devereux",
-      "page": 51
-    },
-    {
-      "type": "in-which-book",
-      "text": "is there a class hamster named Dumpling?",
       "book_key": "seven-percent-of-ro-devereux",
       "page": 51
     },
@@ -7595,13 +7570,6 @@
       "text": "who is the boss at XLR8 office in Denver that Ro and her dad meet to talk about MASH app?",
       "book_key": "seven-percent-of-ro-devereux",
       "answer": "The XLR8 boss in Denver is Evelyn Cross.",
-      "page": 24
-    },
-    {
-      "type": "content",
-      "text": "what is Ro's Dad's first name?",
-      "book_key": "seven-percent-of-ro-devereux",
-      "answer": "Ro's Dad's name is Pete.",
       "page": 24
     },
     {
@@ -11001,13 +10969,6 @@
     },
     {
       "type": "content",
-      "text": "where does Ms. Rivera live?",
-      "book_key": "when-we-make-it",
-      "answer": "The Bronx",
-      "page": 152
-    },
-    {
-      "type": "content",
       "text": "who was \"revenge murdered\" by drug dealers and had a park named after them?",
       "book_key": "when-we-make-it",
       "answer": "Maria Hernandez"
@@ -11095,13 +11056,6 @@
       "book_key": "when-we-make-it",
       "answer": "83rd",
       "page": 270
-    },
-    {
-      "type": "content",
-      "text": "who is the landlord of Tone's apartment?",
-      "book_key": "when-we-make-it",
-      "answer": "G",
-      "page": 272
     },
     {
       "type": "content",

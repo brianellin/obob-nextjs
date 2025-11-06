@@ -1158,13 +1158,6 @@
     },
     {
       "type": "content",
-      "text": "What is the name of the school nurse?",
-      "book_key": "better-with-butter",
-      "answer": "Skippy",
-      "page": 22
-    },
-    {
-      "type": "content",
       "text": "What happens to the baby goat when she is scared?",
       "book_key": "better-with-butter",
       "answer": "faints/falls over and freezes",
@@ -1339,13 +1332,6 @@
     },
     {
       "type": "content",
-      "text": "What is the name of the school nurse?",
-      "book_key": "better-with-butter",
-      "answer": "Skippy",
-      "page": 22
-    },
-    {
-      "type": "content",
       "text": "What is the first name of Marvel's Mom?",
       "book_key": "better-with-butter",
       "answer": "Anne",
@@ -1392,13 +1378,6 @@
       "book_key": "better-with-butter",
       "answer": "How Your Garden Grows",
       "page": 52
-    },
-    {
-      "type": "content",
-      "text": "What is Marvel's middle name?",
-      "book_key": "better-with-butter",
-      "answer": "Madison",
-      "page": 59
     },
     {
       "type": "content",
@@ -4841,12 +4820,6 @@
     },
     {
       "type": "in-which-book",
-      "text": "does a character score an 808 on their SAT Subject Test in Literature?",
-      "book_key": "escape-from-mr-lemoncellos-library",
-      "page": 207
-    },
-    {
-      "type": "in-which-book",
       "text": "does a character say that they have three thousand Facebook friends and two thousand Twitter followers?",
       "book_key": "escape-from-mr-lemoncellos-library",
       "page": 220
@@ -8159,13 +8132,6 @@
       "book_key": "finding-langston",
       "answer": "Friday",
       "page": 25
-    },
-    {
-      "type": "content",
-      "text": "What is the name of the Children's librarian?",
-      "book_key": "finding-langston",
-      "answer": "Miss Cook",
-      "page": 29
     },
     {
       "type": "content",
@@ -11785,13 +11751,6 @@
     },
     {
       "type": "content",
-      "text": "How old is Brian?",
-      "book_key": "hatchet",
-      "answer": "13",
-      "page": 1
-    },
-    {
-      "type": "content",
       "text": "What is Brian's fathers job title?",
       "book_key": "hatchet",
       "answer": "mechanical engineer",
@@ -13706,12 +13665,6 @@
     },
     {
       "type": "in-which-book",
-      "text": "Does a character get hit in the face with a dried cow pie?",
-      "book_key": "just-like-click",
-      "page": 119
-    },
-    {
-      "type": "in-which-book",
       "text": "Do five kids and two horses face off with a cougar?",
       "book_key": "just-like-click",
       "page": 151
@@ -14268,13 +14221,6 @@
       "book_key": "just-like-click",
       "answer": "Paulina Springs",
       "page": 55
-    },
-    {
-      "type": "content",
-      "text": "what is the name of Mr. Flossen's cat?",
-      "book_key": "just-like-click",
-      "answer": "Fleazy",
-      "page": 57
     },
     {
       "type": "content",
@@ -17774,12 +17720,6 @@
     },
     {
       "type": "in-which-book",
-      "text": "does someone have a horse named Jubille?",
-      "book_key": "number-the-stars",
-      "page": 12
-    },
-    {
-      "type": "in-which-book",
       "text": "does someone tear out three pictures from three separate pages of a photo album?",
       "book_key": "number-the-stars",
       "page": 47
@@ -18538,13 +18478,6 @@
       "book_key": "number-the-stars",
       "answer": "Christian",
       "page": 12
-    },
-    {
-      "type": "content",
-      "text": "What is the first and last name of the person Lise was going to marry?",
-      "book_key": "number-the-stars",
-      "answer": "Peter Neilsen",
-      "page": 14
     },
     {
       "type": "content",
@@ -19546,13 +19479,6 @@
     },
     {
       "type": "content",
-      "text": "Who is Odder's favorite companion?",
-      "book_key": "odder",
-      "answer": "Kairi",
-      "page": 14
-    },
-    {
-      "type": "content",
       "text": "How much older is Kairi than Odder?",
       "book_key": "odder",
       "answer": "2 years",
@@ -19599,13 +19525,6 @@
       "book_key": "odder",
       "answer": "Kairi",
       "page": 31
-    },
-    {
-      "type": "content",
-      "text": "What do the otters call the aquarium?",
-      "book_key": "odder",
-      "answer": "Highwater",
-      "page": 33
     },
     {
       "type": "content",
@@ -19669,13 +19588,6 @@
       "book_key": "odder",
       "answer": "3 pounds",
       "page": 81
-    },
-    {
-      "type": "content",
-      "text": "What is Odder's mother's name?",
-      "book_key": "odder",
-      "answer": "Ondine",
-      "page": 85
     },
     {
       "type": "content",
@@ -20135,12 +20047,6 @@
       "text": "is the first line, \"Everyone in Milkweed Meadow still talks about the rescue, and if you stop hopping around like a kit that's found a banana slice, I'll tell you the story.\"?",
       "book_key": "the-remarkable-rescue-at-milkweed-meadow",
       "page": 1
-    },
-    {
-      "type": "in-which-book",
-      "text": "does a blue jay eat a robin's egg?",
-      "book_key": "the-remarkable-rescue-at-milkweed-meadow",
-      "page": 4
     },
     {
       "type": "in-which-book",
@@ -21547,12 +21453,6 @@
     },
     {
       "type": "in-which-book",
-      "text": "has a kid never been to a park before?",
-      "book_key": "the-secret-garden-on-81st-street",
-      "page": 33
-    },
-    {
-      "type": "in-which-book",
       "text": "does a character hear the same name as hers at a museum and it makes her sad?",
       "book_key": "the-secret-garden-on-81st-street",
       "page": 41
@@ -22580,13 +22480,6 @@
     },
     {
       "type": "content",
-      "text": "How many people live in Dickon's apartment?",
-      "book_key": "the-secret-garden-on-81st-street",
-      "answer": "5",
-      "page": 110
-    },
-    {
-      "type": "content",
       "text": "Mary picks up an \"ugly thing\" from Ben - what does it become?",
       "book_key": "the-secret-garden-on-81st-street",
       "answer": "a daylily / lily",
@@ -22626,13 +22519,6 @@
       "book_key": "the-secret-garden-on-81st-street",
       "answer": "read and draw",
       "page": 127
-    },
-    {
-      "type": "content",
-      "text": "What time does Mrs. Medlock leave for the day?",
-      "book_key": "the-secret-garden-on-81st-street",
-      "answer": "01:00:00",
-      "page": 134
     },
     {
       "type": "content",
@@ -25213,13 +25099,6 @@
     },
     {
       "type": "content",
-      "text": "What is the name of the lighthouse keeper?",
-      "book_key": "the-tail-of-emily-windsnap",
-      "answer": "Mr Beeston",
-      "page": 11
-    },
-    {
-      "type": "content",
       "text": "What is the full name of Emily's mother?",
       "book_key": "the-tail-of-emily-windsnap",
       "answer": "Mary Penelope Windsnap",
@@ -25258,13 +25137,6 @@
       "text": "Who tells Shona that five fishermen wandered toward the rocks during her solo?",
       "book_key": "the-tail-of-emily-windsnap",
       "answer": "Mrs Highwave",
-      "page": 37
-    },
-    {
-      "type": "content",
-      "text": "What does Shona want to be when she grows up?",
-      "book_key": "the-tail-of-emily-windsnap",
-      "answer": "Siren",
       "page": 37
     },
     {
