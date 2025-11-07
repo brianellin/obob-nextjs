@@ -186,6 +186,28 @@ export default function QuizPage({
     }
   }, [quizFinished]);
 
+  // Track when a new question is shown
+  useEffect(() => {
+    if (questions.length > 0 && !quizFinished) {
+      const currentQuestion = questions[currentQuestionIndex];
+      const questionStartedData = {
+        questionIndex: currentQuestionIndex,
+        questionNumber: currentQuestionIndex + 1,
+        questionType: currentQuestion.type,
+        bookKey: currentQuestion.book.book_key,
+        bookTitle: currentQuestion.book.title,
+        bookAuthor: currentQuestion.book.author,
+        page: currentQuestion.page ?? 0,
+        quizMode,
+        year,
+        division,
+      };
+      console.log("tracking questionStarted", questionStartedData);
+      track("questionStarted", questionStartedData);
+      posthog.capture("questionStarted", questionStartedData);
+    }
+  }, [currentQuestionIndex, questions, quizFinished]);
+
   const handleShowAnswer = () => {
     setShowAnswer(true);
   };
@@ -217,6 +239,26 @@ export default function QuizPage({
   };
 
   const handleAnswer = (points: number) => {
+    // Track the answer event
+    const answerType = points === 5 ? 'correct' : points === 3 ? 'partially_correct' : 'incorrect';
+    const questionAnsweredData = {
+      questionIndex: currentQuestionIndex,
+      questionNumber: currentQuestionIndex + 1,
+      questionType: currentQuestion.type,
+      bookKey: currentQuestion.book.book_key,
+      bookTitle: currentQuestion.book.title,
+      bookAuthor: currentQuestion.book.author,
+      page: currentQuestion.page ?? 0,
+      pointsAwarded: points,
+      answerType,
+      quizMode,
+      year,
+      division,
+    };
+    console.log("tracking questionAnswered", questionAnsweredData);
+    track("questionAnswered", questionAnsweredData);
+    posthog.capture("questionAnswered", questionAnsweredData);
+
     // Animate score for perfect answers
     if (points === 5) {
       setSuccessEmojis(getRandomSuccessEmojis());
@@ -295,7 +337,42 @@ export default function QuizPage({
     setShowFeedbackForm(false); // Close feedback form on restart
   };
 
+  const handleSkip = () => {
+    // Track skip event
+    const questionSkippedData = {
+      questionIndex: currentQuestionIndex,
+      questionNumber: currentQuestionIndex + 1,
+      questionType: currentQuestion.type,
+      bookKey: currentQuestion.book.book_key,
+      bookTitle: currentQuestion.book.title,
+      bookAuthor: currentQuestion.book.author,
+      page: currentQuestion.page ?? 0,
+      quizMode,
+      year,
+      division,
+    };
+    console.log("tracking questionSkipped", questionSkippedData);
+    track("questionSkipped", questionSkippedData);
+    posthog.capture("questionSkipped", questionSkippedData);
+
+    nextQuestion();
+  };
+
   const previousQuestion = () => {
+    // Track back button click
+    const questionBackData = {
+      fromQuestionIndex: currentQuestionIndex,
+      fromQuestionNumber: currentQuestionIndex + 1,
+      toQuestionIndex: currentQuestionIndex > 0 ? currentQuestionIndex - 1 : null,
+      toQuestionNumber: currentQuestionIndex > 0 ? currentQuestionIndex : null,
+      quizMode,
+      year,
+      division,
+    };
+    console.log("tracking questionBack", questionBackData);
+    track("questionBack", questionBackData);
+    posthog.capture("questionBack", questionBackData);
+
     if (currentQuestionIndex > 0) {
       setCurrentQuestionIndex(currentQuestionIndex - 1);
       setShowAnswer(false);
@@ -680,7 +757,7 @@ export default function QuizPage({
           <span>Back</span>
         </Button>
         <Button
-          onClick={nextQuestion}
+          onClick={handleSkip}
           variant="outline"
           className="w-full flex items-center justify-center touch-none"
         >
