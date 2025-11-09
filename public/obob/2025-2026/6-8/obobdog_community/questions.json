@@ -1137,6 +1137,86 @@
         "book_key": "tagging-freedom",
         "page": 93,
         "contributor": "Isabel"
+      },
+      {
+        "type": "content",
+        "text": "In what city is Aru's Museum of Ancient Indian Art and Culture located?",
+        "answer": "Atlanta",
+        "book_key": "aru-shah-and-the-end-of-time",
+        "page": 296,
+        "contributor": "Jeff L"
+      },
+      {
+        "type": "content",
+        "text": "What does Aru's lightning bolt cause to fall of top of the Sleeper?",
+        "answer": "a chandelier",
+        "book_key": "aru-shah-and-the-end-of-time",
+        "page": 307,
+        "contributor": "Jeff L"
+      },
+      {
+        "type": "content",
+        "text": "Who is Aru's lab partner in chemistry class?",
+        "answer": "Arielle",
+        "book_key": "aru-shah-and-the-end-of-time",
+        "page": 328,
+        "contributor": "Jeff L"
+      },
+      {
+        "type": "in-which-book",
+        "text": "does a character fake a nosebleed in order to get out of playing dodgeball in gym?",
+        "book_key": "aru-shah-and-the-end-of-time",
+        "page": 32,
+        "contributor": "Jeff L"
+      },
+      {
+        "type": "in-which-book",
+        "text": "do characters do an elbow bump instead of a high-five because it's \"hygienic and fun\"?",
+        "book_key": "aru-shah-and-the-end-of-time",
+        "page": 95,
+        "contributor": "Jeff L"
+      },
+      {
+        "type": "in-which-book",
+        "text": "does a character know curse words in Tagalog?",
+        "book_key": "aru-shah-and-the-end-of-time",
+        "page": 190,
+        "contributor": "Jeff L"
+      },
+      {
+        "type": "in-which-book",
+        "text": "does a character get a brain freeze from eating ice cream too quickly?",
+        "book_key": "aru-shah-and-the-end-of-time",
+        "page": 235,
+        "contributor": "Jeff L"
+      },
+      {
+        "type": "in-which-book",
+        "text": "does a character admit to flossing twice a day?",
+        "book_key": "aru-shah-and-the-end-of-time",
+        "page": 268,
+        "contributor": "Jeff L"
+      },
+      {
+        "type": "in-which-book",
+        "text": "does a tiger open a door?",
+        "book_key": "aru-shah-and-the-end-of-time",
+        "page": 298,
+        "contributor": "Jeff L"
+      },
+      {
+        "type": "in-which-book",
+        "text": "does a character say, \"Annoyance is its own superpower\"?",
+        "book_key": "aru-shah-and-the-end-of-time",
+        "page": 308,
+        "contributor": "Jeff L"
+      },
+      {
+        "type": "in-which-book",
+        "text": "do students make fake snow in chemistry class?",
+        "book_key": "aru-shah-and-the-end-of-time",
+        "page": 328,
+        "contributor": "Jeff L"
       }
     ]
   }
