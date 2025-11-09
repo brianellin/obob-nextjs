@@ -7,6 +7,54 @@
     "book_key": "better-with-butter",
     "page": 1,
     "contributor": "Vivi"
+   },
+   {
+    "type": "content",
+    "text": "What does Butter wear to show that she is an emotional support animal?",
+    "answer": "A red vest with a tag that says ESA",
+    "book_key": "better-with-butter",
+    "page": 1,
+    "contributor": "Catherine"
+   },
+   {
+    "type": "content",
+    "text": "What book does Nick read to Mr. Mason?",
+    "answer": "Texas Ranger",
+    "book_key": "just-like-click",
+    "page": 1,
+    "contributor": "Catherine"
+   },
+   {
+    "type": "in-which-book",
+    "text": "do the characters not know what birds or boats are?",
+    "answer": "",
+    "book_key": "city-of-ember",
+    "page": 196,
+    "contributor": "Catherine"
+   },
+   {
+    "type": "content",
+    "text": "What did Piper call goosegrass?",
+    "answer": "Gallant Goosegrass",
+    "book_key": "the-remarkable-rescue-at-milkweed-meadow",
+    "page": 52,
+    "contributor": "Catherine"
+   },
+   {
+    "type": "content",
+    "text": "What is the third thing that Grandmother Sage teaches all little rabbits?",
+    "answer": "Stay alive",
+    "book_key": "the-remarkable-rescue-at-milkweed-meadow",
+    "page": 17,
+    "contributor": "Catherine"
+   },
+   {
+    "type": "content",
+    "text": "Which two colors of colored pencils does Lina buy at Looper's shop?",
+    "answer": "Blue and green",
+    "book_key": "city-of-ember",
+    "page": 169,
+    "contributor": "Catherine"
    }
     ]
   }
