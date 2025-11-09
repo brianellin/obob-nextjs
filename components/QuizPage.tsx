@@ -38,6 +38,12 @@ type QuestionResult = {
   pointsAwarded: number;
 };
 
+// Helper function to lowercase the first character of a string
+function lowercaseFirstChar(str: string): string {
+  if (!str) return str;
+  return str.charAt(0).toLowerCase() + str.slice(1);
+}
+
 // Add this function outside the component
 async function fetchQuestionsFromAPI(
   selectedBooks: Book[],
@@ -454,7 +460,7 @@ export default function QuizPage({
                       <p className="font-medium">Question {index + 1}:</p>
                       <p className="text-sm text-gray-600">
                         {result.question.type === "in-which-book"
-                          ? `In which book ${result.question.text}`
+                          ? `In which book ${lowercaseFirstChar(result.question.text)}`
                           : `In ${result.question.book.title}: ${result.question.text}`}
                       </p>
                     </div>
@@ -554,7 +560,7 @@ export default function QuizPage({
                 {currentQuestion.type === "in-which-book" ? (
                   <span>
                     <span className="font-bold">In which book </span>
-                    {currentQuestion.text}
+                    {lowercaseFirstChar(currentQuestion.text)}
                   </span>
                 ) : (
                   <span>
