@@ -2,9 +2,6 @@ book_key,question_type,page,text,answer,author_name,book_title,source_name
 just-like-click,content,2,What is the name of the comic book series that Nick and his Great Gramp create?,The Adventures of Click,Sandy Grubb,Just Like Click,OBOB Parent Group
 just-like-click,content,2,What is the name of Nick's younger cousin who stays with his family two days a week?,Anna,Sandy Grubb,Just Like Click,OBOB Parent Group
 just-like-click,content,2,How old is Nick's cousin Anna?,Seven,Sandy Grubb,Just Like Click,OBOB Parent Group
-just-like-click,content,2,how old is his cousin Anna,7,Sandy Grubb,Just Like Click,OBOB Parent Group
-just-like-click,content,3,What is the name of the Ranch where Nick grows up?,Black Butte Ranch,Sandy Grubb,Just Like Click,OBOB Parent Group
-just-like-click,content,3,What is the name of the lake near Nick's house?,Aspen Lake,Sandy Grubb,Just Like Click,OBOB Parent Group
 just-like-click,content,4,What is the name of the movie franchise that Nick watches with Mr. Telly at least once per month?,Star Wars,Sandy Grubb,Just Like Click,OBOB Parent Group
 just-like-click,content,5,Nick reads to which of his neighbors each week?,Mr. Mason,Sandy Grubb,Just Like Click,OBOB Parent Group
 just-like-click,content,5,What is the name of the book that Nick reads to Mr. Mason?,Texas Ranger,Sandy Grubb,Just Like Click,OBOB Parent Group
@@ -13,7 +10,6 @@ just-like-click,content,6,What is the name of the book that Mrs. Baxter is readi
 just-like-click,content,8,What is the name of Mrs. Baxter's great-grandson?,Patrick,Sandy Grubb,Just Like Click,OBOB Parent Group
 just-like-click,content,9,What type of tree do Nick and Patrick climb on the first day they meet?,(Ponderosa) Pine,Sandy Grubb,Just Like Click,OBOB Parent Group
 just-like-click,content,,Two Part Question: Who is Nick's favorite superhero? Who is Patrick's favorite superhero?,Superman; Spiderman,Sandy Grubb,Just Like Click,OBOB Parent Group
-just-like-click,content,9,In what is his best sport?,Badminton,Sandy Grubb,Just Like Click,OBOB Parent Group
 just-like-click,content,11,What does Patrick call his great-grandmother? Be specific.,Nana Baxter,Sandy Grubb,Just Like Click,OBOB Parent Group
 just-like-click,content,11,What sport does Nick's dad sign him up for this year?,Soccer,Sandy Grubb,Just Like Click,OBOB Parent Group
 just-like-click,content,12,What is the name of Nick's uncle?,Clyde,Sandy Grubb,Just Like Click,OBOB Parent Group
@@ -27,13 +23,10 @@ just-like-click,content,38,What is the name of Anna's mom?,(Aunt) Ellen,Sandy Gr
 just-like-click,content,39,What color hair do Nick and Anna have?,Blonde,Sandy Grubb,Just Like Click,OBOB Parent Group
 just-like-click,content,39,What color eyes do Nick and Anna have? Be specific.,Blue-Gray,Sandy Grubb,Just Like Click,OBOB Parent Group
 just-like-click,content,,Which character has an artificial leg?,Jacey,Sandy Grubb,Just Like Click,OBOB Parent Group
-just-like-click,content,54,What is the first name of Mr. Flossen's wife?,Elmira (Flossen),Sandy Grubb,Just Like Click,OBOB Parent Group
-just-like-click,content,54,Two Part Question: Who are the two police officers from the Ranch Police Department who almost catch Nick on Mr. Flossen's roof?,Brady and Malcolm,Sandy Grubb,Just Like Click,OBOB Parent Group
-just-like-click,content,57,What is the name of Mr. Flossen's cat?,Fleazy,Sandy Grubb,Just Like Click,OBOB Parent Group
-just-like-click,content,61,What is the name of Trapper's little sister?,Lily,Sandy Grubb,Just Like Click,OBOB Parent Group
-just-like-click,content,62,What is the name of Anna's horse at the roundup?,Zesty,Sandy Grubb,Just Like Click,OBOB Parent Group
-just-like-click,content,62,What is the name of Nick's horse at the roundup?,Picnic,Sandy Grubb,Just Like Click,OBOB Parent Group
-just-like-click,content,62,Two Part Question: What two colors are Patrick's horse at the roundup?,Black and white,Sandy Grubb,Just Like Click,OBOB Parent Group
+just-like-click,content,1,What book does Nick read to Mr. Mason?,Texas Ranger,Sandy Grubb,Just Like Click,OBOB.dog Community
+just-like-click,content,2,how old is his cousin Anna,7,Sandy Grubb,Just Like Click,OBOB Parent Group
+just-like-click,content,3,What is the name of the Ranch where Nick grows up?,Black Butte Ranch,Sandy Grubb,Just Like Click,OBOB Parent Group
+just-like-click,content,9,In what is his best sport?,Badminton,Sandy Grubb,Just Like Click,OBOB Parent Group
 just-like-click,content,72,What is normally Nick's favorite spot on the ranch?,Paulina Springs,Sandy Grubb,Just Like Click,OBOB Parent Group
 just-like-click,content,75,What size shoe does Nick wear?,Nine,Sandy Grubb,Just Like Click,OBOB Parent Group
 just-like-click,content,77,What is the name of Trapper and Lily's dog?,Doogy,Sandy Grubb,Just Like Click,OBOB Parent Group
@@ -41,6 +34,7 @@ just-like-click,content,80,Two Part Question: What grade is Jacey going into? Wh
 just-like-click,content,81,What type of dog is Doogy?,Beagle,Sandy Grubb,Just Like Click,OBOB Parent Group
 just-like-click,content,87,Who is Nick's soccer coach?,Mr. Dolan or Fred's dad,Sandy Grubb,Just Like Click,OBOB Parent Group
 just-like-click,content,,What is the name of the webpage Celia creates?,Dear Superhero (.com),Sandy Grubb,Just Like Click,OBOB Parent Group
+just-like-click,content,3,What is the name of the lake near Nick's house?,Aspen Lake,Sandy Grubb,Just Like Click,OBOB Parent Group
 just-like-click,content,4,What is the color of Mr. Telly's parka?,Orange,Sandy Grubb,Just Like Click,OBOB Parent Group
 just-like-click,content,5,Where does Mrs. Baxter live along the edge of?,Glaze Meadow,Sandy Grubb,Just Like Click,OBOB Parent Group
 just-like-click,content,9,What type of tree does Patrick and Nick climb in Nick's backyard?,A Ponderosa Pine,Sandy Grubb,Just Like Click,OBOB Parent Group
@@ -65,8 +59,15 @@ just-like-click,content,44,Nick lies about finding this animal for his science p
 just-like-click,content,49,what is written on Celia's shirt as she meets Nick on Mr. Flossen's roof?,Strong like a girl,Sandy Grubb,Just Like Click,OBOB Parent Group
 just-like-click,content,49,What does Celia's sparkly sweatshirt say?,Strong Like a Girl,Sandy Grubb,Just Like Click,OBOB Parent Group
 just-like-click,content,49,What is the raccoon's name?,Rachet,Sandy Grubb,Just Like Click,OBOB Parent Group
+just-like-click,content,54,What is the first name of Mr. Flossen's wife?,Elmira (Flossen),Sandy Grubb,Just Like Click,OBOB Parent Group
+just-like-click,content,54,Two Part Question: Who are the two police officers from the Ranch Police Department who almost catch Nick on Mr. Flossen's roof?,Brady and Malcolm,Sandy Grubb,Just Like Click,OBOB Parent Group
 just-like-click,content,55,where does Celia want to meet Nick at midnight?,Paulina Springs,Sandy Grubb,Just Like Click,OBOB Parent Group
+just-like-click,content,57,What is the name of Mr. Flossen's cat?,Fleazy,Sandy Grubb,Just Like Click,OBOB Parent Group
 just-like-click,content,57,Nick thinks there should be a new olympic event called what?,Running with ladder,Sandy Grubb,Just Like Click,Lake Oswego Public Library
+just-like-click,content,61,What is the name of Trapper's little sister?,Lily,Sandy Grubb,Just Like Click,OBOB Parent Group
+just-like-click,content,62,What is the name of Anna's horse at the roundup?,Zesty,Sandy Grubb,Just Like Click,OBOB Parent Group
+just-like-click,content,62,What is the name of Nick's horse at the roundup?,Picnic,Sandy Grubb,Just Like Click,OBOB Parent Group
+just-like-click,content,62,Two Part Question: What two colors are Patrick's horse at the roundup?,Black and white,Sandy Grubb,Just Like Click,OBOB Parent Group
 just-like-click,content,62,what is the name of the horse Nick rides on?,Picnic,Sandy Grubb,Just Like Click,OBOB Parent Group
 just-like-click,content,62,What are the names of the horses Nick and Anna are assigned to for the round up?,Zesty and Picnic,Sandy Grubb,Just Like Click,OBOB Parent Group
 just-like-click,content,62,Nick and Anna are the last ones to arrive at the round-up. What are the names of the horses they are assigned to?,Zesty and Picnic,Sandy Grubb,Just Like Click,Lake Oswego Public Library
@@ -134,8 +135,6 @@ just-like-click,content,174,Which Baylee Blue song does Jacey play to wake Lily 
 just-like-click,content,174,Who is Lily's favorite music artist?,Baylee Blue,Sandy Grubb,Just Like Click,OBOB Parent Group
 just-like-click,content,175,What are Nick's three initials?,N.Z.T.,Sandy Grubb,Just Like Click,OBOB Parent Group
 just-like-click,content,175,what are the intials on the fleece jacket Trapper returned?,N.Z.T,Sandy Grubb,Just Like Click,OBOB Parent Group
-just-like-click,in-which-book,1,does each chapter start with a one-page comic strip?,,Sandy Grubb,Just Like Click,Lake Oswego Public Library
-just-like-click,in-which-book,3,does the main character live in Black Butte Ranch year round?,,Sandy Grubb,Just Like Click,Lake Oswego Public Library
 just-like-click,in-which-book,4,does a character watch a Star Wars marathon at least once per month?,,Sandy Grubb,Just Like Click,OBOB Parent Group
 just-like-click,in-which-book,4,does a character help count and sort their neighbor's pills each week?,,Sandy Grubb,Just Like Click,OBOB Parent Group
 just-like-click,in-which-book,5,"does a character read aloud from the book ""Texas Ranger""?",,Sandy Grubb,Just Like Click,OBOB Parent Group
@@ -143,26 +142,21 @@ just-like-click,in-which-book,,do characters compare the abilities of Superman a
 just-like-click,in-which-book,2,Is there a miss-seven-year-old-know-it-all named Anna?,,Sandy Grubb,Just Like Click,OBOB Parent Group
 just-like-click,in-which-book,2,"Does a character remind themselves to ""always leave an alibi note""?",,Sandy Grubb,Just Like Click,OBOB Parent Group
 just-like-click,in-which-book,4,Does a character live in a place called Ridge Cabins?,,Sandy Grubb,Just Like Click,OBOB Parent Group
-just-like-click,in-which-book,9,is somebody's best sport badminton?,,Sandy Grubb,Just Like Click,Lake Oswego Public Library
 just-like-click,in-which-book,12,does a character's dad work at a lumber yard?,,Sandy Grubb,Just Like Click,OBOB Parent Group
 just-like-click,in-which-book,13,"In which book, does the main character live in Black Butte?",,Sandy Grubb,Just Like Click,OBOB Parent Group
 just-like-click,in-which-book,14,does a character bring a red cape to the hospital on the day their grandson was born?,,Sandy Grubb,Just Like Click,OBOB Parent Group
 just-like-click,in-which-book,14,"is the favorite super hero, superman?",,Sandy Grubb,Just Like Click,OBOB Parent Group
 just-like-click,in-which-book,14,"does a character have $237,000 hidden under the bed?",,Sandy Grubb,Just Like Click,OBOB Parent Group
 just-like-click,in-which-book,14,Does a character bring a red cape to the hospital when their great grandson is born?,,Sandy Grubb,Just Like Click,OBOB Parent Group
-just-like-click,in-which-book,14,"is there $237,000 hidden under a bed?",,Sandy Grubb,Just Like Click,Lake Oswego Public Library
 just-like-click,in-which-book,16,"Does a character think their lack of athletic prowess is because they lack ""Killer Instincts""?",,Sandy Grubb,Just Like Click,OBOB Parent Group
-just-like-click,in-which-book,17,is there a parrot named Fletcher?,,Sandy Grubb,Just Like Click,Cedar Mill Public Library
 just-like-click,in-which-book,21,does a parrot teach a character salty pirate talk?,,Sandy Grubb,Just Like Click,OBOB Parent Group
 just-like-click,in-which-book,21,Does a character learn salty pirate talk from a parrot?,,Sandy Grubb,Just Like Click,OBOB Parent Group
 just-like-click,in-which-book,24,Does a character liken walking through a storm to walking through a car wash in town but without the soap and wax?,,Sandy Grubb,Just Like Click,OBOB Parent Group
-just-like-click,in-which-book,24,does someone go out in a thunder and lightning storm to rescue a pet parrot?,,Sandy Grubb,Just Like Click,Lake Oswego Public Library
 just-like-click,in-which-book,25,does a character rescue a parrot who escaped to the woods?,,Sandy Grubb,Just Like Click,OBOB Parent Group
 just-like-click,in-which-book,30,"In which book, does thieves steal lumbar?",,Sandy Grubb,Just Like Click,OBOB Parent Group
 just-like-click,in-which-book,34,does a raccoon get caught in a trap with marshmallows?,,Sandy Grubb,Just Like Click,OBOB Parent Group
 just-like-click,in-which-book,39,do character swim at the Paulina Springs swimming pool?,,Sandy Grubb,Just Like Click,OBOB Parent Group
 just-like-click,in-which-book,39,does a character use a Superman beach towel?,,Sandy Grubb,Just Like Click,OBOB Parent Group
-just-like-click,in-which-book,39,is someone embarrassed by their old superman towel?,,Sandy Grubb,Just Like Click,Lake Oswego Public Library
 just-like-click,in-which-book,43,does a character need to remove pine needles and branches from their roof to avoid a fine?,,Sandy Grubb,Just Like Click,OBOB Parent Group
 just-like-click,in-which-book,44,does a character have an artificial leg?,,Sandy Grubb,Just Like Click,OBOB Parent Group
 just-like-click,in-which-book,45,"do characters stop and listen to a ""nature symphony""?",,Sandy Grubb,Just Like Click,OBOB Parent Group
@@ -171,8 +165,6 @@ just-like-click,in-which-book,54,"does the song ""YMCA"" interrupt a covert miss
 just-like-click,in-which-book,57,Is there a cat named Fleazy?,,Sandy Grubb,Just Like Click,OBOB Parent Group
 just-like-click,in-which-book,62,do characters ride horses at a roundup?,,Sandy Grubb,Just Like Click,OBOB Parent Group
 just-like-click,in-which-book,64,is a character thrown from their horse?,,Sandy Grubb,Just Like Click,OBOB Parent Group
-just-like-click,in-which-book,64,does someone lose control of their horse and wind up falling off?,,Sandy Grubb,Just Like Click,Lake Oswego Public Library
-just-like-click,in-which-book,66,does someone get blackmailed by their 7 year-old cousin?,,Sandy Grubb,Just Like Click,Lake Oswego Public Library
 just-like-click,in-which-book,68,do characters play badminton?,,Sandy Grubb,Just Like Click,OBOB Parent Group
 just-like-click,in-which-book,69,Does a thief break into a snack bar for an ice cream cone?,,Sandy Grubb,Just Like Click,OBOB Parent Group
 just-like-click,in-which-book,74,Does a character have a purplish scar on their chin?,,Sandy Grubb,Just Like Click,OBOB Parent Group
@@ -182,7 +174,6 @@ just-like-click,in-which-book,80,was a character in a coma after a bad car accid
 just-like-click,in-which-book,80,do twin sisters attend different grade levels?,,Sandy Grubb,Just Like Click,OBOB Parent Group
 just-like-click,in-which-book,80,Was someone in a coma for about a month after a bad car accident?,,Sandy Grubb,Just Like Click,OBOB Parent Group
 just-like-click,in-which-book,81,Does someone have the best loft for launching parachute guys?,,Sandy Grubb,Just Like Click,OBOB Parent Group
-just-like-click,in-which-book,81,does a friendship get broken up because of spiderman pajamas?,,Sandy Grubb,Just Like Click,Lake Oswego Public Library
 just-like-click,in-which-book,82,does a character say that pajamas ruined a friendship?,,Sandy Grubb,Just Like Click,OBOB Parent Group
 just-like-click,in-which-book,86,does a character go on a 3-mile run with their dad?,,Sandy Grubb,Just Like Click,OBOB Parent Group
 just-like-click,in-which-book,86,Does a character's dad constantly try and get them to be more athletic and popular?,,Sandy Grubb,Just Like Click,OBOB Parent Group
@@ -191,10 +182,8 @@ just-like-click,in-which-book,87,"In which book, does the soccer, basketball and
 just-like-click,in-which-book,88,was a website called dearsuperhero.com created?,,Sandy Grubb,Just Like Click,OBOB Parent Group
 just-like-click,in-which-book,88,"Is there a newspaper called ""The Ranch Daily""?",,Sandy Grubb,Just Like Click,OBOB Parent Group
 just-like-click,in-which-book,91,are there over 20 lumbar deliveries every day?,,Sandy Grubb,Just Like Click,OBOB Parent Group
-just-like-click,in-which-book,96,does the main character use a headlamp to scare away thieves?,,Sandy Grubb,Just Like Click,Lake Oswego Public Library
 just-like-click,in-which-book,97,does a character put a snake in a bag and label it?,,Sandy Grubb,Just Like Click,OBOB Parent Group
 just-like-click,in-which-book,98,do the characters put a snake in front of a golf pro shop?,,Sandy Grubb,Just Like Click,OBOB Parent Group
-just-like-click,in-which-book,100,is a character duped by a rubber snake?,,Sandy Grubb,Just Like Click,Cedar Mill Public Library
 just-like-click,in-which-book,101,does a character have to move every two to three years because their father is in the military?,,Sandy Grubb,Just Like Click,OBOB Parent Group
 just-like-click,in-which-book,101,Did a character's mom have to move every two or three years as a kid because her father was in the army?,,Sandy Grubb,Just Like Click,OBOB Parent Group
 just-like-click,in-which-book,102,do characters leave a fake snake at a golf pro shop?,,Sandy Grubb,Just Like Click,OBOB Parent Group
@@ -225,15 +214,27 @@ just-like-click,in-which-book,146,does the characters use light and sound to sca
 just-like-click,in-which-book,148,does a character make a wish in the middle of the night?,,Sandy Grubb,Just Like Click,OBOB Parent Group
 just-like-click,in-which-book,148,"does a character believe in ""superhero magic""?",,Sandy Grubb,Just Like Click,OBOB Parent Group
 just-like-click,in-which-book,148,"in which book, does someone climb a fire tower to wish on super hero magic?",,Sandy Grubb,Just Like Click,OBOB Parent Group
-just-like-click,in-which-book,148,does a little girl climb to the top of a fire tower to make a wish?,,Sandy Grubb,Just Like Click,Lake Oswego Public Library
 just-like-click,in-which-book,150,does someone make a wish to not lose their dog to animal shelter,,Sandy Grubb,Just Like Click,OBOB Parent Group
 just-like-click,in-which-book,151,is a horse attacked by a couger?,,Sandy Grubb,Just Like Click,OBOB Parent Group
 just-like-click,in-which-book,151,Do five kids and two horses face off with a cougar?,,Sandy Grubb,Just Like Click,OBOB Parent Group
-just-like-click,in-which-book,151,does a group of kids almost get attacked by a wild cougar?,,Sandy Grubb,Just Like Click,Lake Oswego Public Library
 just-like-click,in-which-book,160,does the main character paints a mural in the room,,Sandy Grubb,Just Like Click,OBOB Parent Group
 just-like-click,in-which-book,166,does a character make an anonymous tip to the police?,,Sandy Grubb,Just Like Click,OBOB Parent Group
 just-like-click,in-which-book,,Does a character spend two weeks trying to prevent their family from moving away?,,Sandy Grubb,Just Like Click,OBOB Parent Group
 just-like-click,in-which-book,167,Is there a street called Mountain Clover Lane,,Sandy Grubb,Just Like Click,OBOB Parent Group
 just-like-click,in-which-book,,Do thieves steal lumber from job sites?,,Sandy Grubb,Just Like Click,OBOB Parent Group
+just-like-click,in-which-book,1,does each chapter start with a one-page comic strip?,,Sandy Grubb,Just Like Click,Lake Oswego Public Library
+just-like-click,in-which-book,3,does the main character live in Black Butte Ranch year round?,,Sandy Grubb,Just Like Click,Lake Oswego Public Library
+just-like-click,in-which-book,9,is somebody's best sport badminton?,,Sandy Grubb,Just Like Click,Lake Oswego Public Library
+just-like-click,in-which-book,14,"is there $237,000 hidden under a bed?",,Sandy Grubb,Just Like Click,Lake Oswego Public Library
+just-like-click,in-which-book,17,is there a parrot named Fletcher?,,Sandy Grubb,Just Like Click,Cedar Mill Public Library
+just-like-click,in-which-book,24,does someone go out in a thunder and lightning storm to rescue a pet parrot?,,Sandy Grubb,Just Like Click,Lake Oswego Public Library
+just-like-click,in-which-book,39,is someone embarrassed by their old superman towel?,,Sandy Grubb,Just Like Click,Lake Oswego Public Library
+just-like-click,in-which-book,64,does someone lose control of their horse and wind up falling off?,,Sandy Grubb,Just Like Click,Lake Oswego Public Library
+just-like-click,in-which-book,66,does someone get blackmailed by their 7 year-old cousin?,,Sandy Grubb,Just Like Click,Lake Oswego Public Library
+just-like-click,in-which-book,81,does a friendship get broken up because of spiderman pajamas?,,Sandy Grubb,Just Like Click,Lake Oswego Public Library
+just-like-click,in-which-book,96,does the main character use a headlamp to scare away thieves?,,Sandy Grubb,Just Like Click,Lake Oswego Public Library
+just-like-click,in-which-book,100,is a character duped by a rubber snake?,,Sandy Grubb,Just Like Click,Cedar Mill Public Library
+just-like-click,in-which-book,148,does a little girl climb to the top of a fire tower to make a wish?,,Sandy Grubb,Just Like Click,Lake Oswego Public Library
+just-like-click,in-which-book,151,does a group of kids almost get attacked by a wild cougar?,,Sandy Grubb,Just Like Click,Lake Oswego Public Library
 just-like-click,in-which-book,171,Does a superhero get a mention on a county sheriff's twitter account?,,Sandy Grubb,Just Like Click,OBOB Parent Group
 just-like-click,in-which-book,175,Does a friendship from kindergarten reconnect at a little sister's surprise birthday party?,,Sandy Grubb,Just Like Click,OBOB Parent Group
