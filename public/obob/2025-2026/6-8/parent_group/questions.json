@@ -5068,13 +5068,6 @@
     },
     {
       "type": "content",
-      "text": "How does Shenanigan prove Aunt Schadenfreude’s innocence?",
-      "book_key": "a-dictionary-of-scoundrels",
-      "answer": "Finds her secret plan document",
-      "page": 322
-    },
-    {
-      "type": "content",
       "text": "Which room becomes the main setting for the investigation climax?",
       "book_key": "a-dictionary-of-scoundrels",
       "answer": "The Secret Vault room.",
@@ -7229,7 +7222,7 @@
     },
     {
       "type": "content",
-      "text": "How long does the slight to Barcelona take?",
+      "text": "How long does the flight to Barcelona take?",
       "book_key": "ellen-outside-the-lines",
       "answer": "Nine hours 40 minutes",
       "page": 57
