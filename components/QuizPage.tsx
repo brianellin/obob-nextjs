@@ -329,7 +329,9 @@ export default function QuizPage({
     // Mock battle logic: Handle steal opportunity
     if (quizMode === "mock") {
       if (points === 0 && !waitingForSteal && stealsEnabled) {
-        // Incorrect answer - offer steal opportunity to other team (only if steals enabled)
+        // Incorrect answer - stop timer and offer steal opportunity to other team (only if steals enabled)
+        setIsTimerRunning(false);
+        setTimeLeft(TIMER_DURATION);
         setWaitingForSteal(true);
         setCurrentTeam(currentTeam === "A" ? "B" : "A");
         return; // Don't advance yet
@@ -887,25 +889,27 @@ export default function QuizPage({
         </CardContent>
       </Card>
 
-      {/* New skip button below the card */}
-      <div className="w-full max-w-xl mx-auto mt-4 flex gap-2">
-        <Button
-          onClick={previousQuestion}
-          variant="outline"
-          className="w-full flex items-center justify-center touch-none"
-        >
-          <ArrowLeft className="h-3 w-3 mr-1" />
-          <span>Back</span>
-        </Button>
-        <Button
-          onClick={handleSkip}
-          variant="outline"
-          className="w-full flex items-center justify-center touch-none"
-        >
-          <span>Skip</span>
-          <SkipForward className="h-3 w-3 ml-1" />
-        </Button>
-      </div>
+      {/* Skip and back buttons (not shown in mock battles) */}
+      {quizMode !== "mock" && (
+        <div className="w-full max-w-xl mx-auto mt-4 flex gap-2">
+          <Button
+            onClick={previousQuestion}
+            variant="outline"
+            className="w-full flex items-center justify-center touch-none"
+          >
+            <ArrowLeft className="h-3 w-3 mr-1" />
+            <span>Back</span>
+          </Button>
+          <Button
+            onClick={handleSkip}
+            variant="outline"
+            className="w-full flex items-center justify-center touch-none"
+          >
+            <span>Skip</span>
+            <SkipForward className="h-3 w-3 ml-1" />
+          </Button>
+        </div>
+      )}
     </div>
   );
 }
