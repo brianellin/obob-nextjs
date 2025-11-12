@@ -15,6 +15,7 @@ import { track } from "@vercel/analytics";
 import { usePostHog } from "posthog-js/react";
 import QuestionFeedback from "./QuestionFeedback";
 import QuestionFeedbackForm from "./QuestionFeedbackForm";
+import MockBattleResults from "./MockBattleResults";
 import {
   Popover,
   PopoverContent,
@@ -23,7 +24,7 @@ import {
 
 type QuizPageProps = {
   selectedBooks: Book[];
-  quizMode: "personal" | "friend";
+  quizMode: "personal" | "friend" | "mock";
   onQuizEnd: () => void;
   questionCount: number;
   questionType: "in-which-book" | "content" | "both";
@@ -36,6 +37,8 @@ const TIMER_DURATION = 15; // 15 seconds
 type QuestionResult = {
   question: QuestionWithBook;
   pointsAwarded: number;
+  team?: "A" | "B"; // For mock battles
+  stolenBy?: "A" | "B"; // For mock battles when a team steals
 };
 
 // Helper function to lowercase the first character of a string
@@ -103,6 +106,11 @@ export default function QuizPage({
   const { width, height } = useWindowSize();
   const [showFeedbackForm, setShowFeedbackForm] = useState(false);
 
+  // Mock battle state
+  const [currentTeam, setCurrentTeam] = useState<"A" | "B">("A");
+  const [waitingForSteal, setWaitingForSteal] = useState(false);
+  const [originalTeam, setOriginalTeam] = useState<"A" | "B">("A");
+
   const loadQuestions = async () => {
     try {
       setLoading(true);
@@ -143,14 +151,18 @@ export default function QuizPage({
           if (prevTime <= 1) {
             clearInterval(timerRef.current as NodeJS.Timeout);
             setIsTimerRunning(false);
-            setShowAnswer(true);
+            // For mock battles, don't auto-show answer - let moderator decide
+            if (quizMode !== "mock") {
+              setShowAnswer(true);
+            }
             boopSound.current?.play();
             return 0;
           }
           return prevTime - 1;
         });
       }, 1000);
-    } else if (timeLeft === 0) {
+    } else if (timeLeft === 0 && quizMode !== "mock") {
+      // For mock battles, don't auto-show answer
       setIsTimerRunning(false);
       setShowAnswer(true);
     }
@@ -160,7 +172,7 @@ export default function QuizPage({
         clearInterval(timerRef.current);
       }
     };
-  }, [isTimerRunning, timeLeft]);
+  }, [isTimerRunning, timeLeft, quizMode]);
 
   useEffect(() => {
     if (quizFinished) {
@@ -295,15 +307,45 @@ export default function QuizPage({
       }, 800);
     }
 
-    // Update or add the result for the current question
-    setQuestionResults((prev) => {
-      const newResults = [...prev];
-      newResults[currentQuestionIndex] = {
-        question: currentQuestion,
-        pointsAwarded: points,
-      };
-      return newResults;
-    });
+    // Mock battle logic: Handle steal opportunity
+    if (quizMode === "mock") {
+      if (points === 0 && !waitingForSteal) {
+        // Incorrect answer - offer steal opportunity to other team
+        setWaitingForSteal(true);
+        setCurrentTeam(currentTeam === "A" ? "B" : "A");
+        return; // Don't advance yet
+      }
+
+      // Record the result with team information
+      setQuestionResults((prev) => {
+        const newResults = [...prev];
+        newResults[currentQuestionIndex] = {
+          question: currentQuestion,
+          pointsAwarded: points,
+          team: waitingForSteal ? currentTeam : originalTeam,
+          stolenBy: waitingForSteal ? currentTeam : undefined,
+        };
+        return newResults;
+      });
+
+      // Reset steal state and move to next question
+      setWaitingForSteal(false);
+
+      // Alternate teams for next question
+      const nextTeam = originalTeam === "A" ? "B" : "A";
+      setOriginalTeam(nextTeam);
+      setCurrentTeam(nextTeam);
+    } else {
+      // Regular solo/friend battle logic
+      setQuestionResults((prev) => {
+        const newResults = [...prev];
+        newResults[currentQuestionIndex] = {
+          question: currentQuestion,
+          pointsAwarded: points,
+        };
+        return newResults;
+      });
+    }
 
     nextQuestion();
   };
@@ -316,6 +358,7 @@ export default function QuizPage({
         newResults[currentQuestionIndex] = {
           question: currentQuestion,
           pointsAwarded: -1, // Using -1 to indicate a skip
+          team: quizMode === "mock" ? originalTeam : undefined,
         };
       }
       return newResults;
@@ -327,6 +370,17 @@ export default function QuizPage({
       setIsTimerRunning(false);
       setTimeLeft(TIMER_DURATION);
       setShowFeedbackForm(false); // Close feedback form on question change
+
+      // Reset mock battle steal state if in mock mode
+      if (quizMode === "mock") {
+        setWaitingForSteal(false);
+        // If we were waiting for a steal and advancing, switch to the original team's next turn
+        if (waitingForSteal) {
+          const nextTeam = originalTeam === "A" ? "B" : "A";
+          setOriginalTeam(nextTeam);
+          setCurrentTeam(nextTeam);
+        }
+      }
     } else {
       setQuizFinished(true);
     }
@@ -341,6 +395,13 @@ export default function QuizPage({
     setTimeLeft(TIMER_DURATION);
     setQuestionResults([]);
     setShowFeedbackForm(false); // Close feedback form on restart
+
+    // Reset mock battle state
+    if (quizMode === "mock") {
+      setCurrentTeam("A");
+      setOriginalTeam("A");
+      setWaitingForSteal(false);
+    }
   };
 
   const handleSkip = () => {
@@ -406,7 +467,37 @@ export default function QuizPage({
     }, 0);
   };
 
+  const calculateTeamScore = (team: "A" | "B") => {
+    return questionResults.reduce((total, result) => {
+      if (result.pointsAwarded >= 0) {
+        // If question was stolen by this team, they get the points
+        if (result.stolenBy === team) {
+          return total + result.pointsAwarded;
+        }
+        // If question was originally for this team and not stolen, they get the points
+        if (result.team === team && !result.stolenBy) {
+          return total + result.pointsAwarded;
+        }
+      }
+      return total;
+    }, 0);
+  };
+
   if (quizFinished) {
+    // Use special results screen for mock battles
+    if (quizMode === "mock") {
+      return (
+        <MockBattleResults
+          questionResults={questionResults}
+          questions={questions}
+          teamAScore={calculateTeamScore("A")}
+          teamBScore={calculateTeamScore("B")}
+          onRestart={restartQuiz}
+          onEnd={onQuizEnd}
+        />
+      );
+    }
+
     return (
       <div className="container p-4 mt-8">
         {calculateScore() === questions.length * 5 && (
@@ -505,44 +596,69 @@ export default function QuizPage({
               <WavyUnderline style={0} thickness={4} color="text-purple-500">
                 Solo battle
               </WavyUnderline>
-            ) : (
+            ) : quizMode === "friend" ? (
               <WavyUnderline style={0} thickness={5} color="text-violet-700">
                 Friend battle
               </WavyUnderline>
+            ) : (
+              <WavyUnderline style={0} thickness={5} color="text-orange-500">
+                Mock battle
+              </WavyUnderline>
             )}
           </h1>
+
+          {/* Team indicator for mock battles */}
+          {quizMode === "mock" && (
+            <div className="mb-4 text-center">
+              <div className="inline-block bg-gradient-to-r from-blue-500 to-green-500 text-white px-6 py-2 rounded-full font-bold text-lg shadow-lg">
+                {waitingForSteal ? (
+                  <span>Team {currentTeam} - Steal Opportunity!</span>
+                ) : (
+                  <span>Team {currentTeam}&apos;s Turn</span>
+                )}
+              </div>
+            </div>
+          )}
 
           <div className="w-full flex items-center justify-between gap-4 mb-2 px-1 relative z-50">
             <span className="text-lg font-semibold">
               Question: {currentQuestionIndex + 1}/{questions.length}
             </span>
             <span className="text-lg font-semibold">
-              Score:
-              <span
-                className={`ml-2 inline-block relative z-50 ${
-                  showSuccessAnimation ? "animate-score-pop" :
-                  showPartialAnimation ? "animate-score-pop-partial" : ""
-                }`}
-              >
-                {calculateScore()}/{questions.length * 5}
-                {/* Sparkle particles for perfect answer */}
-                {showSuccessAnimation && (
-                  <>
-                    <span className="absolute -top-2 -left-2 text-yellow-400 animate-sparkle-1 z-[9999]">{successEmojis[0]}</span>
-                    <span className="absolute -top-2 -right-2 text-yellow-400 animate-sparkle-2 z-[9999]">{successEmojis[1]}</span>
-                    <span className="absolute -bottom-2 -left-2 text-yellow-400 animate-sparkle-3 z-[9999]">{successEmojis[2]}</span>
-                    <span className="absolute -bottom-2 -right-2 text-yellow-400 animate-sparkle-4 z-[9999]">{successEmojis[3]}</span>
-                  </>
-                )}
-                {/* Progress emoji particles for partial correct */}
-                {showPartialAnimation && (
-                  <>
-                    <span className="absolute -top-2 -left-2 text-amber-500 animate-sparkle-1 z-[9999]">{partialEmojis[0]}</span>
-                    <span className="absolute -top-2 -right-2 text-amber-500 animate-sparkle-2 z-[9999]">{partialEmojis[1]}</span>
-                    <span className="absolute -bottom-2 -right-2 text-amber-500 animate-sparkle-4 z-[9999]">{partialEmojis[2]}</span>
-                  </>
-                )}
-              </span>
+              {quizMode === "mock" ? (
+                <span>
+                  Team A: {calculateTeamScore("A")} | Team B: {calculateTeamScore("B")}
+                </span>
+              ) : (
+                <>
+                  Score:
+                  <span
+                    className={`ml-2 inline-block relative z-50 ${
+                      showSuccessAnimation ? "animate-score-pop" :
+                      showPartialAnimation ? "animate-score-pop-partial" : ""
+                    }`}
+                  >
+                    {calculateScore()}/{questions.length * 5}
+                    {/* Sparkle particles for perfect answer */}
+                    {showSuccessAnimation && (
+                      <>
+                        <span className="absolute -top-2 -left-2 text-yellow-400 animate-sparkle-1 z-[9999]">{successEmojis[0]}</span>
+                        <span className="absolute -top-2 -right-2 text-yellow-400 animate-sparkle-2 z-[9999]">{successEmojis[1]}</span>
+                        <span className="absolute -bottom-2 -left-2 text-yellow-400 animate-sparkle-3 z-[9999]">{successEmojis[2]}</span>
+                        <span className="absolute -top-2 -right-2 text-yellow-400 animate-sparkle-4 z-[9999]">{successEmojis[3]}</span>
+                      </>
+                    )}
+                    {/* Progress emoji particles for partial correct */}
+                    {showPartialAnimation && (
+                      <>
+                        <span className="absolute -top-2 -left-2 text-amber-500 animate-sparkle-1 z-[9999]">{partialEmojis[0]}</span>
+                        <span className="absolute -top-2 -right-2 text-amber-500 animate-sparkle-2 z-[9999]">{partialEmojis[1]}</span>
+                        <span className="absolute -bottom-2 -right-2 text-amber-500 animate-sparkle-4 z-[9999]">{partialEmojis[2]}</span>
+                      </>
+                    )}
+                  </span>
+                </>
+              )}
             </span>
           </div>
         </div>
@@ -601,7 +717,7 @@ export default function QuizPage({
                 )}
               </p>
             </div>
-            {quizMode === "friend" && (
+            {(quizMode === "friend" || quizMode === "mock") && (
               <div className="space-y-2">
                 {!isTimerRunning && !showAnswer && (
                   <Button
@@ -627,7 +743,7 @@ export default function QuizPage({
               </div>
             )}
             {((quizMode === "personal" && showAnswer) ||
-              (quizMode === "friend" && (showAnswer || isTimerRunning))) && (
+              ((quizMode === "friend" || quizMode === "mock") && (showAnswer || isTimerRunning))) && (
               <div className="bg-slate-100 p-3 rounded-md my-4">
                 <p className="text-lg font-medium">
                   {currentQuestion.type === "in-which-book" ? (
@@ -682,7 +798,7 @@ export default function QuizPage({
             </Button>
           ) : (
             (quizMode === "personal" ||
-              (quizMode === "friend" && (isTimerRunning || showAnswer))) && (
+              ((quizMode === "friend" || quizMode === "mock") && (isTimerRunning || showAnswer))) && (
               <div className="flex flex-col sm:flex-row justify-between space-y-2 sm:space-y-0 sm:space-x-4 w-full">
                 <Button
                   onClick={() => handleAnswer(5)}

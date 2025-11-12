@@ -7,7 +7,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { User, Users } from "lucide-react";
+import { User, Users, Trophy } from "lucide-react";
 import Link from "next/link";
 
 type ModeSelectionProps = {
@@ -62,6 +62,31 @@ export default function ModeSelection({ year, division }: ModeSelectionProps) {
             >
               <Button className="w-full bg-cyan-400 hover:bg-cyan-500 transition-colors">
                 <Users className="mr-2 h-4 w-4" /> Play with friends
+              </Button>
+            </Link>
+          </CardFooter>
+        </Card>
+        <Card>
+          <CardHeader>
+            <CardTitle>Mock battle</CardTitle>
+            <CardDescription>
+              Moderate a live in-person battle between two teams
+            </CardDescription>
+          </CardHeader>
+          <CardContent>
+            <p>
+              Run a realistic battle between Team A and Team B with timed questions,
+              scoring, and steal opportunities.
+            </p>
+          </CardContent>
+          <CardFooter>
+            <Link
+              href={`/mock-battle/${year}/${division}`}
+              passHref
+              className="w-full"
+            >
+              <Button className="w-full bg-orange-500 hover:bg-orange-600 text-white transition-colors">
+                <Trophy className="mr-2 h-4 w-4" /> Play mock battle
               </Button>
             </Link>
           </CardFooter>
