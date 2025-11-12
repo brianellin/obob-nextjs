@@ -6,6 +6,7 @@ import type { QuestionWithBook } from "@/types";
 import Confetti from "react-confetti";
 import { useWindowSize } from "react-use";
 import { Trophy, Award } from "lucide-react";
+import { WavyUnderline } from "@/components/WavyUnderline";
 
 type QuestionResult = {
   question: QuestionWithBook;
@@ -27,6 +28,23 @@ type MockBattleResultsProps = {
 function lowercaseFirstChar(str: string): string {
   if (!str) return str;
   return str.charAt(0).toLowerCase() + str.slice(1);
+}
+
+// Helper components for colored team labels
+function TeamALabel({ children }: { children: React.ReactNode }) {
+  return (
+    <WavyUnderline style={0} thickness={2} color="text-purple-500">
+      {children}
+    </WavyUnderline>
+  );
+}
+
+function TeamBLabel({ children }: { children: React.ReactNode }) {
+  return (
+    <WavyUnderline style={0} thickness={2} color="text-cyan-400">
+      {children}
+    </WavyUnderline>
+  );
 }
 
 export default function MockBattleResults({
@@ -72,7 +90,7 @@ export default function MockBattleResults({
               <div className="flex items-center justify-center gap-2 mb-4">
                 <Trophy className="h-12 w-12 text-yellow-500" />
                 <h2 className="text-3xl font-bold text-green-600">
-                  Team {winner} Wins!
+                  {winner === "A" ? <TeamALabel>Team A</TeamALabel> : <TeamBLabel>Team B</TeamBLabel>} Wins!
                 </h2>
                 <Trophy className="h-12 w-12 text-yellow-500" />
               </div>
@@ -90,7 +108,7 @@ export default function MockBattleResults({
                   : "bg-gray-50 border-gray-300"
               }`}
             >
-              <h3 className="text-xl font-bold text-center mb-2">Team A</h3>
+              <h3 className="text-xl font-bold text-center mb-2"><TeamALabel>Team A</TeamALabel></h3>
               <p className="text-4xl font-bold text-center">{teamAScore}</p>
               <p className="text-sm text-center text-gray-600">out of {maxScore}</p>
             </div>
@@ -103,7 +121,7 @@ export default function MockBattleResults({
                   : "bg-gray-50 border-gray-300"
               }`}
             >
-              <h3 className="text-xl font-bold text-center mb-2">Team B</h3>
+              <h3 className="text-xl font-bold text-center mb-2"><TeamBLabel>Team B</TeamBLabel></h3>
               <p className="text-4xl font-bold text-center">{teamBScore}</p>
               <p className="text-sm text-center text-gray-600">out of {maxScore}</p>
             </div>
@@ -135,10 +153,10 @@ export default function MockBattleResults({
                     <div className="flex-1">
                       <div className="flex items-center gap-2 mb-1">
                         <p className="font-medium">Question {index + 1}:</p>
-                        <span className="text-sm font-semibold text-blue-600">
-                          Team {result.team}
+                        <span className="text-sm font-semibold">
+                          {result.team === "A" ? <TeamALabel>Team A</TeamALabel> : <TeamBLabel>Team B</TeamBLabel>}
                           {wasStolen && (
-                            <span className="text-green-600"> → Stolen by Team {displayTeam}!</span>
+                            <span className="text-green-600"> → Stolen by {displayTeam === "A" ? <TeamALabel>Team A</TeamALabel> : <TeamBLabel>Team B</TeamBLabel>}!</span>
                           )}
                         </span>
                       </div>

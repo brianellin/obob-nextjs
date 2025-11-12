@@ -30,6 +30,7 @@ type QuizPageProps = {
   questionType: "in-which-book" | "content" | "both";
   year: string;
   division: string;
+  stealsEnabled?: boolean; // For mock battles
 };
 
 const TIMER_DURATION = 15; // 15 seconds
@@ -45,6 +46,23 @@ type QuestionResult = {
 function lowercaseFirstChar(str: string): string {
   if (!str) return str;
   return str.charAt(0).toLowerCase() + str.slice(1);
+}
+
+// Helper components for colored team labels
+function TeamALabel({ children }: { children: React.ReactNode }) {
+  return (
+    <WavyUnderline style={0} thickness={2} color="text-purple-500">
+      {children}
+    </WavyUnderline>
+  );
+}
+
+function TeamBLabel({ children }: { children: React.ReactNode }) {
+  return (
+    <WavyUnderline style={0} thickness={2} color="text-cyan-400">
+      {children}
+    </WavyUnderline>
+  );
 }
 
 // Add this function outside the component
@@ -84,6 +102,7 @@ export default function QuizPage({
   questionType,
   year,
   division,
+  stealsEnabled = true,
 }: QuizPageProps) {
   const posthog = usePostHog();
   const [questions, setQuestions] = useState<QuestionWithBook[]>([]);
@@ -309,8 +328,8 @@ export default function QuizPage({
 
     // Mock battle logic: Handle steal opportunity
     if (quizMode === "mock") {
-      if (points === 0 && !waitingForSteal) {
-        // Incorrect answer - offer steal opportunity to other team
+      if (points === 0 && !waitingForSteal && stealsEnabled) {
+        // Incorrect answer - offer steal opportunity to other team (only if steals enabled)
         setWaitingForSteal(true);
         setCurrentTeam(currentTeam === "A" ? "B" : "A");
         return; // Don't advance yet
@@ -612,9 +631,9 @@ export default function QuizPage({
             <div className="mb-4 text-center">
               <div className="inline-block bg-gradient-to-r from-blue-500 to-green-500 text-white px-6 py-2 rounded-full font-bold text-lg shadow-lg">
                 {waitingForSteal ? (
-                  <span>Team {currentTeam} - Steal Opportunity!</span>
+                  <span>{currentTeam === "A" ? <TeamALabel>Team A</TeamALabel> : <TeamBLabel>Team B</TeamBLabel>} - Steal Opportunity!</span>
                 ) : (
-                  <span>Team {currentTeam}&apos;s Turn</span>
+                  <span>{currentTeam === "A" ? <TeamALabel>Team A</TeamALabel> : <TeamBLabel>Team B</TeamBLabel>}&apos;s Turn</span>
                 )}
               </div>
             </div>
@@ -627,7 +646,7 @@ export default function QuizPage({
             <span className="text-lg font-semibold">
               {quizMode === "mock" ? (
                 <span>
-                  Team A: {calculateTeamScore("A")} | Team B: {calculateTeamScore("B")}
+                  <TeamALabel>Team A</TeamALabel>: {calculateTeamScore("A")} | <TeamBLabel>Team B</TeamBLabel>: {calculateTeamScore("B")}
                 </span>
               ) : (
                 <>
