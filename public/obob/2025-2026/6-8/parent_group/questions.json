@@ -1556,9 +1556,10 @@
     },
     {
       "type": "content",
-      "text": "What are the six seasons' names, who Aru and Mini meet in the Court of the Seasons?",
+      "text": "Two part question: Name two of the six seasons who Aru and Mini meet in the Court of the Seasons.",
       "book_key": "aru-shah-and-the-end-of-time",
-      "answer": "Spring, Summer, Autumn, Winter, Pre-Winter, and Monsoon"
+      "answer": "Any two: Spring, Summer, Autumn, Winter, Pre-Winter, or Monsoon",
+      "page": 138
     },
     {
       "type": "content",
@@ -2716,7 +2717,7 @@
     },
     {
       "type": "in-which-book",
-      "text": "does a charecter give away a present they got from their dad?",
+      "text": "does a character give away a present they got from their dad?",
       "book_key": "asha-and-the-spirit-bird",
       "page": 67
     },
@@ -4614,7 +4615,7 @@
     },
     {
       "type": "in-which-book",
-      "text": "does a character shurg and say \"cats like boxes\"?",
+      "text": "does a character shrug and say \"cats like boxes\"?",
       "book_key": "a-dictionary-of-scoundrels",
       "page": 8
     },
@@ -8080,8 +8081,8 @@
       "type": "content",
       "text": "Making noise, breaking some things, setting off a car alarm, and biting a human are all within which animal's power?",
       "book_key": "the-eyes-and-the-impossible",
-      "answer": "Squirrels",
-      "page": 79
+      "answer": "Squirrels or raccoons",
+      "page": 207
     },
     {
       "type": "content",
@@ -16374,7 +16375,7 @@
       "type": "in-which-book",
       "text": "is there a character born during the Sino-Japanese War?",
       "book_key": "uprooted",
-      "page": 40156
+      "page": 40
     },
     {
       "type": "in-which-book",
@@ -16534,7 +16535,7 @@
     },
     {
       "type": "in-which-book",
-      "text": "does someone sleep on a plane?",
+      "text": "does someone fall asleep on a plane and dream of falling through ice?",
       "book_key": "uprooted",
       "page": 56
     },
