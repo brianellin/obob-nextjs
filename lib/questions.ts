@@ -84,11 +84,17 @@ function selectDistributedQuestions(questionPool: Question[], selectionCount: nu
     // Calculate questions needed per book to distribute evenly
     const questionsPerBook = Math.ceil(selectionCount / uniqueBooks.length);
     const shuffledBooks = shuffle(uniqueBooks);
-    
+
+    // Shuffle each book's questions ONCE before the loops to avoid expensive repeated shuffles
+    const shuffledByBook: Record<string, Question[]> = {};
+    for (const book of shuffledBooks) {
+      shuffledByBook[book] = shuffle(byBook[book]);
+    }
+
     // First pass: try to get questionsPerBook from each book
     for (let round = 0; round < questionsPerBook; round++) {
       for (const book of shuffledBooks) {
-        const bookQuestions = shuffle(byBook[book]);
+        const bookQuestions = shuffledByBook[book];
         // Try to get the nth question from this book
         if (bookQuestions.length > round) {
           const question = bookQuestions[round];
@@ -100,7 +106,7 @@ function selectDistributedQuestions(questionPool: Question[], selectionCount: nu
       }
       if (selected.size >= selectionCount) break;
     }
-    
+
     // If we still need more questions, take any remaining available questions
     if (selected.size < selectionCount) {
       const remainingQuestions = questionPool.filter(q => !selected.has(q));
@@ -112,10 +118,13 @@ function selectDistributedQuestions(questionPool: Question[], selectionCount: nu
   } else {
     // Original logic for when we need fewer questions than books
     const selectedBooks = shuffle(uniqueBooks).slice(0, selectionCount);
+
+    // Select a random question from each book
     for (const book of selectedBooks) {
-      const bookQuestions = shuffle(byBook[book]);
+      const bookQuestions = byBook[book];
       if (bookQuestions.length > 0) {
-        selected.add(bookQuestions[0]);
+        const randomQuestion = bookQuestions[Math.floor(Math.random() * bookQuestions.length)];
+        selected.add(randomQuestion);
       }
     }
   }
