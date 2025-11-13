@@ -66,7 +66,8 @@ export default function ModeSelection({ year, division }: ModeSelectionProps) {
             </Link>
           </CardFooter>
         </Card>
-        <Card>
+        {/* Temporarily hidden - will bring back later */}
+        {/* <Card>
           <CardHeader>
             <CardTitle>Mock battle</CardTitle>
             <CardDescription>
@@ -90,7 +91,7 @@ export default function ModeSelection({ year, division }: ModeSelectionProps) {
               </Button>
             </Link>
           </CardFooter>
-        </Card>
+        </Card> */}
       </div>
     </div>
   );
