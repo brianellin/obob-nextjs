@@ -75,7 +75,7 @@ export default function ModeSelection({ year, division }: ModeSelectionProps) {
           </CardHeader>
           <CardContent>
             <p>
-              Run a realistic battle between Team A and Team B with timed questions,
+              Run a realistic battle between Odds and Evens with timed questions,
               scoring, and steal opportunities.
             </p>
           </CardContent>

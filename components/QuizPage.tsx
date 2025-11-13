@@ -50,19 +50,11 @@ function lowercaseFirstChar(str: string): string {
 
 // Helper components for colored team labels
 function TeamALabel({ children }: { children: React.ReactNode }) {
-  return (
-    <WavyUnderline style={0} thickness={2} color="text-purple-500">
-      {children}
-    </WavyUnderline>
-  );
+  return <span className="text-pink-500 font-semibold">{children}</span>;
 }
 
 function TeamBLabel({ children }: { children: React.ReactNode }) {
-  return (
-    <WavyUnderline style={0} thickness={2} color="text-cyan-400">
-      {children}
-    </WavyUnderline>
-  );
+  return <span className="text-lime-500 font-semibold">{children}</span>;
 }
 
 // Add this function outside the component
@@ -113,9 +105,20 @@ export default function QuizPage({
   const [animateScore, setAnimateScore] = useState(false);
   const [showSuccessAnimation, setShowSuccessAnimation] = useState(false);
   const [showPartialAnimation, setShowPartialAnimation] = useState(false);
-  const [cardAnimationType, setCardAnimationType] = useState<'correct' | 'partial' | 'incorrect' | null>(null);
-  const [successEmojis, setSuccessEmojis] = useState<string[]>(['✨', '✨', '✨', '✨']);
-  const [partialEmojis, setPartialEmojis] = useState<string[]>(['👌', '👌', '👌']);
+  const [cardAnimationType, setCardAnimationType] = useState<
+    "correct" | "partial" | "incorrect" | null
+  >(null);
+  const [successEmojis, setSuccessEmojis] = useState<string[]>([
+    "✨",
+    "✨",
+    "✨",
+    "✨",
+  ]);
+  const [partialEmojis, setPartialEmojis] = useState<string[]>([
+    "👌",
+    "👌",
+    "👌",
+  ]);
   const [timeLeft, setTimeLeft] = useState(TIMER_DURATION);
   const [isTimerRunning, setIsTimerRunning] = useState(false);
   const boopSound = useRef<HTMLAudioElement | null>(null);
@@ -253,7 +256,21 @@ export default function QuizPage({
   };
 
   const getRandomSuccessEmojis = () => {
-    const emojiOptions = ['⭐', '🌟', '✨', '💫', '📚', '📖', '📕', '📗', '📘', '🤓', '🐶', '🐕', '🦴'];
+    const emojiOptions = [
+      "⭐",
+      "🌟",
+      "✨",
+      "💫",
+      "📚",
+      "📖",
+      "📕",
+      "📗",
+      "📘",
+      "🤓",
+      "🐶",
+      "🐕",
+      "🦴",
+    ];
     const selected: string[] = [];
     for (let i = 0; i < 4; i++) {
       const randomIndex = Math.floor(Math.random() * emojiOptions.length);
@@ -263,7 +280,21 @@ export default function QuizPage({
   };
 
   const getRandomPartialEmojis = () => {
-    const emojiOptions = ['👍', '👏', '😊', '🙂', '💪', '📈', '⬆️', '🎯', '💛', '🌟', '☀️', '🔥', '👌'];
+    const emojiOptions = [
+      "👍",
+      "👏",
+      "😊",
+      "🙂",
+      "💪",
+      "📈",
+      "⬆️",
+      "🎯",
+      "💛",
+      "🌟",
+      "☀️",
+      "🔥",
+      "👌",
+    ];
     const selected: string[] = [];
     for (let i = 0; i < 3; i++) {
       const randomIndex = Math.floor(Math.random() * emojiOptions.length);
@@ -274,7 +305,12 @@ export default function QuizPage({
 
   const handleAnswer = (points: number) => {
     // Track the answer event
-    const answerType = points === 5 ? 'correct' : points === 3 ? 'partially_correct' : 'incorrect';
+    const answerType =
+      points === 5
+        ? "correct"
+        : points === 3
+        ? "partially_correct"
+        : "incorrect";
     const questionAnsweredData = {
       questionIndex: currentQuestionIndex,
       questionNumber: currentQuestionIndex + 1,
@@ -298,7 +334,7 @@ export default function QuizPage({
       setSuccessEmojis(getRandomSuccessEmojis());
       setAnimateScore(true);
       setShowSuccessAnimation(true);
-      setCardAnimationType('correct');
+      setCardAnimationType("correct");
       setTimeout(() => {
         setAnimateScore(false);
         setShowSuccessAnimation(false);
@@ -309,7 +345,7 @@ export default function QuizPage({
       setPartialEmojis(getRandomPartialEmojis());
       setAnimateScore(true);
       setShowPartialAnimation(true);
-      setCardAnimationType('partial');
+      setCardAnimationType("partial");
       setTimeout(() => {
         setAnimateScore(false);
         setShowPartialAnimation(false);
@@ -317,7 +353,7 @@ export default function QuizPage({
       }, 800);
     } else if (points === 0) {
       // Incorrect - red glow
-      setCardAnimationType('incorrect');
+      setCardAnimationType("incorrect");
       setTimeout(() => {
         setCardAnimationType(null);
       }, 800);
@@ -340,7 +376,7 @@ export default function QuizPage({
         newResults[currentQuestionIndex] = {
           question: currentQuestion,
           pointsAwarded: points,
-          team: waitingForSteal ? currentTeam : originalTeam,
+          team: originalTeam, // Always the original team that was assigned the question
           stolenBy: waitingForSteal ? currentTeam : undefined,
         };
         return newResults;
@@ -448,7 +484,8 @@ export default function QuizPage({
     const questionBackData = {
       fromQuestionIndex: currentQuestionIndex,
       fromQuestionNumber: currentQuestionIndex + 1,
-      toQuestionIndex: currentQuestionIndex > 0 ? currentQuestionIndex - 1 : null,
+      toQuestionIndex:
+        currentQuestionIndex > 0 ? currentQuestionIndex - 1 : null,
       toQuestionNumber: currentQuestionIndex > 0 ? currentQuestionIndex : null,
       quizMode,
       year,
@@ -569,7 +606,9 @@ export default function QuizPage({
                       <p className="font-medium">Question {index + 1}:</p>
                       <p className="text-sm text-gray-600">
                         {result.question.type === "in-which-book"
-                          ? `In which book ${lowercaseFirstChar(result.question.text)}`
+                          ? `In which book ${lowercaseFirstChar(
+                              result.question.text
+                            )}`
                           : `In ${result.question.book.title}: ${result.question.text}`}
                       </p>
                     </div>
@@ -625,21 +664,6 @@ export default function QuizPage({
             )}
           </h1>
 
-          {/* Team indicator for mock battles */}
-          {quizMode === "mock" && (
-            <div className="mb-4 text-center">
-              <div className={`inline-block text-white px-6 py-2 rounded-full font-bold text-lg shadow-lg ${
-                currentTeam === "A" ? "bg-purple-500" : "bg-cyan-400"
-              }`}>
-                {waitingForSteal ? (
-                  <span><span className="font-normal">{currentTeam === "A" ? <TeamALabel>Team A</TeamALabel> : <TeamBLabel>Team B</TeamBLabel>}</span> - Steal Opportunity!</span>
-                ) : (
-                  <span><span className="font-normal">{currentTeam === "A" ? <TeamALabel>Team A</TeamALabel> : <TeamBLabel>Team B</TeamBLabel>}</span>&apos;s Turn</span>
-                )}
-              </div>
-            </div>
-          )}
-
           <div className="w-full flex items-center justify-between gap-4 mb-2 px-1 relative z-50">
             <span className="text-lg font-semibold">
               Question: {currentQuestionIndex + 1}/{questions.length}
@@ -647,33 +671,51 @@ export default function QuizPage({
             <span className="text-lg font-semibold">
               {quizMode === "mock" ? (
                 <span>
-                  <TeamALabel>Team A</TeamALabel>: {calculateTeamScore("A")} | <TeamBLabel>Team B</TeamBLabel>: {calculateTeamScore("B")}
+                  <TeamALabel>Odds</TeamALabel>: {calculateTeamScore("A")} |{" "}
+                  <TeamBLabel>Evens</TeamBLabel>: {calculateTeamScore("B")}
                 </span>
               ) : (
                 <>
                   Score:
                   <span
                     className={`ml-2 inline-block relative z-50 ${
-                      showSuccessAnimation ? "animate-score-pop" :
-                      showPartialAnimation ? "animate-score-pop-partial" : ""
+                      showSuccessAnimation
+                        ? "animate-score-pop"
+                        : showPartialAnimation
+                        ? "animate-score-pop-partial"
+                        : ""
                     }`}
                   >
                     {calculateScore()}/{questions.length * 5}
                     {/* Sparkle particles for perfect answer */}
                     {showSuccessAnimation && (
                       <>
-                        <span className="absolute -top-2 -left-2 text-yellow-400 animate-sparkle-1 z-[9999]">{successEmojis[0]}</span>
-                        <span className="absolute -top-2 -right-2 text-yellow-400 animate-sparkle-2 z-[9999]">{successEmojis[1]}</span>
-                        <span className="absolute -bottom-2 -left-2 text-yellow-400 animate-sparkle-3 z-[9999]">{successEmojis[2]}</span>
-                        <span className="absolute -top-2 -right-2 text-yellow-400 animate-sparkle-4 z-[9999]">{successEmojis[3]}</span>
+                        <span className="absolute -top-2 -left-2 text-yellow-400 animate-sparkle-1 z-[9999]">
+                          {successEmojis[0]}
+                        </span>
+                        <span className="absolute -top-2 -right-2 text-yellow-400 animate-sparkle-2 z-[9999]">
+                          {successEmojis[1]}
+                        </span>
+                        <span className="absolute -bottom-2 -left-2 text-yellow-400 animate-sparkle-3 z-[9999]">
+                          {successEmojis[2]}
+                        </span>
+                        <span className="absolute -top-2 -right-2 text-yellow-400 animate-sparkle-4 z-[9999]">
+                          {successEmojis[3]}
+                        </span>
                       </>
                     )}
                     {/* Progress emoji particles for partial correct */}
                     {showPartialAnimation && (
                       <>
-                        <span className="absolute -top-2 -left-2 text-amber-500 animate-sparkle-1 z-[9999]">{partialEmojis[0]}</span>
-                        <span className="absolute -top-2 -right-2 text-amber-500 animate-sparkle-2 z-[9999]">{partialEmojis[1]}</span>
-                        <span className="absolute -bottom-2 -right-2 text-amber-500 animate-sparkle-4 z-[9999]">{partialEmojis[2]}</span>
+                        <span className="absolute -top-2 -left-2 text-amber-500 animate-sparkle-1 z-[9999]">
+                          {partialEmojis[0]}
+                        </span>
+                        <span className="absolute -top-2 -right-2 text-amber-500 animate-sparkle-2 z-[9999]">
+                          {partialEmojis[1]}
+                        </span>
+                        <span className="absolute -bottom-2 -right-2 text-amber-500 animate-sparkle-4 z-[9999]">
+                          {partialEmojis[2]}
+                        </span>
                       </>
                     )}
                   </span>
@@ -684,22 +726,68 @@ export default function QuizPage({
         </div>
       </div>
 
-      <Card className={`w-full max-w-xl mx-auto drop-shadow-md relative transition-all duration-300 ${
-        cardAnimationType === 'correct' ? "animate-card-success" :
-        cardAnimationType === 'partial' ? "animate-card-partial" :
-        cardAnimationType === 'incorrect' ? "animate-card-incorrect" : ""
-      }`}>
+      <Card
+        className={`w-full max-w-xl mx-auto drop-shadow-md relative transition-all duration-300 ${
+          cardAnimationType === "correct"
+            ? "animate-card-success"
+            : cardAnimationType === "partial"
+            ? "animate-card-partial"
+            : cardAnimationType === "incorrect"
+            ? "animate-card-incorrect"
+            : ""
+        }`}
+      >
         <CardContent className="p-5 mb-0">
           <div className="">
             <div>
               <p className="text-xl mb-4">
                 {currentQuestion.type === "in-which-book" ? (
                   <span>
+                    {quizMode === "mock" && (
+                      <>
+                        <span
+                          className={
+                            currentTeam === "A"
+                              ? "text-pink-500 font-bold"
+                              : "text-lime-500 font-bold"
+                          }
+                        >
+                          {currentTeam === "A" ? "Odds" : "Evens"}
+                        </span>
+                        {waitingForSteal && (
+                          <span className="text-black">
+                            {" "}
+                            (<span className="text-red-500">steal</span>)
+                          </span>
+                        )}
+                        <span className="text-black">: </span>
+                      </>
+                    )}
                     <span className="font-bold">In which book </span>
                     {lowercaseFirstChar(currentQuestion.text)}
                   </span>
                 ) : (
                   <span>
+                    {quizMode === "mock" && (
+                      <>
+                        <span
+                          className={
+                            currentTeam === "A"
+                              ? "text-pink-500 font-bold"
+                              : "text-lime-500 font-bold"
+                          }
+                        >
+                          {currentTeam === "A" ? "Odds" : "Evens"}
+                        </span>
+                        {waitingForSteal && (
+                          <span className="text-black">
+                            {" "}
+                            (<span className="text-red-500">steal</span>)
+                          </span>
+                        )}
+                        <span className="text-black">: </span>
+                      </>
+                    )}
                     In{" "}
                     <span className="font-bold">
                       {currentQuestion.book.title}
@@ -763,7 +851,8 @@ export default function QuizPage({
               </div>
             )}
             {((quizMode === "personal" && showAnswer) ||
-              ((quizMode === "friend" || quizMode === "mock") && (showAnswer || isTimerRunning))) && (
+              ((quizMode === "friend" || quizMode === "mock") &&
+                (showAnswer || isTimerRunning))) && (
               <div className="bg-slate-100 p-3 rounded-md my-4">
                 <p className="text-lg font-medium">
                   {currentQuestion.type === "in-which-book" ? (
@@ -818,7 +907,8 @@ export default function QuizPage({
             </Button>
           ) : (
             (quizMode === "personal" ||
-              ((quizMode === "friend" || quizMode === "mock") && (isTimerRunning || showAnswer))) && (
+              ((quizMode === "friend" || quizMode === "mock") &&
+                (isTimerRunning || showAnswer))) && (
               <div className="flex flex-col sm:flex-row justify-between space-y-2 sm:space-y-0 sm:space-x-4 w-full">
                 <Button
                   onClick={() => handleAnswer(5)}

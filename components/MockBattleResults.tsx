@@ -33,17 +33,17 @@ function lowercaseFirstChar(str: string): string {
 // Helper components for colored team labels
 function TeamALabel({ children }: { children: React.ReactNode }) {
   return (
-    <WavyUnderline style={0} thickness={2} color="text-purple-500">
+    <span className="text-pink-500 font-semibold">
       {children}
-    </WavyUnderline>
+    </span>
   );
 }
 
 function TeamBLabel({ children }: { children: React.ReactNode }) {
   return (
-    <WavyUnderline style={0} thickness={2} color="text-cyan-400">
+    <span className="text-lime-500 font-semibold">
       {children}
-    </WavyUnderline>
+    </span>
   );
 }
 
@@ -90,7 +90,7 @@ export default function MockBattleResults({
               <div className="flex items-center justify-center gap-2 mb-4">
                 <Trophy className="h-12 w-12 text-yellow-500" />
                 <h2 className="text-3xl font-bold text-green-600">
-                  {winner === "A" ? <TeamALabel>Team A</TeamALabel> : <TeamBLabel>Team B</TeamBLabel>} Wins!
+                  {winner === "A" ? <TeamALabel>Odds</TeamALabel> : <TeamBLabel>Evens</TeamBLabel>} Win!
                 </h2>
                 <Trophy className="h-12 w-12 text-yellow-500" />
               </div>
@@ -108,9 +108,8 @@ export default function MockBattleResults({
                   : "bg-gray-50 border-gray-300"
               }`}
             >
-              <h3 className="text-xl font-bold text-center mb-2"><TeamALabel>Team A</TeamALabel></h3>
+              <h3 className="text-xl font-bold text-center mb-2"><TeamALabel>Odds</TeamALabel></h3>
               <p className="text-4xl font-bold text-center">{teamAScore}</p>
-              <p className="text-sm text-center text-gray-600">out of {maxScore}</p>
             </div>
             <div
               className={`p-6 rounded-lg border-4 ${
@@ -121,9 +120,8 @@ export default function MockBattleResults({
                   : "bg-gray-50 border-gray-300"
               }`}
             >
-              <h3 className="text-xl font-bold text-center mb-2"><TeamBLabel>Team B</TeamBLabel></h3>
+              <h3 className="text-xl font-bold text-center mb-2"><TeamBLabel>Evens</TeamBLabel></h3>
               <p className="text-4xl font-bold text-center">{teamBScore}</p>
-              <p className="text-sm text-center text-gray-600">out of {maxScore}</p>
             </div>
           </div>
 
@@ -145,7 +143,7 @@ export default function MockBattleResults({
             <h3 className="font-semibold text-lg">Battle review:</h3>
             {questionResults.map((result, index) => {
               const displayTeam = result.stolenBy || result.team;
-              const wasStolen = !!result.stolenBy;
+              const wasStolen = !!result.stolenBy && result.pointsAwarded > 0;
 
               return (
                 <div key={index} className="border rounded-lg p-4 space-y-2">
@@ -154,9 +152,9 @@ export default function MockBattleResults({
                       <div className="flex items-center gap-2 mb-1">
                         <p className="font-medium">Question {index + 1}:</p>
                         <span className="text-sm font-semibold">
-                          {result.team === "A" ? <TeamALabel>Team A</TeamALabel> : <TeamBLabel>Team B</TeamBLabel>}
+                          {result.team === "A" ? <TeamALabel>Odds</TeamALabel> : <TeamBLabel>Evens</TeamBLabel>}
                           {wasStolen && (
-                            <span className="text-green-600"> → Stolen by {displayTeam === "A" ? <TeamALabel>Team A</TeamALabel> : <TeamBLabel>Team B</TeamBLabel>}!</span>
+                            <span className="text-green-600"> → Stolen by {result.stolenBy === "A" ? <TeamALabel>Odds</TeamALabel> : <TeamBLabel>Evens</TeamBLabel>}!</span>
                           )}
                         </span>
                       </div>
