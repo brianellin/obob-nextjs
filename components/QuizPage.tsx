@@ -196,7 +196,7 @@ export default function QuizPage({
   useEffect(() => {
     if (quizFinished) {
       console.log("tracking battleFinished");
-      const battleFinishedData = {
+      const battleFinishedData: Record<string, any> = {
         quizMode,
         questionCount,
         questionType,
@@ -206,11 +206,24 @@ export default function QuizPage({
         score: calculateScore(),
         possibleScore: questions.length * 5,
       };
+
+      // Add mock battle specific data
+      if (quizMode === "mock") {
+        const teamAScore = calculateTeamScore("A");
+        const teamBScore = calculateTeamScore("B");
+        const winner = teamAScore > teamBScore ? "A" : teamBScore > teamAScore ? "B" : "tie";
+
+        battleFinishedData.stealsEnabled = stealsEnabled;
+        battleFinishedData.teamAScore = teamAScore;
+        battleFinishedData.teamBScore = teamBScore;
+        battleFinishedData.winner = winner;
+      }
+
       track("battleFinished", battleFinishedData);
       posthog.capture("battleFinished", battleFinishedData);
     } else {
       console.log("tracking battleStarted");
-      const battleStartedData = {
+      const battleStartedData: Record<string, any> = {
         quizMode,
         questionCount,
         questionType,
@@ -218,6 +231,12 @@ export default function QuizPage({
         division,
         numBooks: selectedBooks.length,
       };
+
+      // Add mock battle specific data
+      if (quizMode === "mock") {
+        battleStartedData.stealsEnabled = stealsEnabled;
+      }
+
       track("battleStarted", battleStartedData);
       posthog.capture("battleStarted", battleStartedData);
     }
@@ -363,11 +382,50 @@ export default function QuizPage({
     if (quizMode === "mock") {
       if (points === 0 && !waitingForSteal && stealsEnabled) {
         // Incorrect answer - stop timer and offer steal opportunity to other team (only if steals enabled)
+        const stealingTeam = currentTeam === "A" ? "B" : "A";
+
+        // Track steal opportunity
+        const stealOpportunityData = {
+          questionIndex: currentQuestionIndex,
+          questionNumber: currentQuestionIndex + 1,
+          questionType: currentQuestion.type,
+          bookKey: currentQuestion.book.book_key,
+          originalTeam: currentTeam,
+          stealingTeam,
+          quizMode,
+          year,
+          division,
+        };
+        console.log("tracking stealOpportunity", stealOpportunityData);
+        track("stealOpportunity", stealOpportunityData);
+        posthog.capture("stealOpportunity", stealOpportunityData);
+
         setIsTimerRunning(false);
         setTimeLeft(TIMER_DURATION);
         setWaitingForSteal(true);
-        setCurrentTeam(currentTeam === "A" ? "B" : "A");
+        setCurrentTeam(stealingTeam);
         return; // Don't advance yet
+      }
+
+      // Track steal attempt if this was a steal opportunity
+      if (waitingForSteal) {
+        const stealSuccess = points > 0;
+        const stealAttemptData = {
+          questionIndex: currentQuestionIndex,
+          questionNumber: currentQuestionIndex + 1,
+          questionType: currentQuestion.type,
+          bookKey: currentQuestion.book.book_key,
+          originalTeam,
+          stealingTeam: currentTeam,
+          stealSuccess,
+          pointsAwarded: points,
+          quizMode,
+          year,
+          division,
+        };
+        console.log("tracking stealAttempt", stealAttemptData);
+        track("stealAttempt", stealAttemptData);
+        posthog.capture("stealAttempt", stealAttemptData);
       }
 
       // Record the result with team information
