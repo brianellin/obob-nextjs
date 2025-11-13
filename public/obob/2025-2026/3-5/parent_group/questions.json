@@ -13449,7 +13449,7 @@
     },
     {
       "type": "in-which-book",
-      "text": "In which book, does thieves steal lumbar?",
+      "text": "do thieves steal lumber?",
       "book_key": "just-like-click",
       "page": 30
     },
@@ -22312,9 +22312,9 @@
     },
     {
       "type": "content",
-      "text": "What are one of the earliest flowers to bloom according to The_Secret_Garden?",
+      "text": "What are one of the earliest flowers to bloom?",
       "book_key": "the-secret-garden-on-81st-street",
-      "answer": "irises",
+      "answer": "Irises",
       "page": 169
     },
     {
@@ -22410,7 +22410,7 @@
     },
     {
       "type": "content",
-      "text": "What is Uncle Archies assistants name?",
+      "text": "What is Uncle Archie's assistant's name?",
       "book_key": "the-secret-garden-on-81st-street",
       "answer": "Mrs. Medlock",
       "page": 6
@@ -24771,7 +24771,7 @@
     },
     {
       "type": "content",
-      "text": "what does Emily anf mom use to catch Mr. Beeston?",
+      "text": "what does Emily and mom use to catch Mr. Beeston?",
       "book_key": "the-tail-of-emily-windsnap",
       "answer": "Fishing Net",
       "page": 154
