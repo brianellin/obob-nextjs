@@ -170,18 +170,15 @@ export default function QuizPage({
           if (prevTime <= 1) {
             clearInterval(timerRef.current as NodeJS.Timeout);
             setIsTimerRunning(false);
-            // For mock battles, don't auto-show answer - let moderator decide
-            if (quizMode !== "mock") {
-              setShowAnswer(true);
-            }
+            // Show answer when timer runs out so moderator can see it and score
+            setShowAnswer(true);
             boopSound.current?.play();
             return 0;
           }
           return prevTime - 1;
         });
       }, 1000);
-    } else if (timeLeft === 0 && quizMode !== "mock") {
-      // For mock battles, don't auto-show answer
+    } else if (timeLeft === 0) {
       setIsTimerRunning(false);
       setShowAnswer(true);
     }
@@ -631,11 +628,13 @@ export default function QuizPage({
           {/* Team indicator for mock battles */}
           {quizMode === "mock" && (
             <div className="mb-4 text-center">
-              <div className="inline-block bg-gradient-to-r from-blue-500 to-green-500 text-white px-6 py-2 rounded-full font-bold text-lg shadow-lg">
+              <div className={`inline-block text-white px-6 py-2 rounded-full font-bold text-lg shadow-lg ${
+                currentTeam === "A" ? "bg-purple-500" : "bg-cyan-400"
+              }`}>
                 {waitingForSteal ? (
-                  <span>{currentTeam === "A" ? <TeamALabel>Team A</TeamALabel> : <TeamBLabel>Team B</TeamBLabel>} - Steal Opportunity!</span>
+                  <span><span className="font-normal">{currentTeam === "A" ? <TeamALabel>Team A</TeamALabel> : <TeamBLabel>Team B</TeamBLabel>}</span> - Steal Opportunity!</span>
                 ) : (
-                  <span>{currentTeam === "A" ? <TeamALabel>Team A</TeamALabel> : <TeamBLabel>Team B</TeamBLabel>}&apos;s Turn</span>
+                  <span><span className="font-normal">{currentTeam === "A" ? <TeamALabel>Team A</TeamALabel> : <TeamBLabel>Team B</TeamBLabel>}</span>&apos;s Turn</span>
                 )}
               </div>
             </div>
