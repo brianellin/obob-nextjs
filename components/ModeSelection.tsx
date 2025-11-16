@@ -77,13 +77,13 @@ export default function ModeSelection({ year, division }: ModeSelectionProps) {
             </Badge>
           </div>
           <CardDescription>
-            Moderate a live in-person battle between two teams
+            Coaches and parents this one is for you!
           </CardDescription>
         </CardHeader>
         <CardContent>
           <p>
-            Run a realistic battle between two teams with timed questions,
-            scoring, and steal opportunities.
+            Moderate a live in-person battle between two teams with timed
+            questions, scoring, and steals.
           </p>
         </CardContent>
         <CardFooter>
