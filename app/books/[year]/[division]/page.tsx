@@ -10,6 +10,7 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import { getAllQuestions } from "@/lib/questions";
 import { notFound } from "next/navigation";
 import { BookOpen, Download } from "lucide-react";
+import type { Metadata } from "next";
 
 type Props = {
   params: Promise<{
@@ -17,6 +18,89 @@ type Props = {
     division: string;
   }>;
 };
+
+function getDivisionName(division: string): string {
+  switch (division) {
+    case "3-5":
+      return "Elementary";
+    case "6-8":
+      return "Middle School";
+    case "9-12":
+      return "High School";
+    default:
+      return division;
+  }
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const resolvedParams = await params;
+  const { year, division } = resolvedParams;
+
+  // Validate parameters
+  if (
+    !year ||
+    !division ||
+    !["2024-2025", "2025-2026"].includes(year) ||
+    !["3-5", "6-8", "9-12"].includes(division)
+  ) {
+    return {
+      title: "Books Not Found | OBOB",
+      description: "The requested division could not be found.",
+    };
+  }
+
+  try {
+    const booksStats = await getBooksWithStats(year, division);
+
+    if (!booksStats || booksStats.length === 0) {
+      return {
+        title: "Books Not Found | OBOB",
+        description: "No books found for this division.",
+      };
+    }
+
+    const divisionName = getDivisionName(division);
+    const bookCount = booksStats.length;
+
+    // Calculate total questions
+    let totalQuestions = 0;
+    for (const bookStat of booksStats) {
+      if (bookStat?.totalQuestions) {
+        totalQuestions += bookStat.totalQuestions;
+      }
+    }
+
+    const title = `OBOB ${year} ${divisionName} (${division}) - ${bookCount} Books`;
+    const description = `Browse ${bookCount} books and practice ${totalQuestions.toLocaleString()} OBOB questions for the ${year} ${divisionName} division. View questions by book, download practice sets, and start battles.`;
+    const url = `https://obob.dog/books/${year}/${division}`;
+
+    return {
+      title,
+      description,
+      alternates: {
+        canonical: url,
+      },
+      openGraph: {
+        type: "website",
+        url,
+        title,
+        description,
+        siteName: "OBOB.dog",
+      },
+      twitter: {
+        card: "summary",
+        title,
+        description,
+      },
+    };
+  } catch (error) {
+    console.error("Error generating metadata:", error);
+    return {
+      title: "Books Not Found | OBOB",
+      description: "The requested division could not be found.",
+    };
+  }
+}
 
 export function generateStaticParams() {
   return [

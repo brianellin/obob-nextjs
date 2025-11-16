@@ -19,15 +19,19 @@ type BookSelectionProps = {
   ) => void;
   year: string;
   division: string;
+  preselectBookKey?: string;
 };
 
 export default function BookSelection({
   onSelectBooks,
   year,
   division,
+  preselectBookKey,
 }: BookSelectionProps) {
   const [books, setBooks] = useState<Books>({});
-  const [selectedBookKeys, setSelectedBookKeys] = useState<string[]>([]);
+  const [selectedBookKeys, setSelectedBookKeys] = useState<string[]>(
+    preselectBookKey ? [preselectBookKey] : []
+  );
   const [isMobile, setIsMobile] = useState(false);
   const [questionCount, setQuestionCount] = useState<string>("8");
   const [questionType, setQuestionType] = useState<QuestionType>("both");

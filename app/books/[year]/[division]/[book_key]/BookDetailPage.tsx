@@ -8,7 +8,16 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { Input } from "@/components/ui/input";
-import { ChevronLeft, ChevronRight, ArrowLeft, Plus, Download } from "lucide-react";
+import {
+  ChevronLeft,
+  ChevronRight,
+  ArrowLeft,
+  Plus,
+  Download,
+  Swords,
+  User,
+  Users,
+} from "lucide-react";
 import { Book, Question } from "@/types";
 import { QuestionHeatmapInline } from "@/components/QuestionHeatmapInline";
 import QuestionSubmissionForm from "@/components/QuestionSubmissionForm";
@@ -230,6 +239,30 @@ export default function BookDetailPage({
                 <Badge variant="secondary" className="mt-2">
                   {year} • Division {division}
                 </Badge>
+              </div>
+
+              <Separator />
+
+              {/* Battle CTAs */}
+              <div className="flex flex-col sm:flex-row gap-3">
+                <Link
+                  href={`/battle/${year}/${division}?mode=personal&preselect=${book.book_key}`}
+                  className="flex-1"
+                >
+                  <Button className="w-full" size="lg" variant="default">
+                    <User className="h-5 w-5 mr-2" />
+                    Practice Solo
+                  </Button>
+                </Link>
+                <Link
+                  href={`/battle/${year}/${division}?mode=friend&preselect=${book.book_key}`}
+                  className="flex-1"
+                >
+                  <Button className="w-full" size="lg" variant="default">
+                    <Users className="h-5 w-5 mr-2" />
+                    Battle with Friend
+                  </Button>
+                </Link>
               </div>
 
               <Separator />

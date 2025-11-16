@@ -47,11 +47,18 @@ function BattleContent() {
   const [quizStarted, setQuizStarted] = useState(false);
   const [questionCount, setQuestionCount] = useState<number>(16);
   const [questionType, setQuestionType] = useState<QuestionType>("both");
+  const [preselectBookKey, setPreselectBookKey] = useState<string | undefined>(
+    undefined
+  );
 
   useEffect(() => {
     const mode = searchParams.get("mode") as "personal" | "friend" | null;
+    const preselect = searchParams.get("preselect");
     if (mode) {
       setQuizMode(mode);
+    }
+    if (preselect) {
+      setPreselectBookKey(preselect);
     }
   }, [searchParams]);
 
@@ -100,6 +107,7 @@ function BattleContent() {
         onSelectBooks={handleSelectBooks}
         year={year}
         division={division}
+        preselectBookKey={preselectBookKey}
       />
     );
   }
