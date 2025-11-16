@@ -235,19 +235,26 @@ export default async function BooksPage({ params }: Props) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
       <div className="container mx-auto px-4 py-8 space-y-8">
-        <div className="flex items-center justify-between gap-2 md:gap-4">
-          <h1 className="text-3xl md:text-4xl font-bold">
-            OBOB {year} Division {division}
-          </h1>
-          <a
-            href={`/exports/${year}/${division}/obob-${year}-${division}-all-questions.csv`}
-            download
-          >
-            <Button variant="outline" size="sm">
-              <Download className="h-4 w-4 md:mr-2" />
-              <span className="hidden md:inline">Download All Questions</span>
-            </Button>
-          </a>
+        <div className="flex flex-col gap-2">
+          <div className="flex items-center justify-between gap-2 md:gap-4">
+            <div>
+              <h1 className="text-3xl md:text-4xl font-bold">
+                OBOB {year} {divisionName}
+              </h1>
+              <p className="text-muted-foreground mt-1">
+                Division {division} • {booksStats.length} Books
+              </p>
+            </div>
+            <a
+              href={`/exports/${year}/${division}/obob-${year}-${division}-all-questions.csv`}
+              download
+            >
+              <Button variant="outline" size="sm">
+                <Download className="h-4 w-4 md:mr-2" />
+                <span className="hidden md:inline">Download All Questions</span>
+              </Button>
+            </a>
+          </div>
         </div>
 
         {/* Battle CTA Section */}
