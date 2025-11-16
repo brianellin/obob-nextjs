@@ -9,7 +9,7 @@ import { Separator } from "@/components/ui/separator";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { getAllQuestions } from "@/lib/questions";
 import { notFound } from "next/navigation";
-import { BookOpen, Download } from "lucide-react";
+import { BookOpen, Download, User, Users, Swords } from "lucide-react";
 import type { Metadata } from "next";
 
 type Props = {
@@ -177,22 +177,110 @@ export default async function BooksPage({ params }: Props) {
     bySource: sourceCount,
   };
 
+  // Create JSON-LD ItemList schema
+  const divisionName = getDivisionName(division);
+  const itemListJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: `OBOB ${year} ${divisionName} Books`,
+    description: `Complete list of ${booksStats.length} books for the ${year} ${divisionName} division`,
+    numberOfItems: booksStats.length,
+    itemListElement: booksStats.map((bookStat, index) => ({
+      "@type": "Book",
+      position: index + 1,
+      name: bookStat.book.title,
+      author: {
+        "@type": "Person",
+        name: bookStat.book.author,
+      },
+      image: `https://obob.dog${bookStat.book.cover}`,
+      url: `https://obob.dog/books/${year}/${division}/${bookStat.book.book_key}`,
+    })),
+  };
+
+  // Create breadcrumb JSON-LD
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://obob.dog",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Books",
+        item: "https://obob.dog/books",
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: `${year} ${divisionName}`,
+        item: `https://obob.dog/books/${year}/${division}`,
+      },
+    ],
+  };
+
   return (
-    <div className="container mx-auto px-4 py-8 space-y-8">
-      <div className="flex items-center justify-between gap-2 md:gap-4">
-        <h1 className="text-3xl md:text-4xl font-bold">
-          OBOB {year} Division {division}
-        </h1>
-        <a
-          href={`/exports/${year}/${division}/obob-${year}-${division}-all-questions.csv`}
-          download
-        >
-          <Button variant="outline" size="sm">
-            <Download className="h-4 w-4 md:mr-2" />
-            <span className="hidden md:inline">Download All Questions</span>
-          </Button>
-        </a>
-      </div>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <div className="container mx-auto px-4 py-8 space-y-8">
+        <div className="flex items-center justify-between gap-2 md:gap-4">
+          <h1 className="text-3xl md:text-4xl font-bold">
+            OBOB {year} Division {division}
+          </h1>
+          <a
+            href={`/exports/${year}/${division}/obob-${year}-${division}-all-questions.csv`}
+            download
+          >
+            <Button variant="outline" size="sm">
+              <Download className="h-4 w-4 md:mr-2" />
+              <span className="hidden md:inline">Download All Questions</span>
+            </Button>
+          </a>
+        </div>
+
+        {/* Battle CTA Section */}
+        <Card className="bg-gradient-to-r from-purple-50 to-cyan-50 border-2 border-purple-200">
+          <CardContent className="p-6">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+              <div className="flex-1 text-center md:text-left">
+                <h2 className="text-2xl font-bold mb-2 flex items-center justify-center md:justify-start gap-2">
+                  <Swords className="h-6 w-6 text-purple-600" />
+                  Ready to Battle?
+                </h2>
+                <p className="text-muted-foreground">
+                  Practice with all {booksStats.length} books from the {year}{" "}
+                  {divisionName} division
+                </p>
+              </div>
+              <div className="flex flex-col sm:flex-row gap-3">
+                <Link href={`/battle/${year}/${division}?mode=personal`}>
+                  <Button size="lg" variant="default" className="w-full sm:w-auto">
+                    <User className="h-5 w-5 mr-2" />
+                    Practice Solo
+                  </Button>
+                </Link>
+                <Link href={`/battle/${year}/${division}?mode=friend`}>
+                  <Button size="lg" variant="default" className="w-full sm:w-auto">
+                    <Users className="h-5 w-5 mr-2" />
+                    Battle with Friend
+                  </Button>
+                </Link>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
 
       {/* Summary Statistics Section */}
       <Card>
@@ -336,5 +424,6 @@ export default async function BooksPage({ params }: Props) {
         ))}
       </div>
     </div>
+    </>
   );
 }
