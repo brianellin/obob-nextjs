@@ -7,6 +7,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 import { User, Users, Trophy } from "lucide-react";
 import Link from "next/link";
 
@@ -17,7 +18,7 @@ type ModeSelectionProps = {
 
 export default function ModeSelection({ year, division }: ModeSelectionProps) {
   return (
-    <div className="space-y-8 max-w-3xl mx-auto">
+    <div className="space-y-8 max-w-2xl mx-auto">
       <div className="flex gap-4 flex-col md:flex-row">
         <Card>
           <CardHeader>
@@ -66,33 +67,37 @@ export default function ModeSelection({ year, division }: ModeSelectionProps) {
             </Link>
           </CardFooter>
         </Card>
-        {/* Temporarily hidden - will bring back later */}
-        {/* <Card>
-          <CardHeader>
-            <CardTitle>Mock battle</CardTitle>
-            <CardDescription>
-              Moderate a live in-person battle between two teams
-            </CardDescription>
-          </CardHeader>
-          <CardContent>
-            <p>
-              Run a realistic battle between Odds and Evens with timed questions,
-              scoring, and steal opportunities.
-            </p>
-          </CardContent>
-          <CardFooter>
-            <Link
-              href={`/mock-battle/${year}/${division}`}
-              passHref
-              className="w-full"
-            >
-              <Button className="w-full bg-orange-500 hover:bg-orange-600 text-white transition-colors">
-                <Trophy className="mr-2 h-4 w-4" /> Play mock battle
-              </Button>
-            </Link>
-          </CardFooter>
-        </Card> */}
       </div>
+      <Card>
+        <CardHeader>
+          <div className="flex items-center gap-2">
+            <CardTitle>Mock battle</CardTitle>
+            <Badge className="bg-orange-500 hover:bg-orange-500 text-white">
+              New!
+            </Badge>
+          </div>
+          <CardDescription>
+            Moderate a live in-person battle between two teams
+          </CardDescription>
+        </CardHeader>
+        <CardContent>
+          <p>
+            Run a realistic battle between two teams with timed questions,
+            scoring, and steal opportunities.
+          </p>
+        </CardContent>
+        <CardFooter>
+          <Link
+            href={`/mock-battle/${year}/${division}`}
+            passHref
+            className="w-full"
+          >
+            <Button className="w-full bg-orange-500 hover:bg-orange-600 text-white transition-colors">
+              <Trophy className="mr-2 h-4 w-4" /> Moderate a mock battle
+            </Button>
+          </Link>
+        </CardFooter>
+      </Card>
     </div>
   );
 }
