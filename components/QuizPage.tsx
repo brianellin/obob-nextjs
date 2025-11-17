@@ -15,6 +15,7 @@ import { track } from "@vercel/analytics";
 import { usePostHog } from "posthog-js/react";
 import QuestionFeedback from "./QuestionFeedback";
 import QuestionFeedbackForm from "./QuestionFeedbackForm";
+import QuestionReload from "./QuestionReload";
 import MockBattleResults from "./MockBattleResults";
 import {
   Popover,
@@ -127,6 +128,7 @@ export default function QuizPage({
   const { toast } = useToast();
   const { width, height } = useWindowSize();
   const [showFeedbackForm, setShowFeedbackForm] = useState(false);
+  const [reloadingQuestion, setReloadingQuestion] = useState(false);
 
   // Mock battle state
   const [currentTeam, setCurrentTeam] = useState<"A" | "B">("A");
@@ -564,6 +566,80 @@ export default function QuizPage({
     }
   };
 
+  const handleReloadQuestion = async () => {
+    try {
+      setReloadingQuestion(true);
+
+      // Track reload event
+      const questionReloadData = {
+        questionIndex: currentQuestionIndex,
+        questionNumber: currentQuestionIndex + 1,
+        questionType: currentQuestion.type,
+        bookKey: currentQuestion.book.book_key,
+        bookTitle: currentQuestion.book.title,
+        bookAuthor: currentQuestion.book.author,
+        page: currentQuestion.page ?? 0,
+        quizMode,
+        year,
+        division,
+      };
+      console.log("tracking questionReload", questionReloadData);
+      track("questionReload", questionReloadData);
+      posthog.capture("questionReload", questionReloadData);
+
+      const response = await fetch("/api/questions/reload", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          year,
+          division,
+          questionType,
+          selectedBooks,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to reload question");
+      }
+
+      const data = await response.json();
+
+      // Replace the current question in the questions array
+      setQuestions((prevQuestions) => {
+        const newQuestions = [...prevQuestions];
+        newQuestions[currentQuestionIndex] = data.question;
+        return newQuestions;
+      });
+
+      // Reset question state
+      setShowAnswer(false);
+      setIsTimerRunning(false);
+      setTimeLeft(TIMER_DURATION);
+      setShowFeedbackForm(false);
+
+      // Reset mock battle state if applicable
+      if (quizMode === "mock") {
+        setWaitingForSteal(false);
+      }
+
+      toast({
+        title: "Question reloaded",
+        description: "A new question has been loaded.",
+      });
+    } catch (error) {
+      console.error("Error reloading question:", error);
+      toast({
+        title: "Error",
+        description: "Failed to reload question. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setReloadingQuestion(false);
+    }
+  };
+
   if (loading) {
     return (
       <div className="h-screen flex items-center justify-center">
@@ -991,7 +1067,7 @@ export default function QuizPage({
           )}
           <div>
             <div className="flex items-center justify-between mt-4">
-              {/* Invisible spacer to balance the flag on the right */}
+              {/* Invisible spacer to balance the icons on the right */}
               <div className="w-6"></div>
 
               {/* Centered source text */}
@@ -1017,10 +1093,18 @@ export default function QuizPage({
                 )}
               </div>
 
-              {/* Flag on the right */}
-              <QuestionFeedback
-                onClick={() => setShowFeedbackForm(!showFeedbackForm)}
-              />
+              {/* Reload and Flag buttons on the right */}
+              <div className="flex items-center gap-1">
+                {quizMode === "mock" && (
+                  <QuestionReload
+                    onClick={handleReloadQuestion}
+                    disabled={reloadingQuestion}
+                  />
+                )}
+                <QuestionFeedback
+                  onClick={() => setShowFeedbackForm(!showFeedbackForm)}
+                />
+              </div>
             </div>
 
             {/* Feedback Form below source section */}
