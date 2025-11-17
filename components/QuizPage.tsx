@@ -595,7 +595,7 @@ export default function QuizPage({
         body: JSON.stringify({
           year,
           division,
-          questionType,
+          questionType: currentQuestion.type, // Use the current question's type, not the overall quiz type
           selectedBooks,
         }),
       });
