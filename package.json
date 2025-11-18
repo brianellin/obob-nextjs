@@ -16,7 +16,8 @@
     "analyze-duplicates": "npx tsx scripts/analyze-duplicates.ts",
     "remove-duplicates": "npx tsx scripts/remove-duplicate-questions.ts",
     "generate-counts": "npx tsx scripts/generate-question-counts.ts",
-    "generate-exports": "npx tsx scripts/generate-question-exports.ts"
+    "generate-exports": "npx tsx scripts/generate-question-exports.ts",
+    "import-reviewed": "npx tsx scripts/import-reviewed-questions.ts"
   },
   "dependencies": {
     "@radix-ui/react-checkbox": "^1.3.3",
