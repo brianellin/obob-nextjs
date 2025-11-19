@@ -4652,7 +4652,7 @@
     },
     {
       "type": "in-which-book",
-      "text": "does a character wear clothing tha looks like a cat burglar outfit?",
+      "text": "does a character wear clothing that looks like a cat burglar outfit?",
       "book_key": "escape-from-mr-lemoncellos-library",
       "page": 244
     },
@@ -10101,7 +10101,7 @@
     },
     {
       "type": "in-which-book",
-      "text": "does someone bath 4 times a day?",
+      "text": "does someone bathe 4 times a day?",
       "book_key": "hatchet",
       "page": 89
     },
@@ -13130,7 +13130,7 @@
     },
     {
       "type": "content",
-      "text": "How many chews does Ha say it takes to swallow a bite of pappaya?",
+      "text": "How many chews does Ha say it takes to swallow a bite of papaya?",
       "book_key": "inside-out-and-back-again",
       "answer": "Three",
       "page": 21
@@ -14492,7 +14492,7 @@
       "type": "content",
       "text": "What does Nick use to train Doogy not to bark?",
       "book_key": "just-like-click",
-      "answer": "Beef Jerkey",
+      "answer": "Beef Jerky",
       "page": 110
     },
     {
@@ -15571,7 +15571,7 @@
     },
     {
       "type": "content",
-      "text": "What is the name of the middle school Evans fifth grade class visits?",
+      "text": "What is the name of the middle school Evan's fifth grade class visits?",
       "book_key": "the-lost-library",
       "answer": "Grantville Middle School",
       "page": 25
@@ -16460,7 +16460,7 @@
     },
     {
       "type": "in-which-book",
-      "text": "does a character have the problem of no longer feeling just one things at a time?",
+      "text": "does a character have the problem of no longer feeling just one thing at a time?",
       "book_key": "the-million-dollar-race",
       "page": 91
     },
@@ -17690,7 +17690,7 @@
     },
     {
       "type": "in-which-book",
-      "text": "is do characters sprawl on a living room and play with paper dolls?",
+      "text": "do characters sprawl out on living room floor and play with paper dolls?",
       "book_key": "number-the-stars",
       "page": 27
     },
