@@ -3,7 +3,7 @@
 import React, { useState, useEffect, Suspense } from "react";
 import { useRouter, useParams } from "next/navigation";
 import QuizPage from "@/components/QuizPage";
-import { Loader2, Trophy, Clock, Zap } from "lucide-react";
+import { Loader2, Trophy, Clock, Zap, Microscope, Award } from "lucide-react";
 import type { Book } from "@/types";
 import { useToast } from "@/hooks/use-toast";
 import {
@@ -30,7 +30,7 @@ function MockBattleContent() {
   const [loading, setLoading] = useState(true);
   const [showSettings, setShowSettings] = useState(true);
   const [stealsEnabled, setStealsEnabled] = useState(true);
-  const [battleMode, setBattleMode] = useState<"mini" | "regular">("regular");
+  const [battleMode, setBattleMode] = useState<"micro" | "mini" | "regular">("regular");
 
   // Validate parameters
   useEffect(() => {
@@ -140,7 +140,7 @@ function MockBattleContent() {
 
             <div>
               <h3 className="font-semibold text-base mb-3">Battle length:</h3>
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div
                   onClick={() => setBattleMode("regular")}
                   className={`cursor-pointer rounded-lg border-2 p-4 transition-all ${
@@ -149,13 +149,16 @@ function MockBattleContent() {
                       : "border-gray-200 bg-white hover:border-gray-300"
                   }`}
                 >
-                  <h4 className="font-semibold text-lg mb-2">Regular Battle</h4>
+                  <div className="flex items-center gap-2 mb-2">
+                    <h4 className="font-semibold text-lg">Regular</h4>
+                    <Award className="h-5 w-5 text-orange-500" />
+                  </div>
                   <p className="text-sm text-gray-600 mb-1">
                     16 questions, 8 per team
                   </p>
                   <div className="flex items-center text-sm text-gray-600">
                     <Clock className="h-4 w-4 mr-1" />
-                    7-10 minutes
+                    7-10 min
                   </div>
                 </div>
                 <div
@@ -167,7 +170,7 @@ function MockBattleContent() {
                   }`}
                 >
                   <div className="flex items-center gap-2 mb-2">
-                    <h4 className="font-semibold text-lg">Mini Battle</h4>
+                    <h4 className="font-semibold text-lg">Mini</h4>
                     <Zap className="h-5 w-5 text-orange-500" />
                   </div>
                   <p className="text-sm text-gray-600 mb-1">
@@ -175,7 +178,27 @@ function MockBattleContent() {
                   </p>
                   <div className="flex items-center text-sm text-gray-600">
                     <Clock className="h-4 w-4 mr-1" />
-                    4-5 minutes
+                    4-5 min
+                  </div>
+                </div>
+                <div
+                  onClick={() => setBattleMode("micro")}
+                  className={`cursor-pointer rounded-lg border-2 p-4 transition-all ${
+                    battleMode === "micro"
+                      ? "border-orange-500 bg-orange-50"
+                      : "border-gray-200 bg-white hover:border-gray-300"
+                  }`}
+                >
+                  <div className="flex items-center gap-2 mb-2">
+                    <h4 className="font-semibold text-lg">Micro</h4>
+                    <Microscope className="h-5 w-5 text-orange-500" />
+                  </div>
+                  <p className="text-sm text-gray-600 mb-1">
+                    4 questions, 2 per team
+                  </p>
+                  <div className="flex items-center text-sm text-gray-600">
+                    <Clock className="h-4 w-4 mr-1" />
+                    2-3 min
                   </div>
                 </div>
               </div>
@@ -228,7 +251,7 @@ function MockBattleContent() {
     );
   }
 
-  const questionCount = battleMode === "mini" ? 8 : 16;
+  const questionCount = battleMode === "micro" ? 4 : battleMode === "mini" ? 8 : 16;
 
   return (
     <QuizPage
