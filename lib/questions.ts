@@ -140,27 +140,34 @@ export function selectQuestions(
   if (type === "both") {
     const iwbQuestions = questions.filter(q => q.type === "in-which-book");
     const contentQuestions = questions.filter(q => q.type === "content");
-    
+
     const halfCount = Math.ceil(count / 2);
     const iwbCount = Math.min(halfCount, iwbQuestions.length);
     const contentCount = Math.min(halfCount, contentQuestions.length);
 
     // Select IWB questions first
     const selectedIwb = selectDistributedQuestions(iwbQuestions, iwbCount);
-    
-    // Only filter out used books if we're requesting fewer questions than available books
+
+    // Try to select content questions from different books than IWB questions
+    // Only filter if we have enough remaining books to ensure good distribution
     const usedBooks = new Set(selectedIwb.map(q => q.book_key));
-    let remainingContentQuestions = contentQuestions;
-    
-    if (contentCount <= usedBooks.size) {
-      remainingContentQuestions = contentQuestions.filter(q => !usedBooks.has(q.book_key));
+    const unusedContentQuestions = contentQuestions.filter(q => !usedBooks.has(q.book_key));
+
+    // Count unique books available for content questions after filtering
+    const unusedBookCount = new Set(unusedContentQuestions.map(q => q.book_key)).size;
+
+    // Only use filtered questions if we have enough books for good distribution
+    // We need at least half as many books as questions to avoid concentration
+    const minBooksNeeded = Math.max(2, Math.ceil(contentCount / 4));
+
+    let contentQuestionPool = contentQuestions;
+    if (unusedBookCount >= minBooksNeeded && unusedContentQuestions.length >= contentCount) {
+      // We have enough unused books and questions - prefer using them
+      contentQuestionPool = unusedContentQuestions;
     }
-    
-    if (remainingContentQuestions.length < contentCount) {
-      remainingContentQuestions = contentQuestions;
-    }
-    
-    const selectedContent = selectDistributedQuestions(remainingContentQuestions, contentCount);
+    // Otherwise use all content questions (allows overlap with IWB books)
+
+    const selectedContent = selectDistributedQuestions(contentQuestionPool, contentCount);
 
     return [...selectedIwb, ...selectedContent];
   } else {
