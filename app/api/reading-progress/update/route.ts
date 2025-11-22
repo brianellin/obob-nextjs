@@ -34,24 +34,23 @@ export async function POST(request: NextRequest) {
     const db = getDatabase();
 
     // Upsert reading progress
-    const stmt = db.prepare(`
-      INSERT INTO reading_progress (team_member_id, book_key, year, division, pages_read, updated_at)
-      VALUES (?, ?, ?, ?, ?, ?)
-      ON CONFLICT(team_member_id, book_key, year, division)
-      DO UPDATE SET pages_read = ?, updated_at = ?
-    `);
-
     const now = Math.floor(Date.now() / 1000);
-    stmt.run(
-      session.userId,
-      bookKey,
-      year,
-      division,
-      pagesRead,
-      now,
-      pagesRead,
-      now
-    );
+    await db.execute({
+      sql: `INSERT INTO reading_progress (team_member_id, book_key, year, division, pages_read, updated_at)
+            VALUES (?, ?, ?, ?, ?, ?)
+            ON CONFLICT(team_member_id, book_key, year, division)
+            DO UPDATE SET pages_read = ?, updated_at = ?`,
+      args: [
+        session.userId,
+        bookKey,
+        year,
+        division,
+        pagesRead,
+        now,
+        pagesRead,
+        now,
+      ],
+    });
 
     return NextResponse.json({ success: true });
   } catch (error) {

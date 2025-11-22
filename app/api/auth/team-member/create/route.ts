@@ -36,11 +36,12 @@ export async function POST(request: NextRequest) {
     const db = getDatabase();
 
     // Check if username already exists
-    const existingMember = db
-      .prepare('SELECT id FROM team_members WHERE username = ?')
-      .get(username);
+    const existingMember = await db.execute({
+      sql: 'SELECT id FROM team_members WHERE username = ?',
+      args: [username],
+    });
 
-    if (existingMember) {
+    if (existingMember.rows.length > 0) {
       return NextResponse.json(
         { error: 'Username already taken' },
         { status: 409 }
@@ -52,22 +53,21 @@ export async function POST(request: NextRequest) {
     const magicCodeHash = await hashPassword(magicCode);
 
     // Create team member
-    const result = db
-      .prepare(
-        'INSERT INTO team_members (coach_id, username, magic_code_hash, display_name, created_at) VALUES (?, ?, ?, ?, ?)'
-      )
-      .run(
+    const result = await db.execute({
+      sql: 'INSERT INTO team_members (coach_id, username, magic_code_hash, display_name, created_at) VALUES (?, ?, ?, ?, ?)',
+      args: [
         session.userId,
         username,
         magicCodeHash,
         displayName,
-        Math.floor(Date.now() / 1000)
-      );
+        Math.floor(Date.now() / 1000),
+      ],
+    });
 
     return NextResponse.json({
       success: true,
       teamMember: {
-        id: result.lastInsertRowid,
+        id: Number(result.lastInsertRowid),
         username,
         displayName,
         magicCode, // Only returned once during creation

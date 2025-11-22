@@ -25,11 +25,12 @@ export async function POST(request: NextRequest) {
     const db = getDatabase();
 
     // Check if email already exists
-    const existingCoach = db
-      .prepare('SELECT id FROM coaches WHERE email = ?')
-      .get(email);
+    const existingCoach = await db.execute({
+      sql: 'SELECT id FROM coaches WHERE email = ?',
+      args: [email],
+    });
 
-    if (existingCoach) {
+    if (existingCoach.rows.length > 0) {
       return NextResponse.json(
         { error: 'Email already registered' },
         { status: 409 }
@@ -40,15 +41,14 @@ export async function POST(request: NextRequest) {
     const passwordHash = await hashPassword(password);
 
     // Create coach
-    const result = db
-      .prepare(
-        'INSERT INTO coaches (email, password_hash, name, created_at) VALUES (?, ?, ?, ?)'
-      )
-      .run(email, passwordHash, name, Math.floor(Date.now() / 1000));
+    const result = await db.execute({
+      sql: 'INSERT INTO coaches (email, password_hash, name, created_at) VALUES (?, ?, ?, ?)',
+      args: [email, passwordHash, name, Math.floor(Date.now() / 1000)],
+    });
 
     // Create session
     const session = await getSession();
-    session.userId = result.lastInsertRowid as number;
+    session.userId = Number(result.lastInsertRowid);
     session.userType = 'coach';
     session.email = email;
     session.displayName = name;
@@ -58,7 +58,7 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({
       success: true,
       coach: {
-        id: result.lastInsertRowid,
+        id: Number(result.lastInsertRowid),
         email,
         name,
       },

@@ -18,11 +18,12 @@ export async function POST(request: NextRequest) {
     const db = getDatabase();
 
     // Find team member
-    const member = db
-      .prepare(
-        'SELECT id, username, magic_code_hash, display_name, coach_id FROM team_members WHERE username = ?'
-      )
-      .get(username) as
+    const result = await db.execute({
+      sql: 'SELECT id, username, magic_code_hash, display_name, coach_id FROM team_members WHERE username = ?',
+      args: [username],
+    });
+
+    const member = result.rows[0] as
       | {
           id: number;
           username: string;

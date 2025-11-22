@@ -18,9 +18,12 @@ export async function POST(request: NextRequest) {
     const db = getDatabase();
 
     // Find coach
-    const coach = db
-      .prepare('SELECT id, email, password_hash, name FROM coaches WHERE email = ?')
-      .get(email) as { id: number; email: string; password_hash: string; name: string } | undefined;
+    const result = await db.execute({
+      sql: 'SELECT id, email, password_hash, name FROM coaches WHERE email = ?',
+      args: [email],
+    });
+
+    const coach = result.rows[0] as { id: number; email: string; password_hash: string; name: string } | undefined;
 
     if (!coach) {
       return NextResponse.json(

@@ -17,11 +17,12 @@ export async function GET() {
     const db = getDatabase();
 
     // Get all team members for this coach
-    const members = db
-      .prepare(
-        'SELECT id, username, display_name, created_at FROM team_members WHERE coach_id = ? ORDER BY created_at DESC'
-      )
-      .all(session.userId) as {
+    const result = await db.execute({
+      sql: 'SELECT id, username, display_name, created_at FROM team_members WHERE coach_id = ? ORDER BY created_at DESC',
+      args: [session.userId],
+    });
+
+    const members = result.rows as {
       id: number;
       username: string;
       display_name: string;

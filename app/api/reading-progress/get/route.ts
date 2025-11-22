@@ -28,11 +28,12 @@ export async function GET(request: NextRequest) {
     const db = getDatabase();
 
     // Get reading progress for this team member, year, and division
-    const progress = db
-      .prepare(
-        'SELECT book_key, pages_read, updated_at FROM reading_progress WHERE team_member_id = ? AND year = ? AND division = ?'
-      )
-      .all(session.userId, year, division) as {
+    const result = await db.execute({
+      sql: 'SELECT book_key, pages_read, updated_at FROM reading_progress WHERE team_member_id = ? AND year = ? AND division = ?',
+      args: [session.userId, year, division],
+    });
+
+    const progress = result.rows as {
       book_key: string;
       pages_read: number;
       updated_at: number;
