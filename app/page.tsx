@@ -41,7 +41,15 @@ export default function Home() {
 
   return (
     <main className="bg-white p-2">
-      <section className="max-w-2xl mx-auto space-y-4 mb-8 mt-4">
+      <div className="max-w-2xl mx-auto flex justify-end pt-2 pb-2">
+        <Link
+          href="/login"
+          className="text-sm px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors"
+        >
+          Login / Sign Up
+        </Link>
+      </div>
+      <section className="max-w-2xl mx-auto space-y-4 mb-8">
         <h1 className="text-4xl font-bold text-center">
           <WavyUnderline style={0} thickness={6} color="text-lime-400">
             OBOB.dog{" "}

@@ -32,10 +32,13 @@
     "@radix-ui/react-toggle-group": "^1.1.11",
     "@radix-ui/react-tooltip": "^1.2.8",
     "@vercel/analytics": "^1.5.0",
+    "bcrypt": "^6.0.0",
+    "better-sqlite3": "^12.4.6",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "google-auth-library": "^10.5.0",
     "google-spreadsheet": "^5.0.2",
+    "iron-session": "^8.0.4",
     "lucide-react": "^0.453.0",
     "next": "15.0.0",
     "posthog-js": "^1.285.1",
@@ -48,6 +51,8 @@
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
+    "@types/bcrypt": "^6.0.0",
+    "@types/better-sqlite3": "^7.6.13",
     "@types/node": "^20.19.24",
     "@types/react": "^18.3.26",
     "@types/react-dom": "^18.3.7",

@@ -324,7 +324,44 @@ export default function QuizPage({
     return selected;
   };
 
+  // Helper function to record question attempt to database (if user is logged in as team member)
+  const recordQuestionAttempt = async (points: number) => {
+    try {
+      // Check if user is logged in as team member
+      const sessionResponse = await fetch("/api/auth/session");
+      const sessionData = await sessionResponse.json();
+
+      if (!sessionData.isLoggedIn || sessionData.userType !== "team_member") {
+        // Not logged in as team member, skip recording
+        return;
+      }
+
+      // Record the attempt
+      await fetch("/api/question-attempts/record", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          questionText: currentQuestion.text,
+          bookKey: currentQuestion.book.book_key,
+          year,
+          division,
+          questionType: currentQuestion.type,
+          userAnswer: points === 5 ? "correct" : points === 3 ? "partial" : "incorrect",
+          correctAnswer: currentQuestion.type === "content" ? currentQuestion.answer : null,
+          isCorrect: points === 5,
+          pointsEarned: points,
+        }),
+      });
+    } catch (error) {
+      // Silently fail - don't interrupt the quiz experience
+      console.error("Failed to record question attempt:", error);
+    }
+  };
+
   const handleAnswer = (points: number) => {
+    // Record question attempt to database if logged in
+    recordQuestionAttempt(points);
+
     // Track the answer event
     const answerType =
       points === 5
