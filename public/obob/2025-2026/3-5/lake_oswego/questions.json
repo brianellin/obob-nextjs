@@ -324,7 +324,7 @@
       },
       {
         "type": "content",
-        "text": "in what year of the The City of Ember does the story take place?",
+        "text": "in what year of The City of Ember does the story take place?",
         "book_key": "city-of-ember",
         "answer": "241",
         "page": 5
@@ -881,7 +881,7 @@
       },
       {
         "type": "content",
-        "text": "at the gala grand opening what are the few brief words that Mr. Limoncello wants to say?",
+        "text": "at the gala grand opening what are the few brief words that Mr. Lemoncello wants to say?",
         "book_key": "escape-from-mr-lemoncellos-library",
         "answer": "Short, memorandum, and underpants.",
         "page": 50

@@ -3362,7 +3362,7 @@
     },
     {
       "type": "content",
-      "text": "what the the miserable giant's name?",
+      "text": "what is the miserable giant's name?",
       "book_key": "elf-dog-and-owl-head",
       "answer": "Vud",
       "page": 101
@@ -11198,7 +11198,7 @@
     },
     {
       "type": "content",
-      "text": "What word did Brian use to describe the the start of thinking?",
+      "text": "What word did Brian use to describe the start of thinking?",
       "book_key": "hatchet",
       "answer": "Divorce",
       "page": 7
@@ -11897,7 +11897,7 @@
     },
     {
       "type": "content",
-      "text": "Whst does Brian use for a bow string?",
+      "text": "What does Brian use for a bow string?",
       "book_key": "hatchet",
       "answer": "a shoe lace",
       "page": 118
@@ -19647,7 +19647,7 @@
     },
     {
       "type": "content",
-      "text": "What idd the aquarium use instead of kelp?",
+      "text": "What did the aquarium use instead of kelp?",
       "book_key": "odder",
       "answer": "carwash material",
       "page": 132

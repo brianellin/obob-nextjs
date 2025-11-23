@@ -520,7 +520,7 @@
     },
     {
       "type": "in-which-book",
-      "text": "does someone suffer from acrophobia?",
+      "text": "does a character mistake arachnophobia for acrophobia?",
       "book_key": "aru-shah-and-the-end-of-time",
       "page": 48
     },
@@ -1120,7 +1120,8 @@
       "type": "content",
       "text": "How does Aru leave the museum after lighting the lamp?",
       "book_key": "aru-shah-and-the-end-of-time",
-      "answer": "Through the mouth of the elephant statue"
+      "answer": "Through the mouth of the elephant statue",
+      "page": 29
     },
     {
       "type": "content",
@@ -1159,7 +1160,7 @@
     },
     {
       "type": "content",
-      "text": "Which Hindu god was the the father of Mini?",
+      "text": "Which Hindu god was the father of Mini?",
       "book_key": "aru-shah-and-the-end-of-time",
       "answer": "Dharma raja; lord of Death",
       "page": 67
@@ -1507,7 +1508,7 @@
     },
     {
       "type": "content",
-      "text": "When Aru and Mini ride on the backs of celestial mounts (animals) together, what are the two animals they are each riding on?",
+      "text": "What type of pajamas is Aru wearing when Poppy Lopez and two other come to visit the Museum of Ancient Indian Art and Culture?",
       "book_key": "aru-shah-and-the-end-of-time",
       "answer": "Spider-Man",
       "page": 6
@@ -4917,7 +4918,7 @@
       "type": "content",
       "text": "What is the name of the Swift who is obsessed with rules and being proper?",
       "book_key": "a-dictionary-of-scoundrels",
-      "answer": "Felicity Swift",
+      "answer": "Aunt Inheritance",
       "page": 13
     },
     {
@@ -12650,7 +12651,7 @@
     },
     {
       "type": "in-which-book",
-      "text": "is someone surprised there is no mental detector when entering a government building?",
+      "text": "is someone surprised there is no metal detector when entering a government building?",
       "book_key": "remember-my-story",
       "page": 178
     },
@@ -15610,7 +15611,7 @@
     },
     {
       "type": "content",
-      "text": "who thinks up the wrestling match to be the The Nutcracker twist?",
+      "text": "who thinks up the wrestling match to be The Nutcracker twist?",
       "book_key": "tumble",
       "answer": "Addie",
       "page": 244
