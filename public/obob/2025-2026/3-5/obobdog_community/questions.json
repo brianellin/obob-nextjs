@@ -2,14 +2,6 @@
   "questions": [
     {
       "type": "content",
-      "text": "Who said \"Wait untill Jamie finds out. He's going to have a major temper tantrum.\"?",
-      "answer": "Emily",
-      "book_key": "better-with-butter",
-      "page": 1,
-      "contributor": "Vivi"
-    },
-    {
-      "type": "content",
       "text": "What does Butter wear to show that she is an emotional support animal?",
       "answer": "A red vest with a tag that says ESA",
       "book_key": "better-with-butter",
