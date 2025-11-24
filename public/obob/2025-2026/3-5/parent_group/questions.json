@@ -20002,12 +20002,6 @@
     },
     {
       "type": "in-which-book",
-      "text": "does a twist change the climax of the story?",
-      "book_key": "the-remarkable-rescue-at-milkweed-meadow",
-      "page": 135
-    },
-    {
-      "type": "in-which-book",
       "text": "is a character a tangle of nervous brambles, but not a coward?",
       "book_key": "the-remarkable-rescue-at-milkweed-meadow",
       "page": 140
@@ -22619,7 +22613,7 @@
     },
     {
       "type": "in-which-book",
-      "text": "do 2 siblings make a poster together to advertise a new business?",
+      "text": "do two siblings make a poster together to advertise a new business?",
       "book_key": "squished",
       "page": 70
     },
