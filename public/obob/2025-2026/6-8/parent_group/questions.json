@@ -4568,12 +4568,6 @@
     },
     {
       "type": "in-which-book",
-      "text": "is a panic alarm hidden in the walls?",
-      "book_key": "a-dictionary-of-scoundrels",
-      "page": 150
-    },
-    {
-      "type": "in-which-book",
       "text": "does Aunt Prudence notice muddy footprints?",
       "book_key": "a-dictionary-of-scoundrels",
       "page": 120
@@ -5074,13 +5068,6 @@
       "book_key": "a-dictionary-of-scoundrels",
       "answer": "The Secret Vault room.",
       "page": 270
-    },
-    {
-      "type": "content",
-      "text": "What secret message does Shenanigan slip into the Family Dictionary?",
-      "book_key": "a-dictionary-of-scoundrels",
-      "answer": "“May the best scoundrel win.”",
-      "page": 295
     },
     {
       "type": "content",
