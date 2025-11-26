@@ -18,9 +18,9 @@ Users submit feedback about incorrect or problematic questions via the website. 
 
 ## How to Execute
 
-When the user asks you to process feedback, follow these steps:
+When the user asks you to work with feedback, you have two main workflows:
 
-### Step 1: Run the Processing Script
+### Workflow 1: Automated Batch Processing
 
 Execute the feedback processing script:
 
@@ -39,26 +39,63 @@ This script will:
   - Update the sheet row with `status='fixed'` and `fixedDate`
 - Generate a detailed summary report
 
-### Step 2: Review the Output
+### Workflow 2: Manual Review & Marking
 
-The script will output:
-- Progress for each feedback item being processed
-- A summary showing:
-  - Successfully updated questions with details of changes
-  - Failed updates that need manual review
-  - Statistics on success/failure rates
+When the user wants to:
+- Review unreviewed feedback items
+- Manually fix specific questions
+- Mark items as "won't-fix" or "fixed" without auto-processing
 
-### Step 3: Present Results to User
+#### Step 1: Analyze Unreviewed Feedback
 
-Provide the user with:
-- A clear summary of what was updated
-- The number of successful vs failed updates
-- Details of any questions that need manual review
-- Recommendations for next steps
+Show the user what needs attention by reading the feedback sheet and categorizing unreviewed items:
 
-### Step 4: Offer Next Actions
+```typescript
+import { readFeedbackSheet } from '../lib/google-sheets';
 
-After processing, offer to help with:
+const allFeedback = await readFeedbackSheet();
+const unreviewed = allFeedback.filter(row => !row.reviewedBy || row.reviewedBy.trim() === '');
+
+// Categorize by type: page issues, answer issues, question text issues, other
+```
+
+#### Step 2: Fix Questions Manually
+
+If the user identifies specific questions to fix:
+1. Use Read, Edit, or Write tools to update the questions.json file
+2. Make the necessary corrections to the question
+
+#### Step 3: Mark Feedback Status
+
+Use the `scripts/mark-feedback.ts` script to update the Google Sheet:
+
+```bash
+# Mark as fixed
+npx tsx scripts/mark-feedback.ts \
+  --bookKey="book-key" \
+  --page="123" \
+  --status="fixed" \
+  --note="Description of what was fixed"
+
+# Mark as won't-fix
+npx tsx scripts/mark-feedback.ts \
+  --bookKey="book-key" \
+  --page="123" \
+  --status="won't-fix" \
+  --note="Reason why this won't be fixed"
+
+# Optional: Add partial question text to disambiguate
+npx tsx scripts/mark-feedback.ts \
+  --bookKey="book-key" \
+  --page="123" \
+  --questionText="partial question text" \
+  --status="fixed" \
+  --note="Fixed the issue"
+```
+
+### Next Steps After Processing
+
+After either workflow, offer to help with:
 - Reviewing the git diff to see what changed
 - Running the build process (`pnpm run build`) to regenerate counts and exports
 - Creating a commit with the changes
@@ -128,7 +165,9 @@ Common issues you might encounter:
 
 ### Files Involved
 
-- **Script**: `scripts/process-feedback.ts`
+- **Scripts**:
+  - `scripts/process-feedback.ts` - Automated batch processing
+  - `scripts/mark-feedback.ts` - Manual marking of feedback status
 - **Google Sheets Library**: `lib/google-sheets.ts` (functions: `readFeedbackSheet`, `updateFeedbackRow`)
 - **Questions Files**: `public/obob/{year}/{division}/{source}/questions.json`
 - **Sources Files**: `public/obob/{year}/{division}/sources.json`
@@ -165,5 +204,8 @@ Invoke this skill when the user says things like:
 - "Apply the feedback changes"
 - "Fix the questions that were reviewed"
 - "Run the question feedback skill"
+- "Look at the unreviewed feedback"
+- "What feedback needs attention?"
+- "Mark this feedback as fixed/won't-fix"
 
-You are designed to make the feedback processing workflow efficient and automated while providing clear visibility into what changes were made.
+You are designed to make the feedback processing workflow efficient and automated while providing clear visibility into what changes were made. The skill supports both automated batch processing and manual review workflows.
