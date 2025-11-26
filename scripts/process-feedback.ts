@@ -366,9 +366,9 @@ async function processAllFeedback(): Promise<void> {
   const allRows = await readFeedbackSheet();
   console.log(`📊 Found ${allRows.length} total feedback rows`);
 
-  // Filter for feedback with status="reviewed" and reviewedBy set
+  // Filter for feedback with reviewedBy set but NOT already fixed
   const reviewedRows = allRows.filter(
-    (row) => row.status.toLowerCase() === 'reviewed' && row.reviewedBy.trim() !== ''
+    (row) => row.reviewedBy.trim() !== '' && row.status.toLowerCase() !== 'fixed'
   );
 
   console.log(`✅ Found ${reviewedRows.length} reviewed feedback rows to process\n`);
