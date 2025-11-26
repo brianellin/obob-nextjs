@@ -23,6 +23,10 @@ interface FeedbackRow {
   sourceName: string;
   sourceLink: string;
   fixedDate: string;
+  correctedQuestionText: string;
+  correctedAnswer: string;
+  correctedPage: string;
+  reviewersNote: string;
 }
 
 interface Question {
@@ -128,42 +132,22 @@ function findMatchingQuestion(
 }
 
 /**
- * Apply feedback changes to a question based on free-form feedback text
- * This function interprets the feedback and determines what needs to be updated
+ * Apply feedback changes to a question based on corrected fields or free-form feedback text
+ * Priority: correctedQuestionText, correctedAnswer, and correctedPage fields take precedence over parsing feedback
  */
-function applyFeedbackToQuestion(question: Question, feedback: string): { updated: boolean; changes: string } {
-  const feedbackLower = feedback.toLowerCase().trim();
+function applyFeedbackToQuestion(
+  question: Question,
+  feedback: string,
+  correctedQuestionText: string,
+  correctedAnswer: string,
+  correctedPage: string
+): { updated: boolean; changes: string } {
   let updated = false;
   const changes: string[] = [];
 
-  // Common patterns to look for in feedback:
-
-  // 1. Page number corrections
-  const pageMatch = feedbackLower.match(/(?:page|pg|p\.?)\s*(?:is|should be|:)?\s*(\d+)/i);
-  if (pageMatch) {
-    const newPage = parseInt(pageMatch[1], 10);
-    if (newPage !== question.page) {
-      changes.push(`Page: ${question.page} → ${newPage}`);
-      question.page = newPage;
-      updated = true;
-    }
-  }
-
-  // 2. Answer corrections (for content questions)
-  const answerMatch = feedback.match(/(?:answer|correct answer|should be)(?:\s+is)?:\s*["']?(.+?)["']?$/i);
-  if (answerMatch && question.type === 'content') {
-    const newAnswer = answerMatch[1].trim();
-    if (newAnswer !== question.answer) {
-      changes.push(`Answer: "${question.answer}" → "${newAnswer}"`);
-      question.answer = newAnswer;
-      updated = true;
-    }
-  }
-
-  // 3. Question text corrections
-  const textMatch = feedback.match(/(?:question|text)(?:\s+should be)?:\s*["']?(.+?)["']?$/i);
-  if (textMatch) {
-    const newText = textMatch[1].trim();
+  // Priority 1: Use correctedQuestionText if provided
+  if (correctedQuestionText && correctedQuestionText.trim() !== '') {
+    const newText = correctedQuestionText.trim();
     if (newText !== question.text) {
       changes.push(`Text: "${question.text.substring(0, 50)}..." → "${newText.substring(0, 50)}..."`);
       question.text = newText;
@@ -171,22 +155,80 @@ function applyFeedbackToQuestion(question: Question, feedback: string): { update
     }
   }
 
-  // 4. Book key corrections (less common)
-  const bookMatch = feedback.match(/(?:book|book_key)(?:\s+is|\s+should be)?:\s*["']?(.+?)["']?$/i);
-  if (bookMatch) {
-    const newBookKey = bookMatch[1].trim();
-    if (newBookKey !== question.book_key) {
-      changes.push(`Book: ${question.book_key} → ${newBookKey}`);
-      question.book_key = newBookKey;
+  // Priority 2: Use correctedAnswer if provided (for content questions)
+  if (correctedAnswer && correctedAnswer.trim() !== '' && question.type === 'content') {
+    const newAnswer = correctedAnswer.trim();
+    if (newAnswer !== question.answer) {
+      changes.push(`Answer: "${question.answer}" → "${newAnswer}"`);
+      question.answer = newAnswer;
       updated = true;
     }
   }
 
-  // 5. General corrections - if no specific pattern matched but feedback suggests a change
-  // Look for keywords like "wrong", "incorrect", "fix", "change", "update"
-  if (!updated && /\b(wrong|incorrect|error|typo|mistake|fix|change|update)\b/i.test(feedbackLower)) {
-    // If we can't parse the specific change, note that manual review is needed
-    changes.push(`Manual review needed: ${feedback}`);
+  // Priority 3: Use correctedPage if provided
+  if (correctedPage && correctedPage.trim() !== '') {
+    const newPage = parseInt(correctedPage.trim(), 10);
+    if (!isNaN(newPage) && newPage !== question.page) {
+      changes.push(`Page: ${question.page} → ${newPage}`);
+      question.page = newPage;
+      updated = true;
+    }
+  }
+
+  // Priority 4: If no corrected fields, fall back to parsing the feedback text
+  if (!correctedQuestionText && !correctedAnswer && !correctedPage) {
+    const feedbackLower = feedback.toLowerCase().trim();
+
+    // 1. Page number corrections
+    const pageMatch = feedbackLower.match(/(?:page|pg|p\.?)\s*(?:is|should be|:)?\s*(\d+)/i);
+    if (pageMatch) {
+      const newPage = parseInt(pageMatch[1], 10);
+      if (newPage !== question.page) {
+        changes.push(`Page: ${question.page} → ${newPage}`);
+        question.page = newPage;
+        updated = true;
+      }
+    }
+
+    // 2. Answer corrections (for content questions)
+    const answerMatch = feedback.match(/(?:answer|correct answer|should be)(?:\s+is)?:\s*["']?(.+?)["']?$/i);
+    if (answerMatch && question.type === 'content') {
+      const newAnswer = answerMatch[1].trim();
+      if (newAnswer !== question.answer) {
+        changes.push(`Answer: "${question.answer}" → "${newAnswer}"`);
+        question.answer = newAnswer;
+        updated = true;
+      }
+    }
+
+    // 3. Question text corrections
+    const textMatch = feedback.match(/(?:question|text)(?:\s+should be)?:\s*["']?(.+?)["']?$/i);
+    if (textMatch) {
+      const newText = textMatch[1].trim();
+      if (newText !== question.text) {
+        changes.push(`Text: "${question.text.substring(0, 50)}..." → "${newText.substring(0, 50)}..."`);
+        question.text = newText;
+        updated = true;
+      }
+    }
+
+    // 4. Book key corrections (less common)
+    const bookMatch = feedback.match(/(?:book|book_key)(?:\s+is|\s+should be)?:\s*["']?(.+?)["']?$/i);
+    if (bookMatch) {
+      const newBookKey = bookMatch[1].trim();
+      if (newBookKey !== question.book_key) {
+        changes.push(`Book: ${question.book_key} → ${newBookKey}`);
+        question.book_key = newBookKey;
+        updated = true;
+      }
+    }
+
+    // 5. General corrections - if no specific pattern matched but feedback suggests a change
+    // Look for keywords like "wrong", "incorrect", "fix", "change", "update"
+    if (!updated && /\b(wrong|incorrect|error|typo|mistake|fix|change|update)\b/i.test(feedbackLower)) {
+      // If we can't parse the specific change, note that manual review is needed
+      changes.push(`Manual review needed: ${feedback}`);
+    }
   }
 
   return {
@@ -265,7 +307,13 @@ async function processFeedbackRow(row: FeedbackRow): Promise<ProcessingResult> {
 
     // Apply feedback to the question
     const question = questionsFile.questions[questionIndex];
-    const { updated, changes } = applyFeedbackToQuestion(question, row.feedback);
+    const { updated, changes } = applyFeedbackToQuestion(
+      question,
+      row.feedback,
+      row.correctedQuestionText,
+      row.correctedAnswer,
+      row.correctedPage
+    );
 
     if (updated) {
       // Write the updated questions file back

@@ -140,6 +140,10 @@ export async function readFeedbackSheet() {
       sourceName: row.get('sourceName') || '',
       sourceLink: row.get('sourceLink') || '',
       fixedDate: row.get('fixedDate') || '',
+      correctedQuestionText: row.get('correctedQuestionText') || '',
+      correctedAnswer: row.get('correctedAnswer') || '',
+      correctedPage: row.get('correctedPage') || '',
+      reviewersNote: row.get('reviewersNote') || '',
       _rawRow: row, // Keep reference to the raw row for updates
     }));
   } catch (error) {
