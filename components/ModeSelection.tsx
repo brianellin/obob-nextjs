@@ -8,7 +8,7 @@ import {
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { User, Users, Trophy } from "lucide-react";
+import { User, Users, Trophy, Grid2X2 } from "lucide-react";
 import Link from "next/link";
 
 type ModeSelectionProps = {
@@ -94,6 +94,34 @@ export default function ModeSelection({ year, division }: ModeSelectionProps) {
           >
             <Button className="w-full bg-orange-500 hover:bg-orange-600 text-white transition-colors">
               <Trophy className="mr-2 h-4 w-4" /> Moderate a mock battle
+            </Button>
+          </Link>
+        </CardFooter>
+      </Card>
+      <Card>
+        <CardHeader>
+          <div className="flex items-center gap-2">
+            <CardTitle>Author Match</CardTitle>
+            <Badge className="bg-green-500 hover:bg-green-500 text-white">
+              New!
+            </Badge>
+          </div>
+          <CardDescription>Match books to their authors</CardDescription>
+        </CardHeader>
+        <CardContent>
+          <p>
+            Play a memory-style game matching book titles with their authors.
+            Race against the clock!
+          </p>
+        </CardContent>
+        <CardFooter>
+          <Link
+            href={`/author-match/${year}/${division}`}
+            passHref
+            className="w-full"
+          >
+            <Button className="w-full bg-green-500 hover:bg-green-600 text-white transition-colors">
+              <Grid2X2 className="mr-2 h-4 w-4" /> Play Author Match
             </Button>
           </Link>
         </CardFooter>
