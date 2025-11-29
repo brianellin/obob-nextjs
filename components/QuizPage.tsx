@@ -934,6 +934,18 @@ export default function QuizPage({
                             className="font-bold underline decoration-dotted decoration-gray-400 underline-offset-2 hover:decoration-gray-600 transition-all cursor-pointer"
                             role="button"
                             tabIndex={0}
+                            onClick={() => {
+                              const eventData = {
+                                author: currentQuestion.book.author,
+                                bookKey: currentQuestion.book.book_key,
+                                bookTitle: currentQuestion.book.title,
+                                year,
+                                division,
+                                quizMode,
+                              };
+                              track("authorPronunciationView", eventData);
+                              posthog.capture("authorPronunciationView", eventData);
+                            }}
                           >
                             {currentQuestion.book.author}
                           </span>
@@ -951,7 +963,19 @@ export default function QuizPage({
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="inline-flex items-center gap-1 text-cyan-600 hover:text-cyan-800 transition-colors"
-                                onClick={(e) => e.stopPropagation()}
+                                onClick={(e) => {
+                                  e.stopPropagation();
+                                  const eventData = {
+                                    author: currentQuestion.book.author,
+                                    bookKey: currentQuestion.book.book_key,
+                                    bookTitle: currentQuestion.book.title,
+                                    year,
+                                    division,
+                                    quizMode,
+                                  };
+                                  track("authorPronunciationListen", eventData);
+                                  posthog.capture("authorPronunciationListen", eventData);
+                                }}
                               >
                                 <svg
                                   xmlns="http://www.w3.org/2000/svg"
@@ -1024,6 +1048,18 @@ export default function QuizPage({
                               className="font-semibold underline decoration-dotted decoration-gray-400 underline-offset-2 hover:decoration-gray-600 transition-all cursor-pointer"
                               role="button"
                               tabIndex={0}
+                              onClick={() => {
+                                const eventData = {
+                                  author: currentQuestion.book.author,
+                                  bookKey: currentQuestion.book.book_key,
+                                  bookTitle: currentQuestion.book.title,
+                                  year,
+                                  division,
+                                  quizMode,
+                                };
+                                track("authorPronunciationView", eventData);
+                                posthog.capture("authorPronunciationView", eventData);
+                              }}
                             >
                               {currentQuestion.book.author}
                             </span>
@@ -1041,7 +1077,19 @@ export default function QuizPage({
                                   target="_blank"
                                   rel="noopener noreferrer"
                                   className="inline-flex items-center gap-1 text-cyan-600 hover:text-cyan-800 transition-colors"
-                                  onClick={(e) => e.stopPropagation()}
+                                  onClick={(e) => {
+                                    e.stopPropagation();
+                                    const eventData = {
+                                      author: currentQuestion.book.author,
+                                      bookKey: currentQuestion.book.book_key,
+                                      bookTitle: currentQuestion.book.title,
+                                      year,
+                                      division,
+                                      quizMode,
+                                    };
+                                    track("authorPronunciationListen", eventData);
+                                    posthog.capture("authorPronunciationListen", eventData);
+                                  }}
                                 >
                                   <svg
                                     xmlns="http://www.w3.org/2000/svg"
