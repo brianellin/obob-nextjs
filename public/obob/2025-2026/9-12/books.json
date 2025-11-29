@@ -7,7 +7,7 @@
       "cover": "/covers/2025-2026/9-12/all-my-rage.jpg",
       "obob_division": "9-12",
       "obob_year": "2025-2026",
-      "author_pronunciation": "sah-BAH tah-HEER"
+      "author_pronunciation": "SUH-buh tah-HEER"
     },
     "an-appetite-for-miracles": {
       "book_key": "an-appetite-for-miracles",
@@ -16,7 +16,7 @@
       "cover": "/covers/2025-2026/9-12/an-appetite-for-miracles.jpg",
       "obob_division": "9-12",
       "obob_year": "2025-2026",
-      "author_pronunciation": "LAY-kan ZEE-ah KEMP"
+      "author_pronunciation": "LAY-ken ZAY-ah"
     },
     "cemetery-boys": {
       "book_key": "cemetery-boys",
@@ -24,8 +24,7 @@
       "author": "Aiden Thomas",
       "cover": "/covers/2025-2026/9-12/cemetery-boys.jpg",
       "obob_division": "9-12",
-      "obob_year": "2025-2026",
-      "author_pronunciation": "AY-den TOM-us"
+      "obob_year": "2025-2026"
     },
     "a-crane-among-wolves": {
       "book_key": "a-crane-among-wolves",
@@ -33,8 +32,7 @@
       "author": "June Hur",
       "cover": "/covers/2025-2026/9-12/a-crane-among-wolves.jpg",
       "obob_division": "9-12",
-      "obob_year": "2025-2026",
-      "author_pronunciation": "JOON HUR"
+      "obob_year": "2025-2026"
     },
     "dragon-hoops": {
       "book_key": "dragon-hoops",
@@ -43,7 +41,7 @@
       "cover": "/covers/2025-2026/9-12/dragon-hoops.jpg",
       "obob_division": "9-12",
       "obob_year": "2025-2026",
-      "author_pronunciation": "JEEN loo-EN YANG"
+      "author_pronunciation": "LOO-en"
     },
     "legends-and-lattes": {
       "book_key": "legends-and-lattes",
@@ -51,8 +49,7 @@
       "author": "Travis Baldree",
       "cover": "/covers/2025-2026/9-12/legends-and-lattes.jpg",
       "obob_division": "9-12",
-      "obob_year": "2025-2026",
-      "author_pronunciation": "TRAV-iss BALD-ree"
+      "obob_year": "2025-2026"
     },
     "promise-boys": {
       "book_key": "promise-boys",
@@ -60,8 +57,7 @@
       "author": "Nick Brooks",
       "cover": "/covers/2025-2026/9-12/promise-boys.jpg",
       "obob_division": "9-12",
-      "obob_year": "2025-2026",
-      "author_pronunciation": "NIK BRUKS"
+      "obob_year": "2025-2026"
     },
     "seven-percent-of-ro-devereux": {
       "book_key": "seven-percent-of-ro-devereux",
@@ -69,8 +65,7 @@
       "author": "Ellen O'Clover",
       "cover": "/covers/2025-2026/9-12/seven-percent-of-ro-devereux.jpg",
       "obob_division": "9-12",
-      "obob_year": "2025-2026",
-      "author_pronunciation": "EL-en oh-KLOH-ver"
+      "obob_year": "2025-2026"
     },
     "ship-breaker": {
       "book_key": "ship-breaker",
@@ -79,7 +74,8 @@
       "cover": "/covers/2025-2026/9-12/ship-breaker.jpg",
       "obob_division": "9-12",
       "obob_year": "2025-2026",
-      "author_pronunciation": "POW-lo bah-chee-gah-LOO-pee"
+      "author_pronunciation": "POW-lo BOTCH-ee-ga-LOO-pee",
+      "pronunciation_source": "https://youtu.be/OpjD42KNOdw"
     },
     "six-crimson-cranes": {
       "book_key": "six-crimson-cranes",
@@ -87,8 +83,7 @@
       "author": "Elizabeth Lim",
       "cover": "/covers/2025-2026/9-12/six-crimson-cranes.jpg",
       "obob_division": "9-12",
-      "obob_year": "2025-2026",
-      "author_pronunciation": "ih-LIZ-uh-beth LIM"
+      "obob_year": "2025-2026"
     },
     "the-sunbearer-trials": {
       "book_key": "the-sunbearer-trials",
@@ -96,8 +91,7 @@
       "author": "Aiden Thomas",
       "cover": "/covers/2025-2026/9-12/the-sunbearer-trials.jpg",
       "obob_division": "9-12",
-      "obob_year": "2025-2026",
-      "author_pronunciation": "AY-den TOM-us"
+      "obob_year": "2025-2026"
     },
     "when-we-make-it": {
       "book_key": "when-we-make-it",
@@ -106,7 +100,8 @@
       "cover": "/covers/2025-2026/9-12/when-we-make-it.jpg",
       "obob_division": "9-12",
       "obob_year": "2025-2026",
-      "author_pronunciation": "eh-lee-sah-BET veh-LAHS-keth"
+      "author_pronunciation": "eh-LEEZ-a-bet veh-LASS-kez",
+      "pronunciation_source": "https://youtu.be/79ljIhK5xhs?t=4"
     }
   }
 }

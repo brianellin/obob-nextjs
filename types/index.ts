@@ -6,6 +6,7 @@ export interface Book {
   obob_division: "3-5" | "6-8" | "9-12";
   obob_year: "2024-2025";
   author_pronunciation?: string;
+  pronunciation_source?: string;
 }
 
 export type Books = {
