@@ -19,6 +19,34 @@ type ModeSelectionProps = {
 export default function ModeSelection({ year, division }: ModeSelectionProps) {
   return (
     <div className="space-y-8 max-w-2xl mx-auto">
+      <Card>
+        <CardHeader>
+          <div className="flex items-center gap-2">
+            <CardTitle>Author Match</CardTitle>
+            <Badge className="bg-green-500 hover:bg-green-500 text-white">
+              New!
+            </Badge>
+          </div>
+          <CardDescription>Match books to their authors</CardDescription>
+        </CardHeader>
+        <CardContent>
+          <p>
+            Play a memory-style game matching book titles with their authors.
+            Race against the clock!
+          </p>
+        </CardContent>
+        <CardFooter>
+          <Link
+            href={`/author-match/${year}/${division}`}
+            passHref
+            className="w-full"
+          >
+            <Button className="w-full bg-green-500 hover:bg-green-600 text-white transition-colors">
+              <Grid2X2 className="mr-2 h-4 w-4" /> Play Author Match
+            </Button>
+          </Link>
+        </CardFooter>
+      </Card>
       <div className="flex gap-4 flex-col md:flex-row">
         <Card>
           <CardHeader>
@@ -94,34 +122,6 @@ export default function ModeSelection({ year, division }: ModeSelectionProps) {
           >
             <Button className="w-full bg-orange-500 hover:bg-orange-600 text-white transition-colors">
               <Trophy className="mr-2 h-4 w-4" /> Moderate a mock battle
-            </Button>
-          </Link>
-        </CardFooter>
-      </Card>
-      <Card>
-        <CardHeader>
-          <div className="flex items-center gap-2">
-            <CardTitle>Author Match</CardTitle>
-            <Badge className="bg-green-500 hover:bg-green-500 text-white">
-              New!
-            </Badge>
-          </div>
-          <CardDescription>Match books to their authors</CardDescription>
-        </CardHeader>
-        <CardContent>
-          <p>
-            Play a memory-style game matching book titles with their authors.
-            Race against the clock!
-          </p>
-        </CardContent>
-        <CardFooter>
-          <Link
-            href={`/author-match/${year}/${division}`}
-            passHref
-            className="w-full"
-          >
-            <Button className="w-full bg-green-500 hover:bg-green-600 text-white transition-colors">
-              <Grid2X2 className="mr-2 h-4 w-4" /> Play Author Match
             </Button>
           </Link>
         </CardFooter>

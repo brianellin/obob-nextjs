@@ -5,7 +5,9 @@ import { Book } from "@/types";
 import MatchCard, { MatchCardData, MATCH_COLORS } from "./MatchCard";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Clock, RotateCcw, Home, PawPrint } from "lucide-react";
+import { Clock, RotateCcw, Home, PawPrint, BookOpen } from "lucide-react";
+import RosieIcon from "./RosieIcon";
+import BookHeartIcon from "./BookHeartIcon";
 import Link from "next/link";
 import { usePostHog } from "posthog-js/react";
 import { trackEvent } from "@/lib/analytics";
@@ -300,6 +302,18 @@ export default function AuthorMatchGame({ books, year, division }: AuthorMatchGa
             colorOrder={colorOrder}
           />
         ))}
+      </div>
+
+      {/* Legend */}
+      <div className="flex justify-center gap-6 text-sm text-gray-500">
+        <div className="flex items-center gap-2">
+          <RosieIcon className="w-5 h-5" />
+          <span>Author</span>
+        </div>
+        <div className="flex items-center gap-2">
+          <BookHeartIcon className="w-5 h-5" />
+          <span>Book Title</span>
+        </div>
       </div>
 
       {/* Instructions */}
