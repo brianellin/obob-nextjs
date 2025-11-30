@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useCallback, useRef } from "react";
 import { Book } from "@/types";
-import MatchCard, { MatchCardData } from "./MatchCard";
+import MatchCard, { MatchCardData, MATCH_COLORS } from "./MatchCard";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Clock, RotateCcw, Home, PawPrint } from "lucide-react";
@@ -43,6 +43,7 @@ export default function AuthorMatchGame({ books, year, division }: AuthorMatchGa
   const [gameComplete, setGameComplete] = useState(false);
   const [isChecking, setIsChecking] = useState(false);
   const [nextColorIndex, setNextColorIndex] = useState(0);
+  const [colorOrder, setColorOrder] = useState<number[]>([]);
   const timerRef = useRef<NodeJS.Timeout | null>(null);
   const hasTrackedStart = useRef(false);
 
@@ -80,6 +81,8 @@ export default function AuthorMatchGame({ books, year, division }: AuthorMatchGa
     setGameComplete(false);
     setIsChecking(false);
     setNextColorIndex(0);
+    // Shuffle the color order so matched pairs get random colors each game
+    setColorOrder(shuffleArray(Array.from({ length: MATCH_COLORS.length }, (_, i) => i)));
     hasTrackedStart.current = false;
 
     if (timerRef.current) {
@@ -294,6 +297,7 @@ export default function AuthorMatchGame({ books, year, division }: AuthorMatchGa
             card={card}
             onClick={() => handleCardClick(card.id)}
             disabled={isChecking || flippedCardIds.length >= 2}
+            colorOrder={colorOrder}
           />
         ))}
       </div>

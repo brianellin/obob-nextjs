@@ -5,7 +5,7 @@ import RosieIcon from "./RosieIcon";
 import BookHeartIcon from "./BookHeartIcon";
 
 // Color palette for matched pairs - 16 maximally distinct colors to support all divisions
-const MATCH_COLORS = [
+export const MATCH_COLORS = [
   { bg: "bg-red-200", border: "border-red-600", text: "text-red-900" },
   { bg: "bg-blue-200", border: "border-blue-600", text: "text-blue-900" },
   { bg: "bg-green-200", border: "border-green-600", text: "text-green-900" },
@@ -38,11 +38,18 @@ interface MatchCardProps {
   card: MatchCardData;
   onClick: () => void;
   disabled: boolean;
+  colorOrder?: number[];
 }
 
-export default function MatchCard({ card, onClick, disabled }: MatchCardProps) {
+export default function MatchCard({ card, onClick, disabled, colorOrder }: MatchCardProps) {
   const [isJiggling, setIsJiggling] = useState(false);
   const wasMatched = useRef(card.isMatched);
+
+  // Get the actual color index using the shuffled order if provided
+  const getColor = (index: number) => {
+    const actualIndex = colorOrder ? colorOrder[index % colorOrder.length] : index;
+    return MATCH_COLORS[actualIndex % MATCH_COLORS.length];
+  };
 
   // Detect when card becomes matched and trigger jiggle
   useEffect(() => {
@@ -79,8 +86,8 @@ export default function MatchCard({ card, onClick, disabled }: MatchCardProps) {
         <div
           className={`absolute inset-0 flex items-center justify-center rounded-lg shadow-md ${
             card.type === "title"
-              ? `bg-gradient-to-br from-gray-300 to-gray-500 ${!card.isFlipped && !card.isMatched ? "hover:from-gray-250 hover:to-gray-450" : ""}`
-              : `bg-gradient-to-br from-white to-gray-200 border border-gray-300 ${!card.isFlipped && !card.isMatched ? "hover:from-gray-50 hover:to-gray-300" : ""}`
+              ? `bg-gradient-to-br from-gray-200 to-gray-300 border border-gray-300 ${!card.isFlipped && !card.isMatched ? "hover:from-gray-150 hover:to-gray-350" : ""}`
+              : `bg-gradient-to-br from-white to-gray-100 border border-gray-200 ${!card.isFlipped && !card.isMatched ? "hover:from-gray-50 hover:to-gray-200" : ""}`
           }`}
           style={{ backfaceVisibility: "hidden" }}
         >
@@ -95,7 +102,7 @@ export default function MatchCard({ card, onClick, disabled }: MatchCardProps) {
         <div
           className={`absolute inset-0 flex items-center justify-center rounded-lg p-1.5 shadow-md ${
             card.isMatched && card.colorIndex !== undefined
-              ? `${MATCH_COLORS[card.colorIndex % MATCH_COLORS.length].bg} border-2 ${MATCH_COLORS[card.colorIndex % MATCH_COLORS.length].border}`
+              ? `${getColor(card.colorIndex).bg} border-2 ${getColor(card.colorIndex).border}`
               : "bg-white border border-gray-200"
           }`}
           style={{
@@ -106,7 +113,7 @@ export default function MatchCard({ card, onClick, disabled }: MatchCardProps) {
           <p
             className={`font-semibold leading-tight text-center ${
               card.isMatched && card.colorIndex !== undefined
-                ? MATCH_COLORS[card.colorIndex % MATCH_COLORS.length].text
+                ? getColor(card.colorIndex).text
                 : "text-gray-800"
             } ${
               card.content.length > 40
@@ -114,7 +121,7 @@ export default function MatchCard({ card, onClick, disabled }: MatchCardProps) {
                 : card.content.length > 25
                 ? "text-[10px] sm:text-xs"
                 : "text-xs sm:text-sm"
-            }`}
+            } ${card.type === "author" ? "italic" : ""}`}
           >
             {card.content}
           </p>
