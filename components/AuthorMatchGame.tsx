@@ -5,9 +5,10 @@ import { Book } from "@/types";
 import MatchCard, { MatchCardData } from "./MatchCard";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Clock, RotateCcw, Home, MousePointerClick } from "lucide-react";
+import { Clock, RotateCcw, Home, PawPrint } from "lucide-react";
 import Link from "next/link";
 import { usePostHog } from "posthog-js/react";
+import { trackEvent } from "@/lib/analytics";
 
 interface AuthorMatchGameProps {
   books: Book[];
@@ -119,13 +120,14 @@ export default function AuthorMatchGame({ books, year, division }: AuthorMatchGa
       }
 
       // Track completion
-      posthog?.capture("authorMatchCompleted", {
+      const finishData = {
         year,
         division,
         bookCount: books.length,
-        timeSeconds: elapsedTime / 1000,
+        totalTime: elapsedTime / 1000,
         attempts,
-      });
+      };
+      trackEvent("authorMatchFinish", finishData, posthog);
     }
   }, [cards, posthog, year, division, books.length, elapsedTime, attempts]);
 
@@ -139,11 +141,12 @@ export default function AuthorMatchGame({ books, year, division }: AuthorMatchGa
     if (!startTime) {
       setStartTime(Date.now());
       if (!hasTrackedStart.current) {
-        posthog?.capture("authorMatchStarted", {
+        const startData = {
           year,
           division,
           bookCount: books.length,
-        });
+        };
+        trackEvent("authorMatchStart", startData, posthog);
         hasTrackedStart.current = true;
       }
     }
@@ -160,19 +163,31 @@ export default function AuthorMatchGame({ books, year, division }: AuthorMatchGa
 
     // If two cards are flipped, check for match
     if (newFlippedIds.length === 2) {
-      setAttempts((prev) => prev + 1);
+      const newAttemptCount = attempts + 1;
+      setAttempts(newAttemptCount);
       setIsChecking(true);
 
       const [firstId, secondId] = newFlippedIds;
       const firstCard = cards.find((c) => c.id === firstId);
       const secondCard = cards.find((c) => c.id === secondId);
 
-      if (
+      const isMatch =
         firstCard &&
         secondCard &&
         firstCard.bookKey === secondCard.bookKey &&
-        firstCard.type !== secondCard.type
-      ) {
+        firstCard.type !== secondCard.type;
+
+      // Track match attempt
+      const attemptData = {
+        year,
+        division,
+        match: !!isMatch,
+        attemptCount: newAttemptCount,
+        attemptTime: startTime ? (Date.now() - startTime) / 1000 : 0,
+      };
+      trackEvent("matchAttempt", attemptData, posthog);
+
+      if (isMatch) {
         // Match found! Assign a color to this pair
         const colorIndex = nextColorIndex;
         setNextColorIndex((prev) => prev + 1);
@@ -223,7 +238,7 @@ export default function AuthorMatchGame({ books, year, division }: AuthorMatchGa
                 <p className="text-2xl font-bold">{formatTime(elapsedTime)}</p>
               </div>
               <div className="p-4 bg-gray-50 rounded-lg">
-                <MousePointerClick className="w-6 h-6 mx-auto text-gray-500 mb-2" />
+                <PawPrint className="w-6 h-6 mx-auto text-gray-500 mb-2" />
                 <p className="text-sm text-gray-500">Attempts</p>
                 <p className="text-2xl font-bold">{attempts}</p>
               </div>
@@ -266,7 +281,7 @@ export default function AuthorMatchGame({ books, year, division }: AuthorMatchGa
           {matchedCount} / {totalPairs} matched
         </div>
         <div className="flex items-center gap-2">
-          <MousePointerClick className="w-5 h-5 text-gray-500" />
+          <PawPrint className="w-5 h-5 text-gray-500" />
           <span className="font-semibold">{attempts}</span>
         </div>
       </div>

@@ -1,26 +1,26 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import { PawPrint } from "lucide-react";
+import { Book, Dog } from "lucide-react";
 
-// Color palette for matched pairs - 16 distinct colors to support all divisions
+// Color palette for matched pairs - 16 distinct vibrant colors to support all divisions
 const MATCH_COLORS = [
-  { bg: "bg-green-100", border: "border-green-500", text: "text-green-800" },
-  { bg: "bg-blue-100", border: "border-blue-500", text: "text-blue-800" },
-  { bg: "bg-pink-100", border: "border-pink-500", text: "text-pink-800" },
-  { bg: "bg-yellow-100", border: "border-yellow-500", text: "text-yellow-800" },
-  { bg: "bg-cyan-100", border: "border-cyan-500", text: "text-cyan-800" },
-  { bg: "bg-red-100", border: "border-red-500", text: "text-red-800" },
-  { bg: "bg-indigo-100", border: "border-indigo-500", text: "text-indigo-800" },
-  { bg: "bg-teal-100", border: "border-teal-500", text: "text-teal-800" },
-  { bg: "bg-amber-100", border: "border-amber-500", text: "text-amber-800" },
-  { bg: "bg-violet-100", border: "border-violet-500", text: "text-violet-800" },
-  { bg: "bg-lime-100", border: "border-lime-500", text: "text-lime-800" },
-  { bg: "bg-rose-100", border: "border-rose-500", text: "text-rose-800" },
-  { bg: "bg-sky-100", border: "border-sky-500", text: "text-sky-800" },
-  { bg: "bg-fuchsia-100", border: "border-fuchsia-500", text: "text-fuchsia-800" },
-  { bg: "bg-emerald-100", border: "border-emerald-500", text: "text-emerald-800" },
-  { bg: "bg-orange-100", border: "border-orange-500", text: "text-orange-800" },
+  { bg: "bg-green-200", border: "border-green-600", text: "text-green-900" },
+  { bg: "bg-blue-200", border: "border-blue-600", text: "text-blue-900" },
+  { bg: "bg-pink-200", border: "border-pink-600", text: "text-pink-900" },
+  { bg: "bg-yellow-200", border: "border-yellow-600", text: "text-yellow-900" },
+  { bg: "bg-purple-200", border: "border-purple-600", text: "text-purple-900" },
+  { bg: "bg-red-200", border: "border-red-600", text: "text-red-900" },
+  { bg: "bg-cyan-200", border: "border-cyan-600", text: "text-cyan-900" },
+  { bg: "bg-orange-200", border: "border-orange-600", text: "text-orange-900" },
+  { bg: "bg-indigo-200", border: "border-indigo-600", text: "text-indigo-900" },
+  { bg: "bg-lime-200", border: "border-lime-600", text: "text-lime-900" },
+  { bg: "bg-rose-200", border: "border-rose-600", text: "text-rose-900" },
+  { bg: "bg-teal-200", border: "border-teal-600", text: "text-teal-900" },
+  { bg: "bg-amber-200", border: "border-amber-600", text: "text-amber-900" },
+  { bg: "bg-violet-200", border: "border-violet-600", text: "text-violet-900" },
+  { bg: "bg-emerald-200", border: "border-emerald-600", text: "text-emerald-900" },
+  { bg: "bg-fuchsia-200", border: "border-fuchsia-600", text: "text-fuchsia-900" },
 ];
 
 export interface MatchCardData {
@@ -74,16 +74,20 @@ export default function MatchCard({ card, onClick, disabled }: MatchCardProps) {
           transform: card.isFlipped || card.isMatched ? "rotateY(180deg)" : "rotateY(0deg)",
         }}
       >
-        {/* Back of card (paw print) - purple for titles, orange for authors */}
+        {/* Back of card - white with black book for titles, black with white dog for authors */}
         <div
           className={`absolute inset-0 flex items-center justify-center rounded-lg shadow-md ${
             card.type === "title"
-              ? `bg-gradient-to-br from-purple-500 to-purple-700 ${!card.isFlipped && !card.isMatched ? "hover:from-purple-400 hover:to-purple-600" : ""}`
-              : `bg-gradient-to-br from-orange-400 to-orange-600 ${!card.isFlipped && !card.isMatched ? "hover:from-orange-300 hover:to-orange-500" : ""}`
+              ? `bg-gradient-to-br from-white to-gray-200 border border-gray-300 ${!card.isFlipped && !card.isMatched ? "hover:from-gray-50 hover:to-gray-300" : ""}`
+              : `bg-gradient-to-br from-gray-700 to-black ${!card.isFlipped && !card.isMatched ? "hover:from-gray-600 hover:to-gray-900" : ""}`
           }`}
           style={{ backfaceVisibility: "hidden" }}
         >
-          <PawPrint className="w-1/2 h-1/2 text-white/80" />
+          {card.type === "title" ? (
+            <Book className="w-1/2 h-1/2 text-black/70" strokeWidth={1.5} />
+          ) : (
+            <Dog className="w-1/2 h-1/2 text-white/80" strokeWidth={1.5} />
+          )}
         </div>
 
         {/* Front of card (content) */}
