@@ -4973,13 +4973,6 @@
     },
     {
       "type": "content",
-      "text": "Who is the eldest Swift present at the reunion?",
-      "book_key": "a-dictionary-of-scoundrels",
-      "answer": "Great‑Aunt Prudence",
-      "page": 20
-    },
-    {
-      "type": "content",
       "text": "Which sibling teases Shenanigan about her name?",
       "book_key": "a-dictionary-of-scoundrels",
       "answer": "Felicity",
@@ -5054,13 +5047,6 @@
       "book_key": "a-dictionary-of-scoundrels",
       "answer": "A notebook with secret sketches",
       "page": 102
-    },
-    {
-      "type": "content",
-      "text": "What clue leads to the hidden basement door?",
-      "book_key": "a-dictionary-of-scoundrels",
-      "answer": "A missing floorboard in the study",
-      "page": 210
     },
     {
       "type": "content",
@@ -8190,7 +8176,7 @@
     },
     {
       "type": "content",
-      "text": "Johannes says Helene has a beautiful what what is risp like fresh rain?",
+      "text": "Johannes says Helene has a beautiful what that is crisp like fresh rain?",
       "book_key": "the-eyes-and-the-impossible",
       "answer": "Voice",
       "page": 162
@@ -14646,7 +14632,7 @@
     },
     {
       "type": "content",
-      "text": "In what cheer does Cat lead the school?",
+      "text": "What cheer does Cat lead with at Sam's first game as a member of the Spirit Squad? Be specific.",
       "book_key": "tagging-freedom",
       "answer": "AMS, We’re #1",
       "page": 49
@@ -17654,7 +17640,7 @@
     },
     {
       "type": "content",
-      "text": "What is the subject on the first day of school maths?",
+      "text": "What type of math does Ruth's new math teacher dive right into on Ruth's first day of school?",
       "book_key": "uprooted",
       "answer": "Trigonometry",
       "page": 108
@@ -17710,9 +17696,9 @@
     },
     {
       "type": "content",
-      "text": "What are the two subjects Ccompetely does not understand?",
+      "text": "Two part: What two subjects or classes does Ruth not like at her Hong Kong school?",
       "book_key": "uprooted",
-      "answer": "Chemistry and German class",
+      "answer": "Chemistry (subject) and German (class)",
       "page": 124
     },
     {

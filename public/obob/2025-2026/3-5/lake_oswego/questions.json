@@ -752,7 +752,7 @@
       },
       {
         "type": "in-which-book",
-        "text": "did someone retire in 1973, and who was it?",
+        "text": "did the character mentioned in the title retire in 1973?",
         "book_key": "escape-from-mr-lemoncellos-library",
         "page": 64
       },
@@ -846,7 +846,7 @@
       },
       {
         "type": "content",
-        "text": "what app does Kyle's mom have on her phone?",
+        "text": "what app does Kyle's mom have on her computer?",
         "book_key": "escape-from-mr-lemoncellos-library",
         "answer": "Diner Dash",
         "page": 13
@@ -895,7 +895,7 @@
       },
       {
         "type": "content",
-        "text": "what band is Mozart jamming with?",
+        "text": "what band was Mozart jamming with at the jukebox concert in the IMAX theater?",
         "book_key": "escape-from-mr-lemoncellos-library",
         "answer": "Metallica",
         "page": 70

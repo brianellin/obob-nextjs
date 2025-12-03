@@ -999,9 +999,9 @@
     },
     {
       "type": "content",
-      "text": "Who's dog was nipping at Marvel's ankles trying to get to Butter at the pet store?",
+      "text": "Whose dog was nipping at Marvel's ankles trying to get to Butter at the pet store?",
       "book_key": "better-with-butter",
-      "answer": "Jamies",
+      "answer": "Jamie's",
       "page": 116
     },
     {
@@ -2113,7 +2113,7 @@
     },
     {
       "type": "content",
-      "text": "What did the first mayor of Ember use in his attempt to open the box?",
+      "text": "What did the seventh mayor of Ember use in his attempt to open the box?",
       "book_key": "city-of-ember",
       "answer": "hammer",
       "page": 2
@@ -2248,7 +2248,7 @@
       "type": "content",
       "text": "What is Lizzie's nickname for Farlo Batten, the head of the storerooms?",
       "book_key": "city-of-ember",
-      "answer": "(old) Flab Face",
+      "answer": "Old Flab Face",
       "page": 103
     },
     {
@@ -3093,7 +3093,7 @@
     },
     {
       "type": "in-which-book",
-      "text": "does a chaarcter get lost in the woods?",
+      "text": "does a character get lost in the woods near their house?",
       "book_key": "elf-dog-and-owl-head",
       "page": 149
     },
@@ -3177,7 +3177,7 @@
     },
     {
       "type": "in-which-book",
-      "text": "does a character have their memory taken away?",
+      "text": "do a group of elders remove a character memory?",
       "book_key": "elf-dog-and-owl-head",
       "page": 219
     },
@@ -3373,13 +3373,6 @@
       "book_key": "elf-dog-and-owl-head",
       "answer": "Cavern Cola",
       "page": 108
-    },
-    {
-      "type": "content",
-      "text": "why did Clay decide to take a separate path home in from metal hunting?",
-      "book_key": "elf-dog-and-owl-head",
-      "answer": "To see if he could discover his own way home without Elphinore.",
-      "page": 110
     },
     {
       "type": "content",
@@ -4550,7 +4543,7 @@
     },
     {
       "type": "in-which-book",
-      "text": "does a character wake up bcause they hear loud, blaring music?",
+      "text": "does a character wake up bcause they hear the theme song from Rocky loud and blaring?",
       "book_key": "escape-from-mr-lemoncellos-library",
       "page": 70
     },
@@ -4946,7 +4939,7 @@
       "type": "content",
       "text": "How old would Mrs. Tobin be if she were still alive during the grand opening of the new library?",
       "book_key": "escape-from-mr-lemoncellos-library",
-      "answer": "102",
+      "answer": "110",
       "page": 62
     },
     {
@@ -5014,9 +5007,9 @@
     },
     {
       "type": "content",
-      "text": "In the wonder dome, which wall was providing the dewey decimal clues?",
+      "text": "In the wonder dome, where were the dewey decimal clues?",
       "book_key": "escape-from-mr-lemoncellos-library",
-      "answer": "Ceiling",
+      "answer": "On the ceiling",
       "page": 217
     },
     {
@@ -5405,7 +5398,7 @@
     },
     {
       "type": "content",
-      "text": "Two-Part: After breaking the window, how much money does Mike get deducted from his allowance, and for how long?",
+      "text": "Two-Part: After breaking the window, how much money does Kyle get deducted from his allowance, and for how long?",
       "book_key": "escape-from-mr-lemoncellos-library",
       "answer": "50 cents; for the rest of the year",
       "page": 6
@@ -7677,12 +7670,6 @@
     {
       "type": "in-which-book",
       "text": "does someone feel saved from the pain of losing someone and from a city they hated?",
-      "book_key": "finding-langston",
-      "page": 104
-    },
-    {
-      "type": "in-which-book",
-      "text": "was someone helped to finding home?",
       "book_key": "finding-langston",
       "page": 104
     },
@@ -12845,21 +12832,21 @@
       "type": "content",
       "text": "What kind of seed did Ha plant?",
       "book_key": "inside-out-and-back-again",
-      "answer": "A pappaya seed",
+      "answer": "A papaya seed",
       "page": 8
     },
     {
       "type": "content",
-      "text": "Where was the pappaya seed planted?",
+      "text": "Where was the papaya seed planted?",
       "book_key": "inside-out-and-back-again",
       "answer": "The back garden",
       "page": 8
     },
     {
       "type": "content",
-      "text": "How does Ha describe the pappaya seed?",
+      "text": "How does Ha describe the papaya seed?",
       "book_key": "inside-out-and-back-again",
-      "answer": "A fish eye, slippery shiny back",
+      "answer": "A fish eye, slippery shiny black",
       "page": 8
     },
     {
@@ -13123,7 +13110,7 @@
     },
     {
       "type": "content",
-      "text": "What two fruits does Ha compare the taste of pappaya to?",
+      "text": "What two fruits does Ha compare the taste of papaya to?",
       "book_key": "inside-out-and-back-again",
       "answer": "Mango and pear",
       "page": 21
@@ -13527,7 +13514,7 @@
     },
     {
       "type": "in-which-book",
-      "text": "in which book, does someone climb a fire tower to wish on super hero magic?",
+      "text": "does someone climb a fire tower to wish on super hero magic?",
       "book_key": "just-like-click",
       "page": 148
     },
@@ -16401,7 +16388,7 @@
     },
     {
       "type": "in-which-book",
-      "text": "does someone wear a full-body turle costume?",
+      "text": "does someone wear a full-body turtle costume?",
       "book_key": "the-million-dollar-race",
       "page": 37
     },
@@ -17350,7 +17337,7 @@
     },
     {
       "type": "in-which-book",
-      "text": "did a character's sister die when she chased and hit by a car?",
+      "text": "did a character's sister die when she was chased and hit by a car?",
       "book_key": "number-the-stars",
       "page": 131
     },
@@ -18390,7 +18377,7 @@
     },
     {
       "type": "content",
-      "text": "Two part question...Name two fothe five things Annemarie puts into the basket to take to Henrik?",
+      "text": "Two part question...Name two of the five things Annemarie puts into the basket to take to Henrik?",
       "book_key": "number-the-stars",
       "answer": "Bread, Apple, Cheese, Napkin, or Package",
       "page": 104
@@ -19556,7 +19543,7 @@
     },
     {
       "type": "content",
-      "text": "What animal did the shark think they were attacking?",
+      "text": "What animal did the shark think it was attacking?",
       "book_key": "odder",
       "answer": "a sea lion",
       "page": 59
@@ -21400,7 +21387,7 @@
     },
     {
       "type": "in-which-book",
-      "text": "is it a modern retelling of a classic book?",
+      "text": "is the story a modern retelling of a classic?",
       "book_key": "the-secret-garden-on-81st-street"
     },
     {
@@ -21603,9 +21590,9 @@
     },
     {
       "type": "in-which-book",
-      "text": "does a character have anxiety?",
+      "text": "does a young boy struggle with anxiety?",
       "book_key": "the-secret-garden-on-81st-street",
-      "page": 142
+      "page": 141
     },
     {
       "type": "in-which-book",
@@ -21657,7 +21644,7 @@
     },
     {
       "type": "in-which-book",
-      "text": "does a character want to be a cartoonist?",
+      "text": "does a little boy want to be a cartoonist someday?",
       "book_key": "the-secret-garden-on-81st-street",
       "page": 127
     },
@@ -21809,13 +21796,6 @@
       "book_key": "the-secret-garden-on-81st-street",
       "answer": "Pizza",
       "page": 7
-    },
-    {
-      "type": "content",
-      "text": "What is the shape of the keychain attached to the key that unlocks Mr. Craven's house?",
-      "book_key": "the-secret-garden-on-81st-street",
-      "answer": "Owl",
-      "page": 12
     },
     {
       "type": "content",
@@ -22376,7 +22356,7 @@
     },
     {
       "type": "content",
-      "text": "What two things does Ben suggests not to miss at the Museum of Natural History",
+      "text": "What two things does Ben suggest not to miss at the Museum of Natural History?",
       "book_key": "the-secret-garden-on-81st-street",
       "answer": "the squid and the whale",
       "page": 34
@@ -23180,12 +23160,6 @@
       "book_key": "squished",
       "answer": "Annie",
       "page": 5
-    },
-    {
-      "type": "content",
-      "text": "What color blanket does Avery use?",
-      "book_key": "squished",
-      "answer": "Yellow"
     },
     {
       "type": "content",
