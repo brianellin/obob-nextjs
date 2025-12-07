@@ -27,8 +27,9 @@ type VibeResult = {
   streakAtTime: number;
 };
 
-// Fun reaction messages
+// Fun reaction messages - mix of modern slang and retro throwbacks
 const CORRECT_REACTIONS = [
+  // Modern
   "SLAY",
   "NO CAP",
   "GOATED",
@@ -41,57 +42,93 @@ const CORRECT_REACTIONS = [
   "SHEESH",
   "PERIOD",
   "ATE THAT",
-  "UNDERSTOOD THE ASSIGNMENT",
   "MAIN CHARACTER",
   "ICONIC",
-  "SERVED",
   "BIG BRAIN",
   "GALAXY BRAIN",
   "CERTIFIED",
   "IMMACULATE",
-  "CHEF'S KISS",
   "YAAAS",
-  "SLAYED",
-  "IT'S GIVING SMART",
-  "RENT FREE",
   "HITS DIFFERENT",
   "BASED",
-  "REAL",
   "FACTS",
-  "LOWKEY GENIUS",
+  // 2000s
+  "EPIC WIN",
+  "YOU ROCK",
+  "TOTALLY AWESOME",
+  "SICK",
+  "SWEET",
+  "BEAST MODE",
+  "OWNED IT",
+  "FTW",
+  "PWNED",
+  "LEGIT",
+  // 90s
+  "ALL THAT",
+  "DA BOMB",
+  "PHAT",
+  "WORD",
+  "TIGHT",
+  "FLY",
+  "DOPE",
+  "STELLAR",
+  // 80s
+  "RADICAL",
+  "TOTALLY TUBULAR",
+  "GNARLY",
+  "BODACIOUS",
+  "RIGHTEOUS",
+  "CHOICE",
+  "FRESH",
+  "BAD",
+  "TO THE MAX",
 ];
 
 const WRONG_REACTIONS = [
+  // Encouraging modern
+  "ALMOST",
+  "SO CLOSE",
+  "NEXT TIME",
+  "KEEP GOING",
+  "YOU GOT THIS",
+  "TRY AGAIN",
+  "OOPS",
+  "NOT QUITE",
+  "CLOSE ONE",
+  "GOOD TRY",
+  // Playful modern
   "BRUH",
   "OOF",
-  "NAH",
-  "L",
-  "RIP",
-  "YIKES",
-  "CAP",
-  "SUS",
-  "NOT IT",
-  "CRINGE",
-  "CAUGHT IN 4K",
-  "DOWN BAD",
-  "FLOPPED",
-  "RATIO",
-  "SKILL ISSUE",
-  "COPE",
-  "SIKE",
-  "WHOMP WHOMP",
-  "THAT AIN'T IT",
-  "TRY AGAIN BESTIE",
   "PLOT TWIST",
-  "EMOTIONAL DAMAGE",
-  "HOLD THIS L",
-  "NOT THE VIBE",
-  "SIR/MA'AM NO",
-  "READ MORE BOOKS",
-  "VILLAIN ARC",
-  "CERTIFIED FLOP",
-  "TRAGIC",
-  "DELULU",
+  "WHOOPS",
+  "BONK",
+  "YOINK",
+  "NOPE",
+  "HMMMM",
+  "WAIT WHAT",
+  "HOLD UP",
+  // 2000s
+  "EPIC FAIL",
+  "MY BAD",
+  "FAIL WHALE",
+  "WOMP WOMP",
+  "D'OH",
+  "NOT COOL",
+  "BOGUS",
+  // 90s
+  "AS IF",
+  "PSYCH",
+  "WHATEVER",
+  "TALK TO THE HAND",
+  "BOO YA... NOT",
+  "NOT",
+  // 80s
+  "GAG ME",
+  "BOGUS",
+  "BUMMER",
+  "TAKE A CHILL PILL",
+  "NO WAY JOSE",
+  "COWABUNGA... NOT",
 ];
 
 const STREAK_MESSAGES = [
@@ -123,18 +160,10 @@ export default function VibeCheckGame({
   const [questionStartTime, setQuestionStartTime] = useState(0);
   const [showReaction, setShowReaction] = useState<string | null>(null);
   const [reactionType, setReactionType] = useState<"correct" | "wrong" | null>(null);
-  const [, setSwipeDirection] = useState<"left" | "right" | null>(null);
   const [showStreakPopup, setShowStreakPopup] = useState<string | null>(null);
   const [soundEnabled, setSoundEnabled] = useState(true);
   const [showConfetti, setShowConfetti] = useState(false);
   const [comboMultiplier, setComboMultiplier] = useState(1);
-
-  // Touch handling
-  const touchStartX = useRef(0);
-  const touchStartY = useRef(0);
-  const cardRef = useRef<HTMLDivElement>(null);
-  const [dragOffset, setDragOffset] = useState({ x: 0, y: 0 });
-  const [isDragging, setIsDragging] = useState(false);
 
   // Timer
   const timerRef = useRef<NodeJS.Timeout | null>(null);
@@ -308,8 +337,6 @@ export default function VibeCheckGame({
     setTimeout(() => {
       setShowReaction(null);
       setReactionType(null);
-      setDragOffset({ x: 0, y: 0 });
-      setSwipeDirection(null);
 
       if (currentIndex < questions.length - 1) {
         setCurrentIndex((prev) => prev + 1);
@@ -348,39 +375,6 @@ export default function VibeCheckGame({
   useEffect(() => {
     handleAnswerRef.current = handleAnswer;
   });
-
-  // Touch handlers for swipe
-  const handleTouchStart = (e: React.TouchEvent) => {
-    touchStartX.current = e.touches[0].clientX;
-    touchStartY.current = e.touches[0].clientY;
-    setIsDragging(true);
-  };
-
-  const handleTouchMove = (e: React.TouchEvent) => {
-    if (!isDragging) return;
-    const deltaX = e.touches[0].clientX - touchStartX.current;
-    const deltaY = e.touches[0].clientY - touchStartY.current;
-    setDragOffset({ x: deltaX, y: deltaY * 0.3 });
-  };
-
-  const handleTouchEnd = () => {
-    setIsDragging(false);
-
-    // If swiped far enough, select that option
-    const threshold = 80;
-    if (Math.abs(dragOffset.x) > threshold) {
-      const swipedLeft = dragOffset.x < 0;
-      setSwipeDirection(swipedLeft ? "left" : "right");
-
-      // Select first or second option based on swipe direction
-      const optionIndex = swipedLeft ? 0 : 1;
-      if (answerOptions[optionIndex]) {
-        handleAnswer(answerOptions[optionIndex]);
-      }
-    } else {
-      setDragOffset({ x: 0, y: 0 });
-    }
-  };
 
   // Calculate vibe rating for results
   const getVibeRating = () => {
@@ -636,10 +630,6 @@ Can you beat my vibe? obob.dog/vibe-check/${year}/${division}`;
       {/* Question card */}
       <div className="flex-1 flex flex-col items-center justify-center">
         <Card
-          ref={cardRef}
-          onTouchStart={handleTouchStart}
-          onTouchMove={handleTouchMove}
-          onTouchEnd={handleTouchEnd}
           className={`w-full max-w-sm bg-white text-gray-900 rounded-3xl p-6 shadow-2xl transition-all duration-200 ${
             reactionType === "correct"
               ? "animate-vibe-correct"
@@ -647,9 +637,6 @@ Can you beat my vibe? obob.dog/vibe-check/${year}/${division}`;
               ? "animate-vibe-wrong"
               : ""
           }`}
-          style={{
-            transform: `translateX(${dragOffset.x}px) rotate(${dragOffset.x * 0.05}deg)`,
-          }}
         >
           {/* Reaction overlay */}
           {showReaction && (
