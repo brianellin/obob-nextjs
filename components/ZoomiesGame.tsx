@@ -90,6 +90,7 @@ const CORRECT_REACTIONS = [
   "FRESH",
   "BAD",
   "TO THE MAX",
+  "COWABUNGA",
 ];
 
 const WRONG_REACTIONS = [
@@ -160,7 +161,6 @@ const WRONG_REACTIONS = [
   "BUMMER",
   "TAKE A CHILL PILL",
   "NO WAY JOSE",
-  "COWABUNGA... NOT",
 ];
 
 const STREAK_MESSAGES = [
