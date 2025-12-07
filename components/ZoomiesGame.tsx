@@ -5,7 +5,16 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import type { Book, QuestionWithBook } from "@/types";
 import Image from "next/image";
-import { Trophy, Flame, Share2, RotateCcw, Home, X, Volume2, VolumeX } from "lucide-react";
+import {
+  Trophy,
+  Flame,
+  Share2,
+  RotateCcw,
+  Home,
+  X,
+  Volume2,
+  VolumeX,
+} from "lucide-react";
 import { track } from "@vercel/analytics";
 import { usePostHog } from "posthog-js/react";
 import Confetti from "react-confetti";
@@ -41,7 +50,6 @@ const CORRECT_REACTIONS = [
   "LEGENDARY",
   "SHEESH",
   "PERIOD",
-  "ATE THAT",
   "MAIN CHARACTER",
   "ICONIC",
   "BIG BRAIN",
@@ -69,7 +77,6 @@ const CORRECT_REACTIONS = [
   "BEAST MODE",
   "OWNED IT",
   "FTW",
-  "PWNED",
   "LEGIT",
   // 90s
   "ALL THAT",
@@ -78,7 +85,6 @@ const CORRECT_REACTIONS = [
   "WORD",
   "TIGHT",
   "FLY",
-  "DOPE",
   "STELLAR",
   // 80s
   "RADICAL",
@@ -88,7 +94,6 @@ const CORRECT_REACTIONS = [
   "RIGHTEOUS",
   "CHOICE",
   "FRESH",
-  "BAD",
   "TO THE MAX",
   "COWABUNGA",
 ];
@@ -116,9 +121,9 @@ const WRONG_REACTIONS = [
   "HMMMM",
   "WAIT WHAT",
   "HOLD UP",
+  "COOKED",
   // Edgy modern (added back)
   "NAH",
-  "L",
   "RIP",
   "YIKES",
   "CAP",
@@ -133,22 +138,16 @@ const WRONG_REACTIONS = [
   "SIKE",
   "THAT AIN'T IT",
   "TRY AGAIN BESTIE",
-  "EMOTIONAL DAMAGE",
-  "HOLD THIS L",
   "NOT THE VIBE",
   "SIR/MA'AM NO",
   "READ MORE BOOKS",
   "VILLAIN ARC",
-  "CERTIFIED FLOP",
+  "FLOP",
   "TRAGIC",
-  "DELULU",
   // 2000s
-  "EPIC FAIL",
   "MY BAD",
-  "FAIL WHALE",
   "WOMP WOMP",
   "D'OH",
-  "NOT COOL",
   "BOGUS",
   // 90s
   "AS IF",
@@ -157,10 +156,9 @@ const WRONG_REACTIONS = [
   "TALK TO THE HAND",
   "BOO YA... NOT",
   "NOT",
+  "WHIFF",
   // 80s
   "BUMMER",
-  "TAKE A CHILL PILL",
-  "NO WAY JOSE",
 ];
 
 const STREAK_MESSAGES = [
@@ -191,7 +189,9 @@ export default function ZoomiesGame({
   const [timeLeft, setTimeLeft] = useState(10000); // 10 seconds per question
   const [questionStartTime, setQuestionStartTime] = useState(0);
   const [showReaction, setShowReaction] = useState<string | null>(null);
-  const [reactionType, setReactionType] = useState<"correct" | "wrong" | null>(null);
+  const [reactionType, setReactionType] = useState<"correct" | "wrong" | null>(
+    null
+  );
   const [showStreakPopup, setShowStreakPopup] = useState<string | null>(null);
   const [soundEnabled, setSoundEnabled] = useState(true);
   const [showConfetti, setShowConfetti] = useState(false);
@@ -250,8 +250,16 @@ export default function ZoomiesGame({
       setComboMultiplier(1);
 
       // Track game start
-      track("zoomiesStarted", { year, division, questionCount: QUESTION_COUNT });
-      posthog.capture("zoomiesStarted", { year, division, questionCount: QUESTION_COUNT });
+      track("zoomiesStarted", {
+        year,
+        division,
+        questionCount: QUESTION_COUNT,
+      });
+      posthog.capture("zoomiesStarted", {
+        year,
+        division,
+        questionCount: QUESTION_COUNT,
+      });
     } catch (error) {
       console.error("Error starting game:", error);
     } finally {
@@ -289,7 +297,9 @@ export default function ZoomiesGame({
       .sort(() => Math.random() - 0.5)
       .slice(0, 3);
 
-    const allOptions = [...wrongBooks, correctBook].sort(() => Math.random() - 0.5);
+    const allOptions = [...wrongBooks, correctBook].sort(
+      () => Math.random() - 0.5
+    );
     return allOptions;
   }, [books, questions, currentIndex]);
 
@@ -315,7 +325,10 @@ export default function ZoomiesGame({
     let pointsEarned = 0;
     if (isCorrect) {
       // Base points + speed bonus + streak bonus
-      const speedBonus = Math.max(0, Math.floor((TIME_PER_QUESTION - responseTime) / 100));
+      const speedBonus = Math.max(
+        0,
+        Math.floor((TIME_PER_QUESTION - responseTime) / 100)
+      );
       pointsEarned = (100 + speedBonus) * comboMultiplier;
 
       const newStreak = streak + 1;
@@ -330,7 +343,8 @@ export default function ZoomiesGame({
 
       // Show streak popup
       const streakMsg = STREAK_MESSAGES.find(
-        (s) => newStreak >= s.min && (newStreak === s.min || newStreak % 5 === 0)
+        (s) =>
+          newStreak >= s.min && (newStreak === s.min || newStreak % 5 === 0)
       );
       if (streakMsg) {
         setShowStreakPopup(`${streakMsg.emoji} ${streakMsg.message}`);
@@ -343,7 +357,9 @@ export default function ZoomiesGame({
 
       // Show reaction
       setReactionType("correct");
-      setShowReaction(CORRECT_REACTIONS[Math.floor(Math.random() * CORRECT_REACTIONS.length)]);
+      setShowReaction(
+        CORRECT_REACTIONS[Math.floor(Math.random() * CORRECT_REACTIONS.length)]
+      );
     } else {
       setStreak(0);
       setComboMultiplier(1);
@@ -351,7 +367,9 @@ export default function ZoomiesGame({
       playSound(wrongSound);
 
       setReactionType("wrong");
-      setShowReaction(WRONG_REACTIONS[Math.floor(Math.random() * WRONG_REACTIONS.length)]);
+      setShowReaction(
+        WRONG_REACTIONS[Math.floor(Math.random() * WRONG_REACTIONS.length)]
+      );
     }
 
     // Record result
@@ -377,7 +395,8 @@ export default function ZoomiesGame({
       } else {
         // Game over
         setPhase("results");
-        const correctCount = results.filter((r) => r.correct).length + (isCorrect ? 1 : 0);
+        const correctCount =
+          results.filter((r) => r.correct).length + (isCorrect ? 1 : 0);
         if (correctCount >= QUESTION_COUNT * 0.8) {
           setShowConfetti(true);
           setTimeout(() => setShowConfetti(false), 5000);
@@ -413,10 +432,18 @@ export default function ZoomiesGame({
     const correctCount = results.filter((r) => r.correct).length;
     const percentage = (correctCount / results.length) * 100;
 
-    if (percentage >= 90) return { rating: "TOP DOG", emoji: "🏆", color: "text-yellow-400" };
-    if (percentage >= 75) return { rating: "GOOD BOY/GIRL", emoji: "🦴", color: "text-purple-400" };
-    if (percentage >= 60) return { rating: "LEARNING NEW TRICKS", emoji: "🐾", color: "text-cyan-400" };
-    if (percentage >= 40) return { rating: "STILL A PUPPY", emoji: "🐶", color: "text-gray-400" };
+    if (percentage >= 90)
+      return { rating: "TOP DOG", emoji: "🏆", color: "text-yellow-400" };
+    if (percentage >= 75)
+      return { rating: "GOOD BOY/GIRL", emoji: "🦴", color: "text-purple-400" };
+    if (percentage >= 60)
+      return {
+        rating: "LEARNING NEW TRICKS",
+        emoji: "🐾",
+        color: "text-cyan-400",
+      };
+    if (percentage >= 40)
+      return { rating: "STILL A PUPPY", emoji: "🐶", color: "text-gray-400" };
     return { rating: "NEEDS MORE TREATS", emoji: "🦮", color: "text-red-400" };
   };
 
@@ -451,9 +478,7 @@ Can you catch me? obob.dog/zoomies/${year}/${division}`;
       <div className="min-h-screen bg-gradient-to-br from-violet-600 via-fuchsia-500 to-pink-500 flex flex-col items-center justify-center p-4 text-white">
         <div className="text-center max-w-md">
           <div className="text-7xl mb-4 animate-bounce">🐕</div>
-          <h1 className="text-5xl font-black mb-2 tracking-tight">
-            ZOOMIES
-          </h1>
+          <h1 className="text-5xl font-black mb-2 tracking-tight">ZOOMIES</h1>
           <p className="text-xl opacity-90 mb-8">
             How well do you know your OBOB books?
           </p>
@@ -629,7 +654,11 @@ Can you catch me? obob.dog/zoomies/${year}/${division}`;
             size="sm"
             className="text-white/80 hover:text-white hover:bg-white/10 p-2"
           >
-            {soundEnabled ? <Volume2 className="w-5 h-5" /> : <VolumeX className="w-5 h-5" />}
+            {soundEnabled ? (
+              <Volume2 className="w-5 h-5" />
+            ) : (
+              <VolumeX className="w-5 h-5" />
+            )}
           </Button>
         </div>
       </div>
@@ -674,9 +703,7 @@ Can you catch me? obob.dog/zoomies/${year}/${division}`;
           {showReaction && (
             <div
               className={`absolute inset-0 flex items-center justify-center z-20 px-4 ${
-                reactionType === "correct"
-                  ? "bg-emerald-500"
-                  : "bg-red-500"
+                reactionType === "correct" ? "bg-emerald-500" : "bg-red-500"
               }`}
             >
               <span

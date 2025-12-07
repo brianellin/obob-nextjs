@@ -23,22 +23,18 @@ export default function ModeSelection({ year, division }: ModeSelectionProps) {
       <Card className="border-2 border-fuchsia-400 bg-gradient-to-br from-violet-50 to-fuchsia-50">
         <CardHeader>
           <div className="flex items-center gap-2">
-            <CardTitle className="flex items-center gap-2">
-              <span className="text-2xl">🐕</span> Zoomies
-            </CardTitle>
+            <CardTitle className="flex items-center gap-2">Zoomies</CardTitle>
             <Badge className="bg-gradient-to-r from-violet-500 to-fuchsia-500 hover:from-violet-600 hover:to-fuchsia-600 text-white">
               New!
             </Badge>
           </div>
-          <CardDescription>
-            Fast-paced book identification game
-          </CardDescription>
+          <CardDescription>Fast-paced book identification game</CardDescription>
         </CardHeader>
         <CardContent>
           <p>
-            Can you identify the right book in 10 seconds? Build streaks, earn
-            combo multipliers, and get your pack rank! Perfect for quick
-            practice on your phone.
+            Identify the right book in 10 seconds, in this new{" "}
+            <span className="italic">in which book</span> game. Perfect for
+            quick practice on the go.
           </p>
         </CardContent>
         <CardFooter>
