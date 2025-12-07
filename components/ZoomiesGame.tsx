@@ -139,7 +139,6 @@ const WRONG_REACTIONS = [
   "THAT AIN'T IT",
   "TRY AGAIN BESTIE",
   "NOT THE VIBE",
-  "SIR/MA'AM NO",
   "READ MORE BOOKS",
   "VILLAIN ARC",
   "FLOP",
@@ -452,7 +451,7 @@ export default function ZoomiesGame({
     if (percentage >= 90)
       return { rating: "TOP DOG", emoji: "🏆", color: "text-yellow-400" };
     if (percentage >= 75)
-      return { rating: "GOOD BOY/GIRL", emoji: "🦴", color: "text-purple-400" };
+      return { rating: "GOOD DOGGG", emoji: "🦴", color: "text-purple-400" };
     if (percentage >= 60)
       return {
         rating: "LEARNING NEW TRICKS",
