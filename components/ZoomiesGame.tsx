@@ -435,7 +435,7 @@ export default function ZoomiesGame({
           totalQuestions: QUESTION_COUNT,
         });
       }
-    }, 600);
+    }, 1200);
   };
 
   // Keep the ref updated with latest handleAnswer
@@ -841,12 +841,6 @@ Can you catch me? https://obob.dog/zoomies/${year}/${division}`;
                   className="object-cover"
                   sizes="(max-width: 768px) 50vw, 200px"
                 />
-                {/* Book title overlay */}
-                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-2">
-                  <p className="text-white text-xs font-medium leading-tight line-clamp-2">
-                    {book.title}
-                  </p>
-                </div>
               </button>
             ))}
           </div>
