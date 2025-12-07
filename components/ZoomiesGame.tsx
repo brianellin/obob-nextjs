@@ -383,6 +383,23 @@ export default function ZoomiesGame({
       },
     ]);
 
+    // Track answer event
+    const answerData = {
+      year,
+      division,
+      questionIndex: currentIndex + 1,
+      totalQuestions: QUESTION_COUNT,
+      correct: isCorrect,
+      responseTimeMs: responseTime,
+      timedOut: selectedBook === null,
+      streak: isCorrect ? streak + 1 : 0,
+      comboMultiplier,
+      pointsEarned,
+      bookKey: currentQuestion.book.book_key,
+    };
+    track("zoomiesAnswered", answerData);
+    posthog.capture("zoomiesAnswered", answerData);
+
     // Animate and move to next
     setTimeout(() => {
       setShowReaction(null);
@@ -461,6 +478,20 @@ ${correctCount}/${results.length} correct
 
 Can you catch me? obob.dog/zoomies/${year}/${division}`;
 
+    // Track share event
+    const shareData = {
+      year,
+      division,
+      score,
+      maxStreak,
+      correctCount,
+      totalQuestions: results.length,
+      packRank: packRank.rating,
+      shareMethod: "share" in navigator ? "native" : "clipboard",
+    };
+    track("zoomiesShare", shareData);
+    posthog.capture("zoomiesShare", shareData);
+
     if (navigator.share) {
       try {
         await navigator.share({ text: shareText });
@@ -511,7 +542,16 @@ Can you catch me? obob.dog/zoomies/${year}/${division}`;
           </Button>
 
           <Button
-            onClick={onExit}
+            onClick={() => {
+              const exitData = {
+                year,
+                division,
+                exitedFrom: "intro",
+              };
+              track("zoomiesExit", exitData);
+              posthog.capture("zoomiesExit", exitData);
+              onExit();
+            }}
             variant="ghost"
             className="mt-4 text-white/80 hover:text-white hover:bg-white/10"
           >
@@ -593,6 +633,17 @@ Can you catch me? obob.dog/zoomies/${year}/${division}`;
           <div className="flex gap-3">
             <Button
               onClick={() => {
+                const correctCount = results.filter((r) => r.correct).length;
+                const playAgainData = {
+                  year,
+                  division,
+                  previousScore: score,
+                  previousMaxStreak: maxStreak,
+                  previousCorrectCount: correctCount,
+                  previousTotalQuestions: results.length,
+                };
+                track("zoomiesPlayAgain", playAgainData);
+                posthog.capture("zoomiesPlayAgain", playAgainData);
                 setPhase("intro");
                 setResults([]);
               }}
@@ -602,7 +653,21 @@ Can you catch me? obob.dog/zoomies/${year}/${division}`;
               Play Again
             </Button>
             <Button
-              onClick={onExit}
+              onClick={() => {
+                const correctCount = results.filter((r) => r.correct).length;
+                const exitData = {
+                  year,
+                  division,
+                  finalScore: score,
+                  maxStreak,
+                  correctCount,
+                  totalQuestions: results.length,
+                  exitedFrom: "results",
+                };
+                track("zoomiesExit", exitData);
+                posthog.capture("zoomiesExit", exitData);
+                onExit();
+              }}
               variant="ghost"
               className="py-4 text-white/80 hover:text-white hover:bg-white/10 rounded-xl"
             >
@@ -623,7 +688,23 @@ Can you catch me? obob.dog/zoomies/${year}/${division}`;
       {/* Header */}
       <div className="flex items-center justify-between mb-4">
         <Button
-          onClick={onExit}
+          onClick={() => {
+            const correctCount = results.filter((r) => r.correct).length;
+            const exitData = {
+              year,
+              division,
+              currentScore: score,
+              currentStreak: streak,
+              maxStreak,
+              correctCount,
+              questionsAnswered: results.length,
+              totalQuestions: QUESTION_COUNT,
+              exitedFrom: "playing",
+            };
+            track("zoomiesExit", exitData);
+            posthog.capture("zoomiesExit", exitData);
+            onExit();
+          }}
           variant="ghost"
           size="sm"
           className="text-white/80 hover:text-white hover:bg-white/10 p-2"
