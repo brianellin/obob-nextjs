@@ -88,6 +88,7 @@ const CORRECT_REACTIONS = [
   "FLY",
   "STELLAR",
   // 80s
+  "RAD",
   "RADICAL",
   "TOTALLY TUBULAR",
   "GNARLY",
@@ -140,7 +141,6 @@ const WRONG_REACTIONS = [
   "TRY AGAIN BESTIE",
   "NOT THE VIBE",
   "READ MORE BOOKS",
-  "VILLAIN ARC",
   "FLOP",
   "TRAGIC",
   // 2000s
