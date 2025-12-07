@@ -662,7 +662,7 @@ Can you catch me? obob.dog/zoomies/${year}/${division}`;
       {/* Question card */}
       <div className="flex-1 flex flex-col items-center justify-center">
         <Card
-          className={`w-full max-w-sm bg-white text-gray-900 rounded-3xl p-6 shadow-2xl transition-all duration-200 ${
+          className={`relative w-full max-w-sm bg-white text-gray-900 rounded-3xl p-6 shadow-2xl overflow-hidden transition-all duration-200 ${
             reactionType === "correct"
               ? "animate-vibe-correct"
               : reactionType === "wrong"
@@ -673,10 +673,10 @@ Can you catch me? obob.dog/zoomies/${year}/${division}`;
           {/* Reaction overlay */}
           {showReaction && (
             <div
-              className={`absolute inset-0 flex items-center justify-center z-20 rounded-3xl px-4 ${
+              className={`absolute inset-0 flex items-center justify-center z-20 px-4 ${
                 reactionType === "correct"
-                  ? "bg-emerald-500/90"
-                  : "bg-red-500/90"
+                  ? "bg-emerald-500"
+                  : "bg-red-500"
               }`}
             >
               <span
