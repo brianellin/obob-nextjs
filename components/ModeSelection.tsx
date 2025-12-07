@@ -19,7 +19,7 @@ type ModeSelectionProps = {
 export default function ModeSelection({ year, division }: ModeSelectionProps) {
   return (
     <div className="space-y-8 max-w-2xl mx-auto">
-      {/* ZOOMIES - Featured new game */}
+      {/* ZOOMIES - Hidden while testing with friends. Direct link still works: /zoomies/{year}/{division}
       <Card className="border-2 border-fuchsia-400 bg-gradient-to-br from-violet-50 to-fuchsia-50">
         <CardHeader>
           <div className="flex items-center gap-2">
@@ -49,6 +49,7 @@ export default function ModeSelection({ year, division }: ModeSelectionProps) {
           </Link>
         </CardFooter>
       </Card>
+      */}
 
       <Card>
         <CardHeader>
