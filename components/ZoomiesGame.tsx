@@ -14,6 +14,7 @@ import {
   X,
   Volume2,
   VolumeX,
+  Check,
 } from "lucide-react";
 import { track } from "@vercel/analytics";
 import { usePostHog } from "posthog-js/react";
@@ -130,7 +131,6 @@ const WRONG_REACTIONS = [
   "SUS",
   "NOT IT",
   "CRINGE",
-  "DOWN BAD",
   "FLOPPED",
   "RATIO",
   "SKILL ISSUE",
@@ -782,10 +782,15 @@ Can you catch me? https://obob.dog/zoomies/${year}/${division}`;
           {/* Reaction overlay */}
           {showReaction && (
             <div
-              className={`absolute inset-0 flex items-center justify-center z-20 px-4 ${
+              className={`absolute inset-0 flex flex-col items-center justify-center z-20 px-4 ${
                 reactionType === "correct" ? "bg-emerald-500" : "bg-red-500"
               }`}
             >
+              {reactionType === "correct" ? (
+                <Check className="w-16 h-16 text-white mb-2" strokeWidth={3} />
+              ) : (
+                <X className="w-16 h-16 text-white mb-2" strokeWidth={3} />
+              )}
               <span
                 className={`font-black text-white animate-vibe-reaction text-center leading-tight ${
                   showReaction.length > 20
