@@ -36,7 +36,7 @@ export default function ModeSelection({ year, division }: ModeSelectionProps) {
         </CardHeader>
         <CardContent>
           <p>
-            Can you identify the right book in 5 seconds? Build streaks, earn
+            Can you identify the right book in 10 seconds? Build streaks, earn
             combo multipliers, and get your vibe rating! Perfect for quick
             practice on your phone.
           </p>

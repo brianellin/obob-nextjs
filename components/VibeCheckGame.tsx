@@ -39,6 +39,26 @@ const CORRECT_REACTIONS = [
   "ELITE",
   "LEGENDARY",
   "SHEESH",
+  "PERIOD",
+  "ATE THAT",
+  "UNDERSTOOD THE ASSIGNMENT",
+  "MAIN CHARACTER",
+  "ICONIC",
+  "SERVED",
+  "BIG BRAIN",
+  "GALAXY BRAIN",
+  "CERTIFIED",
+  "IMMACULATE",
+  "CHEF'S KISS",
+  "YAAAS",
+  "SLAYED",
+  "IT'S GIVING SMART",
+  "RENT FREE",
+  "HITS DIFFERENT",
+  "BASED",
+  "REAL",
+  "FACTS",
+  "LOWKEY GENIUS",
 ];
 
 const WRONG_REACTIONS = [
@@ -52,6 +72,26 @@ const WRONG_REACTIONS = [
   "SUS",
   "NOT IT",
   "CRINGE",
+  "CAUGHT IN 4K",
+  "DOWN BAD",
+  "FLOPPED",
+  "RATIO",
+  "SKILL ISSUE",
+  "COPE",
+  "SIKE",
+  "WHOMP WHOMP",
+  "THAT AIN'T IT",
+  "TRY AGAIN BESTIE",
+  "PLOT TWIST",
+  "EMOTIONAL DAMAGE",
+  "HOLD THIS L",
+  "NOT THE VIBE",
+  "SIR/MA'AM NO",
+  "READ MORE BOOKS",
+  "VILLAIN ARC",
+  "CERTIFIED FLOP",
+  "TRAGIC",
+  "DELULU",
 ];
 
 const STREAK_MESSAGES = [
@@ -79,7 +119,7 @@ export default function VibeCheckGame({
   const [maxStreak, setMaxStreak] = useState(0);
   const [score, setScore] = useState(0);
   const [results, setResults] = useState<VibeResult[]>([]);
-  const [timeLeft, setTimeLeft] = useState(5000); // 5 seconds per question
+  const [timeLeft, setTimeLeft] = useState(10000); // 10 seconds per question
   const [questionStartTime, setQuestionStartTime] = useState(0);
   const [showReaction, setShowReaction] = useState<string | null>(null);
   const [reactionType, setReactionType] = useState<"correct" | "wrong" | null>(null);
@@ -116,7 +156,7 @@ export default function VibeCheckGame({
   };
 
   const QUESTION_COUNT = 15;
-  const TIME_PER_QUESTION = 5000; // 5 seconds
+  const TIME_PER_QUESTION = 10000; // 10 seconds
 
   // Fetch questions when game starts
   const startGame = async () => {
@@ -399,7 +439,7 @@ Can you beat my vibe? obob.dog/vibe-check/${year}/${division}`;
             </div>
             <div className="flex items-center gap-3">
               <span className="text-2xl">⏱️</span>
-              <span>5 seconds per question</span>
+              <span>10 seconds per question</span>
             </div>
             <div className="flex items-center gap-3">
               <span className="text-2xl">🔥</span>
