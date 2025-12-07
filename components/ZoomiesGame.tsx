@@ -11,7 +11,7 @@ import { usePostHog } from "posthog-js/react";
 import Confetti from "react-confetti";
 import { useWindowSize } from "react-use";
 
-type VibeCheckGameProps = {
+type ZoomiesGameProps = {
   books: Book[];
   year: string;
   division: string;
@@ -20,7 +20,7 @@ type VibeCheckGameProps = {
 
 type GamePhase = "intro" | "playing" | "results";
 
-type VibeResult = {
+type ZoomiesResult = {
   question: QuestionWithBook;
   correct: boolean;
   timeMs: number;
@@ -171,12 +171,12 @@ const STREAK_MESSAGES = [
   { min: 15, message: "LITERALLY UNREAL", emoji: "🌟" },
 ];
 
-export default function VibeCheckGame({
+export default function ZoomiesGame({
   books,
   year,
   division,
   onExit,
-}: VibeCheckGameProps) {
+}: ZoomiesGameProps) {
   const posthog = usePostHog();
   const { width, height } = useWindowSize();
 
@@ -187,7 +187,7 @@ export default function VibeCheckGame({
   const [streak, setStreak] = useState(0);
   const [maxStreak, setMaxStreak] = useState(0);
   const [score, setScore] = useState(0);
-  const [results, setResults] = useState<VibeResult[]>([]);
+  const [results, setResults] = useState<ZoomiesResult[]>([]);
   const [timeLeft, setTimeLeft] = useState(10000); // 10 seconds per question
   const [questionStartTime, setQuestionStartTime] = useState(0);
   const [showReaction, setShowReaction] = useState<string | null>(null);
@@ -250,8 +250,8 @@ export default function VibeCheckGame({
       setComboMultiplier(1);
 
       // Track game start
-      track("vibeCheckStarted", { year, division, questionCount: QUESTION_COUNT });
-      posthog.capture("vibeCheckStarted", { year, division, questionCount: QUESTION_COUNT });
+      track("zoomiesStarted", { year, division, questionCount: QUESTION_COUNT });
+      posthog.capture("zoomiesStarted", { year, division, questionCount: QUESTION_COUNT });
     } catch (error) {
       console.error("Error starting game:", error);
     } finally {
@@ -383,7 +383,7 @@ export default function VibeCheckGame({
           setTimeout(() => setShowConfetti(false), 5000);
         }
 
-        track("vibeCheckFinished", {
+        track("zoomiesFinished", {
           year,
           division,
           score,
@@ -391,7 +391,7 @@ export default function VibeCheckGame({
           correctCount,
           totalQuestions: QUESTION_COUNT,
         });
-        posthog.capture("vibeCheckFinished", {
+        posthog.capture("zoomiesFinished", {
           year,
           division,
           score,
@@ -408,31 +408,31 @@ export default function VibeCheckGame({
     handleAnswerRef.current = handleAnswer;
   });
 
-  // Calculate vibe rating for results
-  const getVibeRating = () => {
+  // Calculate pack rank for results
+  const getPackRank = () => {
     const correctCount = results.filter((r) => r.correct).length;
     const percentage = (correctCount / results.length) * 100;
 
-    if (percentage >= 90) return { rating: "MAIN CHARACTER", emoji: "👑", color: "text-yellow-400" };
-    if (percentage >= 75) return { rating: "CERTIFIED BOOKLOVER", emoji: "📚", color: "text-purple-400" };
-    if (percentage >= 60) return { rating: "VIBING", emoji: "✨", color: "text-cyan-400" };
-    if (percentage >= 40) return { rating: "NPC ENERGY", emoji: "🤖", color: "text-gray-400" };
-    return { rating: "NEEDS MORE READING", emoji: "📖", color: "text-red-400" };
+    if (percentage >= 90) return { rating: "TOP DOG", emoji: "🏆", color: "text-yellow-400" };
+    if (percentage >= 75) return { rating: "GOOD BOY/GIRL", emoji: "🦴", color: "text-purple-400" };
+    if (percentage >= 60) return { rating: "LEARNING NEW TRICKS", emoji: "🐾", color: "text-cyan-400" };
+    if (percentage >= 40) return { rating: "STILL A PUPPY", emoji: "🐶", color: "text-gray-400" };
+    return { rating: "NEEDS MORE TREATS", emoji: "🦮", color: "text-red-400" };
   };
 
   // Share results
   const shareResults = async () => {
     const correctCount = results.filter((r) => r.correct).length;
-    const vibeRating = getVibeRating();
+    const packRank = getPackRank();
 
-    const shareText = `📚 OBOB VIBE CHECK 📚
-${vibeRating.emoji} ${vibeRating.rating} ${vibeRating.emoji}
+    const shareText = `🐕 OBOB ZOOMIES 🐕
+${packRank.emoji} ${packRank.rating} ${packRank.emoji}
 
 Score: ${score.toLocaleString()}
 Streak: ${maxStreak} 🔥
 ${correctCount}/${results.length} correct
 
-Can you beat my vibe? obob.dog/vibe-check/${year}/${division}`;
+Can you catch me? obob.dog/zoomies/${year}/${division}`;
 
     if (navigator.share) {
       try {
@@ -450,9 +450,9 @@ Can you beat my vibe? obob.dog/vibe-check/${year}/${division}`;
     return (
       <div className="min-h-screen bg-gradient-to-br from-violet-600 via-fuchsia-500 to-pink-500 flex flex-col items-center justify-center p-4 text-white">
         <div className="text-center max-w-md">
-          <div className="text-7xl mb-4 animate-bounce">🎭</div>
+          <div className="text-7xl mb-4 animate-bounce">🐕</div>
           <h1 className="text-5xl font-black mb-2 tracking-tight">
-            VIBE CHECK
+            ZOOMIES
           </h1>
           <p className="text-xl opacity-90 mb-8">
             How well do you know your OBOB books?
@@ -472,8 +472,8 @@ Can you beat my vibe? obob.dog/vibe-check/${year}/${division}`;
               <span>Build streaks for bonus points</span>
             </div>
             <div className="flex items-center gap-3">
-              <span className="text-2xl">👑</span>
-              <span>Earn your vibe rating</span>
+              <span className="text-2xl">🏆</span>
+              <span>Earn your pack rank</span>
             </div>
           </div>
 
@@ -482,7 +482,7 @@ Can you beat my vibe? obob.dog/vibe-check/${year}/${division}`;
             disabled={loading}
             className="w-full py-8 text-2xl font-bold bg-white text-fuchsia-600 hover:bg-white/90 rounded-2xl shadow-2xl transform hover:scale-105 transition-all"
           >
-            {loading ? "Loading..." : "START VIBE CHECK"}
+            {loading ? "Loading..." : "START ZOOMIES"}
           </Button>
 
           <Button
@@ -505,7 +505,7 @@ Can you beat my vibe? obob.dog/vibe-check/${year}/${division}`;
 
   // Results screen
   if (phase === "results") {
-    const vibeRating = getVibeRating();
+    const packRank = getPackRank();
     const correctCount = results.filter((r) => r.correct).length;
 
     return (
@@ -520,13 +520,13 @@ Can you beat my vibe? obob.dog/vibe-check/${year}/${division}`;
         )}
 
         <div className="text-center max-w-md w-full">
-          {/* Vibe Report Card */}
+          {/* Pack Rank Card */}
           <Card className="bg-white/95 backdrop-blur-sm p-6 rounded-3xl shadow-2xl text-gray-900 mb-6">
-            <div className="text-6xl mb-2">{vibeRating.emoji}</div>
-            <h2 className={`text-3xl font-black ${vibeRating.color} mb-1`}>
-              {vibeRating.rating}
+            <div className="text-6xl mb-2">{packRank.emoji}</div>
+            <h2 className={`text-3xl font-black ${packRank.color} mb-1`}>
+              {packRank.rating}
             </h2>
-            <p className="text-gray-500 text-sm mb-6">Your Vibe Report</p>
+            <p className="text-gray-500 text-sm mb-6">Your Pack Rank</p>
 
             <div className="grid grid-cols-3 gap-4 mb-6">
               <div className="bg-gradient-to-br from-violet-100 to-fuchsia-100 rounded-2xl p-4">
@@ -561,7 +561,7 @@ Can you beat my vibe? obob.dog/vibe-check/${year}/${division}`;
               className="w-full py-4 bg-gradient-to-r from-violet-500 to-fuchsia-500 text-white rounded-xl font-bold mb-3"
             >
               <Share2 className="w-5 h-5 mr-2" />
-              Share Your Vibe
+              Share Your Score
             </Button>
           </Card>
 

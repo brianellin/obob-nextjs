@@ -3,11 +3,11 @@
 import React, { Suspense } from "react";
 import { useParams, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
-import VibeCheckGame from "@/components/VibeCheckGame";
+import ZoomiesGame from "@/components/ZoomiesGame";
 import { Loader2 } from "lucide-react";
 import type { Book } from "@/types";
 
-function VibeCheckContent() {
+function ZoomiesContent() {
   const params = useParams();
   const router = useRouter();
   const year = params.year as string;
@@ -50,7 +50,7 @@ function VibeCheckContent() {
   }
 
   return (
-    <VibeCheckGame
+    <ZoomiesGame
       books={books}
       year={year}
       division={division}
@@ -59,7 +59,7 @@ function VibeCheckContent() {
   );
 }
 
-export default function VibeCheckPage() {
+export default function ZoomiesPage() {
   return (
     <Suspense
       fallback={
@@ -68,7 +68,7 @@ export default function VibeCheckPage() {
         </div>
       }
     >
-      <VibeCheckContent />
+      <ZoomiesContent />
     </Suspense>
   );
 }

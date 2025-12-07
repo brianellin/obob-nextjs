@@ -19,12 +19,12 @@ type ModeSelectionProps = {
 export default function ModeSelection({ year, division }: ModeSelectionProps) {
   return (
     <div className="space-y-8 max-w-2xl mx-auto">
-      {/* VIBE CHECK - Featured new game */}
+      {/* ZOOMIES - Featured new game */}
       <Card className="border-2 border-fuchsia-400 bg-gradient-to-br from-violet-50 to-fuchsia-50">
         <CardHeader>
           <div className="flex items-center gap-2">
             <CardTitle className="flex items-center gap-2">
-              <span className="text-2xl">🎭</span> Vibe Check
+              <span className="text-2xl">🐕</span> Zoomies
             </CardTitle>
             <Badge className="bg-gradient-to-r from-violet-500 to-fuchsia-500 hover:from-violet-600 hover:to-fuchsia-600 text-white">
               New!
@@ -37,18 +37,18 @@ export default function ModeSelection({ year, division }: ModeSelectionProps) {
         <CardContent>
           <p>
             Can you identify the right book in 10 seconds? Build streaks, earn
-            combo multipliers, and get your vibe rating! Perfect for quick
+            combo multipliers, and get your pack rank! Perfect for quick
             practice on your phone.
           </p>
         </CardContent>
         <CardFooter>
           <Link
-            href={`/vibe-check/${year}/${division}`}
+            href={`/zoomies/${year}/${division}`}
             passHref
             className="w-full"
           >
             <Button className="w-full bg-gradient-to-r from-violet-500 to-fuchsia-500 hover:from-violet-600 hover:to-fuchsia-600 text-white transition-all shadow-lg hover:shadow-xl transform hover:scale-[1.02]">
-              <Zap className="mr-2 h-4 w-4" /> Start Vibe Check
+              <Zap className="mr-2 h-4 w-4" /> Start Zoomies
             </Button>
           </Link>
         </CardFooter>
