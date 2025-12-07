@@ -186,7 +186,7 @@ export default function ZoomiesGame({
   const [maxStreak, setMaxStreak] = useState(0);
   const [score, setScore] = useState(0);
   const [results, setResults] = useState<ZoomiesResult[]>([]);
-  const [timeLeft, setTimeLeft] = useState(10000); // 10 seconds per question
+  const [timeLeft, setTimeLeft] = useState(15000); // 15 seconds per question
   const [questionStartTime, setQuestionStartTime] = useState(0);
   const [showReaction, setShowReaction] = useState<string | null>(null);
   const [reactionType, setReactionType] = useState<"correct" | "wrong" | null>(
@@ -217,7 +217,7 @@ export default function ZoomiesGame({
   };
 
   const QUESTION_COUNT = 15;
-  const TIME_PER_QUESTION = 10000; // 10 seconds
+  const TIME_PER_QUESTION = 15000; // 15 seconds
 
   // Fetch questions when game starts
   const startGame = async () => {
@@ -476,7 +476,7 @@ Score: ${score.toLocaleString()}
 Streak: ${maxStreak} 🔥
 ${correctCount}/${results.length} correct
 
-Can you catch me? obob.dog/zoomies/${year}/${division}`;
+Can you catch me? https://obob.dog/zoomies/${year}/${division}`;
 
     // Track share event
     const shareData = {
@@ -521,7 +521,7 @@ Can you catch me? obob.dog/zoomies/${year}/${division}`;
             </div>
             <div className="flex items-center gap-3">
               <span className="text-2xl">⏱️</span>
-              <span>10 seconds per question</span>
+              <span>15 seconds per question</span>
             </div>
             <div className="flex items-center gap-3">
               <span className="text-2xl">🔥</span>

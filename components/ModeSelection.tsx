@@ -32,7 +32,7 @@ export default function ModeSelection({ year, division }: ModeSelectionProps) {
         </CardHeader>
         <CardContent>
           <p>
-            Identify the right book in 10 seconds, in this new{" "}
+            Identify the right book in 15 seconds, in this new{" "}
             <span className="italic">in which book</span> game. Perfect for
             quick practice on the go.
           </p>
