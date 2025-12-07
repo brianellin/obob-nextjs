@@ -654,13 +654,21 @@ Can you beat my vibe? obob.dog/vibe-check/${year}/${division}`;
           {/* Reaction overlay */}
           {showReaction && (
             <div
-              className={`absolute inset-0 flex items-center justify-center z-20 rounded-3xl ${
+              className={`absolute inset-0 flex items-center justify-center z-20 rounded-3xl px-4 ${
                 reactionType === "correct"
                   ? "bg-emerald-500/90"
                   : "bg-red-500/90"
               }`}
             >
-              <span className="text-5xl font-black text-white animate-vibe-reaction">
+              <span
+                className={`font-black text-white animate-vibe-reaction text-center leading-tight ${
+                  showReaction.length > 20
+                    ? "text-2xl"
+                    : showReaction.length > 12
+                    ? "text-3xl"
+                    : "text-5xl"
+                }`}
+              >
                 {showReaction}
               </span>
             </div>
