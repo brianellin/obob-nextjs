@@ -124,7 +124,6 @@ const WRONG_REACTIONS = [
   "SUS",
   "NOT IT",
   "CRINGE",
-  "CAUGHT IN 4K",
   "DOWN BAD",
   "FLOPPED",
   "RATIO",
@@ -158,7 +157,6 @@ const WRONG_REACTIONS = [
   "BOO YA... NOT",
   "NOT",
   // 80s
-  "GAG ME",
   "BUMMER",
   "TAKE A CHILL PILL",
   "NO WAY JOSE",
