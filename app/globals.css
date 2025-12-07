@@ -532,3 +532,82 @@
 .animate-pulse-glow {
   animation: pulse-glow 2s ease-in-out infinite;
 }
+
+/* ===== CROSSWORD GAME ANIMATIONS ===== */
+
+/* Cell correct animation - green flash with scale */
+@keyframes cell-correct {
+  0% {
+    transform: scale(1);
+    background-color: rgb(209, 250, 229); /* emerald-100 */
+  }
+  40% {
+    transform: scale(1.15);
+    background-color: rgb(16, 185, 129); /* emerald-500 */
+  }
+  100% {
+    transform: scale(1);
+    background-color: rgb(209, 250, 229); /* emerald-100 */
+  }
+}
+
+.animate-cell-correct {
+  animation: cell-correct 0.4s ease-out;
+}
+
+/* Word complete celebration */
+@keyframes word-complete {
+  0%, 100% {
+    opacity: 1;
+  }
+  30% {
+    transform: scale(1.02);
+  }
+  60% {
+    opacity: 0.8;
+  }
+}
+
+.animate-word-complete {
+  animation: word-complete 0.5s ease-out;
+}
+
+/* Incorrect cell shake */
+@keyframes cell-incorrect {
+  0%, 100% {
+    transform: translateX(0);
+    background-color: rgb(254, 226, 226); /* red-100 */
+  }
+  20% {
+    transform: translateX(-3px);
+  }
+  40% {
+    transform: translateX(3px);
+  }
+  60% {
+    transform: translateX(-2px);
+  }
+  80% {
+    transform: translateX(2px);
+  }
+}
+
+.animate-cell-incorrect {
+  animation: cell-incorrect 0.4s ease-out;
+}
+
+/* Crossword puzzle reveal */
+@keyframes puzzle-reveal {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-puzzle-reveal {
+  animation: puzzle-reveal 0.3s ease-out;
+}
