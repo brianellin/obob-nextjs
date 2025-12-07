@@ -697,8 +697,11 @@ Can you beat my vibe? obob.dog/vibe-check/${year}/${division}`;
             {answerOptions.map((book) => (
               <button
                 key={book.book_key}
-                onClick={() => handleAnswer(book)}
-                className="relative aspect-[3/4] rounded-xl overflow-hidden border-4 border-transparent hover:border-fuchsia-400 transition-all transform hover:scale-105 active:scale-95 shadow-lg"
+                onClick={(e) => {
+                  e.currentTarget.blur();
+                  handleAnswer(book);
+                }}
+                className="relative aspect-[3/4] rounded-xl overflow-hidden border-4 border-transparent hover:border-fuchsia-400 focus:border-transparent focus:outline-none transition-all transform hover:scale-105 active:scale-95 shadow-lg"
               >
                 <Image
                   src={book.cover}
