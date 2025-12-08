@@ -587,7 +587,7 @@ Can you catch me? https://obob.dog/zoomies/${year}/${division}`;
 
         <div className="text-center max-w-md w-full">
           {/* Pack Rank Card */}
-          <Card className="bg-white border-2 border-cyan-200 p-6 rounded-3xl shadow-xl text-gray-900 mb-6">
+          <Card className="bg-white border-2 border-gray-400 p-6 rounded-3xl shadow-[0_10px_30px_-10px_rgba(0,0,0,0.3)] text-gray-900 mb-6">
             <div className="text-6xl mb-2">{packRank.emoji}</div>
             <h2 className={`text-3xl font-black ${packRank.color} mb-1`}>
               {packRank.rating}
@@ -707,7 +707,7 @@ Can you catch me? https://obob.dog/zoomies/${year}/${division}`;
       {/* Question card */}
       <div className="flex-1 flex flex-col items-center justify-start sm:justify-center">
         <Card
-          className={`relative w-full max-w-sm bg-white border-2 border-cyan-200 text-gray-900 rounded-3xl px-4 pt-4 pb-6 sm:px-6 sm:pt-6 sm:pb-8 shadow-xl overflow-hidden transition-all duration-200 ${
+          className={`relative w-full max-w-sm bg-white border-2 border-gray-400 text-gray-900 rounded-3xl px-4 pt-4 pb-6 sm:px-6 sm:pt-6 sm:pb-8 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.3)] overflow-hidden transition-all duration-200 ${
             reactionType === "correct"
               ? "animate-vibe-correct"
               : reactionType === "wrong"
