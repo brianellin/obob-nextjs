@@ -505,15 +505,17 @@ Can you catch me? https://obob.dog/zoomies/${year}/${division}`;
   // Intro screen
   if (phase === "intro") {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-violet-600 via-fuchsia-500 to-pink-500 flex flex-col items-center justify-center p-4 text-white">
+      <div className="min-h-screen bg-gradient-to-b from-white to-cyan-50 flex flex-col items-center justify-center p-4">
         <div className="text-center max-w-md">
-          <div className="text-7xl mb-4 animate-bounce">🐕</div>
-          <h1 className="text-5xl font-black mb-2 tracking-tight">ZOOMIES</h1>
-          <p className="text-xl opacity-90 mb-8">
-            How well do you know your OBOB books?
+          <div className="text-7xl mb-4 animate-bounce">🐶</div>
+          <h1 className="text-5xl font-black mb-2 tracking-tight bg-gradient-to-r from-teal-500 to-cyan-500 bg-clip-text text-transparent">
+            Zoomies!
+          </h1>
+          <p className="text-xl text-gray-600 mb-8">
+            Super fast <span className="italic">in which book</span> questions
           </p>
 
-          <div className="space-y-4 text-left bg-white/10 backdrop-blur-sm rounded-2xl p-6 mb-8">
+          <div className="space-y-4 text-left bg-gradient-to-br from-teal-500 to-cyan-500 text-white rounded-2xl p-6 mb-8 shadow-lg">
             <div className="flex items-center gap-3">
               <span className="text-2xl">👆</span>
               <span>Tap the correct book cover</span>
@@ -535,7 +537,7 @@ Can you catch me? https://obob.dog/zoomies/${year}/${division}`;
           <Button
             onClick={startGame}
             disabled={loading}
-            className="w-full py-8 text-2xl font-bold bg-white text-fuchsia-600 hover:bg-white/90 rounded-2xl shadow-2xl transform hover:scale-105 transition-all"
+            className="w-full py-8 text-2xl font-bold bg-gradient-to-r from-teal-500 to-cyan-500 text-white hover:from-teal-600 hover:to-cyan-600 rounded-2xl shadow-xl transform hover:scale-105 transition-all"
           >
             {loading ? "Loading..." : "START ZOOMIES"}
           </Button>
@@ -552,7 +554,7 @@ Can you catch me? https://obob.dog/zoomies/${year}/${division}`;
               onExit();
             }}
             variant="ghost"
-            className="mt-4 text-white/80 hover:text-white hover:bg-white/10"
+            className="mt-4 text-gray-500 hover:text-gray-700 hover:bg-gray-100"
           >
             <Home className="w-4 h-4 mr-2" />
             Back to Modes
@@ -573,7 +575,7 @@ Can you catch me? https://obob.dog/zoomies/${year}/${division}`;
     const correctCount = results.filter((r) => r.correct).length;
 
     return (
-      <div className="min-h-screen bg-gradient-to-br from-violet-600 via-fuchsia-500 to-pink-500 flex flex-col items-center justify-center p-4 text-white">
+      <div className="min-h-screen bg-gradient-to-b from-white to-cyan-50 flex flex-col items-center justify-center p-4">
         {showConfetti && (
           <Confetti
             width={width}
@@ -585,7 +587,7 @@ Can you catch me? https://obob.dog/zoomies/${year}/${division}`;
 
         <div className="text-center max-w-md w-full">
           {/* Pack Rank Card */}
-          <Card className="bg-white/95 backdrop-blur-sm p-6 rounded-3xl shadow-2xl text-gray-900 mb-6">
+          <Card className="bg-white border-2 border-cyan-200 p-6 rounded-3xl shadow-xl text-gray-900 mb-6">
             <div className="text-6xl mb-2">{packRank.emoji}</div>
             <h2 className={`text-3xl font-black ${packRank.color} mb-1`}>
               {packRank.rating}
@@ -593,8 +595,8 @@ Can you catch me? https://obob.dog/zoomies/${year}/${division}`;
             <p className="text-gray-500 text-sm mb-6">Your Pack Rank</p>
 
             <div className="grid grid-cols-3 gap-4 mb-6">
-              <div className="bg-gradient-to-br from-violet-100 to-fuchsia-100 rounded-2xl p-4">
-                <div className="text-3xl font-black text-fuchsia-600">
+              <div className="bg-gradient-to-br from-teal-100 to-cyan-100 rounded-2xl p-4">
+                <div className="text-3xl font-black text-teal-600">
                   {score.toLocaleString()}
                 </div>
                 <div className="text-xs text-gray-500 uppercase tracking-wide">
@@ -636,7 +638,7 @@ Can you catch me? https://obob.dog/zoomies/${year}/${division}`;
                 setPhase("intro");
                 setResults([]);
               }}
-              className="w-full py-4 bg-gradient-to-r from-violet-500 to-fuchsia-500 text-white rounded-xl font-bold mb-3"
+              className="w-full py-4 bg-gradient-to-r from-teal-500 to-cyan-500 text-white rounded-xl font-bold mb-3"
             >
               <RotateCcw className="w-5 h-5 mr-2" />
               Play Again
@@ -645,7 +647,8 @@ Can you catch me? https://obob.dog/zoomies/${year}/${division}`;
 
           <Button
             onClick={shareResults}
-            className="w-full py-4 bg-white/20 hover:bg-white/30 text-white rounded-xl font-bold backdrop-blur-sm"
+            variant="outline"
+            className="w-full py-4 border-2 border-cyan-300 text-cyan-600 hover:bg-cyan-50 rounded-xl font-bold"
           >
             <Share2 className="w-5 h-5 mr-2" />
             Share Your Score
@@ -660,16 +663,16 @@ Can you catch me? https://obob.dog/zoomies/${year}/${division}`;
   const timerPercentage = (timeLeft / TIME_PER_QUESTION) * 100;
 
   return (
-    <div className="h-dvh bg-gradient-to-br from-violet-600 via-fuchsia-500 to-pink-500 flex flex-col p-2 sm:p-4 text-white overflow-hidden">
+    <div className="h-dvh bg-gradient-to-b from-white to-cyan-50 flex flex-col p-2 sm:p-4 overflow-hidden">
       {/* Header - Progress and Score */}
-      <div className="flex justify-between items-center mb-2 text-base font-medium">
+      <div className="flex justify-between items-center mb-2 text-base font-medium text-gray-700">
         <div className="flex items-center gap-2">
-          <span className="opacity-80">
+          <span className="text-gray-500">
             {currentIndex + 1} / {questions.length}
           </span>
           {/* Streak indicator */}
           {streak > 0 && (
-            <div className="flex items-center gap-1 bg-orange-500/80 px-2 py-1 rounded-full animate-pulse">
+            <div className="flex items-center gap-1 bg-orange-500 text-white px-2 py-1 rounded-full animate-pulse">
               <Flame className="w-4 h-4" />
               <span className="font-bold text-sm">{streak}</span>
             </div>
@@ -681,14 +684,14 @@ Can you catch me? https://obob.dog/zoomies/${year}/${division}`;
             </div>
           )}
         </div>
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 text-teal-600">
           <Trophy className="w-5 h-5" />
           <span className="font-bold">{score.toLocaleString()}</span>
         </div>
       </div>
 
       {/* Timer bar */}
-      <div className="w-full h-2 bg-white/20 rounded-full mb-3 overflow-hidden">
+      <div className="w-full h-2 bg-gray-200 rounded-full mb-3 overflow-hidden">
         <div
           className={`h-full transition-all duration-100 rounded-full ${
             timerPercentage > 50
@@ -704,7 +707,7 @@ Can you catch me? https://obob.dog/zoomies/${year}/${division}`;
       {/* Question card */}
       <div className="flex-1 flex flex-col items-center justify-start sm:justify-center">
         <Card
-          className={`relative w-full max-w-sm bg-white text-gray-900 rounded-3xl p-4 sm:p-6 shadow-2xl overflow-hidden transition-all duration-200 ${
+          className={`relative w-full max-w-sm bg-white border-2 border-cyan-200 text-gray-900 rounded-3xl p-4 sm:p-6 shadow-xl overflow-hidden transition-all duration-200 ${
             reactionType === "correct"
               ? "animate-vibe-correct"
               : reactionType === "wrong"
@@ -748,7 +751,7 @@ Can you catch me? https://obob.dog/zoomies/${year}/${division}`;
           )}
 
           <div className="text-center mb-4 sm:mb-6">
-            <span className="text-xs uppercase tracking-widest text-fuchsia-500 font-bold">
+            <span className="text-xs uppercase tracking-widest text-teal-500 font-bold">
               In which book...
             </span>
             <p className="text-lg sm:text-xl font-bold mt-2 leading-tight">
@@ -765,7 +768,7 @@ Can you catch me? https://obob.dog/zoomies/${year}/${division}`;
                   e.currentTarget.blur();
                   handleAnswer(book);
                 }}
-                className="relative aspect-[3/4] rounded-xl overflow-hidden border-4 border-transparent hover:border-fuchsia-400 focus:border-transparent focus:outline-none transition-all transform hover:scale-105 active:scale-95 shadow-lg"
+                className="relative aspect-[3/4] rounded-xl overflow-hidden border-4 border-transparent hover:border-cyan-400 focus:border-transparent focus:outline-none transition-all transform hover:scale-105 active:scale-95 shadow-lg"
               >
                 <Image
                   src={book.cover}

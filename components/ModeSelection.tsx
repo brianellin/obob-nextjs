@@ -20,11 +20,11 @@ export default function ModeSelection({ year, division }: ModeSelectionProps) {
   return (
     <div className="space-y-8 max-w-2xl mx-auto">
       {/* ZOOMIES - Hidden while testing with friends. Direct link still works: /zoomies/{year}/{division}
-      <Card className="border-2 border-fuchsia-400 bg-gradient-to-br from-violet-50 to-fuchsia-50">
+      <Card className="border-2 border-cyan-400 bg-gradient-to-br from-teal-50 to-cyan-50">
         <CardHeader>
           <div className="flex items-center gap-2">
             <CardTitle className="flex items-center gap-2">Zoomies</CardTitle>
-            <Badge className="bg-gradient-to-r from-violet-500 to-fuchsia-500 hover:from-violet-600 hover:to-fuchsia-600 text-white">
+            <Badge className="bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white">
               New!
             </Badge>
           </div>
@@ -43,7 +43,7 @@ export default function ModeSelection({ year, division }: ModeSelectionProps) {
             passHref
             className="w-full"
           >
-            <Button className="w-full bg-gradient-to-r from-violet-500 to-fuchsia-500 hover:from-violet-600 hover:to-fuchsia-600 text-white transition-all shadow-lg hover:shadow-xl transform hover:scale-[1.02]">
+            <Button className="w-full bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white transition-all shadow-lg hover:shadow-xl transform hover:scale-[1.02]">
               <Zap className="mr-2 h-4 w-4" /> Start Zoomies
             </Button>
           </Link>
