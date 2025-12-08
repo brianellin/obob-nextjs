@@ -683,68 +683,35 @@ Can you catch me? https://obob.dog/zoomies/${year}/${division}`;
   const timerPercentage = (timeLeft / TIME_PER_QUESTION) * 100;
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-violet-600 via-fuchsia-500 to-pink-500 flex flex-col p-4 text-white overflow-hidden">
-      {/* Header */}
-      <div className="flex items-center justify-between mb-4">
-        <Button
-          onClick={() => {
-            const correctCount = results.filter((r) => r.correct).length;
-            const exitData = {
-              year,
-              division,
-              currentScore: score,
-              currentStreak: streak,
-              maxStreak,
-              correctCount,
-              questionsAnswered: results.length,
-              totalQuestions: QUESTION_COUNT,
-              exitedFrom: "playing",
-            };
-            track("zoomiesExit", exitData);
-            posthog.capture("zoomiesExit", exitData);
-            onExit();
-          }}
-          variant="ghost"
-          size="sm"
-          className="text-white/80 hover:text-white hover:bg-white/10 p-2"
-        >
-          <X className="w-6 h-6" />
-        </Button>
-
-        <div className="flex items-center gap-4">
+    <div className="h-dvh bg-gradient-to-br from-violet-600 via-fuchsia-500 to-pink-500 flex flex-col p-2 sm:p-4 text-white overflow-hidden">
+      {/* Header - Progress and Score */}
+      <div className="flex justify-between items-center mb-1 text-sm">
+        <div className="flex items-center gap-2">
+          <span className="opacity-80">
+            {currentIndex + 1} / {questions.length}
+          </span>
           {/* Streak indicator */}
           {streak > 0 && (
-            <div className="flex items-center gap-1 bg-orange-500/80 px-3 py-1 rounded-full animate-pulse">
-              <Flame className="w-4 h-4" />
-              <span className="font-bold">{streak}</span>
+            <div className="flex items-center gap-1 bg-orange-500/80 px-2 py-0.5 rounded-full animate-pulse">
+              <Flame className="w-3 h-3" />
+              <span className="font-bold text-xs">{streak}</span>
             </div>
           )}
-
           {/* Combo multiplier */}
           {comboMultiplier > 1 && (
-            <div className="bg-yellow-400 text-yellow-900 px-3 py-1 rounded-full font-black text-sm animate-bounce">
+            <div className="bg-yellow-400 text-yellow-900 px-2 py-0.5 rounded-full font-black text-xs animate-bounce">
               {comboMultiplier}x
             </div>
           )}
-
-          {/* Sound toggle */}
-          <Button
-            onClick={() => setSoundEnabled(!soundEnabled)}
-            variant="ghost"
-            size="sm"
-            className="text-white/80 hover:text-white hover:bg-white/10 p-2"
-          >
-            {soundEnabled ? (
-              <Volume2 className="w-5 h-5" />
-            ) : (
-              <VolumeX className="w-5 h-5" />
-            )}
-          </Button>
+        </div>
+        <div className="flex items-center gap-2">
+          <Trophy className="w-4 h-4" />
+          <span className="font-bold">{score.toLocaleString()}</span>
         </div>
       </div>
 
       {/* Timer bar */}
-      <div className="w-full h-2 bg-white/20 rounded-full mb-4 overflow-hidden">
+      <div className="w-full h-2 bg-white/20 rounded-full mb-2 overflow-hidden">
         <div
           className={`h-full transition-all duration-100 rounded-full ${
             timerPercentage > 50
@@ -757,21 +724,10 @@ Can you catch me? https://obob.dog/zoomies/${year}/${division}`;
         />
       </div>
 
-      {/* Progress */}
-      <div className="flex justify-between items-center mb-4 text-sm">
-        <span className="opacity-80">
-          {currentIndex + 1} / {questions.length}
-        </span>
-        <div className="flex items-center gap-2">
-          <Trophy className="w-4 h-4" />
-          <span className="font-bold">{score.toLocaleString()}</span>
-        </div>
-      </div>
-
       {/* Question card */}
-      <div className="flex-1 flex flex-col items-center justify-center">
+      <div className="flex-1 flex flex-col items-center justify-start sm:justify-center">
         <Card
-          className={`relative w-full max-w-sm bg-white text-gray-900 rounded-3xl p-6 shadow-2xl overflow-hidden transition-all duration-200 ${
+          className={`relative w-full max-w-sm bg-white text-gray-900 rounded-3xl p-4 sm:p-6 shadow-2xl overflow-hidden transition-all duration-200 ${
             reactionType === "correct"
               ? "animate-vibe-correct"
               : reactionType === "wrong"
@@ -814,11 +770,11 @@ Can you catch me? https://obob.dog/zoomies/${year}/${division}`;
             </div>
           )}
 
-          <div className="text-center mb-6">
+          <div className="text-center mb-4 sm:mb-6">
             <span className="text-xs uppercase tracking-widest text-fuchsia-500 font-bold">
               In which book...
             </span>
-            <p className="text-xl font-bold mt-2 leading-tight">
+            <p className="text-lg sm:text-xl font-bold mt-2 leading-tight">
               {currentQuestion?.text}
             </p>
           </div>
