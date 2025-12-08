@@ -20,7 +20,7 @@
     },
     {
       "type": "in-which-book",
-      "text": "does a character have acrophobia?",
+      "text": "does a character mistake arachnophobia for acrophobia?",
       "book_key": "aru-shah-and-the-end-of-time",
       "page": 48
     },
@@ -7566,7 +7566,7 @@
     },
     {
       "type": "in-which-book",
-      "text": "do turtled watch a girl fall off a bridge into a pond?",
+      "text": "do turtles watch a girl fall off a bridge into a pond?",
       "book_key": "the-eyes-and-the-impossible",
       "page": 90
     },
@@ -9930,7 +9930,7 @@
     },
     {
       "type": "content",
-      "text": "That does SP stand for?",
+      "text": "What does SP stand for?",
       "book_key": "an-occasionally-happy-family",
       "answer": "sick pic",
       "page": 73
@@ -10493,7 +10493,7 @@
     },
     {
       "type": "in-which-book",
-      "text": "did the main describe his mother as a \"small, dimple-cheeked woman with her brown hair cut short and curled\"?",
+      "text": "did the main character describe his mother as a \"small, dimple-cheeked woman with her brown hair cut short and curled\"?",
       "book_key": "projekt-1065-a-novel-of-world-war-ii",
       "page": 18
     },
@@ -10583,7 +10583,7 @@
     },
     {
       "type": "in-which-book",
-      "text": "did the main character burn all his detective novels?",
+      "text": "does a character burn their collection of detective novels?",
       "book_key": "projekt-1065-a-novel-of-world-war-ii",
       "page": 235
     },

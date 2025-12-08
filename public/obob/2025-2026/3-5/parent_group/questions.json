@@ -1652,7 +1652,7 @@
     },
     {
       "type": "in-which-book",
-      "text": "do characters find directions for look for a stone with an E?",
+      "text": "do characters find directions to look for a stone with an E?",
       "book_key": "city-of-ember",
       "page": 173
     },
@@ -2206,7 +2206,7 @@
       "type": "content",
       "text": "What is the exact title of the book that Doon uses to write down observations about bugs?",
       "book_key": "city-of-ember",
-      "answer": "Crawling the Flying Things",
+      "answer": "Crawling and Flying Things",
       "page": 52
     },
     {
@@ -2553,7 +2553,7 @@
     },
     {
       "type": "in-which-book",
-      "text": "did two people holding somethng together bring it luck?",
+      "text": "did two people holding something together bring it luck?",
       "book_key": "elf-dog-and-owl-head",
       "page": 194
     },
@@ -3045,7 +3045,7 @@
     },
     {
       "type": "in-which-book",
-      "text": "do two charaters borrow a father's metal detector to take into the woods?",
+      "text": "do two characters borrow a father's metal detector to take into the woods?",
       "book_key": "elf-dog-and-owl-head",
       "page": 106
     },
@@ -4543,7 +4543,7 @@
     },
     {
       "type": "in-which-book",
-      "text": "does a character wake up bcause they hear the theme song from Rocky loud and blaring?",
+      "text": "does a character wake up because they hear the theme song from Rocky loud and blaring?",
       "book_key": "escape-from-mr-lemoncellos-library",
       "page": 70
     },
@@ -7651,7 +7651,7 @@
     },
     {
       "type": "in-which-book",
-      "text": "does a child know hid dad better than he ever hope to.",
+      "text": "does a child know hiş dad better than he ever hoped to.",
       "book_key": "finding-langston",
       "page": 103
     },
@@ -10670,7 +10670,7 @@
     },
     {
       "type": "in-which-book",
-      "text": "does a person make Bean Lizard stew in a tin can?",
+      "text": "does a character recall a tv show in which Bean Lizard is made in a tin can?",
       "book_key": "hatchet",
       "page": 56
     },
@@ -11157,7 +11157,7 @@
     },
     {
       "type": "content",
-      "text": "[2 part question] name 2 of the fist Brian catches in the lake?",
+      "text": "Name 2 types of fish Brian catches in the lake?",
       "book_key": "hatchet",
       "answer": "bluegills, sunfish and perch",
       "page": 127
@@ -12874,7 +12874,7 @@
       "type": "content",
       "text": "How old is brother Brother Quang?",
       "book_key": "inside-out-and-back-again",
-      "answer": "Twentyone",
+      "answer": "Twenty one",
       "page": 9
     },
     {
@@ -14253,9 +14253,9 @@
     },
     {
       "type": "content",
-      "text": "who's house had the best loft for launching parachute guys?",
+      "text": "whose house had the best loft for launching parachute guys?",
       "book_key": "just-like-click",
-      "answer": "Trapper's houes",
+      "answer": "Trapper's house",
       "page": 81
     },
     {
@@ -18300,7 +18300,7 @@
     },
     {
       "type": "content",
-      "text": "What is th name of Henrik's cow?",
+      "text": "What is the name of Henrik's cow?",
       "book_key": "number-the-stars",
       "answer": "Blossom",
       "page": 68
@@ -18370,7 +18370,7 @@
     },
     {
       "type": "content",
-      "text": "what doe Annemarie's mother trip over, when returning from thr harbor?",
+      "text": "what does Annemarie's mother trip over, when returning from thr harbor?",
       "book_key": "number-the-stars",
       "answer": "A Root",
       "page": 102
@@ -19725,13 +19725,6 @@
     },
     {
       "type": "content",
-      "text": "How does Odder say she is unlike Kiari?",
-      "book_key": "odder",
-      "answer": "She is not vzlm zn kinc znc patient and careful.",
-      "page": 233
-    },
-    {
-      "type": "content",
       "text": "What does Odder say the humans taught her when she was a pup?",
       "book_key": "odder",
       "answer": "They taught her how to be an otter.",
@@ -20127,7 +20120,7 @@
     },
     {
       "type": "in-which-book",
-      "text": "is a character descibe themselves as \"gangly and hideous\"?",
+      "text": "does a character descibe themselves as \"gangly and hideous\"?",
       "book_key": "the-remarkable-rescue-at-milkweed-meadow",
       "page": 96
     },
@@ -21136,7 +21129,7 @@
     },
     {
       "type": "content",
-      "text": "What does Piper put in the place were Winsome's foot had stomped a hole in the root room to signify that she was okay to Butternut?",
+      "text": "What does Piper put in the place where Winsome's foot had stomped a hole in the root room to signify that she was okay to Butternut?",
       "book_key": "the-remarkable-rescue-at-milkweed-meadow",
       "answer": "a blue ribbon",
       "page": 171

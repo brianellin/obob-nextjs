@@ -1,6 +1,47 @@
 book_key,question_type,page,text,answer,author_name,book_title,source_name
 odder,content,3,Who doesn't eat Otter?,Sharks,Katherine Applegate,Odder,OBOB Parent Group
 odder,content,6,what term is used to describe an adolescent shark?,Marine tween,Katherine Applegate,Odder,Lake Oswego Public Library
+odder,content,9,What is Otter #156 age?,3yrs old,Katherine Applegate,Odder,OBOB Parent Group
+odder,content,10,What does friends call Otter #156?,Odder,Katherine Applegate,Odder,OBOB Parent Group
+odder,content,10,Who prefer Otter to call their numbers?,Humans,Katherine Applegate,Odder,OBOB Parent Group
+odder,content,13,Who called Odder when otter was born?,Odder's mother,Katherine Applegate,Odder,OBOB Parent Group
+odder,content,13,Why did Odder's mother name Odder?,Unsettled and eyes were full of questions,Katherine Applegate,Odder,OBOB Parent Group
+odder,content,14,What is Kairi's fur characteristic?,Shiny ebony fur,Katherine Applegate,Odder,OBOB Parent Group
+odder,content,14,What is Odder's body characteristic?,"Smaller ,more agile,deep brown coat and caramel colored head",Katherine Applegate,Odder,OBOB Parent Group
+odder,content,14,Who chooses play over eat?,Kairi,Katherine Applegate,Odder,OBOB Parent Group
+odder,content,14,Who is Odder's favorite companion?,Kairi,Katherine Applegate,Odder,OBOB Parent Group
+odder,content,14,What is the age of Kairi?,5,Katherine Applegate,Odder,OBOB Parent Group
+odder,content,15,Who is more practical or cautious?,Kairi,Katherine Applegate,Odder,OBOB Parent Group
+odder,content,15,What was Odder's choice when it came to play or eat?,Play,Katherine Applegate,Odder,OBOB Parent Group
+odder,content,15,What are the adjectives that describe Kairi?,"Practical, Cautious, Wise, Solid",Katherine Applegate,Odder,OBOB Parent Group
+odder,content,16,How do otters communicate?,"Whistle and whine, snarl and hiss, bow and snort, nudge and lick, headbutts, and gentle bites",Katherine Applegate,Odder,OBOB Parent Group
+odder,content,20,What is heaven for an otter?,Slough,Katherine Applegate,Odder,OBOB Parent Group
+odder,content,21,Who are regal great blue herons?,Otter and Sea lions,Katherine Applegate,Odder,OBOB Parent Group
+odder,content,22,What is Otter's daily schedule?,"eat,groom,sleep",Katherine Applegate,Odder,OBOB Parent Group
+odder,content,23,Who is the queen of the play?,Odder,Katherine Applegate,Odder,OBOB Parent Group
+odder,content,24,How  much does an otter consume a day?,quarter of her weight,Katherine Applegate,Odder,OBOB Parent Group
+odder,content,24,What do otters eat?,"Abalone, sea urchins, octopus, sea stars, mussels, crabs, clams",Katherine Applegate,Odder,OBOB Parent Group
+odder,content,26,What shape are sharks' teeth?,triangular,Katherine Applegate,Odder,OBOB Parent Group
+odder,content,27,What helps otters keep their fans engaged?,Being photogenic and appearing in memes.,Katherine Applegate,Odder,OBOB Parent Group
+odder,content,27,What does Odder compare the kayaker’s paddle strokes to?,A paddle for paws.,Katherine Applegate,Odder,OBOB Parent Group
+odder,content,27,What does Odder say kayakers desire to be?,Creatures of the water.,Katherine Applegate,Odder,OBOB Parent Group
+odder,content,28,What do kayakers use to see far away?,binoculars,Katherine Applegate,Odder,OBOB Parent Group
+odder,content,30,Who is Kairi telling the friend Odder to keep her distance from?,Kayakers,Katherine Applegate,Odder,OBOB Parent Group
+odder,content,31,"Who gives the warning that the friend will end up in a cage or at Highwater
+for good?",Odder,Katherine Applegate,Odder,OBOB Parent Group
+odder,content,33,What do the otters call the aquarium?,Highwater,Katherine Applegate,Odder,OBOB Parent Group
+odder,content,45,How long can otters stay underwater,6 - 7 minutes,Katherine Applegate,Odder,OBOB Parent Group
+odder,content,49,Why did the shark chase Kairi?,Because she is slower than Odder,Katherine Applegate,Odder,OBOB Parent Group
+odder,content,75,What do the otters call the aquarium staff?,Aquarists,Katherine Applegate,Odder,OBOB Parent Group
+odder,content,79,Why does Odder need surgery?,The shark bit her,Katherine Applegate,Odder,OBOB Parent Group
+odder,content,85,What is Odder's mother's name?,Ondine,Katherine Applegate,Odder,OBOB Parent Group
+odder,content,88,What did Ondine do to keep Odder safe while she hunted for food?,Safely looped Odder in long strands of kelp,Katherine Applegate,Odder,OBOB Parent Group
+odder,content,96,What are otters' most important lessons?,Stay away from sharks and stay away from humans,Katherine Applegate,Odder,OBOB Parent Group
+odder,content,108,How did Odder get separated from her mother?,A terrible storm,Katherine Applegate,Odder,OBOB Parent Group
+odder,content,114,"What were endlessly feeding, grooming, measuring, and testing Odder?",Humans/Aquarists,Katherine Applegate,Odder,OBOB Parent Group
+odder,content,127,What was Odder's number in the aquarium?,156,Katherine Applegate,Odder,OBOB Parent Group
+odder,content,143,What did Odder retrieve during her first diving lesson?,A clam,Katherine Applegate,Odder,OBOB Parent Group
+odder,content,151,What are the two female otters in the aquarium named?,Holly and Gracie,Katherine Applegate,Odder,OBOB Parent Group
 odder,content,153,What do Gracie and Holly teach Odder?,How to deep dive,Katherine Applegate,Odder,OBOB Parent Group
 odder,content,153,What is Kairi's name in the aquarium?,Twyla,Katherine Applegate,Odder,OBOB Parent Group
 odder,content,203,What is Odder's name in the aquarium?,Jazz,Katherine Applegate,Odder,OBOB Parent Group
@@ -21,55 +62,24 @@ odder,content,,"Who said, ""It is a happy talent to know how to play.""?",Ralph 
 odder,content,3,"As a rule, sharks don't typically eat which animal?",otters,Katherine Applegate,Odder,OBOB Parent Group
 odder,content,4,"What is ""the most charming branch of the weasel family""?  (Be specific)",southern sea otter,Katherine Applegate,Odder,OBOB Parent Group
 odder,content,6,What part of the shark is cutting though the wave?,dorsal fin,Katherine Applegate,Odder,OBOB Parent Group
-odder,content,9,What is Otter #156 age?,3yrs old,Katherine Applegate,Odder,OBOB Parent Group
-odder,content,10,What does friends call Otter #156?,Odder,Katherine Applegate,Odder,OBOB Parent Group
-odder,content,10,Who prefer Otter to call their numbers?,Humans,Katherine Applegate,Odder,OBOB Parent Group
 odder,content,10,What name do humans call Odder?,Otter #156,Katherine Applegate,Odder,OBOB Parent Group
 odder,content,10,what number was Odder called?,156,Katherine Applegate,Odder,Lake Oswego Public Library
 odder,content,11,What are some possible names the narrator thinks would be great for an otter (name three)?,"Squiggles, Splash, Potter, Noodle, Otto, Oswald, Ozzie, Obi",Katherine Applegate,Odder,OBOB Parent Group
-odder,content,13,Who called Odder when otter was born?,Odder's mother,Katherine Applegate,Odder,OBOB Parent Group
-odder,content,13,Why did Odder's mother name Odder?,Unsettled and eyes were full of questions,Katherine Applegate,Odder,OBOB Parent Group
-odder,content,14,What is Kairi's fur characteristic?,Shiny ebony fur,Katherine Applegate,Odder,OBOB Parent Group
-odder,content,14,What is Odder's body characteristic?,"Smaller ,more agile,deep brown coat and caramel colored head",Katherine Applegate,Odder,OBOB Parent Group
-odder,content,14,Who chooses play over eat?,Kairi,Katherine Applegate,Odder,OBOB Parent Group
-odder,content,14,Who is Odder's favorite companion?,Kairi,Katherine Applegate,Odder,OBOB Parent Group
-odder,content,14,What is the age of Kairi?,5,Katherine Applegate,Odder,OBOB Parent Group
 odder,content,14,How much older is Kairi than Odder?,2 years,Katherine Applegate,Odder,OBOB Parent Group
 odder,content,14,how much older is Kairi than Odder?,Two years,Katherine Applegate,Odder,Lake Oswego Public Library
-odder,content,15,Who is more practical or cautious?,Kairi,Katherine Applegate,Odder,OBOB Parent Group
-odder,content,15,What was Odder's choice when it came to play or eat?,Play,Katherine Applegate,Odder,OBOB Parent Group
-odder,content,15,What are the adjectives that describe Kairi?,"Practical, Cautious, Wise, Solid",Katherine Applegate,Odder,OBOB Parent Group
-odder,content,16,How do otters communicate?,"Whistle and whine, snarl and hiss, bow and snort, nudge and lick, headbutts, and gentle bites",Katherine Applegate,Odder,OBOB Parent Group
 odder,content,16,How do otters communicate (name three)?,"whistle, whine, snarl, hiss, blow, snort AND signt, scent, and touch",Katherine Applegate,Odder,OBOB Parent Group
 odder,content,18,Where does the chase between Kiari and Odder begin? (Be specific),Elkhorn Slough,Katherine Applegate,Odder,OBOB Parent Group
-odder,content,20,What is heaven for an otter?,Slough,Katherine Applegate,Odder,OBOB Parent Group
 odder,content,20,What are some other animals found in the slough?,"humans, sea lions, great blue herons, double-crested cormorants, pelicans",Katherine Applegate,Odder,OBOB Parent Group
-odder,content,21,Who are regal great blue herons?,Otter and Sea lions,Katherine Applegate,Odder,OBOB Parent Group
-odder,content,22,What is Otter's daily schedule?,"eat,groom,sleep",Katherine Applegate,Odder,OBOB Parent Group
 odder,content,22,What three things make up an otter's daily schedule?,"eat, groom, sleep",Katherine Applegate,Odder,OBOB Parent Group
 odder,content,22,what three steps are repeated in the daily life of an otter?,"Eat, groom, sleep",Katherine Applegate,Odder,Lake Oswego Public Library
-odder,content,23,Who is the queen of the play?,Odder,Katherine Applegate,Odder,OBOB Parent Group
-odder,content,24,How  much does an otter consume a day?,quarter of her weight,Katherine Applegate,Odder,OBOB Parent Group
-odder,content,24,What do otters eat?,"Abalone, sea urchins, octopus, sea stars, mussels, crabs, clams",Katherine Applegate,Odder,OBOB Parent Group
-odder,content,26,What shape are sharks' teeth?,triangular,Katherine Applegate,Odder,OBOB Parent Group
-odder,content,27,What helps otters keep their fans engaged?,Being photogenic and appearing in memes.,Katherine Applegate,Odder,OBOB Parent Group
-odder,content,27,What does Odder compare the kayaker’s paddle strokes to?,A paddle for paws.,Katherine Applegate,Odder,OBOB Parent Group
-odder,content,27,What does Odder say kayakers desire to be?,Creatures of the water.,Katherine Applegate,Odder,OBOB Parent Group
-odder,content,28,What do kayakers use to see far away?,binoculars,Katherine Applegate,Odder,OBOB Parent Group
 odder,content,28,Why does Odder love kayakers?,She admires their hopeless desires to be creatures of the water.,Katherine Applegate,Odder,OBOB Parent Group
-odder,content,30,Who is Kairi telling the friend Odder to keep her distance from?,Kayakers,Katherine Applegate,Odder,OBOB Parent Group
-odder,content,31,"Who gives the warning that the friend will end up in a cage or at Highwater
-for good?",Odder,Katherine Applegate,Odder,OBOB Parent Group
 odder,content,31,Who does Odder think worries too much?,Kairi,Katherine Applegate,Odder,OBOB Parent Group
-odder,content,33,What do the otters call the aquarium?,Highwater,Katherine Applegate,Odder,OBOB Parent Group
 odder,content,36,How long do pups stay with their mothers,5 months or so- a year at most,Katherine Applegate,Odder,OBOB Parent Group
 odder,content,36,how long do pups stay with their moms?,"Five months or so, a year at the most",Katherine Applegate,Odder,Lake Oswego Public Library
 odder,content,39,what is the name of the point where the slough empties into the far deeper bay?,The Drop.,Katherine Applegate,Odder,Cedar Mill Public Library
 odder,content,42,What story does Kairi want Odder to tell?,The Fifty,Katherine Applegate,Odder,OBOB Parent Group
-odder,content,45,How long can otters stay underwater,6 - 7 minutes,Katherine Applegate,Odder,OBOB Parent Group
 odder,content,45,How long can an otter stay under water?,6 or 7 minutes,Katherine Applegate,Odder,OBOB Parent Group
 odder,content,45,how long can a sea otter stay underwater?,Six or seven minutes,Katherine Applegate,Odder,Lake Oswego Public Library
-odder,content,49,Why did the shark chase Kairi?,Because she is slower than Odder,Katherine Applegate,Odder,OBOB Parent Group
 odder,content,53,Where did Kairi get bit by the shark?,on her tail,Katherine Applegate,Odder,OBOB Parent Group
 odder,content,59,What animal did the shark think it was attacking?,a sea lion,Katherine Applegate,Odder,OBOB Parent Group
 odder,content,66,what type of otter can switch between land and water?,River otters,Katherine Applegate,Odder,Lake Oswego Public Library
@@ -77,22 +87,14 @@ odder,content,72,how do they describe Odder’s bites on her belly?,Deep half-mo
 odder,content,74,How old was Odder when she was admitted to the aquarium?,3 years 4 months (est),Katherine Applegate,Odder,OBOB Parent Group
 odder,content,74,How much did Odder weigh at intake?,20.4 kg,Katherine Applegate,Odder,OBOB Parent Group
 odder,content,74,how old was Odder noted on the clinic intake notes?,3 years 4 months,Katherine Applegate,Odder,Lake Oswego Public Library
-odder,content,75,What do the otters call the aquarium staff?,Aquarists,Katherine Applegate,Odder,OBOB Parent Group
 odder,content,78,What is a shark's favorite meal?,Elephant Seal,Katherine Applegate,Odder,OBOB Parent Group
-odder,content,79,Why does Odder need surgery?,The shark bit her,Katherine Applegate,Odder,OBOB Parent Group
 odder,content,81,How much did Odder weigh when she was first born?,3 pounds,Katherine Applegate,Odder,OBOB Parent Group
 odder,content,81,how many pounds of mewling fur was Odder as a newborn?,Three pounds,Katherine Applegate,Odder,Lake Oswego Public Library
-odder,content,85,What is Odder's mother's name?,Ondine,Katherine Applegate,Odder,OBOB Parent Group
-odder,content,88,What did Ondine do to keep Odder safe while she hunted for food?,Safely looped Odder in long strands of kelp,Katherine Applegate,Odder,OBOB Parent Group
 odder,content,88,What held baby Odder like a leash to a puppy?,kelp,Katherine Applegate,Odder,OBOB Parent Group
 odder,content,89,How dense is otter fur?,up to a million hairs per square inch,Katherine Applegate,Odder,OBOB Parent Group
 odder,content,95,what term do humans use when describing how otters put rocks to work?,Tool use,Katherine Applegate,Odder,Lake Oswego Public Library
-odder,content,96,What are otters' most important lessons?,Stay away from sharks and stay away from humans,Katherine Applegate,Odder,OBOB Parent Group
-odder,content,108,How did Odder get separated from her mother?,A terrible storm,Katherine Applegate,Odder,OBOB Parent Group
-odder,content,114,"What were endlessly feeding, grooming, measuring, and testing Odder?",Humans/Aquarists,Katherine Applegate,Odder,OBOB Parent Group
 odder,content,119,how often did they bring Odder her liquids?,Every three hours,Katherine Applegate,Odder,Lake Oswego Public Library
 odder,content,120,How did Odder describe the worker's hands at the aquarium?,stubby tentacles,Katherine Applegate,Odder,OBOB Parent Group
-odder,content,127,What was Odder's number in the aquarium?,156,Katherine Applegate,Odder,OBOB Parent Group
 odder,content,127,What did the humans call baby Odder?,Number 209,Katherine Applegate,Odder,OBOB Parent Group
 odder,content,127,What was the plan for Odder's recovery?,Let 156 explore the ocean with the help of humans until she was ready to return to the wild alone.,Katherine Applegate,Odder,OBOB Parent Group
 odder,content,128,What manual did Odder think should be written?,How to Teach an Otter Pup/ How to Be an Otter Pups,Katherine Applegate,Odder,OBOB Parent Group
@@ -105,9 +107,7 @@ odder,content,136,What were the humans afraid would happen to Odder if she staye
 odder,content,138,How do you groom an otter?,carefully,Katherine Applegate,Odder,OBOB Parent Group
 odder,content,139,what is the correct answer to: How do you groom an otter?,Carefully,Katherine Applegate,Odder,Lake Oswego Public Library
 odder,content,142,Where did the aquariasts place the cracked clams and mussels?,sand-filled bowls at the bottom of the shallow pool,Katherine Applegate,Odder,OBOB Parent Group
-odder,content,143,What did Odder retrieve during her first diving lesson?,A clam,Katherine Applegate,Odder,OBOB Parent Group
 odder,content,150,What were the names of the older otters that Odder met in the Aquarium?,Gracie and Holly,Katherine Applegate,Odder,OBOB Parent Group
-odder,content,151,What are the two female otters in the aquarium named?,Holly and Gracie,Katherine Applegate,Odder,OBOB Parent Group
 odder,content,151,Odder meets two elderly otters in the aquarium. What are their names?,Holly AND Gracie.,Katherine Applegate,Odder,Cedar Mill Public Library
 odder,content,156,What do they call Odder's smaller pool at the aquarium?,pup pool,Katherine Applegate,Odder,OBOB Parent Group
 odder,content,156,"what was the name of the pool that was used before the next step to freedom, the ocean?",Pup pool,Katherine Applegate,Odder,Lake Oswego Public Library
@@ -122,7 +122,6 @@ odder,content,204,What name did the Aquarium give Odder?,Jazz,Katherine Applegat
 odder,content,217,What is Kiari holding when Odder sees her again at the Aquarium?,a pup,Katherine Applegate,Odder,OBOB Parent Group
 odder,content,227,why is Kairi afraid to name the pup? And what number do they call the pup?,It feels like bad luck and #209,Katherine Applegate,Odder,Lake Oswego Public Library
 odder,content,228,Why doesn't Kiari want to name the pup?,She wants him to be free,Katherine Applegate,Odder,OBOB Parent Group
-odder,content,233,How does Odder say she is unlike Kiari?,She is not vzlm zn kinc znc patient and careful.,Katherine Applegate,Odder,OBOB Parent Group
 odder,content,237,What does Odder say the humans taught her when she was a pup?,They taught her how to be an otter.,Katherine Applegate,Odder,OBOB Parent Group
 odder,content,238,"On Day 2, what does Odder do with the pup?",ignores her,Katherine Applegate,Odder,OBOB Parent Group
 odder,content,241,What do they call the pup they put in Odder's tank?,#209,Katherine Applegate,Odder,OBOB Parent Group
