@@ -621,16 +621,6 @@ Can you catch me? https://obob.dog/zoomies/${year}/${division}`;
             </div>
 
             <Button
-              onClick={shareResults}
-              className="w-full py-4 bg-gradient-to-r from-violet-500 to-fuchsia-500 text-white rounded-xl font-bold mb-3"
-            >
-              <Share2 className="w-5 h-5 mr-2" />
-              Share Your Score
-            </Button>
-          </Card>
-
-          <div className="flex gap-3">
-            <Button
               onClick={() => {
                 const correctCount = results.filter((r) => r.correct).length;
                 const playAgainData = {
@@ -646,33 +636,20 @@ Can you catch me? https://obob.dog/zoomies/${year}/${division}`;
                 setPhase("intro");
                 setResults([]);
               }}
-              className="flex-1 py-4 bg-white/20 hover:bg-white/30 text-white rounded-xl font-bold backdrop-blur-sm"
+              className="w-full py-4 bg-gradient-to-r from-violet-500 to-fuchsia-500 text-white rounded-xl font-bold mb-3"
             >
               <RotateCcw className="w-5 h-5 mr-2" />
               Play Again
             </Button>
-            <Button
-              onClick={() => {
-                const correctCount = results.filter((r) => r.correct).length;
-                const exitData = {
-                  year,
-                  division,
-                  finalScore: score,
-                  maxStreak,
-                  correctCount,
-                  totalQuestions: results.length,
-                  exitedFrom: "results",
-                };
-                track("zoomiesExit", exitData);
-                posthog.capture("zoomiesExit", exitData);
-                onExit();
-              }}
-              variant="ghost"
-              className="py-4 text-white/80 hover:text-white hover:bg-white/10 rounded-xl"
-            >
-              <Home className="w-5 h-5" />
-            </Button>
-          </div>
+          </Card>
+
+          <Button
+            onClick={shareResults}
+            className="w-full py-4 bg-white/20 hover:bg-white/30 text-white rounded-xl font-bold backdrop-blur-sm"
+          >
+            <Share2 className="w-5 h-5 mr-2" />
+            Share Your Score
+          </Button>
         </div>
       </div>
     );
