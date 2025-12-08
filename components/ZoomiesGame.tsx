@@ -508,7 +508,7 @@ Can you catch me? https://obob.dog/zoomies/${year}/${division}`;
       <div className="min-h-screen bg-gradient-to-b from-white to-cyan-50 flex flex-col items-center justify-center p-4">
         <div className="text-center max-w-md">
           <div className="text-7xl mb-4 animate-bounce">🐶</div>
-          <h1 className="text-5xl font-black mb-2 tracking-tight bg-gradient-to-r from-teal-500 to-cyan-500 bg-clip-text text-transparent">
+          <h1 className="text-5xl italic font-black mb-2 tracking-tight bg-gradient-to-r from-teal-500 to-cyan-500 bg-clip-text text-transparent">
             Zoomies!
           </h1>
           <p className="text-xl text-gray-600 mb-8">
@@ -539,7 +539,7 @@ Can you catch me? https://obob.dog/zoomies/${year}/${division}`;
             disabled={loading}
             className="w-full py-8 text-2xl font-bold bg-gradient-to-r from-teal-500 to-cyan-500 text-white hover:from-teal-600 hover:to-cyan-600 rounded-2xl shadow-xl transform hover:scale-105 transition-all"
           >
-            {loading ? "Loading..." : "START ZOOMIES"}
+            {loading ? "Loading..." : "Play"}
           </Button>
 
           <Button
@@ -691,7 +691,7 @@ Can you catch me? https://obob.dog/zoomies/${year}/${division}`;
       </div>
 
       {/* Timer bar */}
-      <div className="w-full h-2 bg-gray-200 rounded-full mb-3 overflow-hidden">
+      <div className="w-full h-2 bg-gray-200 rounded-full mb-6 overflow-hidden">
         <div
           className={`h-full transition-all duration-100 rounded-full ${
             timerPercentage > 50
@@ -707,7 +707,7 @@ Can you catch me? https://obob.dog/zoomies/${year}/${division}`;
       {/* Question card */}
       <div className="flex-1 flex flex-col items-center justify-start sm:justify-center">
         <Card
-          className={`relative w-full max-w-sm bg-white border-2 border-cyan-200 text-gray-900 rounded-3xl p-4 sm:p-6 shadow-xl overflow-hidden transition-all duration-200 ${
+          className={`relative w-full max-w-sm bg-white border-2 border-cyan-200 text-gray-900 rounded-3xl px-4 pt-4 pb-6 sm:px-6 sm:pt-6 sm:pb-8 shadow-xl overflow-hidden transition-all duration-200 ${
             reactionType === "correct"
               ? "animate-vibe-correct"
               : reactionType === "wrong"
@@ -751,16 +751,16 @@ Can you catch me? https://obob.dog/zoomies/${year}/${division}`;
           )}
 
           <div className="text-center mb-4 sm:mb-6">
-            <span className="text-xs uppercase tracking-widest text-teal-500 font-bold">
+            <span className="text-sm uppercase tracking-widest text-teal-500 font-bold">
               In which book...
             </span>
-            <p className="text-lg sm:text-xl font-bold mt-2 leading-tight">
+            <p className="text-xl sm:text-2xl font-bold mt-2 leading-tight">
               {currentQuestion?.text}
             </p>
           </div>
 
           {/* Answer options - 2x2 grid of book covers */}
-          <div className="grid grid-cols-2 gap-3">
+          <div className="grid grid-cols-2 gap-3 w-64 sm:w-72 mx-auto">
             {answerOptions.map((book) => (
               <button
                 key={book.book_key}
@@ -768,7 +768,7 @@ Can you catch me? https://obob.dog/zoomies/${year}/${division}`;
                   e.currentTarget.blur();
                   handleAnswer(book);
                 }}
-                className="relative aspect-[3/4] rounded-xl overflow-hidden border-4 border-transparent hover:border-cyan-400 focus:border-transparent focus:outline-none transition-all transform hover:scale-105 active:scale-95 shadow-lg"
+                className="relative aspect-[3/4] rounded-lg overflow-hidden border-3 border-transparent hover:border-cyan-400 focus:border-transparent focus:outline-none transition-all transform hover:scale-105 active:scale-95 shadow-md"
               >
                 <Image
                   src={book.cover}
