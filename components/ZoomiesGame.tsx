@@ -685,33 +685,33 @@ Can you catch me? https://obob.dog/zoomies/${year}/${division}`;
   return (
     <div className="h-dvh bg-gradient-to-br from-violet-600 via-fuchsia-500 to-pink-500 flex flex-col p-2 sm:p-4 text-white overflow-hidden">
       {/* Header - Progress and Score */}
-      <div className="flex justify-between items-center mb-1 text-sm">
+      <div className="flex justify-between items-center mb-2 text-base font-medium">
         <div className="flex items-center gap-2">
           <span className="opacity-80">
             {currentIndex + 1} / {questions.length}
           </span>
           {/* Streak indicator */}
           {streak > 0 && (
-            <div className="flex items-center gap-1 bg-orange-500/80 px-2 py-0.5 rounded-full animate-pulse">
-              <Flame className="w-3 h-3" />
-              <span className="font-bold text-xs">{streak}</span>
+            <div className="flex items-center gap-1 bg-orange-500/80 px-2 py-1 rounded-full animate-pulse">
+              <Flame className="w-4 h-4" />
+              <span className="font-bold text-sm">{streak}</span>
             </div>
           )}
           {/* Combo multiplier */}
           {comboMultiplier > 1 && (
-            <div className="bg-yellow-400 text-yellow-900 px-2 py-0.5 rounded-full font-black text-xs animate-bounce">
+            <div className="bg-yellow-400 text-yellow-900 px-2 py-1 rounded-full font-black text-sm animate-bounce">
               {comboMultiplier}x
             </div>
           )}
         </div>
         <div className="flex items-center gap-2">
-          <Trophy className="w-4 h-4" />
+          <Trophy className="w-5 h-5" />
           <span className="font-bold">{score.toLocaleString()}</span>
         </div>
       </div>
 
       {/* Timer bar */}
-      <div className="w-full h-2 bg-white/20 rounded-full mb-2 overflow-hidden">
+      <div className="w-full h-2 bg-white/20 rounded-full mb-3 overflow-hidden">
         <div
           className={`h-full transition-all duration-100 rounded-full ${
             timerPercentage > 50
