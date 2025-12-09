@@ -563,12 +563,14 @@ Can you catch me? https://obob.dog/zoomies/${year}/${division}`;
             {loading ? "Loading..." : "Play"}
           </Button>
 
-          <button
-            onClick={() => setPhase("book-selection")}
-            className="mt-4 text-sm text-teal-600 hover:text-teal-700 underline underline-offset-2"
-          >
-            Choose your books
-          </button>
+          <div className="mt-4">
+            <button
+              onClick={() => setPhase("book-selection")}
+              className="text-sm text-teal-600 hover:text-teal-700 underline underline-offset-2"
+            >
+              Choose your books
+            </button>
+          </div>
 
           <Button
             onClick={() => {
