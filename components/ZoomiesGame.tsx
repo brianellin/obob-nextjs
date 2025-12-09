@@ -15,6 +15,8 @@ import {
   Volume2,
   VolumeX,
   Check,
+  PawPrint,
+  ArrowLeft,
 } from "lucide-react";
 import { track } from "@vercel/analytics";
 import { usePostHog } from "posthog-js/react";
@@ -28,7 +30,7 @@ type ZoomiesGameProps = {
   onExit: () => void;
 };
 
-type GamePhase = "intro" | "playing" | "results";
+type GamePhase = "intro" | "book-selection" | "playing" | "results";
 
 type ZoomiesResult = {
   question: QuestionWithBook;
@@ -200,6 +202,11 @@ export default function ZoomiesGame({
   const [soundEnabled, setSoundEnabled] = useState(true);
   const [showConfetti, setShowConfetti] = useState(false);
   const [comboMultiplier, setComboMultiplier] = useState(1);
+  const [selectedBooks, setSelectedBooks] = useState<Book[]>(books);
+  const [usedCustomBooks, setUsedCustomBooks] = useState(false);
+  const [bookSelectionSet, setBookSelectionSet] = useState<Set<string>>(
+    () => new Set(books.map((b) => b.book_key))
+  );
 
   // Timer
   const timerRef = useRef<NodeJS.Timeout | null>(null);
@@ -224,14 +231,17 @@ export default function ZoomiesGame({
   const TIME_PER_QUESTION = 15000; // 15 seconds
 
   // Fetch questions when game starts
-  const startGame = async () => {
+  const startGame = async (customBooks?: Book[]) => {
+    const booksToUse = customBooks || selectedBooks;
+    const isCustom = customBooks !== undefined && customBooks.length < books.length;
+
     setLoading(true);
     try {
       const response = await fetch("/api/questions/battle", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          selectedBooks: books,
+          selectedBooks: booksToUse,
           questionCount: QUESTION_COUNT,
           questionType: "in-which-book",
           year,
@@ -243,6 +253,8 @@ export default function ZoomiesGame({
 
       const data = await response.json();
       setQuestions(data.questions);
+      setSelectedBooks(booksToUse);
+      setUsedCustomBooks(isCustom);
       setPhase("playing");
       setCurrentIndex(0);
       setStreak(0);
@@ -258,11 +270,15 @@ export default function ZoomiesGame({
         year,
         division,
         questionCount: QUESTION_COUNT,
+        customBooks: isCustom,
+        bookCount: booksToUse.length,
       });
       posthog.capture("zoomiesStarted", {
         year,
         division,
         questionCount: QUESTION_COUNT,
+        customBooks: isCustom,
+        bookCount: booksToUse.length,
       });
     } catch (error) {
       console.error("Error starting game:", error);
@@ -540,12 +556,19 @@ Can you catch me? https://obob.dog/zoomies/${year}/${division}`;
           </div>
 
           <Button
-            onClick={startGame}
+            onClick={() => startGame(books)}
             disabled={loading}
             className="w-full py-8 text-2xl font-bold bg-gradient-to-r from-teal-500 to-cyan-500 text-white hover:from-teal-600 hover:to-cyan-600 rounded-2xl shadow-xl transform hover:scale-105 transition-all"
           >
             {loading ? "Loading..." : "Play"}
           </Button>
+
+          <button
+            onClick={() => setPhase("book-selection")}
+            className="mt-4 text-sm text-teal-600 hover:text-teal-700 underline underline-offset-2"
+          >
+            Choose your books
+          </button>
 
           <Button
             onClick={() => {
@@ -570,6 +593,119 @@ Can you catch me? https://obob.dog/zoomies/${year}/${division}`;
         <audio ref={correctSound} src="/sounds/correct.mp3" preload="auto" />
         <audio ref={wrongSound} src="/sounds/wrong.mp3" preload="auto" />
         <audio ref={streakSound} src="/sounds/streak.mp3" preload="auto" />
+      </div>
+    );
+  }
+
+  // Book selection screen
+  if (phase === "book-selection") {
+    const toggleBook = (bookKey: string) => {
+      setBookSelectionSet((prev) => {
+        const newSet = new Set(prev);
+        if (newSet.has(bookKey)) {
+          newSet.delete(bookKey);
+        } else {
+          newSet.add(bookKey);
+        }
+        return newSet;
+      });
+    };
+
+    const selectAllBooks = () => {
+      setBookSelectionSet(new Set(books.map((b) => b.book_key)));
+    };
+
+    const clearAllBooks = () => {
+      setBookSelectionSet(new Set());
+    };
+
+    const handleStartWithSelection = () => {
+      const selected = books.filter((b) => bookSelectionSet.has(b.book_key));
+      startGame(selected);
+    };
+
+    const canStart = bookSelectionSet.size >= 4;
+
+    return (
+      <div className="min-h-screen bg-gradient-to-b from-white to-cyan-50 flex flex-col p-4">
+        <div className="max-w-2xl mx-auto w-full">
+          {/* Header */}
+          <div className="flex items-center justify-between mb-6">
+            <button
+              onClick={() => setPhase("intro")}
+              className="flex items-center text-gray-600 hover:text-gray-800"
+            >
+              <ArrowLeft className="w-5 h-5 mr-1" />
+              Back
+            </button>
+            <button
+              onClick={bookSelectionSet.size === books.length ? clearAllBooks : selectAllBooks}
+              className="text-sm text-teal-600 hover:text-teal-700"
+            >
+              {bookSelectionSet.size === books.length ? "Clear all" : "Select all"}
+            </button>
+          </div>
+
+          <h2 className="text-2xl font-bold text-center mb-2">Choose Your Books</h2>
+          <p className="text-gray-500 text-center mb-6">
+            Select at least 4 books to play
+          </p>
+
+          {/* Book grid */}
+          <div className="grid grid-cols-4 gap-3 mb-6">
+            {books.map((book) => {
+              const isSelected = bookSelectionSet.has(book.book_key);
+              return (
+                <button
+                  key={book.book_key}
+                  onClick={() => toggleBook(book.book_key)}
+                  className={`relative aspect-[3/4] rounded-lg overflow-hidden transition-all ${
+                    isSelected
+                      ? "ring-4 ring-teal-500 shadow-lg"
+                      : "opacity-50 grayscale"
+                  }`}
+                >
+                  <Image
+                    src={book.cover}
+                    alt={book.title}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 25vw, 150px"
+                  />
+                  {isSelected && (
+                    <div className="absolute inset-0 bg-teal-500 bg-opacity-20 flex items-center justify-center">
+                      <PawPrint className="w-8 h-8 text-white drop-shadow-lg" />
+                    </div>
+                  )}
+                </button>
+              );
+            })}
+          </div>
+
+          {/* Warning about sharing */}
+          <p className="text-xs text-gray-400 text-center mb-4">
+            Note: You cannot share your score when playing with custom books
+          </p>
+
+          {/* Selected count and start button */}
+          <div className="text-center">
+            <p className="text-sm text-gray-600 mb-3">
+              {bookSelectionSet.size} of {books.length} books selected
+              {bookSelectionSet.size < 4 && (
+                <span className="text-red-500 ml-2">
+                  (need at least 4)
+                </span>
+              )}
+            </p>
+            <Button
+              onClick={handleStartWithSelection}
+              disabled={!canStart || loading}
+              className="w-full max-w-xs py-6 text-xl font-bold bg-gradient-to-r from-teal-500 to-cyan-500 text-white hover:from-teal-600 hover:to-cyan-600 rounded-2xl shadow-xl disabled:opacity-50 disabled:cursor-not-allowed"
+            >
+              {loading ? "Loading..." : "Play"}
+            </Button>
+          </div>
+        </div>
       </div>
     );
   }
@@ -650,14 +786,20 @@ Can you catch me? https://obob.dog/zoomies/${year}/${division}`;
             </Button>
           </Card>
 
-          <Button
-            onClick={shareResults}
-            variant="outline"
-            className="w-full py-4 border-2 border-cyan-300 text-cyan-600 hover:bg-cyan-50 rounded-xl font-bold"
-          >
-            <Share2 className="w-5 h-5 mr-2" />
-            Share Your Score
-          </Button>
+          {usedCustomBooks ? (
+            <p className="text-sm text-gray-400 text-center">
+              Sharing disabled for custom book games
+            </p>
+          ) : (
+            <Button
+              onClick={shareResults}
+              variant="outline"
+              className="w-full py-4 border-2 border-cyan-300 text-cyan-600 hover:bg-cyan-50 rounded-xl font-bold"
+            >
+              <Share2 className="w-5 h-5 mr-2" />
+              Share Your Score
+            </Button>
+          )}
         </div>
       </div>
     );
