@@ -228,7 +228,7 @@ export default function ZoomiesGame({
     }
   };
 
-  const QUESTION_COUNT = 10;
+  const QUESTION_COUNT = 15;
   const TIME_PER_QUESTION = 15000; // 15 seconds
 
   // Calculate book multiplier: fewer books = bigger penalty (log-ish curve)
