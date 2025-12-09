@@ -231,10 +231,12 @@ export default function ZoomiesGame({
   const QUESTION_COUNT = 15;
   const TIME_PER_QUESTION = 15000; // 15 seconds
 
-  // Calculate book multiplier: 0.5x at 4 books, 1.0x at all books
+  // Calculate book multiplier: fewer books = bigger penalty (log-ish curve)
+  // 4 books = 0.25x, 8 books ≈ 0.60x, 12 books ≈ 0.81x, 16 books = 1.0x
   const calculateBookMultiplier = (selectedCount: number, totalCount: number) => {
     if (totalCount <= 4) return 1; // Edge case: if only 4 books total, no penalty
-    return 0.5 + (0.5 * (selectedCount - 4) / (totalCount - 4));
+    // Curve from 0.25x (min books) to 1.0x (all books)
+    return 0.25 + 0.75 * Math.pow((selectedCount - 4) / (totalCount - 4), 0.7);
   };
 
   // Fetch questions when game starts
