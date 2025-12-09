@@ -205,7 +205,7 @@ export default function ZoomiesGame({
   const [selectedBooks, setSelectedBooks] = useState<Book[]>(books);
   const [usedCustomBooks, setUsedCustomBooks] = useState(false);
   const [bookSelectionSet, setBookSelectionSet] = useState<Set<string>>(
-    () => new Set(books.map((b) => b.book_key))
+    () => new Set()
   );
 
   // Timer
