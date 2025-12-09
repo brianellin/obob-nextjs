@@ -695,11 +695,6 @@ Can you catch me? https://obob.dog/zoomies/${year}/${division}`;
             })}
           </div>
 
-          {/* Warning about sharing */}
-          <p className="text-xs text-gray-400 text-center mb-4">
-            Note: You cannot share your score when playing with custom books
-          </p>
-
           {/* Selected count, multiplier, and start button */}
           <div className="text-center">
             <p className="text-sm text-gray-600 mb-2">
@@ -808,20 +803,14 @@ Can you catch me? https://obob.dog/zoomies/${year}/${division}`;
             </Button>
           </Card>
 
-          {usedCustomBooks ? (
-            <p className="text-sm text-gray-400 text-center">
-              Sharing disabled for custom book games
-            </p>
-          ) : (
-            <Button
-              onClick={shareResults}
-              variant="outline"
-              className="w-full py-4 border-2 border-cyan-300 text-cyan-600 hover:bg-cyan-50 rounded-xl font-bold"
-            >
-              <Share2 className="w-5 h-5 mr-2" />
-              Share Your Score
-            </Button>
-          )}
+          <Button
+            onClick={shareResults}
+            variant="outline"
+            className="w-full py-4 border-2 border-cyan-300 text-cyan-600 hover:bg-cyan-50 rounded-xl font-bold"
+          >
+            <Share2 className="w-5 h-5 mr-2" />
+            Share Your Score
+          </Button>
         </div>
       </div>
     );
