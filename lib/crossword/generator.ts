@@ -27,27 +27,102 @@ interface LayoutResult {
 }
 
 /**
+ * Calculate density score for a layout.
+ * Higher scores indicate denser, more interconnected puzzles.
+ */
+function calculateDensityScore(layout: LayoutResult): number {
+  const placedWords = layout.result.filter((w) => w.orientation !== "none");
+  if (placedWords.length === 0) return 0;
+
+  // Count letter cells and intersections
+  const cellMap = new Map<string, number>(); // "row,col" -> count of words using it
+
+  for (const word of placedWords) {
+    const startRow = word.starty - 1;
+    const startCol = word.startx - 1;
+
+    for (let i = 0; i < word.answer.length; i++) {
+      const row = word.orientation === "down" ? startRow + i : startRow;
+      const col = word.orientation === "across" ? startCol + i : startCol;
+      const key = `${row},${col}`;
+      cellMap.set(key, (cellMap.get(key) || 0) + 1);
+    }
+  }
+
+  const totalLetterCells = cellMap.size;
+  const intersections = Array.from(cellMap.values()).filter((count) => count > 1).length;
+  const gridArea = layout.rows * layout.cols;
+
+  // Density metrics (all normalized to 0-1 range, higher is better)
+
+  // 1. Fill ratio: what percentage of the grid has letters
+  const fillRatio = totalLetterCells / gridArea;
+
+  // 2. Intersection ratio: what percentage of letter cells are intersections
+  const intersectionRatio = totalLetterCells > 0 ? intersections / totalLetterCells : 0;
+
+  // 3. Words per area: how many words packed into the grid
+  const wordsPerArea = placedWords.length / gridArea;
+
+  // 4. Compactness: prefer square-ish grids (penalize long skinny grids)
+  const aspectRatio = Math.min(layout.rows, layout.cols) / Math.max(layout.rows, layout.cols);
+
+  // 5. Average intersections per word (classic crosswords have ~2-3 per word)
+  const avgIntersectionsPerWord = placedWords.length > 0 ? intersections / placedWords.length : 0;
+  const intersectionPerWordScore = Math.min(avgIntersectionsPerWord / 3, 1); // Cap at 1
+
+  // Weighted combination - prioritize intersections and fill ratio
+  const score =
+    fillRatio * 0.25 +
+    intersectionRatio * 0.30 +
+    wordsPerArea * 10 * 0.15 + // Scale up since this is typically small
+    aspectRatio * 0.10 +
+    intersectionPerWordScore * 0.20;
+
+  return score;
+}
+
+/**
  * Generate a crossword puzzle from a list of questions.
+ * Uses multiple attempts with different word subsets to find the densest layout.
  * Returns null if unable to generate a valid puzzle.
+ *
+ * @param questions - Pool of candidate questions (should be 2-3x the target count)
+ * @param targetWordCount - Desired number of words in the final puzzle
+ * @param maxAttempts - Number of different layouts to try
  */
 export function generateCrossword(
   questions: CrosswordQuestion[],
-  maxAttempts: number = 10
+  targetWordCount?: number,
+  maxAttempts: number = 30
 ): CrosswordPuzzle | null {
   if (questions.length < 4) {
     console.warn("Not enough questions to generate crossword");
     return null;
   }
 
+  // If no target specified, try to place all words
+  const target = targetWordCount || questions.length;
+
   let bestLayout: LayoutResult | null = null;
+  let bestScore = -1;
   let bestPlacedCount = 0;
 
-  // Try multiple times with shuffled input to get the best layout
+  // Try multiple times with different word subsets and shuffles
   for (let attempt = 0; attempt < maxAttempts; attempt++) {
+    // Shuffle all questions
     const shuffled = shuffleArray([...questions]);
 
+    // Take a subset - vary the subset size for diversity
+    // Sometimes use all words, sometimes use fewer
+    const subsetSize = Math.min(
+      questions.length,
+      target + Math.floor(Math.random() * (questions.length - target + 1))
+    );
+    const subset = shuffled.slice(0, Math.max(subsetSize, target));
+
     // Prepare input for the library
-    const input: LayoutInput[] = shuffled.map((q) => ({
+    const input: LayoutInput[] = subset.map((q) => ({
       clue: q.text,
       answer: q.answer,
     }));
@@ -60,14 +135,29 @@ export function generateCrossword(
         (w) => w.orientation !== "none"
       );
 
-      if (placedWords.length > bestPlacedCount) {
-        bestPlacedCount = placedWords.length;
-        bestLayout = layout;
-      }
+      // Skip if we didn't place enough words
+      if (placedWords.length < 4) continue;
 
-      // If we placed all words, no need to try again
-      if (placedWords.length === questions.length) {
-        break;
+      // Calculate density score
+      const score = calculateDensityScore(layout);
+
+      // Prefer layouts that:
+      // 1. Have higher density scores
+      // 2. Have at least the target word count (if possible)
+      const meetsTarget = placedWords.length >= target;
+      const currentMeetsTarget = bestLayout ?
+        bestLayout.result.filter((w) => w.orientation !== "none").length >= target : false;
+
+      // Update best if:
+      // - This meets target and previous didn't, OR
+      // - Both meet target (or both don't) and this has better score
+      if (
+        (meetsTarget && !currentMeetsTarget) ||
+        (meetsTarget === currentMeetsTarget && score > bestScore)
+      ) {
+        bestScore = score;
+        bestLayout = layout;
+        bestPlacedCount = placedWords.length;
       }
     } catch (error) {
       console.error("Crossword generation attempt failed:", error);
@@ -80,6 +170,8 @@ export function generateCrossword(
     );
     return null;
   }
+
+  console.log(`Generated crossword: ${bestPlacedCount} words, density score: ${bestScore.toFixed(3)}`);
 
   // Build the puzzle from the best layout
   return buildPuzzleFromLayout(bestLayout, questions);

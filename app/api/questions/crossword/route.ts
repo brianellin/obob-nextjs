@@ -62,14 +62,20 @@ export async function POST(request: Request) {
     const sizeConfig = PUZZLE_SIZE_CONFIG[puzzleSize];
     const targetCount = Math.min(sizeConfig.target, validQuestions.length);
 
-    // Select distributed questions across books
-    const selectedQuestions = selectDistributedQuestions(
+    // Select 2.5x more candidate words than needed for better density optimization
+    // The generator will try different combinations to find the densest layout
+    const candidateCount = Math.min(
+      Math.ceil(targetCount * 2.5),
+      validQuestions.length
+    );
+    const candidateQuestions = selectDistributedQuestions(
       validQuestions,
-      targetCount
+      candidateCount
     );
 
-    // Generate the crossword puzzle
-    const puzzle = generateCrossword(selectedQuestions);
+    // Generate the crossword puzzle with density optimization
+    // Pass the target count so the generator knows how many words we want
+    const puzzle = generateCrossword(candidateQuestions, targetCount);
 
     if (!puzzle) {
       return NextResponse.json(
