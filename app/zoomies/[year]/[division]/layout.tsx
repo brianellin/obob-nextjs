@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 
 type Props = {
-  params: { year: string; division: string };
+  params: Promise<{ year: string; division: string }>;
   children: React.ReactNode;
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { year, division } = params;
+  const { year, division } = await params;
 
   return {
     title: `Zoomies - ${year} Division ${division} | OBOB.dog`,

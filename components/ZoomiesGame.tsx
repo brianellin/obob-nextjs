@@ -70,7 +70,8 @@ const CORRECT_REACTIONS = [
   "RENT FREE",
   "REAL",
   "LOWKEY GENIUS",
-  "RIZZIN",
+  "RIZZ",
+  "SKILLZ", 
   // 2000s
   "EPIC WIN",
   "YOU ROCK",
