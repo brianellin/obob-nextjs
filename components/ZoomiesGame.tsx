@@ -40,6 +40,7 @@ type ZoomiesResult = {
 // Fun reaction messages - mix of modern slang and retro throwbacks
 const CORRECT_REACTIONS = [
   // Modern
+  "SIGMA",
   "SLAY",
   "NO CAP",
   "GOATED",
@@ -69,6 +70,7 @@ const CORRECT_REACTIONS = [
   "RENT FREE",
   "REAL",
   "LOWKEY GENIUS",
+  "RIZZIN",
   // 2000s
   "EPIC WIN",
   "YOU ROCK",
@@ -124,8 +126,10 @@ const WRONG_REACTIONS = [
   "WAIT WHAT",
   "HOLD UP",
   "COOKED",
+  "MID",
   // Edgy modern (added back)
   "NAH",
+  "UHHH",
   "RIP",
   "YIKES",
   "CAP",
