@@ -207,6 +207,7 @@ export default function ZoomiesGame({
   const [bookSelectionSet, setBookSelectionSet] = useState<Set<string>>(
     () => new Set()
   );
+  const [bookMultiplier, setBookMultiplier] = useState(1);
 
   // Timer
   const timerRef = useRef<NodeJS.Timeout | null>(null);
@@ -230,10 +231,17 @@ export default function ZoomiesGame({
   const QUESTION_COUNT = 15;
   const TIME_PER_QUESTION = 15000; // 15 seconds
 
+  // Calculate book multiplier: 0.5x at 4 books, 1.0x at all books
+  const calculateBookMultiplier = (selectedCount: number, totalCount: number) => {
+    if (totalCount <= 4) return 1; // Edge case: if only 4 books total, no penalty
+    return 0.5 + (0.5 * (selectedCount - 4) / (totalCount - 4));
+  };
+
   // Fetch questions when game starts
   const startGame = async (customBooks?: Book[]) => {
     const booksToUse = customBooks || selectedBooks;
     const isCustom = customBooks !== undefined && customBooks.length < books.length;
+    const multiplier = calculateBookMultiplier(booksToUse.length, books.length);
 
     setLoading(true);
     try {
@@ -255,6 +263,7 @@ export default function ZoomiesGame({
       setQuestions(data.questions);
       setSelectedBooks(booksToUse);
       setUsedCustomBooks(isCustom);
+      setBookMultiplier(multiplier);
       setPhase("playing");
       setCurrentIndex(0);
       setStreak(0);
@@ -272,6 +281,7 @@ export default function ZoomiesGame({
         questionCount: QUESTION_COUNT,
         customBooks: isCustom,
         bookCount: booksToUse.length,
+        bookMultiplier: multiplier,
       });
       posthog.capture("zoomiesStarted", {
         year,
@@ -279,6 +289,7 @@ export default function ZoomiesGame({
         questionCount: QUESTION_COUNT,
         customBooks: isCustom,
         bookCount: booksToUse.length,
+        bookMultiplier: multiplier,
       });
     } catch (error) {
       console.error("Error starting game:", error);
@@ -307,12 +318,12 @@ export default function ZoomiesGame({
     };
   }, [phase, currentIndex]);
 
-  // Get random wrong books for answer options
+  // Get random wrong books for answer options (only from selected books)
   const getAnswerOptions = useCallback(() => {
     if (!questions[currentIndex]) return [];
 
     const correctBook = questions[currentIndex].book;
-    const wrongBooks = books
+    const wrongBooks = selectedBooks
       .filter((b) => b.book_key !== correctBook.book_key)
       .sort(() => Math.random() - 0.5)
       .slice(0, 3);
@@ -321,7 +332,7 @@ export default function ZoomiesGame({
       () => Math.random() - 0.5
     );
     return allOptions;
-  }, [books, questions, currentIndex]);
+  }, [selectedBooks, questions, currentIndex]);
 
   const [answerOptions, setAnswerOptions] = useState<Book[]>([]);
 
@@ -341,15 +352,15 @@ export default function ZoomiesGame({
     // Clear timer
     if (timerRef.current) clearInterval(timerRef.current);
 
-    // Calculate score with combo
+    // Calculate score with combo and book multiplier
     let pointsEarned = 0;
     if (isCorrect) {
-      // Base points + speed bonus + streak bonus
+      // Base points + speed bonus, scaled by streak combo and book count multiplier
       const speedBonus = Math.max(
         0,
         Math.floor((TIME_PER_QUESTION - responseTime) / 100)
       );
-      pointsEarned = (100 + speedBonus) * comboMultiplier;
+      pointsEarned = Math.round((100 + speedBonus) * comboMultiplier * bookMultiplier);
 
       const newStreak = streak + 1;
       setStreak(newStreak);
@@ -689,9 +700,9 @@ Can you catch me? https://obob.dog/zoomies/${year}/${division}`;
             Note: You cannot share your score when playing with custom books
           </p>
 
-          {/* Selected count and start button */}
+          {/* Selected count, multiplier, and start button */}
           <div className="text-center">
-            <p className="text-sm text-gray-600 mb-3">
+            <p className="text-sm text-gray-600 mb-2">
               {bookSelectionSet.size} of {books.length} books selected
               {bookSelectionSet.size < 4 && (
                 <span className="text-red-500 ml-2">
@@ -699,6 +710,15 @@ Can you catch me? https://obob.dog/zoomies/${year}/${division}`;
                 </span>
               )}
             </p>
+            {bookSelectionSet.size >= 4 && (
+              <p className={`text-sm font-semibold mb-3 ${
+                bookSelectionSet.size === books.length
+                  ? "text-teal-600"
+                  : "text-orange-500"
+              }`}>
+                Score multiplier: {calculateBookMultiplier(bookSelectionSet.size, books.length).toFixed(2)}x
+              </p>
+            )}
             <Button
               onClick={handleStartWithSelection}
               disabled={!canStart || loading}
