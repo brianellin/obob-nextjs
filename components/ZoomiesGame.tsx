@@ -599,26 +599,26 @@ Can you catch me? https://obob.dog/zoomies/${year}/${division}`;
             </h2>
             <p className="text-gray-500 text-sm mb-6">Your Pack Rank</p>
 
-            <div className="grid grid-cols-3 gap-4 mb-6">
-              <div className="bg-gradient-to-br from-teal-100 to-cyan-100 rounded-2xl p-4">
-                <div className="text-3xl font-black text-teal-600">
+            <div className="grid grid-cols-3 gap-2 sm:gap-4 mb-6">
+              <div className="bg-gradient-to-br from-teal-100 to-cyan-100 rounded-2xl p-2 sm:p-4">
+                <div className="text-xl sm:text-3xl font-black text-teal-600 truncate">
                   {score.toLocaleString()}
                 </div>
                 <div className="text-xs text-gray-500 uppercase tracking-wide">
                   Score
                 </div>
               </div>
-              <div className="bg-gradient-to-br from-orange-100 to-red-100 rounded-2xl p-4">
-                <div className="text-3xl font-black text-orange-600 flex items-center justify-center">
+              <div className="bg-gradient-to-br from-orange-100 to-red-100 rounded-2xl p-2 sm:p-4">
+                <div className="text-xl sm:text-3xl font-black text-orange-600 flex items-center justify-center">
                   {maxStreak}
-                  <Flame className="w-6 h-6 ml-1" />
+                  <Flame className="w-5 h-5 sm:w-6 sm:h-6 ml-1" />
                 </div>
                 <div className="text-xs text-gray-500 uppercase tracking-wide">
                   Max Streak
                 </div>
               </div>
-              <div className="bg-gradient-to-br from-emerald-100 to-cyan-100 rounded-2xl p-4">
-                <div className="text-3xl font-black text-emerald-600">
+              <div className="bg-gradient-to-br from-emerald-100 to-cyan-100 rounded-2xl p-2 sm:p-4">
+                <div className="text-xl sm:text-3xl font-black text-emerald-600">
                   {correctCount}/{results.length}
                 </div>
                 <div className="text-xs text-gray-500 uppercase tracking-wide">
