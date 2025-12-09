@@ -47,35 +47,37 @@ export async function POST(request: Request) {
       books
     );
 
-    if (validQuestions.length < 4) {
+    // Get puzzle size config
+    const sizeConfig = PUZZLE_SIZE_CONFIG[puzzleSize];
+
+    if (validQuestions.length < sizeConfig.minWords) {
       return NextResponse.json(
         {
           error:
-            "Not enough single-word content questions available for the selected books. Please select more books or try different books.",
+            `Not enough single-word content questions available for the selected books. Need at least ${sizeConfig.minWords} questions, but only found ${validQuestions.length}. Please select more books or try different books.`,
           availableCount: validQuestions.length,
         },
         { status: 400 }
       );
     }
 
-    // Get target word count based on puzzle size
-    const sizeConfig = PUZZLE_SIZE_CONFIG[puzzleSize];
-    const targetCount = Math.min(sizeConfig.target, validQuestions.length);
-
-    // Select 2.5x more candidate words than needed for better density optimization
-    // The generator will try different combinations to find the densest layout
+    // Select distributed questions across books - get plenty of candidates
+    // Give the generator 2x the target to have good options for density optimization
     const candidateCount = Math.min(
-      Math.ceil(targetCount * 2.5),
-      validQuestions.length
+      validQuestions.length,
+      sizeConfig.targetWords * 2
     );
     const candidateQuestions = selectDistributedQuestions(
       validQuestions,
       candidateCount
     );
 
-    // Generate the crossword puzzle with density optimization
-    // Pass the target count so the generator knows how many words we want
-    const puzzle = generateCrossword(candidateQuestions, targetCount);
+    // Generate the crossword puzzle optimizing for density
+    const puzzle = generateCrossword(candidateQuestions, {
+      targetWords: sizeConfig.targetWords,
+      maxGridSize: sizeConfig.maxGridSize,
+      minWords: sizeConfig.minWords,
+    });
 
     if (!puzzle) {
       return NextResponse.json(
@@ -87,21 +89,14 @@ export async function POST(request: Request) {
       );
     }
 
-    // Build message if we couldn't place all requested words
-    let message: string | null = null;
-    if (puzzle.clues.length < sizeConfig.target) {
-      message = `Generated a puzzle with ${puzzle.clues.length} words (requested ${sizeConfig.target}). Some words couldn't be placed in the grid.`;
-    }
-
     return NextResponse.json({
       puzzle: {
         ...puzzle,
         // Convert Map to object for JSON serialization
         cellNumbers: Object.fromEntries(puzzle.cellNumbers),
       },
-      message,
       placedWordCount: puzzle.clues.length,
-      requestedWordCount: sizeConfig.target,
+      gridSize: puzzle.rows,
     });
   } catch (error) {
     console.error("Error generating crossword:", error);
