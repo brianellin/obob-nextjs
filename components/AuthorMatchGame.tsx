@@ -234,7 +234,7 @@ export default function AuthorMatchGame({ books, year, division }: AuthorMatchGa
 ⏱️ ${formatTime(elapsedTime)} | 🐾 ${attempts} attempts
 ✨ ${totalPairs} pairs matched!
 
-Can you beat my time? https://obob.dog/author-match/${year}/${division}`;
+Can you beat my time? https://obob.dog/author-match/${year}/${division}?utm_source=share`;
 
     const shareData = {
       year,

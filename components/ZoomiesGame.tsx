@@ -509,7 +509,7 @@ Score: ${score.toLocaleString()}
 Streak: ${maxStreak} 🔥
 ${correctCount}/${results.length} correct
 
-Can you catch me? https://obob.dog/zoomies/${year}/${division}`;
+Can you catch me? https://obob.dog/zoomies/${year}/${division}?utm_source=share`;
 
     // Track share event
     const shareData = {
