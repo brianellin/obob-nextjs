@@ -484,17 +484,17 @@ export default function ZoomiesGame({
 
     if (percentage >= 90)
       return { rating: "TOP DOG", emoji: "🏆", color: "text-yellow-400" };
-    if (percentage >= 75)
+    if (percentage >= 80)
+      return { rating: "VERY GOOD DOG", emoji: "⭐", color: "text-amber-400" };
+    if (percentage >= 65)
       return { rating: "GOOD DOGGG", emoji: "🦴", color: "text-purple-400" };
-    if (percentage >= 60)
+    if (percentage >= 50)
       return {
         rating: "LEARNING NEW TRICKS",
         emoji: "🐾",
         color: "text-cyan-400",
       };
-    if (percentage >= 40)
-      return { rating: "STILL A PUPPY", emoji: "🐶", color: "text-gray-400" };
-    return { rating: "NEEDS MORE TREATS", emoji: "🦮", color: "text-red-400" };
+    return { rating: "STILL A PUPPY", emoji: "🐶", color: "text-gray-400" };
   };
 
   // Share results
