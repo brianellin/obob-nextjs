@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef, useCallback } from "react";
+import { useState, useEffect, useRef, useCallback, useContext } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
@@ -22,7 +22,8 @@ import {
   CrosswordProvider,
   CrosswordProviderImperative,
   CrosswordGrid,
-  DirectionClues,
+  CrosswordContext,
+  Clue,
 } from "@jaredreisinger/react-crossword";
 import type {
   GamePhase,
@@ -53,15 +54,27 @@ type CrosswordGameProps = {
 };
 
 /**
- * Convert our puzzle format to the library's expected format
+ * Capitalize the first letter of a string
  */
+function capitalizeFirst(text: string): string {
+  if (!text) return text;
+  return text.charAt(0).toUpperCase() + text.slice(1);
+}
+
+/**
+ * Convert our puzzle format to the library's expected format
+ * We use a delimiter to separate clue text from book title for custom rendering
+ */
+const CLUE_DELIMITER = "|||";
+
 function convertToLibraryFormat(puzzle: CrosswordPuzzle): LibraryCrosswordData {
   const across: Record<string, LibraryClueData> = {};
   const down: Record<string, LibraryClueData> = {};
 
   for (const clue of puzzle.clues) {
+    // Store text and book title with delimiter for custom parsing
     const clueData: LibraryClueData = {
-      clue: `${clue.text} (${clue.bookTitle})`,
+      clue: `${capitalizeFirst(clue.text)}${CLUE_DELIMITER}${clue.bookTitle}`,
       answer: clue.answer,
       row: clue.startRow,
       col: clue.startCol,
@@ -75,6 +88,42 @@ function convertToLibraryFormat(puzzle: CrosswordPuzzle): LibraryCrosswordData {
   }
 
   return { across, down };
+}
+
+/**
+ * Custom DirectionClues component that renders book titles in italics
+ */
+function CustomDirectionClues({
+  direction,
+  label,
+}: {
+  direction: "across" | "down";
+  label: string;
+}) {
+  const { clues } = useContext(CrosswordContext);
+
+  if (!clues) return null;
+
+  return (
+    <div className="direction">
+      <h3 className="header">{label}</h3>
+      {clues[direction].map(({ number, clue, complete, correct }) => {
+        // Parse the clue text and book title
+        const [text, bookTitle] = clue.split(CLUE_DELIMITER);
+        return (
+          <Clue
+            key={number}
+            direction={direction}
+            number={number}
+            complete={complete}
+            correct={correct}
+          >
+            {text} <em className="text-gray-500">({bookTitle})</em>
+          </Clue>
+        );
+      })}
+    </div>
+  );
 }
 
 export default function CrosswordGame({
@@ -565,10 +614,10 @@ export default function CrosswordGame({
                 <div className="bg-white p-4 sm:p-6 shadow-lg border border-gray-200 flex-1 min-w-0 max-h-[500px] lg:max-h-[520px] overflow-y-auto">
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-6">
                     <div>
-                      <DirectionClues direction="across" label="ACROSS" />
+                      <CustomDirectionClues direction="across" label="ACROSS" />
                     </div>
                     <div>
-                      <DirectionClues direction="down" label="DOWN" />
+                      <CustomDirectionClues direction="down" label="DOWN" />
                     </div>
                   </div>
                 </div>
