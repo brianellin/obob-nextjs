@@ -87,6 +87,7 @@ export function generateCrossword(
 
 /**
  * Convert the library's layout result into our CrosswordPuzzle format
+ * Always produces a square grid for consistent layout across devices
  */
 function buildPuzzleFromLayout(
   layout: LayoutResult,
@@ -98,13 +99,30 @@ function buildPuzzleFromLayout(
     questionMap.set(q.answer, q);
   }
 
-  // Build the grid (convert "-" to null for black cells)
+  // Determine the square size (use the larger dimension)
+  const size = Math.max(layout.rows, layout.cols);
+
+  // Calculate offsets to center the content in the square grid
+  const rowOffset = Math.floor((size - layout.rows) / 2);
+  const colOffset = Math.floor((size - layout.cols) / 2);
+
+  // Build the square grid (convert "-" to null for black cells)
   const grid: (string | null)[][] = [];
-  for (let row = 0; row < layout.rows; row++) {
+  for (let row = 0; row < size; row++) {
     const gridRow: (string | null)[] = [];
-    for (let col = 0; col < layout.cols; col++) {
-      const cell = layout.table[row]?.[col];
-      gridRow.push(cell === "-" || !cell ? null : cell);
+    for (let col = 0; col < size; col++) {
+      // Map back to original layout coordinates
+      const origRow = row - rowOffset;
+      const origCol = col - colOffset;
+
+      // Check if we're within the original layout bounds
+      if (origRow >= 0 && origRow < layout.rows && origCol >= 0 && origCol < layout.cols) {
+        const cell = layout.table[origRow]?.[origCol];
+        gridRow.push(cell === "-" || !cell ? null : cell);
+      } else {
+        // Outside original bounds - black cell
+        gridRow.push(null);
+      }
     }
     grid.push(gridRow);
   }
@@ -123,8 +141,9 @@ function buildPuzzleFromLayout(
     if (!question) continue;
 
     // Library uses 1-indexed positions, convert to 0-indexed
-    const startRow = word.starty - 1;
-    const startCol = word.startx - 1;
+    // Then apply offset for centered square grid
+    const startRow = word.starty - 1 + rowOffset;
+    const startCol = word.startx - 1 + colOffset;
 
     const clue: CrosswordClue = {
       id: `${word.position}-${word.orientation}`,
@@ -152,8 +171,8 @@ function buildPuzzleFromLayout(
   return {
     grid,
     clues,
-    rows: layout.rows,
-    cols: layout.cols,
+    rows: size,
+    cols: size,
     cellNumbers,
   };
 }

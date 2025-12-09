@@ -1,19 +1,14 @@
 "use client";
 
-import { useState, useEffect, useCallback, useMemo } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import type { Book, Books } from "@/types";
 import Image from "next/image";
 import {
   ArrowRight,
   PawPrint,
-  Home,
-  RotateCcw,
-  CheckCircle2,
-  Eye,
   Loader2,
   Grid3X3,
   AlertCircle,
@@ -23,18 +18,32 @@ import { usePostHog } from "posthog-js/react";
 import Confetti from "react-confetti";
 import { useWindowSize } from "react-use";
 import { WavyUnderline } from "./WavyUnderline";
-import CrosswordGrid from "./CrosswordGrid";
-import CrosswordClueList from "./CrosswordClueList";
+import {
+  CrosswordProvider,
+  CrosswordProviderImperative,
+  CrosswordGrid,
+  DirectionClues,
+} from "@jaredreisinger/react-crossword";
 import type {
   GamePhase,
   PuzzleSize,
   CrosswordPuzzle,
   CrosswordClue,
-  Direction,
-  UserAnswers,
 } from "@/lib/crossword/types";
 import { PUZZLE_SIZE_CONFIG } from "@/lib/crossword/types";
-import { getClueCells, isClueCorrect, isClueFilled } from "@/lib/crossword/generator";
+
+// Type for the library's clue format
+interface LibraryClueData {
+  clue: string;
+  answer: string;
+  row: number;
+  col: number;
+}
+
+interface LibraryCrosswordData {
+  across: Record<string, LibraryClueData>;
+  down: Record<string, LibraryClueData>;
+}
 
 type CrosswordGameProps = {
   books: Book[];
@@ -42,6 +51,31 @@ type CrosswordGameProps = {
   division: string;
   onExit: () => void;
 };
+
+/**
+ * Convert our puzzle format to the library's expected format
+ */
+function convertToLibraryFormat(puzzle: CrosswordPuzzle): LibraryCrosswordData {
+  const across: Record<string, LibraryClueData> = {};
+  const down: Record<string, LibraryClueData> = {};
+
+  for (const clue of puzzle.clues) {
+    const clueData: LibraryClueData = {
+      clue: clue.text,
+      answer: clue.answer,
+      row: clue.startRow,
+      col: clue.startCol,
+    };
+
+    if (clue.direction === "across") {
+      across[clue.number.toString()] = clueData;
+    } else {
+      down[clue.number.toString()] = clueData;
+    }
+  }
+
+  return { across, down };
+}
 
 export default function CrosswordGame({
   books,
@@ -51,6 +85,7 @@ export default function CrosswordGame({
 }: CrosswordGameProps) {
   const posthog = usePostHog();
   const { width, height } = useWindowSize();
+  const crosswordRef = useRef<CrosswordProviderImperative>(null);
 
   // Game state
   const [phase, setPhase] = useState<GamePhase>("setup");
@@ -65,17 +100,12 @@ export default function CrosswordGame({
 
   // Playing state
   const [puzzle, setPuzzle] = useState<CrosswordPuzzle | null>(null);
-  const [userAnswers, setUserAnswers] = useState<UserAnswers>({});
-  const [selectedCell, setSelectedCell] = useState<{ row: number; col: number } | null>(null);
-  const [selectedDirection, setSelectedDirection] = useState<Direction>("across");
-  const [correctCells, setCorrectCells] = useState<Set<string>>(new Set());
-  const [incorrectCells, setIncorrectCells] = useState<Set<string>>(new Set());
-  const [revealedCells, setRevealedCells] = useState<Set<string>>(new Set());
+  const [libraryData, setLibraryData] = useState<LibraryCrosswordData | null>(null);
+  const [correctCount, setCorrectCount] = useState(0);
   const [startTime, setStartTime] = useState<number | null>(null);
   const [endTime, setEndTime] = useState<number | null>(null);
-  const [hintsUsed, setHintsUsed] = useState(0);
   const [showConfetti, setShowConfetti] = useState(false);
-  const [mobileClueTab, setMobileClueTab] = useState<"across" | "down">("across");
+  const [isComplete, setIsComplete] = useState(false);
 
   // Load books
   useEffect(() => {
@@ -94,58 +124,6 @@ export default function CrosswordGame({
     };
     loadBooks();
   }, [year, division]);
-
-  // Get the currently selected clue based on selected cell
-  const selectedClue = useMemo(() => {
-    if (!selectedCell || !puzzle) return null;
-
-    // Find clue that contains this cell and matches direction
-    for (const clue of puzzle.clues) {
-      if (clue.direction !== selectedDirection) continue;
-
-      const cells = getClueCells(clue);
-      for (const cell of cells) {
-        if (cell.row === selectedCell.row && cell.col === selectedCell.col) {
-          return clue;
-        }
-      }
-    }
-
-    // If no clue in current direction, try other direction
-    for (const clue of puzzle.clues) {
-      const cells = getClueCells(clue);
-      for (const cell of cells) {
-        if (cell.row === selectedCell.row && cell.col === selectedCell.col) {
-          return clue;
-        }
-      }
-    }
-
-    return null;
-  }, [selectedCell, selectedDirection, puzzle]);
-
-  // Get completed and correct clue IDs
-  const completedClueIds = useMemo(() => {
-    if (!puzzle) return new Set<string>();
-    const completed = new Set<string>();
-    for (const clue of puzzle.clues) {
-      if (isClueFilled(clue, userAnswers)) {
-        completed.add(clue.id);
-      }
-    }
-    return completed;
-  }, [puzzle, userAnswers]);
-
-  const correctClueIds = useMemo(() => {
-    if (!puzzle) return new Set<string>();
-    const correct = new Set<string>();
-    for (const clue of puzzle.clues) {
-      if (isClueCorrect(clue, userAnswers)) {
-        correct.add(clue.id);
-      }
-    }
-    return correct;
-  }, [puzzle, userAnswers]);
 
   // Book selection handlers
   const handleToggleBook = (bookKey: string) => {
@@ -203,15 +181,15 @@ export default function CrosswordGame({
         )),
       };
 
+      // Convert to library format
+      const libData = convertToLibraryFormat(puzzleData);
+
       setPuzzle(puzzleData);
-      setUserAnswers({});
-      setSelectedCell(null);
-      setCorrectCells(new Set());
-      setIncorrectCells(new Set());
-      setRevealedCells(new Set());
+      setLibraryData(libData);
+      setCorrectCount(0);
       setStartTime(Date.now());
       setEndTime(null);
-      setHintsUsed(0);
+      setIsComplete(false);
       setPhase("playing");
 
       // Track analytics
@@ -238,259 +216,60 @@ export default function CrosswordGame({
     }
   };
 
-  // Cell click handler
-  const handleCellClick = useCallback((row: number, col: number) => {
-    setSelectedCell((prev) => {
-      // If clicking the same cell, toggle direction
-      if (prev?.row === row && prev?.col === col) {
-        setSelectedDirection((d) => (d === "across" ? "down" : "across"));
-        return prev;
-      }
-      return { row, col };
-    });
-    // Clear check states when selecting new cell
-    setCorrectCells(new Set());
-    setIncorrectCells(new Set());
+  // Handle when a clue is answered correctly
+  const handleAnswerCorrect = useCallback((direction: string, number: string, answer: string) => {
+    setCorrectCount((prev) => prev + 1);
   }, []);
 
-  // Letter input handler
-  const handleLetterInput = useCallback((letter: string) => {
-    if (!selectedCell || !puzzle) return;
+  // Handle crossword completion
+  const handleCrosswordComplete = useCallback((correct: boolean) => {
+    if (correct && puzzle && startTime && !isComplete) {
+      setIsComplete(true);
+      const end = Date.now();
+      setEndTime(end);
+      setPhase("results");
 
-    const cellKey = `${selectedCell.row},${selectedCell.col}`;
+      const timeSeconds = Math.floor((end - startTime) / 1000);
 
-    // Don't allow input on black cells
-    if (puzzle.grid[selectedCell.row]?.[selectedCell.col] === null) return;
-
-    setUserAnswers((prev) => ({
-      ...prev,
-      [cellKey]: letter,
-    }));
-
-    // Advance to next cell in current direction
-    const nextRow = selectedDirection === "down" ? selectedCell.row + 1 : selectedCell.row;
-    const nextCol = selectedDirection === "across" ? selectedCell.col + 1 : selectedCell.col;
-
-    // Check if next cell is valid (not black, within bounds)
-    if (
-      nextRow < puzzle.rows &&
-      nextCol < puzzle.cols &&
-      puzzle.grid[nextRow]?.[nextCol] !== null
-    ) {
-      setSelectedCell({ row: nextRow, col: nextCol });
-    }
-  }, [selectedCell, selectedDirection, puzzle]);
-
-  // Backspace handler
-  const handleBackspace = useCallback(() => {
-    if (!selectedCell || !puzzle) return;
-
-    const cellKey = `${selectedCell.row},${selectedCell.col}`;
-
-    // If current cell is empty, move back first
-    if (!userAnswers[cellKey]) {
-      const prevRow = selectedDirection === "down" ? selectedCell.row - 1 : selectedCell.row;
-      const prevCol = selectedDirection === "across" ? selectedCell.col - 1 : selectedCell.col;
-
-      if (
-        prevRow >= 0 &&
-        prevCol >= 0 &&
-        puzzle.grid[prevRow]?.[prevCol] !== null
-      ) {
-        setSelectedCell({ row: prevRow, col: prevCol });
-        const prevCellKey = `${prevRow},${prevCol}`;
-        setUserAnswers((prev) => {
-          const next = { ...prev };
-          delete next[prevCellKey];
-          return next;
-        });
-      }
-    } else {
-      // Clear current cell
-      setUserAnswers((prev) => {
-        const next = { ...prev };
-        delete next[cellKey];
-        return next;
-      });
-    }
-  }, [selectedCell, selectedDirection, puzzle, userAnswers]);
-
-  // Navigate handler
-  const handleNavigate = useCallback((direction: "up" | "down" | "left" | "right") => {
-    if (!selectedCell || !puzzle) return;
-
-    let newRow = selectedCell.row;
-    let newCol = selectedCell.col;
-
-    switch (direction) {
-      case "up":
-        newRow = Math.max(0, selectedCell.row - 1);
-        break;
-      case "down":
-        newRow = Math.min(puzzle.rows - 1, selectedCell.row + 1);
-        break;
-      case "left":
-        newCol = Math.max(0, selectedCell.col - 1);
-        break;
-      case "right":
-        newCol = Math.min(puzzle.cols - 1, selectedCell.col + 1);
-        break;
-    }
-
-    // Skip black cells
-    if (puzzle.grid[newRow]?.[newCol] !== null) {
-      setSelectedCell({ row: newRow, col: newCol });
-    }
-  }, [selectedCell, puzzle]);
-
-  // Direction toggle
-  const handleDirectionToggle = useCallback(() => {
-    setSelectedDirection((d) => (d === "across" ? "down" : "across"));
-  }, []);
-
-  // Next/prev word
-  const handleNextWord = useCallback(() => {
-    if (!puzzle || !selectedClue) return;
-
-    const clues = puzzle.clues.filter((c) => c.direction === selectedDirection);
-    const currentIndex = clues.findIndex((c) => c.id === selectedClue.id);
-    const nextIndex = (currentIndex + 1) % clues.length;
-    const nextClue = clues[nextIndex];
-
-    setSelectedCell({ row: nextClue.startRow, col: nextClue.startCol });
-  }, [puzzle, selectedClue, selectedDirection]);
-
-  const handlePrevWord = useCallback(() => {
-    if (!puzzle || !selectedClue) return;
-
-    const clues = puzzle.clues.filter((c) => c.direction === selectedDirection);
-    const currentIndex = clues.findIndex((c) => c.id === selectedClue.id);
-    const prevIndex = (currentIndex - 1 + clues.length) % clues.length;
-    const prevClue = clues[prevIndex];
-
-    setSelectedCell({ row: prevClue.startRow, col: prevClue.startCol });
-  }, [puzzle, selectedClue, selectedDirection]);
-
-  // Clue click handler
-  const handleClueClick = useCallback((clue: CrosswordClue) => {
-    setSelectedCell({ row: clue.startRow, col: clue.startCol });
-    setSelectedDirection(clue.direction);
-    setMobileClueTab(clue.direction);
-  }, []);
-
-  // Check answers
-  const handleCheckAnswers = useCallback(() => {
-    if (!puzzle) return;
-
-    const correct = new Set<string>();
-    const incorrect = new Set<string>();
-
-    for (const clue of puzzle.clues) {
-      const cells = getClueCells(clue);
-      for (let i = 0; i < cells.length; i++) {
-        const cell = cells[i];
-        const cellKey = `${cell.row},${cell.col}`;
-        const userLetter = userAnswers[cellKey]?.toUpperCase() || "";
-        const correctLetter = clue.answer[i];
-
-        if (userLetter) {
-          if (userLetter === correctLetter) {
-            correct.add(cellKey);
-          } else {
-            incorrect.add(cellKey);
-          }
-        }
-      }
-    }
-
-    setCorrectCells(correct);
-    setIncorrectCells(incorrect);
-
-    // Track check
-    posthog?.capture("crosswordCheckAnswers", {
-      year,
-      division,
-      correctCount: correct.size,
-      incorrectCount: incorrect.size,
-      totalFilled: Object.keys(userAnswers).length,
-    });
-
-    // Check if puzzle is complete and all correct
-    if (correctClueIds.size === puzzle.clues.length) {
-      handlePuzzleComplete();
-    }
-  }, [puzzle, userAnswers, correctClueIds, year, division, posthog]);
-
-  // Reveal all
-  const handleRevealAll = useCallback(() => {
-    if (!puzzle) return;
-
-    const newAnswers: UserAnswers = {};
-    const revealed = new Set<string>();
-
-    for (const clue of puzzle.clues) {
-      const cells = getClueCells(clue);
-      for (let i = 0; i < cells.length; i++) {
-        const cell = cells[i];
-        const cellKey = `${cell.row},${cell.col}`;
-        newAnswers[cellKey] = clue.answer[i];
-        revealed.add(cellKey);
-      }
-    }
-
-    setUserAnswers(newAnswers);
-    setRevealedCells(revealed);
-    setHintsUsed((prev) => prev + puzzle.clues.length);
-    setCorrectCells(new Set());
-    setIncorrectCells(new Set());
-
-    handlePuzzleComplete();
-  }, [puzzle]);
-
-  // Puzzle complete
-  const handlePuzzleComplete = useCallback(() => {
-    if (!puzzle || !startTime) return;
-
-    const end = Date.now();
-    setEndTime(end);
-    setPhase("results");
-
-    const timeSeconds = Math.floor((end - startTime) / 1000);
-    const correctCount = correctClueIds.size;
-    const totalCount = puzzle.clues.length;
-
-    // Show confetti for perfect score without hints
-    if (correctCount === totalCount && hintsUsed === 0) {
+      // Show confetti on completion
       setShowConfetti(true);
       setTimeout(() => setShowConfetti(false), 5000);
+
+      // Track completion
+      track("crosswordComplete", {
+        year,
+        division,
+        puzzleSize,
+        timeSeconds,
+        correctCount: puzzle.clues.length,
+        totalCount: puzzle.clues.length,
+      });
+
+      posthog?.capture("crosswordComplete", {
+        year,
+        division,
+        puzzleSize,
+        timeSeconds,
+        correctCount: puzzle.clues.length,
+        totalCount: puzzle.clues.length,
+      });
     }
+  }, [puzzle, startTime, year, division, puzzleSize, posthog, isComplete]);
 
-    // Track completion
-    track("crosswordComplete", {
-      year,
-      division,
-      puzzleSize,
-      timeSeconds,
-      correctCount,
-      totalCount,
-      hintsUsed,
-    });
 
-    posthog?.capture("crosswordComplete", {
-      year,
-      division,
-      puzzleSize,
-      timeSeconds,
-      correctCount,
-      totalCount,
-      hintsUsed,
-    });
-  }, [puzzle, startTime, correctClueIds, hintsUsed, year, division, puzzleSize, posthog]);
+  // Reset puzzle
+  const handleReset = useCallback(() => {
+    if (crosswordRef.current) {
+      crosswordRef.current.reset();
+      setCorrectCount(0);
+    }
+  }, []);
 
   // New puzzle
   const handleNewPuzzle = () => {
     setPhase("setup");
     setPuzzle(null);
+    setLibraryData(null);
   };
 
   // Format time
@@ -499,6 +278,18 @@ export default function CrosswordGame({
     const minutes = Math.floor(seconds / 60);
     const remainingSeconds = seconds % 60;
     return `${minutes}:${remainingSeconds.toString().padStart(2, "0")}`;
+  };
+
+  // Classic newspaper crossword theme
+  const crosswordTheme = {
+    gridBackground: "#000000",
+    cellBackground: "#ffffff",
+    cellBorder: "#000000",
+    textColor: "#000000",
+    numberColor: "#000000",
+    focusBackground: "#a8d8ff",
+    highlightBackground: "#d4e9ff",
+    columnBreakpoint: "9999px", // Always show clues below on this layout
   };
 
   // Render setup phase
@@ -649,155 +440,151 @@ export default function CrosswordGame({
   }
 
   // Render playing phase
-  if (phase === "playing" && puzzle) {
-    const progress = Math.round((correctClueIds.size / puzzle.clues.length) * 100);
-
+  if (phase === "playing" && puzzle && libraryData) {
     return (
-      <div className="min-h-screen p-2 sm:p-4 lg:p-6">
-        {/* Header */}
-        <div className="flex items-center justify-between mb-4 lg:mb-6">
-          <Button variant="ghost" size="sm" onClick={onExit}>
-            <Home className="w-4 h-4 mr-1" />
-            Exit
-          </Button>
-          <div className="text-center">
-            <p className="text-sm text-gray-500 lg:text-base">
-              {correctClueIds.size} / {puzzle.clues.length} words
-            </p>
-            {startTime && (
-              <p className="text-xs text-gray-400 lg:text-sm">
-                {formatTime(Date.now() - startTime)}
+      <div className="min-h-screen bg-stone-100">
+        {/* Newspaper-style header */}
+        <div className="bg-white border-b-2 border-black px-4 py-3">
+          <div className="max-w-4xl mx-auto flex items-center justify-between">
+            <button
+              onClick={onExit}
+              className="font-serif text-sm text-gray-600 hover:text-black transition-colors"
+            >
+              ← Exit
+            </button>
+            <div className="text-center">
+              <h1 className="font-serif text-xl sm:text-2xl font-bold tracking-tight">
+                The Daily Crossword
+              </h1>
+              <p className="font-serif text-xs text-gray-500 italic">
+                Oregon Battle of the Books Edition
               </p>
+            </div>
+            <button
+              onClick={handleNewPuzzle}
+              className="font-serif text-sm text-gray-600 hover:text-black transition-colors"
+            >
+              New Puzzle
+            </button>
+          </div>
+        </div>
+
+        {/* Stats bar */}
+        <div className="bg-white border-b border-gray-300 px-4 py-2">
+          <div className="max-w-4xl mx-auto flex justify-center gap-8 font-serif text-sm">
+            <span className="text-gray-600">
+              <span className="font-semibold text-black">{correctCount}</span> of {puzzle.clues.length} words
+            </span>
+            {startTime && (
+              <span className="text-gray-600">
+                Time: <span className="font-semibold text-black font-mono">{formatTime(Date.now() - startTime)}</span>
+              </span>
             )}
           </div>
-          <Button variant="ghost" size="sm" onClick={handleNewPuzzle}>
-            <RotateCcw className="w-4 h-4 mr-1" />
-            New
-          </Button>
         </div>
 
-        {/* Main content - different layouts for mobile/desktop */}
-        <div className="flex flex-col lg:flex-row lg:items-start gap-4 lg:gap-8">
-          {/* Crossword grid - max 60% width on desktop */}
-          <div className="flex justify-center lg:max-w-[60%] lg:flex-shrink-0 animate-puzzle-reveal">
-            <CrosswordGrid
-              grid={puzzle.grid}
-              rows={puzzle.rows}
-              cols={puzzle.cols}
-              cellNumbers={Object.fromEntries(puzzle.cellNumbers)}
-              clues={puzzle.clues}
-              userAnswers={userAnswers}
-              selectedCell={selectedCell}
-              selectedDirection={selectedDirection}
-              selectedClue={selectedClue}
-              correctCells={correctCells}
-              incorrectCells={incorrectCells}
-              revealedCells={revealedCells}
-              onCellClick={handleCellClick}
-              onLetterInput={handleLetterInput}
-              onBackspace={handleBackspace}
-              onNavigate={handleNavigate}
-              onDirectionToggle={handleDirectionToggle}
-              onNextWord={handleNextWord}
-              onPrevWord={handlePrevWord}
-            />
-          </div>
+        {/* Crossword with custom layout */}
+        <div className="max-w-6xl mx-auto p-4 sm:p-6">
+          <style jsx global>{`
+            /* Classic newspaper crossword styling */
+            .crossword-container {
+              font-family: 'Times New Roman', Georgia, serif !important;
+            }
 
-          {/* Clues - tabs on mobile, side by side on desktop */}
-          <div className="flex-1 lg:flex lg:flex-col">
-            {/* Mobile: tabs */}
-            <div className="lg:hidden">
-              <Tabs value={mobileClueTab} onValueChange={(v) => setMobileClueTab(v as "across" | "down")}>
-                <TabsList className="grid w-full grid-cols-2">
-                  <TabsTrigger value="across">Across</TabsTrigger>
-                  <TabsTrigger value="down">Down</TabsTrigger>
-                </TabsList>
-                <TabsContent value="across" className="h-48 overflow-auto">
-                  <CrosswordClueList
-                    clues={puzzle.clues}
-                    selectedClueId={selectedClue?.id || null}
-                    completedClueIds={completedClueIds}
-                    correctClueIds={correctClueIds}
-                    onClueClick={handleClueClick}
-                    direction="across"
-                  />
-                </TabsContent>
-                <TabsContent value="down" className="h-48 overflow-auto">
-                  <CrosswordClueList
-                    clues={puzzle.clues}
-                    selectedClueId={selectedClue?.id || null}
-                    completedClueIds={completedClueIds}
-                    correctClueIds={correctClueIds}
-                    onClueClick={handleClueClick}
-                    direction="down"
-                  />
-                </TabsContent>
-              </Tabs>
-            </div>
+            /* Grid styling - thicker borders, solid black background */
+            .crossword-container svg {
+              border: 2px solid #000 !important;
+            }
+            .crossword-container svg rect {
+              stroke: #000 !important;
+              stroke-width: 1px !important;
+            }
+            .crossword-container svg text {
+              font-family: 'Times New Roman', Georgia, serif !important;
+              font-weight: 500 !important;
+            }
 
-            {/* Desktop: side by side */}
-            <div className="hidden lg:flex lg:flex-col gap-6 flex-1">
-              <div className="flex gap-6 flex-1">
-                <CrosswordClueList
-                  clues={puzzle.clues}
-                  selectedClueId={selectedClue?.id || null}
-                  completedClueIds={completedClueIds}
-                  correctClueIds={correctClueIds}
-                  onClueClick={handleClueClick}
-                  direction="across"
-                  className="flex-1 min-w-0"
-                />
-                <CrosswordClueList
-                  clues={puzzle.clues}
-                  selectedClueId={selectedClue?.id || null}
-                  completedClueIds={completedClueIds}
-                  correctClueIds={correctClueIds}
-                  onClueClick={handleClueClick}
-                  direction="down"
-                  className="flex-1 min-w-0"
-                />
-              </div>
-              {/* Desktop action buttons - under clues */}
-              <div className="flex gap-4 flex-shrink-0">
-                <Button
-                  onClick={handleCheckAnswers}
-                  variant="outline"
-                  className="flex-1 px-8 py-5 text-base"
-                >
-                  <CheckCircle2 className="w-5 h-5 mr-2" />
-                  Check Answers
-                </Button>
-                <Button
-                  onClick={handleRevealAll}
-                  variant="outline"
-                  className="flex-1 px-8 py-5 text-base"
-                >
-                  <Eye className="w-5 h-5 mr-2" />
-                  Reveal All
-                </Button>
+            /* Clue number styling - keep default positioning, just adjust font */
+            .crossword-container svg text[text-anchor="start"] {
+              font-family: Arial, sans-serif !important;
+              font-weight: 600 !important;
+            }
+
+            /* Section headers */
+            .crossword-container h3 {
+              font-family: 'Times New Roman', Georgia, serif !important;
+              font-weight: bold !important;
+              text-transform: uppercase !important;
+              letter-spacing: 0.15em !important;
+              font-size: 0.8rem !important;
+              border-bottom: 2px solid #000 !important;
+              padding-bottom: 0.5rem !important;
+              margin-bottom: 0.75rem !important;
+            }
+
+            /* Clue text styling */
+            .crossword-container div[class*="clue"],
+            .crossword-container [class*="Clue"] {
+              font-family: 'Times New Roman', Georgia, serif !important;
+              font-size: 0.9rem !important;
+              line-height: 1.4 !important;
+              padding: 0.3rem 0 !important;
+              border-bottom: 1px solid #e5e5e5 !important;
+              cursor: pointer !important;
+            }
+
+            /* Highlighted/selected clue */
+            .crossword-container div[class*="clue"][style*="background"],
+            .crossword-container [class*="Clue"][style*="background"] {
+              background-color: #d4e9ff !important;
+              margin: 0 -0.5rem !important;
+              padding-left: 0.5rem !important;
+              padding-right: 0.5rem !important;
+            }
+          `}</style>
+
+          <CrosswordProvider
+            ref={crosswordRef}
+            data={libraryData}
+            theme={crosswordTheme}
+            onAnswerCorrect={handleAnswerCorrect}
+            onCrosswordCorrect={handleCrosswordComplete}
+            useStorage={false}
+          >
+            <div className="crossword-container">
+              {/* Desktop: side-by-side layout, Mobile: stacked */}
+              <div className="flex flex-col lg:flex-row gap-6">
+                {/* Grid section - fixed size container for the SVG */}
+                <div className="bg-white p-4 sm:p-6 shadow-lg border-2 border-black flex-shrink-0">
+                  <div className="w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] lg:w-[450px] lg:h-[450px]">
+                    <CrosswordGrid />
+                  </div>
+                </div>
+
+                {/* Clues section */}
+                <div className="bg-white p-4 sm:p-6 shadow-lg border border-gray-200 flex-1 min-w-0 max-h-[500px] lg:max-h-[520px] overflow-y-auto">
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-6">
+                    <div>
+                      <DirectionClues direction="across" label="ACROSS" />
+                    </div>
+                    <div>
+                      <DirectionClues direction="down" label="DOWN" />
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
+          </CrosswordProvider>
         </div>
 
-        {/* Mobile action buttons - centered below */}
-        <div className="flex justify-center gap-4 mt-6 lg:hidden">
-          <Button
-            onClick={handleCheckAnswers}
-            variant="outline"
-            className="px-6"
+        {/* Footer with reset */}
+        <div className="flex justify-center pb-8">
+          <button
+            onClick={handleReset}
+            className="font-serif text-sm text-gray-500 hover:text-black transition-colors underline"
           >
-            <CheckCircle2 className="w-4 h-4 mr-2" />
-            Check Answers
-          </Button>
-          <Button
-            onClick={handleRevealAll}
-            variant="outline"
-            className="px-6"
-          >
-            <Eye className="w-4 h-4 mr-2" />
-            Reveal All
-          </Button>
+            Clear all answers
+          </button>
         </div>
       </div>
     );
@@ -806,9 +593,7 @@ export default function CrosswordGame({
   // Render results phase
   if (phase === "results" && puzzle) {
     const timeMs = endTime && startTime ? endTime - startTime : 0;
-    const correctCount = correctClueIds.size;
     const totalCount = puzzle.clues.length;
-    const percentage = Math.round((correctCount / totalCount) * 100);
 
     // Group clues by book
     const cluesByBook = puzzle.clues.reduce((acc, clue) => {
@@ -820,7 +605,7 @@ export default function CrosswordGame({
     }, {} as Record<string, CrosswordClue[]>);
 
     return (
-      <div className="min-h-screen p-4 lg:p-6">
+      <div className="min-h-screen bg-stone-100">
         {showConfetti && (
           <Confetti
             width={width}
@@ -830,114 +615,82 @@ export default function CrosswordGame({
           />
         )}
 
-        {/* Header */}
-        <div className="text-center mb-6">
-          <h1 className="text-2xl lg:text-3xl font-bold">
-            {percentage === 100 && hintsUsed === 0 ? (
-              <span className="text-emerald-600">Perfect!</span>
-            ) : percentage >= 80 ? (
-              <span className="text-emerald-600">Great Job!</span>
-            ) : percentage >= 50 ? (
-              <span className="text-amber-600">Good Effort!</span>
-            ) : (
-              <span className="text-gray-600">Keep Practicing!</span>
-            )}
-          </h1>
-          {/* Stats */}
-          <div className="flex justify-center gap-8 mt-4">
-            <div className="text-center">
-              <p className="text-xl lg:text-2xl font-bold text-emerald-600">
-                {correctCount}/{totalCount}
-              </p>
-              <p className="text-xs text-gray-500">Words</p>
-            </div>
-            <div className="text-center">
-              <p className="text-xl lg:text-2xl font-bold text-blue-600">
-                {formatTime(timeMs)}
-              </p>
-              <p className="text-xs text-gray-500">Time</p>
-            </div>
-            <div className="text-center">
-              <p className="text-xl lg:text-2xl font-bold text-purple-600">{hintsUsed}</p>
-              <p className="text-xs text-gray-500">Hints</p>
+        {/* Newspaper-style header */}
+        <div className="bg-white border-b-2 border-black px-4 py-3">
+          <div className="max-w-4xl mx-auto text-center">
+            <h1 className="font-serif text-xl sm:text-2xl font-bold tracking-tight">
+              The Daily Crossword
+            </h1>
+            <p className="font-serif text-xs text-gray-500 italic">
+              Oregon Battle of the Books Edition
+            </p>
+          </div>
+        </div>
+
+        {/* Completion banner */}
+        <div className="bg-white border-b border-gray-300 px-4 py-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <p className="font-serif text-2xl sm:text-3xl font-bold italic">
+              Puzzle Complete!
+            </p>
+            <div className="flex justify-center gap-8 mt-3 font-serif text-sm">
+              <span className="text-gray-600">
+                Words: <span className="font-semibold text-black">{totalCount}/{totalCount}</span>
+              </span>
+              <span className="text-gray-600">
+                Time: <span className="font-semibold text-black font-mono">{formatTime(timeMs)}</span>
+              </span>
             </div>
           </div>
         </div>
 
-        {/* Main content - grid and answers side by side on desktop */}
-        <div className="flex flex-col lg:flex-row gap-6 lg:gap-8 items-start justify-center">
-          {/* Completed crossword grid - max 60% width on desktop */}
-          <div className="flex justify-center lg:max-w-[60%] lg:flex-shrink-0">
-            <CrosswordGrid
-              grid={puzzle.grid}
-              rows={puzzle.rows}
-              cols={puzzle.cols}
-              cellNumbers={Object.fromEntries(puzzle.cellNumbers)}
-              clues={puzzle.clues}
-              userAnswers={userAnswers}
-              selectedCell={null}
-              selectedDirection="across"
-              selectedClue={null}
-              correctCells={new Set()}
-              incorrectCells={new Set()}
-              revealedCells={revealedCells}
-              onCellClick={() => {}}
-              onLetterInput={() => {}}
-              onBackspace={() => {}}
-              onNavigate={() => {}}
-              onDirectionToggle={() => {}}
-              onNextWord={() => {}}
-              onPrevWord={() => {}}
-            />
-          </div>
-
-          {/* Answers panel */}
-          <Card className="w-full lg:w-80 xl:w-96">
-            <CardHeader className="pb-2">
-              <CardTitle className="text-lg">Answers</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="space-y-4 text-sm max-h-80 lg:max-h-[500px] overflow-y-auto">
-                {Object.entries(cluesByBook).map(([bookTitle, clues]) => (
-                  <div key={bookTitle}>
-                    <p className="font-medium text-gray-800 mb-2">{bookTitle}</p>
-                    <div className="space-y-3 pl-2">
-                      {clues.map((clue) => (
-                        <div key={clue.id}>
-                          <div className="flex gap-2 items-baseline">
-                            <span className="text-gray-500 flex-shrink-0 text-xs">
-                              {clue.number}{clue.direction === "across" ? "A" : "D"}
-                            </span>
-                            <span className="text-emerald-700 font-semibold">
-                              {clue.answer}
-                            </span>
-                          </div>
-                          <p className="text-gray-600 text-xs mt-0.5 pl-6">
-                            {clue.text}
-                          </p>
+        {/* Answers panel */}
+        <div className="max-w-2xl mx-auto p-4 sm:p-6">
+          <div className="bg-white p-6 shadow-md border border-gray-200">
+            <h2 className="font-serif text-lg font-bold uppercase tracking-wider border-b border-black pb-2 mb-4">
+              Solution
+            </h2>
+            <div className="space-y-4 font-serif text-sm max-h-80 lg:max-h-[400px] overflow-y-auto">
+              {Object.entries(cluesByBook).map(([bookTitle, clues]) => (
+                <div key={bookTitle}>
+                  <p className="font-bold text-gray-800 mb-2 italic">{bookTitle}</p>
+                  <div className="space-y-2 pl-3 border-l-2 border-gray-200">
+                    {clues.map((clue) => (
+                      <div key={clue.id}>
+                        <div className="flex gap-2 items-baseline">
+                          <span className="text-gray-500 flex-shrink-0 text-xs font-mono">
+                            {clue.number}{clue.direction === "across" ? "A" : "D"}
+                          </span>
+                          <span className="text-black font-bold uppercase tracking-wide">
+                            {clue.answer}
+                          </span>
                         </div>
-                      ))}
-                    </div>
+                        <p className="text-gray-600 text-xs mt-0.5 pl-6 italic">
+                          {clue.text}
+                        </p>
+                      </div>
+                    ))}
                   </div>
-                ))}
-              </div>
+                </div>
+              ))}
+            </div>
 
-              {/* Actions */}
-              <div className="flex flex-col gap-2 mt-6 pt-4 border-t">
-                <Button
-                  onClick={handleNewPuzzle}
-                  className="w-full bg-amber-500 hover:bg-amber-600"
-                >
-                  <RotateCcw className="w-4 h-4 mr-2" />
-                  New Puzzle
-                </Button>
-                <Button onClick={onExit} variant="outline" className="w-full">
-                  <Home className="w-4 h-4 mr-2" />
-                  Exit
-                </Button>
-              </div>
-            </CardContent>
-          </Card>
+            {/* Actions */}
+            <div className="flex flex-col gap-3 mt-6 pt-4 border-t border-gray-300">
+              <button
+                onClick={handleNewPuzzle}
+                className="w-full py-3 bg-black text-white font-serif font-semibold hover:bg-gray-800 transition-colors"
+              >
+                New Puzzle
+              </button>
+              <button
+                onClick={onExit}
+                className="w-full py-3 border border-black text-black font-serif hover:bg-gray-100 transition-colors"
+              >
+                Exit
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     );
