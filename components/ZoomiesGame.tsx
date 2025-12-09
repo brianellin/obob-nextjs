@@ -494,7 +494,7 @@ export default function ZoomiesGame({
         emoji: "🐾",
         color: "text-cyan-400",
       };
-    return { rating: "STILL A PUPPY", emoji: "🐶", color: "text-gray-400" };
+    return { rating: "OBOB PUPPY", emoji: "🐶", color: "text-gray-400" };
   };
 
   // Share results
