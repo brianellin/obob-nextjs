@@ -61,7 +61,7 @@ function convertToLibraryFormat(puzzle: CrosswordPuzzle): LibraryCrosswordData {
 
   for (const clue of puzzle.clues) {
     const clueData: LibraryClueData = {
-      clue: clue.text,
+      clue: `${clue.text} (${clue.bookTitle})`,
       answer: clue.answer,
       row: clue.startRow,
       col: clue.startCol,
@@ -577,15 +577,6 @@ export default function CrosswordGame({
           </CrosswordProvider>
         </div>
 
-        {/* Footer with reset */}
-        <div className="flex justify-center pb-8">
-          <button
-            onClick={handleReset}
-            className="font-serif text-sm text-gray-500 hover:text-black transition-colors underline"
-          >
-            Clear all answers
-          </button>
-        </div>
       </div>
     );
   }
