@@ -60,11 +60,14 @@ export interface CrosswordGameState {
 }
 
 // Puzzle size configurations
+// targetWords: ideal number of words to place
+// maxGridSize: soft limit on grid dimensions (will accept slightly larger if very dense)
+// minWords: minimum acceptable word count
 export const PUZZLE_SIZE_CONFIG: Record<
   PuzzleSize,
-  { target: number; min: number; label: string }
+  { targetWords: number; maxGridSize: number; minWords: number; label: string }
 > = {
-  small: { target: 8, min: 4, label: "Small (6-8 words)" },
-  medium: { target: 12, min: 6, label: "Medium (10-12 words)" },
-  large: { target: 16, min: 8, label: "Large (14-16 words)" },
+  small: { targetWords: 12, maxGridSize: 18, minWords: 8, label: "Small" },
+  medium: { targetWords: 20, maxGridSize: 24, minWords: 14, label: "Medium" },
+  large: { targetWords: 30, maxGridSize: 30, minWords: 20, label: "Large" },
 };
