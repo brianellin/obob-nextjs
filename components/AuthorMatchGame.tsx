@@ -5,7 +5,7 @@ import { Book } from "@/types";
 import MatchCard, { MatchCardData, MATCH_COLORS } from "./MatchCard";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Clock, RotateCcw, Home, PawPrint, BookOpen } from "lucide-react";
+import { Clock, RotateCcw, Home, PawPrint, Share2 } from "lucide-react";
 import RosieIcon from "./RosieIcon";
 import BookHeartIcon from "./BookHeartIcon";
 import Link from "next/link";
@@ -228,6 +228,35 @@ export default function AuthorMatchGame({ books, year, division }: AuthorMatchGa
   const matchedCount = cards.filter((c) => c.isMatched).length / 2;
   const totalPairs = books.length;
 
+  const shareResults = async () => {
+    const shareText = `📚 Author Match 🐕
+
+⏱️ ${formatTime(elapsedTime)} | 🐾 ${attempts} attempts
+✨ ${totalPairs} pairs matched!
+
+Can you beat my time? https://obob.dog/author-match/${year}/${division}`;
+
+    const shareData = {
+      year,
+      division,
+      bookCount: totalPairs,
+      totalTime: elapsedTime / 1000,
+      attempts,
+      shareMethod: "share" in navigator ? "native" : "clipboard",
+    };
+    trackEvent("authorMatchShare", shareData, posthog);
+
+    if (navigator.share) {
+      try {
+        await navigator.share({ text: shareText });
+      } catch {
+        // User cancelled or error
+      }
+    } else {
+      await navigator.clipboard.writeText(shareText);
+    }
+  };
+
   if (gameComplete) {
     return (
       <div className="flex items-center justify-center min-h-[60vh]">
@@ -258,6 +287,14 @@ export default function AuthorMatchGame({ books, year, division }: AuthorMatchGa
               >
                 <RotateCcw className="w-4 h-4 mr-2" />
                 Play Again
+              </Button>
+              <Button
+                onClick={shareResults}
+                variant="outline"
+                className="w-full"
+              >
+                <Share2 className="w-4 h-4 mr-2" />
+                Share Your Score
               </Button>
               <Link href="/" className="w-full">
                 <Button variant="outline" className="w-full">
