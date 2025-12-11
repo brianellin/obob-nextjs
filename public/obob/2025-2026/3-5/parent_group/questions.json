@@ -2925,7 +2925,7 @@
     },
     {
       "type": "in-which-book",
-      "text": "does a dog get trap in the world aboveground?",
+      "text": "does a dog get trapped in the world above ground?",
       "book_key": "elf-dog-and-owl-head",
       "page": 10
     },
@@ -4433,7 +4433,7 @@
     },
     {
       "type": "content",
-      "text": "Who explains to Clay about the Owl Head people and the People Under the Moiuntain?",
+      "text": "Who explains to Clay about the Owl Head people and the People Under the Mountain?",
       "book_key": "elf-dog-and-owl-head",
       "answer": "DiRossi",
       "page": 228
@@ -11598,7 +11598,7 @@
     },
     {
       "type": "content",
-      "text": "How nany porcupine pins are slammed into Brian's leg?",
+      "text": "How many porcupine pins are slammed into Brian's leg?",
       "book_key": "hatchet",
       "answer": "Eight",
       "page": 76
@@ -12264,7 +12264,7 @@
     },
     {
       "type": "in-which-book",
-      "text": "does a character think thats their father possibly escaped to Cambodia and is building an army?",
+      "text": "does a character think that their father possibly escaped to Cambodia and is building an army?",
       "book_key": "inside-out-and-back-again",
       "page": 240
     },
@@ -12502,7 +12502,7 @@
     },
     {
       "type": "content",
-      "text": "What does Hà'sfamily do to the dried papaya after Hà throws it away?",
+      "text": "What does Hà's family do to the dried papaya after Hà throws it away?",
       "book_key": "inside-out-and-back-again",
       "answer": "Take it out of the trash and soak it in hot water",
       "page": 234
@@ -19134,7 +19134,7 @@
       "type": "content",
       "text": "Who chooses play over eat?",
       "book_key": "odder",
-      "answer": "Kairi",
+      "answer": "Odder",
       "page": 14
     },
     {
@@ -21439,7 +21439,7 @@
     },
     {
       "type": "in-which-book",
-      "text": "is someone's breakfast bowl taken away in order to get her out ot the house faster?",
+      "text": "is someone's breakfast bowl taken away in order to get her out of the house faster?",
       "book_key": "the-secret-garden-on-81st-street",
       "page": 52
     },
@@ -21727,7 +21727,7 @@
     },
     {
       "type": "in-which-book",
-      "text": "does a character have a keyrink with an owl?",
+      "text": "does a character have a keyring with an owl?",
       "book_key": "the-secret-garden-on-81st-street",
       "page": 12
     },
