@@ -8,7 +8,7 @@ import {
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { User, Users, Trophy, Grid2X2, Sparkles } from "lucide-react";
+import { User, Users, Trophy, Grid2X2, Sparkles, Dog } from "lucide-react";
 import Link from "next/link";
 
 type ModeSelectionProps = {
@@ -108,8 +108,38 @@ export default function ModeSelection({ year, division }: ModeSelectionProps) {
 
       {/* Games Section */}
       <div>
-        <h2 className="text-2xl font-bold mb-4 text-center">Games</h2>
+        <h2 className="text-2xl font-bold mb-4 text-center">OBOB Games</h2>
         <div className="space-y-4">
+          <Card>
+            <CardHeader>
+              <div className="flex items-center gap-2">
+                <CardTitle className="italic">Zoomies</CardTitle>
+                <Badge className="bg-teal-500 hover:bg-teal-500 text-white">
+                  New!
+                </Badge>
+              </div>
+              <CardDescription>
+                Super fast-paced &quot;in which book&quot; questions
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <p>
+                15 seconds per question. Build streaks, earn combos, and compete
+                for top dog!
+              </p>
+            </CardContent>
+            <CardFooter>
+              <Link
+                href={`/zoomies/${year}/${division}`}
+                passHref
+                className="w-full"
+              >
+                <Button className="w-full bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white transition-colors">
+                  <Dog className="mr-2 h-4 w-4" /> Play Zoomies
+                </Button>
+              </Link>
+            </CardFooter>
+          </Card>
           <Card>
             <CardHeader>
               <div className="flex items-center gap-2">

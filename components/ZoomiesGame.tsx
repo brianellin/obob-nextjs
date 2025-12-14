@@ -214,15 +214,25 @@ export default function ZoomiesGame({
   const handleAnswerRef = useRef<(selectedBook: Book | null) => void>(() => {});
 
   // Audio refs (sounds are optional - will fail silently if not available)
-  const correctSound = useRef<HTMLAudioElement | null>(null);
-  const wrongSound = useRef<HTMLAudioElement | null>(null);
-  const streakSound = useRef<HTMLAudioElement | null>(null);
+  const correctSounds = useRef<HTMLAudioElement[]>([]);
+  const wrongSounds = useRef<HTMLAudioElement[]>([]);
+  const streakSounds = useRef<HTMLAudioElement[]>([]);
+  const bgMusicTracks = useRef<HTMLAudioElement[]>([]);
+  const [currentBgTrack, setCurrentBgTrack] = useState<number>(0);
 
-  // Play sound helper that fails silently
-  const playSound = (audioRef: React.RefObject<HTMLAudioElement | null>) => {
-    if (soundEnabled && audioRef.current) {
-      audioRef.current.currentTime = 0;
-      audioRef.current.play().catch(() => {
+  // Sound counts
+  const CORRECT_SOUND_COUNT = 8;
+  const WRONG_SOUND_COUNT = 7;
+  const STREAK_SOUND_COUNT = 5;
+  const BG_TRACK_COUNT = 5;
+
+  // Play a random sound from an array
+  const playRandomSound = (sounds: HTMLAudioElement[]) => {
+    if (!soundEnabled || sounds.length === 0) return;
+    const sound = sounds[Math.floor(Math.random() * sounds.length)];
+    if (sound) {
+      sound.currentTime = 0;
+      sound.play().catch(() => {
         // Sound not available - fail silently
       });
     }
@@ -233,7 +243,10 @@ export default function ZoomiesGame({
 
   // Calculate book multiplier: fewer books = bigger penalty (log-ish curve)
   // 4 books = 0.25x, 8 books ≈ 0.60x, 12 books ≈ 0.81x, 16 books = 1.0x
-  const calculateBookMultiplier = (selectedCount: number, totalCount: number) => {
+  const calculateBookMultiplier = (
+    selectedCount: number,
+    totalCount: number
+  ) => {
     if (totalCount <= 4) return 1; // Edge case: if only 4 books total, no penalty
     // Curve from 0.25x (min books) to 1.0x (all books)
     return 0.25 + 0.75 * Math.pow((selectedCount - 4) / (totalCount - 4), 0.7);
@@ -242,7 +255,8 @@ export default function ZoomiesGame({
   // Fetch questions when game starts
   const startGame = async (customBooks?: Book[]) => {
     const booksToUse = customBooks || selectedBooks;
-    const isCustom = customBooks !== undefined && customBooks.length < books.length;
+    const isCustom =
+      customBooks !== undefined && customBooks.length < books.length;
     const multiplier = calculateBookMultiplier(booksToUse.length, books.length);
 
     setLoading(true);
@@ -275,6 +289,7 @@ export default function ZoomiesGame({
       setQuestionStartTime(Date.now());
       setTimeLeft(TIME_PER_QUESTION);
       setComboMultiplier(1);
+      window.scrollTo(0, 0);
 
       // Track game start
       track("zoomiesStarted", {
@@ -320,6 +335,38 @@ export default function ZoomiesGame({
     };
   }, [phase, currentIndex]);
 
+  // Background music effect
+  useEffect(() => {
+    const tracks = bgMusicTracks.current;
+    if (tracks.length === 0) return;
+
+    if (phase === "playing" && soundEnabled) {
+      // Pick a random track when starting
+      const trackIndex = Math.floor(Math.random() * tracks.length);
+      setCurrentBgTrack(trackIndex);
+      const track = tracks[trackIndex];
+      if (track) {
+        track.volume = 0.3;
+        track.loop = true;
+        track.play().catch(() => {
+          // Autoplay blocked - fail silently
+        });
+      }
+    } else {
+      // Stop all tracks
+      tracks.forEach((track) => {
+        track.pause();
+        track.currentTime = 0;
+      });
+    }
+
+    return () => {
+      tracks.forEach((track) => {
+        track.pause();
+      });
+    };
+  }, [phase, soundEnabled]);
+
   // Get random wrong books for answer options (only from selected books)
   const getAnswerOptions = useCallback(() => {
     if (!questions[currentIndex]) return [];
@@ -362,7 +409,9 @@ export default function ZoomiesGame({
         0,
         Math.floor((TIME_PER_QUESTION - responseTime) / 100)
       );
-      pointsEarned = Math.round((100 + speedBonus) * comboMultiplier * bookMultiplier);
+      pointsEarned = Math.round(
+        (100 + speedBonus) * comboMultiplier * bookMultiplier
+      );
 
       const newStreak = streak + 1;
       setStreak(newStreak);
@@ -382,11 +431,11 @@ export default function ZoomiesGame({
       if (streakMsg) {
         setShowStreakPopup(`${streakMsg.emoji} ${streakMsg.message}`);
         setTimeout(() => setShowStreakPopup(null), 1500);
-        playSound(streakSound);
+        playRandomSound(streakSounds.current);
       }
 
       // Play sound
-      playSound(correctSound);
+      playRandomSound(correctSounds.current);
 
       // Show reaction
       setReactionType("correct");
@@ -397,7 +446,7 @@ export default function ZoomiesGame({
       setStreak(0);
       setComboMultiplier(1);
 
-      playSound(wrongSound);
+      playRandomSound(wrongSounds.current);
 
       setReactionType("wrong");
       setShowReaction(
@@ -541,7 +590,7 @@ Can you catch me? https://obob.dog/zoomies/${year}/${division}?utm_source=share`
     return (
       <div className="min-h-screen bg-gradient-to-b from-white to-cyan-50 flex flex-col items-center justify-center p-4">
         <div className="text-center max-w-md">
-          <div className="text-7xl mb-4 animate-bounce">🐶</div>
+          <div className="text-6xl mb-4 animate-bounce">🐶</div>
           <h1 className="text-5xl italic font-black mb-2 tracking-tight bg-gradient-to-r from-teal-500 to-cyan-500 bg-clip-text text-transparent">
             Zoomies!
           </h1>
@@ -603,11 +652,6 @@ Can you catch me? https://obob.dog/zoomies/${year}/${division}?utm_source=share`
             Back to Modes
           </Button>
         </div>
-
-        {/* Audio elements */}
-        <audio ref={correctSound} src="/sounds/correct.mp3" preload="auto" />
-        <audio ref={wrongSound} src="/sounds/wrong.mp3" preload="auto" />
-        <audio ref={streakSound} src="/sounds/streak.mp3" preload="auto" />
       </div>
     );
   }
@@ -654,14 +698,22 @@ Can you catch me? https://obob.dog/zoomies/${year}/${division}?utm_source=share`
               Back
             </button>
             <button
-              onClick={bookSelectionSet.size === books.length ? clearAllBooks : selectAllBooks}
+              onClick={
+                bookSelectionSet.size === books.length
+                  ? clearAllBooks
+                  : selectAllBooks
+              }
               className="text-sm text-teal-600 hover:text-teal-700"
             >
-              {bookSelectionSet.size === books.length ? "Clear all" : "Select all"}
+              {bookSelectionSet.size === books.length
+                ? "Clear all"
+                : "Select all"}
             </button>
           </div>
 
-          <h2 className="text-2xl font-bold text-center mb-2">Choose Your Books</h2>
+          <h2 className="text-2xl font-bold text-center mb-2">
+            Choose Your Books
+          </h2>
           <p className="text-gray-500 text-center mb-6">
             Select at least 4 books to play
           </p>
@@ -702,18 +754,23 @@ Can you catch me? https://obob.dog/zoomies/${year}/${division}?utm_source=share`
             <p className="text-sm text-gray-600 mb-2">
               {bookSelectionSet.size} of {books.length} books selected
               {bookSelectionSet.size < 4 && (
-                <span className="text-red-500 ml-2">
-                  (need at least 4)
-                </span>
+                <span className="text-red-500 ml-2">(need at least 4)</span>
               )}
             </p>
             {bookSelectionSet.size >= 4 && (
-              <p className={`text-sm font-semibold mb-3 ${
-                bookSelectionSet.size === books.length
-                  ? "text-teal-600"
-                  : "text-orange-500"
-              }`}>
-                Score multiplier: {calculateBookMultiplier(bookSelectionSet.size, books.length).toFixed(2)}x
+              <p
+                className={`text-sm font-semibold mb-3 ${
+                  bookSelectionSet.size === books.length
+                    ? "text-teal-600"
+                    : "text-orange-500"
+                }`}
+              >
+                Score multiplier:{" "}
+                {calculateBookMultiplier(
+                  bookSelectionSet.size,
+                  books.length
+                ).toFixed(2)}
+                x
               </p>
             )}
             <Button
@@ -803,16 +860,17 @@ Can you catch me? https://obob.dog/zoomies/${year}/${division}?utm_source=share`
               <RotateCcw className="w-5 h-5 mr-2" />
               Play Again
             </Button>
-          </Card>
 
-          <Button
-            onClick={shareResults}
-            variant="outline"
-            className="w-full py-4 border-2 border-cyan-300 text-cyan-600 hover:bg-cyan-50 rounded-xl font-bold"
-          >
-            <Share2 className="w-5 h-5 mr-2" />
-            Share Your Score
-          </Button>
+            <p className="text-sm text-gray-500 mt-3 mb-2">Want to challenge a friend?</p>
+            <Button
+              onClick={shareResults}
+              variant="outline"
+              className="w-full py-4 border-2 border-cyan-300 text-cyan-600 hover:bg-cyan-50 rounded-xl font-bold"
+            >
+              <Share2 className="w-5 h-5 mr-2" />
+              Share Your Score
+            </Button>
+          </Card>
         </div>
       </div>
     );
@@ -823,45 +881,48 @@ Can you catch me? https://obob.dog/zoomies/${year}/${division}?utm_source=share`
   const timerPercentage = (timeLeft / TIME_PER_QUESTION) * 100;
 
   return (
-    <div className="h-dvh bg-gradient-to-b from-white to-cyan-50 flex flex-col p-2 sm:p-4 overflow-hidden">
-      {/* Header - Progress and Score */}
-      <div className="flex justify-between items-center mb-2 text-base font-medium text-gray-700">
-        <div className="flex items-center gap-2">
-          <span className="text-gray-500">
-            {currentIndex + 1} / {questions.length}
-          </span>
-          {/* Streak indicator */}
-          {streak > 0 && (
-            <div className="flex items-center gap-1 bg-orange-500 text-white px-2 py-1 rounded-full animate-pulse">
-              <Flame className="w-4 h-4" />
-              <span className="font-bold text-sm">{streak}</span>
-            </div>
-          )}
-          {/* Combo multiplier */}
-          {comboMultiplier > 1 && (
-            <div className="bg-yellow-400 text-yellow-900 px-2 py-1 rounded-full font-black text-sm animate-bounce">
-              {comboMultiplier}x
-            </div>
-          )}
+    <div className="h-dvh bg-gradient-to-b from-white to-cyan-50 flex flex-col p-2 sm:p-4 overflow-auto">
+      {/* Sticky header with progress and timer */}
+      <div className="sticky top-0 z-10 bg-gradient-to-b from-white via-white to-transparent pb-6 -mx-2 px-2 sm:-mx-4 sm:px-4">
+        {/* Header - Progress and Score */}
+        <div className="flex justify-between items-center mb-2 text-base font-medium text-gray-700">
+          <div className="flex items-center gap-2">
+            <span className="text-gray-500">
+              {currentIndex + 1} / {questions.length}
+            </span>
+            {/* Streak indicator */}
+            {streak > 0 && (
+              <div className="flex items-center gap-1 bg-orange-500 text-white px-2 py-1 rounded-full animate-pulse">
+                <Flame className="w-4 h-4" />
+                <span className="font-bold text-sm">{streak}</span>
+              </div>
+            )}
+            {/* Combo multiplier */}
+            {comboMultiplier > 1 && (
+              <div className="bg-yellow-400 text-yellow-900 px-2 py-1 rounded-full font-black text-sm animate-bounce">
+                {comboMultiplier}x
+              </div>
+            )}
+          </div>
+          <div className="flex items-center gap-2 text-teal-600">
+            <Trophy className="w-5 h-5" />
+            <span className="font-bold">{score.toLocaleString()}</span>
+          </div>
         </div>
-        <div className="flex items-center gap-2 text-teal-600">
-          <Trophy className="w-5 h-5" />
-          <span className="font-bold">{score.toLocaleString()}</span>
-        </div>
-      </div>
 
-      {/* Timer bar */}
-      <div className="w-full h-2 bg-gray-200 rounded-full mb-6 overflow-hidden">
-        <div
-          className={`h-full transition-all duration-100 rounded-full ${
-            timerPercentage > 50
-              ? "bg-emerald-400"
-              : timerPercentage > 25
-              ? "bg-yellow-400"
-              : "bg-red-400"
-          }`}
-          style={{ width: `${timerPercentage}%` }}
-        />
+        {/* Timer bar */}
+        <div className="w-full h-2 bg-gray-200 rounded-full overflow-hidden">
+          <div
+            className={`h-full transition-all duration-100 rounded-full ${
+              timerPercentage > 50
+                ? "bg-emerald-400"
+                : timerPercentage > 25
+                ? "bg-yellow-400"
+                : "bg-red-400"
+            }`}
+            style={{ width: `${timerPercentage}%` }}
+          />
+        </div>
       </div>
 
       {/* Question card */}
@@ -941,12 +1002,70 @@ Can you catch me? https://obob.dog/zoomies/${year}/${division}?utm_source=share`
             ))}
           </div>
         </Card>
+
+        {/* Sound toggle */}
+        <button
+          onClick={() => setSoundEnabled(!soundEnabled)}
+          className="mt-4 flex items-center gap-2 text-gray-400 hover:text-gray-600 transition-colors mx-auto"
+        >
+          {soundEnabled ? (
+            <Volume2 className="w-5 h-5" />
+          ) : (
+            <VolumeX className="w-5 h-5" />
+          )}
+          <span className="text-sm">{soundEnabled ? "Sound on" : "Sound off"}</span>
+        </button>
       </div>
 
       {/* Audio elements */}
-      <audio ref={correctSound} src="/sounds/correct.mp3" preload="auto" />
-      <audio ref={wrongSound} src="/sounds/wrong.mp3" preload="auto" />
-      <audio ref={streakSound} src="/sounds/streak.mp3" preload="auto" />
+      {Array.from({ length: CORRECT_SOUND_COUNT }, (_, i) => (
+        <audio
+          key={`correct${i + 1}`}
+          ref={(el) => {
+            if (el && !correctSounds.current.includes(el)) {
+              correctSounds.current[i] = el;
+            }
+          }}
+          src={`/sounds/correct${i + 1}.ogg`}
+          preload="auto"
+        />
+      ))}
+      {Array.from({ length: WRONG_SOUND_COUNT }, (_, i) => (
+        <audio
+          key={`wrong${i + 1}`}
+          ref={(el) => {
+            if (el && !wrongSounds.current.includes(el)) {
+              wrongSounds.current[i] = el;
+            }
+          }}
+          src={`/sounds/wrong${i + 1}.ogg`}
+          preload="auto"
+        />
+      ))}
+      {Array.from({ length: STREAK_SOUND_COUNT }, (_, i) => (
+        <audio
+          key={`streak${i + 1}`}
+          ref={(el) => {
+            if (el && !streakSounds.current.includes(el)) {
+              streakSounds.current[i] = el;
+            }
+          }}
+          src={`/sounds/streak${i + 1}.ogg`}
+          preload="auto"
+        />
+      ))}
+      {Array.from({ length: BG_TRACK_COUNT }, (_, i) => (
+        <audio
+          key={`bg${i + 1}`}
+          ref={(el) => {
+            if (el && !bgMusicTracks.current.includes(el)) {
+              bgMusicTracks.current[i] = el;
+            }
+          }}
+          src={`/sounds/bg${i + 1}.ogg`}
+          preload="auto"
+        />
+      ))}
     </div>
   );
 }
