@@ -1389,7 +1389,7 @@
     },
     {
       "type": "content",
-      "text": "What country is Aru's father's family from?",
+      "text": "What country is Mini's father's family from?",
       "book_key": "aru-shah-and-the-end-of-time",
       "answer": "The Phillippines",
       "page": 155
@@ -3683,7 +3683,7 @@
     },
     {
       "type": "in-which-book",
-      "text": "does a character memorize a map that showed the twists and turns of a series of tunnels?",
+      "text": "does a character memorize a map that showed the twists and turns of a series of gray stone tunnels?",
       "book_key": "dealing-with-dragons",
       "page": 150
     },
@@ -4565,12 +4565,6 @@
       "text": "do ancestral portraits seem to watch you?",
       "book_key": "a-dictionary-of-scoundrels",
       "page": 138
-    },
-    {
-      "type": "in-which-book",
-      "text": "does Aunt Prudence notice muddy footprints?",
-      "book_key": "a-dictionary-of-scoundrels",
-      "page": 120
     },
     {
       "type": "in-which-book",
@@ -6293,7 +6287,7 @@
     },
     {
       "type": "in-which-book",
-      "text": "do characters ride in a cable car?",
+      "text": "do characters ride in cable cars that fit up to eight people per car?",
       "book_key": "ellen-outside-the-lines",
       "page": 245
     },
@@ -14453,7 +14447,7 @@
       "type": "content",
       "text": "What nickname is given to Samira in third grade?",
       "book_key": "tagging-freedom",
-      "answer": "Samir the weird",
+      "answer": "Samira-the-weirda",
       "page": 31
     },
     {
@@ -14849,7 +14843,7 @@
     },
     {
       "type": "content",
-      "text": "What two hashtags about Kareem did Cat share all over Social Media?",
+      "text": "Two part question: Name the two hastags Sam shows Ellie that Cat is sharing about Kareem after Kareem graffitis the school?",
       "book_key": "tagging-freedom",
       "answer": "#ExpelKareemNow and #HaddadMustGo",
       "page": 231
@@ -17353,9 +17347,9 @@
     },
     {
       "type": "content",
-      "text": "What does Dad love?",
+      "text": "What type of list does Ruth's dad want to go over at the dinner table before they move?",
       "book_key": "uprooted",
-      "answer": "Lists",
+      "answer": "A Pros and Cons list.",
       "page": 25
     },
     {
