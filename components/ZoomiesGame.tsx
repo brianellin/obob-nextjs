@@ -199,7 +199,13 @@ export default function ZoomiesGame({
     null
   );
   const [showStreakPopup, setShowStreakPopup] = useState<string | null>(null);
-  const [soundEnabled, setSoundEnabled] = useState(true);
+  const [soundEnabled, setSoundEnabled] = useState(() => {
+    if (typeof window !== "undefined") {
+      const saved = localStorage.getItem("zoomies-sound-enabled");
+      return saved !== null ? saved === "true" : true;
+    }
+    return true;
+  });
   const [showConfetti, setShowConfetti] = useState(false);
   const [comboMultiplier, setComboMultiplier] = useState(1);
   const [selectedBooks, setSelectedBooks] = useState<Book[]>(books);
@@ -335,22 +341,33 @@ export default function ZoomiesGame({
     };
   }, [phase, currentIndex]);
 
-  // Background music effect
+  // Persist sound preference to localStorage
+  useEffect(() => {
+    localStorage.setItem("zoomies-sound-enabled", String(soundEnabled));
+  }, [soundEnabled]);
+
+  // Background music effect - plays during intro, book-selection, and playing phases
   useEffect(() => {
     const tracks = bgMusicTracks.current;
     if (tracks.length === 0) return;
 
-    if (phase === "playing" && soundEnabled) {
-      // Pick a random track when starting
-      const trackIndex = Math.floor(Math.random() * tracks.length);
-      setCurrentBgTrack(trackIndex);
-      const track = tracks[trackIndex];
-      if (track) {
-        track.volume = 0.3;
-        track.loop = true;
-        track.play().catch(() => {
-          // Autoplay blocked - fail silently
-        });
+    const shouldPlay = (phase === "intro" || phase === "book-selection" || phase === "playing") && soundEnabled;
+
+    if (shouldPlay) {
+      // Check if any track is already playing
+      const isAlreadyPlaying = tracks.some((track) => !track.paused);
+      if (!isAlreadyPlaying) {
+        // Pick a random track when starting
+        const trackIndex = Math.floor(Math.random() * tracks.length);
+        setCurrentBgTrack(trackIndex);
+        const track = tracks[trackIndex];
+        if (track) {
+          track.volume = 0.3;
+          track.loop = true;
+          track.play().catch(() => {
+            // Autoplay blocked - fail silently
+          });
+        }
       }
     } else {
       // Stop all tracks
@@ -652,6 +669,20 @@ Can you catch me? https://obob.dog/zoomies/${year}/${division}?utm_source=share`
             Back to Modes
           </Button>
         </div>
+
+        {/* Background music for intro */}
+        {Array.from({ length: BG_TRACK_COUNT }, (_, i) => (
+          <audio
+            key={`bg${i + 1}`}
+            ref={(el) => {
+              if (el && !bgMusicTracks.current.includes(el)) {
+                bgMusicTracks.current[i] = el;
+              }
+            }}
+            src={`/sounds/bg${i + 1}.ogg`}
+            preload="auto"
+          />
+        ))}
       </div>
     );
   }
@@ -782,6 +813,20 @@ Can you catch me? https://obob.dog/zoomies/${year}/${division}?utm_source=share`
             </Button>
           </div>
         </div>
+
+        {/* Background music for book selection */}
+        {Array.from({ length: BG_TRACK_COUNT }, (_, i) => (
+          <audio
+            key={`bg${i + 1}`}
+            ref={(el) => {
+              if (el && !bgMusicTracks.current.includes(el)) {
+                bgMusicTracks.current[i] = el;
+              }
+            }}
+            src={`/sounds/bg${i + 1}.ogg`}
+            preload="auto"
+          />
+        ))}
       </div>
     );
   }
