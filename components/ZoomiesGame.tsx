@@ -223,14 +223,11 @@ export default function ZoomiesGame({
   const correctSounds = useRef<HTMLAudioElement[]>([]);
   const wrongSounds = useRef<HTMLAudioElement[]>([]);
   const streakSounds = useRef<HTMLAudioElement[]>([]);
-  const bgMusicTracks = useRef<HTMLAudioElement[]>([]);
-  const [currentBgTrack, setCurrentBgTrack] = useState<number>(0);
 
   // Sound counts
   const CORRECT_SOUND_COUNT = 8;
   const WRONG_SOUND_COUNT = 7;
   const STREAK_SOUND_COUNT = 5;
-  const BG_TRACK_COUNT = 5;
 
   // Play a random sound from an array
   const playRandomSound = (sounds: HTMLAudioElement[]) => {
@@ -345,44 +342,6 @@ export default function ZoomiesGame({
   useEffect(() => {
     localStorage.setItem("zoomies-sound-enabled", String(soundEnabled));
   }, [soundEnabled]);
-
-  // Background music effect - plays during intro, book-selection, and playing phases
-  useEffect(() => {
-    const tracks = bgMusicTracks.current;
-    if (tracks.length === 0) return;
-
-    const shouldPlay = (phase === "intro" || phase === "book-selection" || phase === "playing") && soundEnabled;
-
-    if (shouldPlay) {
-      // Check if any track is already playing
-      const isAlreadyPlaying = tracks.some((track) => !track.paused);
-      if (!isAlreadyPlaying) {
-        // Pick a random track when starting
-        const trackIndex = Math.floor(Math.random() * tracks.length);
-        setCurrentBgTrack(trackIndex);
-        const track = tracks[trackIndex];
-        if (track) {
-          track.volume = 0.3;
-          track.loop = true;
-          track.play().catch(() => {
-            // Autoplay blocked - fail silently
-          });
-        }
-      }
-    } else {
-      // Stop all tracks
-      tracks.forEach((track) => {
-        track.pause();
-        track.currentTime = 0;
-      });
-    }
-
-    return () => {
-      tracks.forEach((track) => {
-        track.pause();
-      });
-    };
-  }, [phase, soundEnabled]);
 
   // Get random wrong books for answer options (only from selected books)
   const getAnswerOptions = useCallback(() => {
@@ -669,20 +628,6 @@ Can you catch me? https://obob.dog/zoomies/${year}/${division}?utm_source=share`
             Back to Modes
           </Button>
         </div>
-
-        {/* Background music for intro */}
-        {Array.from({ length: BG_TRACK_COUNT }, (_, i) => (
-          <audio
-            key={`bg${i + 1}`}
-            ref={(el) => {
-              if (el && !bgMusicTracks.current.includes(el)) {
-                bgMusicTracks.current[i] = el;
-              }
-            }}
-            src={`/sounds/bg${i + 1}.ogg`}
-            preload="auto"
-          />
-        ))}
       </div>
     );
   }
@@ -813,20 +758,6 @@ Can you catch me? https://obob.dog/zoomies/${year}/${division}?utm_source=share`
             </Button>
           </div>
         </div>
-
-        {/* Background music for book selection */}
-        {Array.from({ length: BG_TRACK_COUNT }, (_, i) => (
-          <audio
-            key={`bg${i + 1}`}
-            ref={(el) => {
-              if (el && !bgMusicTracks.current.includes(el)) {
-                bgMusicTracks.current[i] = el;
-              }
-            }}
-            src={`/sounds/bg${i + 1}.ogg`}
-            preload="auto"
-          />
-        ))}
       </div>
     );
   }
@@ -1096,18 +1027,6 @@ Can you catch me? https://obob.dog/zoomies/${year}/${division}?utm_source=share`
             }
           }}
           src={`/sounds/streak${i + 1}.ogg`}
-          preload="auto"
-        />
-      ))}
-      {Array.from({ length: BG_TRACK_COUNT }, (_, i) => (
-        <audio
-          key={`bg${i + 1}`}
-          ref={(el) => {
-            if (el && !bgMusicTracks.current.includes(el)) {
-              bgMusicTracks.current[i] = el;
-            }
-          }}
-          src={`/sounds/bg${i + 1}.ogg`}
           preload="auto"
         />
       ))}
