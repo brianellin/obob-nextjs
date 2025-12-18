@@ -17,7 +17,6 @@ import { track } from "@vercel/analytics";
 import { usePostHog } from "posthog-js/react";
 import Confetti from "react-confetti";
 import { useWindowSize } from "react-use";
-import { WavyUnderline } from "./WavyUnderline";
 import {
   CrosswordProvider,
   CrosswordProviderImperative,
@@ -347,10 +346,8 @@ export default function CrosswordGame({
       <div className="min-h-screen pb-20 md:pb-0 relative">
         <Card className="w-full max-w-6xl mx-auto border-none shadow-none">
           <CardHeader>
-            <CardTitle className="text-2xl font-bold text-center">
-              <WavyUnderline style={0} thickness={4} color="text-amber-400">
-                Content Crossword
-              </WavyUnderline>
+            <CardTitle className="text-2xl font-bold text-center font-serif">
+              Content Crossword
             </CardTitle>
             <p className="text-center text-gray-600 mt-2">
               Solve crossword puzzles using content questions from your books
@@ -375,7 +372,7 @@ export default function CrosswordGame({
                   <div
                     className={`relative w-20 h-28 cursor-pointer transition-all duration-200 rounded-md overflow-hidden ${
                       selectedBookKeys.includes(key)
-                        ? "ring-4 ring-amber-500"
+                        ? "ring-4 ring-gray-900"
                         : ""
                     }`}
                     onClick={() => handleToggleBook(key)}
@@ -394,7 +391,7 @@ export default function CrosswordGame({
                       </p>
                     </div>
                     {selectedBookKeys.includes(key) && (
-                      <div className="absolute inset-0 bg-amber-500 bg-opacity-30 flex items-center justify-center">
+                      <div className="absolute inset-0 bg-gray-900 bg-opacity-40 flex items-center justify-center">
                         <PawPrint className="text-white w-6 h-6" />
                       </div>
                     )}
@@ -407,7 +404,7 @@ export default function CrosswordGame({
             </div>
 
             {/* Puzzle size selection */}
-            <div className="bg-amber-50 p-4 rounded-md mt-6 md:mt-8 md:max-w-lg md:mx-auto">
+            <div className="bg-stone-100 border border-gray-200 p-4 rounded-md mt-6 md:mt-8 md:max-w-lg md:mx-auto">
               <div className="flex flex-col items-center space-y-4">
                 <div className="flex flex-row items-center justify-between w-full">
                   <p className="text-sm font-bold">Puzzle size</p>
@@ -422,21 +419,21 @@ export default function CrosswordGame({
                     <ToggleGroupItem
                       value="small"
                       aria-label="Small puzzle"
-                      className="data-[state=on]:bg-amber-500 data-[state=on]:text-white"
+                      className="data-[state=on]:bg-gray-900 data-[state=on]:text-white"
                     >
                       Small
                     </ToggleGroupItem>
                     <ToggleGroupItem
                       value="medium"
                       aria-label="Medium puzzle"
-                      className="data-[state=on]:bg-amber-500 data-[state=on]:text-white"
+                      className="data-[state=on]:bg-gray-900 data-[state=on]:text-white"
                     >
                       Medium
                     </ToggleGroupItem>
                     <ToggleGroupItem
                       value="large"
                       aria-label="Large puzzle"
-                      className="data-[state=on]:bg-amber-500 data-[state=on]:text-white"
+                      className="data-[state=on]:bg-gray-900 data-[state=on]:text-white"
                     >
                       Large
                     </ToggleGroupItem>
@@ -463,7 +460,7 @@ export default function CrosswordGame({
           <Button
             onClick={handleGeneratePuzzle}
             disabled={loading || selectedBookKeys.length < 2}
-            className="w-auto px-8 py-6 text-lg font-semibold group bg-amber-500 hover:bg-amber-600 transition-colors"
+            className="w-auto px-8 py-6 text-lg font-semibold group bg-gray-900 hover:bg-gray-800 transition-colors"
           >
             {loading ? (
               <>
@@ -739,7 +736,7 @@ export default function CrosswordGame({
   // Loading state
   return (
     <div className="min-h-screen flex items-center justify-center">
-      <Loader2 className="w-8 h-8 animate-spin text-amber-500" />
+      <Loader2 className="w-8 h-8 animate-spin text-gray-900" />
     </div>
   );
 }

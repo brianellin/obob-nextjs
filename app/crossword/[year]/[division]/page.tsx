@@ -44,7 +44,7 @@ function CrosswordContent() {
   if (loading) {
     return (
       <div className="h-screen flex items-center justify-center">
-        <Loader2 className="h-10 w-10 animate-spin text-amber-500" />
+        <Loader2 className="h-10 w-10 animate-spin text-gray-900" />
       </div>
     );
   }
@@ -64,7 +64,7 @@ export default function CrosswordPage() {
     <Suspense
       fallback={
         <div className="h-screen flex items-center justify-center">
-          <Loader2 className="h-10 w-10 animate-spin text-amber-500" />
+          <Loader2 className="h-10 w-10 animate-spin text-gray-900" />
         </div>
       }
     >
