@@ -10010,7 +10010,7 @@
     },
     {
       "type": "in-which-book",
-      "text": "does someone plow a small dirst bike into a parked car?",
+      "text": "does someone plow a small dirt bike into a parked car?",
       "book_key": "hatchet",
       "page": 29
     },
@@ -11679,13 +11679,6 @@
       "book_key": "hatchet",
       "answer": "Salmon",
       "page": 127
-    },
-    {
-      "type": "content",
-      "text": "What are some of the first days Brian had?",
-      "book_key": "hatchet",
-      "answer": "First Arrow day, First Rabbit day",
-      "page": 138
     },
     {
       "type": "content",
@@ -15670,7 +15663,7 @@
     },
     {
       "type": "content",
-      "text": "What type of crate does Mr. Gregorian fill with books for the little free libjrary?",
+      "text": "What type of crate does Mr. Gregorian fill with books for the little free library?",
       "book_key": "the-lost-library",
       "answer": "An egg crate",
       "page": 64
@@ -19083,14 +19076,14 @@
     },
     {
       "type": "content",
-      "text": "What is Otter #156 age?",
+      "text": "How old is Otter #156?",
       "book_key": "odder",
-      "answer": "3yrs old",
+      "answer": "3 years old",
       "page": 9
     },
     {
       "type": "content",
-      "text": "What does friends call Otter #156?",
+      "text": "What do friends call Otter #156?",
       "book_key": "odder",
       "answer": "Odder",
       "page": 10
@@ -20840,7 +20833,7 @@
     },
     {
       "type": "content",
-      "text": "Which of their siblings caught butternut sneaking out of the borough?",
+      "text": "Which of their siblings caught butternut sneaking out of the burrow?",
       "book_key": "the-remarkable-rescue-at-milkweed-meadow",
       "answer": "Kale",
       "page": 108
@@ -24773,7 +24766,7 @@
     },
     {
       "type": "content",
-      "text": "the gaurds of the priosn move Emily from place to place by attaching her handcuff to what body part?",
+      "text": "the gaurds of the prison move Emily from place to place by attaching her handcuff to what body part?",
       "book_key": "the-tail-of-emily-windsnap",
       "answer": "wrist",
       "page": 186

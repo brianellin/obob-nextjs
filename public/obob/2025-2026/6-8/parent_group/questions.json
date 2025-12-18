@@ -4520,12 +4520,6 @@
     },
     {
       "type": "in-which-book",
-      "text": "does a secret society wear purple capes?",
-      "book_key": "a-dictionary-of-scoundrels",
-      "page": 182
-    },
-    {
-      "type": "in-which-book",
       "text": "does Shenanigan discover a toy dragon in the attic?",
       "book_key": "a-dictionary-of-scoundrels",
       "page": 112
@@ -9959,9 +9953,9 @@
     },
     {
       "type": "content",
-      "text": "Name two of the three things Theo carrying on their hike in the broken cooler.",
+      "text": "Two part question: Name two items that are in the broken cooler that Theo is carrying on their hike?",
       "book_key": "an-occasionally-happy-family",
-      "answer": "peanut butter, bananas, oranges",
+      "answer": "Any two: Peanut butter or peanut butter sandwiches, bananas, oranges.",
       "page": 100
     },
     {
