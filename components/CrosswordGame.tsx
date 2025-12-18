@@ -599,17 +599,17 @@ export default function CrosswordGame({
           >
             <div className="crossword-container">
               {/* Desktop: side-by-side layout, Mobile: stacked */}
-              <div className="flex flex-col lg:flex-row gap-6">
-                {/* Grid section - fixed size container for the SVG */}
-                <div className="bg-white p-4 sm:p-6 shadow-lg border-2 border-black flex-shrink-0">
-                  <div className="w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] lg:w-[450px] lg:h-[450px]">
+              <div className="flex flex-col lg:flex-row gap-4 lg:gap-6">
+                {/* Grid section - responsive container for the SVG */}
+                <div className="bg-white p-3 sm:p-4 shadow-lg border-2 border-black flex-shrink-0 mx-auto lg:mx-0">
+                  <div className="w-[calc(100vw-3rem)] max-w-[340px] aspect-square sm:w-[400px] sm:max-w-none md:w-[450px] lg:w-[420px] xl:w-[480px]">
                     <CrosswordGrid />
                   </div>
                 </div>
 
                 {/* Clues section */}
-                <div className="bg-white p-4 sm:p-6 shadow-lg border border-gray-200 flex-1 min-w-0 max-h-[500px] lg:max-h-[520px] overflow-y-auto">
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-6">
+                <div className="bg-white p-3 sm:p-4 shadow-lg border border-gray-200 flex-1 min-w-0 max-h-[40vh] sm:max-h-[45vh] lg:max-h-[500px] overflow-y-auto">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                     <div>
                       <CustomDirectionClues direction="across" label="ACROSS" />
                     </div>
