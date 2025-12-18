@@ -550,10 +550,11 @@ export default function CrosswordGame({
               font-weight: 500 !important;
             }
 
-            /* Clue number styling - keep default positioning, just adjust font */
+            /* Clue number styling - offset from corner for better visibility */
             .crossword-container svg text[text-anchor="start"] {
               font-family: Arial, sans-serif !important;
               font-weight: 600 !important;
+              transform: translate(1px, 1px);
             }
 
             /* Section headers */
