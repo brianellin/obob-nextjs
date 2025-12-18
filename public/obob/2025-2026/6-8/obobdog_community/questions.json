@@ -1225,6 +1225,245 @@
       "page": 9,
       "contributor": "Amelia L.",
       "answer": "May 30, 2014"
+    },
+    {
+      "type": "content",
+      "text": "What was on the table next to Alter on the podium when he spoke at Crossler Middle School?",
+      "answer": "A waterbottle and a laptop",
+      "book_key": "remember-my-story",
+      "page": 10,
+      "contributor": "Amelia"
+    },
+    {
+      "type": "content",
+      "text": "In Mexikid, a graphic memoir by Pedro Martin, what fruit \"represents the legacy of life\"?",
+      "answer": "An avocado",
+      "book_key": "mexikid-a-graphic-memoir",
+      "page": 261,
+      "contributor": "Amelia"
+    },
+    {
+      "type": "in-which-book",
+      "text": "Does someone order blue corn pancakes and scrambled eggs?",
+      "book_key": "tumble",
+      "page": 329,
+      "contributor": "Lidz"
+    },
+    {
+      "type": "content",
+      "text": "What was Addie's favorite Father's Day card that she made?",
+      "answer": "The one where her \"dad\" was in a hot air balloon.",
+      "book_key": "tumble",
+      "page": 334,
+      "contributor": "Lidz"
+    },
+    {
+      "type": "content",
+      "text": "Who is planning their retirement?",
+      "answer": "Mrs. Gonzalez",
+      "book_key": "tumble",
+      "page": 165,
+      "contributor": "Lidz"
+    },
+    {
+      "type": "in-which-book",
+      "text": "Does someone have a clapboard in their backpack?",
+      "book_key": "tumble",
+      "page": 214,
+      "contributor": "Lidz"
+    },
+    {
+      "type": "content",
+      "text": "Why doesn't Rudy keep his lunch in the cold back room of the Dos Pueblos Historical Society?",
+      "answer": "They don't allow food.",
+      "book_key": "tumble",
+      "page": 67,
+      "contributor": "Lidz"
+    },
+    {
+      "type": "content",
+      "text": "What did Addie's mom, Lourdes, wear as homecoming queen?",
+      "answer": "A green sleeveless dress",
+      "book_key": "tumble",
+      "page": 56,
+      "contributor": "Lidz"
+    },
+    {
+      "type": "in-which-book",
+      "text": "Does a character walk up to a door, knock three times, and snap their fingers before entering?",
+      "book_key": "dealing-with-dragons",
+      "page": 13,
+      "contributor": "Alice Q."
+    },
+    {
+      "type": "content",
+      "text": "Whose story is told in the windows of the temple near the source of the River Ganges?",
+      "answer": "Lord Shiva's",
+      "book_key": "asha-and-the-spirit-bird",
+      "page": 183,
+      "contributor": "Lidz"
+    },
+    {
+      "type": "content",
+      "text": "What do Asha and Jeevan do before leaving the temple for Zandapur?",
+      "answer": "Say a prayer",
+      "book_key": "asha-and-the-spirit-bird",
+      "page": 184,
+      "contributor": "Lidz"
+    },
+    {
+      "type": "content",
+      "text": "What weapon does Rama's wife, Sita, use?",
+      "answer": "A bow and arrow",
+      "book_key": "asha-and-the-spirit-bird",
+      "page": 187,
+      "contributor": "Lidz"
+    },
+    {
+      "type": "content",
+      "text": "How old is Jeevan?",
+      "answer": "12",
+      "book_key": "asha-and-the-spirit-bird",
+      "page": 188,
+      "contributor": "Lidz"
+    },
+    {
+      "type": "content",
+      "text": "How old is Asha?",
+      "answer": "11",
+      "book_key": "asha-and-the-spirit-bird",
+      "page": 188,
+      "contributor": "Lidz"
+    },
+    {
+      "type": "content",
+      "text": "What is Jeevan's full name?",
+      "answer": "Jeevan Singh Gill",
+      "book_key": "asha-and-the-spirit-bird",
+      "page": 188,
+      "contributor": "Lidz"
+    },
+    {
+      "type": "content",
+      "text": "What is Asha's last name?",
+      "answer": "Kumar",
+      "book_key": "asha-and-the-spirit-bird",
+      "page": 188,
+      "contributor": "Lidz"
+    },
+    {
+      "type": "content",
+      "text": "What did Asha use as kindling to make a fire?",
+      "answer": "Bark",
+      "book_key": "asha-and-the-spirit-bird",
+      "page": 134,
+      "contributor": "Lidz"
+    },
+    {
+      "type": "content",
+      "text": "Two part question: Name two things that Jeevan gave to Asha for her journey.",
+      "answer": "Possible answers: A map, a penknife, and sharpened sticks.",
+      "book_key": "asha-and-the-spirit-bird",
+      "page": 67,
+      "contributor": "Lidz",
+      "two_part": true
+    },
+    {
+      "type": "content",
+      "text": "Where does Asha's Papa live in the city?",
+      "answer": "Connaught Place",
+      "book_key": "asha-and-the-spirit-bird",
+      "page": 192,
+      "contributor": "Lidz"
+    },
+    {
+      "type": "content",
+      "text": "What is the name of the cow that is spooked by the bell ringing?",
+      "answer": "Tulsi",
+      "book_key": "asha-and-the-spirit-bird",
+      "page": 3,
+      "contributor": "Lidz"
+    },
+    {
+      "type": "content",
+      "text": "What does Asha slip on when she runs down the hill towards the village?",
+      "answer": "Loose stones",
+      "book_key": "asha-and-the-spirit-bird",
+      "page": 4,
+      "contributor": "Lidz"
+    },
+    {
+      "type": "content",
+      "text": "When the man comes into Asha's house and spits on the floor, what color is his spit?",
+      "answer": "Red",
+      "book_key": "asha-and-the-spirit-bird",
+      "page": 7,
+      "contributor": "Lidz"
+    },
+    {
+      "type": "content",
+      "text": "According to Asha, why do some people like being nasty?",
+      "answer": "It makes them feel big and important",
+      "book_key": "asha-and-the-spirit-bird",
+      "page": 13,
+      "contributor": "Lidz"
+    },
+    {
+      "type": "content",
+      "text": "Two part question: Name two \"early evening smells\".",
+      "answer": "Possible answers: Warm soil, Grass, and star shaped bakul flowers",
+      "book_key": "asha-and-the-spirit-bird",
+      "page": 18,
+      "contributor": "Lidz",
+      "two_part": true
+    },
+    {
+      "type": "content",
+      "text": "What does Asha's Ma sprinkle in Asha's milk?",
+      "answer": "Cinnamon",
+      "book_key": "asha-and-the-spirit-bird",
+      "page": 27,
+      "contributor": "Lidz"
+    },
+    {
+      "type": "content",
+      "text": "Where did Asha's Ma go to get a clear phone signal?",
+      "answer": "Sonahaar",
+      "book_key": "asha-and-the-spirit-bird",
+      "page": 29,
+      "contributor": "Lidz"
+    },
+    {
+      "type": "content",
+      "text": "How many months without word from Asha's papa would there have been by Divali?",
+      "answer": "Nearly six",
+      "book_key": "asha-and-the-spirit-bird",
+      "page": 30,
+      "contributor": "Lidz"
+    },
+    {
+      "type": "content",
+      "text": "What is Asha and Jeevan's signal to meet in the mango tree?",
+      "answer": "A flashing light through the small window",
+      "book_key": "asha-and-the-spirit-bird",
+      "page": 37,
+      "contributor": "Lidz"
+    },
+    {
+      "type": "content",
+      "text": "Who said that Asha could see things that others can't?",
+      "answer": "Her Nanijee",
+      "book_key": "asha-and-the-spirit-bird",
+      "page": 39,
+      "contributor": "Lidz"
+    },
+    {
+      "type": "content",
+      "text": "What are astras?",
+      "answer": "Supernatural weapons",
+      "book_key": "aru-shah-and-the-end-of-time",
+      "page": 346,
+      "contributor": "Lidz"
     }
   ]
 }

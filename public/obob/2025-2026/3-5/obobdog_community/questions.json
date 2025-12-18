@@ -83,6 +83,211 @@
       "page": 163,
       "contributor": "Vincent",
       "answer": "To the wildlife rehabilitator"
+    },
+    {
+      "type": "content",
+      "text": "What was Robin looking for in Mary's home?",
+      "answer": "Kitty nummies",
+      "book_key": "the-secret-garden-on-81st-street",
+      "page": 1,
+      "contributor": "Sophia"
+    },
+    {
+      "type": "in-which-book",
+      "text": "Is the main character's dad in the navy?",
+      "book_key": "better-with-butter",
+      "page": 43,
+      "contributor": "Sophia"
+    },
+    {
+      "type": "content",
+      "text": "What is Lizzie's job?",
+      "answer": "Supply Depot Clerk",
+      "book_key": "city-of-ember",
+      "page": 2,
+      "contributor": "Olive"
+    },
+    {
+      "type": "content",
+      "text": "What did Akimi nibble on when they were eating?",
+      "answer": "A couple of chocolate-dipped pretzel sticks",
+      "book_key": "escape-from-mr-lemoncellos-library",
+      "page": 1,
+      "contributor": "Margo"
+    },
+    {
+      "type": "content",
+      "text": "What job does Chet Noam choose on assignment day?",
+      "answer": "Electrician's helper",
+      "book_key": "city-of-ember",
+      "page": 10,
+      "contributor": "Rose"
+    },
+    {
+      "type": "content",
+      "text": "Why is Marvel afraid?",
+      "answer": "Because she has anxiety",
+      "book_key": "better-with-butter",
+      "page": 7,
+      "contributor": "Susa"
+    },
+    {
+      "type": "content",
+      "text": "What is the main character's full name?",
+      "answer": "Mary Lennox",
+      "book_key": "the-secret-garden-on-81st-street",
+      "page": 1,
+      "contributor": "Sadid S."
+    },
+    {
+      "type": "content",
+      "text": "Who was shouting on the steps of the Gathering Hall?",
+      "answer": "Sadge Merrall",
+      "book_key": "city-of-ember",
+      "page": 73,
+      "contributor": "Mishkat"
+    },
+    {
+      "type": "content",
+      "text": "What is the Jungle Book's Dewey decimal number?",
+      "answer": "599.757",
+      "book_key": "escape-from-mr-lemoncellos-library",
+      "page": 11,
+      "contributor": "Jacob K."
+    },
+    {
+      "type": "content",
+      "text": "What is Tea for You and Me's Dewey decimal number? Include all the decimals.",
+      "answer": "641.3372",
+      "book_key": "escape-from-mr-lemoncellos-library",
+      "page": 171,
+      "contributor": "Jacob K."
+    },
+    {
+      "type": "content",
+      "text": "What is Why Wait to Lose Weight's Dewey Decimal number? Include the decimals.",
+      "answer": "613.2522",
+      "book_key": "escape-from-mr-lemoncellos-library",
+      "page": 171,
+      "contributor": "Jacob K."
+    },
+    {
+      "type": "content",
+      "text": "Two part question: What are Haley's ancestors' names?",
+      "answer": "Oona and Patrick",
+      "book_key": "escape-from-mr-lemoncellos-library",
+      "page": 177,
+      "contributor": "Jacob K.",
+      "two_part": true
+    },
+    {
+      "type": "content",
+      "text": "What is Get to Know Your Local Library's Dewey decimal number? Include the decimal.",
+      "answer": "27.4",
+      "book_key": "escape-from-mr-lemoncellos-library",
+      "page": 158,
+      "contributor": "Jacob K."
+    },
+    {
+      "type": "content",
+      "text": "In Family Frenzy, what card makes everyone move back seven spaces?",
+      "answer": "The orthodontist card",
+      "book_key": "escape-from-mr-lemoncellos-library",
+      "page": 195,
+      "contributor": "Jacob K."
+    },
+    {
+      "type": "content",
+      "text": "Who wrote Look Homeward, Angel?",
+      "answer": "Thomas Wolfe",
+      "book_key": "escape-from-mr-lemoncellos-library",
+      "page": 211,
+      "contributor": "Jacob K."
+    },
+    {
+      "type": "content",
+      "text": "What is the answer to the very last puzzle in the book? It's after the Random Chatter with the Author.",
+      "answer": "Those who knew where to look have now solved every puzzle in the book",
+      "book_key": "escape-from-mr-lemoncellos-library",
+      "page": 289,
+      "contributor": "Jacob K."
+    },
+    {
+      "type": "content",
+      "text": "What card is considered the same as lose a turn?",
+      "answer": "Any dog card",
+      "book_key": "escape-from-mr-lemoncellos-library",
+      "page": 2,
+      "contributor": "Jacob K."
+    },
+    {
+      "type": "content",
+      "text": "Where did Mrs. Yunghans hear that Mr. Lemoncello donated the money to build the new library?",
+      "answer": "NPR",
+      "book_key": "escape-from-mr-lemoncellos-library",
+      "page": 25,
+      "contributor": "Jacob K."
+    },
+    {
+      "type": "content",
+      "text": "How much did Mr. Lemoncello donate to make the new library?",
+      "answer": "500 million",
+      "book_key": "escape-from-mr-lemoncellos-library",
+      "page": 25,
+      "contributor": "Jacob K."
+    },
+    {
+      "type": "content",
+      "text": "What makes Akimi Hughes airsick?",
+      "answer": "When the wonder dome seems to hang glide across Alaska",
+      "book_key": "escape-from-mr-lemoncellos-library",
+      "page": 119,
+      "contributor": "Jacob K."
+    },
+    {
+      "type": "content",
+      "text": "What is Mike surprised by?",
+      "answer": "That Kyle beat him to the loose change apple cider jug",
+      "book_key": "escape-from-mr-lemoncellos-library",
+      "page": 4,
+      "contributor": "Jacob K."
+    },
+    {
+      "type": "content",
+      "text": "According to Curtis, what is the shortest distance between two points?",
+      "answer": "A straight line",
+      "book_key": "escape-from-mr-lemoncellos-library",
+      "page": 5,
+      "contributor": "Jacob K."
+    },
+    {
+      "type": "in-which-book",
+      "text": "Are there fluffy robots?",
+      "book_key": "escape-from-mr-lemoncellos-library",
+      "page": 10,
+      "contributor": "Jacob K."
+    },
+    {
+      "type": "content",
+      "text": "What level did Akimi finally clear?",
+      "answer": "Level 6",
+      "book_key": "escape-from-mr-lemoncellos-library",
+      "page": 16,
+      "contributor": "Jacob K."
+    },
+    {
+      "type": "in-which-book",
+      "text": "Does a character never give up in board games?",
+      "book_key": "escape-from-mr-lemoncellos-library",
+      "page": 27,
+      "contributor": "Jacob K."
+    },
+    {
+      "type": "in-which-book",
+      "text": "Does a character say \"Maybe. But I've got to roll the dice one more time.\"?",
+      "book_key": "escape-from-mr-lemoncellos-library",
+      "page": 28,
+      "contributor": "Jacob K."
     }
   ]
 }
