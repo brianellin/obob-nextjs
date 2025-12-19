@@ -129,14 +129,27 @@ export function countCrosswordQuestionsPerBook(
 /**
  * Select questions distributed evenly across selected books.
  * Similar to the battle question selection but for crossword.
+ * Deduplicates by answer to prevent the same word appearing multiple times.
  */
 export function selectDistributedQuestions(
   questions: CrosswordQuestion[],
   targetCount: number
 ): CrosswordQuestion[] {
+  // First, deduplicate by answer - if multiple questions have the same answer,
+  // keep only one (randomly chosen via the shuffle later)
+  const uniqueByAnswer = new Map<string, CrosswordQuestion>();
+  for (const q of questions) {
+    // If we haven't seen this answer yet, or randomly replace (50% chance)
+    // This gives questions from different books a fair chance
+    if (!uniqueByAnswer.has(q.answer) || Math.random() < 0.5) {
+      uniqueByAnswer.set(q.answer, q);
+    }
+  }
+  const deduplicatedQuestions = Array.from(uniqueByAnswer.values());
+
   // Group questions by book
   const byBook = new Map<string, CrosswordQuestion[]>();
-  for (const q of questions) {
+  for (const q of deduplicatedQuestions) {
     const existing = byBook.get(q.bookKey) || [];
     existing.push(q);
     byBook.set(q.bookKey, existing);
