@@ -263,6 +263,7 @@ function buildPuzzleFromLayout(
   // Build clues from placed words
   const clues: CrosswordClue[] = [];
   const cellNumbers = new Map<string, number>();
+  const usedAnswers = new Set<string>(); // Track answers to prevent duplicates
 
   // Sort by position number for consistent ordering
   const placedWords = layout.result
@@ -272,6 +273,10 @@ function buildPuzzleFromLayout(
   for (const word of placedWords) {
     const question = questionMap.get(word.answer);
     if (!question) continue;
+
+    // Skip if we've already used this answer (prevent same word appearing in both across and down)
+    if (usedAnswers.has(word.answer)) continue;
+    usedAnswers.add(word.answer);
 
     // Library uses 1-indexed positions, convert to 0-indexed
     // Then apply offset for centered square grid
