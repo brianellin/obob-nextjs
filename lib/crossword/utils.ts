@@ -135,6 +135,11 @@ export function selectDistributedQuestions(
   questions: CrosswordQuestion[],
   targetCount: number
 ): CrosswordQuestion[] {
+  // Early return for edge cases to prevent infinite loops
+  if (questions.length === 0 || targetCount <= 0) {
+    return [];
+  }
+
   // First, deduplicate by answer - if multiple questions have the same answer,
   // keep only one (randomly chosen via the shuffle later)
   const uniqueByAnswer = new Map<string, CrosswordQuestion>();
