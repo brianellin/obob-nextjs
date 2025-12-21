@@ -18913,7 +18913,7 @@
     },
     {
       "type": "in-which-book",
-      "text": "is it theorized that bonding came more easily for Twyla for a specific reason?",
+      "text": "does bonding come more easily for some than for others?",
       "book_key": "odder",
       "page": 241
     },
@@ -19097,7 +19097,7 @@
     },
     {
       "type": "content",
-      "text": "Who called Odder when otter was born?",
+      "text": "Who named the otter pup Odder?",
       "book_key": "odder",
       "answer": "Odder's mother",
       "page": 13
@@ -19447,7 +19447,7 @@
       "type": "content",
       "text": "What name do humans call Odder?",
       "book_key": "odder",
-      "answer": "Otter #156",
+      "answer": "Otter #156 or Jazz",
       "page": 10
     },
     {
@@ -19494,9 +19494,9 @@
     },
     {
       "type": "content",
-      "text": "Why does Odder love kayakers?",
+      "text": "Odder admired kayers because of their hopeless desire to be creatures of what?",
       "book_key": "odder",
-      "answer": "She admires their hopeless desires to be creatures of the water.",
+      "answer": "the water",
       "page": 28
     },
     {
@@ -19543,9 +19543,9 @@
     },
     {
       "type": "content",
-      "text": "How old was Odder when she was admitted to the aquarium?",
+      "text": "How old was Odder when she was admitted to the aquarium the second time?",
       "book_key": "odder",
-      "answer": "3 years 4 months (est)",
+      "answer": "3 years 4 months",
       "page": 74
     },
     {

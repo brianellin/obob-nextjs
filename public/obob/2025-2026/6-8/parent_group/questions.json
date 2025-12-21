@@ -1273,7 +1273,7 @@
       "type": "content",
       "text": "what did the Sleeper leave behind when he took Boo?",
       "book_key": "aru-shah-and-the-end-of-time",
-      "answer": "a birdcage",
+      "answer": "A birdcage, or a birdcage with the stolen mounts of the gods, or the stolen mounts of the gods.",
       "page": 160
     },
     {
@@ -5445,7 +5445,7 @@
     },
     {
       "type": "in-which-book",
-      "text": "is there an iterrogation?",
+      "text": "is there an interrogation?",
       "book_key": "dragon-pearl"
     },
     {
@@ -17434,7 +17434,7 @@
       "type": "content",
       "text": "What does Ruth hold in her lap on the plane ride?",
       "book_key": "uprooted",
-      "answer": "A jar with her name on it",
+      "answer": "A jar with her name on it or the farewell present from her best friends.",
       "page": 50
     },
     {
@@ -17460,9 +17460,9 @@
     },
     {
       "type": "content",
-      "text": "In Ruth's dream on the plane, what does she eat?",
+      "text": "In Ruth's dream on the plane, what is the name of the place she buys something to eat before she falls through the ice?",
       "book_key": "uprooted",
-      "answer": "A waffle",
+      "answer": "BeaverTails",
       "page": 54
     },
     {
