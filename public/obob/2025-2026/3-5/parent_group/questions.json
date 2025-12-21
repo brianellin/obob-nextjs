@@ -19069,7 +19069,7 @@
     },
     {
       "type": "content",
-      "text": "Who doesn't eat Otter?",
+      "text": "What type of animal, as a rule, don't eat otters?",
       "book_key": "odder",
       "answer": "Sharks",
       "page": 3
@@ -19121,6 +19121,13 @@
       "text": "What is Odder's body characteristic?",
       "book_key": "odder",
       "answer": "Smaller ,more agile,deep brown coat and caramel colored head",
+      "page": 14
+    },
+    {
+      "type": "content",
+      "text": "Who chooses eat over play?",
+      "book_key": "odder",
+      "answer": "Kairi",
       "page": 14
     },
     {
@@ -19472,10 +19479,9 @@
       "page": 16
     },
     {
-      "type": "content",
-      "text": "Where does the chase between Kiari and Odder begin? (Be specific)",
+      "type": "in-which-book",
+      "text": "does a chase between characters begin in Elkhorn Slough?",
       "book_key": "odder",
-      "answer": "Elkhorn Slough",
       "page": 18
     },
     {
@@ -19589,13 +19595,6 @@
       "book_key": "odder",
       "answer": "stubby tentacles",
       "page": 120
-    },
-    {
-      "type": "content",
-      "text": "What did the humans call baby Odder?",
-      "book_key": "odder",
-      "answer": "Number 209",
-      "page": 127
     },
     {
       "type": "content",
@@ -19715,6 +19714,13 @@
       "book_key": "odder",
       "answer": "She wants him to be free",
       "page": 228
+    },
+    {
+      "type": "content",
+      "text": "What are two ways Odder says she is unlike Kiari?",
+      "book_key": "odder",
+      "answer": "Calm, kind, patient, careful",
+      "page": 233
     },
     {
       "type": "content",
