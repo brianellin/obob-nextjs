@@ -8,7 +8,7 @@ import {
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { User, Users, Trophy, Grid2X2, Sparkles, Dog, Grid3X3 } from "lucide-react";
+import { User, Users, Trophy, Grid2X2, Sparkles, Dog, Grid3X3, Calendar } from "lucide-react";
 import Link from "next/link";
 
 type ModeSelectionProps = {
@@ -165,13 +165,40 @@ export default function ModeSelection({ year, division }: ModeSelectionProps) {
               </Link>
             </CardFooter>
           </Card>
+          <Card className="border-2 border-indigo-600 bg-indigo-50">
+            <CardHeader>
+              <div className="flex items-center gap-2">
+                <CardTitle className="font-serif text-indigo-900">Daily Team Crossword</CardTitle>
+                <Badge className="bg-indigo-600 hover:bg-indigo-600 text-white">
+                  New!
+                </Badge>
+              </div>
+              <CardDescription className="text-indigo-700">
+                Solve today's puzzle with your team!
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <p className="text-indigo-800">
+                A new crossword every day at 6am. Create a team, share your code,
+                and solve it together. When stuck, send clues to teammates to look up in the books!
+              </p>
+            </CardContent>
+            <CardFooter>
+              <Link
+                href={`/daily/${year}/${division}`}
+                passHref
+                className="w-full"
+              >
+                <Button className="w-full bg-indigo-600 hover:bg-indigo-700 text-white transition-colors">
+                  <Calendar className="mr-2 h-4 w-4" /> Play Daily Crossword
+                </Button>
+              </Link>
+            </CardFooter>
+          </Card>
           <Card className="border-2 border-gray-900 bg-white">
             <CardHeader>
               <div className="flex items-center gap-2">
                 <CardTitle className="font-serif">Content Crossword</CardTitle>
-                <Badge className="bg-gray-900 hover:bg-gray-900 text-white">
-                  New!
-                </Badge>
               </div>
               <CardDescription>
                 Solve crossword puzzles from book content

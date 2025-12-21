@@ -108,6 +108,8 @@ export interface GeneratorOptions {
   minWords: number;
   /** Number of generation attempts */
   maxAttempts?: number;
+  /** Optional seeded random function for deterministic generation */
+  random?: () => number;
 }
 
 /**
@@ -122,7 +124,7 @@ export function generateCrossword(
   questions: CrosswordQuestion[],
   options: GeneratorOptions
 ): CrosswordPuzzle | null {
-  const { targetWords, maxGridSize, minWords, maxAttempts = 50 } = options;
+  const { targetWords, maxGridSize, minWords, maxAttempts = 50, random = Math.random } = options;
 
   if (questions.length < minWords) {
     console.warn(`Not enough questions (${questions.length}) to generate crossword (need ${minWords})`);
@@ -134,8 +136,8 @@ export function generateCrossword(
 
   // Try multiple times with different word subsets and shuffles
   for (let attempt = 0; attempt < maxAttempts; attempt++) {
-    // Shuffle all questions
-    const shuffled = shuffleArray([...questions]);
+    // Shuffle all questions using the random function
+    const shuffled = shuffleArrayWithRandom([...questions], random);
 
     // Vary the subset size around the target
     // This gives the algorithm different word pools to work with
@@ -144,7 +146,7 @@ export function generateCrossword(
       minWords,
       Math.min(
         questions.length,
-        targetWords - variance + Math.floor(Math.random() * (variance * 2 + 1))
+        targetWords - variance + Math.floor(random() * (variance * 2 + 1))
       )
     );
     const subset = shuffled.slice(0, subsetSize);
@@ -316,15 +318,22 @@ function buildPuzzleFromLayout(
 }
 
 /**
- * Shuffle array using Fisher-Yates algorithm
+ * Shuffle array using Fisher-Yates algorithm with custom random function
  */
-function shuffleArray<T>(array: T[]): T[] {
+function shuffleArrayWithRandom<T>(array: T[], random: () => number): T[] {
   const result = [...array];
   for (let i = result.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
+    const j = Math.floor(random() * (i + 1));
     [result[i], result[j]] = [result[j], result[i]];
   }
   return result;
+}
+
+/**
+ * Shuffle array using Fisher-Yates algorithm (uses Math.random)
+ */
+function shuffleArray<T>(array: T[]): T[] {
+  return shuffleArrayWithRandom(array, Math.random);
 }
 
 /**
