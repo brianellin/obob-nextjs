@@ -4912,13 +4912,6 @@
     },
     {
       "type": "content",
-      "text": "What word does Shenanigan wish had been written for her in the Dictionary?",
-      "book_key": "a-dictionary-of-scoundrels",
-      "answer": "Detective",
-      "page": 11
-    },
-    {
-      "type": "content",
       "text": "What color is the cover of the Swift Family Dictionary?",
       "book_key": "a-dictionary-of-scoundrels",
       "answer": "Red",
@@ -4975,13 +4968,6 @@
     },
     {
       "type": "content",
-      "text": "Where does Shenanigan first see the treasure map?",
-      "book_key": "a-dictionary-of-scoundrels",
-      "answer": "Inside a drawer in her room",
-      "page": 80
-    },
-    {
-      "type": "content",
       "text": "What ingredient is missing from the family stew?",
       "book_key": "a-dictionary-of-scoundrels",
       "answer": "Saffron",
@@ -4993,13 +4979,6 @@
       "book_key": "a-dictionary-of-scoundrels",
       "answer": "Hide‑and‑seek",
       "page": 55
-    },
-    {
-      "type": "content",
-      "text": "Who does Felicity blame for the missing teacup?",
-      "book_key": "a-dictionary-of-scoundrels",
-      "answer": "Shenanigan",
-      "page": 46
     },
     {
       "type": "content",
@@ -5021,27 +5000,6 @@
       "book_key": "a-dictionary-of-scoundrels",
       "answer": "A marble lion",
       "page": 6
-    },
-    {
-      "type": "content",
-      "text": "Which Swift is an aspiring inventor?",
-      "book_key": "a-dictionary-of-scoundrels",
-      "answer": "Cousin Crispin",
-      "page": 30
-    },
-    {
-      "type": "content",
-      "text": "What gift does Shenanigan receive from Erf?",
-      "book_key": "a-dictionary-of-scoundrels",
-      "answer": "A notebook with secret sketches",
-      "page": 102
-    },
-    {
-      "type": "content",
-      "text": "Which room becomes the main setting for the investigation climax?",
-      "book_key": "a-dictionary-of-scoundrels",
-      "answer": "The Secret Vault room.",
-      "page": 270
     },
     {
       "type": "content",
@@ -5781,9 +5739,9 @@
     },
     {
       "type": "content",
-      "text": "Sujin captures something with their spork that causes Min to feel homesick when they're in the escape pod, what is it?",
+      "text": "Sujin conjures something with their spork that causes Min to feel homesick when they're in the escape pod, what is it?",
       "book_key": "dragon-pearl",
-      "answer": "shrimp crackers",
+      "answer": "Shrimp crackers or packets of shrimp crackers",
       "page": 242
     },
     {
@@ -10799,9 +10757,9 @@
     },
     {
       "type": "content",
-      "text": "What type of officers were the Nazi soldiers?",
+      "text": "What color are the Nazi soldiers uniforms?",
       "book_key": "projekt-1065-a-novel-of-world-war-ii",
-      "answer": "SS Officers",
+      "answer": "Gray",
       "page": 1
     },
     {
@@ -11053,7 +11011,7 @@
       "type": "content",
       "text": "When did Ma and Da expect Simon to be back in London?",
       "book_key": "projekt-1065-a-novel-of-world-war-ii",
-      "answer": "St. Patrick's Day",
+      "answer": "St. Patrick's Day or March 17th",
       "page": 188
     },
     {
@@ -11895,7 +11853,7 @@
       "type": "content",
       "text": "Whose 5 year old birthday party does Rain go to?",
       "book_key": "rain-rising",
-      "answer": "Josiah's",
+      "answer": "Josiah's or Alyssa's brother.",
       "page": 196
     },
     {
