@@ -31,9 +31,8 @@ export default function NewsletterPage() {
             Join the OBOB.dog Newsletter
           </CardTitle>
           <CardDescription>
-            Get occasional updated from OBOB.dog about new games, battle
-            features, and when we add new questions. We won't ever share or sell
-            your info.
+            Get occasional updates from OBOB.dog about new games, battle
+            features, and new questions. We won't ever share or sell your info.
           </CardDescription>
         </CardHeader>
         <CardContent>

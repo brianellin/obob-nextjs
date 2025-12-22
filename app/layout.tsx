@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import NewsletterBanner from "@/components/NewsletterBanner";
 import { Analytics } from "@vercel/analytics/react";
 import { PostHogProvider } from "./providers";
 
@@ -31,6 +32,7 @@ export default function RootLayout({
       </head>
       <body className={inter.className}>
         <PostHogProvider>
+          <NewsletterBanner />
           <Header />
           <main className="container mx-auto px-2 py-2">{children}</main>
           <Footer />
