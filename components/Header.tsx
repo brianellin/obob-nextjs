@@ -82,6 +82,14 @@ export default function Header() {
                     About
                   </Link>
                 </SheetClose>
+                <SheetClose asChild>
+                  <Link
+                    href="/newsletter"
+                    className="text-lg hover:text-gray-600 transition-colors"
+                  >
+                    Newsletter
+                  </Link>
+                </SheetClose>
               </nav>
               <div className="mt-8 flex justify-center">
                 <RosieIcon className="w-8 h-8" />

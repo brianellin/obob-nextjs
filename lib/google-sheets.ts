@@ -192,6 +192,22 @@ export async function updateFeedbackRow(
   }
 }
 
+export async function appendNewsletterSignup(data: {
+  timestamp: string;
+  email: string;
+  role: string;
+  name?: string;
+  divisions?: string[];
+}) {
+  return appendToSheet(process.env.GOOGLE_NEWSLETTER_SHEET_ID!, {
+    timestamp: data.timestamp,
+    email: data.email,
+    role: data.role,
+    name: data.name || '',
+    divisions: data.divisions?.join(', ') || '',
+  });
+}
+
 // Helper function to set up headers for the Google Sheet (run this once)
 export async function setupFeedbackSheetHeaders() {
   try {
