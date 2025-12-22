@@ -33,7 +33,7 @@ export default function NewsletterBanner() {
   if (!isVisible) return null;
 
   return (
-    <div className="bg-black px-4 py-3 relative">
+    <div className="bg-pink-500 px-4 py-3 relative">
       <div className="max-w-7xl mx-auto flex justify-center items-center relative">
         <Link
           href="/newsletter"
