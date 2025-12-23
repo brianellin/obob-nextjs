@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { track } from "@vercel/analytics";
 import { usePostHog } from "posthog-js/react";
 import Link from "next/link";
+import { Grid3X3 } from "lucide-react";
 
 export default function NewsletterBanner() {
   const posthog = usePostHog();
@@ -33,17 +34,18 @@ export default function NewsletterBanner() {
   if (!isVisible) return null;
 
   return (
-    <div className="bg-pink-500 px-4 py-3 relative">
+    <div className="bg-black px-4 py-3 relative">
       <div className="max-w-7xl mx-auto flex justify-center items-center relative">
         <Link
           href="/newsletter"
           onClick={handleClick}
           className="flex items-center gap-4 pr-12 max-w-full hover:opacity-90"
         >
-          <span className="text-2xl flex-shrink-0">📬</span>
-          <p className="text-white text-sm font-medium">
-            Stay in the loop! <span className="underline">Sign up</span> for the
-            obob.dog newsletter.
+          <Grid3X3 className="w-6 h-6 text-white flex-shrink-0" />
+          <p className="text-white text-sm font-display font-bold tracking-wide">
+            New game coming soon!{" "}
+            <span className="underline">Sign up</span> for the newsletter to
+            find out first.
           </p>
         </Link>
         <button
