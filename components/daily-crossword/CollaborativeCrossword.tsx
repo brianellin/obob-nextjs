@@ -184,6 +184,10 @@ export default function CollaborativeCrossword({
   const { width, height } = useWindowSize();
   const crosswordRef = useRef<CrosswordProviderImperative>(null);
   const syncAbortRef = useRef<AbortController | null>(null);
+  const isApplyingRemoteAnswersRef = useRef(false);
+  const appliedAnswersRef = useRef<Set<string>>(new Set());
+  const crosswordReadyRef = useRef(false);
+  const [crosswordReady, setCrosswordReady] = useState(false);
 
   // State
   const [libraryData] = useState<LibraryCrosswordData>(() =>
@@ -221,6 +225,49 @@ export default function CollaborativeCrossword({
     return () => clearInterval(interval);
   }, [startTime, completed]);
 
+  // Keep ref in sync with state (for use in closures like sync loop)
+  useEffect(() => {
+    crosswordReadyRef.current = crosswordReady;
+  }, [crosswordReady]);
+
+  // Fallback to set crosswordReady after a delay if onLoadedCorrect doesn't fire
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      if (!crosswordReady) {
+        setCrosswordReady(true);
+      }
+    }, 500);
+    return () => clearTimeout(timer);
+  }, [crosswordReady]);
+
+  // Apply initial answers from team state when crossword is ready
+  useEffect(() => {
+    if (!crosswordReady || !crosswordRef.current) return;
+
+    const answers = initialTeamState.answers;
+    if (!answers || Object.keys(answers).length === 0) return;
+
+    // Mark that we're applying remote answers to prevent re-POSTing
+    isApplyingRemoteAnswersRef.current = true;
+
+    Object.entries(answers).forEach(([cellKey, letter]) => {
+      const [row, col] = cellKey.split(",").map(Number);
+      try {
+        crosswordRef.current?.setGuess(row, col, letter);
+        // Track with cellKey:letter format for consistency
+        appliedAnswersRef.current.add(`${cellKey}:${letter}`);
+      } catch (err) {
+        console.warn(`Failed to set guess at ${row},${col}:`, err);
+      }
+    });
+
+    // Reset flag after a short delay to allow all setGuess calls to complete
+    setTimeout(() => {
+      isApplyingRemoteAnswersRef.current = false;
+    }, 100);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [crosswordReady]);
+
   // Long-polling sync
   useEffect(() => {
     let mounted = true;
@@ -243,14 +290,24 @@ export default function CollaborativeCrossword({
           const data: SyncResponse = await response.json();
 
           if (mounted) {
-            // Apply answers from server
-            if (crosswordRef.current && data.answers) {
-              // The library doesn't have a direct way to set cell values,
-              // so we trigger through the onCellChange callback
+            // Apply answers from server (only if crossword is ready)
+            if (crosswordRef.current && data.answers && crosswordReadyRef.current) {
+              isApplyingRemoteAnswersRef.current = true;
               Object.entries(data.answers).forEach(([cellKey, letter]) => {
-                const [row, col] = cellKey.split(",").map(Number);
-                // We'll handle this differently - mark clues as complete
+                // Only apply if we haven't already set this cell with the same value
+                if (!appliedAnswersRef.current.has(`${cellKey}:${letter}`)) {
+                  const [row, col] = cellKey.split(",").map(Number);
+                  try {
+                    crosswordRef.current?.setGuess(row, col, letter);
+                    appliedAnswersRef.current.add(`${cellKey}:${letter}`);
+                  } catch (err) {
+                    console.warn(`Failed to set guess at ${row},${col}:`, err);
+                  }
+                }
               });
+              setTimeout(() => {
+                isApplyingRemoteAnswersRef.current = false;
+              }, 100);
             }
 
             setCorrectClues(data.correctClues);
@@ -298,6 +355,15 @@ export default function CollaborativeCrossword({
   // Handle letter input
   const handleCellChange = useCallback(
     async (row: number, col: number, char: string) => {
+      // Skip POST if we're applying answers from the server (prevent feedback loop)
+      if (isApplyingRemoteAnswersRef.current) {
+        return;
+      }
+
+      // Track this answer locally so we don't re-apply it from sync
+      const cellKey = `${row},${col}`;
+      appliedAnswersRef.current.add(`${cellKey}:${char}`);
+
       try {
         await fetch(`/api/daily-crossword/team/${teamCode}/answer`, {
           method: "POST",
@@ -460,6 +526,7 @@ export default function CollaborativeCrossword({
           data={libraryData}
           theme={crosswordTheme}
           onCellChange={handleCellChange}
+          onLoadedCorrect={() => setCrosswordReady(true)}
         >
           <div className="flex flex-col lg:flex-row gap-6">
             {/* Crossword grid */}
