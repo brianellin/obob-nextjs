@@ -149,3 +149,37 @@ Some books have `author_pronunciation` fields - the UI shows these on hover usin
 
 ### Testing Question Distribution
 Uncomment the logging in `/api/questions/battle/route.ts` (lines 48-61) to see questions-per-book and question-type distributions in the console.
+
+## Daily Collaborative Crossword
+
+### Architecture
+
+The daily crossword feature (`/daily/[year]/[division]`) allows teams to collaboratively solve crossword puzzles generated from OBOB content questions.
+
+**Key Components:**
+- `components/daily-crossword/CollaborativeCrossword.tsx` - Main crossword UI
+- `components/daily-crossword/TeamSetup.tsx` - Team creation/join flow
+- `lib/daily-crossword/kv.ts` - Vercel KV storage layer
+- `lib/daily-crossword/generate-daily.ts` - Deterministic puzzle generation
+
+**State Storage (Vercel KV):**
+- `team:{teamCode}` - Team state including answers, members, completion status (7-day TTL)
+- `puzzle:{year}:{division}:{date}` - Cached daily puzzles (48h TTL)
+- Answers stored as `Record<string, string>` where key is `"row,col"` and value is the letter
+
+**Real-time Sync:**
+- Uses HTTP long-polling via `/api/daily-crossword/team/[code]/sync`
+- Server holds connection up to 25 seconds waiting for changes
+- Client continuously polls for updates from other team members
+
+### Crossword Library Notes
+
+Uses `@jaredreisinger/react-crossword` (v5.2.0). Important quirks:
+
+1. **`setGuess(row, col, letter)`** - Imperative method to programmatically set cell values
+2. **Grid not immediately ready** - The ref exists before the internal grid is initialized. Wait for `onLoadedCorrect` callback or use a timeout before calling `setGuess`
+3. **`onCellChange` callback** - Fires for both user input AND programmatic `setGuess` calls. Use a ref flag to distinguish between them to prevent feedback loops when syncing
+
+### Team Codes
+- Format: `{DOG_WORD}{2-digit number}` (e.g., "BARK42", "WOOF17")
+- Generated in `lib/daily-crossword/team-codes.ts`
