@@ -75,9 +75,10 @@
   body {
     @apply bg-background text-foreground;
   }
-  h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-luckiest-guy), cursive;
-  }
+}
+
+.font-luckiest-guy {
+  font-family: var(--font-luckiest-guy), cursive;
 }
 
 /* Card match jiggle animation */
