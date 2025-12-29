@@ -7,7 +7,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { User, Users, Trophy, Grid2X2, Dog, Sparkles } from "lucide-react";
+import { User, Users, Trophy, Grid2X2, Dog, Zap } from "lucide-react";
 import Link from "next/link";
 
 type ModeSelectionProps = {
@@ -17,27 +17,26 @@ type ModeSelectionProps = {
 
 export default function ModeSelection({ year, division }: ModeSelectionProps) {
   return (
-    <div className="space-y-10 max-w-2xl mx-auto">
+    <div className="space-y-12 max-w-2xl mx-auto">
       {/* Battles Section */}
       <div>
-        <h2 className="text-2xl font-bold mb-6 text-center font-[family-name:var(--font-playfair)] text-[hsl(var(--obob-bark))]">
+        <h2 className="text-xl font-black mb-8 text-center text-[hsl(var(--obob-bone))]">
           <span className="obob-section-title">Battles</span>
         </h2>
         <div className="space-y-4">
           <div className="flex gap-4 flex-col md:flex-row">
-            <Card className="obob-card flex-1 rounded-xl overflow-hidden">
+            <Card className="obob-card flex-1 rounded-none border-0">
               <CardHeader className="pb-2">
-                <CardTitle className="font-[family-name:var(--font-playfair)] text-[hsl(var(--obob-bark))]">
-                  Solo battle
+                <CardTitle className="font-black text-[hsl(var(--obob-bone))] uppercase tracking-wide text-base">
+                  Solo Battle
                 </CardTitle>
-                <CardDescription className="text-[hsl(var(--obob-bark))] opacity-60">
-                  Practice at your own pace
+                <CardDescription className="text-[hsl(var(--obob-smoke))] text-xs uppercase tracking-wider">
+                  Train alone
                 </CardDescription>
               </CardHeader>
               <CardContent className="pb-4">
-                <p className="text-sm text-[hsl(var(--obob-bark))] opacity-80 leading-relaxed">
-                  Read and answer OBOB questions on your own, without time
-                  pressure.
+                <p className="text-sm text-[hsl(var(--obob-smoke))] leading-relaxed">
+                  Practice at your own pace. No timer. No pressure.
                 </p>
               </CardContent>
               <CardFooter>
@@ -46,25 +45,24 @@ export default function ModeSelection({ year, division }: ModeSelectionProps) {
                   passHref
                   className="w-full"
                 >
-                  <Button className="w-full obob-btn-solo text-white border-0 font-semibold">
-                    <User className="mr-2 h-4 w-4" /> Play solo
+                  <Button className="w-full obob-btn-solo rounded-none h-11">
+                    <User className="mr-2 h-4 w-4" /> Solo
                   </Button>
                 </Link>
               </CardFooter>
             </Card>
-            <Card className="obob-card flex-1 rounded-xl overflow-hidden">
+            <Card className="obob-card flex-1 rounded-none border-0">
               <CardHeader className="pb-2">
-                <CardTitle className="font-[family-name:var(--font-playfair)] text-[hsl(var(--obob-bark))]">
-                  Friend battle
+                <CardTitle className="font-black text-[hsl(var(--obob-bone))] uppercase tracking-wide text-base">
+                  Friend Battle
                 </CardTitle>
-                <CardDescription className="text-[hsl(var(--obob-bark))] opacity-60">
-                  Practice a real<i>ish</i> OBOB battle
+                <CardDescription className="text-[hsl(var(--obob-smoke))] text-xs uppercase tracking-wider">
+                  Real battle mode
                 </CardDescription>
               </CardHeader>
               <CardContent className="pb-4">
-                <p className="text-sm text-[hsl(var(--obob-bark))] opacity-80 leading-relaxed">
-                  Have a friend or parent read timed questions aloud to you or
-                  your team.
+                <p className="text-sm text-[hsl(var(--obob-smoke))] leading-relaxed">
+                  Timed questions. A friend reads aloud. You answer.
                 </p>
               </CardContent>
               <CardFooter>
@@ -73,31 +71,30 @@ export default function ModeSelection({ year, division }: ModeSelectionProps) {
                   passHref
                   className="w-full"
                 >
-                  <Button className="w-full obob-btn-friend text-white border-0 font-semibold">
-                    <Users className="mr-2 h-4 w-4" /> Play with friends
+                  <Button className="w-full obob-btn-friend rounded-none h-11">
+                    <Users className="mr-2 h-4 w-4" /> Squad
                   </Button>
                 </Link>
               </CardFooter>
             </Card>
           </div>
-          <Card className="obob-card rounded-xl overflow-hidden">
+          <Card className="obob-card rounded-none border-0">
             <CardHeader className="pb-2">
               <div className="flex items-center gap-3">
-                <CardTitle className="font-[family-name:var(--font-playfair)] text-[hsl(var(--obob-bark))]">
-                  Mock battle
+                <CardTitle className="font-black text-[hsl(var(--obob-bone))] uppercase tracking-wide text-base">
+                  Mock Battle
                 </CardTitle>
-                <span className="obob-badge-new text-xs px-2.5 py-1 rounded-full">
-                  New!
+                <span className="obob-badge-new px-2 py-0.5 rounded-none">
+                  New
                 </span>
               </div>
-              <CardDescription className="text-[hsl(var(--obob-bark))] opacity-60">
-                Coaches and parents this one is for you!
+              <CardDescription className="text-[hsl(var(--obob-smoke))] text-xs uppercase tracking-wider">
+                For coaches & parents
               </CardDescription>
             </CardHeader>
             <CardContent className="pb-4">
-              <p className="text-sm text-[hsl(var(--obob-bark))] opacity-80 leading-relaxed">
-                Moderate a live in-person battle between two teams with timed
-                questions, scoring, and steals.
+              <p className="text-sm text-[hsl(var(--obob-smoke))] leading-relaxed">
+                Moderate live battles. Two teams. Timed rounds. Steals enabled.
               </p>
             </CardContent>
             <CardFooter>
@@ -106,8 +103,8 @@ export default function ModeSelection({ year, division }: ModeSelectionProps) {
                 passHref
                 className="w-full"
               >
-                <Button className="w-full obob-btn-mock text-white border-0 font-semibold">
-                  <Trophy className="mr-2 h-4 w-4" /> Moderate a mock battle
+                <Button className="w-full obob-btn-mock rounded-none h-11">
+                  <Trophy className="mr-2 h-4 w-4" /> Moderate
                 </Button>
               </Link>
             </CardFooter>
@@ -117,28 +114,27 @@ export default function ModeSelection({ year, division }: ModeSelectionProps) {
 
       {/* Games Section */}
       <div>
-        <h2 className="text-2xl font-bold mb-6 text-center font-[family-name:var(--font-playfair)] text-[hsl(var(--obob-bark))]">
-          <span className="obob-section-title">OBOB Games</span>
+        <h2 className="text-xl font-black mb-8 text-center text-[hsl(var(--obob-bone))]">
+          <span className="obob-section-title">Games</span>
         </h2>
         <div className="space-y-4">
-          <Card className="obob-card rounded-xl overflow-hidden">
+          <Card className="obob-card rounded-none border-0">
             <CardHeader className="pb-2">
               <div className="flex items-center gap-3">
-                <CardTitle className="font-[family-name:var(--font-playfair)] italic text-[hsl(var(--obob-bark))]">
+                <CardTitle className="font-black text-[hsl(var(--obob-bone))] uppercase tracking-wide text-base italic">
                   Zoomies
                 </CardTitle>
-                <span className="obob-badge-new text-xs px-2.5 py-1 rounded-full">
-                  New!
+                <span className="obob-badge-new px-2 py-0.5 rounded-none">
+                  New
                 </span>
               </div>
-              <CardDescription className="text-[hsl(var(--obob-bark))] opacity-60">
-                Super fast-paced &quot;in which book&quot; questions
+              <CardDescription className="text-[hsl(var(--obob-smoke))] text-xs uppercase tracking-wider">
+                Speed round
               </CardDescription>
             </CardHeader>
             <CardContent className="pb-4">
-              <p className="text-sm text-[hsl(var(--obob-bark))] opacity-80 leading-relaxed">
-                15 seconds per question. Build streaks, earn combos, and compete
-                for top dog!
+              <p className="text-sm text-[hsl(var(--obob-smoke))] leading-relaxed">
+                15 seconds. Build streaks. Earn combos. Top dog wins.
               </p>
             </CardContent>
             <CardFooter>
@@ -147,27 +143,24 @@ export default function ModeSelection({ year, division }: ModeSelectionProps) {
                 passHref
                 className="w-full"
               >
-                <Button className="w-full obob-btn-zoomies text-white border-0 font-semibold">
-                  <Dog className="mr-2 h-4 w-4" /> Play Zoomies
+                <Button className="w-full obob-btn-zoomies rounded-none h-11">
+                  <Dog className="mr-2 h-4 w-4" /> Zoomies
                 </Button>
               </Link>
             </CardFooter>
           </Card>
-          <Card className="obob-card rounded-xl overflow-hidden">
+          <Card className="obob-card rounded-none border-0">
             <CardHeader className="pb-2">
-              <div className="flex items-center gap-3">
-                <CardTitle className="font-[family-name:var(--font-playfair)] text-[hsl(var(--obob-bark))]">
-                  Author Match
-                </CardTitle>
-              </div>
-              <CardDescription className="text-[hsl(var(--obob-bark))] opacity-60">
-                Match books to their authors
+              <CardTitle className="font-black text-[hsl(var(--obob-bone))] uppercase tracking-wide text-base">
+                Author Match
+              </CardTitle>
+              <CardDescription className="text-[hsl(var(--obob-smoke))] text-xs uppercase tracking-wider">
+                Memory game
               </CardDescription>
             </CardHeader>
             <CardContent className="pb-4">
-              <p className="text-sm text-[hsl(var(--obob-bark))] opacity-80 leading-relaxed">
-                Play a memory-style game matching book titles with their
-                authors. Race against the clock!
+              <p className="text-sm text-[hsl(var(--obob-smoke))] leading-relaxed">
+                Match books to authors. Race the clock. Don&apos;t mess up.
               </p>
             </CardContent>
             <CardFooter>
@@ -176,18 +169,20 @@ export default function ModeSelection({ year, division }: ModeSelectionProps) {
                 passHref
                 className="w-full"
               >
-                <Button className="w-full obob-btn-author text-white border-0 font-semibold">
-                  <Grid2X2 className="mr-2 h-4 w-4" /> Play Author Match
+                <Button className="w-full obob-btn-author rounded-none h-11">
+                  <Grid2X2 className="mr-2 h-4 w-4" /> Match
                 </Button>
               </Link>
             </CardFooter>
           </Card>
 
-          {/* Coming Soon indicator */}
-          <div className="flex items-center justify-center gap-3 text-[hsl(var(--obob-bark))] opacity-50 py-6">
-            <Sparkles className="h-4 w-4 text-[hsl(var(--obob-amber))]" />
-            <span className="text-sm font-medium">More games coming soon!</span>
-            <Sparkles className="h-4 w-4 text-[hsl(var(--obob-amber))]" />
+          {/* Coming Soon */}
+          <div className="flex items-center justify-center gap-3 text-[hsl(var(--obob-smoke))] py-8">
+            <Zap className="h-4 w-4 text-[hsl(var(--obob-volt))]" />
+            <span className="text-xs font-bold uppercase tracking-[0.2em]">
+              More games loading...
+            </span>
+            <Zap className="h-4 w-4 text-[hsl(var(--obob-volt))]" />
           </div>
         </div>
       </div>

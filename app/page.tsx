@@ -1,5 +1,5 @@
 "use client";
-import { BookOpen, Dog, Zap, TreePine, Sparkles } from "lucide-react";
+import { BookOpen, Dog, Zap, Swords, Flame } from "lucide-react";
 import ModeSelection from "@/components/ModeSelection";
 import Link from "next/link";
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
@@ -12,7 +12,6 @@ export default function Home() {
   const year = CURRENT_YEAR;
   const [division, setDivision] = useState<string>("3-5");
 
-  // Get question count for current year/division
   const getQuestionCount = () => {
     const count =
       questionCounts[year as keyof typeof questionCounts]?.[
@@ -22,39 +21,35 @@ export default function Home() {
   };
 
   return (
-    <main className="obob-hero-bg min-h-screen -mx-2 -my-2 px-2 py-2">
-      {/* Decorative floating elements */}
-      <div className="absolute top-20 left-10 opacity-20 animate-float hidden md:block">
-        <TreePine className="h-16 w-16 text-[hsl(var(--obob-forest))]" />
-      </div>
-      <div className="absolute top-40 right-12 opacity-15 animate-float-delayed hidden md:block">
-        <Sparkles className="h-12 w-12 text-[hsl(var(--obob-amber))]" />
-      </div>
-
+    <main className="obob-hero-bg min-h-screen -mx-2 -my-2 px-4 py-6 relative z-10">
       {/* Hero Section */}
-      <section className="max-w-2xl mx-auto space-y-6 mb-10 mt-6 relative">
-        {/* Main Title */}
-        <div className="text-center animate-fade-up">
-          <h1 className="font-[family-name:var(--font-playfair)] text-5xl md:text-6xl font-black tracking-tight obob-title mb-3">
-            OBOB.dog
+      <section className="max-w-2xl mx-auto space-y-8 mb-12 mt-8">
+        {/* Main Title - Brutal */}
+        <div className="text-center animate-slice-in">
+          <h1 className="text-6xl md:text-8xl font-black tracking-tighter obob-title mb-2">
+            OBOB
+            <span className="text-[hsl(var(--obob-electric))]">.</span>
+            dog
           </h1>
-          <div className="flex items-center justify-center gap-2">
-            <div className="h-px w-12 bg-gradient-to-r from-transparent to-[hsl(var(--obob-amber))]" />
-            <Dog className="h-5 w-5 text-[hsl(var(--obob-amber))]" />
-            <div className="h-px w-12 bg-gradient-to-l from-transparent to-[hsl(var(--obob-amber))]" />
+          <div className="flex items-center justify-center gap-3 mt-4">
+            <div className="h-[2px] w-16 bg-gradient-to-r from-transparent to-[hsl(var(--obob-electric))]" />
+            <Swords className="h-5 w-5 text-[hsl(var(--obob-electric))] animate-glitch-flicker" />
+            <div className="h-[2px] w-16 bg-gradient-to-l from-transparent to-[hsl(var(--obob-electric))]" />
           </div>
         </div>
 
-        {/* Tagline */}
-        <p className="text-xl text-center text-[hsl(var(--obob-bark))] opacity-80 animate-fade-up animate-delay-1 max-w-md mx-auto leading-relaxed">
-          Read, practice, and have fun with Oregon Battle of the Books
+        {/* Tagline - harsh */}
+        <p className="text-lg text-center text-[hsl(var(--obob-smoke))] animate-glitch-in animate-delay-1 max-w-lg mx-auto font-medium tracking-wide">
+          Oregon Battle of the Books
+          <span className="text-[hsl(var(--obob-electric))]"> // </span>
+          <span className="text-[hsl(var(--obob-bone))]">READ. BATTLE. WIN.</span>
         </p>
 
-        {/* Division Selector */}
-        <div className="max-w-md mx-auto pt-2 animate-fade-up animate-delay-2">
-          <div className="obob-division-toggle rounded-xl p-5">
-            <p className="text-sm font-semibold text-[hsl(var(--obob-forest))] text-center mb-4 uppercase tracking-wide">
-              2025-2026 Division
+        {/* Division Selector - brutal box */}
+        <div className="max-w-sm mx-auto animate-glitch-in animate-delay-2">
+          <div className="obob-division-toggle rounded-none p-4">
+            <p className="text-xs font-bold text-[hsl(var(--obob-electric))] text-center mb-4 uppercase tracking-[0.2em]">
+              Select Division
             </p>
             <ToggleGroup
               type="single"
@@ -62,120 +57,107 @@ export default function Home() {
               onValueChange={(value) => {
                 if (value) setDivision(value);
               }}
-              className="justify-center gap-2"
+              className="justify-center gap-1"
             >
               <ToggleGroupItem
                 value="3-5"
                 aria-label="Elementary Division"
-                className="obob-division-btn px-5 py-2 rounded-lg font-medium"
+                className="obob-division-btn px-4 py-2 rounded-none"
               >
-                Elementary
+                3-5
               </ToggleGroupItem>
               <ToggleGroupItem
                 value="6-8"
                 aria-label="Middle School Division"
-                className="obob-division-btn px-5 py-2 rounded-lg font-medium"
+                className="obob-division-btn px-4 py-2 rounded-none"
               >
-                Middle
+                6-8
               </ToggleGroupItem>
               <ToggleGroupItem
                 value="9-12"
                 aria-label="High School Division"
-                className="obob-division-btn px-5 py-2 rounded-lg font-medium"
+                className="obob-division-btn px-4 py-2 rounded-none"
               >
-                High
+                9-12
               </ToggleGroupItem>
             </ToggleGroup>
           </div>
         </div>
 
-        {/* Stats Row */}
-        <div className="flex justify-center gap-8 md:gap-12 pt-4 animate-fade-up animate-delay-3">
+        {/* Stats Row - harsh boxes */}
+        <div className="flex justify-center gap-6 md:gap-10 pt-2 animate-glitch-in animate-delay-3">
           <Link
             href={`/books/${year}/${division}`}
-            className="obob-stat flex items-center gap-3 group cursor-pointer"
+            className="obob-stat flex flex-col items-center gap-1 group cursor-pointer px-4 py-3"
           >
-            <div className="p-2.5 rounded-xl bg-[hsl(var(--obob-forest)/0.1)] group-hover:bg-[hsl(var(--obob-forest)/0.15)] transition-colors">
-              <BookOpen className="h-5 w-5 text-[hsl(var(--obob-forest))]" />
-            </div>
-            <div>
-              <p className="text-2xl font-bold text-[hsl(var(--obob-bark))] font-[family-name:var(--font-playfair)]">
-                {division === "9-12" ? "12" : "16"}
-              </p>
-              <p className="text-xs text-[hsl(var(--obob-bark))] opacity-60 uppercase tracking-wide">
-                Books
-              </p>
-            </div>
+            <BookOpen className="h-6 w-6 text-[hsl(var(--obob-plasma))] mb-1" />
+            <p className="text-3xl font-black text-[hsl(var(--obob-bone))] tracking-tight">
+              {division === "9-12" ? "12" : "16"}
+            </p>
+            <p className="text-[10px] text-[hsl(var(--obob-smoke))] uppercase tracking-[0.2em] font-bold">
+              Books
+            </p>
           </Link>
 
-          <div className="obob-stat flex items-center gap-3">
-            <div className="p-2.5 rounded-xl bg-[hsl(var(--obob-amber)/0.15)]">
-              <Zap className="h-5 w-5 text-[hsl(var(--obob-amber))]" />
-            </div>
-            <div>
-              <p className="text-2xl font-bold text-[hsl(var(--obob-bark))] font-[family-name:var(--font-playfair)]">
-                {getQuestionCount()}
-              </p>
-              <p className="text-xs text-[hsl(var(--obob-bark))] opacity-60 uppercase tracking-wide">
-                Questions
-              </p>
-            </div>
+          <div className="obob-stat flex flex-col items-center gap-1 px-4 py-3">
+            <Zap className="h-6 w-6 text-[hsl(var(--obob-volt))] mb-1" />
+            <p className="text-3xl font-black text-[hsl(var(--obob-bone))] tracking-tight">
+              {getQuestionCount()}
+            </p>
+            <p className="text-[10px] text-[hsl(var(--obob-smoke))] uppercase tracking-[0.2em] font-bold">
+              Questions
+            </p>
           </div>
 
-          <div className="obob-stat flex items-center gap-3">
-            <div className="p-2.5 rounded-xl bg-[hsl(var(--obob-forest)/0.1)]">
-              <Dog className="h-5 w-5 text-[hsl(var(--obob-forest))]" />
-            </div>
-            <div>
-              <p className="text-2xl font-bold text-[hsl(var(--obob-bark))] font-[family-name:var(--font-playfair)]">
-                1
-              </p>
-              <p className="text-xs text-[hsl(var(--obob-bark))] opacity-60 uppercase tracking-wide">
-                Good Dog
-              </p>
-            </div>
+          <div className="obob-stat flex flex-col items-center gap-1 px-4 py-3">
+            <Flame className="h-6 w-6 text-[hsl(var(--obob-ember))] mb-1" />
+            <p className="text-3xl font-black text-[hsl(var(--obob-bone))] tracking-tight">
+              ∞
+            </p>
+            <p className="text-[10px] text-[hsl(var(--obob-smoke))] uppercase tracking-[0.2em] font-bold">
+              Battles
+            </p>
           </div>
         </div>
       </section>
 
       {/* Mode Selection */}
-      <div className="animate-fade-up animate-delay-4">
+      <div className="animate-glitch-in animate-delay-4">
         <ModeSelection year={year} division={division} />
       </div>
 
-      {/* Decorative Separator */}
-      <div className="max-w-2xl mx-auto my-12 animate-fade-up animate-delay-5">
+      {/* Harsh Separator */}
+      <div className="max-w-2xl mx-auto my-16 animate-glitch-in animate-delay-5">
         <div className="flex items-center gap-4">
-          <div className="flex-1 h-px bg-gradient-to-r from-transparent via-[hsl(var(--obob-cream-dark))] to-transparent" />
-          <TreePine className="h-4 w-4 text-[hsl(var(--obob-forest))] opacity-30" />
-          <div className="flex-1 h-px bg-gradient-to-r from-transparent via-[hsl(var(--obob-cream-dark))] to-transparent" />
+          <div className="flex-1 h-[2px] bg-[hsl(var(--obob-steel))]" />
+          <Dog className="h-5 w-5 text-[hsl(var(--obob-electric))]" />
+          <div className="flex-1 h-[2px] bg-[hsl(var(--obob-steel))]" />
         </div>
       </div>
 
-      {/* Contribution Callout */}
-      <section className="max-w-2xl mx-auto mb-8 animate-fade-up animate-delay-6">
-        <div className="obob-contribute rounded-xl p-6">
-          <div className="flex items-start gap-4">
-            <div className="flex-shrink-0 p-3 rounded-xl bg-[hsl(var(--obob-amber)/0.1)]">
-              <BookOpen className="h-6 w-6 text-[hsl(var(--obob-amber))]" />
+      {/* Contribution Callout - brutal */}
+      <section className="max-w-2xl mx-auto mb-8 animate-glitch-in animate-delay-6">
+        <div className="obob-contribute rounded-none p-6">
+          <div className="flex items-start gap-5 pl-4">
+            <div className="flex-shrink-0">
+              <BookOpen className="h-8 w-8 text-[hsl(var(--obob-electric))]" />
             </div>
             <div className="flex-1">
-              <h3 className="text-lg font-bold text-[hsl(var(--obob-bark))] mb-2 font-[family-name:var(--font-playfair)]">
-                Help improve OBOB.dog!
+              <h3 className="text-lg font-black text-[hsl(var(--obob-bone))] mb-2 uppercase tracking-wide">
+                Join the Squad
               </h3>
-              <p className="text-[hsl(var(--obob-bark))] opacity-70 mb-4 leading-relaxed">
-                Interested in contributing new questions to OBOB.dog? You can
-                help make it better for everyone.
+              <p className="text-[hsl(var(--obob-smoke))] mb-4 leading-relaxed text-sm">
+                Want to contribute questions? Help make OBOB.dog better for everyone.
               </p>
               <Link
                 href="https://blog.obob.dog/3lyiutdo3zk2l"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-[hsl(var(--obob-forest))] font-semibold hover:text-[hsl(var(--obob-forest-light))] transition-colors group"
+                className="inline-flex items-center gap-2 text-[hsl(var(--obob-electric))] font-bold uppercase tracking-wide text-sm hover:text-[hsl(var(--obob-volt))] transition-colors group"
               >
-                Read our contribution guide
-                <span className="group-hover:translate-x-1 transition-transform">
-                  &rarr;
+                Read the Guide
+                <span className="group-hover:translate-x-1 transition-transform font-mono">
+                  →
                 </span>
               </Link>
             </div>
