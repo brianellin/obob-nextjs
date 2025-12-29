@@ -79,6 +79,7 @@
 
 .font-luckiest-guy {
   font-family: var(--font-luckiest-guy), cursive;
+  letter-spacing: 0.04em;
 }
 
 /* Card match jiggle animation */
