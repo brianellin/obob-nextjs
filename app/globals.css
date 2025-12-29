@@ -77,6 +77,10 @@
   }
 }
 
+.font-luckiest-guy {
+  font-family: var(--font-luckiest-guy), cursive;
+}
+
 /* Card match jiggle animation */
 @keyframes card-jiggle {
   0%, 100% {
