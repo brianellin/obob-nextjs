@@ -1,6 +1,7 @@
 import { MetadataRoute } from "next";
 import fs from "fs/promises";
 import path from "path";
+import { getBlogSlugs } from "@/lib/blog";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = "https://obob.dog";
@@ -38,7 +39,24 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: "monthly",
       priority: 0.5,
     },
+    {
+      url: `${baseUrl}/blog`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
   ];
+
+  // Add blog posts
+  const blogSlugs = getBlogSlugs();
+  for (const slug of blogSlugs) {
+    sitemap.push({
+      url: `${baseUrl}/blog/${slug}`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.6,
+    });
+  }
 
   // Add division pages
   for (const { year, division } of yearDivisions) {

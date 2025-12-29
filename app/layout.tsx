@@ -34,6 +34,12 @@ export default function RootLayout({
           type="image/png"
           sizes="32x32"
         />
+        <link
+          rel="alternate"
+          type="application/rss+xml"
+          title="OBOB.dog Blog"
+          href="/feed.xml"
+        />
       </head>
       <body className={`${inter.className} ${playfairDisplay.variable}`}>
         <PostHogProvider>

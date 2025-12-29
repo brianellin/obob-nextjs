@@ -67,12 +67,12 @@ export default function Header() {
                 </SheetClose>
 
                 <SheetClose asChild>
-                  <button
-                    onClick={handleBlueskyClick}
-                    className="text-lg hover:text-gray-600 transition-colors text-left"
+                  <Link
+                    href="/blog"
+                    className="text-lg hover:text-gray-600 transition-colors"
                   >
-                    News / Blog
-                  </button>
+                    Blog
+                  </Link>
                 </SheetClose>
                 <SheetClose asChild>
                   <Link
