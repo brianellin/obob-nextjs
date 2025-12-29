@@ -76,7 +76,7 @@ describe("SEO Image Optimization", () => {
           try {
             const stats = await fs.stat(coverPath);
             expect(stats.isFile()).toBe(true);
-          } catch (error) {
+          } catch {
             throw new Error(`Cover image not found: ${coverPath} for ${book.title}`);
           }
         }
@@ -98,7 +98,7 @@ describe("SEO Image Optimization", () => {
             const stats = await fs.stat(coverPath);
             expect(stats.size).toBeGreaterThan(MIN_SIZE);
             expect(stats.size).toBeLessThan(MAX_SIZE);
-          } catch (error) {
+          } catch {
             // If file doesn't exist, that's caught by previous test
             continue;
           }

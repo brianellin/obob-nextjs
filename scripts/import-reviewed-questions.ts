@@ -112,7 +112,7 @@ async function addQuestionsToFile(year: string, division: string, newQuestions: 
   try {
     const content = await fs.readFile(questionsPath, 'utf-8');
     questionsFile = JSON.parse(content);
-  } catch (error) {
+  } catch {
     console.log(`⚠️  Creating new questions file at ${questionsPath}`);
     questionsFile = { questions: [] };
 

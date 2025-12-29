@@ -1,6 +1,6 @@
 import fs from 'fs/promises';
 import path from 'path';
-import { Question } from '@/types';
+import { Question, ContentQuestion } from '@/types';
 
 interface DuplicateInfo {
   text: string;
@@ -73,7 +73,7 @@ async function analyzeDuplicates() {
             allDuplicates.set(globalKey, {
               text: question.text,
               book_key: question.book_key,
-              answer: (question as any).answer,
+              answer: question.type === 'content' ? (question as ContentQuestion).answer : undefined,
               page: question.page,
               occurrences: [
                 {

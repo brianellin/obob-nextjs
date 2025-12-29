@@ -275,7 +275,7 @@ async function processFeedbackRow(row: FeedbackRow): Promise<ProcessingResult> {
     try {
       const content = await fs.readFile(questionFilePath, 'utf-8');
       questionsFile = JSON.parse(content);
-    } catch (error) {
+    } catch {
       return {
         success: false,
         rowIndex: row.rowIndex,

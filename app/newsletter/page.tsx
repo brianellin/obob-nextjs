@@ -1,5 +1,4 @@
 import { Metadata } from "next";
-import { Mail } from "lucide-react";
 import { WavyUnderline } from "@/components/WavyUnderline";
 import {
   Card,
@@ -32,7 +31,7 @@ export default function NewsletterPage() {
           </CardTitle>
           <CardDescription>
             Get occasional updates from OBOB.dog about new games, battle
-            features, and new questions. We won't ever share or sell your info.
+            features, and new questions. We won&apos;t ever share or sell your info.
           </CardDescription>
         </CardHeader>
         <CardContent>

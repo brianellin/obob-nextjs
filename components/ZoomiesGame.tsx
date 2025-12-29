@@ -209,7 +209,7 @@ export default function ZoomiesGame({
   const [showConfetti, setShowConfetti] = useState(false);
   const [comboMultiplier, setComboMultiplier] = useState(1);
   const [selectedBooks, setSelectedBooks] = useState<Book[]>(books);
-  const [usedCustomBooks, setUsedCustomBooks] = useState(false);
+  const [, setUsedCustomBooks] = useState(false);
   const [bookSelectionSet, setBookSelectionSet] = useState<Set<string>>(
     () => new Set()
   );

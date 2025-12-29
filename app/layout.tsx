@@ -1,18 +1,12 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { Inter, Playfair_Display } from "next/font/google";
+import "@fontsource-variable/inter";
+import "@fontsource-variable/playfair-display";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import NewsletterBanner from "@/components/NewsletterBanner";
 import { Analytics } from "@vercel/analytics/react";
 import { PostHogProvider } from "./providers";
-
-const inter = Inter({ subsets: ["latin"] });
-export const playfairDisplay = Playfair_Display({
-  subsets: ["latin"],
-  weight: ["700", "800", "900"],
-  variable: "--font-playfair",
-});
 
 export const metadata: Metadata = {
   title: "OBOB Questions and Battles",
@@ -35,7 +29,7 @@ export default function RootLayout({
           sizes="32x32"
         />
       </head>
-      <body className={`${inter.className} ${playfairDisplay.variable}`}>
+      <body className="font-sans">
         <PostHogProvider>
           <NewsletterBanner />
           <Header />

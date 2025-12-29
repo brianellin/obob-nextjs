@@ -74,6 +74,10 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-family: 'Inter Variable', ui-sans-serif, system-ui, sans-serif;
+  }
+  :root {
+    --font-playfair: 'Playfair Display Variable', serif;
   }
 }
 

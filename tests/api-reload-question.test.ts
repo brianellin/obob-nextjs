@@ -41,7 +41,7 @@ async function getTestYearDivision(): Promise<{ year: string; division: string; 
               cachedTestData = { year, division, books: bookArray };
               return cachedTestData;
             }
-          } catch (error) {
+          } catch {
             continue;
           }
         }
@@ -53,7 +53,7 @@ async function getTestYearDivision(): Promise<{ year: string; division: string; 
 }
 
 // Helper to create a mock Request object
-function createMockRequest(body: any): Request {
+function createMockRequest(body: Record<string, unknown>): Request {
   return new Request('http://localhost:3000/api/questions/reload', {
     method: 'POST',
     headers: {
@@ -103,7 +103,7 @@ describe('API Reload Question Route', () => {
       expect(data.question).toBeDefined();
       expect(data.question.type).toBe('in-which-book');
       // in-which-book questions should not have an answer field
-      expect((data.question as any).answer).toBeUndefined();
+      expect('answer' in data.question ? data.question.answer : undefined).toBeUndefined();
     });
 
     it('should return a question when requesting both type', async () => {

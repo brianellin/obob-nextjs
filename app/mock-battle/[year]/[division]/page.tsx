@@ -114,7 +114,7 @@ function MockBattleContent() {
               <ul className="list-disc list-inside space-y-1 text-gray-700">
                 <li>
                   You will moderate this simulation of a real OBOB battle. Read
-                  the questions aloud and record whether each team's responses
+                  the questions aloud and record whether each team&apos;s responses
                   are correct, partially correct, or incorrect.{" "}
                 </li>
 
@@ -132,7 +132,7 @@ function MockBattleContent() {
                 </li>
 
                 <li>
-                  At the end of the battle you'll get a report with how each
+                  At the end of the battle you&apos;ll get a report with how each
                   team answered each question and the total score.
                 </li>
               </ul>

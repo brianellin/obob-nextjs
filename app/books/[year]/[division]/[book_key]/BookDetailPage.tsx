@@ -14,7 +14,6 @@ import {
   ArrowLeft,
   Plus,
   Download,
-  Swords,
   User,
   Users,
 } from "lucide-react";
