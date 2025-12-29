@@ -250,21 +250,41 @@ export default function CollaborativeCrossword({
     // Mark that we're applying remote answers to prevent re-POSTing
     isApplyingRemoteAnswersRef.current = true;
 
-    Object.entries(answers).forEach(([cellKey, letter]) => {
+    const entries = Object.entries(answers);
+    let applied = 0;
+
+    // Apply answers with a small delay between each to avoid overwhelming the library
+    const applyNext = () => {
+      if (applied >= entries.length) {
+        // All done - reset flag after a delay for any pending callbacks
+        setTimeout(() => {
+          isApplyingRemoteAnswersRef.current = false;
+        }, 100);
+        return;
+      }
+
+      const [cellKey, letter] = entries[applied];
       const [row, col] = cellKey.split(",").map(Number);
       try {
         crosswordRef.current?.setGuess(row, col, letter);
-        // Track with cellKey:letter format for consistency
         appliedAnswersRef.current.add(`${cellKey}:${letter}`);
       } catch (err) {
         console.warn(`Failed to set guess at ${row},${col}:`, err);
       }
-    });
 
-    // Reset flag after a short delay to allow all setGuess calls to complete
-    setTimeout(() => {
-      isApplyingRemoteAnswersRef.current = false;
-    }, 100);
+      applied++;
+      // Small delay between calls to let the library process each one
+      if (applied < entries.length) {
+        setTimeout(applyNext, 10);
+      } else {
+        // Last one - reset flag after delay
+        setTimeout(() => {
+          isApplyingRemoteAnswersRef.current = false;
+        }, 100);
+      }
+    };
+
+    applyNext();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [crosswordReady]);
 
