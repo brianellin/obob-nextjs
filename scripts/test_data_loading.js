@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+/* eslint-disable @typescript-eslint/no-var-requires */
 
 // Quick test script to check if the 2025-2026 data loads correctly
 const fs = require('fs');

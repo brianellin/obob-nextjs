@@ -1,8 +1,17 @@
-import { describe, it, expect, beforeAll } from 'vitest';
+import { describe, it, expect } from 'vitest';
 import { POST } from '@/app/api/questions/battle/route';
 import type { Book, QuestionWithBook } from '@/types';
 import fs from 'fs/promises';
 import path from 'path';
+
+// Type for API request body
+type BattleRequestBody = {
+  selectedBooks?: Book[];
+  questionCount?: number;
+  questionType?: 'in-which-book' | 'content' | 'both';
+  year?: string;
+  division?: string;
+};
 
 // Cached test data to avoid repeated filesystem reads
 let cachedTestData: { year: string; division: string; books: Book[] } | null = null;
@@ -53,7 +62,7 @@ async function getTestYearDivision(): Promise<{ year: string; division: string; 
 }
 
 // Helper to create a mock Request object
-function createMockRequest(body: any): Request {
+function createMockRequest(body: BattleRequestBody): Request {
   return new Request('http://localhost:3000/api/questions/battle', {
     method: 'POST',
     headers: {
@@ -180,7 +189,7 @@ describe('API Battle Questions Route', () => {
       data.questions.forEach((question: QuestionWithBook) => {
         expect(question.type).toBe('in-which-book');
         // in-which-book questions should not have an answer field
-        expect((question as any).answer).toBeUndefined();
+        expect('answer' in question ? question.answer : undefined).toBeUndefined();
       });
     });
 

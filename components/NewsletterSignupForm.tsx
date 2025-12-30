@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Send, PawPrint, Mail } from "lucide-react";
+import { PawPrint, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
@@ -212,7 +212,7 @@ export default function NewsletterSignupForm() {
       </Button>
 
       <p className="text-xs text-gray-500 text-center">
-        We won't ever share or sell your info. Unsubscribe anytime.
+        We won&apos;t ever share or sell your info. Unsubscribe anytime.
       </p>
     </form>
   );

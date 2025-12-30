@@ -6,7 +6,6 @@ import type { QuestionWithBook } from "@/types";
 import Confetti from "react-confetti";
 import { useWindowSize } from "react-use";
 import { Trophy, Award } from "lucide-react";
-import { WavyUnderline } from "@/components/WavyUnderline";
 
 type QuestionResult = {
   question: QuestionWithBook;
@@ -142,7 +141,6 @@ export default function MockBattleResults({
           <div className="space-y-4">
             <h3 className="font-semibold text-lg">Battle review:</h3>
             {questionResults.map((result, index) => {
-              const displayTeam = result.stolenBy || result.team;
               const wasStolen = !!result.stolenBy && result.pointsAwarded > 0;
 
               return (
