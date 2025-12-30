@@ -186,6 +186,7 @@ export default function CollaborativeCrossword({
   const syncAbortRef = useRef<AbortController | null>(null);
   const isApplyingRemoteAnswersRef = useRef(false);
   const appliedAnswersRef = useRef<Set<string>>(new Set());
+  const knownAnswersRef = useRef<Record<string, string>>({}); // Track current answers to detect deletions
   const crosswordReadyRef = useRef(false);
   const [crosswordReady, setCrosswordReady] = useState(false);
 
@@ -245,6 +246,10 @@ export default function CollaborativeCrossword({
     if (!crosswordReady || !crosswordRef.current) return;
 
     const answers = initialTeamState.answers;
+    
+    // Initialize known answers for deletion tracking
+    knownAnswersRef.current = { ...answers };
+    
     if (!answers || Object.keys(answers).length === 0) return;
 
     // Mark that we're applying remote answers to prevent re-POSTing
@@ -313,6 +318,8 @@ export default function CollaborativeCrossword({
             // Apply answers from server (only if crossword is ready)
             if (crosswordRef.current && data.answers && crosswordReadyRef.current) {
               isApplyingRemoteAnswersRef.current = true;
+              
+              // Apply new/changed answers
               Object.entries(data.answers).forEach(([cellKey, letter]) => {
                 // Only apply if we haven't already set this cell with the same value
                 if (!appliedAnswersRef.current.has(`${cellKey}:${letter}`)) {
@@ -325,6 +332,28 @@ export default function CollaborativeCrossword({
                   }
                 }
               });
+              
+              // Handle deletions: clear cells that were in our known answers but not in server answers
+              Object.keys(knownAnswersRef.current).forEach((cellKey) => {
+                if (!(cellKey in data.answers)) {
+                  const [row, col] = cellKey.split(",").map(Number);
+                  try {
+                    crosswordRef.current?.setGuess(row, col, "");
+                    // Remove from appliedAnswers so future syncs can set this cell
+                    for (const key of appliedAnswersRef.current) {
+                      if (key.startsWith(`${cellKey}:`)) {
+                        appliedAnswersRef.current.delete(key);
+                      }
+                    }
+                  } catch (err) {
+                    console.warn(`Failed to clear cell at ${row},${col}:`, err);
+                  }
+                }
+              });
+              
+              // Update known answers to match server state
+              knownAnswersRef.current = { ...data.answers };
+              
               setTimeout(() => {
                 isApplyingRemoteAnswersRef.current = false;
               }, 100);
@@ -375,13 +404,15 @@ export default function CollaborativeCrossword({
   // Handle letter input
   const handleCellChange = useCallback(
     async (row: number, col: number, char: string) => {
-      // Skip POST if we're applying answers from the server (prevent feedback loop)
-      if (isApplyingRemoteAnswersRef.current) {
-        return;
-      }
-
       // Track this answer locally so we don't re-apply it from sync
       const cellKey = `${row},${col}`;
+      
+      // Skip POST only if this exact cell:letter was just applied from remote sync
+      // (This prevents the feedback loop where we re-POST what we just received)
+      if (isApplyingRemoteAnswersRef.current && appliedAnswersRef.current.has(`${cellKey}:${char}`)) {
+        return;
+      }
+      
       appliedAnswersRef.current.add(`${cellKey}:${char}`);
 
       try {
