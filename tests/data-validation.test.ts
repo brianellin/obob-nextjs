@@ -1,7 +1,7 @@
 import { describe, it, expect } from 'vitest';
 import fs from 'fs/promises';
 import path from 'path';
-import { Book, Books, Question, ContentQuestion, InWhichBookQuestion } from '@/types';
+import { Books, Question, ContentQuestion, InWhichBookQuestion } from '@/types';
 
 // Helper to get all year/division combinations
 async function getAllYearDivisions(): Promise<Array<{ year: string; division: string }>> {
@@ -258,7 +258,7 @@ describe('OBOB Data Validation', () => {
               expect(question.answer.trim().length, `answer should not be empty for question ${questionId}`).toBeGreaterThan(0);
             } else if (isInWhichBookQuestion(question)) {
               // in-which-book questions should NOT have an answer field
-              expect((question as any).answer,
+              expect('answer' in question ? question.answer : undefined,
                 `in-which-book question should not have answer field for ${questionId}`).toBeUndefined();
             }
 

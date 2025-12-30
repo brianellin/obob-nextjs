@@ -209,7 +209,6 @@ export default function ZoomiesGame({
   const [showConfetti, setShowConfetti] = useState(false);
   const [comboMultiplier, setComboMultiplier] = useState(1);
   const [selectedBooks, setSelectedBooks] = useState<Book[]>(books);
-  const [usedCustomBooks, setUsedCustomBooks] = useState(false);
   const [bookSelectionSet, setBookSelectionSet] = useState<Set<string>>(
     () => new Set()
   );
@@ -281,7 +280,6 @@ export default function ZoomiesGame({
       const data = await response.json();
       setQuestions(data.questions);
       setSelectedBooks(booksToUse);
-      setUsedCustomBooks(isCustom);
       setBookMultiplier(multiplier);
       setPhase("playing");
       setCurrentIndex(0);

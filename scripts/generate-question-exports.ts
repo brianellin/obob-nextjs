@@ -30,6 +30,9 @@ type ContentQuestion = BaseQuestion & {
 
 type Question = BaseQuestion | ContentQuestion;
 
+// Question with source name attached (from getAllQuestions)
+type QuestionWithSource = Question & { source_name: string };
+
 async function getQuestionSources(year: string, division: string): Promise<QuestionSource[]> {
   try {
     const sourcesPath = path.join(process.cwd(), 'public', 'obob', year, division, 'sources.json');
@@ -54,7 +57,7 @@ async function getBooks(year: string, division: string): Promise<Book[]> {
   }
 }
 
-async function getAllQuestions(year: string, division: string): Promise<Question[]> {
+async function getAllQuestions(year: string, division: string): Promise<QuestionWithSource[]> {
   try {
     const questionSources = await getQuestionSources(year, division);
     
@@ -103,7 +106,7 @@ function escapeCSV(value: string | number | undefined): string {
 
 async function generateCSVForBook(
   book: Book,
-  questions: Question[],
+  questions: QuestionWithSource[],
   year: string,
   division: string
 ): Promise<void> {
@@ -134,7 +137,7 @@ async function generateCSVForBook(
       escapeCSV(answer),
       escapeCSV(book.author),
       escapeCSV(book.title),
-      escapeCSV((q as any).source_name || ''),
+      escapeCSV(q.source_name || ''),
     ].join(',');
   });
 
@@ -154,7 +157,7 @@ async function generateCSVForBook(
 
 async function generateAllQuestionsCSV(
   books: Book[],
-  questions: Question[],
+  questions: QuestionWithSource[],
   year: string,
   division: string
 ): Promise<void> {
@@ -186,7 +189,7 @@ async function generateAllQuestionsCSV(
       escapeCSV(answer),
       escapeCSV(book?.author || ''),
       escapeCSV(book?.title || ''),
-      escapeCSV((q as any).source_name || ''),
+      escapeCSV(q.source_name || ''),
     ].join(',');
   });
 

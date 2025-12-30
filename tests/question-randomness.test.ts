@@ -587,8 +587,6 @@ describe('Question Selection Randomness', () => {
 
         // With 16 books available, IWB and content should have some overlap but not be identical
         // and content shouldn't be a subset of IWB (which would indicate filtering issue)
-        const overlap = new Set([...iwbBooks].filter(b => contentBooks.has(b)));
-
         // There should be at least some books used for content that aren't used for IWB
         const contentOnlyBooks = new Set([...contentBooks].filter(b => !iwbBooks.has(b)));
 

@@ -103,7 +103,6 @@ export default function QuizPage({
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [showAnswer, setShowAnswer] = useState(false);
   const [quizFinished, setQuizFinished] = useState(false);
-  const [animateScore, setAnimateScore] = useState(false);
   const [showSuccessAnimation, setShowSuccessAnimation] = useState(false);
   const [showPartialAnimation, setShowPartialAnimation] = useState(false);
   const [cardAnimationType, setCardAnimationType] = useState<
@@ -166,6 +165,7 @@ export default function QuizPage({
 
   useEffect(() => {
     loadQuestions();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [selectedBooks, questionCount, questionType, year, division]);
 
   useEffect(() => {
@@ -198,7 +198,7 @@ export default function QuizPage({
   useEffect(() => {
     if (quizFinished) {
       console.log("tracking battleFinished");
-      const battleFinishedData: Record<string, any> = {
+      const battleFinishedData: Record<string, string | number | boolean> = {
         quizMode,
         questionCount,
         questionType,
@@ -225,7 +225,7 @@ export default function QuizPage({
       posthog.capture("battleFinished", battleFinishedData);
     } else {
       console.log("tracking battleStarted");
-      const battleStartedData: Record<string, any> = {
+      const battleStartedData: Record<string, string | number | boolean> = {
         quizMode,
         questionCount,
         questionType,
@@ -242,6 +242,7 @@ export default function QuizPage({
       track("battleStarted", battleStartedData);
       posthog.capture("battleStarted", battleStartedData);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [quizFinished]);
 
   // Track when a new question is shown
@@ -264,6 +265,7 @@ export default function QuizPage({
       track("questionStarted", questionStartedData);
       posthog.capture("questionStarted", questionStartedData);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentQuestionIndex, questions, quizFinished]);
 
   const handleShowAnswer = () => {
@@ -353,22 +355,18 @@ export default function QuizPage({
     // Animate score for perfect answers
     if (points === 5) {
       setSuccessEmojis(getRandomSuccessEmojis());
-      setAnimateScore(true);
       setShowSuccessAnimation(true);
       setCardAnimationType("correct");
       setTimeout(() => {
-        setAnimateScore(false);
         setShowSuccessAnimation(false);
         setCardAnimationType(null);
       }, 800);
     } else if (points === 3) {
       // Partial correct - yellow glow with score animation and progress emojis
       setPartialEmojis(getRandomPartialEmojis());
-      setAnimateScore(true);
       setShowPartialAnimation(true);
       setCardAnimationType("partial");
       setTimeout(() => {
-        setAnimateScore(false);
         setShowPartialAnimation(false);
         setCardAnimationType(null);
       }, 800);
