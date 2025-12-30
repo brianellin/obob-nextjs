@@ -9,9 +9,17 @@ OBOB.dog is a Next.js application for the helping kids practice for the Oregon B
 ## Development Commands
 
 ### Essential Commands
-- `npm run dev` - Start development server
-- `npm run build` - Build for production (auto-runs prebuild scripts)
-- `npm run lint` - Run ESLint
+- `pnpm run dev` - Start development server (logs to `logs/dev.log`)
+- `pnpm run build` - Build for production (auto-runs prebuild scripts)
+- `pnpm run lint` - Run ESLint
+
+### Dev Server Logs
+When the dev server is running, logs are written to `logs/dev.log`. To read recent logs:
+- `tail -n 100 logs/dev.log` - View last 100 lines
+- `tail -f logs/dev.log` - Follow logs in real-time
+- `grep -i error logs/dev.log` - Search for errors
+
+The log file is overwritten each time `pnpm run dev` starts.
 
 ### Build Process
 The build process includes prebuild scripts that MUST run before building:

@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "mkdir -p logs && next dev 2>&1 | tee logs/dev.log",
     "prebuild": "pnpm run test && npx tsx scripts/generate-question-counts.ts && npx tsx scripts/generate-question-exports.ts",
     "build": "next build",
     "start": "next start",
