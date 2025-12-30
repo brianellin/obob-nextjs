@@ -129,9 +129,9 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
       <article className="max-w-3xl mx-auto py-8 px-4">
         <Link
           href="/blog"
-          className="text-sm text-gray-500 hover:text-cyan-500 mb-6 inline-block"
+          className="text-4xl font-bold mb-8 font-luckiest-guy hover:text-cyan-500 transition-colors inline-block"
         >
-          &larr; Back to Blog
+          OBOB.DOG Blog
         </Link>
 
         {post.coverImage && (
