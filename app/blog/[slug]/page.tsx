@@ -126,7 +126,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <article className="max-w-3xl mx-auto py-8">
+      <article className="max-w-3xl mx-auto py-8 px-4">
         <Link
           href="/blog"
           className="text-sm text-gray-500 hover:text-cyan-500 mb-6 inline-block"
