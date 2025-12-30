@@ -43,7 +43,7 @@ export default function Header() {
             </SheetTrigger>
             <SheetContent side="right" className="w-80">
               <SheetHeader>
-                <SheetTitle>OBOB.dog</SheetTitle>
+                <SheetTitle className="font-luckiest-guy text-xl">OBOB.dog</SheetTitle>
               </SheetHeader>
               <nav className="flex flex-col space-y-6 mt-8">
                 <SheetClose asChild>

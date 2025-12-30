@@ -44,7 +44,7 @@ Parse the pasted data and for each row:
      {
        "path": "obobdog_community/questions.json",
        "name": "OBOB.dog Community",
-       "link": "https://blog.obob.dog/3lyiutdo3zk2l"
+       "link": "/blog/obob-dog-community"
      }
      ```
 

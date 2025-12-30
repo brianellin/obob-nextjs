@@ -1,7 +1,7 @@
 import { MetadataRoute } from "next";
 import fs from "fs/promises";
 import path from "path";
-import { getBlogSlugs } from "@/lib/blog";
+import { getAllBlogPostsMeta } from "@/lib/blog";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = "https://obob.dog";
@@ -47,12 +47,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
   ];
 
-  // Add blog posts
-  const blogSlugs = getBlogSlugs();
-  for (const slug of blogSlugs) {
+  // Add blog posts with their actual dates
+  const blogPosts = getAllBlogPostsMeta();
+  for (const post of blogPosts) {
     sitemap.push({
-      url: `${baseUrl}/blog/${slug}`,
-      lastModified: new Date(),
+      url: `${baseUrl}/blog/${post.slug}`,
+      lastModified: new Date(post.date),
       changeFrequency: "monthly",
       priority: 0.6,
     });

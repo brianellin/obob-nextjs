@@ -125,9 +125,7 @@ export default function Home() {
                 help make it better for everyone.
               </p>
               <Link
-                href="https://blog.obob.dog/3lyiutdo3zk2l"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="/blog/obob-dog-community"
                 className="inline-flex items-center text-gray-900 font-medium hover:text-gray-700 transition-colors"
               >
                 Read our contribution guide →

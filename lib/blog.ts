@@ -31,7 +31,7 @@ export function getBlogSlugs(): string[] {
     return [];
   }
   return fs.readdirSync(BLOG_DIR)
-    .filter(file => file.endsWith('.md'))
+    .filter(file => file.endsWith('.md') && file !== 'README.md')
     .map(file => file.replace(/\.md$/, ''));
 }
 
@@ -90,4 +90,24 @@ export async function getAllBlogPosts(): Promise<BlogPost[]> {
   return posts
     .filter((post): post is BlogPost => post !== null)
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+}
+
+export interface AdjacentPosts {
+  prev: BlogPostMeta | null;
+  next: BlogPostMeta | null;
+}
+
+export function getAdjacentPosts(currentSlug: string): AdjacentPosts {
+  const allPosts = getAllBlogPostsMeta(); // Already sorted newest first
+  const currentIndex = allPosts.findIndex(post => post.slug === currentSlug);
+
+  if (currentIndex === -1) {
+    return { prev: null, next: null };
+  }
+
+  // prev = older post (higher index), next = newer post (lower index)
+  const prev = currentIndex < allPosts.length - 1 ? allPosts[currentIndex + 1] : null;
+  const next = currentIndex > 0 ? allPosts[currentIndex - 1] : null;
+
+  return { prev, next };
 }
