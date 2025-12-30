@@ -75,3 +75,72 @@ export function seededPick<T>(array: T[], n: number, random: () => number): T[] 
 export function seededInt(min: number, max: number, random: () => number): number {
   return Math.floor(random() * (max - min + 1)) + min;
 }
+
+/**
+ * Select questions distributed evenly across books with seeded randomness.
+ * Deduplicates by answer to prevent the same word appearing multiple times.
+ *
+ * @param questions - Pool of candidate questions with bookKey and answer properties
+ * @param targetCount - Number of questions to select
+ * @param random - A seeded random function
+ * @returns Array of selected questions with even book distribution
+ */
+export function seededSelectDistributed<T extends { bookKey: string; answer: string }>(
+  questions: T[],
+  targetCount: number,
+  random: () => number
+): T[] {
+  if (questions.length === 0 || targetCount <= 0) {
+    return [];
+  }
+
+  // Deduplicate by answer - first occurrence after shuffle wins
+  const shuffledForDedup = seededShuffle(questions, random);
+  const uniqueByAnswer = new Map<string, T>();
+  for (const q of shuffledForDedup) {
+    if (!uniqueByAnswer.has(q.answer)) {
+      uniqueByAnswer.set(q.answer, q);
+    }
+  }
+  const deduplicatedQuestions = Array.from(uniqueByAnswer.values());
+
+  // Group questions by book
+  const byBook = new Map<string, T[]>();
+  for (const q of deduplicatedQuestions) {
+    const existing = byBook.get(q.bookKey) || [];
+    existing.push(q);
+    byBook.set(q.bookKey, existing);
+  }
+
+  // Shuffle questions within each book
+  for (const [key, bookQuestions] of byBook) {
+    byBook.set(key, seededShuffle(bookQuestions, random));
+  }
+
+  const selected: T[] = [];
+  const bookKeys = seededShuffle(Array.from(byBook.keys()), random); // Randomize book order too
+
+  // Round-robin selection from each book
+  let bookIndex = 0;
+  const usedIndices = new Map<string, number>();
+
+  while (selected.length < targetCount) {
+    const bookKey = bookKeys[bookIndex % bookKeys.length];
+    const bookQuestions = byBook.get(bookKey) || [];
+    const usedIndex = usedIndices.get(bookKey) || 0;
+
+    if (usedIndex < bookQuestions.length) {
+      selected.push(bookQuestions[usedIndex]);
+      usedIndices.set(bookKey, usedIndex + 1);
+    }
+
+    bookIndex++;
+
+    // If we've gone through all books without adding anything, we're out of questions
+    if (bookIndex > bookKeys.length * Math.ceil(targetCount / bookKeys.length)) {
+      break;
+    }
+  }
+
+  return selected;
+}

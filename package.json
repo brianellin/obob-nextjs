@@ -18,7 +18,8 @@
     "generate-counts": "npx tsx scripts/generate-question-counts.ts",
     "generate-exports": "npx tsx scripts/generate-question-exports.ts",
     "import-reviewed": "npx tsx scripts/import-reviewed-questions.ts",
-    "process-feedback": "npx tsx scripts/process-feedback.ts"
+    "process-feedback": "npx tsx scripts/process-feedback.ts",
+    "count-crossword-clues": "npx tsx scripts/count-crossword-clues.ts"
   },
   "dependencies": {
     "@jaredreisinger/react-crossword": "^5.2.0",

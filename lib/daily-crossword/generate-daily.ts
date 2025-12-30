@@ -12,7 +12,7 @@ import { getAllQuestions } from "@/lib/questions";
 import { filterCrosswordQuestions } from "@/lib/crossword/utils";
 import { generateCrossword, type GeneratorOptions } from "@/lib/crossword/generator";
 import type { CrosswordPuzzle } from "@/lib/crossword/types";
-import { createSeededRandom, seededShuffle } from "./seeded-random";
+import { createSeededRandom, seededSelectDistributed } from "./seeded-random";
 import type { DailyPuzzle, SerializedCrosswordPuzzle } from "./types";
 import { getDailyPuzzle, setDailyPuzzle } from "./kv";
 
@@ -168,23 +168,10 @@ export async function generateDailyPuzzle(
     );
   }
 
-  // Deduplicate by answer using seeded random
-  const uniqueByAnswer = new Map<string, (typeof validQuestions)[0]>();
-  const shuffledForDedup = seededShuffle(validQuestions, random);
-  for (const q of shuffledForDedup) {
-    // First occurrence wins (since we shuffled deterministically)
-    if (!uniqueByAnswer.has(q.answer)) {
-      uniqueByAnswer.set(q.answer, q);
-    }
-  }
-  const deduplicatedQuestions = Array.from(uniqueByAnswer.values());
-
-  // Select candidate questions (2x target for optimization)
+  // Select candidate questions with even book distribution and deduplication
+  // Get 2x target for optimization - the generator will pick the best subset
   const candidateCount = DAILY_OPTIONS.targetWords * 2;
-  const candidates = seededShuffle(deduplicatedQuestions, random).slice(
-    0,
-    candidateCount
-  );
+  const candidates = seededSelectDistributed(validQuestions, candidateCount, random);
 
   // Generate puzzle with seeded random
   const puzzle = generateCrossword(candidates, {
