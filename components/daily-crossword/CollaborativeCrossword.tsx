@@ -47,7 +47,6 @@ interface CollaborativeCrosswordProps {
   dateString: string;
   year: string;
   division: string;
-  onExit: () => void;
 }
 
 const CLUE_DELIMITER = "|||";
@@ -178,7 +177,6 @@ export default function CollaborativeCrossword({
   dateString,
   year,
   division,
-  onExit,
 }: CollaborativeCrosswordProps) {
   const posthog = usePostHog();
   const { width, height } = useWindowSize();
@@ -472,10 +470,14 @@ export default function CollaborativeCrossword({
   };
 
   const formatTime = (ms: number) => {
-    const seconds = Math.floor(ms / 1000);
-    const minutes = Math.floor(seconds / 60);
-    const remainingSeconds = seconds % 60;
-    return `${minutes}:${remainingSeconds.toString().padStart(2, "0")}`;
+    const totalMinutes = Math.floor(ms / 1000 / 60);
+    const hours = Math.floor(totalMinutes / 60);
+    const minutes = totalMinutes % 60;
+    
+    if (hours > 0) {
+      return `${hours}h ${minutes}m`;
+    }
+    return `${minutes}m`;
   };
 
   const crosswordTheme = {
@@ -488,8 +490,6 @@ export default function CollaborativeCrossword({
     highlightBackground: "#d4e9ff",
     columnBreakpoint: "9999px",
   };
-
-  const memberCount = Object.keys(members).length + 1; // +1 for self
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -505,7 +505,7 @@ export default function CollaborativeCrossword({
             </div>
 
             <div className="flex items-center gap-4">
-              {/* Team code */}
+              {/* Team code - share button */}
               <button
                 onClick={handleCopyTeamCode}
                 className="flex items-center gap-2 px-3 py-1.5 bg-gray-100 rounded-lg hover:bg-gray-200 transition-colors"
@@ -518,14 +518,25 @@ export default function CollaborativeCrossword({
                 )}
               </button>
 
-              {/* Member count */}
-              <div className="flex items-center gap-1 text-sm text-muted-foreground">
-                <Users className="h-4 w-4" />
-                <span>{memberCount}</span>
+              {/* Team members */}
+              <div className="flex items-center gap-2">
+                <Users className="h-4 w-4 text-muted-foreground" />
+                <div className="flex items-center gap-1">
+                  <div className="flex items-center gap-1 px-2 py-0.5 bg-green-100 rounded-full text-sm">
+                    <div className="w-2 h-2 rounded-full bg-green-500" />
+                    <span className="text-green-800">{nickname}</span>
+                  </div>
+                  {Object.values(members).map((member) => (
+                    <div key={member.sessionId} className="flex items-center gap-1 px-2 py-0.5 bg-blue-100 rounded-full text-sm">
+                      <div className="w-2 h-2 rounded-full bg-blue-500" />
+                      <span className="text-blue-800">{member.nickname}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
 
               {/* Timer */}
-              <div className="flex items-center gap-1 text-sm font-mono">
+              <div className="flex items-center gap-1 text-sm font-mono text-muted-foreground">
                 <Clock className="h-4 w-4" />
                 <span>
                   {completed && completedAt
@@ -533,10 +544,6 @@ export default function CollaborativeCrossword({
                     : formatTime(elapsedTime)}
                 </span>
               </div>
-
-              <Button variant="outline" size="sm" onClick={onExit}>
-                Exit
-              </Button>
             </div>
           </div>
 
@@ -607,26 +614,6 @@ export default function CollaborativeCrossword({
                   correctClues={correctClues}
                   onHelpRequest={handleHelpRequest}
                 />
-              </div>
-
-              {/* Team members */}
-              <div className="bg-white border rounded-lg p-4">
-                <h3 className="font-medium mb-2 flex items-center gap-2">
-                  <Users className="h-4 w-4" />
-                  Team
-                </h3>
-                <div className="space-y-1 text-sm">
-                  <div className="flex items-center gap-2">
-                    <div className="w-2 h-2 rounded-full bg-green-500" />
-                    <span>{nickname} (you)</span>
-                  </div>
-                  {Object.values(members).map((member) => (
-                    <div key={member.sessionId} className="flex items-center gap-2">
-                      <div className="w-2 h-2 rounded-full bg-blue-500" />
-                      <span>{member.nickname}</span>
-                    </div>
-                  ))}
-                </div>
               </div>
             </div>
           </div>

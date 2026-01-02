@@ -112,11 +112,6 @@ function DailyContent() {
     }
   };
 
-  const handleExit = () => {
-    sessionStorage.removeItem(`daily-team-${year}-${division}`);
-    router.push(`/battle/${year}/${division}`);
-  };
-
   if (phase === "loading") {
     return (
       <div className="h-screen flex items-center justify-center">
@@ -167,7 +162,6 @@ function DailyContent() {
         dateString={puzzleData.dateString}
         year={year}
         division={division}
-        onExit={handleExit}
       />
     );
   }
