@@ -1910,7 +1910,7 @@
     },
     {
       "type": "content",
-      "text": "What color are the slickers workers were in the Pipeworks?",
+      "text": "What color are the slickers workers wear in the Pipeworks?",
       "book_key": "city-of-ember",
       "answer": "Yellow",
       "page": 40
@@ -2220,7 +2220,7 @@
       "type": "content",
       "text": "How much does each colored pencil cost in Looper's shop?",
       "book_key": "city-of-ember",
-      "answer": "5",
+      "answer": "5 dollars",
       "page": 76
     },
     {
@@ -4356,9 +4356,9 @@
     },
     {
       "type": "content",
-      "text": "What happens when the People Under the Mountain reach the family home?",
+      "text": "What do the People Under the Mountain ride through when they reach the family home?",
       "book_key": "elf-dog-and-owl-head",
-      "answer": "They Ride through the Walls like They are not There",
+      "answer": "The Walls",
       "page": 185
     },
     {
@@ -4925,7 +4925,7 @@
       "type": "content",
       "text": "How much does the front door weigh?",
       "book_key": "escape-from-mr-lemoncellos-library",
-      "answer": "20 ton",
+      "answer": "20 tons",
       "page": 52
     },
     {
@@ -7177,12 +7177,6 @@
     },
     {
       "type": "in-which-book",
-      "text": "are sisters in high school to buys with their boyfriends to be watching a sibling?",
-      "book_key": "finding-langston",
-      "page": 74
-    },
-    {
-      "type": "in-which-book",
       "text": "does the cold make a character feel awake?",
       "book_key": "finding-langston",
       "page": 76
@@ -7651,7 +7645,7 @@
     },
     {
       "type": "in-which-book",
-      "text": "does a child know hiş dad better than he ever hoped to.",
+      "text": "does a child know his dad better than he ever hoped to.",
       "book_key": "finding-langston",
       "page": 103
     },
@@ -10118,7 +10112,7 @@
     },
     {
       "type": "in-which-book",
-      "text": "does winds sound like a train?",
+      "text": "do winds sound like a train?",
       "book_key": "hatchet",
       "page": 102
     },
@@ -11939,7 +11933,7 @@
     },
     {
       "type": "in-which-book",
-      "text": "does everyone in the family celebrate their birthday on New Year's Day no matter whay they were born?",
+      "text": "does everyone in the family celebrate their birthday on New Year's Day no matter what day they were born?",
       "book_key": "inside-out-and-back-again",
       "page": 1
     },
@@ -12481,7 +12475,7 @@
     },
     {
       "type": "content",
-      "text": "What state does Hà's family first arrive at in the United States?",
+      "text": "What state does Hà's family first arrive at in the United States, where aligators are shown as entertainment?",
       "book_key": "inside-out-and-back-again",
       "answer": "Florida",
       "page": 107
@@ -12860,7 +12854,7 @@
       "type": "content",
       "text": "What did Brother Vu find on the tree?",
       "book_key": "inside-out-and-back-again",
-      "answer": "A baby pappaya",
+      "answer": "A baby papaya",
       "page": 8
     },
     {
@@ -18062,7 +18056,7 @@
     },
     {
       "type": "content",
-      "text": "What aniaml does Annemarie say the soldier on Osterbrogade look like?",
+      "text": "What animal does Annemarie say the soldier on Osterbrogade looks like?",
       "book_key": "number-the-stars",
       "answer": "A Giraffe",
       "page": 7
@@ -18721,7 +18715,7 @@
     },
     {
       "type": "in-which-book",
-      "text": "do the local aquarium ”Highwater”?",
+      "text": "is the local aquarium called ”Highwater”?",
       "book_key": "odder",
       "page": 33
     },
@@ -22837,7 +22831,7 @@
     },
     {
       "type": "in-which-book",
-      "text": "does a character's friend have eleven kids in their family?",
+      "text": "does a character's best friend, jen, have eleven kids in their family?",
       "book_key": "squished",
       "page": 136
     },
@@ -23215,12 +23209,6 @@
       "book_key": "squished",
       "answer": "Ms Anthony",
       "page": 18
-    },
-    {
-      "type": "content",
-      "text": "Name any 2 instruments Pearl plays.",
-      "book_key": "squished",
-      "answer": "Violin, Cymbals, Clarinet"
     },
     {
       "type": "content",
@@ -24312,8 +24300,7 @@
     {
       "type": "in-which-book",
       "text": "Does a character have nightmares that someone will find out his or her secret?",
-      "book_key": "the-tail-of-emily-windsnap",
-      "page": 1
+      "book_key": "the-tail-of-emily-windsnap"
     },
     {
       "type": "in-which-book",
@@ -25010,7 +24997,7 @@
     },
     {
       "type": "content",
-      "text": "What was Jake donig hen Emily found him in Prison?",
+      "text": "What was Jake doing when Emily found him in Prison?",
       "book_key": "the-tail-of-emily-windsnap",
       "answer": "Making a bracelet",
       "page": 171

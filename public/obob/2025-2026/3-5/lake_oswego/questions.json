@@ -1007,7 +1007,7 @@
       },
       {
         "type": "in-which-book",
-        "text": "is there someone named Miss Cook, and what is her occupation?",
+        "text": "is there someone named Miss Cook?",
         "book_key": "finding-langston",
         "page": 29
       },
@@ -2831,13 +2831,6 @@
         "text": "do two characters plan to have “an intragalactic hangout” by waving at each other from across the country at the same time each week?",
         "book_key": "squished",
         "page": 232
-      },
-      {
-        "type": "content",
-        "text": "what two musical instruments does Pearl play?",
-        "book_key": "squished",
-        "answer": "Violin and Clarinet",
-        "page": 7
       },
       {
         "type": "content",

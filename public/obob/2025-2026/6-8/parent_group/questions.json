@@ -2700,7 +2700,7 @@
     },
     {
       "type": "in-which-book",
-      "text": "Is someone going to sell cotton at a market?",
+      "text": "are a character and their father going to sell cotton at a market on Saturday?",
       "book_key": "asha-and-the-spirit-bird",
       "page": 53
     },
@@ -2932,10 +2932,10 @@
     },
     {
       "type": "content",
-      "text": "Two-Part: list two out of three items that Asha puts into her bag before leaving her home for the temple.",
+      "text": "Two part question: Name two items Asha puts in her bag as she leaves home to set out on her journey.",
       "book_key": "asha-and-the-spirit-bird",
-      "answer": "two mangos, two eggs, and matches",
-      "page": 58
+      "answer": "Any two: Mango, (two boilded) eggs, matches.",
+      "page": 62
     },
     {
       "type": "content",
@@ -4580,7 +4580,7 @@
     },
     {
       "type": "in-which-book",
-      "text": "does a mysterious portrait spark curiosity?",
+      "text": "does a character have a notebook that contains two columns, 'In Character' and 'Out of Character'?",
       "book_key": "a-dictionary-of-scoundrels",
       "page": 140
     },
@@ -9084,9 +9084,9 @@
     },
     {
       "type": "content",
-      "text": "Where does the family travel to in the book?",
+      "text": "What is the name of Pedro's parents' hometown in Mexico?",
       "book_key": "mexikid-a-graphic-memoir",
-      "answer": "Pegueros, Mexico",
+      "answer": "Pegueros",
       "page": 112
     },
     {
@@ -10071,7 +10071,7 @@
     },
     {
       "type": "content",
-      "text": "How old did Theo turn on the brithday party that his mother spent 2 months planning and was a favorite memory?",
+      "text": "How old did Theo turn on the birthday party that his mother spent 2 months planning and was a favorite memory?",
       "book_key": "an-occasionally-happy-family",
       "answer": "5",
       "page": 210
@@ -11275,7 +11275,7 @@
     },
     {
       "type": "content",
-      "text": "what is the code name for the US project that created th world's first nuclear weapon?",
+      "text": "what is the code name for the US project that created the world's first nuclear weapon?",
       "book_key": "projekt-1065-a-novel-of-world-war-ii",
       "answer": "The Manhattan Project",
       "page": 309
@@ -12444,7 +12444,7 @@
     },
     {
       "type": "in-which-book",
-      "text": "did someotne tell the story of eating without a spoon or fork?",
+      "text": "did someone tell the story of eating without a spoon or fork?",
       "book_key": "remember-my-story",
       "page": 13
     },
@@ -13032,7 +13032,7 @@
     },
     {
       "type": "content",
-      "text": "waht do they say \"tikkum olam\" means?",
+      "text": "what do they say \"tikkum olam\" means?",
       "book_key": "remember-my-story",
       "answer": "To repair the world",
       "page": 129
@@ -13973,7 +13973,7 @@
     },
     {
       "type": "content",
-      "text": "What instrument is Jeremish tired of playing?",
+      "text": "What instrument is Jeremiah tired of playing?",
       "book_key": "soar",
       "answer": "Recorder",
       "page": 50
@@ -14031,7 +14031,7 @@
       "type": "content",
       "text": "What baseball position did Mr Hazard play in High School?",
       "book_key": "soar",
-      "answer": "pitcher",
+      "answer": "Catcher",
       "page": 182
     },
     {
@@ -14899,7 +14899,7 @@
     },
     {
       "type": "in-which-book",
-      "text": "does a mom not talk about the father of her child?",
+      "text": "does a character think it's ironic that her mother said there was no point in dwelling on the past?",
       "book_key": "tumble",
       "page": 20
     },
@@ -14989,7 +14989,7 @@
     },
     {
       "type": "in-which-book",
-      "text": "do people east waffles for lunch?",
+      "text": "do characters eat waffles for lunch?",
       "book_key": "tumble",
       "page": 113
     },
@@ -16341,7 +16341,7 @@
     },
     {
       "type": "in-which-book",
-      "text": "Is a character's nickname mean little sister?",
+      "text": "does a character's nickname mean 'little sister' in another language?",
       "book_key": "uprooted",
       "page": 17
     },
@@ -17362,9 +17362,9 @@
     },
     {
       "type": "content",
-      "text": "In 1994, where did dad's parents live?",
+      "text": "In 1944, in what town did Ruth's dad's parents live?",
       "book_key": "uprooted",
-      "answer": "In a town called Wuzhou",
+      "answer": "Wuzhou (in Southern China)",
       "page": 40
     },
     {
