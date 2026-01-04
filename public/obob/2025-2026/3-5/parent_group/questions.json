@@ -22717,7 +22717,7 @@
     },
     {
       "type": "in-which-book",
-      "text": "does a character remember their child eating mashed peas like it happened yesterday",
+      "text": "does a character remember their child eating mashed peas like it happened yesterday?",
       "book_key": "squished",
       "page": 22
     },
@@ -23238,7 +23238,7 @@
     },
     {
       "type": "content",
-      "text": "Name any 2 reasons Avery needs her own room now",
+      "text": "Name 2 reasons Avery needs her own room now",
       "book_key": "squished",
       "answer": "Need more privacy, little kids are overwhelming"
     },
