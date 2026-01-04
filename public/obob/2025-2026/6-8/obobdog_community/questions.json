@@ -1464,6 +1464,60 @@
       "book_key": "aru-shah-and-the-end-of-time",
       "page": 346,
       "contributor": "Lidz"
+    },
+    {
+      "type": "in-which-book",
+      "text": "Does a character say neither when asked if they're a boy or a girl?",
+      "book_key": "ellen-outside-the-lines",
+      "page": 19,
+      "contributor": "Agnes"
+    },
+    {
+      "type": "content",
+      "text": "What kind of creature tells Cimorene \"Go to the main road outside the city and follow it away to the mountains.\"?",
+      "answer": "A Frog",
+      "book_key": "dealing-with-dragons",
+      "page": 11,
+      "contributor": "Hayley"
+    },
+    {
+      "type": "content",
+      "text": "What is the name of the man Alianora and Cimorene find stealing from the mountains of morning?",
+      "answer": "Antorell",
+      "book_key": "dealing-with-dragons",
+      "page": 137,
+      "contributor": "Hayley"
+    },
+    {
+      "type": "in-which-book",
+      "text": "Does someone say they couldn't tell fever few from carrots if their life depended on it?",
+      "book_key": "dealing-with-dragons",
+      "page": 136,
+      "contributor": "Hayley"
+    },
+    {
+      "type": "content",
+      "text": "What dragon does Kazul tell Cimorene to tell about the wizards to?",
+      "answer": "Roxim",
+      "book_key": "dealing-with-dragons",
+      "page": 150,
+      "contributor": "Hayley"
+    },
+    {
+      "type": "content",
+      "text": "What substance melts wizards?",
+      "answer": "Soap Suds",
+      "book_key": "dealing-with-dragons",
+      "page": 185,
+      "contributor": "Hayley"
+    },
+    {
+      "type": "content",
+      "text": "While trying to convince a dragon to let Cimorene look for wizards, what creature was told \"I wasn't asking you\"?",
+      "answer": "A snake",
+      "book_key": "dealing-with-dragons",
+      "page": 178,
+      "contributor": "Hayley"
     }
   ]
 }
