@@ -56,7 +56,7 @@ export function WavyUnderline({
         preserveAspectRatio="none"
         style={{
           height: "0.5em",
-          bottom: "-0.25em",
+          bottom: "-0.35em",
           zIndex: 0,
           left: "-0.1em",
           right: "-0.1em",

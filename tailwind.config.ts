@@ -19,7 +19,7 @@ module.exports = {
 		fontFamily: {
 		  sans: ['Inter', 'sans-serif'],
 		  display: ['var(--font-playfair)', 'serif'],
-		  'luckiest-guy': ['var(--font-luckiest-guy)', 'cursive'],
+		  'rampart': ['var(--font-rampart)', 'cursive'],
 		},
 		colors: {
 		  border: "hsl(var(--border))",

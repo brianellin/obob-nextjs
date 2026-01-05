@@ -129,7 +129,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
       <article className="max-w-3xl mx-auto py-8 px-4">
         <Link
           href="/blog"
-          className="text-4xl font-bold mb-8 font-luckiest-guy hover:text-cyan-500 transition-colors inline-block"
+          className="text-4xl font-bold mb-8 font-rampart hover:text-cyan-500 transition-colors inline-block"
         >
           OBOB.DOG Blog
         </Link>

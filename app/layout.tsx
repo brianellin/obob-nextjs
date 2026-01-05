@@ -1,6 +1,6 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { Inter, Playfair_Display, Luckiest_Guy } from "next/font/google";
+import { Inter, Playfair_Display, Rampart_One } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import NewsletterBanner from "@/components/NewsletterBanner";
@@ -14,10 +14,10 @@ export const playfairDisplay = Playfair_Display({
   variable: "--font-playfair",
 });
 
-const luckiestGuy = Luckiest_Guy({
+const rampartOne = Rampart_One({
   subsets: ["latin"],
   weight: "400",
-  variable: "--font-luckiest-guy",
+  variable: "--font-rampart",
 });
 
 export const metadata: Metadata = {
@@ -47,7 +47,7 @@ export default function RootLayout({
           href="/feed.xml"
         />
       </head>
-      <body className={`${inter.className} ${playfairDisplay.variable} ${luckiestGuy.variable}`}>
+      <body className={`${inter.className} ${playfairDisplay.variable} ${rampartOne.variable}`}>
         <PostHogProvider>
           <NewsletterBanner />
           <Header />

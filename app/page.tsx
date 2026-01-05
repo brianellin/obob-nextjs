@@ -25,9 +25,9 @@ export default function Home() {
   return (
     <main className="bg-white p-2">
       <section className="max-w-2xl mx-auto space-y-4 mb-8 mt-4">
-        <h1 className="text-5xl font-bold text-center font-luckiest-guy">
+        <h1 className="text-6xl font-bold text-center font-rampart">
           <WavyUnderline style={0} thickness={6} color="text-lime-400">
-            OBOB.dog{" "}
+            OBOB.DOG{" "}
           </WavyUnderline>
         </h1>
         <p className="text-xl text-center text-muted-foreground pt-1">

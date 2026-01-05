@@ -84,7 +84,7 @@ export default function BlogPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <div className="max-w-3xl mx-auto py-8 px-4">
-        <h1 className="text-4xl font-bold mb-8 font-luckiest-guy">OBOB.DOG Blog</h1>
+        <h1 className="text-4xl font-bold mb-8 font-rampart">OBOB.DOG Blog</h1>
 
         {posts.length === 0 ? (
           <p className="text-gray-600">No blog posts yet. Check back soon!</p>
