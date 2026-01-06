@@ -163,17 +163,19 @@ export type ServerMessage =
  * Uses a simple hash to pick from a palette of distinct colors
  */
 export function getPlayerColor(sessionId: string): string {
+  // Vibrant, high-contrast colors that work well on white backgrounds
+  // Each color is chosen to be distinct and readable
   const colors = [
-    "#FF6B6B", // Red
-    "#4ECDC4", // Teal
-    "#45B7D1", // Blue
-    "#96CEB4", // Green
-    "#FFEAA7", // Yellow
-    "#DDA0DD", // Plum
-    "#98D8C8", // Mint
-    "#F7DC6F", // Gold
-    "#BB8FCE", // Purple
-    "#85C1E9", // Sky blue
+    "#E53935", // Red
+    "#00897B", // Teal
+    "#1E88E5", // Blue
+    "#43A047", // Green
+    "#8E24AA", // Purple
+    "#F4511E", // Deep Orange
+    "#3949AB", // Indigo
+    "#D81B60", // Pink
+    "#00ACC1", // Cyan
+    "#5E35B1", // Deep Purple
   ];
 
   let hash = 0;

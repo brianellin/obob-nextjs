@@ -1,23 +1,77 @@
 "use client";
 
-import { useMemo } from "react";
+import { useMemo, useEffect, useState, useCallback } from "react";
 import type { Player } from "@/hooks/useCrosswordWebSocket";
 
 interface CursorOverlayProps {
   players: Map<string, Player>;
   gridRef: React.RefObject<HTMLDivElement | null>;
-  cellSize: number;
   gridRows: number;
   gridCols: number;
+}
+
+interface GridMetrics {
+  cellSize: number;
+  offsetX: number;
+  offsetY: number;
 }
 
 export function CursorOverlay({
   players,
   gridRef,
-  cellSize,
   gridRows,
   gridCols,
 }: CursorOverlayProps) {
+  const [metrics, setMetrics] = useState<GridMetrics | null>(null);
+
+  // Calculate cell size from the actual SVG
+  const calculateMetrics = useCallback(() => {
+    if (!gridRef.current) return;
+
+    const svg = gridRef.current.querySelector('svg[viewBox]');
+    if (!svg) return;
+
+    const viewBox = svg.getAttribute('viewBox');
+    if (!viewBox) return;
+
+    // Parse viewBox: "0 0 200 200" -> get the width (200)
+    const viewBoxParts = viewBox.split(' ').map(Number);
+    const svgUnits = viewBoxParts[2]; // width in SVG units
+
+    // Get actual rendered size
+    const svgRect = svg.getBoundingClientRect();
+    const containerRect = gridRef.current.getBoundingClientRect();
+
+    // Scale factor: how many pixels per SVG unit
+    const scale = svgRect.width / svgUnits;
+
+    // The crossword library uses 10 SVG units per cell
+    const cellSvgUnits = 10;
+    const cellSize = cellSvgUnits * scale;
+
+    // Calculate offset from container to SVG
+    const offsetX = svgRect.left - containerRect.left;
+    const offsetY = svgRect.top - containerRect.top;
+
+    setMetrics({ cellSize, offsetX, offsetY });
+  }, [gridRef]);
+
+  // Calculate on mount and window resize
+  useEffect(() => {
+    calculateMetrics();
+
+    const handleResize = () => calculateMetrics();
+    window.addEventListener('resize', handleResize);
+    
+    // Recalculate after a short delay to handle dynamic rendering
+    const timer = setTimeout(calculateMetrics, 100);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+      clearTimeout(timer);
+    };
+  }, [calculateMetrics]);
+
   const cursors = useMemo(() => {
     const result: Array<{
       sessionId: string;
@@ -44,11 +98,11 @@ export function CursorOverlay({
     return result;
   }, [players]);
 
-  if (cursors.length === 0) return null;
+  if (cursors.length === 0 || !metrics) return null;
 
   return (
     <div
-      className="absolute inset-0 pointer-events-none"
+      className="absolute inset-0 pointer-events-none overflow-hidden"
       style={{ zIndex: 10 }}
     >
       {cursors.map((cursor) => (
@@ -59,7 +113,9 @@ export function CursorOverlay({
           row={cursor.row}
           col={cursor.col}
           direction={cursor.direction}
-          cellSize={cellSize}
+          cellSize={metrics.cellSize}
+          offsetX={metrics.offsetX}
+          offsetY={metrics.offsetY}
           gridRows={gridRows}
           gridCols={gridCols}
         />
@@ -75,6 +131,8 @@ interface CursorIndicatorProps {
   col: number;
   direction: "across" | "down";
   cellSize: number;
+  offsetX: number;
+  offsetY: number;
   gridRows: number;
   gridCols: number;
 }
@@ -85,6 +143,8 @@ function CursorIndicator({
   row,
   col,
   cellSize,
+  offsetX,
+  offsetY,
   gridRows,
   gridCols,
 }: CursorIndicatorProps) {
@@ -93,8 +153,10 @@ function CursorIndicator({
     return null;
   }
 
-  const left = col * cellSize;
-  const top = row * cellSize;
+  // The crossword library uses a small padding (0.125 SVG units, scaled)
+  // For visual alignment, we can use the cell position directly
+  const left = offsetX + col * cellSize;
+  const top = offsetY + row * cellSize;
 
   return (
     <div
@@ -108,21 +170,22 @@ function CursorIndicator({
     >
       {/* Cursor highlight */}
       <div
-        className="absolute inset-0 rounded-sm animate-pulse"
+        className="absolute inset-0 rounded-sm"
         style={{
           backgroundColor: color,
-          opacity: 0.3,
+          opacity: 0.35,
           border: `2px solid ${color}`,
+          boxShadow: `0 0 0 1px ${color}40`,
         }}
       />
 
       {/* Nickname label */}
       <div
-        className="absolute -top-5 left-0 px-1 text-xs font-medium text-white rounded whitespace-nowrap"
+        className="absolute -top-5 left-0 px-1.5 py-0.5 text-xs font-medium text-white rounded shadow-sm whitespace-nowrap"
         style={{
           backgroundColor: color,
           fontSize: "10px",
-          lineHeight: "14px",
+          lineHeight: "12px",
         }}
       >
         {nickname}

@@ -421,8 +421,6 @@ export default function RealtimeCrossword({
     columnBreakpoint: "9999px",
   };
 
-  const cellSize = 32; // Approximate cell size for cursor overlay
-
   return (
     <div className="min-h-screen bg-gray-50">
       {showConfetti && <Confetti width={width} height={height} recycle={false} />}
@@ -560,7 +558,6 @@ export default function RealtimeCrossword({
                 <CursorOverlay
                   players={players}
                   gridRef={gridContainerRef}
-                  cellSize={cellSize}
                   gridRows={puzzle.rows}
                   gridCols={puzzle.cols}
                 />
