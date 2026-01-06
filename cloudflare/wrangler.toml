@@ -1,0 +1,21 @@
+name = "obob-crossword-realtime"
+main = "src/index.ts"
+compatibility_date = "2024-12-30"
+
+# Durable Objects configuration
+[durable_objects]
+bindings = [
+  { name = "CROSSWORD_ROOM", class_name = "CrosswordRoom" }
+]
+
+# Migrations for Durable Objects
+[[migrations]]
+tag = "v1"
+new_classes = ["CrosswordRoom"]
+
+# Environment variables (set via wrangler secret or dashboard)
+# PUZZLE_API_URL - Your Vercel deployment URL for puzzle data
+
+[vars]
+# Default to production URL, override in dev
+PUZZLE_API_URL = "https://obob.brianellin.com"

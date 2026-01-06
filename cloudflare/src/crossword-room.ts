@@ -1,0 +1,514 @@
+/**
+ * CrosswordRoom Durable Object
+ *
+ * Manages a single collaborative crossword room with:
+ * - WebSocket connections for all players
+ * - Game state (answers, correct clues, completion)
+ * - Cursor/presence tracking
+ * - Real-time broadcasting
+ */
+
+import {
+  type ClientMessage,
+  type ServerMessage,
+  type Player,
+  type GameState,
+  getPlayerColor,
+  makeCellKey,
+} from "./protocol";
+
+interface StoredState {
+  teamCode: string;
+  year: string;
+  division: string;
+  puzzleDate: string;
+  answers: Record<string, string>;
+  correctClues: string[];
+  startedAt: number;
+  completedAt: number | null;
+}
+
+interface ConnectedClient {
+  webSocket: WebSocket;
+  sessionId: string;
+  nickname: string;
+  color: string;
+  cursor: {
+    row: number;
+    col: number;
+    direction: "across" | "down";
+  } | null;
+  lastSeen: number;
+}
+
+export class CrosswordRoom {
+  private state: DurableObjectState;
+  private env: Env;
+  private clients: Map<WebSocket, ConnectedClient> = new Map();
+  private gameState: StoredState | null = null;
+  private puzzleClues: Map<string, PuzzleClue> | null = null;
+
+  constructor(state: DurableObjectState, env: Env) {
+    this.state = state;
+    this.env = env;
+
+    // Restore WebSocket connections after hibernation
+    this.state.getWebSockets().forEach((ws) => {
+      const meta = ws.deserializeAttachment() as ConnectedClient | null;
+      if (meta) {
+        this.clients.set(ws, meta);
+      }
+    });
+  }
+
+  async fetch(request: Request): Promise<Response> {
+    const url = new URL(request.url);
+
+    // Handle WebSocket upgrade
+    if (request.headers.get("Upgrade") === "websocket") {
+      return this.handleWebSocketUpgrade(request);
+    }
+
+    // Handle HTTP endpoints for state inspection (optional)
+    if (url.pathname === "/state") {
+      const state = await this.getGameState();
+      return new Response(JSON.stringify(state), {
+        headers: { "Content-Type": "application/json" },
+      });
+    }
+
+    return new Response("Not found", { status: 404 });
+  }
+
+  private async handleWebSocketUpgrade(request: Request): Promise<Response> {
+    const pair = new WebSocketPair();
+    const [client, server] = Object.values(pair);
+
+    // Accept the WebSocket with hibernation support
+    this.state.acceptWebSocket(server);
+
+    // Initialize with empty metadata (will be filled on "join" message)
+    const initialMeta: ConnectedClient = {
+      webSocket: server,
+      sessionId: "",
+      nickname: "",
+      color: "",
+      cursor: null,
+      lastSeen: Date.now(),
+    };
+
+    server.serializeAttachment(initialMeta);
+    this.clients.set(server, initialMeta);
+
+    return new Response(null, { status: 101, webSocket: client });
+  }
+
+  async webSocketMessage(ws: WebSocket, message: string | ArrayBuffer) {
+    if (typeof message !== "string") return;
+
+    const client = this.clients.get(ws);
+    if (!client) return;
+
+    try {
+      const msg: ClientMessage = JSON.parse(message);
+      await this.handleMessage(ws, client, msg);
+    } catch (err) {
+      console.error("Failed to handle message:", err);
+      this.send(ws, { type: "error", message: "Invalid message format" });
+    }
+  }
+
+  async webSocketClose(ws: WebSocket, code: number, reason: string) {
+    const client = this.clients.get(ws);
+    if (client && client.sessionId) {
+      // Broadcast departure
+      this.broadcast(
+        {
+          type: "presence",
+          action: "leave",
+          sessionId: client.sessionId,
+          nickname: client.nickname,
+          color: client.color,
+          playerCount: this.clients.size - 1,
+        },
+        ws
+      );
+    }
+    this.clients.delete(ws);
+  }
+
+  async webSocketError(ws: WebSocket, error: unknown) {
+    console.error("WebSocket error:", error);
+    const client = this.clients.get(ws);
+    if (client && client.sessionId) {
+      this.broadcast(
+        {
+          type: "presence",
+          action: "leave",
+          sessionId: client.sessionId,
+          nickname: client.nickname,
+          color: client.color,
+          playerCount: this.clients.size - 1,
+        },
+        ws
+      );
+    }
+    this.clients.delete(ws);
+  }
+
+  private async handleMessage(
+    ws: WebSocket,
+    client: ConnectedClient,
+    msg: ClientMessage
+  ) {
+    switch (msg.type) {
+      case "join":
+        await this.handleJoin(ws, client, msg);
+        break;
+      case "cursor":
+        this.handleCursor(ws, client, msg);
+        break;
+      case "letter":
+        await this.handleLetter(ws, client, msg);
+        break;
+      case "delete":
+        await this.handleDelete(ws, client, msg);
+        break;
+      case "ping":
+        client.lastSeen = Date.now();
+        ws.serializeAttachment(client);
+        this.send(ws, { type: "pong", timestamp: Date.now() });
+        break;
+    }
+  }
+
+  private async handleJoin(
+    ws: WebSocket,
+    client: ConnectedClient,
+    msg: {
+      type: "join";
+      sessionId: string;
+      nickname: string;
+      year: string;
+      division: string;
+      puzzleDate: string;
+    }
+  ) {
+    // Update client metadata
+    client.sessionId = msg.sessionId;
+    client.nickname = msg.nickname;
+    client.color = getPlayerColor(msg.sessionId);
+    client.lastSeen = Date.now();
+    ws.serializeAttachment(client);
+    this.clients.set(ws, client);
+
+    // Initialize or load game state
+    let state = await this.getGameState();
+    if (!state) {
+      // Create new room state
+      state = {
+        teamCode: this.extractTeamCode(),
+        year: msg.year,
+        division: msg.division,
+        puzzleDate: msg.puzzleDate,
+        answers: {},
+        correctClues: [],
+        startedAt: Date.now(),
+        completedAt: null,
+      };
+      await this.saveGameState(state);
+
+      // Fetch puzzle clues for answer validation
+      await this.loadPuzzleClues(msg.year, msg.division, msg.puzzleDate);
+    }
+
+    // Build player list
+    const players: Player[] = [];
+    for (const [, c] of this.clients) {
+      if (c.sessionId && c.sessionId !== client.sessionId) {
+        players.push({
+          sessionId: c.sessionId,
+          nickname: c.nickname,
+          color: c.color,
+          cursor: c.cursor,
+          lastSeen: c.lastSeen,
+        });
+      }
+    }
+
+    // Send init to joining player
+    this.send(ws, {
+      type: "init",
+      state: {
+        teamCode: state.teamCode,
+        year: state.year,
+        division: state.division,
+        puzzleDate: state.puzzleDate,
+        answers: state.answers,
+        correctClues: state.correctClues,
+        startedAt: state.startedAt,
+        completedAt: state.completedAt,
+      },
+      players,
+      you: {
+        sessionId: client.sessionId,
+        nickname: client.nickname,
+        color: client.color,
+      },
+    });
+
+    // Broadcast join to others
+    this.broadcast(
+      {
+        type: "presence",
+        action: "join",
+        sessionId: client.sessionId,
+        nickname: client.nickname,
+        color: client.color,
+        playerCount: this.clients.size,
+      },
+      ws
+    );
+  }
+
+  private handleCursor(
+    ws: WebSocket,
+    client: ConnectedClient,
+    msg: { type: "cursor"; row: number; col: number; direction: "across" | "down" }
+  ) {
+    if (!client.sessionId) return;
+
+    client.cursor = { row: msg.row, col: msg.col, direction: msg.direction };
+    client.lastSeen = Date.now();
+    ws.serializeAttachment(client);
+
+    // Broadcast cursor to others
+    this.broadcast(
+      {
+        type: "cursor_update",
+        sessionId: client.sessionId,
+        nickname: client.nickname,
+        color: client.color,
+        row: msg.row,
+        col: msg.col,
+        direction: msg.direction,
+      },
+      ws
+    );
+  }
+
+  private async handleLetter(
+    ws: WebSocket,
+    client: ConnectedClient,
+    msg: { type: "letter"; row: number; col: number; letter: string }
+  ) {
+    if (!client.sessionId) return;
+
+    const state = await this.getGameState();
+    if (!state || state.completedAt) return;
+
+    const cellKey = makeCellKey(msg.row, msg.col);
+    const letter = msg.letter.toUpperCase();
+
+    // Update state
+    if (letter) {
+      state.answers[cellKey] = letter;
+    } else {
+      delete state.answers[cellKey];
+    }
+    state.completedAt = null; // Reset in case somehow set
+
+    // Check for newly completed clues
+    const newCorrectClues = await this.checkCorrectClues(state);
+    const newlyCorrect = newCorrectClues.filter(
+      (id) => !state.correctClues.includes(id)
+    );
+    state.correctClues = newCorrectClues;
+
+    // Check for puzzle completion
+    const isComplete = await this.checkPuzzleComplete(state);
+    if (isComplete && !state.completedAt) {
+      state.completedAt = Date.now();
+    }
+
+    await this.saveGameState(state);
+
+    // Broadcast letter update
+    this.broadcast({
+      type: "letter_update",
+      row: msg.row,
+      col: msg.col,
+      letter,
+      sessionId: client.sessionId,
+    });
+
+    // Broadcast any newly correct clues
+    for (const clueId of newlyCorrect) {
+      this.broadcast({ type: "correct_clue", clueId });
+    }
+
+    // Broadcast completion if puzzle is done
+    if (isComplete && state.completedAt) {
+      this.broadcast({
+        type: "complete",
+        completedAt: state.completedAt,
+        completionTimeMs: state.completedAt - state.startedAt,
+      });
+    }
+  }
+
+  private async handleDelete(
+    ws: WebSocket,
+    client: ConnectedClient,
+    msg: { type: "delete"; row: number; col: number }
+  ) {
+    if (!client.sessionId) return;
+
+    const state = await this.getGameState();
+    if (!state || state.completedAt) return;
+
+    const cellKey = makeCellKey(msg.row, msg.col);
+    delete state.answers[cellKey];
+
+    // Recheck correct clues (some may no longer be correct)
+    state.correctClues = await this.checkCorrectClues(state);
+
+    await this.saveGameState(state);
+
+    // Broadcast delete
+    this.broadcast({
+      type: "delete_update",
+      row: msg.row,
+      col: msg.col,
+      sessionId: client.sessionId,
+    });
+  }
+
+  private async getGameState(): Promise<StoredState | null> {
+    if (this.gameState) return this.gameState;
+    const stored = await this.state.storage.get<StoredState>("gameState");
+    this.gameState = stored ?? null;
+    return this.gameState;
+  }
+
+  private async saveGameState(state: StoredState): Promise<void> {
+    this.gameState = state;
+    await this.state.storage.put("gameState", state);
+  }
+
+  private extractTeamCode(): string {
+    // The team code is embedded in the DO ID (set by the worker)
+    // Format: "room:TEAMCODE"
+    const id = this.state.id.toString();
+    // For now, extract from the hex ID or use a default
+    return id.substring(0, 6).toUpperCase();
+  }
+
+  private async loadPuzzleClues(
+    year: string,
+    division: string,
+    puzzleDate: string
+  ): Promise<void> {
+    try {
+      const url = `${this.env.PUZZLE_API_URL}/api/daily-crossword/puzzle?year=${year}&division=${division}&date=${puzzleDate}`;
+      const response = await fetch(url);
+      if (response.ok) {
+        const data = (await response.json()) as { puzzle?: { clues?: PuzzleClue[] } };
+        if (data.puzzle?.clues) {
+          this.puzzleClues = new Map();
+          for (const clue of data.puzzle.clues) {
+            this.puzzleClues.set(clue.id, clue);
+          }
+          await this.state.storage.put("puzzleClues", Array.from(this.puzzleClues.entries()));
+        }
+      }
+    } catch (err) {
+      console.error("Failed to load puzzle clues:", err);
+    }
+  }
+
+  private async getPuzzleClues(): Promise<Map<string, PuzzleClue>> {
+    if (this.puzzleClues) return this.puzzleClues;
+    const stored = await this.state.storage.get<[string, PuzzleClue][]>("puzzleClues");
+    if (stored) {
+      this.puzzleClues = new Map(stored);
+    } else {
+      this.puzzleClues = new Map();
+    }
+    return this.puzzleClues;
+  }
+
+  private async checkCorrectClues(state: StoredState): Promise<string[]> {
+    const clues = await this.getPuzzleClues();
+    const correctClues: string[] = [];
+
+    for (const [id, clue] of clues) {
+      if (this.isClueCorrect(clue, state.answers)) {
+        correctClues.push(id);
+      }
+    }
+
+    return correctClues;
+  }
+
+  private isClueCorrect(
+    clue: PuzzleClue,
+    answers: Record<string, string>
+  ): boolean {
+    const { startRow, startCol, direction, answer } = clue;
+
+    for (let i = 0; i < answer.length; i++) {
+      const row = direction === "down" ? startRow + i : startRow;
+      const col = direction === "across" ? startCol + i : startCol;
+      const key = makeCellKey(row, col);
+      const userLetter = answers[key]?.toUpperCase();
+      const expectedLetter = answer[i].toUpperCase();
+
+      if (userLetter !== expectedLetter) {
+        return false;
+      }
+    }
+
+    return true;
+  }
+
+  private async checkPuzzleComplete(state: StoredState): Promise<boolean> {
+    const clues = await this.getPuzzleClues();
+    return clues.size > 0 && state.correctClues.length === clues.size;
+  }
+
+  private send(ws: WebSocket, msg: ServerMessage): void {
+    try {
+      ws.send(JSON.stringify(msg));
+    } catch (err) {
+      console.error("Failed to send message:", err);
+    }
+  }
+
+  private broadcast(msg: ServerMessage, exclude?: WebSocket): void {
+    const msgStr = JSON.stringify(msg);
+    for (const [ws] of this.clients) {
+      if (ws !== exclude) {
+        try {
+          ws.send(msgStr);
+        } catch (err) {
+          // WebSocket may be closed
+        }
+      }
+    }
+  }
+}
+
+interface PuzzleClue {
+  id: string;
+  number: number;
+  direction: "across" | "down";
+  answer: string;
+  startRow: number;
+  startCol: number;
+}
+
+interface Env {
+  PUZZLE_API_URL: string;
+  CROSSWORD_ROOM: DurableObjectNamespace;
+}
