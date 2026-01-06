@@ -13,16 +13,11 @@ bindings = [
 tag = "v1"
 new_classes = ["CrosswordRoom"]
 
-# Environment variables (set via wrangler secret or dashboard)
-# PUZZLE_API_URL - Your Vercel deployment URL for puzzle data
-
-[vars]
-# Default to production URL, override in dev
-PUZZLE_API_URL = "https://obob.brianellin.com"
-
 # Local development settings
 [dev]
 port = 8787
+local_protocol = "http"
 
-[env.dev.vars]
+[vars]
+# For local dev, use localhost. Override in Cloudflare dashboard for production.
 PUZZLE_API_URL = "http://localhost:3000"

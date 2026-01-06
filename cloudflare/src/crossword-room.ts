@@ -28,8 +28,7 @@ interface StoredState {
   completedAt: number | null;
 }
 
-interface ConnectedClient {
-  webSocket: WebSocket;
+interface ClientMetadata {
   sessionId: string;
   nickname: string;
   color: string;
@@ -44,28 +43,29 @@ interface ConnectedClient {
 export class CrosswordRoom {
   private state: DurableObjectState;
   private env: Env;
-  private clients: Map<WebSocket, ConnectedClient> = new Map();
   private gameState: StoredState | null = null;
   private puzzleClues: Map<string, PuzzleClue> | null = null;
 
   constructor(state: DurableObjectState, env: Env) {
     this.state = state;
     this.env = env;
+  }
 
-    // Restore WebSocket connections after hibernation
-    this.state.getWebSockets().forEach((ws) => {
-      const meta = ws.deserializeAttachment() as ConnectedClient | null;
-      if (meta) {
-        this.clients.set(ws, meta);
-      }
-    });
+  private getClientMetadata(ws: WebSocket): ClientMetadata | null {
+    return ws.deserializeAttachment() as ClientMetadata | null;
+  }
+
+  private setClientMetadata(ws: WebSocket, meta: ClientMetadata): void {
+    ws.serializeAttachment(meta);
   }
 
   async fetch(request: Request): Promise<Response> {
     const url = new URL(request.url);
+    console.log(`[DO] fetch called, upgrade: ${request.headers.get("Upgrade")}`);
 
     // Handle WebSocket upgrade
     if (request.headers.get("Upgrade") === "websocket") {
+      console.log(`[DO] Handling WebSocket upgrade`);
       return this.handleWebSocketUpgrade(request);
     }
 
@@ -88,8 +88,7 @@ export class CrosswordRoom {
     this.state.acceptWebSocket(server);
 
     // Initialize with empty metadata (will be filled on "join" message)
-    const initialMeta: ConnectedClient = {
-      webSocket: server,
+    const initialMeta: ClientMetadata = {
       sessionId: "",
       nickname: "",
       color: "",
@@ -97,8 +96,7 @@ export class CrosswordRoom {
       lastSeen: Date.now(),
     };
 
-    server.serializeAttachment(initialMeta);
-    this.clients.set(server, initialMeta);
+    this.setClientMetadata(server, initialMeta);
 
     return new Response(null, { status: 101, webSocket: client });
   }
@@ -106,7 +104,7 @@ export class CrosswordRoom {
   async webSocketMessage(ws: WebSocket, message: string | ArrayBuffer) {
     if (typeof message !== "string") return;
 
-    const client = this.clients.get(ws);
+    const client = this.getClientMetadata(ws);
     if (!client) return;
 
     try {
@@ -119,9 +117,9 @@ export class CrosswordRoom {
   }
 
   async webSocketClose(ws: WebSocket, code: number, reason: string) {
-    const client = this.clients.get(ws);
+    const client = this.getClientMetadata(ws);
     if (client && client.sessionId) {
-      // Broadcast departure
+      const allSockets = this.state.getWebSockets();
       this.broadcast(
         {
           type: "presence",
@@ -129,18 +127,18 @@ export class CrosswordRoom {
           sessionId: client.sessionId,
           nickname: client.nickname,
           color: client.color,
-          playerCount: this.clients.size - 1,
+          playerCount: allSockets.length - 1,
         },
         ws
       );
     }
-    this.clients.delete(ws);
   }
 
   async webSocketError(ws: WebSocket, error: unknown) {
     console.error("WebSocket error:", error);
-    const client = this.clients.get(ws);
+    const client = this.getClientMetadata(ws);
     if (client && client.sessionId) {
+      const allSockets = this.state.getWebSockets();
       this.broadcast(
         {
           type: "presence",
@@ -148,17 +146,16 @@ export class CrosswordRoom {
           sessionId: client.sessionId,
           nickname: client.nickname,
           color: client.color,
-          playerCount: this.clients.size - 1,
+          playerCount: allSockets.length - 1,
         },
         ws
       );
     }
-    this.clients.delete(ws);
   }
 
   private async handleMessage(
     ws: WebSocket,
-    client: ConnectedClient,
+    client: ClientMetadata,
     msg: ClientMessage
   ) {
     switch (msg.type) {
@@ -176,7 +173,7 @@ export class CrosswordRoom {
         break;
       case "ping":
         client.lastSeen = Date.now();
-        ws.serializeAttachment(client);
+        this.setClientMetadata(ws, client);
         this.send(ws, { type: "pong", timestamp: Date.now() });
         break;
     }
@@ -184,7 +181,7 @@ export class CrosswordRoom {
 
   private async handleJoin(
     ws: WebSocket,
-    client: ConnectedClient,
+    client: ClientMetadata,
     msg: {
       type: "join";
       teamCode: string;
@@ -200,8 +197,7 @@ export class CrosswordRoom {
     client.nickname = msg.nickname;
     client.color = getPlayerColor(msg.sessionId);
     client.lastSeen = Date.now();
-    ws.serializeAttachment(client);
-    this.clients.set(ws, client);
+    this.setClientMetadata(ws, client);
 
     // Initialize or load game state
     let state = await this.getGameState();
@@ -229,16 +225,17 @@ export class CrosswordRoom {
       await this.loadPuzzleClues(msg.year, msg.division, msg.puzzleDate);
     }
 
-    // Build player list
+    // Build player list from all connected WebSockets
     const players: Player[] = [];
-    for (const [, c] of this.clients) {
-      if (c.sessionId && c.sessionId !== client.sessionId) {
+    for (const socket of this.state.getWebSockets()) {
+      const meta = this.getClientMetadata(socket);
+      if (meta && meta.sessionId && meta.sessionId !== client.sessionId) {
         players.push({
-          sessionId: c.sessionId,
-          nickname: c.nickname,
-          color: c.color,
-          cursor: c.cursor,
-          lastSeen: c.lastSeen,
+          sessionId: meta.sessionId,
+          nickname: meta.nickname,
+          color: meta.color,
+          cursor: meta.cursor,
+          lastSeen: meta.lastSeen,
         });
       }
     }
@@ -265,6 +262,7 @@ export class CrosswordRoom {
     });
 
     // Broadcast join to others
+    const allSockets = this.state.getWebSockets();
     this.broadcast(
       {
         type: "presence",
@@ -272,7 +270,7 @@ export class CrosswordRoom {
         sessionId: client.sessionId,
         nickname: client.nickname,
         color: client.color,
-        playerCount: this.clients.size,
+        playerCount: allSockets.length,
       },
       ws
     );
@@ -280,14 +278,14 @@ export class CrosswordRoom {
 
   private handleCursor(
     ws: WebSocket,
-    client: ConnectedClient,
+    client: ClientMetadata,
     msg: { type: "cursor"; row: number; col: number; direction: "across" | "down" }
   ) {
     if (!client.sessionId) return;
 
     client.cursor = { row: msg.row, col: msg.col, direction: msg.direction };
     client.lastSeen = Date.now();
-    ws.serializeAttachment(client);
+    this.setClientMetadata(ws, client);
 
     // Broadcast cursor to others
     this.broadcast(
@@ -306,7 +304,7 @@ export class CrosswordRoom {
 
   private async handleLetter(
     ws: WebSocket,
-    client: ConnectedClient,
+    client: ClientMetadata,
     msg: { type: "letter"; row: number; col: number; letter: string }
   ) {
     if (!client.sessionId) return;
@@ -366,7 +364,7 @@ export class CrosswordRoom {
 
   private async handleDelete(
     ws: WebSocket,
-    client: ConnectedClient,
+    client: ClientMetadata,
     msg: { type: "delete"; row: number; col: number }
   ) {
     if (!client.sessionId) return;
@@ -523,7 +521,7 @@ export class CrosswordRoom {
 
   private broadcast(msg: ServerMessage, exclude?: WebSocket): void {
     const msgStr = JSON.stringify(msg);
-    for (const [ws] of this.clients) {
+    for (const ws of this.state.getWebSockets()) {
       if (ws !== exclude) {
         try {
           ws.send(msgStr);

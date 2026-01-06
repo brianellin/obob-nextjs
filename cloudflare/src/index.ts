@@ -42,9 +42,12 @@ export default {
     const roomMatch = url.pathname.match(/^\/room\/([A-Z0-9]+)$/i);
     if (roomMatch) {
       const teamCode = roomMatch[1].toUpperCase();
+      console.log(`[Worker] Room request for ${teamCode}, upgrade: ${request.headers.get("Upgrade")}`);
 
-      // Validate team code format (e.g., BARK42)
-      if (!/^[A-Z]{4}[0-9]{2}$/.test(teamCode)) {
+      // Validate team code format (e.g., BARK42, FETCH99, ACE42)
+      // 2-8 letters followed by 2-6 alphanumeric chars
+      if (!/^[A-Z]{2,8}[A-Z0-9]{2,6}$/.test(teamCode)) {
+        console.log(`[Worker] Invalid team code: ${teamCode}`);
         return new Response(JSON.stringify({ error: "Invalid team code format" }), {
           status: 400,
           headers: { "Content-Type": "application/json", ...corsHeaders },
@@ -56,7 +59,9 @@ export default {
       const room = env.CROSSWORD_ROOM.get(id);
 
       // Forward the request to the Durable Object
+      console.log(`[Worker] Forwarding to Durable Object`);
       const response = await room.fetch(request);
+      console.log(`[Worker] DO response status: ${response.status}`);
 
       // Add CORS headers to the response (for non-WebSocket responses)
       if (request.headers.get("Upgrade") !== "websocket") {
