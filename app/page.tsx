@@ -25,7 +25,7 @@ export default function Home() {
   return (
     <main className="bg-white p-2">
       <section className="max-w-2xl mx-auto space-y-4 mb-8 mt-4">
-        <h1 className="text-6xl font-bold text-center font-rampart">
+        <h1 className="text-5xl font-bold text-center font-rampart tracking-tight">
           <WavyUnderline style={0} thickness={6} color="text-lime-400">
             OBOB.DOG{" "}
           </WavyUnderline>
@@ -34,7 +34,7 @@ export default function Home() {
           Read, practice, and have fun with Oregon Battle of the Books
         </p>
 
-        <div className="max-w-lg mx-auto pt-2">
+        <div className="max-w-lg mx-auto pt-6">
           <div className="bg-gray-50 border border-gray-200 rounded-lg p-4 shadow-sm">
             <p className="text-sm font-medium text-gray-700 text-center mb-3">
               Pick your 2025-2026 division
