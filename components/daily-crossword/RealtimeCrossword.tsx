@@ -81,6 +81,28 @@ function convertToLibraryFormat(puzzle: SerializedCrosswordPuzzle): LibraryCross
   return { across, down };
 }
 
+function CursorSync({
+  sendCursor,
+  lastSentCursorRef,
+}: {
+  sendCursor: (row: number, col: number, direction: "across" | "down") => void;
+  lastSentCursorRef: React.MutableRefObject<string>;
+}) {
+  const { selectedPosition, selectedDirection } = useContext(CrosswordContext);
+
+  useEffect(() => {
+    if (selectedPosition.row < 0 || selectedPosition.col < 0) return;
+
+    const cursorKey = `${selectedPosition.row},${selectedPosition.col},${selectedDirection}`;
+    if (cursorKey === lastSentCursorRef.current) return;
+
+    lastSentCursorRef.current = cursorKey;
+    sendCursor(selectedPosition.row, selectedPosition.col, selectedDirection);
+  }, [selectedPosition, selectedDirection, sendCursor, lastSentCursorRef]);
+
+  return null;
+}
+
 function CollaborativeClue({
   direction,
   number,
@@ -347,21 +369,6 @@ export default function RealtimeCrossword({
     [sendLetter, sendDelete]
   );
 
-  // Track cursor/focus changes
-  const handleCrosswordFocus = useCallback(
-    (direction: "across" | "down", number: string) => {
-      const clueData = libraryData[direction][number];
-      if (!clueData) return;
-
-      const cursorKey = `${clueData.row},${clueData.col},${direction}`;
-      if (cursorKey === lastSentCursorRef.current) return;
-
-      lastSentCursorRef.current = cursorKey;
-      sendCursor(clueData.row, clueData.col, direction);
-    },
-    [libraryData, sendCursor]
-  );
-
   const handleHelpRequest = async (clueId: string) => {
     try {
       const response = await fetch("/api/daily-crossword/help", {
@@ -549,9 +556,9 @@ export default function RealtimeCrossword({
           data={libraryData}
           theme={crosswordTheme}
           onCellChange={handleCellChange}
-          onClueSelected={handleCrosswordFocus}
           onLoadedCorrect={() => setCrosswordReady(true)}
         >
+          <CursorSync sendCursor={sendCursor} lastSentCursorRef={lastSentCursorRef} />
           <div className="flex flex-col lg:flex-row gap-6">
             {/* Crossword grid with cursor overlay */}
             <div className="flex-1">
