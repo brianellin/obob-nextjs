@@ -591,8 +591,8 @@ export default function CollaborativeCrossword({
           onLoadedCorrect={() => setCrosswordReady(true)}
         >
           <div className="flex flex-col lg:flex-row gap-4 lg:gap-6">
-            {/* Crossword grid - sticky on mobile */}
-            <div className="flex-1 sticky top-0 z-10 bg-gray-50 pb-2 lg:relative lg:bg-transparent lg:pb-0">
+            {/* Crossword grid - sticky on all screens */}
+            <div className="flex-shrink-0 sticky top-0 lg:top-[140px] self-start bg-gray-50 pb-2 z-10" style={{ width: "min(500px, 100%)" }}>
               <div
                 className="border-2 border-gray-900 bg-white"
                 style={{ maxWidth: "500px", margin: "0 auto" }}
@@ -602,7 +602,7 @@ export default function CollaborativeCrossword({
             </div>
 
             {/* Clues */}
-            <div className="lg:w-96 space-y-4">
+            <div className="lg:w-[28rem] xl:w-auto xl:flex-1 grid grid-cols-1 xl:grid-cols-2 gap-4">
               <div className="bg-white border rounded-lg p-4">
                 <CustomDirectionClues
                   direction="across"
