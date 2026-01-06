@@ -90,7 +90,7 @@ function BattleContent() {
     return (
       <div className="container max-w-2xl mx-auto mt-8">
         <div className="text-center mb-8">
-          <h1 className="text-2xl font-bold mb-4">
+          <h1 className="text-2xl font-bold mb-4 font-heading">
             <WavyUnderline style={0} thickness={4} color="text-lime-400">
               {getDivisionName(division)} {year}
             </WavyUnderline>

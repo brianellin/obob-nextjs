@@ -1,17 +1,22 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { Inter, Playfair_Display, Rampart_One } from "next/font/google";
+import { Nunito, Nunito_Sans, Rampart_One } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import NewsletterBanner from "@/components/NewsletterBanner";
 import { Analytics } from "@vercel/analytics/react";
 import { PostHogProvider } from "./providers";
 
-const inter = Inter({ subsets: ["latin"] });
-export const playfairDisplay = Playfair_Display({
+const nunitoSans = Nunito_Sans({
   subsets: ["latin"],
-  weight: ["700", "800", "900"],
-  variable: "--font-playfair",
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-nunito-sans",
+});
+
+const nunito = Nunito({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
+  variable: "--font-nunito",
 });
 
 const rampartOne = Rampart_One({
@@ -47,7 +52,7 @@ export default function RootLayout({
           href="/feed.xml"
         />
       </head>
-      <body className={`${inter.className} ${playfairDisplay.variable} ${rampartOne.variable}`}>
+      <body className={`${nunitoSans.className} ${nunitoSans.variable} ${nunito.variable} ${rampartOne.variable}`}>
         <PostHogProvider>
           <NewsletterBanner />
           <Header />

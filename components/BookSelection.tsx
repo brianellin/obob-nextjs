@@ -131,7 +131,7 @@ export default function BookSelection({
         <CardContent className="p-2 sm:p-4">
           <div className="grid grid-cols-4 md:grid-cols-8 gap-2">
             <div className="col-span-full flex justify-between items-center mb-4">
-              <h2 className="text-lg font-semibold">Select your books</h2>
+              <h2 className="text-lg font-semibold font-heading">Select your books</h2>
               <Button
                 onClick={handleToggleAll}
                 variant="outline"

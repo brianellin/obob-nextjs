@@ -30,13 +30,13 @@ export default function Home() {
             OBOB.DOG{" "}
           </WavyUnderline>
         </h1>
-        <p className="text-xl text-center text-muted-foreground pt-1">
+        <p className="text-xl text-center text-muted-foreground pt-1 font-heading font-medium">
           Read, practice, and have fun with Oregon Battle of the Books
         </p>
 
         <div className="max-w-lg mx-auto pt-6">
           <div className="bg-gray-50 border border-gray-200 rounded-lg p-4 shadow-sm">
-            <p className="text-sm font-medium text-gray-700 text-center mb-3">
+            <p className="text-sm font-semibold text-gray-700 text-center mb-3 font-heading">
               Pick your 2025-2026 division
             </p>
             <ToggleGroup
@@ -50,21 +50,21 @@ export default function Home() {
               <ToggleGroupItem
                 value="3-5"
                 aria-label="Elementary Division"
-                className="data-[state=on]:bg-black data-[state=on]:text-white"
+                className="data-[state=on]:bg-black data-[state=on]:text-white font-heading font-semibold"
               >
                 Elementary
               </ToggleGroupItem>
               <ToggleGroupItem
                 value="6-8"
                 aria-label="Middle School Division"
-                className="data-[state=on]:bg-black data-[state=on]:text-white"
+                className="data-[state=on]:bg-black data-[state=on]:text-white font-heading font-semibold"
               >
                 Middle
               </ToggleGroupItem>
               <ToggleGroupItem
                 value="9-12"
                 aria-label="High School Division"
-                className="data-[state=on]:bg-black data-[state=on]:text-white"
+                className="data-[state=on]:bg-black data-[state=on]:text-white font-heading font-semibold"
               >
                 High
               </ToggleGroupItem>
@@ -79,24 +79,24 @@ export default function Home() {
           >
             <BookOpen className="h-6 w-6 text-muted-foreground" />
             <div>
-              <p className="text-2xl font-bold">
+              <p className="text-2xl font-bold font-heading">
                 {division === "9-12" ? "12" : "16"}
               </p>
-              <p className="text-sm text-muted-foreground">Books</p>
+              <p className="text-sm text-muted-foreground font-medium">Books</p>
             </div>
           </Link>
           <div className="flex items-center space-x-2">
             <Zap className="h-6 w-6 text-muted-foreground" />
             <div>
-              <p className="text-2xl font-bold">{getQuestionCount()}</p>
-              <p className="text-sm text-muted-foreground">Questions</p>
+              <p className="text-2xl font-bold font-heading">{getQuestionCount()}</p>
+              <p className="text-sm text-muted-foreground font-medium">Questions</p>
             </div>
           </div>
           <div className="flex items-center space-x-2">
             <Dog className="h-6 w-6 text-muted-foreground" />
             <div>
-              <p className="text-2xl font-bold">1</p>
-              <p className="text-sm text-muted-foreground">Dog</p>
+              <p className="text-2xl font-bold font-heading">1</p>
+              <p className="text-sm text-muted-foreground font-medium">Dog</p>
             </div>
           </div>
         </div>
@@ -117,8 +117,8 @@ export default function Home() {
               <span className="text-3xl">📚</span>
             </div>
             <div className="flex-1">
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                Help improve OBOB.dog!
+              <h3 className="text-lg font-bold text-gray-900 mb-2 font-heading">
+                Help improve <span className="font-rampart">OBOB.dog</span>!
               </h3>
               <p className="text-gray-700 mb-3">
                 Interested in contributing new questions to OBOB.dog? You can
@@ -126,7 +126,7 @@ export default function Home() {
               </p>
               <Link
                 href="/blog/obob-dog-community"
-                className="inline-flex items-center text-gray-900 font-medium hover:text-gray-700 transition-colors"
+                className="inline-flex items-center text-gray-900 font-semibold hover:text-gray-700 transition-colors"
               >
                 Read our contribution guide →
               </Link>

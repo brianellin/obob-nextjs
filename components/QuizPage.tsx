@@ -780,7 +780,7 @@ export default function QuizPage({
       {/* New header section above the card */}
       <div className="w-full max-w-xl mx-auto relative z-50 overflow-visible">
         <div className="flex flex-col  items-center justify-between overflow-visible">
-          <h1 className="text-2xl font-bold mb-7">
+          <h1 className="text-2xl font-bold mb-7 font-heading">
             {quizMode === "personal" ? (
               <WavyUnderline style={0} thickness={4} color="text-purple-500">
                 Solo battle

@@ -86,7 +86,7 @@ function AuthorMatchContent() {
         </Link>
         <div className="flex items-center gap-3 mb-1">
           <Grid2X2 className="h-8 w-8 text-green-500" />
-          <h1 className="text-2xl font-bold">
+          <h1 className="text-2xl font-bold font-heading">
             Author{" "}
             <WavyUnderline>
               <span className="text-green-500">Match</span>

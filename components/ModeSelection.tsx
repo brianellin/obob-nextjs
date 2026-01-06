@@ -21,7 +21,7 @@ export default function ModeSelection({ year, division }: ModeSelectionProps) {
     <div className="space-y-8 max-w-2xl mx-auto">
       {/* Battles Section */}
       <div>
-        <h2 className="text-2xl font-bold mb-4 text-center">Battles</h2>
+        <h2 className="text-4xl font-bold mb-4 text-center font-rampart">Battles</h2>
         <div className="space-y-4">
           <div className="flex gap-4 flex-col md:flex-row">
             <Card>
@@ -108,7 +108,7 @@ export default function ModeSelection({ year, division }: ModeSelectionProps) {
 
       {/* Games Section */}
       <div>
-        <h2 className="text-2xl font-bold mb-4 text-center">OBOB Games</h2>
+        <h2 className="text-4xl font-bold mb-4 text-center font-rampart">OBOB Games</h2>
         <div className="space-y-4">
           <Card>
             <CardHeader>

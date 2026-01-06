@@ -231,7 +231,7 @@ export default function BookDetailPage({
 
             <div className="flex-grow space-y-4">
               <div>
-                <h1 className="text-3xl font-bold">{book.title}</h1>
+                <h1 className="text-3xl font-bold font-heading">{book.title}</h1>
                 <p className="text-xl text-muted-foreground">
                   by {book.author}
                 </p>
@@ -293,7 +293,7 @@ export default function BookDetailPage({
               {/* Question Statistics */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div>
-                  <h3 className="font-semibold text-lg mb-2">Question Stats</h3>
+                  <h3 className="font-semibold text-lg mb-2 font-heading">Question Stats</h3>
                   <div className="space-y-1">
                     <div className="flex justify-between">
                       <span>Total Questions:</span>
@@ -315,7 +315,7 @@ export default function BookDetailPage({
                 </div>
 
                 <div>
-                  <h3 className="font-semibold text-lg mb-2">By Type</h3>
+                  <h3 className="font-semibold text-lg mb-2 font-heading">By Type</h3>
                   <div className="space-y-1">
                     <div className="flex justify-between">
                       <span>Content Questions:</span>
@@ -331,7 +331,7 @@ export default function BookDetailPage({
                 </div>
 
                 <div>
-                  <h3 className="font-semibold text-lg mb-2">By Source</h3>
+                  <h3 className="font-semibold text-lg mb-2 font-heading">By Source</h3>
                   <div className="space-y-1 max-h-24 overflow-y-auto">
                     {Object.entries(stats.bySource).map(([source, count]) => (
                       <div key={source} className="flex justify-between">

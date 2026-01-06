@@ -38,8 +38,8 @@ export default function BooksSelectionPage() {
     <div className="container mx-auto px-4 py-8">
       <div className="max-w-2xl mx-auto space-y-8">
         <div className="text-center">
-          <h1 className="text-4xl font-bold mb-4">OBOB Books</h1>
-          <p className="text-xl text-muted-foreground">
+          <h1 className="text-4xl font-bold mb-4 font-heading">OBOB Books</h1>
+          <p className="text-xl text-muted-foreground font-heading">
             Select your division to view available books, question stats,
             questions by book and page, and submit new questions!
           </p>
@@ -48,7 +48,7 @@ export default function BooksSelectionPage() {
         <div className="flex justify-center">
           <div className="bg-gray-50 border border-gray-200 rounded-lg p-6 shadow-sm space-y-6 w-full max-w-lg">
             <div>
-              <p className="text-sm font-medium text-gray-700 text-center mb-3">
+              <p className="text-sm font-semibold text-gray-700 text-center mb-3 font-heading">
                 Pick your year
               </p>
               <ToggleGroup
@@ -75,7 +75,7 @@ export default function BooksSelectionPage() {
             </div>
 
             <div>
-              <p className="text-sm font-medium text-gray-700 text-center mb-3">
+              <p className="text-sm font-semibold text-gray-700 text-center mb-3 font-heading">
                 Pick your division
               </p>
               <ToggleGroup

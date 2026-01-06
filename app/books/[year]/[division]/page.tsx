@@ -238,7 +238,7 @@ export default async function BooksPage({ params }: Props) {
         <div className="flex flex-col gap-2">
           <div className="flex items-center justify-between gap-2 md:gap-4">
             <div>
-              <h1 className="text-3xl md:text-4xl font-bold">
+              <h1 className="text-3xl md:text-4xl font-bold font-heading">
                 OBOB {year} {divisionName}
               </h1>
               <p className="text-muted-foreground mt-1">
@@ -262,7 +262,7 @@ export default async function BooksPage({ params }: Props) {
           <CardContent className="p-6">
             <div className="flex flex-col md:flex-row items-center justify-between gap-6">
               <div className="flex-1 text-center md:text-left">
-                <h2 className="text-2xl font-bold mb-2 flex items-center justify-center md:justify-start gap-2">
+                <h2 className="text-2xl font-bold mb-2 flex items-center justify-center md:justify-start gap-2 font-heading">
                   <Swords className="h-6 w-6 text-purple-600" />
                   Ready to Battle?
                 </h2>
@@ -297,14 +297,14 @@ export default async function BooksPage({ params }: Props) {
         <CardContent>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div>
-              <h3 className="font-semibold text-lg mb-2">Total Questions</h3>
+              <h3 className="font-semibold text-lg mb-2 font-heading">Total Questions</h3>
               <p className="text-3xl font-bold text-primary">
                 {summaryStats.totalQuestions}
               </p>
             </div>
 
             <div>
-              <h3 className="font-semibold text-lg mb-2">Questions by Type</h3>
+              <h3 className="font-semibold text-lg mb-2 font-heading">Questions by Type</h3>
               <ul className="space-y-1">
                 <li className="flex justify-between">
                   <span>Content Questions:</span>
@@ -322,7 +322,7 @@ export default async function BooksPage({ params }: Props) {
             </div>
 
             <div>
-              <h3 className="font-semibold text-lg mb-2">
+              <h3 className="font-semibold text-lg mb-2 font-heading">
                 Questions by Source
               </h3>
               <ScrollArea className="h-[100px]">
@@ -364,7 +364,7 @@ export default async function BooksPage({ params }: Props) {
                   {/* Title/Author and Button - responsive layout */}
                   <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3">
                     <div className="flex-grow">
-                      <h2 className="text-2xl font-bold">{book.title}</h2>
+                      <h2 className="text-2xl font-bold font-heading">{book.title}</h2>
                       <p className="text-muted-foreground">by {book.author}</p>
                       {book.author_pronunciation && (
                         <p className="text-sm text-muted-foreground mt-1 flex items-center gap-2">

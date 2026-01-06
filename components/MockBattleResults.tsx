@@ -82,13 +82,13 @@ export default function MockBattleResults({
             {winner === "tie" ? (
               <div className="flex items-center justify-center gap-2 mb-4">
                 <Award className="h-12 w-12 text-yellow-500" />
-                <h2 className="text-3xl font-bold text-gray-700">It&apos;s a Tie!</h2>
+                <h2 className="text-3xl font-bold text-gray-700 font-heading">It&apos;s a Tie!</h2>
                 <Award className="h-12 w-12 text-yellow-500" />
               </div>
             ) : (
               <div className="flex items-center justify-center gap-2 mb-4">
                 <Trophy className="h-12 w-12 text-yellow-500" />
-                <h2 className="text-3xl font-bold text-green-600">
+                <h2 className="text-3xl font-bold text-green-600 font-heading">
                   {winner === "A" ? <TeamALabel>Odds</TeamALabel> : <TeamBLabel>Evens</TeamBLabel>} Win!
                 </h2>
                 <Trophy className="h-12 w-12 text-yellow-500" />
@@ -107,7 +107,7 @@ export default function MockBattleResults({
                   : "bg-gray-50 border-gray-300"
               }`}
             >
-              <h3 className="text-xl font-bold text-center mb-2"><TeamALabel>Odds</TeamALabel></h3>
+              <h3 className="text-xl font-bold text-center mb-2 font-heading"><TeamALabel>Odds</TeamALabel></h3>
               <p className="text-4xl font-bold text-center">{teamAScore}</p>
             </div>
             <div
@@ -119,7 +119,7 @@ export default function MockBattleResults({
                   : "bg-gray-50 border-gray-300"
               }`}
             >
-              <h3 className="text-xl font-bold text-center mb-2"><TeamBLabel>Evens</TeamBLabel></h3>
+              <h3 className="text-xl font-bold text-center mb-2 font-heading"><TeamBLabel>Evens</TeamBLabel></h3>
               <p className="text-4xl font-bold text-center">{teamBScore}</p>
             </div>
           </div>
@@ -139,7 +139,7 @@ export default function MockBattleResults({
 
           {/* Question review */}
           <div className="space-y-4">
-            <h3 className="font-semibold text-lg">Battle review:</h3>
+            <h3 className="font-semibold text-lg font-heading">Battle review:</h3>
             {questionResults.map((result, index) => {
               const wasStolen = !!result.stolenBy && result.pointsAwarded > 0;
 

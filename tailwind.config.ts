@@ -17,8 +17,8 @@ module.exports = {
 	  },
 	  extend: {
 		fontFamily: {
-		  sans: ['Inter', 'sans-serif'],
-		  display: ['var(--font-playfair)', 'serif'],
+		  sans: ['var(--font-nunito-sans)', 'sans-serif'],
+		  heading: ['var(--font-nunito)', 'sans-serif'],
 		  'rampart': ['var(--font-rampart)', 'cursive'],
 		},
 		colors: {

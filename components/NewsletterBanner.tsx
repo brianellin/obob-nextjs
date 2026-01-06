@@ -42,7 +42,7 @@ export default function NewsletterBanner() {
           className="flex items-center gap-4 pr-12 max-w-full hover:opacity-90"
         >
           <Grid3X3 className="w-6 h-6 text-white flex-shrink-0" />
-          <p className="text-white text-sm font-display font-bold tracking-wide">
+          <p className="text-white text-sm font-heading font-bold tracking-wide">
             New game coming soon!{" "}
             <span className="underline">Sign up</span> for the newsletter to
             find out first.

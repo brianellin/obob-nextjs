@@ -685,7 +685,7 @@ Can you catch me? https://obob.dog/zoomies/${year}/${division}?utm_source=share`
             </button>
           </div>
 
-          <h2 className="text-2xl font-bold text-center mb-2">
+          <h2 className="text-2xl font-bold text-center mb-2 font-heading">
             Choose Your Books
           </h2>
           <p className="text-gray-500 text-center mb-6">

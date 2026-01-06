@@ -145,20 +145,20 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         )}
 
         <header className="mb-8">
-          <h1 className="text-4xl font-bold mb-4 font-playfair">{post.title}</h1>
+          <h1 className="text-4xl font-bold mb-4 font-heading">{post.title}</h1>
           <time className="text-gray-500" dateTime={new Date(post.date).toISOString()}>
             {formatDate(post.date)}
           </time>
         </header>
 
         <div
-          className="prose prose-lg max-w-none prose-headings:font-playfair prose-a:text-cyan-500 prose-img:rounded-lg"
+          className="prose prose-lg max-w-none prose-headings:font-heading prose-a:text-cyan-500 prose-img:rounded-lg"
           dangerouslySetInnerHTML={{ __html: post.content }}
         />
 
         {/* Newsletter CTA */}
         <div className="mt-12 p-6 bg-gray-100 rounded-lg text-center">
-          <h3 className="text-lg font-semibold text-gray-900 mb-2">
+          <h3 className="text-lg font-bold text-gray-900 mb-2 font-heading">
             Want more OBOB.dog updates?
           </h3>
           <p className="text-gray-600 mb-4">

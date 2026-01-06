@@ -102,7 +102,7 @@ export default function BlogPage() {
                       />
                     </div>
                   )}
-                  <h2 className="text-2xl font-semibold mb-2 group-hover:text-cyan-500 transition-colors">
+                  <h2 className="text-2xl font-bold mb-2 group-hover:text-cyan-500 transition-colors font-heading">
                     {post.title}
                   </h2>
                   <time className="text-sm text-gray-500 block mb-2" dateTime={new Date(post.date).toISOString()}>

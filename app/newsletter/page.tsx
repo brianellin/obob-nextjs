@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 export default function NewsletterPage() {
   return (
     <div className="container mx-auto max-w-md px-4 py-4">
-      <h1 className="text-4xl font-bold text-center mb-8">
+      <h1 className="text-4xl font-bold text-center mb-8 font-heading">
         <WavyUnderline style={0} thickness={4} color="text-yellow-900">
           Stay in the Loop!
         </WavyUnderline>
