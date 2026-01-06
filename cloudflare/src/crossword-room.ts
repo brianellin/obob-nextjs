@@ -195,7 +195,7 @@ export class CrosswordRoom {
     // Update client metadata
     client.sessionId = msg.sessionId;
     client.nickname = msg.nickname;
-    client.color = getPlayerColor(msg.sessionId);
+    client.color = getPlayerColor(msg.nickname);
     client.lastSeen = Date.now();
     this.setClientMetadata(ws, client);
 

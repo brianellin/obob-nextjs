@@ -159,32 +159,50 @@ export type ServerMessage =
 // =============================================================================
 
 /**
- * Generate a consistent color from a session ID
- * Uses a simple hash to pick from a palette of distinct colors
+ * Map of color names used in nicknames to their hex values
+ * These match the COLORS array in team-codes.ts
  */
-export function getPlayerColor(sessionId: string): string {
-  // Vibrant, high-contrast colors that work well on white backgrounds
-  // Each color is chosen to be distinct and readable
-  const colors = [
-    "#E53935", // Red
-    "#00897B", // Teal
-    "#1E88E5", // Blue
-    "#43A047", // Green
-    "#8E24AA", // Purple
-    "#F4511E", // Deep Orange
-    "#3949AB", // Indigo
-    "#D81B60", // Pink
-    "#00ACC1", // Cyan
-    "#5E35B1", // Deep Purple
-  ];
+const NICKNAME_COLORS: Record<string, string> = {
+  blue: "#1E88E5",
+  red: "#E53935",
+  green: "#43A047",
+  purple: "#8E24AA",
+  orange: "#F4511E",
+  pink: "#D81B60",
+  teal: "#00897B",
+  gold: "#FFA000",
+  silver: "#78909C",
+  coral: "#FF7043",
+  mint: "#26A69A",
+  peach: "#FF8A65",
+  indigo: "#3949AB",
+  crimson: "#C62828",
+  emerald: "#00C853",
+  amber: "#FFB300",
+};
 
+/**
+ * Generate a color from a nickname
+ * Extracts the color word from nicknames like "Blue Pup" or "Green Corgi"
+ * Falls back to hash-based color if no color word found
+ */
+export function getPlayerColor(nickname: string): string {
+  // Extract first word (the color) from nickname
+  const firstWord = nickname.split(" ")[0]?.toLowerCase();
+  
+  if (firstWord && NICKNAME_COLORS[firstWord]) {
+    return NICKNAME_COLORS[firstWord];
+  }
+
+  // Fallback: hash-based color for legacy/unknown nicknames
+  const fallbackColors = Object.values(NICKNAME_COLORS);
   let hash = 0;
-  for (let i = 0; i < sessionId.length; i++) {
-    hash = (hash << 5) - hash + sessionId.charCodeAt(i);
+  for (let i = 0; i < nickname.length; i++) {
+    hash = (hash << 5) - hash + nickname.charCodeAt(i);
     hash |= 0;
   }
 
-  return colors[Math.abs(hash) % colors.length];
+  return fallbackColors[Math.abs(hash) % fallbackColors.length];
 }
 
 /**
