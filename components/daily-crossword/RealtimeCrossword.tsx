@@ -463,16 +463,22 @@ export default function RealtimeCrossword({
               <div className="flex items-center gap-2">
                 <Users className="h-4 w-4 text-muted-foreground" />
                 <div className="flex items-center gap-1">
-                  {/* Current user */}
+                  {/* Current user - clearly marked as "You" */}
                   <div
-                    className="flex items-center gap-1 px-2 py-0.5 rounded-full text-sm"
-                    style={{ backgroundColor: `${myColor}20`, color: myColor }}
+                    className="flex items-center gap-1 px-2 py-0.5 rounded-full text-sm font-medium border-2"
+                    style={{ 
+                      backgroundColor: `${myColor}20`, 
+                      color: myColor,
+                      borderColor: myColor,
+                    }}
+                    title={`You are ${nickname}`}
                   >
                     <div
                       className="w-2 h-2 rounded-full"
                       style={{ backgroundColor: myColor }}
                     />
                     <span>{nickname}</span>
+                    <span className="text-xs opacity-75">(you)</span>
                   </div>
                   {/* Other players */}
                   {Array.from(players.values()).map((player) => (

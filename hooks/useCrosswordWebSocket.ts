@@ -225,12 +225,12 @@ export function useCrosswordWebSocket(
             const next = new Map(prev);
             const existing = next.get(msg.sessionId);
             next.set(msg.sessionId, {
+              ...existing,
               sessionId: msg.sessionId,
               nickname: msg.nickname,
               color: msg.color,
               cursor: { row: msg.row, col: msg.col, direction: msg.direction },
               lastSeen: Date.now(),
-              ...existing,
             });
             return next;
           });
