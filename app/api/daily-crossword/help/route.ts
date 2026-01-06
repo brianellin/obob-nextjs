@@ -71,9 +71,10 @@ export async function POST(request: Request) {
 
     await setHelpRequest(helpRequest);
 
-    // Generate the share URL
+    // Generate the share URL - goes directly to the crossword with team code and clue selection
     const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://obob.dog";
-    const shareUrl = `${baseUrl}/help/${helpId}`;
+    const clueRef = `${clue.number}-${clue.direction}`;
+    const shareUrl = `${baseUrl}/daily/${teamState.year}/${teamState.division}?team=${teamCode}&clue=${clueRef}`;
 
     return NextResponse.json({
       success: true,

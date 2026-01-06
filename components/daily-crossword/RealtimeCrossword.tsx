@@ -50,6 +50,7 @@ interface RealtimeCrosswordProps {
   year: string;
   division: string;
   wsUrl: string;
+  initialClue?: string | null; // Format: "1-across" or "2-down" - auto-select this clue on load
 }
 
 const CLUE_DELIMITER = "|||";
@@ -99,6 +100,35 @@ function CursorSync({
     lastSentCursorRef.current = cursorKey;
     sendCursor(selectedPosition.row, selectedPosition.col, selectedDirection);
   }, [selectedPosition, selectedDirection, sendCursor, lastSentCursorRef]);
+
+  return null;
+}
+
+function InitialClueSelector({
+  initialClue,
+  crosswordReady,
+}: {
+  initialClue: string | null;
+  crosswordReady: boolean;
+}) {
+  const { handleClueSelected } = useContext(CrosswordContext);
+  const hasSelected = useRef(false);
+
+  useEffect(() => {
+    if (!initialClue || !crosswordReady || hasSelected.current) return;
+
+    // Parse the clue format: "1-across" or "2-down"
+    const match = initialClue.match(/^(\d+)-(across|down)$/);
+    if (!match) return;
+
+    const [, number, direction] = match;
+    hasSelected.current = true;
+
+    // Small delay to ensure the crossword is fully rendered
+    setTimeout(() => {
+      handleClueSelected(direction as "across" | "down", number);
+    }, 100);
+  }, [initialClue, crosswordReady, handleClueSelected]);
 
   return null;
 }
@@ -164,8 +194,8 @@ function CustomDirectionClues({
   if (!clues) return null;
 
   return (
-    <div className="direction">
-      <h3 className="header">{label}</h3>
+    <div className="direction space-y-2">
+      <h3 className="text-lg font-bold text-gray-900 border-b pb-1 mb-3">{label}</h3>
       {clues[direction].map(({ number, clue, complete }) => {
         const [text, bookTitle, clueId] = clue.split(CLUE_DELIMITER);
         const isCorrect = correctClues.includes(clueId);
@@ -197,6 +227,7 @@ export default function RealtimeCrossword({
   year,
   division,
   wsUrl,
+  initialClue,
 }: RealtimeCrosswordProps) {
   const posthog = usePostHog();
   const { width, height } = useWindowSize();
@@ -432,79 +463,39 @@ export default function RealtimeCrossword({
     <div className="min-h-screen bg-gray-50">
       {showConfetti && <Confetti width={width} height={height} recycle={false} />}
 
-      {/* Header */}
-      <div className="bg-white border-b shadow-sm sticky top-0 z-10">
-        <div className="max-w-6xl mx-auto px-4 py-3">
-          <div className="flex items-center justify-between">
-            <div>
-              <h1 className="text-xl font-bold font-serif">Daily Team Crossword</h1>
-              <p className="text-sm text-muted-foreground">{dateString}</p>
+      {/* Header - sticky on desktop only */}
+      <div className="bg-white border-b shadow-sm lg:sticky lg:top-0 z-10">
+        <div className="max-w-6xl mx-auto px-3 sm:px-4 py-2 sm:py-3">
+          {/* Top row: Title, team code, timer */}
+          <div className="flex items-center justify-between gap-2">
+            <div className="min-w-0">
+              <h1 className="text-base sm:text-xl font-bold font-serif truncate">Daily Crossword</h1>
+              <p className="text-xs sm:text-sm text-muted-foreground">{dateString}</p>
             </div>
 
-            <div className="flex items-center gap-4">
-              {/* Connection status */}
-              <div className="flex items-center gap-1">
-                {isConnected ? (
-                  <Wifi className="h-4 w-4 text-green-500" />
-                ) : isConnecting ? (
-                  <Wifi className="h-4 w-4 text-yellow-500 animate-pulse" />
-                ) : (
-                  <WifiOff className="h-4 w-4 text-red-500" />
-                )}
-              </div>
-
-              {/* Team code */}
-              <button
-                onClick={handleCopyTeamCode}
-                className="flex items-center gap-2 px-3 py-1.5 bg-gray-100 rounded-lg hover:bg-gray-200 transition-colors"
-              >
-                <span className="font-mono font-bold">{teamCode}</span>
-                {codeCopied ? (
-                  <Check className="h-4 w-4 text-green-600" />
-                ) : (
-                  <Copy className="h-4 w-4 text-gray-500" />
-                )}
-              </button>
-
-              {/* Team members */}
-              <div className="flex items-center gap-2">
-                <Users className="h-4 w-4 text-muted-foreground" />
-                <div className="flex items-center gap-1">
-                  {/* Current user - clearly marked as "You" */}
-                  <div
-                    className="flex items-center gap-1 px-2 py-0.5 rounded-full text-sm font-medium border-2"
-                    style={{ 
-                      backgroundColor: `${myColor}20`, 
-                      color: myColor,
-                      borderColor: myColor,
-                    }}
-                    title={`You are ${nickname}`}
-                  >
-                    <div
-                      className="w-2 h-2 rounded-full"
-                      style={{ backgroundColor: myColor }}
-                    />
-                    <span>{nickname}</span>
-                    <span className="text-xs opacity-75">(you)</span>
-                  </div>
-                  {/* Other players */}
-                  {Array.from(players.values()).map((player) => (
-                    <div
-                      key={player.sessionId}
-                      className="flex items-center gap-1 px-2 py-0.5 rounded-full text-sm"
-                      style={{
-                        backgroundColor: `${player.color}20`,
-                        color: player.color,
-                      }}
-                    >
-                      <div
-                        className="w-2 h-2 rounded-full"
-                        style={{ backgroundColor: player.color }}
-                      />
-                      <span>{player.nickname}</span>
-                    </div>
-                  ))}
+            <div className="flex items-center gap-2 sm:gap-3 flex-shrink-0">
+              {/* Team code with connection status */}
+              <div className="flex items-center gap-1.5">
+                <div className="flex-shrink-0">
+                  {isConnected ? (
+                    <Wifi className="h-4 w-4 text-green-500" />
+                  ) : isConnecting ? (
+                    <Wifi className="h-4 w-4 text-yellow-500 animate-pulse" />
+                  ) : (
+                    <WifiOff className="h-4 w-4 text-red-500" />
+                  )}
                 </div>
+                <button
+                  onClick={handleCopyTeamCode}
+                  className="flex items-center gap-1.5 px-2 sm:px-3 py-1 sm:py-1.5 bg-gray-100 rounded-lg hover:bg-gray-200 transition-colors"
+                >
+                  <span className="font-mono font-bold text-sm sm:text-base">{teamCode}</span>
+                  {codeCopied ? (
+                    <Check className="h-4 w-4 text-green-600" />
+                  ) : (
+                    <Copy className="h-4 w-4 text-gray-500" />
+                  )}
+                </button>
               </div>
 
               {/* Timer */}
@@ -519,13 +510,56 @@ export default function RealtimeCrossword({
             </div>
           </div>
 
+          {/* Second row: Team members (scrollable on mobile) */}
+          <div className="mt-2 flex items-center gap-2">
+            <Users className="h-4 w-4 text-muted-foreground flex-shrink-0" />
+            <div className="flex-1 overflow-x-auto scrollbar-hide">
+              <div className="flex items-center gap-1.5 pb-1">
+                {/* Current user - clearly marked as "You" */}
+                <div
+                  className="flex items-center gap-1 px-2 py-0.5 rounded-full text-xs sm:text-sm font-medium border-2 whitespace-nowrap flex-shrink-0"
+                  style={{ 
+                    backgroundColor: `${myColor}20`, 
+                    color: myColor,
+                    borderColor: myColor,
+                  }}
+                  title={`You are ${nickname}`}
+                >
+                  <div
+                    className="w-2 h-2 rounded-full flex-shrink-0"
+                    style={{ backgroundColor: myColor }}
+                  />
+                  <span>{nickname}</span>
+                  <span className="text-xs opacity-75">(you)</span>
+                </div>
+                {/* Other players */}
+                {Array.from(players.values()).map((player) => (
+                  <div
+                    key={player.sessionId}
+                    className="flex items-center gap-1 px-2 py-0.5 rounded-full text-xs sm:text-sm whitespace-nowrap flex-shrink-0"
+                    style={{
+                      backgroundColor: `${player.color}20`,
+                      color: player.color,
+                    }}
+                  >
+                    <div
+                      className="w-2 h-2 rounded-full flex-shrink-0"
+                      style={{ backgroundColor: player.color }}
+                    />
+                    <span>{player.nickname}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
           {/* Progress bar */}
           <div className="mt-2">
-            <div className="flex items-center gap-2 text-sm">
-              <span className="text-muted-foreground">Progress:</span>
-              <div className="flex-1 bg-gray-200 rounded-full h-2">
+            <div className="flex items-center gap-2 text-xs sm:text-sm">
+              <span className="text-muted-foreground hidden sm:inline">Progress:</span>
+              <div className="flex-1 bg-gray-200 rounded-full h-1.5 sm:h-2">
                 <div
-                  className="bg-green-500 h-2 rounded-full transition-all"
+                  className="bg-green-500 h-1.5 sm:h-2 rounded-full transition-all"
                   style={{
                     width: `${(correctClues.length / puzzle.clues.length) * 100}%`,
                   }}
@@ -559,9 +593,12 @@ export default function RealtimeCrossword({
           onLoadedCorrect={() => setCrosswordReady(true)}
         >
           <CursorSync sendCursor={sendCursor} lastSentCursorRef={lastSentCursorRef} />
-          <div className="flex flex-col lg:flex-row gap-6">
-            {/* Crossword grid with cursor overlay */}
-            <div className="flex-1">
+          {initialClue && (
+            <InitialClueSelector initialClue={initialClue} crosswordReady={crosswordReady} />
+          )}
+          <div className="flex flex-col lg:flex-row gap-4 lg:gap-6">
+            {/* Crossword grid with cursor overlay - sticky on mobile */}
+            <div className="flex-1 sticky top-0 z-10 bg-gray-50 pb-2 lg:relative lg:bg-transparent lg:pb-0">
               <div
                 ref={gridContainerRef}
                 className="border-2 border-gray-900 bg-white relative"

@@ -1,7 +1,7 @@
 "use client";
 
 import { Suspense, useState, useEffect } from "react";
-import { useParams, useRouter } from "next/navigation";
+import { useParams, useRouter, useSearchParams } from "next/navigation";
 import { Loader2 } from "lucide-react";
 import TeamSetup from "@/components/daily-crossword/TeamSetup";
 import RealtimeCrossword from "@/components/daily-crossword/RealtimeCrossword";
@@ -21,8 +21,13 @@ interface PuzzleData {
 function DailyContent() {
   const params = useParams();
   const router = useRouter();
+  const searchParams = useSearchParams();
   const year = params.year as string;
   const division = params.division as string;
+
+  // Check for team code and clue from URL query params (for help links)
+  const urlTeamCode = searchParams.get("team");
+  const urlClue = searchParams.get("clue"); // Format: "1-across" or "2-down"
 
   const [phase, setPhase] = useState<"loading" | "setup" | "playing">("loading");
   const [teamCode, setTeamCode] = useState<string | null>(null);
@@ -31,6 +36,7 @@ function DailyContent() {
   const [teamState, setTeamState] = useState<TeamState | null>(null);
   const [puzzleData, setPuzzleData] = useState<PuzzleData | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const [initialClue, setInitialClue] = useState<string | null>(null);
 
   // Validate year/division
   useEffect(() => {
@@ -39,6 +45,22 @@ function DailyContent() {
       !["3-5", "6-8", "9-12"].includes(division)
     ) {
       router.push("/");
+      return;
+    }
+
+    // If we have a team code from URL, try to join that team
+    if (urlTeamCode) {
+      const storedSessionId = localStorage.getItem("daily-crossword-session");
+      if (storedSessionId) {
+        // Set the initial clue for auto-selection after joining
+        if (urlClue) {
+          setInitialClue(urlClue);
+        }
+        rejoinTeam(urlTeamCode, storedSessionId);
+      } else {
+        // No session yet, go to setup with pre-filled team code
+        setPhase("setup");
+      }
       return;
     }
 
@@ -52,7 +74,7 @@ function DailyContent() {
     } else {
       setPhase("setup");
     }
-  }, [year, division, router]);
+  }, [year, division, router, urlTeamCode, urlClue]);
 
   const rejoinTeam = async (code: string, session: string) => {
     try {
@@ -163,6 +185,7 @@ function DailyContent() {
         year={year}
         division={division}
         wsUrl={process.env.NEXT_PUBLIC_CROSSWORD_WS_URL || "ws://localhost:8787"}
+        initialClue={initialClue}
       />
     );
   }

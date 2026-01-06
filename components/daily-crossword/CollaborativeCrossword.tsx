@@ -145,8 +145,8 @@ function CustomDirectionClues({
   if (!clues) return null;
 
   return (
-    <div className="direction">
-      <h3 className="header">{label}</h3>
+    <div className="direction space-y-2">
+      <h3 className="text-lg font-bold text-gray-900 border-b pb-1 mb-3">{label}</h3>
       {clues[direction].map(({ number, clue, complete }) => {
         const [text, bookTitle, clueId] = clue.split(CLUE_DELIMITER);
         const isCorrect = correctClues.includes(clueId);
@@ -495,45 +495,29 @@ export default function CollaborativeCrossword({
     <div className="min-h-screen bg-gray-50">
       {showConfetti && <Confetti width={width} height={height} recycle={false} />}
 
-      {/* Header */}
-      <div className="bg-white border-b shadow-sm sticky top-0 z-10">
-        <div className="max-w-6xl mx-auto px-4 py-3">
-          <div className="flex items-center justify-between">
-            <div>
-              <h1 className="text-xl font-bold font-serif">Daily Team Crossword</h1>
-              <p className="text-sm text-muted-foreground">{dateString}</p>
+      {/* Header - sticky on desktop only */}
+      <div className="bg-white border-b shadow-sm lg:sticky lg:top-0 z-10">
+        <div className="max-w-6xl mx-auto px-3 sm:px-4 py-2 sm:py-3">
+          {/* Top row: Title, team code, timer */}
+          <div className="flex items-center justify-between gap-2">
+            <div className="min-w-0">
+              <h1 className="text-base sm:text-xl font-bold font-serif truncate">Daily Crossword</h1>
+              <p className="text-xs sm:text-sm text-muted-foreground">{dateString}</p>
             </div>
 
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-2 sm:gap-3 flex-shrink-0">
               {/* Team code - share button */}
               <button
                 onClick={handleCopyTeamCode}
-                className="flex items-center gap-2 px-3 py-1.5 bg-gray-100 rounded-lg hover:bg-gray-200 transition-colors"
+                className="flex items-center gap-1.5 px-2 sm:px-3 py-1 sm:py-1.5 bg-gray-100 rounded-lg hover:bg-gray-200 transition-colors"
               >
-                <span className="font-mono font-bold">{teamCode}</span>
+                <span className="font-mono font-bold text-sm sm:text-base">{teamCode}</span>
                 {codeCopied ? (
                   <Check className="h-4 w-4 text-green-600" />
                 ) : (
                   <Copy className="h-4 w-4 text-gray-500" />
                 )}
               </button>
-
-              {/* Team members */}
-              <div className="flex items-center gap-2">
-                <Users className="h-4 w-4 text-muted-foreground" />
-                <div className="flex items-center gap-1">
-                  <div className="flex items-center gap-1 px-2 py-0.5 bg-green-100 rounded-full text-sm">
-                    <div className="w-2 h-2 rounded-full bg-green-500" />
-                    <span className="text-green-800">{nickname}</span>
-                  </div>
-                  {Object.values(members).map((member) => (
-                    <div key={member.sessionId} className="flex items-center gap-1 px-2 py-0.5 bg-blue-100 rounded-full text-sm">
-                      <div className="w-2 h-2 rounded-full bg-blue-500" />
-                      <span className="text-blue-800">{member.nickname}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
 
               {/* Timer */}
               <div className="flex items-center gap-1 text-sm font-mono text-muted-foreground">
@@ -547,13 +531,33 @@ export default function CollaborativeCrossword({
             </div>
           </div>
 
+          {/* Second row: Team members (scrollable on mobile) */}
+          <div className="mt-2 flex items-center gap-2">
+            <Users className="h-4 w-4 text-muted-foreground flex-shrink-0" />
+            <div className="flex-1 overflow-x-auto scrollbar-hide">
+              <div className="flex items-center gap-1.5 pb-1">
+                <div className="flex items-center gap-1 px-2 py-0.5 bg-green-100 rounded-full text-xs sm:text-sm whitespace-nowrap flex-shrink-0 border-2 border-green-500">
+                  <div className="w-2 h-2 rounded-full bg-green-500 flex-shrink-0" />
+                  <span className="text-green-800">{nickname}</span>
+                  <span className="text-xs text-green-600 opacity-75">(you)</span>
+                </div>
+                {Object.values(members).map((member) => (
+                  <div key={member.sessionId} className="flex items-center gap-1 px-2 py-0.5 bg-blue-100 rounded-full text-xs sm:text-sm whitespace-nowrap flex-shrink-0">
+                    <div className="w-2 h-2 rounded-full bg-blue-500 flex-shrink-0" />
+                    <span className="text-blue-800">{member.nickname}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
           {/* Progress bar */}
           <div className="mt-2">
-            <div className="flex items-center gap-2 text-sm">
-              <span className="text-muted-foreground">Progress:</span>
-              <div className="flex-1 bg-gray-200 rounded-full h-2">
+            <div className="flex items-center gap-2 text-xs sm:text-sm">
+              <span className="text-muted-foreground hidden sm:inline">Progress:</span>
+              <div className="flex-1 bg-gray-200 rounded-full h-1.5 sm:h-2">
                 <div
-                  className="bg-green-500 h-2 rounded-full transition-all"
+                  className="bg-green-500 h-1.5 sm:h-2 rounded-full transition-all"
                   style={{
                     width: `${(correctClues.length / puzzle.clues.length) * 100}%`,
                   }}
@@ -586,9 +590,9 @@ export default function CollaborativeCrossword({
           onCellChange={handleCellChange}
           onLoadedCorrect={() => setCrosswordReady(true)}
         >
-          <div className="flex flex-col lg:flex-row gap-6">
-            {/* Crossword grid */}
-            <div className="flex-1">
+          <div className="flex flex-col lg:flex-row gap-4 lg:gap-6">
+            {/* Crossword grid - sticky on mobile */}
+            <div className="flex-1 sticky top-0 z-10 bg-gray-50 pb-2 lg:relative lg:bg-transparent lg:pb-0">
               <div
                 className="border-2 border-gray-900 bg-white"
                 style={{ maxWidth: "500px", margin: "0 auto" }}
