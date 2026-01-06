@@ -85,6 +85,7 @@ const DOG_NOUNS = [
   "Boxer",
   "Bulldog",
   "Poodle",
+  "Pitbull",
 ] as const;
 
 /**
