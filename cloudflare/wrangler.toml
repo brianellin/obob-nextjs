@@ -19,3 +19,10 @@ new_classes = ["CrosswordRoom"]
 [vars]
 # Default to production URL, override in dev
 PUZZLE_API_URL = "https://obob.brianellin.com"
+
+# Local development settings
+[dev]
+port = 8787
+
+[env.dev.vars]
+PUZZLE_API_URL = "http://localhost:3000"

@@ -3,6 +3,7 @@
 # dependencies
 /node_modules
 /cloudflare/node_modules
+/cloudflare/.wrangler
 /.pnp
 .pnp.*
 .yarn/*

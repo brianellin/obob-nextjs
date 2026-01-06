@@ -187,6 +187,7 @@ export class CrosswordRoom {
     client: ConnectedClient,
     msg: {
       type: "join";
+      teamCode: string;
       sessionId: string;
       nickname: string;
       year: string;
@@ -205,17 +206,23 @@ export class CrosswordRoom {
     // Initialize or load game state
     let state = await this.getGameState();
     if (!state) {
-      // Create new room state
-      state = {
-        teamCode: this.extractTeamCode(),
-        year: msg.year,
-        division: msg.division,
-        puzzleDate: msg.puzzleDate,
-        answers: {},
-        correctClues: [],
-        startedAt: Date.now(),
-        completedAt: null,
-      };
+      // Try to fetch existing state from Vercel KV via the Next.js API
+      state = await this.fetchInitialStateFromKV(msg.teamCode);
+      
+      if (!state) {
+        // Fallback: create new room state if KV fetch failed
+        state = {
+          teamCode: msg.teamCode,
+          year: msg.year,
+          division: msg.division,
+          puzzleDate: msg.puzzleDate,
+          answers: {},
+          correctClues: [],
+          startedAt: Date.now(),
+          completedAt: null,
+        };
+      }
+      
       await this.saveGameState(state);
 
       // Fetch puzzle clues for answer validation
@@ -396,12 +403,41 @@ export class CrosswordRoom {
     await this.state.storage.put("gameState", state);
   }
 
-  private extractTeamCode(): string {
-    // The team code is embedded in the DO ID (set by the worker)
-    // Format: "room:TEAMCODE"
-    const id = this.state.id.toString();
-    // For now, extract from the hex ID or use a default
-    return id.substring(0, 6).toUpperCase();
+  private async fetchInitialStateFromKV(teamCode: string): Promise<StoredState | null> {
+    try {
+      const url = `${this.env.PUZZLE_API_URL}/api/daily-crossword/team/${teamCode}`;
+      const response = await fetch(url);
+      if (response.ok) {
+        const data = (await response.json()) as { 
+          success: boolean; 
+          teamState?: {
+            teamCode: string;
+            year: string;
+            division: string;
+            puzzleDate: string;
+            answers: Record<string, string>;
+            correctClues: string[];
+            startedAt: number;
+            completedAt: number | null;
+          };
+        };
+        if (data.success && data.teamState) {
+          return {
+            teamCode: data.teamState.teamCode,
+            year: data.teamState.year,
+            division: data.teamState.division,
+            puzzleDate: data.teamState.puzzleDate,
+            answers: data.teamState.answers || {},
+            correctClues: data.teamState.correctClues || [],
+            startedAt: data.teamState.startedAt,
+            completedAt: data.teamState.completedAt,
+          };
+        }
+      }
+    } catch (err) {
+      console.error("Failed to fetch initial state from KV:", err);
+    }
+    return null;
   }
 
   private async loadPuzzleClues(

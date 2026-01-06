@@ -83,6 +83,7 @@ interface UseCrosswordWebSocketOptions {
   onDeleteUpdate?: (row: number, col: number, sessionId: string) => void;
   onCorrectClue?: (clueId: string) => void;
   onComplete?: (completedAt: number, completionTimeMs: number) => void;
+  onPresence?: (action: "join" | "leave", nickname: string) => void;
   onError?: (message: string) => void;
 }
 
@@ -115,6 +116,7 @@ export function useCrosswordWebSocket(
     onDeleteUpdate,
     onCorrectClue,
     onComplete,
+    onPresence,
     onError,
   } = options;
 
@@ -146,6 +148,7 @@ export function useCrosswordWebSocket(
       ws.send(
         JSON.stringify({
           type: "join",
+          teamCode,
           sessionId,
           nickname,
           year,
@@ -290,6 +293,7 @@ export function useCrosswordWebSocket(
               return next;
             });
           }
+          onPresence?.(msg.action, msg.nickname);
           break;
 
         case "error":
@@ -302,7 +306,7 @@ export function useCrosswordWebSocket(
           break;
       }
     },
-    [onLetterUpdate, onDeleteUpdate, onCorrectClue, onComplete, onError]
+    [onLetterUpdate, onDeleteUpdate, onCorrectClue, onComplete, onPresence, onError]
   );
 
   // Connect on mount

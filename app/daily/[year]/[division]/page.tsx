@@ -4,7 +4,7 @@ import { Suspense, useState, useEffect } from "react";
 import { useParams, useRouter } from "next/navigation";
 import { Loader2 } from "lucide-react";
 import TeamSetup from "@/components/daily-crossword/TeamSetup";
-import CollaborativeCrossword from "@/components/daily-crossword/CollaborativeCrossword";
+import RealtimeCrossword from "@/components/daily-crossword/RealtimeCrossword";
 import type { TeamState, SerializedCrosswordPuzzle } from "@/lib/daily-crossword/types";
 
 interface PuzzleData {
@@ -153,7 +153,7 @@ function DailyContent() {
 
   if (phase === "playing" && puzzleData && teamState && teamCode && sessionId && nickname) {
     return (
-      <CollaborativeCrossword
+      <RealtimeCrossword
         puzzle={puzzleData.puzzle}
         teamCode={teamCode}
         initialTeamState={teamState}
@@ -162,6 +162,7 @@ function DailyContent() {
         dateString={puzzleData.dateString}
         year={year}
         division={division}
+        wsUrl={process.env.NEXT_PUBLIC_CROSSWORD_WS_URL || "ws://localhost:8787"}
       />
     );
   }

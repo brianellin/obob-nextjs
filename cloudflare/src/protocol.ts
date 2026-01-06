@@ -10,6 +10,7 @@
 
 export interface JoinMessage {
   type: "join";
+  teamCode: string;
   sessionId: string;
   nickname: string;
   year: string;
