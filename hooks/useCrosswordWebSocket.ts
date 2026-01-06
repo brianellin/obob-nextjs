@@ -123,6 +123,8 @@ export function useCrosswordWebSocket(
   const wsRef = useRef<WebSocket | null>(null);
   const reconnectAttemptRef = useRef(0);
   const pingIntervalRef = useRef<NodeJS.Timeout | null>(null);
+  const isMountedRef = useRef(true);
+  const reconnectTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   const [isConnected, setIsConnected] = useState(false);
   const [isConnecting, setIsConnecting] = useState(false);
@@ -131,6 +133,7 @@ export function useCrosswordWebSocket(
   const [gameState, setGameState] = useState<GameState | null>(null);
 
   const connect = useCallback(() => {
+    if (!isMountedRef.current) return;
     if (wsRef.current?.readyState === WebSocket.OPEN) return;
 
     setIsConnecting(true);
@@ -184,20 +187,22 @@ export function useCrosswordWebSocket(
         pingIntervalRef.current = null;
       }
 
-      // Attempt reconnect with exponential backoff
-      const delay =
-        RECONNECT_DELAYS[
-          Math.min(reconnectAttemptRef.current, RECONNECT_DELAYS.length - 1)
-        ];
-      reconnectAttemptRef.current++;
+      // Attempt reconnect with exponential backoff (only if still mounted)
+      if (isMountedRef.current) {
+        const delay =
+          RECONNECT_DELAYS[
+            Math.min(reconnectAttemptRef.current, RECONNECT_DELAYS.length - 1)
+          ];
+        reconnectAttemptRef.current++;
 
-      setTimeout(() => {
-        connect();
-      }, delay);
+        reconnectTimeoutRef.current = setTimeout(() => {
+          connect();
+        }, delay);
+      }
     };
 
-    ws.onerror = (error) => {
-      console.error("WebSocket error:", error);
+    ws.onerror = () => {
+      // Errors are usually followed by onclose, so we don't need to handle much here
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [wsUrl, teamCode, sessionId, nickname, year, division, puzzleDate]);
@@ -311,11 +316,18 @@ export function useCrosswordWebSocket(
 
   // Connect on mount
   useEffect(() => {
+    isMountedRef.current = true;
     connect();
 
     return () => {
+      isMountedRef.current = false;
+      if (reconnectTimeoutRef.current) {
+        clearTimeout(reconnectTimeoutRef.current);
+        reconnectTimeoutRef.current = null;
+      }
       if (pingIntervalRef.current) {
         clearInterval(pingIntervalRef.current);
+        pingIntervalRef.current = null;
       }
       if (wsRef.current) {
         wsRef.current.close();
