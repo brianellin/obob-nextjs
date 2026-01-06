@@ -107,9 +107,11 @@ function CursorSync({
 function InitialClueSelector({
   initialClue,
   crosswordReady,
+  onShowHelpModal,
 }: {
   initialClue: string | null;
   crosswordReady: boolean;
+  onShowHelpModal: (clueNumber: string, clueDirection: string) => void;
 }) {
   const { handleClueSelected } = useContext(CrosswordContext);
   const hasSelected = useRef(false);
@@ -127,8 +129,9 @@ function InitialClueSelector({
     // Small delay to ensure the crossword is fully rendered
     setTimeout(() => {
       handleClueSelected(direction as "across" | "down", number);
+      onShowHelpModal(number, direction);
     }, 100);
-  }, [initialClue, crosswordReady, handleClueSelected]);
+  }, [initialClue, crosswordReady, handleClueSelected, onShowHelpModal]);
 
   return null;
 }
@@ -249,6 +252,16 @@ export default function RealtimeCrossword({
   const [elapsedTime, setElapsedTime] = useState(0);
   const [crosswordReady, setCrosswordReady] = useState(false);
 
+  // Fallback to set crosswordReady after a delay if onLoadedCorrect doesn't fire
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      if (!crosswordReady) {
+        setCrosswordReady(true);
+      }
+    }, 500);
+    return () => clearTimeout(timer);
+  }, [crosswordReady]);
+
   const [helpModal, setHelpModal] = useState<{
     open: boolean;
     clueId: string | null;
@@ -256,7 +269,30 @@ export default function RealtimeCrossword({
     copied: boolean;
   }>({ open: false, clueId: null, shareUrl: null, copied: false });
 
+  const [helpRequestModal, setHelpRequestModal] = useState<{
+    open: boolean;
+    clueNumber: string;
+    clueDirection: string;
+    clueText: string;
+  } | null>(null);
+
   const [codeCopied, setCodeCopied] = useState(false);
+
+  // Callback when user arrives via help link
+  const handleShowHelpRequestModal = useCallback((clueNumber: string, clueDirection: string) => {
+    // Find the clue text from the puzzle
+    const clueData = libraryData[clueDirection as "across" | "down"]?.[clueNumber];
+    // Clue text may contain delimiter - extract just the question part
+    const rawClue = clueData?.clue || "";
+    const clueText = rawClue.split(CLUE_DELIMITER)[0];
+    
+    setHelpRequestModal({
+      open: true,
+      clueNumber,
+      clueDirection,
+      clueText,
+    });
+  }, [libraryData]);
 
   // WebSocket connection
   const {
@@ -405,7 +441,13 @@ export default function RealtimeCrossword({
       const response = await fetch("/api/daily-crossword/help", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ teamCode, clueId }),
+        body: JSON.stringify({ 
+          teamCode, 
+          clueId,
+          year,
+          division,
+          puzzleDate: dateString,
+        }),
       });
 
       const data = await response.json();
@@ -594,7 +636,11 @@ export default function RealtimeCrossword({
         >
           <CursorSync sendCursor={sendCursor} lastSentCursorRef={lastSentCursorRef} />
           {initialClue && (
-            <InitialClueSelector initialClue={initialClue} crosswordReady={crosswordReady} />
+            <InitialClueSelector 
+              initialClue={initialClue} 
+              crosswordReady={crosswordReady} 
+              onShowHelpModal={handleShowHelpRequestModal}
+            />
           )}
           <div className="flex flex-col lg:flex-row gap-4 lg:gap-6">
             {/* Crossword grid with cursor overlay - sticky on all screens */}
@@ -636,6 +682,47 @@ export default function RealtimeCrossword({
           </div>
         </CrosswordProvider>
       </div>
+
+      {/* Help request received modal - shown when arriving via help link */}
+      {helpRequestModal?.open && (
+        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
+          <div className="bg-white rounded-lg shadow-xl max-w-md w-full p-6 space-y-4">
+            <div className="flex items-center justify-between">
+              <h3 className="text-lg font-bold flex items-center gap-2">
+                <HelpCircle className="h-5 w-5 text-blue-500" />
+                Teammate Needs Help!
+              </h3>
+              <button
+                onClick={() => setHelpRequestModal(null)}
+                className="p-1 hover:bg-gray-100 rounded"
+              >
+                <X className="h-5 w-5" />
+              </button>
+            </div>
+
+            <p className="text-muted-foreground">
+              A teammate asked for help with this clue:
+            </p>
+
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
+              <div className="font-bold text-blue-900">
+                {helpRequestModal.clueNumber} {helpRequestModal.clueDirection.toUpperCase()}
+              </div>
+              <div className="text-blue-800 mt-1">
+                {helpRequestModal.clueText}
+              </div>
+            </div>
+
+            <p className="text-sm text-muted-foreground">
+              If you know the answer, fill it out and then help answer the remaining questions!
+            </p>
+
+            <Button className="w-full" onClick={() => setHelpRequestModal(null)}>
+              Got it!
+            </Button>
+          </div>
+        </div>
+      )}
 
       {/* Help modal */}
       {helpModal.open && (

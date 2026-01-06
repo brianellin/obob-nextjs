@@ -48,14 +48,15 @@ function DailyContent() {
       return;
     }
 
+    // Set the initial clue for auto-selection if provided in URL
+    if (urlClue) {
+      setInitialClue(urlClue);
+    }
+
     // If we have a team code from URL, try to join that team
     if (urlTeamCode) {
       const storedSessionId = localStorage.getItem("daily-crossword-session");
       if (storedSessionId) {
-        // Set the initial clue for auto-selection after joining
-        if (urlClue) {
-          setInitialClue(urlClue);
-        }
         rejoinTeam(urlTeamCode, storedSessionId);
       } else {
         // No session yet, go to setup with pre-filled team code

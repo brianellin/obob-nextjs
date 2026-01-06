@@ -3,23 +3,25 @@
  *
  * Create a help request for a specific clue.
  * Returns a shareable link that can be sent to teammates.
+ * 
+ * Note: This endpoint doesn't use KV for team lookup - the client passes
+ * year/division/puzzleDate directly since the game state is managed by
+ * the Cloudflare Durable Object.
  */
 
 import { NextResponse } from "next/server";
-import { getTeamState, setHelpRequest } from "@/lib/daily-crossword/kv";
 import { getOrGenerateDailyPuzzle } from "@/lib/daily-crossword/generate-daily";
-import { generateHelpId, normalizeTeamCode, isValidTeamCode } from "@/lib/daily-crossword/team-codes";
-import type { HelpRequest } from "@/lib/daily-crossword/types";
+import { normalizeTeamCode, isValidTeamCode } from "@/lib/daily-crossword/team-codes";
 import type { CrosswordClue } from "@/lib/crossword/types";
 
 export async function POST(request: Request) {
   try {
     const body = await request.json();
-    const { teamCode: inputCode, clueId } = body;
+    const { teamCode: inputCode, clueId, year, division, puzzleDate } = body;
 
-    if (!inputCode || !clueId) {
+    if (!inputCode || !clueId || !year || !division || !puzzleDate) {
       return NextResponse.json(
-        { error: "teamCode and clueId are required" },
+        { error: "teamCode, clueId, year, division, and puzzleDate are required" },
         { status: 400 }
       );
     }
@@ -32,18 +34,9 @@ export async function POST(request: Request) {
     }
 
     const teamCode = normalizeTeamCode(inputCode);
-    const teamState = await getTeamState(teamCode);
-
-    if (!teamState) {
-      return NextResponse.json({ error: "Team not found" }, { status: 404 });
-    }
 
     // Get the puzzle to find the clue
-    const dailyPuzzle = await getOrGenerateDailyPuzzle(
-      teamState.year,
-      teamState.division,
-      teamState.puzzleDate
-    );
+    const dailyPuzzle = await getOrGenerateDailyPuzzle(year, division, puzzleDate);
 
     const clues = dailyPuzzle.puzzle.clues as CrosswordClue[];
     const clue = clues.find((c) => c.id === clueId);
@@ -52,33 +45,15 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: "Clue not found" }, { status: 404 });
     }
 
-    // Create the help request
-    const helpId = generateHelpId();
-    const helpRequest: HelpRequest = {
-      helpId,
-      teamCode,
-      clueId: clue.id,
-      clueNumber: clue.number,
-      clueDirection: clue.direction,
-      clueText: clue.text,
-      bookTitle: clue.bookTitle,
-      bookKey: clue.bookKey,
-      page: clue.page,
-      createdAt: Date.now(),
-      answeredAt: null,
-      answer: null,
-    };
-
-    await setHelpRequest(helpRequest);
-
     // Generate the share URL - goes directly to the crossword with team code and clue selection
-    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://obob.dog";
+    const host = request.headers.get("host") || "obob.dog";
+    const protocol = host.includes("localhost") ? "http" : "https";
+    const baseUrl = `${protocol}://${host}`;
     const clueRef = `${clue.number}-${clue.direction}`;
-    const shareUrl = `${baseUrl}/daily/${teamState.year}/${teamState.division}?team=${teamCode}&clue=${clueRef}`;
+    const shareUrl = `${baseUrl}/daily/${year}/${division}?team=${teamCode}&clue=${clueRef}`;
 
     return NextResponse.json({
       success: true,
-      helpId,
       shareUrl,
       clue: {
         number: clue.number,
