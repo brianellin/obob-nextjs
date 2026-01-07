@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useCallback, useEffect, useRef } from "react";
+import { createPortal } from "react-dom";
 import {
   LiveKitRoom,
   RoomAudioRenderer,
@@ -8,7 +9,6 @@ import {
   useRoomContext,
 } from "@livekit/components-react";
 import { Mic, MicOff, Headphones, X } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import "@livekit/components-styles";
 
 type VoiceState = "off" | "connecting" | "listening" | "talking";
@@ -247,12 +247,18 @@ interface VoiceDialogProps {
 }
 
 function VoiceDialog({ open, onChoice, isConnected, playerCount }: VoiceDialogProps) {
-  if (!open) return null;
+  const [mounted, setMounted] = useState(false);
+  
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!open || !mounted) return null;
 
   const otherPlayers = playerCount - 1;
 
-  return (
-    <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-[100] p-4">
+  return createPortal(
+    <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-[9999] p-4">
       <div className="bg-white rounded-xl shadow-xl max-w-sm w-full p-6 space-y-5">
         <div className="flex items-center justify-between">
           <h3 className="text-xl font-bold">Voice Chat 🎙️</h3>
@@ -305,6 +311,7 @@ function VoiceDialog({ open, onChoice, isConnected, playerCount }: VoiceDialogPr
           Tap the mic button anytime to change
         </p>
       </div>
-    </div>
+    </div>,
+    document.body
   );
 }
