@@ -222,8 +222,12 @@ export class CrosswordRoom {
       }
       
       await this.saveGameState(state);
+    }
 
-      // Fetch puzzle clues for answer validation
+    // Always ensure puzzle clues are loaded for answer validation
+    // (they may be missing if DO was evicted from memory)
+    const clues = await this.getPuzzleClues();
+    if (clues.size === 0) {
       await this.loadPuzzleClues(msg.year, msg.division, msg.puzzleDate);
     }
 
