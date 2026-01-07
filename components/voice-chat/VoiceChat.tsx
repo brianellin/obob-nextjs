@@ -305,10 +305,23 @@ function VoiceDialog({ open, onChoice, isConnected, playerCount }: VoiceDialogPr
               <div className="text-sm text-gray-500">Hear others, stay quiet</div>
             </div>
           </button>
+
+          <button
+            onClick={() => onChoice("skip")}
+            className="w-full flex items-center gap-3 p-3 rounded-xl border border-gray-200 hover:bg-gray-50 transition-all text-left"
+          >
+            <div className="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center flex-shrink-0">
+              <MicOff className="h-5 w-5 text-gray-400" />
+            </div>
+            <div>
+              <div className="font-medium text-gray-600">No thanks</div>
+              <div className="text-sm text-gray-400">I'll just play quietly</div>
+            </div>
+          </button>
         </div>
 
         <p className="text-xs text-gray-400 text-center">
-          Tap the mic button anytime to change
+          You can join voice chat anytime from the header
         </p>
       </div>
     </div>,
