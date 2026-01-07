@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef, useCallback, useContext } from "react";
+import { useState, useEffect, useRef, useCallback, useContext, useMemo } from "react";
 import { Button } from "@/components/ui/button";
 import {
   HelpCircle,
@@ -13,7 +13,6 @@ import {
   LogOut,
   Users,
 } from "lucide-react";
-import { track } from "@vercel/analytics";
 import { usePostHog } from "posthog-js/react";
 import Confetti from "react-confetti";
 import { useWindowSize } from "react-use";
@@ -27,6 +26,13 @@ import {
 import type { SerializedCrosswordPuzzle, TeamState } from "@/lib/daily-crossword/types";
 import { useCrosswordWebSocket } from "@/hooks/useCrosswordWebSocket";
 import { CursorOverlay } from "./CursorOverlay";
+import {
+  trackClueSelected,
+  trackClueCompleted,
+  trackPuzzleCompleted,
+  trackTeammateInvited,
+  type CrosswordAnalyticsContext,
+} from "@/lib/daily-crossword/analytics";
 
 interface LibraryClueData {
   clue: string;
@@ -102,6 +108,58 @@ function CursorSync({
     lastSentCursorRef.current = cursorKey;
     sendCursor(selectedPosition.row, selectedPosition.col, selectedDirection);
   }, [selectedPosition, selectedDirection, sendCursor, lastSentCursorRef]);
+
+  return null;
+}
+
+function ClueSelectionTracker({
+  puzzle,
+  analyticsContext,
+  posthog,
+}: {
+  puzzle: SerializedCrosswordPuzzle;
+  analyticsContext: CrosswordAnalyticsContext;
+  posthog: ReturnType<typeof usePostHog>;
+}) {
+  const { selectedPosition, selectedDirection } = useContext(CrosswordContext);
+  const lastTrackedClueRef = useRef<string>("");
+
+  useEffect(() => {
+    if (selectedPosition.row < 0 || selectedPosition.col < 0) return;
+
+    // Find which clue is selected based on position and direction
+    const selectedClue = puzzle.clues.find((clue) => {
+      if (clue.direction !== selectedDirection) return false;
+      
+      if (clue.direction === "across") {
+        return (
+          clue.startRow === selectedPosition.row &&
+          selectedPosition.col >= clue.startCol &&
+          selectedPosition.col < clue.startCol + clue.length
+        );
+      } else {
+        return (
+          clue.startCol === selectedPosition.col &&
+          selectedPosition.row >= clue.startRow &&
+          selectedPosition.row < clue.startRow + clue.length
+        );
+      }
+    });
+
+    if (!selectedClue) return;
+
+    const clueKey = `${selectedClue.number}-${selectedClue.direction}`;
+    if (clueKey === lastTrackedClueRef.current) return;
+
+    lastTrackedClueRef.current = clueKey;
+    trackClueSelected(
+      analyticsContext,
+      selectedClue.number,
+      selectedClue.direction,
+      selectedClue.id,
+      posthog
+    );
+  }, [selectedPosition, selectedDirection, puzzle.clues, analyticsContext, posthog]);
 
   return null;
 }
@@ -246,6 +304,7 @@ export default function RealtimeCrossword({
   // Queue for processing remote updates sequentially to avoid dropped letters
   const remoteUpdateQueue = useRef<Array<{ row: number; col: number; letter: string }>>([]);
   const isProcessingQueue = useRef(false);
+  const playerCountRef = useRef(0);
 
   const processRemoteUpdateQueue = useCallback(() => {
     if (isProcessingQueue.current || remoteUpdateQueue.current.length === 0) return;
@@ -282,6 +341,18 @@ export default function RealtimeCrossword({
   );
   const [completed, setCompleted] = useState(initialTeamState.completedAt !== null);
   const [completedAt, setCompletedAt] = useState(initialTeamState.completedAt);
+
+  const analyticsContext: CrosswordAnalyticsContext = useMemo(
+    () => ({
+      teamCode,
+      date: dateString,
+      division,
+      year,
+      userName: nickname,
+      generatedName: nickname,
+    }),
+    [teamCode, dateString, division, year, nickname]
+  );
   const [showConfetti, setShowConfetti] = useState(false);
   const [startTime] = useState(initialTeamState.startedAt);
   const [elapsedTime, setElapsedTime] = useState(0);
@@ -372,12 +443,28 @@ export default function RealtimeCrossword({
       },
       [sessionId, queueRemoteUpdate]
     ),
-    onCorrectClue: useCallback((clueId: string) => {
-      setCorrectClues((prev) => {
-        if (prev.includes(clueId)) return prev;
-        return [...prev, clueId];
-      });
-    }, []),
+    onCorrectClue: useCallback(
+      (clueId: string) => {
+        setCorrectClues((prev) => {
+          if (prev.includes(clueId)) return prev;
+
+          // Look up clue details for analytics
+          const clue = puzzle.clues.find((c) => c.id === clueId);
+          if (clue) {
+            trackClueCompleted(
+              analyticsContext,
+              clue.number,
+              clue.direction,
+              clueId,
+              posthog
+            );
+          }
+
+          return [...prev, clueId];
+        });
+      },
+      [puzzle.clues, analyticsContext, posthog]
+    ),
     onComplete: useCallback(
       (completedAtTs: number, completionTimeMs: number) => {
         setCompleted(true);
@@ -385,23 +472,21 @@ export default function RealtimeCrossword({
         setShowConfetti(true);
         setTimeout(() => setShowConfetti(false), 5000);
 
-        track("dailyCrosswordComplete", {
-          year,
-          division,
-          teamCode,
+        trackPuzzleCompleted(
+          analyticsContext,
           completionTimeMs,
-        });
-
-        posthog?.capture("dailyCrosswordComplete", {
-          year,
-          division,
-          teamCode,
-          completionTimeMs,
-        });
+          playerCountRef.current + 1,
+          posthog
+        );
       },
-      [year, division, teamCode, posthog]
+      [analyticsContext, posthog]
     ),
   });
+
+  // Keep playerCountRef in sync with players
+  useEffect(() => {
+    playerCountRef.current = Object.keys(players).length;
+  }, [players]);
 
   // Update elapsed time
   useEffect(() => {
@@ -537,12 +622,14 @@ export default function RealtimeCrossword({
   const handleCopyTeamCode = async () => {
     await navigator.clipboard.writeText(teamCode);
     setCodeCopied(true);
+    trackTeammateInvited(analyticsContext, "code", posthog);
     setTimeout(() => setCodeCopied(false), 2000);
   };
 
   const handleCopyInviteLink = async () => {
     await navigator.clipboard.writeText(getInviteLink());
     setLinkCopied(true);
+    trackTeammateInvited(analyticsContext, "link", posthog);
     setTimeout(() => setLinkCopied(false), 2000);
   };
 
@@ -688,6 +775,11 @@ export default function RealtimeCrossword({
           onLoadedCorrect={() => setCrosswordReady(true)}
         >
           <CursorSync sendCursor={sendCursor} lastSentCursorRef={lastSentCursorRef} />
+          <ClueSelectionTracker 
+            puzzle={puzzle} 
+            analyticsContext={analyticsContext} 
+            posthog={posthog} 
+          />
           {initialClue && (
             <InitialClueSelector 
               initialClue={initialClue} 

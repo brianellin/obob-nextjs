@@ -16,7 +16,7 @@ import { generateSessionId } from "@/lib/daily-crossword/team-codes";
 interface TeamSetupProps {
   year: string;
   division: string;
-  onTeamReady: (teamCode: string, sessionId: string, nickname: string) => void;
+  onTeamReady: (teamCode: string, sessionId: string, nickname: string, action: "created" | "joined") => void;
 }
 
 export default function TeamSetup({
@@ -104,7 +104,7 @@ export default function TeamSetup({
         throw new Error(data.error || "Failed to join team");
       }
 
-      onTeamReady(data.teamCode, sessionId, data.nickname);
+      onTeamReady(data.teamCode, sessionId, data.nickname, "joined");
     } catch (err) {
       setError(err instanceof Error ? err.message : "Something went wrong");
     } finally {
@@ -120,7 +120,7 @@ export default function TeamSetup({
 
   const handleStartPuzzle = () => {
     const sessionId = getOrCreateSessionId();
-    onTeamReady(teamCode, sessionId, nickname);
+    onTeamReady(teamCode, sessionId, nickname, "created");
   };
 
   const getDivisionLabel = (div: string) => {

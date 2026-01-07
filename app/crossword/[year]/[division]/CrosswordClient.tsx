@@ -1,11 +1,17 @@
 "use client";
 
-import { Suspense, useState, useEffect } from "react";
+import { Suspense, useState, useEffect, useRef } from "react";
 import { useParams, useRouter, useSearchParams } from "next/navigation";
+import { usePostHog } from "posthog-js/react";
 import { Loader2 } from "lucide-react";
 import TeamSetup from "@/components/daily-crossword/TeamSetup";
 import RealtimeCrossword from "@/components/daily-crossword/RealtimeCrossword";
 import type { TeamState, SerializedCrosswordPuzzle } from "@/lib/daily-crossword/types";
+import {
+  trackTeamCreated,
+  trackTeamJoined,
+  type CrosswordAnalyticsContext,
+} from "@/lib/daily-crossword/analytics";
 
 interface PuzzleData {
   puzzle: SerializedCrosswordPuzzle;
@@ -22,6 +28,7 @@ function DailyContent() {
   const params = useParams();
   const router = useRouter();
   const searchParams = useSearchParams();
+  const posthog = usePostHog();
   const year = params.year as string;
   const division = params.division as string;
 
@@ -38,6 +45,7 @@ function DailyContent() {
   const [error, setError] = useState<string | null>(null);
   const [initialClue, setInitialClue] = useState<string | null>(null);
   const [isInvitedUser, setIsInvitedUser] = useState(false);
+  const pendingAnalyticsRef = useRef<"created" | "joined" | null>(null);
 
   // Validate year/division
   useEffect(() => {
@@ -102,6 +110,7 @@ function DailyContent() {
 
       if (response.ok) {
         const data = await response.json();
+        pendingAnalyticsRef.current = "joined";
         handleTeamReady(data.teamCode, sessionId, data.nickname);
       } else {
         // Team not found or expired, go to setup
@@ -141,13 +150,22 @@ function DailyContent() {
     }
   };
 
-  const handleTeamReady = async (code: string, session: string, name: string) => {
+  const handleTeamReady = async (
+    code: string,
+    session: string,
+    name: string,
+    action?: "created" | "joined"
+  ) => {
     setTeamCode(code);
     setSessionId(session);
     setNickname(name);
 
     // Store for rejoin
     sessionStorage.setItem(`daily-team-${year}-${division}`, code);
+
+    // Track pending analytics action from URL-based joins
+    const analyticsAction = action || pendingAnalyticsRef.current;
+    pendingAnalyticsRef.current = null;
 
     // Load the puzzle
     try {
@@ -166,6 +184,24 @@ function DailyContent() {
       setPuzzleData(puzzleJson);
       setTeamState(teamJson.teamState);
       setPhase("playing");
+
+      // Track analytics now that we have the date
+      if (analyticsAction) {
+        const ctx: CrosswordAnalyticsContext = {
+          teamCode: code,
+          date: puzzleJson.dateString,
+          division,
+          year,
+          userName: name, // The generated nickname
+          generatedName: name,
+        };
+
+        if (analyticsAction === "created") {
+          trackTeamCreated(ctx, posthog);
+        } else if (analyticsAction === "joined") {
+          trackTeamJoined(ctx, posthog);
+        }
+      }
     } catch (err) {
       setError(err instanceof Error ? err.message : "Failed to load puzzle");
       setPhase("setup");
