@@ -6,26 +6,27 @@ import {
   RoomAudioRenderer,
   useLocalParticipant,
   useRoomContext,
-  TrackToggle,
 } from "@livekit/components-react";
-import { Track } from "livekit-client";
-import { Mic, MicOff, Volume2, VolumeX, X } from "lucide-react";
+import { Mic, MicOff, Headphones, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import "@livekit/components-styles";
+
+type VoiceState = "off" | "connecting" | "listening" | "talking";
 
 interface VoiceChatProps {
   roomName: string;
   participantName: string;
   participantIdentity: string;
   playerCount: number;
-  onShowJoinDialog?: () => void;
 }
 
-interface VoiceControlsProps {
-  startUnmuted?: boolean;
-}
-
-function VoiceControls({ startUnmuted = false }: VoiceControlsProps) {
+function VoiceRoomControls({ 
+  onRequestDialog,
+  startUnmuted,
+}: { 
+  onRequestDialog: () => void;
+  startUnmuted: boolean;
+}) {
   const { localParticipant } = useLocalParticipant();
   const room = useRoomContext();
   const hasSetInitialState = useRef(false);
@@ -42,28 +43,41 @@ function VoiceControls({ startUnmuted = false }: VoiceControlsProps) {
     }
   }, [localParticipant.isMicrophoneEnabled, room.localParticipant, startUnmuted]);
 
-  return (
-    <TrackToggle
-      source={Track.Source.Microphone}
-      className={`
-        flex items-center gap-1.5 px-2.5 py-1 rounded text-xs font-medium
-        transition-colors flex-shrink-0
-        ${isMuted 
-          ? "bg-gray-100 text-gray-600 hover:bg-gray-200" 
-          : "bg-green-100 text-green-700 hover:bg-green-200"
-        }
-      `}
-    >
-      {isMuted ? <MicOff className="h-3.5 w-3.5" /> : <Mic className="h-3.5 w-3.5" />}
-      <span className="hidden sm:inline">{isMuted ? "Unmute" : "Mute"}</span>
-    </TrackToggle>
-  );
-}
+  // Expose unmute function for dialog
+  useEffect(() => {
+    (window as Window & { __voiceChatSetMic?: (enabled: boolean) => void }).__voiceChatSetMic = 
+      (enabled: boolean) => room.localParticipant.setMicrophoneEnabled(enabled);
+    return () => {
+      delete (window as Window & { __voiceChatSetMic?: (enabled: boolean) => void }).__voiceChatSetMic;
+    };
+  }, [room.localParticipant]);
 
-function VoiceRoomContent({ startUnmuted }: { startUnmuted: boolean }) {
   return (
     <>
-      <VoiceControls startUnmuted={startUnmuted} />
+      <button
+        onClick={onRequestDialog}
+        className={`
+          flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-xs font-medium
+          transition-all flex-shrink-0 border
+          ${isMuted 
+            ? "bg-gray-50 text-gray-600 border-gray-200 hover:bg-gray-100" 
+            : "bg-green-50 text-green-700 border-green-200 hover:bg-green-100 ring-2 ring-green-300 ring-opacity-50"
+          }
+        `}
+        title={isMuted ? "You're listening only - tap to talk" : "You're talking - tap to change"}
+      >
+        {isMuted ? (
+          <>
+            <Headphones className="h-4 w-4" />
+            <span className="hidden sm:inline">Listening</span>
+          </>
+        ) : (
+          <>
+            <Mic className="h-4 w-4" />
+            <span className="hidden sm:inline">Talking</span>
+          </>
+        )}
+      </button>
       <RoomAudioRenderer />
     </>
   );
@@ -74,15 +88,15 @@ export function VoiceChat({
   participantName, 
   participantIdentity,
   playerCount,
-  onShowJoinDialog,
 }: VoiceChatProps) {
   const [isConnecting, setIsConnecting] = useState(false);
   const [isConnected, setIsConnected] = useState(false);
   const [token, setToken] = useState<string | null>(null);
   const [serverUrl, setServerUrl] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
-  const [hasTriggeredDialog, setHasTriggeredDialog] = useState(false);
+  const [hasAutoShownDialog, setHasAutoShownDialog] = useState(false);
   const [startUnmuted, setStartUnmuted] = useState(false);
+  const [dialogOpen, setDialogOpen] = useState(false);
 
   const handleConnect = useCallback(async (unmuted: boolean = false) => {
     if (isConnecting || isConnected) return;
@@ -123,41 +137,70 @@ export function VoiceChat({
     setIsConnecting(false);
   }, []);
 
-  // Trigger dialog when player count goes from 1 to 2+
+  // Auto-show dialog when player count goes to 2+
   useEffect(() => {
-    if (playerCount > 1 && !hasTriggeredDialog && !isConnected && !isConnecting) {
-      setHasTriggeredDialog(true);
-      onShowJoinDialog?.();
+    if (playerCount > 1 && !hasAutoShownDialog && !isConnected && !isConnecting) {
+      setHasAutoShownDialog(true);
+      setDialogOpen(true);
     }
-  }, [playerCount, hasTriggeredDialog, isConnected, isConnecting, onShowJoinDialog]);
+  }, [playerCount, hasAutoShownDialog, isConnected, isConnecting]);
 
-  // Expose connect function globally so dialog can call it
-  useEffect(() => {
-    (window as Window & { __voiceChatConnect?: (unmuted: boolean) => void }).__voiceChatConnect = handleConnect;
-    return () => {
-      delete (window as Window & { __voiceChatConnect?: (unmuted: boolean) => void }).__voiceChatConnect;
-    };
-  }, [handleConnect]);
+  const handleDialogChoice = (choice: "talk" | "listen" | "skip") => {
+    setDialogOpen(false);
+    if (choice === "skip") return;
+    
+    if (!isConnected) {
+      handleConnect(choice === "talk");
+    } else {
+      // Already connected, just toggle mic
+      (window as Window & { __voiceChatSetMic?: (enabled: boolean) => void }).__voiceChatSetMic?.(choice === "talk");
+    }
+  };
 
-  if (error) {
-    return (
-      <div className="flex items-center gap-1.5 px-2.5 py-1 rounded bg-red-50 text-red-600 text-xs flex-shrink-0">
-        <VolumeX className="h-3.5 w-3.5" />
-        <span className="hidden sm:inline">Voice error</span>
-      </div>
-    );
-  }
-
+  // Not connected yet - show button to open dialog (only if 2+ players)
   if (!token || !serverUrl) {
+    if (playerCount < 2) return null;
+    
     if (isConnecting) {
       return (
-        <div className="flex items-center gap-1.5 px-2.5 py-1 rounded bg-gray-100 text-gray-500 text-xs flex-shrink-0">
-          <Volume2 className="h-3.5 w-3.5 animate-pulse" />
-          <span className="hidden sm:inline">Connecting...</span>
+        <div className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-blue-50 text-blue-600 text-xs font-medium border border-blue-200 flex-shrink-0">
+          <Headphones className="h-4 w-4 animate-pulse" />
+          <span className="hidden sm:inline">Joining...</span>
         </div>
       );
     }
-    return null;
+    
+    if (error) {
+      return (
+        <button
+          onClick={() => setDialogOpen(true)}
+          className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-red-50 text-red-600 text-xs font-medium border border-red-200 flex-shrink-0 hover:bg-red-100"
+        >
+          <MicOff className="h-4 w-4" />
+          <span className="hidden sm:inline">Retry</span>
+        </button>
+      );
+    }
+
+    return (
+      <>
+        <button
+          onClick={() => setDialogOpen(true)}
+          className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-blue-50 text-blue-600 text-xs font-medium border border-blue-200 flex-shrink-0 hover:bg-blue-100 transition-colors"
+          title="Join voice chat with your teammates"
+        >
+          <Headphones className="h-4 w-4" />
+          <span className="hidden sm:inline">Voice Chat</span>
+        </button>
+        
+        <VoiceDialog
+          open={dialogOpen}
+          onChoice={handleDialogChoice}
+          isConnected={false}
+          playerCount={playerCount}
+        />
+      </>
+    );
   }
 
   return (
@@ -182,79 +225,84 @@ export function VoiceChat({
         setError(err.message);
       }}
     >
-      <VoiceRoomContent startUnmuted={startUnmuted} />
+      <VoiceRoomControls 
+        onRequestDialog={() => setDialogOpen(true)} 
+        startUnmuted={startUnmuted}
+      />
+      <VoiceDialog
+        open={dialogOpen}
+        onChoice={handleDialogChoice}
+        isConnected={true}
+        playerCount={playerCount}
+      />
     </LiveKitRoom>
   );
 }
 
-interface VoiceJoinDialogProps {
+interface VoiceDialogProps {
   open: boolean;
-  onClose: () => void;
+  onChoice: (choice: "talk" | "listen" | "skip") => void;
+  isConnected: boolean;
   playerCount: number;
 }
 
-export function VoiceJoinDialog({ open, onClose, playerCount }: VoiceJoinDialogProps) {
+function VoiceDialog({ open, onChoice, isConnected, playerCount }: VoiceDialogProps) {
   if (!open) return null;
-
-  const handleJoinConversation = () => {
-    (window as Window & { __voiceChatConnect?: (unmuted: boolean) => void }).__voiceChatConnect?.(true);
-    onClose();
-  };
-
-  const handleStayMuted = () => {
-    (window as Window & { __voiceChatConnect?: (unmuted: boolean) => void }).__voiceChatConnect?.(false);
-    onClose();
-  };
 
   const otherPlayers = playerCount - 1;
 
   return (
     <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
-      <div className="bg-white rounded-lg shadow-xl max-w-sm w-full p-6 space-y-4">
+      <div className="bg-white rounded-xl shadow-xl max-w-sm w-full p-6 space-y-5">
         <div className="flex items-center justify-between">
-          <h3 className="text-lg font-bold flex items-center gap-2">
-            <Volume2 className="h-5 w-5 text-blue-500" />
-            Voice Chat Available
-          </h3>
+          <h3 className="text-xl font-bold">Voice Chat 🎙️</h3>
           <button
-            onClick={handleStayMuted}
-            className="p-1 hover:bg-gray-100 rounded"
+            onClick={() => onChoice("skip")}
+            className="p-1.5 hover:bg-gray-100 rounded-full transition-colors"
           >
-            <X className="h-5 w-5" />
+            <X className="h-5 w-5 text-gray-400" />
           </button>
         </div>
 
-        <p className="text-muted-foreground">
-          {otherPlayers === 1 
-            ? "There's 1 other player in this room." 
-            : `There are ${otherPlayers} other players in this room.`}
-          {" "}Would you like to join the voice conversation?
+        <p className="text-gray-600">
+          {isConnected 
+            ? "You're connected to voice chat. Choose how you want to participate:"
+            : otherPlayers === 1 
+              ? "There's 1 other player here! Want to talk while you solve the puzzle together?" 
+              : `There are ${otherPlayers} other players here! Want to talk while you solve the puzzle together?`
+          }
         </p>
 
-        <div className="bg-blue-50 border border-blue-200 rounded-lg p-3 text-sm text-blue-800">
-          Talk with your teammates while solving the crossword together!
+        <div className="space-y-3">
+          <button
+            onClick={() => onChoice("talk")}
+            className="w-full flex items-center gap-3 p-4 rounded-xl border-2 border-green-200 bg-green-50 hover:bg-green-100 hover:border-green-300 transition-all text-left"
+          >
+            <div className="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0">
+              <Mic className="h-6 w-6 text-green-600" />
+            </div>
+            <div>
+              <div className="font-semibold text-green-800">Talk & Listen</div>
+              <div className="text-sm text-green-600">Your teammates can hear you</div>
+            </div>
+          </button>
+
+          <button
+            onClick={() => onChoice("listen")}
+            className="w-full flex items-center gap-3 p-4 rounded-xl border-2 border-gray-200 bg-gray-50 hover:bg-gray-100 hover:border-gray-300 transition-all text-left"
+          >
+            <div className="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center flex-shrink-0">
+              <Headphones className="h-6 w-6 text-gray-600" />
+            </div>
+            <div>
+              <div className="font-semibold text-gray-800">Listen Only</div>
+              <div className="text-sm text-gray-500">Hear others, stay quiet</div>
+            </div>
+          </button>
         </div>
 
-        <div className="flex gap-3">
-          <Button 
-            variant="outline" 
-            className="flex-1"
-            onClick={handleStayMuted}
-          >
-            <MicOff className="h-4 w-4 mr-2" />
-            Stay Muted
-          </Button>
-          <Button 
-            className="flex-1"
-            onClick={handleJoinConversation}
-          >
-            <Mic className="h-4 w-4 mr-2" />
-            Join Conversation
-          </Button>
-        </div>
-
-        <p className="text-xs text-muted-foreground text-center">
-          You can change this anytime using the mic button
+        <p className="text-xs text-gray-400 text-center">
+          Tap the mic button anytime to change
         </p>
       </div>
     </div>
