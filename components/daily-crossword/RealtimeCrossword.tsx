@@ -12,7 +12,9 @@ import {
   WifiOff,
   LogOut,
   Users,
+  Volume2,
 } from "lucide-react";
+import { VoiceChat } from "@/components/voice-chat/VoiceChat";
 import { usePostHog } from "posthog-js/react";
 import Confetti from "react-confetti";
 import { useWindowSize } from "react-use";
@@ -760,6 +762,13 @@ export default function RealtimeCrossword({
                 <span className="text-muted-foreground hidden sm:inline">Invite:</span>
                 <span className="font-mono font-bold">{teamCode}</span>
               </button>
+
+              {/* Voice chat */}
+              <VoiceChat
+                roomName={teamCode}
+                participantName={nickname}
+                participantIdentity={sessionId}
+              />
 
               {/* Subtle separator */}
               <div className="w-px h-4 bg-gray-200 flex-shrink-0" />

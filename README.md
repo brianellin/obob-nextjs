@@ -11,6 +11,18 @@ pnpm run dev
 
 Open [localhost:3000](http://localhost:3000) and start your battle.
 
+## Environment Variables
+
+For the crossword voice chat feature (optional), add these to `.env.local`:
+
+```bash
+LIVEKIT_API_KEY=your-api-key
+LIVEKIT_API_SECRET=your-api-secret
+LIVEKIT_URL=wss://your-project.livekit.cloud
+```
+
+Get these from [LiveKit Cloud](https://cloud.livekit.io) (free tier available).
+
 ## Building
 
 ```bash
