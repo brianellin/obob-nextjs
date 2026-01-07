@@ -165,31 +165,31 @@ export default function ModeSelection({ year, division }: ModeSelectionProps) {
               </Link>
             </CardFooter>
           </Card>
-          <Card className="border-2 border-indigo-600 bg-indigo-50">
+          <Card className="border-2 border-black bg-white">
             <CardHeader>
               <div className="flex items-center gap-2">
-                <CardTitle className="font-serif text-indigo-900">Daily Team Crossword</CardTitle>
-                <Badge className="bg-indigo-600 hover:bg-indigo-600 text-white">
+                <CardTitle className="font-serif text-black">Daily Team Crossword</CardTitle>
+                <Badge className="bg-black hover:bg-black text-white">
                   New!
                 </Badge>
               </div>
-              <CardDescription className="text-indigo-700">
+              <CardDescription className="text-gray-600">
                 Solve today's puzzle with your team!
               </CardDescription>
             </CardHeader>
             <CardContent>
-              <p className="text-indigo-800">
+              <p className="text-gray-700">
                 A new crossword every day at 6am. Create a team, share your code,
                 and solve it together. When stuck, send clues to teammates to look up in the books!
               </p>
             </CardContent>
             <CardFooter>
               <Link
-                href={`/daily-crossword/${year}/${division}`}
+                href={`/crossword/${year}/${division}`}
                 passHref
                 className="w-full"
               >
-                <Button className="w-full bg-indigo-600 hover:bg-indigo-700 text-white transition-colors">
+                <Button className="w-full bg-black hover:bg-gray-800 text-white transition-colors">
                   <Calendar className="mr-2 h-4 w-4" /> Play Daily Crossword
                 </Button>
               </Link>
