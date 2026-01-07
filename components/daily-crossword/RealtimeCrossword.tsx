@@ -410,25 +410,26 @@ export default function RealtimeCrossword({
     }
   }, [gameState, completed]);
 
-  // Apply initial answers when crossword is ready (only once)
+  // Track which answers we've applied to avoid re-applying
+  const appliedAnswersRef = useRef<Record<string, string>>({});
+
+  // Apply initial answers from initialTeamState when crossword is ready
   const hasAppliedInitialAnswers = useRef(false);
   useEffect(() => {
     if (!crosswordReady || !crosswordRef.current) return;
     if (hasAppliedInitialAnswers.current) return;
 
-    const answers = initialTeamState.answers;
-    if (!answers || Object.keys(answers).length === 0) {
-      hasAppliedInitialAnswers.current = true;
-      return;
-    }
-
     hasAppliedInitialAnswers.current = true;
+    const answers = initialTeamState.answers;
+    if (!answers || Object.keys(answers).length === 0) return;
+
     isApplyingRemoteRef.current = true;
 
     Object.entries(answers).forEach(([cellKey, letter]) => {
       const [row, col] = cellKey.split(",").map(Number);
       try {
         crosswordRef.current?.setGuess(row, col, letter);
+        appliedAnswersRef.current[cellKey] = letter;
       } catch (err) {
         console.warn(`Failed to set initial guess at ${row},${col}:`, err);
       }
@@ -438,6 +439,29 @@ export default function RealtimeCrossword({
       isApplyingRemoteRef.current = false;
     }, 100);
   }, [crosswordReady, initialTeamState.answers]);
+
+  // Apply answers from WebSocket gameState (handles case where DO has newer state than KV)
+  useEffect(() => {
+    if (!crosswordReady || !crosswordRef.current) return;
+    if (!gameState?.answers) return;
+
+    // Find answers that differ from what we've applied
+    const newAnswers: Array<{ row: number; col: number; letter: string }> = [];
+    Object.entries(gameState.answers).forEach(([cellKey, letter]) => {
+      if (appliedAnswersRef.current[cellKey] !== letter) {
+        const [row, col] = cellKey.split(",").map(Number);
+        newAnswers.push({ row, col, letter });
+        appliedAnswersRef.current[cellKey] = letter;
+      }
+    });
+
+    if (newAnswers.length === 0) return;
+
+    // Queue these as remote updates
+    newAnswers.forEach(({ row, col, letter }) => {
+      queueRemoteUpdate(row, col, letter);
+    });
+  }, [crosswordReady, gameState?.answers, queueRemoteUpdate]);
 
   // Handle cell changes
   const handleCellChange = useCallback(
