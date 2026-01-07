@@ -64,6 +64,10 @@ interface RealtimeCrosswordProps {
 
 const CLUE_DELIMITER = "|||";
 
+// localStorage keys for tracking seen modals
+const WELCOME_SEEN_KEY_PREFIX = "obob-crossword-welcome-seen-";
+const HELP_SEEN_KEY_PREFIX = "obob-crossword-help-seen-";
+
 function capitalizeFirst(text: string): string {
   if (!text) return text;
   return text.charAt(0).toUpperCase() + text.slice(1);
@@ -389,15 +393,30 @@ export default function RealtimeCrossword({
   const [leaveModalOpen, setLeaveModalOpen] = useState(false);
   const [welcomeModalOpen, setWelcomeModalOpen] = useState(false);
 
-  // Show welcome modal for invited users without a specific clue
+  // Show welcome modal for invited users without a specific clue (only once)
   useEffect(() => {
     if (isInvitedUser && !initialClue) {
-      setWelcomeModalOpen(true);
+      const seenKey = `${WELCOME_SEEN_KEY_PREFIX}${teamCode}`;
+      if (!localStorage.getItem(seenKey)) {
+        setWelcomeModalOpen(true);
+      }
     }
-  }, [isInvitedUser, initialClue]);
+  }, [isInvitedUser, initialClue, teamCode]);
 
-  // Callback when user arrives via help link
+  // Mark welcome modal as seen when dismissed
+  const handleCloseWelcomeModal = useCallback(() => {
+    const seenKey = `${WELCOME_SEEN_KEY_PREFIX}${teamCode}`;
+    localStorage.setItem(seenKey, "true");
+    setWelcomeModalOpen(false);
+  }, [teamCode]);
+
+  // Callback when user arrives via help link (only show once per team+clue)
   const handleShowHelpRequestModal = useCallback((clueNumber: string, clueDirection: string) => {
+    const seenKey = `${HELP_SEEN_KEY_PREFIX}${teamCode}-${clueNumber}-${clueDirection}`;
+    if (localStorage.getItem(seenKey)) {
+      return; // Already seen this help request
+    }
+
     // Find the clue text from the puzzle
     const clueData = libraryData[clueDirection as "across" | "down"]?.[clueNumber];
     // Clue text may contain delimiter - extract just the question part
@@ -410,7 +429,16 @@ export default function RealtimeCrossword({
       clueDirection,
       clueText,
     });
-  }, [libraryData]);
+  }, [libraryData, teamCode]);
+
+  // Mark help request modal as seen when dismissed
+  const handleCloseHelpRequestModal = useCallback(() => {
+    if (helpRequestModal) {
+      const seenKey = `${HELP_SEEN_KEY_PREFIX}${teamCode}-${helpRequestModal.clueNumber}-${helpRequestModal.clueDirection}`;
+      localStorage.setItem(seenKey, "true");
+    }
+    setHelpRequestModal(null);
+  }, [helpRequestModal, teamCode]);
 
   // WebSocket connection
   const {
@@ -966,7 +994,7 @@ export default function RealtimeCrossword({
                 Welcome to the Team!
               </h3>
               <button
-                onClick={() => setWelcomeModalOpen(false)}
+                onClick={handleCloseWelcomeModal}
                 className="p-1 hover:bg-gray-100 rounded"
               >
                 <X className="h-5 w-5" />
@@ -987,7 +1015,7 @@ export default function RealtimeCrossword({
               Find a clue you know the answer to and start typing!
             </p>
 
-            <Button className="w-full" onClick={() => setWelcomeModalOpen(false)}>
+            <Button className="w-full" onClick={handleCloseWelcomeModal}>
               Let&apos;s Go!
             </Button>
           </div>
@@ -1004,7 +1032,7 @@ export default function RealtimeCrossword({
                 Teammate Needs Help!
               </h3>
               <button
-                onClick={() => setHelpRequestModal(null)}
+                onClick={handleCloseHelpRequestModal}
                 className="p-1 hover:bg-gray-100 rounded"
               >
                 <X className="h-5 w-5" />
@@ -1028,7 +1056,7 @@ export default function RealtimeCrossword({
               If you know the answer, fill it out and then help answer the remaining questions!
             </p>
 
-            <Button className="w-full" onClick={() => setHelpRequestModal(null)}>
+            <Button className="w-full" onClick={handleCloseHelpRequestModal}>
               Got it!
             </Button>
           </div>

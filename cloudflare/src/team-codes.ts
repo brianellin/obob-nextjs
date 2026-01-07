@@ -73,23 +73,42 @@ export async function generateTeamCode(
 
 /**
  * Generate a unique nickname for a team member
+ * Prioritizes unique colors so no two players on the same team share a color
  */
 export function generateNickname(existingNicknames: string[] = []): string {
   const usedSet = new Set(existingNicknames.map((n) => n.toLowerCase()));
-
-  for (let i = 0; i < 50; i++) {
-    const color = COLORS[Math.floor(Math.random() * COLORS.length)];
-    const noun = DOG_NOUNS[Math.floor(Math.random() * DOG_NOUNS.length)];
-    const nickname = `${color} ${noun}`;
-
-    if (!usedSet.has(nickname.toLowerCase())) {
-      return nickname;
+  
+  // Extract colors already in use from existing nicknames
+  const usedColors = new Set(
+    existingNicknames.map((n) => n.split(" ")[0]?.toLowerCase()).filter(Boolean)
+  );
+  
+  // Find available colors (not yet used by any team member)
+  const availableColors = COLORS.filter(
+    (c) => !usedColors.has(c.toLowerCase())
+  );
+  
+  // Shuffle available colors for randomness
+  const shuffledColors = availableColors.length > 0 
+    ? [...availableColors].sort(() => Math.random() - 0.5)
+    : [...COLORS].sort(() => Math.random() - 0.5);
+  
+  // Shuffle dog nouns for randomness
+  const shuffledNouns = [...DOG_NOUNS].sort(() => Math.random() - 0.5);
+  
+  // Try each available color with random nouns first
+  for (const color of shuffledColors) {
+    for (const noun of shuffledNouns) {
+      const nickname = `${color} ${noun}`;
+      if (!usedSet.has(nickname.toLowerCase())) {
+        return nickname;
+      }
     }
   }
 
-  // Fallback: add a number
-  const color = COLORS[Math.floor(Math.random() * COLORS.length)];
-  const noun = DOG_NOUNS[Math.floor(Math.random() * DOG_NOUNS.length)];
+  // Fallback: add a number (all combinations exhausted)
+  const color = shuffledColors[0] || COLORS[0];
+  const noun = shuffledNouns[0] || DOG_NOUNS[0];
   const num = Math.floor(Math.random() * 99) + 1;
   return `${color} ${noun} ${num}`;
 }
