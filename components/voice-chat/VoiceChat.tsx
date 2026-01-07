@@ -58,23 +58,26 @@ function VoiceRoomControls({
         onClick={onRequestDialog}
         className={`
           flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-xs font-medium
-          transition-all flex-shrink-0 border
+          transition-all flex-shrink-0
           ${isMuted 
-            ? "bg-gray-50 text-gray-600 border-gray-200 hover:bg-gray-100" 
-            : "bg-green-50 text-green-700 border-green-200 hover:bg-green-100 ring-2 ring-green-300 ring-opacity-50"
+            ? "bg-amber-50 text-amber-700 border border-amber-200 hover:bg-amber-100" 
+            : "bg-green-100 text-green-700 border border-green-300 hover:bg-green-200"
           }
         `}
-        title={isMuted ? "You're listening only - tap to talk" : "You're talking - tap to change"}
+        title={isMuted ? "Your mic is off - tap to change" : "Your mic is on - tap to change"}
       >
         {isMuted ? (
           <>
-            <Headphones className="h-4 w-4" />
-            <span className="hidden sm:inline">Listening</span>
+            <MicOff className="h-4 w-4" />
+            <span className="hidden sm:inline">Mic Off</span>
           </>
         ) : (
           <>
-            <Mic className="h-4 w-4" />
-            <span className="hidden sm:inline">Talking</span>
+            <div className="relative">
+              <Mic className="h-4 w-4" />
+              <span className="absolute -top-0.5 -right-0.5 w-2 h-2 bg-green-500 rounded-full animate-pulse" />
+            </div>
+            <span className="hidden sm:inline">Mic On</span>
           </>
         )}
       </button>
@@ -186,11 +189,11 @@ export function VoiceChat({
       <>
         <button
           onClick={() => setDialogOpen(true)}
-          className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-blue-50 text-blue-600 text-xs font-medium border border-blue-200 flex-shrink-0 hover:bg-blue-100 transition-colors"
+          className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-gray-100 text-gray-600 text-xs font-medium border border-gray-200 flex-shrink-0 hover:bg-gray-200 transition-colors"
           title="Join voice chat with your teammates"
         >
-          <Headphones className="h-4 w-4" />
-          <span className="hidden sm:inline">Voice Chat</span>
+          <MicOff className="h-4 w-4" />
+          <span className="hidden sm:inline">Join Voice</span>
         </button>
         
         <VoiceDialog
