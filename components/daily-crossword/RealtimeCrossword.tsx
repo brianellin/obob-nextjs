@@ -667,7 +667,7 @@ export default function RealtimeCrossword({
       )}
 
       {/* Main content */}
-      <div className="max-w-6xl mx-auto p-4">
+      <div className="max-w-6xl mx-auto sm:p-4">
         <CrosswordProvider
           ref={crosswordRef}
           data={libraryData}
@@ -683,13 +683,12 @@ export default function RealtimeCrossword({
               onShowHelpModal={handleShowHelpRequestModal}
             />
           )}
-          <div className="flex flex-col lg:flex-row gap-4 lg:gap-6">
-            {/* Crossword grid with cursor overlay - only sticky on lg+ where header is also sticky */}
-            <div className="flex-shrink-0 lg:sticky lg:top-[140px] self-start bg-gray-50 pb-2 z-10" style={{ width: "min(500px, 100%)" }}>
+          <div className="flex flex-col md:flex-row gap-4 md:gap-6">
+            {/* Crossword grid with cursor overlay - sticky on all screens */}
+            <div className="flex-shrink-0 sticky top-0 md:top-[140px] self-start bg-gray-50 pb-2 z-10 w-full md:w-[500px]">
               <div
                 ref={gridContainerRef}
-                className="border-2 border-gray-900 bg-white relative"
-                style={{ maxWidth: "500px", margin: "0 auto" }}
+                className="border-2 border-gray-900 bg-white relative sm:mx-auto"
               >
                 <CrosswordGrid />
                 <CursorOverlay
@@ -702,7 +701,7 @@ export default function RealtimeCrossword({
             </div>
 
             {/* Clues */}
-            <div className="lg:w-[28rem] xl:w-auto xl:flex-1 grid grid-cols-1 xl:grid-cols-2 gap-4">
+            <div className="md:w-[28rem] xl:w-auto xl:flex-1 grid grid-cols-1 xl:grid-cols-2 gap-4 px-4 sm:px-0">
               <div className="bg-white border rounded-lg p-4">
                 <CustomDirectionClues
                   direction="across"
