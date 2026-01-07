@@ -146,6 +146,17 @@ export default function TeamSetup({
           </p>
         </div>
 
+        <div className="bg-amber-50 border border-amber-200 rounded-lg p-4 text-sm text-amber-900">
+          <p className="mb-2">
+            <strong>A new puzzle every day!</strong> Work together with teammates to solve 
+            a crossword featuring questions from all the books in your division.
+          </p>
+          <p>
+            Answers sync in real-time, so you can collaborate from anywhere. 
+            Perfect for practice sessions with your OBOB team!
+          </p>
+        </div>
+
         <div className="space-y-4">
           <Card
             className="cursor-pointer hover:border-primary transition-colors"
