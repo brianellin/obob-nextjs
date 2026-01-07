@@ -224,11 +224,19 @@ export class CrosswordRoom {
       await this.saveGameState(state);
     }
 
-    // Always ensure puzzle clues are loaded for answer validation
-    // (they may be missing if DO was evicted from memory)
-    const clues = await this.getPuzzleClues();
-    if (clues.size === 0) {
+    // Ensure puzzle clues are loaded and match current puzzle date
+    // (clues may be missing, or stale from a previous day's puzzle)
+    const storedPuzzleDate = await this.state.storage.get<string>("puzzleCluesDate");
+    if (storedPuzzleDate !== msg.puzzleDate) {
       await this.loadPuzzleClues(msg.year, msg.division, msg.puzzleDate);
+      await this.state.storage.put("puzzleCluesDate", msg.puzzleDate);
+    } else {
+      // Ensure clues are loaded into memory
+      const clues = await this.getPuzzleClues();
+      if (clues.size === 0) {
+        await this.loadPuzzleClues(msg.year, msg.division, msg.puzzleDate);
+        await this.state.storage.put("puzzleCluesDate", msg.puzzleDate);
+      }
     }
 
     // Build player list from all connected WebSockets
@@ -454,6 +462,7 @@ export class CrosswordRoom {
   ): Promise<void> {
     try {
       const url = `${this.env.PUZZLE_API_URL}/api/daily-crossword/puzzle?year=${year}&division=${division}&date=${puzzleDate}`;
+      console.log(`[DO] Loading puzzle clues from: ${url}`);
       const response = await fetch(url);
       if (response.ok) {
         const data = (await response.json()) as { puzzle?: { clues?: PuzzleClue[] } };
@@ -463,10 +472,15 @@ export class CrosswordRoom {
             this.puzzleClues.set(clue.id, clue);
           }
           await this.state.storage.put("puzzleClues", Array.from(this.puzzleClues.entries()));
+          console.log(`[DO] Loaded ${this.puzzleClues.size} puzzle clues`);
+        } else {
+          console.error("[DO] Puzzle API response missing clues:", JSON.stringify(data).slice(0, 200));
         }
+      } else {
+        console.error(`[DO] Puzzle API returned ${response.status}: ${await response.text()}`);
       }
     } catch (err) {
-      console.error("Failed to load puzzle clues:", err);
+      console.error("[DO] Failed to load puzzle clues:", err);
     }
   }
 
@@ -483,6 +497,9 @@ export class CrosswordRoom {
 
   private async checkCorrectClues(state: StoredState): Promise<string[]> {
     const clues = await this.getPuzzleClues();
+    if (clues.size === 0) {
+      console.warn("[DO] checkCorrectClues: No puzzle clues loaded!");
+    }
     const correctClues: string[] = [];
 
     for (const [id, clue] of clues) {

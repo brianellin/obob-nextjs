@@ -23,5 +23,6 @@ new_classes = ["CrosswordRoom"]
 port = 8787
 local_protocol = "http"
 
-# PUZZLE_API_URL is set in Cloudflare Dashboard for production
-# For local dev, run: wrangler dev --var PUZZLE_API_URL:http://localhost:3000
+# Environment variables
+[vars]
+PUZZLE_API_URL = "https://obob.dog"
