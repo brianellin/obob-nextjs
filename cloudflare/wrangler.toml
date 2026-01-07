@@ -18,6 +18,7 @@ new_classes = ["CrosswordRoom"]
 port = 8787
 local_protocol = "http"
 
+# Local dev uses localhost automatically via `wrangler dev`
+# Production uses the value set in Cloudflare Dashboard
 [vars]
-# For local dev, use localhost. Override in Cloudflare dashboard for production.
 PUZZLE_API_URL = "http://localhost:3000"
