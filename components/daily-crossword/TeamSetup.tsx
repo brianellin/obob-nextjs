@@ -10,7 +10,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Users, Copy, Check, ArrowRight, Loader2 } from "lucide-react";
+import { Users, Copy, Check, ArrowRight, Loader2, Grid3X3 } from "lucide-react";
 import { generateSessionId } from "@/lib/daily-crossword/team-codes";
 
 interface TeamSetupProps {
@@ -140,20 +140,20 @@ export default function TeamSetup({
     return (
       <div className="max-w-lg mx-auto p-4 space-y-6">
         <div className="text-center space-y-2">
-          <h1 className="text-3xl font-bold font-serif">Daily Team Crossword</h1>
+          <div className="flex items-center justify-center gap-3">
+            <Grid3X3 className="h-8 w-8 text-black" />
+            <h1 className="text-3xl font-bold font-serif text-black">Daily Crossword</h1>
+          </div>
           <p className="text-muted-foreground">
             {getDivisionLabel(division)} &bull; {year}
           </p>
         </div>
 
-        <div className="bg-amber-50 border border-amber-200 rounded-lg p-4 text-sm text-amber-900">
+        <div className="bg-white border-2 border-black rounded-lg p-4 text-md text-black font-serif">
           <p className="mb-2">
-            <strong>A new puzzle every day!</strong> Work together with teammates to solve 
-            a crossword featuring questions from all the books in your division.
-          </p>
-          <p>
-            Answers sync in real-time, so you can collaborate from anywhere. 
-            Perfect for practice sessions with your OBOB team!
+            <strong>A new puzzle every day!</strong>
+            <br /> Collaborate with teammates and friends to solve a crossword
+            featuring content questions from all the books in your division.
           </p>
         </div>
 
@@ -235,7 +235,9 @@ export default function TeamSetup({
         <Card>
           <CardContent className="pt-6 space-y-4">
             <div className="text-center">
-              <p className="text-sm text-muted-foreground mb-2">Your team code</p>
+              <p className="text-sm text-muted-foreground mb-2">
+                Your team code
+              </p>
               <div className="flex items-center justify-center gap-2">
                 <span className="text-4xl font-bold font-mono tracking-wider">
                   {teamCode}
@@ -264,8 +266,9 @@ export default function TeamSetup({
 
             <div className="bg-blue-50 border border-blue-100 p-4 rounded-lg">
               <p className="text-sm text-blue-800">
-                <strong>Tip:</strong> Text the code to your teammates so they can
-                join! Everyone with the code can help solve the puzzle together.
+                <strong>Tip:</strong> Text the code to your teammates so they
+                can join! Everyone with the code can help solve the puzzle
+                together.
               </p>
             </div>
 
