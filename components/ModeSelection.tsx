@@ -180,7 +180,7 @@ export default function ModeSelection({ year, division }: ModeSelectionProps) {
             <CardContent>
               <p className="text-gray-700">
                 A new crossword every day at 6am. Create a team, share your code,
-                and solve it together. When stuck, send clues to teammates to look up in the books!
+                and solve it together. Send clues to teammates for real-time help!
               </p>
             </CardContent>
             <CardFooter>
