@@ -239,6 +239,37 @@ export default function RealtimeCrossword({
   const isApplyingRemoteRef = useRef(false);
   const lastSentCursorRef = useRef<string>("");
 
+  // Queue for processing remote updates sequentially to avoid dropped letters
+  const remoteUpdateQueue = useRef<Array<{ row: number; col: number; letter: string }>>([]);
+  const isProcessingQueue = useRef(false);
+
+  const processRemoteUpdateQueue = useCallback(() => {
+    if (isProcessingQueue.current || remoteUpdateQueue.current.length === 0) return;
+    if (!crosswordRef.current) return;
+
+    isProcessingQueue.current = true;
+    isApplyingRemoteRef.current = true;
+
+    const update = remoteUpdateQueue.current.shift()!;
+    try {
+      crosswordRef.current.setGuess(update.row, update.col, update.letter);
+    } catch (err) {
+      console.warn(`Failed to set remote guess at ${update.row},${update.col}:`, err);
+    }
+
+    // Process next update after a small delay to let the component settle
+    requestAnimationFrame(() => {
+      isProcessingQueue.current = false;
+      isApplyingRemoteRef.current = remoteUpdateQueue.current.length > 0;
+      processRemoteUpdateQueue();
+    });
+  }, []);
+
+  const queueRemoteUpdate = useCallback((row: number, col: number, letter: string) => {
+    remoteUpdateQueue.current.push({ row, col, letter });
+    processRemoteUpdateQueue();
+  }, [processRemoteUpdateQueue]);
+
   const [libraryData] = useState<LibraryCrosswordData>(() =>
     convertToLibraryFormat(puzzle)
   );
@@ -315,36 +346,16 @@ export default function RealtimeCrossword({
     onLetterUpdate: useCallback(
       (row: number, col: number, letter: string, fromSessionId: string) => {
         if (fromSessionId === sessionId) return;
-        if (!crosswordRef.current) return;
-
-        isApplyingRemoteRef.current = true;
-        try {
-          crosswordRef.current.setGuess(row, col, letter);
-        } catch (err) {
-          console.warn(`Failed to set remote guess at ${row},${col}:`, err);
-        }
-        setTimeout(() => {
-          isApplyingRemoteRef.current = false;
-        }, 50);
+        queueRemoteUpdate(row, col, letter);
       },
-      [sessionId]
+      [sessionId, queueRemoteUpdate]
     ),
     onDeleteUpdate: useCallback(
       (row: number, col: number, fromSessionId: string) => {
         if (fromSessionId === sessionId) return;
-        if (!crosswordRef.current) return;
-
-        isApplyingRemoteRef.current = true;
-        try {
-          crosswordRef.current.setGuess(row, col, "");
-        } catch (err) {
-          console.warn(`Failed to clear remote cell at ${row},${col}:`, err);
-        }
-        setTimeout(() => {
-          isApplyingRemoteRef.current = false;
-        }, 50);
+        queueRemoteUpdate(row, col, "");
       },
-      [sessionId]
+      [sessionId, queueRemoteUpdate]
     ),
     onCorrectClue: useCallback((clueId: string) => {
       setCorrectClues((prev) => {
