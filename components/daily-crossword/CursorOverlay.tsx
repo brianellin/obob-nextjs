@@ -179,9 +179,11 @@ function CursorIndicator({
         }}
       />
 
-      {/* Nickname label */}
+      {/* Nickname label - position below cell when on top row */}
       <div
-        className="absolute -top-5 left-0 px-1.5 py-0.5 text-xs font-medium text-white rounded shadow-sm whitespace-nowrap"
+        className={`absolute left-0 px-1.5 py-0.5 text-xs font-medium text-white rounded shadow-sm whitespace-nowrap ${
+          row === 0 ? "top-full mt-0.5" : "-top-5"
+        }`}
         style={{
           backgroundColor: color,
           fontSize: "10px",

@@ -662,29 +662,65 @@ export default function RealtimeCrossword({
       {/* Header - sticky on desktop only */}
       <div className="bg-white border-b shadow-sm lg:sticky lg:top-0 z-10">
         <div className="max-w-6xl mx-auto px-3 sm:px-4 py-2">
-          {/* Two-row grid for alignment */}
-          <div className="grid grid-cols-[1fr_auto] gap-x-4 gap-y-1 items-center">
-            {/* Row 1 Left: Title + date */}
-            <div className="flex items-baseline gap-2 min-w-0">
-              <h1 className="text-base sm:text-lg font-bold font-serif leading-tight">Daily Crossword</h1>
-              <span className="text-xs text-muted-foreground whitespace-nowrap">
-                {new Date(dateString + "T00:00:00").toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" })}
-              </span>
+          <div className="flex flex-col gap-2">
+            {/* Row 1: Identity (left) + Game Status (right) */}
+            <div className="flex items-center justify-between gap-3">
+              {/* Left: Title and date (stacked on mobile, inline on desktop) */}
+              <div className="flex flex-col sm:flex-row sm:items-baseline sm:gap-2 min-w-0">
+                <h1 className="text-base sm:text-lg font-bold font-serif leading-tight">Daily Crossword</h1>
+                <span className="text-xs text-muted-foreground whitespace-nowrap">
+                  {new Date(dateString + "T00:00:00").toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" })}
+                </span>
+              </div>
+
+              {/* Right: Game status - progress, connection, timer, leave */}
+              <div className="flex items-center gap-2.5 text-sm text-muted-foreground flex-shrink-0">
+                <span className="tabular-nums">
+                  <span className="font-semibold text-green-600">{correctClues.length}</span>
+                  <span className="opacity-60 mx-0.5">/</span>
+                  <span>{puzzle.clues.length}</span>
+                </span>
+                <div className="w-px h-4 bg-gray-300" />
+                {isConnected ? (
+                  <Wifi className="h-4 w-4 text-green-500" />
+                ) : isConnecting ? (
+                  <Wifi className="h-4 w-4 text-yellow-500 animate-pulse" />
+                ) : (
+                  <WifiOff className="h-4 w-4 text-red-500" />
+                )}
+                <span className="font-mono tabular-nums text-xs">
+                  {completed && completedAt
+                    ? formatTime(completedAt - startTime)
+                    : formatTime(elapsedTime)}
+                </span>
+                {onLeaveRoom && (
+                  <button
+                    onClick={() => setLeaveModalOpen(true)}
+                    className="hover:text-gray-900 transition-colors p-0.5 -mr-0.5"
+                    title="Leave room"
+                  >
+                    <LogOut className="h-4 w-4" />
+                  </button>
+                )}
+              </div>
             </div>
 
-            {/* Row 1 Right: Invite button */}
-            <button
-              onClick={() => setInviteModalOpen(true)}
-              className="flex items-center gap-1.5 px-2 py-0.5 bg-gray-100 hover:bg-gray-200 rounded transition-colors text-sm h-7"
-              title="Invite friends to play"
-            >
-              <Users className="h-3.5 w-3.5 text-muted-foreground sm:hidden" />
-              <span className="text-muted-foreground text-xs hidden sm:inline">Invite friends:</span>
-              <span className="font-mono font-bold text-sm">{teamCode}</span>
-            </button>
+            {/* Row 2: Team/Social - Invite button + Player list (coupled together) */}
+            <div className="flex items-center gap-2 overflow-x-auto scrollbar-hide min-w-0">
+              {/* Invite button */}
+              <button
+                onClick={() => setInviteModalOpen(true)}
+                className="flex items-center gap-1.5 px-2.5 py-1 bg-gray-100 hover:bg-gray-200 rounded transition-colors text-xs flex-shrink-0"
+                title="Invite friends to play"
+              >
+                <Users className="h-3.5 w-3.5 text-muted-foreground" />
+                <span className="text-muted-foreground hidden sm:inline">Invite:</span>
+                <span className="font-mono font-bold">{teamCode}</span>
+              </button>
 
-            {/* Row 2 Left: Team members (scrollable) */}
-            <div className="flex items-center gap-1 overflow-x-auto scrollbar-hide min-w-0 h-6">
+              {/* Subtle separator */}
+              <div className="w-px h-4 bg-gray-200 flex-shrink-0" />
+
               {/* Current user */}
               <div
                 className="flex items-center gap-1 px-1.5 py-0.5 rounded-full text-[11px] font-medium border whitespace-nowrap flex-shrink-0"
@@ -702,6 +738,7 @@ export default function RealtimeCrossword({
                 <span>{nickname}</span>
                 <span className="opacity-50">(you)</span>
               </div>
+
               {/* Other players */}
               {Array.from(players.values()).map((player) => (
                 <div
@@ -719,37 +756,6 @@ export default function RealtimeCrossword({
                   <span>{player.nickname}</span>
                 </div>
               ))}
-            </div>
-
-            {/* Row 2 Right: Stats row */}
-            <div className="flex items-center justify-end gap-2 text-xs text-muted-foreground h-6">
-              <span className="tabular-nums">
-                <span className="font-semibold text-green-600">{correctClues.length}</span>
-                <span className="opacity-60 mx-0.5">/</span>
-                <span>{puzzle.clues.length}</span>
-              </span>
-              <div className="w-px h-3 bg-gray-200" />
-              {isConnected ? (
-                <Wifi className="h-3 w-3 text-green-500" />
-              ) : isConnecting ? (
-                <Wifi className="h-3 w-3 text-yellow-500 animate-pulse" />
-              ) : (
-                <WifiOff className="h-3 w-3 text-red-500" />
-              )}
-              <span className="font-mono tabular-nums text-[11px]">
-                {completed && completedAt
-                  ? formatTime(completedAt - startTime)
-                  : formatTime(elapsedTime)}
-              </span>
-              {onLeaveRoom && (
-                <button
-                  onClick={() => setLeaveModalOpen(true)}
-                  className="hover:text-gray-900 transition-colors p-0.5 -mr-0.5"
-                  title="Leave room"
-                >
-                  <LogOut className="h-3 w-3" />
-                </button>
-              )}
             </div>
           </div>
         </div>
