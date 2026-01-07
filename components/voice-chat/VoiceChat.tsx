@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback, useEffect, useRef } from "react";
+import { useState, useCallback, useEffect, useRef, useMemo } from "react";
 import { createPortal } from "react-dom";
 import {
   LiveKitRoom,
@@ -11,11 +11,23 @@ import {
 import { Track } from "livekit-client";
 import { Mic, MicOff, X, AlertTriangle } from "lucide-react";
 import "@livekit/components-styles";
+import { usePostHog } from "posthog-js/react";
 import {
   checkMicrophonePermission,
   requestMicrophoneAccess,
   detectBrowser,
 } from "@/lib/voice-permissions";
+import {
+  trackVoiceDialogShown,
+  trackVoiceDialogChoice,
+  trackVoiceConnected,
+  trackVoiceDisconnected,
+  trackVoiceMicToggle,
+  trackVoicePermissionError,
+  trackVoiceListenOnlyFallback,
+  trackVoiceConnectionError,
+  type VoiceAnalyticsContext,
+} from "@/lib/voice-analytics";
 
 type VoiceState = "off" | "connecting" | "listening" | "talking";
 
@@ -113,6 +125,7 @@ export function VoiceChat({
   participantIdentity,
   playerCount,
 }: VoiceChatProps) {
+  const posthog = usePostHog();
   const [isConnecting, setIsConnecting] = useState(false);
   const [isConnected, setIsConnected] = useState(false);
   const [token, setToken] = useState<string | null>(null);
@@ -123,6 +136,12 @@ export function VoiceChat({
   const [startListenOnly, setStartListenOnly] = useState(false);
   const [dialogOpen, setDialogOpen] = useState(false);
   const [permissionError, setPermissionError] = useState<"denied" | "no_device" | null>(null);
+
+  const analyticsContext: VoiceAnalyticsContext = useMemo(() => ({
+    roomName,
+    participantName,
+    playerCount,
+  }), [roomName, participantName, playerCount]);
 
   const handleConnect = useCallback(async (unmuted: boolean = false, listenOnly: boolean = false) => {
     if (isConnecting || isConnected) return;
@@ -135,9 +154,13 @@ export function VoiceChat({
     
     // Only check/request microphone permission if user wants to talk
     if (!listenOnly) {
+      const { isChrome, isSafari, isFirefox } = detectBrowser();
+      const browserName = isChrome ? "chrome" : isSafari ? "safari" : isFirefox ? "firefox" : "other";
+      
       const permStatus = await checkMicrophonePermission();
       if (permStatus === "denied") {
         setPermissionError("denied");
+        trackVoicePermissionError(analyticsContext, "denied", browserName, posthog);
         setIsConnecting(false);
         return;
       }
@@ -148,10 +171,13 @@ export function VoiceChat({
         if (!result.granted) {
           if (result.error === "denied") {
             setPermissionError("denied");
+            trackVoicePermissionError(analyticsContext, "denied", browserName, posthog);
           } else if (result.error === "no_device") {
             setPermissionError("no_device");
+            trackVoicePermissionError(analyticsContext, "no_device", browserName, posthog);
           } else {
             setError(result.error || "Microphone access failed");
+            trackVoicePermissionError(analyticsContext, "unknown", browserName, posthog);
           }
           setIsConnecting(false);
           return;
@@ -179,28 +205,34 @@ export function VoiceChat({
       setToken(jwt);
       setServerUrl(url);
     } catch (err) {
-      setError(err instanceof Error ? err.message : "Failed to connect");
+      const errorMsg = err instanceof Error ? err.message : "Failed to connect";
+      setError(errorMsg);
+      trackVoiceConnectionError(analyticsContext, errorMsg, posthog);
       setIsConnecting(false);
     }
-  }, [roomName, participantName, participantIdentity, isConnecting, isConnected]);
+  }, [roomName, participantName, participantIdentity, isConnecting, isConnected, analyticsContext, posthog]);
 
   const handleDisconnected = useCallback(() => {
     setIsConnected(false);
     setToken(null);
     setServerUrl(null);
     setIsConnecting(false);
-  }, []);
+    trackVoiceDisconnected(analyticsContext, posthog);
+  }, [analyticsContext, posthog]);
 
   // Auto-show dialog when player count goes to 2+
   useEffect(() => {
     if (playerCount > 1 && !hasAutoShownDialog && !isConnected && !isConnecting) {
       setHasAutoShownDialog(true);
       setDialogOpen(true);
+      trackVoiceDialogShown(analyticsContext, "auto", posthog);
     }
-  }, [playerCount, hasAutoShownDialog, isConnected, isConnecting]);
+  }, [playerCount, hasAutoShownDialog, isConnected, isConnecting, analyticsContext, posthog]);
 
   const handleDialogChoice = (choice: "talk" | "listen" | "skip" | "leave") => {
     setDialogOpen(false);
+    trackVoiceDialogChoice(analyticsContext, choice, isConnected, posthog);
+    
     if (choice === "skip") return;
     
     if (choice === "leave") {
@@ -217,7 +249,9 @@ export function VoiceChat({
       handleConnect(wantsTalk, listenOnly);
     } else {
       // Already connected, just toggle mic
-      (window as Window & { __voiceChatSetMic?: (enabled: boolean) => void }).__voiceChatSetMic?.(choice === "talk");
+      const micEnabled = choice === "talk";
+      (window as Window & { __voiceChatSetMic?: (enabled: boolean) => void }).__voiceChatSetMic?.(micEnabled);
+      trackVoiceMicToggle(analyticsContext, micEnabled, posthog);
     }
   };
 
@@ -234,11 +268,16 @@ export function VoiceChat({
       );
     }
     
+    const openDialogManually = () => {
+      setDialogOpen(true);
+      trackVoiceDialogShown(analyticsContext, "manual", posthog);
+    };
+
     if (error || permissionError) {
       return (
         <>
           <button
-            onClick={() => setDialogOpen(true)}
+            onClick={openDialogManually}
             className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-red-50 text-red-600 text-xs font-medium border border-red-200 flex-shrink-0 hover:bg-red-100"
           >
             <AlertTriangle className="h-4 w-4" />
@@ -254,6 +293,11 @@ export function VoiceChat({
               setPermissionError(null);
               setError(null);
             }}
+            onListenOnlyFallback={() => {
+              if (permissionError) {
+                trackVoiceListenOnlyFallback(analyticsContext, permissionError, posthog);
+              }
+            }}
           />
         </>
       );
@@ -262,7 +306,7 @@ export function VoiceChat({
     return (
       <>
         <button
-          onClick={() => setDialogOpen(true)}
+          onClick={openDialogManually}
           className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-gray-100 text-gray-600 text-xs font-medium border border-gray-200 flex-shrink-0 hover:bg-gray-200 transition-colors"
           title="Join voice chat with your teammates"
         >
@@ -280,6 +324,11 @@ export function VoiceChat({
     );
   }
 
+  const handleRequestDialogFromControls = () => {
+    setDialogOpen(true);
+    trackVoiceDialogShown(analyticsContext, "manual", posthog);
+  };
+
   return (
     <LiveKitRoom
       token={token}
@@ -295,15 +344,17 @@ export function VoiceChat({
       onConnected={() => {
         setIsConnected(true);
         setIsConnecting(false);
+        trackVoiceConnected(analyticsContext, startListenOnly ? "listenOnly" : "talk", posthog);
       }}
       onDisconnected={handleDisconnected}
       onError={(err) => {
         console.error("LiveKit error:", err);
         setError(err.message);
+        trackVoiceConnectionError(analyticsContext, err.message, posthog);
       }}
     >
       <VoiceRoomControls 
-        onRequestDialog={() => setDialogOpen(true)} 
+        onRequestDialog={handleRequestDialogFromControls} 
         startUnmuted={startUnmuted}
       />
       <VoiceDialog
@@ -323,9 +374,10 @@ interface VoiceDialogProps {
   playerCount: number;
   permissionError?: "denied" | "no_device" | null;
   onRetryPermission?: () => void;
+  onListenOnlyFallback?: () => void;
 }
 
-function VoiceDialog({ open, onChoice, isConnected, playerCount, permissionError, onRetryPermission }: VoiceDialogProps) {
+function VoiceDialog({ open, onChoice, isConnected, playerCount, permissionError, onRetryPermission, onListenOnlyFallback }: VoiceDialogProps) {
   const [mounted, setMounted] = useState(false);
   
   useEffect(() => {
@@ -433,7 +485,10 @@ function VoiceDialog({ open, onChoice, isConnected, playerCount, permissionError
           </div>
 
           <button
-            onClick={() => onChoice("listen")}
+            onClick={() => {
+              onListenOnlyFallback?.();
+              onChoice("listen");
+            }}
             className="w-full text-sm text-gray-500 hover:text-gray-700 transition-colors"
           >
             Join as listener only (no mic needed)
