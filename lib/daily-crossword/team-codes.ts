@@ -8,6 +8,12 @@
 import { teamCodeExists } from "./kv";
 
 /**
+ * Unambiguous character set (Crockford's Base32 style)
+ * Excludes: 0, O (look alike), 1, I, L (look alike)
+ */
+const UNAMBIGUOUS_CHARS = "23456789ABCDEFGHJKMNPQRSTVWXYZ";
+
+/**
  * Dog-themed words for team codes
  */
 const DOG_WORDS = [
@@ -89,18 +95,29 @@ const DOG_NOUNS = [
 ] as const;
 
 /**
+ * Generate a random 4-character suffix from unambiguous characters
+ */
+function generateSuffix(): string {
+  let suffix = "";
+  for (let i = 0; i < 4; i++) {
+    suffix += UNAMBIGUOUS_CHARS[Math.floor(Math.random() * UNAMBIGUOUS_CHARS.length)];
+  }
+  return suffix;
+}
+
+/**
  * Generate a unique team code
  *
- * Format: {DOG_WORD}{2-digit number}
- * Examples: BARK42, ROSIE17, FETCH99
+ * Format: {DOG_WORD}-{4-char unambiguous suffix}
+ * Examples: BARK-A7X2, ROSIE-9KMN, FETCH-3HPQ
  */
 export async function generateTeamCode(): Promise<string> {
   const maxAttempts = 20;
 
   for (let i = 0; i < maxAttempts; i++) {
     const word = DOG_WORDS[Math.floor(Math.random() * DOG_WORDS.length)];
-    const num = Math.floor(Math.random() * 90) + 10; // 10-99
-    const code = `${word}${num}`;
+    const suffix = generateSuffix();
+    const code = `${word}-${suffix}`;
 
     // Check if already exists
     const exists = await teamCodeExists(code);
@@ -109,10 +126,10 @@ export async function generateTeamCode(): Promise<string> {
     }
   }
 
-  // Fallback: add random suffix to make it unique
+  // Fallback: add extra suffix to make it unique
   const word = DOG_WORDS[Math.floor(Math.random() * DOG_WORDS.length)];
-  const suffix = Date.now().toString(36).slice(-4).toUpperCase();
-  return `${word}${suffix}`;
+  const suffix = generateSuffix() + generateSuffix().slice(0, 2);
+  return `${word}-${suffix}`;
 }
 
 /**
@@ -175,12 +192,12 @@ export function getCursorColor(nickname: string): string {
 
 /**
  * Validate a team code format
- * Must be uppercase letters followed by numbers
+ * Format: DOG_WORD-XXXX where X is from unambiguous character set
  */
 export function isValidTeamCode(code: string): boolean {
   if (!code || typeof code !== "string") return false;
-  // Allow formats like "BARK42" or "BARKX7A1" (fallback format)
-  return /^[A-Z]{2,8}[A-Z0-9]{2,6}$/i.test(code.trim());
+  // Match formats like "BARK-A7X2" or "ROSIE-9KMN" (with optional extended suffix for fallback)
+  return /^[A-Z]{2,8}-[23456789ABCDEFGHJKMNPQRSTVWXYZ]{4,6}$/i.test(code.trim());
 }
 
 /**

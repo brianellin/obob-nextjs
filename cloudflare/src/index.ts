@@ -39,14 +39,14 @@ export default {
 
     // Route: /room/:teamCode
     // WebSocket connection to a specific room
-    const roomMatch = url.pathname.match(/^\/room\/([A-Z0-9]+)$/i);
+    const roomMatch = url.pathname.match(/^\/room\/([A-Z0-9-]+)$/i);
     if (roomMatch) {
       const teamCode = roomMatch[1].toUpperCase();
       console.log(`[Worker] Room request for ${teamCode}, upgrade: ${request.headers.get("Upgrade")}`);
 
-      // Validate team code format (e.g., BARK42, FETCH99, ACE42)
-      // 2-8 letters followed by 2-6 alphanumeric chars
-      if (!/^[A-Z]{2,8}[A-Z0-9]{2,6}$/.test(teamCode)) {
+      // Validate team code format (e.g., BARK-A7X2, ROSIE-9KMN)
+      // DOG_WORD-XXXX where X is from unambiguous character set
+      if (!/^[A-Z]{2,8}-[23456789ABCDEFGHJKMNPQRSTVWXYZ]{4,6}$/.test(teamCode)) {
         console.log(`[Worker] Invalid team code: ${teamCode}`);
         return new Response(JSON.stringify({ error: "Invalid team code format" }), {
           status: 400,

@@ -53,9 +53,16 @@ function DailyContent() {
       setInitialClue(urlClue);
     }
 
-    // If we have a team code from URL, try to join that team
+    const storedSessionId = localStorage.getItem("daily-crossword-session");
+    const storedTeamCode = sessionStorage.getItem(`daily-team-${year}-${division}`);
+
+    // URL team code takes precedence over stored team code
     if (urlTeamCode) {
-      const storedSessionId = localStorage.getItem("daily-crossword-session");
+      // Clear stored team if URL specifies a different one
+      if (storedTeamCode && storedTeamCode !== urlTeamCode.toUpperCase()) {
+        sessionStorage.removeItem(`daily-team-${year}-${division}`);
+      }
+      
       if (storedSessionId) {
         rejoinTeam(urlTeamCode, storedSessionId);
       } else {
@@ -65,12 +72,8 @@ function DailyContent() {
       return;
     }
 
-    // Check if we have an existing session
-    const storedTeamCode = sessionStorage.getItem(`daily-team-${year}-${division}`);
-    const storedSessionId = localStorage.getItem("daily-crossword-session");
-
+    // Fall back to stored session if no URL team code
     if (storedTeamCode && storedSessionId) {
-      // Try to rejoin the team
       rejoinTeam(storedTeamCode, storedSessionId);
     } else {
       setPhase("setup");
