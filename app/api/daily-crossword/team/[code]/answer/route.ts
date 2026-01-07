@@ -75,6 +75,13 @@ export async function POST(
       teamState.puzzleDate
     );
 
+    if (!dailyPuzzle) {
+      return NextResponse.json(
+        { error: "No puzzle available" },
+        { status: 404 }
+      );
+    }
+
     // Convert serialized clues to check correctness
     const clues = dailyPuzzle.puzzle.clues as CrosswordClue[];
 

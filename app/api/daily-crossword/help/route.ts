@@ -38,6 +38,13 @@ export async function POST(request: Request) {
     // Get the puzzle to find the clue
     const dailyPuzzle = await getOrGenerateDailyPuzzle(year, division, puzzleDate);
 
+    if (!dailyPuzzle) {
+      return NextResponse.json(
+        { error: "No puzzle available for today" },
+        { status: 404 }
+      );
+    }
+
     const clues = dailyPuzzle.puzzle.clues as CrosswordClue[];
     const clue = clues.find((c) => c.id === clueId);
 

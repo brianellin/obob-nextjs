@@ -115,6 +115,13 @@ export async function POST(
       teamState.puzzleDate
     );
 
+    if (!dailyPuzzle) {
+      return NextResponse.json(
+        { error: "No puzzle available" },
+        { status: 404 }
+      );
+    }
+
     const clues = dailyPuzzle.puzzle.clues as CrosswordClue[];
     const clue = clues.find((c) => c.id === helpRequest.clueId);
 

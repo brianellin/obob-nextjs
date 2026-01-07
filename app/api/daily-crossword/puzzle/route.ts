@@ -42,6 +42,14 @@ export async function GET(request: Request) {
 
     const puzzleDate = getTodaysPuzzleDate();
     const puzzle = await getOrGenerateDailyPuzzle(year, division, puzzleDate);
+
+    if (!puzzle) {
+      return NextResponse.json(
+        { error: `No puzzle available for ${year}/${division} on ${puzzleDate}` },
+        { status: 404 }
+      );
+    }
+
     const timeUntilNext = getTimeUntilNextPuzzle();
 
     return NextResponse.json({

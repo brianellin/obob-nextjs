@@ -14,7 +14,33 @@ import { generateCrossword, type GeneratorOptions } from "@/lib/crossword/genera
 import type { CrosswordPuzzle } from "@/lib/crossword/types";
 import { createSeededRandom, seededSelectDistributed } from "./seeded-random";
 import type { DailyPuzzle, SerializedCrosswordPuzzle } from "./types";
-import { getDailyPuzzle, setDailyPuzzle } from "./kv";
+
+const PRE_GENERATED_DIR = path.join(process.cwd(), "content", "daily-crosswords");
+
+const puzzleCache = new Map<string, DailyPuzzle>();
+
+async function getPreGeneratedPuzzle(
+  year: string,
+  division: string,
+  dateString: string
+): Promise<DailyPuzzle | null> {
+  const cacheKey = `${year}:${division}:${dateString}`;
+  
+  if (puzzleCache.has(cacheKey)) {
+    return puzzleCache.get(cacheKey)!;
+  }
+
+  const filePath = path.join(PRE_GENERATED_DIR, year, division, `crossword-${dateString}.json`);
+  
+  try {
+    const data = await fs.readFile(filePath, "utf8");
+    const puzzle = JSON.parse(data) as DailyPuzzle;
+    puzzleCache.set(cacheKey, puzzle);
+    return puzzle;
+  } catch {
+    return null;
+  }
+}
 
 /**
  * Get the current date string in Pacific Time
@@ -109,31 +135,25 @@ const DAILY_OPTIONS: Omit<GeneratorOptions, "random"> = {
 };
 
 /**
- * Generate or retrieve the daily puzzle for a year/division
+ * Get the daily puzzle for a year/division
  *
- * Uses cached puzzle if available, otherwise generates a new one
- * with deterministic seeding based on the date.
+ * Only returns pre-generated puzzles from content/daily-crosswords.json.
+ * Returns null if no puzzle exists for the given date.
  */
 export async function getOrGenerateDailyPuzzle(
   year: string,
   division: string,
   dateString?: string
-): Promise<DailyPuzzle> {
+): Promise<DailyPuzzle | null> {
   const puzzleDate = dateString || getTodaysPuzzleDate();
 
-  // Check cache first
-  const cached = await getDailyPuzzle(year, division, puzzleDate);
-  if (cached) {
-    return cached;
+  const preGenerated = await getPreGeneratedPuzzle(year, division, puzzleDate);
+  if (preGenerated) {
+    return preGenerated;
   }
 
-  // Generate new puzzle
-  const puzzle = await generateDailyPuzzle(year, division, puzzleDate);
-
-  // Cache it
-  await setDailyPuzzle(puzzle);
-
-  return puzzle;
+  console.warn(`No pre-generated puzzle for ${year}/${division}/${puzzleDate}`);
+  return null;
 }
 
 /**
