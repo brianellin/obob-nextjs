@@ -3,8 +3,6 @@
 import { useState, useEffect, useRef, useCallback, useContext } from "react";
 import { Button } from "@/components/ui/button";
 import {
-  Users,
-  Clock,
   HelpCircle,
   Copy,
   Check,
@@ -12,6 +10,8 @@ import {
   ExternalLink,
   Wifi,
   WifiOff,
+  LogOut,
+  Users,
 } from "lucide-react";
 import { track } from "@vercel/analytics";
 import { usePostHog } from "posthog-js/react";
@@ -51,6 +51,7 @@ interface RealtimeCrosswordProps {
   division: string;
   wsUrl: string;
   initialClue?: string | null; // Format: "1-across" or "2-down" - auto-select this clue on load
+  onLeaveRoom?: () => void;
 }
 
 const CLUE_DELIMITER = "|||";
@@ -231,6 +232,7 @@ export default function RealtimeCrossword({
   division,
   wsUrl,
   initialClue,
+  onLeaveRoom,
 }: RealtimeCrosswordProps) {
   const posthog = usePostHog();
   const { width, height } = useWindowSize();
@@ -308,6 +310,9 @@ export default function RealtimeCrossword({
   } | null>(null);
 
   const [codeCopied, setCodeCopied] = useState(false);
+  const [inviteModalOpen, setInviteModalOpen] = useState(false);
+  const [linkCopied, setLinkCopied] = useState(false);
+  const [leaveModalOpen, setLeaveModalOpen] = useState(false);
 
   // Callback when user arrives via help link
   const handleShowHelpRequestModal = useCallback((clueNumber: string, clueDirection: string) => {
@@ -514,10 +519,21 @@ export default function RealtimeCrossword({
     }
   };
 
+  const getInviteLink = () => {
+    if (typeof window === "undefined") return "";
+    return `${window.location.origin}/crossword/${year}/${division}?team=${teamCode}`;
+  };
+
   const handleCopyTeamCode = async () => {
     await navigator.clipboard.writeText(teamCode);
     setCodeCopied(true);
     setTimeout(() => setCodeCopied(false), 2000);
+  };
+
+  const handleCopyInviteLink = async () => {
+    await navigator.clipboard.writeText(getInviteLink());
+    setLinkCopied(true);
+    setTimeout(() => setLinkCopied(false), 2000);
   };
 
   const formatTime = (ms: number) => {
@@ -548,109 +564,95 @@ export default function RealtimeCrossword({
 
       {/* Header - sticky on desktop only */}
       <div className="bg-white border-b shadow-sm lg:sticky lg:top-0 z-10">
-        <div className="max-w-6xl mx-auto px-3 sm:px-4 py-2 sm:py-3">
-          {/* Top row: Title, team code, timer */}
-          <div className="flex items-center justify-between gap-2">
-            <div className="min-w-0">
-              <h1 className="text-base sm:text-xl font-bold font-serif truncate">Daily Crossword</h1>
-              <p className="text-xs sm:text-sm text-muted-foreground">{dateString}</p>
-            </div>
-
-            <div className="flex items-center gap-2 sm:gap-3 flex-shrink-0">
-              {/* Team code with connection status */}
-              <div className="flex items-center gap-1.5">
-                <div className="flex-shrink-0">
-                  {isConnected ? (
-                    <Wifi className="h-4 w-4 text-green-500" />
-                  ) : isConnecting ? (
-                    <Wifi className="h-4 w-4 text-yellow-500 animate-pulse" />
-                  ) : (
-                    <WifiOff className="h-4 w-4 text-red-500" />
-                  )}
-                </div>
-                <button
-                  onClick={handleCopyTeamCode}
-                  className="flex items-center gap-1.5 px-2 sm:px-3 py-1 sm:py-1.5 bg-gray-100 rounded-lg hover:bg-gray-200 transition-colors"
-                >
-                  <span className="font-mono font-bold text-sm sm:text-base">{teamCode}</span>
-                  {codeCopied ? (
-                    <Check className="h-4 w-4 text-green-600" />
-                  ) : (
-                    <Copy className="h-4 w-4 text-gray-500" />
-                  )}
-                </button>
-              </div>
-
-              {/* Timer */}
-              <div className="flex items-center gap-1 text-sm font-mono text-muted-foreground">
-                <Clock className="h-4 w-4" />
-                <span>
-                  {completed && completedAt
-                    ? formatTime(completedAt - startTime)
-                    : formatTime(elapsedTime)}
-                </span>
-              </div>
-            </div>
-          </div>
-
-          {/* Second row: Team members (scrollable on mobile) */}
-          <div className="mt-2 flex items-center gap-2">
-            <Users className="h-4 w-4 text-muted-foreground flex-shrink-0" />
-            <div className="flex-1 overflow-x-auto scrollbar-hide">
-              <div className="flex items-center gap-1.5 pb-1">
-                {/* Current user - clearly marked as "You" */}
-                <div
-                  className="flex items-center gap-1 px-2 py-0.5 rounded-full text-xs sm:text-sm font-medium border-2 whitespace-nowrap flex-shrink-0"
-                  style={{ 
-                    backgroundColor: `${myColor}20`, 
-                    color: myColor,
-                    borderColor: myColor,
-                  }}
-                  title={`You are ${nickname}`}
-                >
-                  <div
-                    className="w-2 h-2 rounded-full flex-shrink-0"
-                    style={{ backgroundColor: myColor }}
-                  />
-                  <span>{nickname}</span>
-                  <span className="text-xs opacity-75">(you)</span>
-                </div>
-                {/* Other players */}
-                {Array.from(players.values()).map((player) => (
-                  <div
-                    key={player.sessionId}
-                    className="flex items-center gap-1 px-2 py-0.5 rounded-full text-xs sm:text-sm whitespace-nowrap flex-shrink-0"
-                    style={{
-                      backgroundColor: `${player.color}20`,
-                      color: player.color,
-                    }}
-                  >
-                    <div
-                      className="w-2 h-2 rounded-full flex-shrink-0"
-                      style={{ backgroundColor: player.color }}
-                    />
-                    <span>{player.nickname}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          {/* Progress bar */}
-          <div className="mt-2">
-            <div className="flex items-center gap-2 text-xs sm:text-sm">
-              <span className="text-muted-foreground hidden sm:inline">Progress:</span>
-              <div className="flex-1 bg-gray-200 rounded-full h-1.5 sm:h-2">
-                <div
-                  className="bg-green-500 h-1.5 sm:h-2 rounded-full transition-all"
-                  style={{
-                    width: `${(correctClues.length / puzzle.clues.length) * 100}%`,
-                  }}
-                />
-              </div>
-              <span className="font-medium">
-                {correctClues.length}/{puzzle.clues.length}
+        <div className="max-w-6xl mx-auto px-3 sm:px-4 py-2">
+          {/* Two-row grid for alignment */}
+          <div className="grid grid-cols-[1fr_auto] gap-x-4 gap-y-1 items-center">
+            {/* Row 1 Left: Title + date */}
+            <div className="flex items-baseline gap-2 min-w-0">
+              <h1 className="text-base sm:text-lg font-bold font-serif leading-tight">Daily Crossword</h1>
+              <span className="text-xs text-muted-foreground whitespace-nowrap">
+                {new Date(dateString + "T00:00:00").toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" })}
               </span>
+            </div>
+
+            {/* Row 1 Right: Invite button */}
+            <button
+              onClick={() => setInviteModalOpen(true)}
+              className="flex items-center gap-1.5 px-2 py-0.5 bg-gray-100 hover:bg-gray-200 rounded transition-colors text-sm h-7"
+              title="Invite friends to play"
+            >
+              <Users className="h-3.5 w-3.5 text-muted-foreground sm:hidden" />
+              <span className="text-muted-foreground text-xs hidden sm:inline">Invite friends:</span>
+              <span className="font-mono font-bold text-sm">{teamCode}</span>
+            </button>
+
+            {/* Row 2 Left: Team members (scrollable) */}
+            <div className="flex items-center gap-1 overflow-x-auto scrollbar-hide min-w-0 h-6">
+              {/* Current user */}
+              <div
+                className="flex items-center gap-1 px-1.5 py-0.5 rounded-full text-[11px] font-medium border whitespace-nowrap flex-shrink-0"
+                style={{ 
+                  backgroundColor: `${myColor}12`, 
+                  color: myColor,
+                  borderColor: `${myColor}40`,
+                }}
+                title={`You are ${nickname}`}
+              >
+                <div
+                  className="w-1.5 h-1.5 rounded-full"
+                  style={{ backgroundColor: myColor }}
+                />
+                <span>{nickname}</span>
+                <span className="opacity-50">(you)</span>
+              </div>
+              {/* Other players */}
+              {Array.from(players.values()).map((player) => (
+                <div
+                  key={player.sessionId}
+                  className="flex items-center gap-1 px-1.5 py-0.5 rounded-full text-[11px] whitespace-nowrap flex-shrink-0"
+                  style={{
+                    backgroundColor: `${player.color}12`,
+                    color: player.color,
+                  }}
+                >
+                  <div
+                    className="w-1.5 h-1.5 rounded-full"
+                    style={{ backgroundColor: player.color }}
+                  />
+                  <span>{player.nickname}</span>
+                </div>
+              ))}
+            </div>
+
+            {/* Row 2 Right: Stats row */}
+            <div className="flex items-center justify-end gap-2 text-xs text-muted-foreground h-6">
+              <span className="tabular-nums">
+                <span className="font-semibold text-green-600">{correctClues.length}</span>
+                <span className="opacity-60 mx-0.5">/</span>
+                <span>{puzzle.clues.length}</span>
+              </span>
+              <div className="w-px h-3 bg-gray-200" />
+              {isConnected ? (
+                <Wifi className="h-3 w-3 text-green-500" />
+              ) : isConnecting ? (
+                <Wifi className="h-3 w-3 text-yellow-500 animate-pulse" />
+              ) : (
+                <WifiOff className="h-3 w-3 text-red-500" />
+              )}
+              <span className="font-mono tabular-nums text-[11px]">
+                {completed && completedAt
+                  ? formatTime(completedAt - startTime)
+                  : formatTime(elapsedTime)}
+              </span>
+              {onLeaveRoom && (
+                <button
+                  onClick={() => setLeaveModalOpen(true)}
+                  className="hover:text-gray-900 transition-colors p-0.5 -mr-0.5"
+                  title="Leave room"
+                >
+                  <LogOut className="h-3 w-3" />
+                </button>
+              )}
             </div>
           </div>
         </div>
@@ -722,6 +724,116 @@ export default function RealtimeCrossword({
           </div>
         </CrosswordProvider>
       </div>
+
+      {/* Invite friends modal */}
+      {inviteModalOpen && (
+        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
+          <div className="bg-white rounded-lg shadow-xl max-w-md w-full p-6 space-y-4">
+            <div className="flex items-center justify-between">
+              <h3 className="text-lg font-bold">Invite Friends to Play</h3>
+              <button
+                onClick={() => setInviteModalOpen(false)}
+                className="p-1 hover:bg-gray-100 rounded"
+              >
+                <X className="h-5 w-5" />
+              </button>
+            </div>
+
+            <p className="text-muted-foreground">
+              Solve this crossword together! Share the code or link below with friends to invite them to your game.
+            </p>
+
+            {/* Team code */}
+            <div className="space-y-2">
+              <label className="text-sm font-medium text-gray-700">Team Code</label>
+              <div className="flex items-center gap-2">
+                <div className="flex-1 px-4 py-3 bg-gray-50 border rounded-lg text-center">
+                  <span className="font-mono font-bold text-2xl tracking-wider">{teamCode}</span>
+                </div>
+                <Button onClick={handleCopyTeamCode} variant="outline" size="icon">
+                  {codeCopied ? <Check className="h-4 w-4 text-green-600" /> : <Copy className="h-4 w-4" />}
+                </Button>
+              </div>
+              <p className="text-xs text-muted-foreground">
+                Friends can enter this code at the crossword page to join your game.
+              </p>
+            </div>
+
+            {/* Invite link */}
+            <div className="space-y-2">
+              <label className="text-sm font-medium text-gray-700">Or share a direct link</label>
+              <div className="flex items-center gap-2">
+                <input
+                  type="text"
+                  readOnly
+                  value={getInviteLink()}
+                  className="flex-1 px-3 py-2 border rounded-lg bg-gray-50 text-sm font-mono truncate"
+                />
+                <Button onClick={handleCopyInviteLink} variant="outline" size="icon">
+                  {linkCopied ? <Check className="h-4 w-4 text-green-600" /> : <Copy className="h-4 w-4" />}
+                </Button>
+              </div>
+            </div>
+
+            <Button className="w-full" onClick={() => setInviteModalOpen(false)}>
+              Done
+            </Button>
+          </div>
+        </div>
+      )}
+
+      {/* Leave room confirmation modal */}
+      {leaveModalOpen && (
+        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
+          <div className="bg-white rounded-lg shadow-xl max-w-sm w-full p-6 space-y-4">
+            <div className="flex items-center justify-between">
+              <h3 className="text-lg font-bold">Leave This Room?</h3>
+              <button
+                onClick={() => setLeaveModalOpen(false)}
+                className="p-1 hover:bg-gray-100 rounded"
+              >
+                <X className="h-5 w-5" />
+              </button>
+            </div>
+
+            <p className="text-muted-foreground">
+              You&apos;re about to leave this crossword room. You can rejoin anytime using the code below.
+            </p>
+
+            {/* Room code to save */}
+            <div className="flex items-center justify-center gap-2 py-3 bg-gray-50 border rounded-lg">
+              <span className="font-mono font-bold text-xl tracking-wider">{teamCode}</span>
+              <button
+                onClick={handleCopyTeamCode}
+                className="p-1 hover:bg-gray-200 rounded transition-colors"
+                title="Copy code"
+              >
+                {codeCopied ? <Check className="h-4 w-4 text-green-600" /> : <Copy className="h-4 w-4 text-gray-400" />}
+              </button>
+            </div>
+
+            <div className="flex gap-3">
+              <Button 
+                variant="outline" 
+                className="flex-1"
+                onClick={() => setLeaveModalOpen(false)}
+              >
+                Stay
+              </Button>
+              <Button 
+                variant="destructive"
+                className="flex-1"
+                onClick={() => {
+                  setLeaveModalOpen(false);
+                  onLeaveRoom?.();
+                }}
+              >
+                Leave Room
+              </Button>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Help request received modal - shown when arriving via help link */}
       {helpRequestModal?.open && (

@@ -177,6 +177,13 @@ function DailyContent() {
     );
   }
 
+  const handleLeaveRoom = () => {
+    sessionStorage.removeItem(`daily-team-${year}-${division}`);
+    setTeamCode(null);
+    setTeamState(null);
+    setPhase("setup");
+  };
+
   if (phase === "playing" && puzzleData && teamState && teamCode && sessionId && nickname) {
     return (
       <RealtimeCrossword
@@ -190,6 +197,7 @@ function DailyContent() {
         division={division}
         wsUrl={process.env.NEXT_PUBLIC_CROSSWORD_WS_URL || "ws://localhost:8787"}
         initialClue={initialClue}
+        onLeaveRoom={handleLeaveRoom}
       />
     );
   }

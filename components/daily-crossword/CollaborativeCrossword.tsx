@@ -502,7 +502,9 @@ export default function CollaborativeCrossword({
           <div className="flex items-center justify-between gap-2">
             <div className="min-w-0">
               <h1 className="text-base sm:text-xl font-bold font-serif truncate">Daily Crossword</h1>
-              <p className="text-xs sm:text-sm text-muted-foreground">{dateString}</p>
+              <p className="text-xs sm:text-sm text-muted-foreground">
+                {new Date(dateString + "T00:00:00").toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" })}
+              </p>
             </div>
 
             <div className="flex items-center gap-2 sm:gap-3 flex-shrink-0">
