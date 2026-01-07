@@ -12,7 +12,6 @@ import {
   WifiOff,
   LogOut,
   Users,
-  Volume2,
 } from "lucide-react";
 import { VoiceChat } from "@/components/voice-chat/VoiceChat";
 import { usePostHog } from "posthog-js/react";
@@ -763,11 +762,12 @@ export default function RealtimeCrossword({
                 <span className="font-mono font-bold">{teamCode}</span>
               </button>
 
-              {/* Voice chat */}
+              {/* Voice chat - auto-joins when 2+ players */}
               <VoiceChat
                 roomName={teamCode}
                 participantName={nickname}
                 participantIdentity={sessionId}
+                playerCount={players.size + 1}
               />
 
               {/* Subtle separator */}
