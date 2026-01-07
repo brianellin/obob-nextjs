@@ -8,7 +8,7 @@ import {
   useLocalParticipant,
   useRoomContext,
 } from "@livekit/components-react";
-import { Mic, MicOff, Headphones, X } from "lucide-react";
+import { Mic, MicOff, X } from "lucide-react";
 import "@livekit/components-styles";
 
 type VoiceState = "off" | "connecting" | "listening" | "talking";
@@ -175,7 +175,7 @@ export function VoiceChat({
     if (isConnecting) {
       return (
         <div className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-blue-50 text-blue-600 text-xs font-medium border border-blue-200 flex-shrink-0">
-          <Headphones className="h-4 w-4 animate-pulse" />
+          <MicOff className="h-4 w-4 animate-pulse" />
           <span className="hidden sm:inline">Joining...</span>
         </div>
       );
@@ -306,14 +306,14 @@ function VoiceDialog({ open, onChoice, isConnected, playerCount }: VoiceDialogPr
 
           <button
             onClick={() => onChoice("listen")}
-            className="w-full flex items-center gap-3 p-4 rounded-xl border-2 border-gray-200 bg-gray-50 hover:bg-gray-100 hover:border-gray-300 transition-all text-left"
+            className="w-full flex items-center gap-3 p-4 rounded-xl border-2 border-amber-200 bg-amber-50 hover:bg-amber-100 hover:border-amber-300 transition-all text-left"
           >
-            <div className="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center flex-shrink-0">
-              <Headphones className="h-6 w-6 text-gray-600" />
+            <div className="w-12 h-12 rounded-full bg-amber-100 flex items-center justify-center flex-shrink-0">
+              <MicOff className="h-6 w-6 text-amber-600" />
             </div>
             <div>
-              <div className="font-semibold text-gray-800">Listen Only</div>
-              <div className="text-sm text-gray-500">Hear others, stay quiet</div>
+              <div className="font-semibold text-amber-800">Listen Only</div>
+              <div className="text-sm text-amber-600">Hear others, mic off</div>
             </div>
           </button>
 
