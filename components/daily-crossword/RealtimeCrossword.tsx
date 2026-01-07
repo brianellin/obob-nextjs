@@ -51,6 +51,7 @@ interface RealtimeCrosswordProps {
   division: string;
   wsUrl: string;
   initialClue?: string | null; // Format: "1-across" or "2-down" - auto-select this clue on load
+  isInvitedUser?: boolean; // True when user arrived via invite link
   onLeaveRoom?: () => void;
 }
 
@@ -232,6 +233,7 @@ export default function RealtimeCrossword({
   division,
   wsUrl,
   initialClue,
+  isInvitedUser,
   onLeaveRoom,
 }: RealtimeCrosswordProps) {
   const posthog = usePostHog();
@@ -313,6 +315,14 @@ export default function RealtimeCrossword({
   const [inviteModalOpen, setInviteModalOpen] = useState(false);
   const [linkCopied, setLinkCopied] = useState(false);
   const [leaveModalOpen, setLeaveModalOpen] = useState(false);
+  const [welcomeModalOpen, setWelcomeModalOpen] = useState(false);
+
+  // Show welcome modal for invited users without a specific clue
+  useEffect(() => {
+    if (isInvitedUser && !initialClue) {
+      setWelcomeModalOpen(true);
+    }
+  }, [isInvitedUser, initialClue]);
 
   // Callback when user arrives via help link
   const handleShowHelpRequestModal = useCallback((clueNumber: string, clueDirection: string) => {
@@ -831,6 +841,44 @@ export default function RealtimeCrossword({
                 Leave Room
               </Button>
             </div>
+          </div>
+        </div>
+      )}
+
+      {/* Welcome modal - shown when arriving via team invite link (without specific clue) */}
+      {welcomeModalOpen && (
+        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
+          <div className="bg-white rounded-lg shadow-xl max-w-md w-full p-6 space-y-4">
+            <div className="flex items-center justify-between">
+              <h3 className="text-lg font-bold flex items-center gap-2">
+                <Users className="h-5 w-5 text-green-500" />
+                Welcome to the Team!
+              </h3>
+              <button
+                onClick={() => setWelcomeModalOpen(false)}
+                className="p-1 hover:bg-gray-100 rounded"
+              >
+                <X className="h-5 w-5" />
+              </button>
+            </div>
+
+            <p className="text-muted-foreground">
+              You&apos;ve joined team <span className="font-mono font-bold">{teamCode}</span>!
+            </p>
+
+            <div className="bg-green-50 border border-green-200 rounded-lg p-4">
+              <p className="text-green-800">
+                Work together with your teammates to solve the crossword. Any answers you fill in will appear on everyone&apos;s screen in real-time.
+              </p>
+            </div>
+
+            <p className="text-sm text-muted-foreground">
+              Find a clue you know the answer to and start typing!
+            </p>
+
+            <Button className="w-full" onClick={() => setWelcomeModalOpen(false)}>
+              Let&apos;s Go!
+            </Button>
           </div>
         </div>
       )}

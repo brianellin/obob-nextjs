@@ -37,6 +37,7 @@ function DailyContent() {
   const [puzzleData, setPuzzleData] = useState<PuzzleData | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [initialClue, setInitialClue] = useState<string | null>(null);
+  const [isInvitedUser, setIsInvitedUser] = useState(false);
 
   // Validate year/division
   useEffect(() => {
@@ -56,19 +57,17 @@ function DailyContent() {
     const storedSessionId = localStorage.getItem("daily-crossword-session");
     const storedTeamCode = sessionStorage.getItem(`daily-team-${year}-${division}`);
 
-    // URL team code takes precedence over stored team code
+    // URL team code takes precedence over stored team code - auto-join the team
     if (urlTeamCode) {
+      setIsInvitedUser(true);
+      
       // Clear stored team if URL specifies a different one
       if (storedTeamCode && storedTeamCode !== urlTeamCode.toUpperCase()) {
         sessionStorage.removeItem(`daily-team-${year}-${division}`);
       }
       
-      if (storedSessionId) {
-        rejoinTeam(urlTeamCode, storedSessionId);
-      } else {
-        // No session yet, go to setup with pre-filled team code
-        setPhase("setup");
-      }
+      // Auto-join the team (create session if needed)
+      autoJoinTeam(urlTeamCode);
       return;
     }
 
@@ -79,6 +78,41 @@ function DailyContent() {
       setPhase("setup");
     }
   }, [year, division, router, urlTeamCode, urlClue]);
+
+  const autoJoinTeam = async (code: string) => {
+    try {
+      // Get or create session ID
+      let sessionId = localStorage.getItem("daily-crossword-session");
+      if (!sessionId) {
+        sessionId = `session-${Date.now()}-${Math.random().toString(36).substring(2, 9)}`;
+        localStorage.setItem("daily-crossword-session", sessionId);
+      }
+
+      const response = await fetch("/api/daily-crossword/team", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          action: "join",
+          year,
+          division,
+          teamCode: code.toUpperCase(),
+          sessionId,
+        }),
+      });
+
+      if (response.ok) {
+        const data = await response.json();
+        handleTeamReady(data.teamCode, sessionId, data.nickname);
+      } else {
+        // Team not found or expired, go to setup
+        setIsInvitedUser(false);
+        setPhase("setup");
+      }
+    } catch {
+      setIsInvitedUser(false);
+      setPhase("setup");
+    }
+  };
 
   const rejoinTeam = async (code: string, session: string) => {
     try {
@@ -197,6 +231,7 @@ function DailyContent() {
         division={division}
         wsUrl={process.env.NEXT_PUBLIC_CROSSWORD_WS_URL || "ws://localhost:8787"}
         initialClue={initialClue}
+        isInvitedUser={isInvitedUser}
         onLeaveRoom={handleLeaveRoom}
       />
     );

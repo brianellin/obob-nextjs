@@ -13,6 +13,7 @@ export default defineConfig({
       '**/{karma,rollup,webpack,vite,vitest,jest,ava,babel,nyc,cypress,tsup,build}.config.*',
       '**/tests/api-battle-questions.test.ts', // Exclude slow API tests from default runs
       '**/tests/question-selection.test.ts', // Exclude slow question selection tests from default runs
+      '**/tests/daily-crossword-generation.test.ts', // Exclude slow crossword generation tests from default runs
     ],
   },
   resolve: {
