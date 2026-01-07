@@ -480,6 +480,20 @@ export default function CollaborativeCrossword({
     return `${minutes}m`;
   };
 
+  const formatCompletionTime = (ms: number) => {
+    const totalMinutes = Math.floor(ms / 1000 / 60);
+    const hours = Math.floor(totalMinutes / 60);
+    const minutes = totalMinutes % 60;
+
+    if (hours > 0) {
+      if (minutes === 0) {
+        return `${hours} ${hours === 1 ? "hour" : "hours"}`;
+      }
+      return `${hours} ${hours === 1 ? "hour" : "hours"} ${minutes} ${minutes === 1 ? "minute" : "minutes"}`;
+    }
+    return `${totalMinutes} ${totalMinutes === 1 ? "minute" : "minutes"}`;
+  };
+
   const crosswordTheme = {
     gridBackground: "#000000",
     cellBackground: "#ffffff",
@@ -576,9 +590,12 @@ export default function CollaborativeCrossword({
       {/* Completed banner */}
       {completed && (
         <div className="bg-green-50 border-b border-green-200 py-4 text-center">
-          <h2 className="text-2xl font-bold text-green-800">Puzzle Complete!</h2>
+          <h2 className="text-2xl font-bold text-green-800">Crossword Complete!</h2>
           <p className="text-green-700">
-            Great teamwork! Completed in {formatTime((completedAt || Date.now()) - startTime)}
+            Great teamwork! Completed in {formatCompletionTime((completedAt || Date.now()) - startTime)}
+          </p>
+          <p className="text-gray-700 text-sm mt-1">
+            Come back tomorrow for another crossword!
           </p>
         </div>
       )}
