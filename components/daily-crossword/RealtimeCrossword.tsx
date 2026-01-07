@@ -13,7 +13,7 @@ import {
   LogOut,
   Users,
 } from "lucide-react";
-import { VoiceChat } from "@/components/voice-chat/VoiceChat";
+import { VoiceChat, VoiceJoinDialog } from "@/components/voice-chat/VoiceChat";
 import { usePostHog } from "posthog-js/react";
 import Confetti from "react-confetti";
 import { useWindowSize } from "react-use";
@@ -393,6 +393,7 @@ export default function RealtimeCrossword({
   const [linkCopied, setLinkCopied] = useState(false);
   const [leaveModalOpen, setLeaveModalOpen] = useState(false);
   const [welcomeModalOpen, setWelcomeModalOpen] = useState(false);
+  const [voiceJoinDialogOpen, setVoiceJoinDialogOpen] = useState(false);
 
   // Show welcome modal for invited users without a specific clue (only once)
   useEffect(() => {
@@ -762,12 +763,13 @@ export default function RealtimeCrossword({
                 <span className="font-mono font-bold">{teamCode}</span>
               </button>
 
-              {/* Voice chat - auto-joins when 2+ players */}
+              {/* Voice chat - shows dialog when 2+ players */}
               <VoiceChat
                 roomName={teamCode}
                 participantName={nickname}
                 participantIdentity={sessionId}
                 playerCount={players.size + 1}
+                onShowJoinDialog={() => setVoiceJoinDialogOpen(true)}
               />
 
               {/* Subtle separator */}
@@ -1124,6 +1126,13 @@ export default function RealtimeCrossword({
           </div>
         </div>
       )}
+
+      {/* Voice chat join dialog */}
+      <VoiceJoinDialog
+        open={voiceJoinDialogOpen}
+        onClose={() => setVoiceJoinDialogOpen(false)}
+        playerCount={players.size + 1}
+      />
     </div>
   );
 }

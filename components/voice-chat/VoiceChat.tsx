@@ -9,7 +9,8 @@ import {
   TrackToggle,
 } from "@livekit/components-react";
 import { Track } from "livekit-client";
-import { Mic, MicOff, Volume2, VolumeX } from "lucide-react";
+import { Mic, MicOff, Volume2, VolumeX, X } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import "@livekit/components-styles";
 
 interface VoiceChatProps {
@@ -17,20 +18,29 @@ interface VoiceChatProps {
   participantName: string;
   participantIdentity: string;
   playerCount: number;
+  onShowJoinDialog?: () => void;
 }
 
-function VoiceControls() {
+interface VoiceControlsProps {
+  startUnmuted?: boolean;
+}
+
+function VoiceControls({ startUnmuted = false }: VoiceControlsProps) {
   const { localParticipant } = useLocalParticipant();
   const room = useRoomContext();
-  const hasMutedOnMount = useRef(false);
+  const hasSetInitialState = useRef(false);
   const isMuted = !localParticipant.isMicrophoneEnabled;
 
   useEffect(() => {
-    if (!hasMutedOnMount.current && localParticipant.isMicrophoneEnabled) {
-      hasMutedOnMount.current = true;
-      room.localParticipant.setMicrophoneEnabled(false);
+    if (!hasSetInitialState.current && localParticipant.isMicrophoneEnabled !== undefined) {
+      hasSetInitialState.current = true;
+      if (!startUnmuted && localParticipant.isMicrophoneEnabled) {
+        room.localParticipant.setMicrophoneEnabled(false);
+      } else if (startUnmuted && !localParticipant.isMicrophoneEnabled) {
+        room.localParticipant.setMicrophoneEnabled(true);
+      }
     }
-  }, [localParticipant.isMicrophoneEnabled, room.localParticipant]);
+  }, [localParticipant.isMicrophoneEnabled, room.localParticipant, startUnmuted]);
 
   return (
     <TrackToggle
@@ -50,10 +60,10 @@ function VoiceControls() {
   );
 }
 
-function VoiceRoomContent() {
+function VoiceRoomContent({ startUnmuted }: { startUnmuted: boolean }) {
   return (
     <>
-      <VoiceControls />
+      <VoiceControls startUnmuted={startUnmuted} />
       <RoomAudioRenderer />
     </>
   );
@@ -64,18 +74,21 @@ export function VoiceChat({
   participantName, 
   participantIdentity,
   playerCount,
+  onShowJoinDialog,
 }: VoiceChatProps) {
   const [isConnecting, setIsConnecting] = useState(false);
   const [isConnected, setIsConnected] = useState(false);
   const [token, setToken] = useState<string | null>(null);
   const [serverUrl, setServerUrl] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
-  const [hasAutoConnected, setHasAutoConnected] = useState(false);
+  const [hasTriggeredDialog, setHasTriggeredDialog] = useState(false);
+  const [startUnmuted, setStartUnmuted] = useState(false);
 
-  const handleConnect = useCallback(async () => {
+  const handleConnect = useCallback(async (unmuted: boolean = false) => {
     if (isConnecting || isConnected) return;
     
     setIsConnecting(true);
+    setStartUnmuted(unmuted);
     setError(null);
     
     try {
@@ -110,12 +123,21 @@ export function VoiceChat({
     setIsConnecting(false);
   }, []);
 
+  // Trigger dialog when player count goes from 1 to 2+
   useEffect(() => {
-    if (playerCount > 1 && !hasAutoConnected && !isConnected && !isConnecting) {
-      setHasAutoConnected(true);
-      handleConnect();
+    if (playerCount > 1 && !hasTriggeredDialog && !isConnected && !isConnecting) {
+      setHasTriggeredDialog(true);
+      onShowJoinDialog?.();
     }
-  }, [playerCount, hasAutoConnected, isConnected, isConnecting, handleConnect]);
+  }, [playerCount, hasTriggeredDialog, isConnected, isConnecting, onShowJoinDialog]);
+
+  // Expose connect function globally so dialog can call it
+  useEffect(() => {
+    (window as Window & { __voiceChatConnect?: (unmuted: boolean) => void }).__voiceChatConnect = handleConnect;
+    return () => {
+      delete (window as Window & { __voiceChatConnect?: (unmuted: boolean) => void }).__voiceChatConnect;
+    };
+  }, [handleConnect]);
 
   if (error) {
     return (
@@ -153,8 +175,6 @@ export function VoiceChat({
       onConnected={() => {
         setIsConnected(true);
         setIsConnecting(false);
-        
-        // Start muted by default
       }}
       onDisconnected={handleDisconnected}
       onError={(err) => {
@@ -162,7 +182,81 @@ export function VoiceChat({
         setError(err.message);
       }}
     >
-      <VoiceRoomContent />
+      <VoiceRoomContent startUnmuted={startUnmuted} />
     </LiveKitRoom>
+  );
+}
+
+interface VoiceJoinDialogProps {
+  open: boolean;
+  onClose: () => void;
+  playerCount: number;
+}
+
+export function VoiceJoinDialog({ open, onClose, playerCount }: VoiceJoinDialogProps) {
+  if (!open) return null;
+
+  const handleJoinConversation = () => {
+    (window as Window & { __voiceChatConnect?: (unmuted: boolean) => void }).__voiceChatConnect?.(true);
+    onClose();
+  };
+
+  const handleStayMuted = () => {
+    (window as Window & { __voiceChatConnect?: (unmuted: boolean) => void }).__voiceChatConnect?.(false);
+    onClose();
+  };
+
+  const otherPlayers = playerCount - 1;
+
+  return (
+    <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
+      <div className="bg-white rounded-lg shadow-xl max-w-sm w-full p-6 space-y-4">
+        <div className="flex items-center justify-between">
+          <h3 className="text-lg font-bold flex items-center gap-2">
+            <Volume2 className="h-5 w-5 text-blue-500" />
+            Voice Chat Available
+          </h3>
+          <button
+            onClick={handleStayMuted}
+            className="p-1 hover:bg-gray-100 rounded"
+          >
+            <X className="h-5 w-5" />
+          </button>
+        </div>
+
+        <p className="text-muted-foreground">
+          {otherPlayers === 1 
+            ? "There's 1 other player in this room." 
+            : `There are ${otherPlayers} other players in this room.`}
+          {" "}Would you like to join the voice conversation?
+        </p>
+
+        <div className="bg-blue-50 border border-blue-200 rounded-lg p-3 text-sm text-blue-800">
+          Talk with your teammates while solving the crossword together!
+        </div>
+
+        <div className="flex gap-3">
+          <Button 
+            variant="outline" 
+            className="flex-1"
+            onClick={handleStayMuted}
+          >
+            <MicOff className="h-4 w-4 mr-2" />
+            Stay Muted
+          </Button>
+          <Button 
+            className="flex-1"
+            onClick={handleJoinConversation}
+          >
+            <Mic className="h-4 w-4 mr-2" />
+            Join Conversation
+          </Button>
+        </div>
+
+        <p className="text-xs text-muted-foreground text-center">
+          You can change this anytime using the mic button
+        </p>
+      </div>
+    </div>
   );
 }
