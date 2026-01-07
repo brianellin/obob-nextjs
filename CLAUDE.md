@@ -154,7 +154,7 @@ Uncomment the logging in `/api/questions/battle/route.ts` (lines 48-61) to see q
 
 ### Architecture
 
-The daily crossword feature (`/daily/[year]/[division]`) allows teams to collaboratively solve crossword puzzles generated from OBOB content questions.
+The daily crossword feature (`/daily-crossword/[year]/[division]`) allows teams to collaboratively solve crossword puzzles generated from OBOB content questions.
 
 **Key Components:**
 - `components/daily-crossword/CollaborativeCrossword.tsx` - Main crossword UI

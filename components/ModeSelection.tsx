@@ -185,7 +185,7 @@ export default function ModeSelection({ year, division }: ModeSelectionProps) {
             </CardContent>
             <CardFooter>
               <Link
-                href={`/daily/${year}/${division}`}
+                href={`/daily-crossword/${year}/${division}`}
                 passHref
                 className="w-full"
               >

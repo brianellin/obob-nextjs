@@ -57,7 +57,7 @@ export async function POST(request: Request) {
     const protocol = host.includes("localhost") ? "http" : "https";
     const baseUrl = `${protocol}://${host}`;
     const clueRef = `${clue.number}-${clue.direction}`;
-    const shareUrl = `${baseUrl}/daily/${year}/${division}?team=${teamCode}&clue=${clueRef}`;
+    const shareUrl = `${baseUrl}/daily-crossword/${year}/${division}?team=${teamCode}&clue=${clueRef}`;
 
     return NextResponse.json({
       success: true,
