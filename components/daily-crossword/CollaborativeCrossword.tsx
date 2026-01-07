@@ -591,8 +591,8 @@ export default function CollaborativeCrossword({
           onLoadedCorrect={() => setCrosswordReady(true)}
         >
           <div className="flex flex-col lg:flex-row gap-4 lg:gap-6">
-            {/* Crossword grid - sticky on all screens */}
-            <div className="flex-shrink-0 sticky top-0 lg:top-[140px] self-start bg-gray-50 pb-2 z-10" style={{ width: "min(500px, 100%)" }}>
+            {/* Crossword grid - only sticky on lg+ where header is also sticky */}
+            <div className="flex-shrink-0 lg:sticky lg:top-[140px] self-start bg-gray-50 pb-2 z-10" style={{ width: "min(500px, 100%)" }}>
               <div
                 className="border-2 border-gray-900 bg-white"
                 style={{ maxWidth: "500px", margin: "0 auto" }}
