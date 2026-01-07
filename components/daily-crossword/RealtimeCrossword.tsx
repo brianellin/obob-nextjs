@@ -410,13 +410,19 @@ export default function RealtimeCrossword({
     }
   }, [gameState, completed]);
 
-  // Apply initial answers when crossword is ready
+  // Apply initial answers when crossword is ready (only once)
+  const hasAppliedInitialAnswers = useRef(false);
   useEffect(() => {
     if (!crosswordReady || !crosswordRef.current) return;
+    if (hasAppliedInitialAnswers.current) return;
 
-    const answers = gameState?.answers || initialTeamState.answers;
-    if (!answers || Object.keys(answers).length === 0) return;
+    const answers = initialTeamState.answers;
+    if (!answers || Object.keys(answers).length === 0) {
+      hasAppliedInitialAnswers.current = true;
+      return;
+    }
 
+    hasAppliedInitialAnswers.current = true;
     isApplyingRemoteRef.current = true;
 
     Object.entries(answers).forEach(([cellKey, letter]) => {
@@ -431,7 +437,7 @@ export default function RealtimeCrossword({
     setTimeout(() => {
       isApplyingRemoteRef.current = false;
     }, 100);
-  }, [crosswordReady, gameState?.answers, initialTeamState.answers]);
+  }, [crosswordReady, initialTeamState.answers]);
 
   // Handle cell changes
   const handleCellChange = useCallback(

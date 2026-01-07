@@ -166,10 +166,12 @@ export class CrosswordRoom {
         this.handleCursor(ws, client, msg);
         break;
       case "letter":
-        await this.handleLetter(ws, client, msg);
+        // Don't await - broadcast happens sync, storage is fire-and-forget
+        this.handleLetter(ws, client, msg);
         break;
       case "delete":
-        await this.handleDelete(ws, client, msg);
+        // Don't await - broadcast happens sync, storage is fire-and-forget
+        this.handleDelete(ws, client, msg);
         break;
       case "ping":
         client.lastSeen = Date.now();
@@ -309,11 +311,22 @@ export class CrosswordRoom {
   ) {
     if (!client.sessionId) return;
 
+    const letter = msg.letter.toUpperCase();
+
+    // Broadcast immediately for low latency - don't wait for storage
+    this.broadcast({
+      type: "letter_update",
+      row: msg.row,
+      col: msg.col,
+      letter,
+      sessionId: client.sessionId,
+    });
+
+    // Now do async state updates
     const state = await this.getGameState();
     if (!state || state.completedAt) return;
 
     const cellKey = makeCellKey(msg.row, msg.col);
-    const letter = msg.letter.toUpperCase();
 
     // Update state
     if (letter) {
@@ -338,15 +351,6 @@ export class CrosswordRoom {
 
     await this.saveGameState(state);
 
-    // Broadcast letter update
-    this.broadcast({
-      type: "letter_update",
-      row: msg.row,
-      col: msg.col,
-      letter,
-      sessionId: client.sessionId,
-    });
-
     // Broadcast any newly correct clues
     for (const clueId of newlyCorrect) {
       this.broadcast({ type: "correct_clue", clueId });
@@ -369,6 +373,15 @@ export class CrosswordRoom {
   ) {
     if (!client.sessionId) return;
 
+    // Broadcast immediately for low latency
+    this.broadcast({
+      type: "delete_update",
+      row: msg.row,
+      col: msg.col,
+      sessionId: client.sessionId,
+    });
+
+    // Now do async state updates
     const state = await this.getGameState();
     if (!state || state.completedAt) return;
 
@@ -379,14 +392,6 @@ export class CrosswordRoom {
     state.correctClues = await this.checkCorrectClues(state);
 
     await this.saveGameState(state);
-
-    // Broadcast delete
-    this.broadcast({
-      type: "delete_update",
-      row: msg.row,
-      col: msg.col,
-      sessionId: client.sessionId,
-    });
   }
 
   private async getGameState(): Promise<StoredState | null> {
