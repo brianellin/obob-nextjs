@@ -224,18 +224,35 @@ export class CrosswordRoom {
       await this.saveGameState(state);
     }
 
-    // Ensure puzzle clues are loaded and match current puzzle date
-    // (clues may be missing, or stale from a previous day's puzzle)
-    const storedPuzzleDate = await this.state.storage.get<string>("puzzleCluesDate");
-    if (storedPuzzleDate !== msg.puzzleDate) {
+    // Check if puzzle date changed (new day's puzzle)
+    // If so, reset game state and fetch new clues
+    if (state.puzzleDate !== msg.puzzleDate) {
+      console.log(`[DO] Puzzle date changed from ${state.puzzleDate} to ${msg.puzzleDate}, resetting game state`);
+      state = {
+        teamCode: msg.teamCode,
+        year: msg.year,
+        division: msg.division,
+        puzzleDate: msg.puzzleDate,
+        answers: {},
+        correctClues: [],
+        startedAt: Date.now(),
+        completedAt: null,
+      };
+      await this.saveGameState(state);
       await this.loadPuzzleClues(msg.year, msg.division, msg.puzzleDate);
       await this.state.storage.put("puzzleCluesDate", msg.puzzleDate);
     } else {
-      // Ensure clues are loaded into memory
-      const clues = await this.getPuzzleClues();
-      if (clues.size === 0) {
+      // Same puzzle date - just ensure clues are loaded
+      const storedPuzzleDate = await this.state.storage.get<string>("puzzleCluesDate");
+      if (storedPuzzleDate !== msg.puzzleDate) {
         await this.loadPuzzleClues(msg.year, msg.division, msg.puzzleDate);
         await this.state.storage.put("puzzleCluesDate", msg.puzzleDate);
+      } else {
+        const clues = await this.getPuzzleClues();
+        if (clues.size === 0) {
+          await this.loadPuzzleClues(msg.year, msg.division, msg.puzzleDate);
+          await this.state.storage.put("puzzleCluesDate", msg.puzzleDate);
+        }
       }
     }
 
