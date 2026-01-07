@@ -148,9 +148,17 @@ export function VoiceChat({
     }
   }, [playerCount, hasAutoShownDialog, isConnected, isConnecting]);
 
-  const handleDialogChoice = (choice: "talk" | "listen" | "skip") => {
+  const handleDialogChoice = (choice: "talk" | "listen" | "skip" | "leave") => {
     setDialogOpen(false);
     if (choice === "skip") return;
+    
+    if (choice === "leave") {
+      // Disconnect from voice chat
+      setToken(null);
+      setServerUrl(null);
+      setIsConnected(false);
+      return;
+    }
     
     if (!isConnected) {
       handleConnect(choice === "talk");
@@ -244,7 +252,7 @@ export function VoiceChat({
 
 interface VoiceDialogProps {
   open: boolean;
-  onChoice: (choice: "talk" | "listen" | "skip") => void;
+  onChoice: (choice: "talk" | "listen" | "skip" | "leave") => void;
   isConnected: boolean;
   playerCount: number;
 }
@@ -309,22 +317,39 @@ function VoiceDialog({ open, onChoice, isConnected, playerCount }: VoiceDialogPr
             </div>
           </button>
 
-          <button
-            onClick={() => onChoice("skip")}
-            className="w-full flex items-center gap-3 p-3 rounded-xl border border-gray-200 hover:bg-gray-50 transition-all text-left"
-          >
-            <div className="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center flex-shrink-0">
-              <MicOff className="h-5 w-5 text-gray-400" />
-            </div>
-            <div>
-              <div className="font-medium text-gray-600">No thanks</div>
-              <div className="text-sm text-gray-400">I'll just play quietly</div>
-            </div>
-          </button>
+          {isConnected ? (
+            <button
+              onClick={() => onChoice("leave")}
+              className="w-full flex items-center gap-3 p-3 rounded-xl border border-red-200 hover:bg-red-50 transition-all text-left"
+            >
+              <div className="w-10 h-10 rounded-full bg-red-50 flex items-center justify-center flex-shrink-0">
+                <MicOff className="h-5 w-5 text-red-400" />
+              </div>
+              <div>
+                <div className="font-medium text-red-600">Leave Voice Chat</div>
+                <div className="text-sm text-red-400">Disconnect completely</div>
+              </div>
+            </button>
+          ) : (
+            <button
+              onClick={() => onChoice("skip")}
+              className="w-full flex items-center gap-3 p-3 rounded-xl border border-gray-200 hover:bg-gray-50 transition-all text-left"
+            >
+              <div className="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center flex-shrink-0">
+                <MicOff className="h-5 w-5 text-gray-400" />
+              </div>
+              <div>
+                <div className="font-medium text-gray-600">No thanks</div>
+                <div className="text-sm text-gray-400">I'll just play quietly</div>
+              </div>
+            </button>
+          )}
         </div>
 
         <p className="text-xs text-gray-400 text-center">
-          You can join voice chat anytime from the header
+          {isConnected 
+            ? "Tap the mic button anytime to change" 
+            : "You can join voice chat anytime from the header"}
         </p>
       </div>
     </div>,
