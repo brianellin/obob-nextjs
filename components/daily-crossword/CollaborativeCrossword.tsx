@@ -24,6 +24,7 @@ import {
 } from "@jaredreisinger/react-crossword";
 import type { SerializedCrosswordPuzzle, TeamState, SyncResponse } from "@/lib/daily-crossword/types";
 import type { CrosswordClue } from "@/lib/crossword/types";
+import { CompletionBanner } from "./CompletionBanner";
 
 // Type for the library's clue format
 interface LibraryClueData {
@@ -589,15 +590,10 @@ export default function CollaborativeCrossword({
 
       {/* Completed banner */}
       {completed && (
-        <div className="bg-green-50 border-b border-green-200 py-4 text-center">
-          <h2 className="text-2xl font-bold text-green-800">Crossword Complete!</h2>
-          <p className="text-green-700">
-            Great teamwork! Completed in {formatCompletionTime((completedAt || Date.now()) - startTime)}
-          </p>
-          <p className="text-gray-700 text-sm mt-1">
-            Come back tomorrow for another crossword!
-          </p>
-        </div>
+        <CompletionBanner 
+          completionTime={formatCompletionTime((completedAt || Date.now()) - startTime)}
+          isMultiplayer={true}
+        />
       )}
 
       {/* Main content */}

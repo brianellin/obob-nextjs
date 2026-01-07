@@ -33,6 +33,7 @@ import {
   trackTeammateInvited,
   type CrosswordAnalyticsContext,
 } from "@/lib/daily-crossword/analytics";
+import { CompletionBanner } from "./CompletionBanner";
 
 interface LibraryClueData {
   clue: string;
@@ -777,15 +778,10 @@ export default function RealtimeCrossword({
 
       {/* Completed banner */}
       {completed && (
-        <div className="bg-green-50 border-b border-green-200 py-4 text-center">
-          <h2 className="text-2xl font-bold text-green-800">Crossword Complete!</h2>
-          <p className="text-green-700">
-            Great teamwork! Completed in {formatCompletionTime((completedAt || Date.now()) - startTime)}
-          </p>
-          <p className="text-gray-700 text-sm mt-1">
-            Come back tomorrow for another crossword!
-          </p>
-        </div>
+        <CompletionBanner 
+          completionTime={formatCompletionTime((completedAt || Date.now()) - startTime)}
+          isMultiplayer={true}
+        />
       )}
 
       {/* Main content */}

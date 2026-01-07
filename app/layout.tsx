@@ -1,6 +1,6 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { Nunito, Nunito_Sans, Rampart_One } from "next/font/google";
+import { Nunito, Nunito_Sans, Rampart_One, Libre_Baskerville } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import NewsletterBanner from "@/components/NewsletterBanner";
@@ -23,6 +23,13 @@ const rampartOne = Rampart_One({
   subsets: ["latin"],
   weight: "400",
   variable: "--font-rampart",
+});
+
+const libreBaskerville = Libre_Baskerville({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  style: ["normal", "italic"],
+  variable: "--font-libre-baskerville",
 });
 
 export const metadata: Metadata = {
@@ -52,7 +59,7 @@ export default function RootLayout({
           href="/feed.xml"
         />
       </head>
-      <body className={`${nunitoSans.className} ${nunitoSans.variable} ${nunito.variable} ${rampartOne.variable}`}>
+      <body className={`${nunitoSans.className} ${nunitoSans.variable} ${nunito.variable} ${rampartOne.variable} ${libreBaskerville.variable}`}>
         <PostHogProvider>
           <NewsletterBanner />
           <Header />
