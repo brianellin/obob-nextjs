@@ -8,8 +8,14 @@ import {
   useLocalParticipant,
   useRoomContext,
 } from "@livekit/components-react";
-import { Mic, MicOff, X } from "lucide-react";
+import { Track } from "livekit-client";
+import { Mic, MicOff, X, AlertTriangle } from "lucide-react";
 import "@livekit/components-styles";
+import {
+  checkMicrophonePermission,
+  requestMicrophoneAccess,
+  detectBrowser,
+} from "@/lib/voice-permissions";
 
 type VoiceState = "off" | "connecting" | "listening" | "talking";
 
@@ -43,10 +49,25 @@ function VoiceRoomControls({
     }
   }, [localParticipant.isMicrophoneEnabled, room.localParticipant, startUnmuted]);
 
-  // Expose unmute function for dialog
+  // Expose mic control function for dialog
   useEffect(() => {
     (window as Window & { __voiceChatSetMic?: (enabled: boolean) => void }).__voiceChatSetMic = 
-      (enabled: boolean) => room.localParticipant.setMicrophoneEnabled(enabled);
+      async (enabled: boolean) => {
+        if (enabled) {
+          await room.localParticipant.setMicrophoneEnabled(true);
+        } else {
+          // Get the microphone track and stop it to fully release the mic
+          const micPub = room.localParticipant.getTrackPublication(Track.Source.Microphone);
+          if (micPub?.track) {
+            // Stop the track to release the microphone
+            micPub.track.stop();
+            await room.localParticipant.unpublishTrack(micPub.track);
+          } else {
+            // Fallback to just disabling
+            await room.localParticipant.setMicrophoneEnabled(false);
+          }
+        }
+      };
     return () => {
       delete (window as Window & { __voiceChatSetMic?: (enabled: boolean) => void }).__voiceChatSetMic;
     };
@@ -99,14 +120,44 @@ export function VoiceChat({
   const [error, setError] = useState<string | null>(null);
   const [hasAutoShownDialog, setHasAutoShownDialog] = useState(false);
   const [startUnmuted, setStartUnmuted] = useState(false);
+  const [startListenOnly, setStartListenOnly] = useState(false);
   const [dialogOpen, setDialogOpen] = useState(false);
+  const [permissionError, setPermissionError] = useState<"denied" | "no_device" | null>(null);
 
-  const handleConnect = useCallback(async (unmuted: boolean = false) => {
+  const handleConnect = useCallback(async (unmuted: boolean = false, listenOnly: boolean = false) => {
     if (isConnecting || isConnected) return;
     
     setIsConnecting(true);
     setStartUnmuted(unmuted);
+    setStartListenOnly(listenOnly);
     setError(null);
+    setPermissionError(null);
+    
+    // Only check/request microphone permission if user wants to talk
+    if (!listenOnly) {
+      const permStatus = await checkMicrophonePermission();
+      if (permStatus === "denied") {
+        setPermissionError("denied");
+        setIsConnecting(false);
+        return;
+      }
+      
+      // If permission is unknown or prompt, try to request it
+      if (permStatus !== "granted") {
+        const result = await requestMicrophoneAccess();
+        if (!result.granted) {
+          if (result.error === "denied") {
+            setPermissionError("denied");
+          } else if (result.error === "no_device") {
+            setPermissionError("no_device");
+          } else {
+            setError(result.error || "Microphone access failed");
+          }
+          setIsConnecting(false);
+          return;
+        }
+      }
+    }
     
     try {
       const response = await fetch("/api/livekit/token", {
@@ -161,7 +212,9 @@ export function VoiceChat({
     }
     
     if (!isConnected) {
-      handleConnect(choice === "talk");
+      const wantsTalk = choice === "talk";
+      const listenOnly = choice === "listen";
+      handleConnect(wantsTalk, listenOnly);
     } else {
       // Already connected, just toggle mic
       (window as Window & { __voiceChatSetMic?: (enabled: boolean) => void }).__voiceChatSetMic?.(choice === "talk");
@@ -181,15 +234,28 @@ export function VoiceChat({
       );
     }
     
-    if (error) {
+    if (error || permissionError) {
       return (
-        <button
-          onClick={() => setDialogOpen(true)}
-          className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-red-50 text-red-600 text-xs font-medium border border-red-200 flex-shrink-0 hover:bg-red-100"
-        >
-          <MicOff className="h-4 w-4" />
-          <span className="hidden sm:inline">Retry</span>
-        </button>
+        <>
+          <button
+            onClick={() => setDialogOpen(true)}
+            className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-red-50 text-red-600 text-xs font-medium border border-red-200 flex-shrink-0 hover:bg-red-100"
+          >
+            <AlertTriangle className="h-4 w-4" />
+            <span className="hidden sm:inline">{permissionError ? "Mic Blocked" : "Retry"}</span>
+          </button>
+          <VoiceDialog
+            open={dialogOpen}
+            onChoice={handleDialogChoice}
+            isConnected={false}
+            playerCount={playerCount}
+            permissionError={permissionError}
+            onRetryPermission={() => {
+              setPermissionError(null);
+              setError(null);
+            }}
+          />
+        </>
       );
     }
 
@@ -219,7 +285,7 @@ export function VoiceChat({
       token={token}
       serverUrl={serverUrl}
       connect={true}
-      audio={{ autoGainControl: true, noiseSuppression: true }}
+      audio={startListenOnly ? false : { autoGainControl: true, noiseSuppression: true }}
       video={false}
       options={{
         publishDefaults: {
@@ -255,9 +321,11 @@ interface VoiceDialogProps {
   onChoice: (choice: "talk" | "listen" | "skip" | "leave") => void;
   isConnected: boolean;
   playerCount: number;
+  permissionError?: "denied" | "no_device" | null;
+  onRetryPermission?: () => void;
 }
 
-function VoiceDialog({ open, onChoice, isConnected, playerCount }: VoiceDialogProps) {
+function VoiceDialog({ open, onChoice, isConnected, playerCount, permissionError, onRetryPermission }: VoiceDialogProps) {
   const [mounted, setMounted] = useState(false);
   
   useEffect(() => {
@@ -267,6 +335,114 @@ function VoiceDialog({ open, onChoice, isConnected, playerCount }: VoiceDialogPr
   if (!open || !mounted) return null;
 
   const otherPlayers = playerCount - 1;
+
+  // Show permission error UI
+  if (permissionError) {
+    const isBlocked = permissionError === "denied";
+    const { isChrome, isSafari, isFirefox } = detectBrowser();
+
+    return createPortal(
+      <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-[9999] p-4">
+        <div className="bg-white rounded-xl shadow-xl max-w-sm w-full p-6 space-y-5">
+          <div className="flex items-center justify-between">
+            <h3 className="text-xl font-bold flex items-center gap-2">
+              <AlertTriangle className="h-6 w-6 text-amber-500" />
+              {isBlocked ? "Microphone Blocked" : "No Microphone Found"}
+            </h3>
+            <button
+              onClick={() => onChoice("skip")}
+              className="p-1.5 hover:bg-gray-100 rounded-full transition-colors"
+            >
+              <X className="h-5 w-5 text-gray-400" />
+            </button>
+          </div>
+
+          {isBlocked ? (
+            <div className="space-y-4">
+              <p className="text-gray-600">
+                Your browser has blocked microphone access. To use voice chat, you'll need to allow microphone permissions.
+              </p>
+              
+              <div className="bg-gray-50 rounded-lg p-4 space-y-3">
+                <p className="font-medium text-gray-800 text-sm">How to fix this:</p>
+                {isChrome && (
+                  <ol className="text-sm text-gray-600 space-y-2 list-decimal list-inside">
+                    <li>Click the <span className="font-mono bg-gray-200 px-1 rounded">🔒</span> icon in the address bar</li>
+                    <li>Find "Microphone" and change it to "Allow"</li>
+                    <li>Refresh the page and try again</li>
+                  </ol>
+                )}
+                {isSafari && (
+                  <ol className="text-sm text-gray-600 space-y-2 list-decimal list-inside">
+                    <li>Go to Safari → Settings → Websites → Microphone</li>
+                    <li>Find this website and change to "Allow"</li>
+                    <li>Refresh the page and try again</li>
+                  </ol>
+                )}
+                {isFirefox && (
+                  <ol className="text-sm text-gray-600 space-y-2 list-decimal list-inside">
+                    <li>Click the <span className="font-mono bg-gray-200 px-1 rounded">🔒</span> icon in the address bar</li>
+                    <li>Click "Connection secure" → "More Information"</li>
+                    <li>Go to Permissions tab and allow Microphone</li>
+                    <li>Refresh the page and try again</li>
+                  </ol>
+                )}
+                {!isChrome && !isSafari && !isFirefox && (
+                  <ol className="text-sm text-gray-600 space-y-2 list-decimal list-inside">
+                    <li>Look for a microphone or permissions icon in your address bar</li>
+                    <li>Allow microphone access for this site</li>
+                    <li>Refresh the page and try again</li>
+                  </ol>
+                )}
+              </div>
+            </div>
+          ) : (
+            <div className="space-y-4">
+              <p className="text-gray-600">
+                We couldn't find a microphone on your device. Make sure your microphone is connected and not being used by another app.
+              </p>
+              <div className="bg-gray-50 rounded-lg p-4 space-y-2">
+                <p className="font-medium text-gray-800 text-sm">Things to check:</p>
+                <ul className="text-sm text-gray-600 space-y-1 list-disc list-inside">
+                  <li>Connect a microphone or headset</li>
+                  <li>Check that your microphone isn't muted</li>
+                  <li>Close other apps that might be using the microphone</li>
+                </ul>
+              </div>
+            </div>
+          )}
+
+          <div className="flex gap-3">
+            <button
+              onClick={() => {
+                onRetryPermission?.();
+                onChoice("skip");
+              }}
+              className="flex-1 py-3 rounded-lg border border-gray-200 text-gray-600 font-medium hover:bg-gray-50 transition-colors"
+            >
+              Close
+            </button>
+            <button
+              onClick={() => {
+                onRetryPermission?.();
+              }}
+              className="flex-1 py-3 rounded-lg bg-blue-600 text-white font-medium hover:bg-blue-700 transition-colors"
+            >
+              Try Again
+            </button>
+          </div>
+
+          <button
+            onClick={() => onChoice("listen")}
+            className="w-full text-sm text-gray-500 hover:text-gray-700 transition-colors"
+          >
+            Join as listener only (no mic needed)
+          </button>
+        </div>
+      </div>,
+      document.body
+    );
+  }
 
   return createPortal(
     <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-[9999] p-4">
