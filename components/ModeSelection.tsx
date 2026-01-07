@@ -165,6 +165,7 @@ export default function ModeSelection({ year, division }: ModeSelectionProps) {
               </Link>
             </CardFooter>
           </Card>
+          {/* Daily Crossword card - hidden until ready to merchandise
           <Card className="border-2 border-black bg-white">
             <CardHeader>
               <div className="flex items-center gap-2">
@@ -195,6 +196,7 @@ export default function ModeSelection({ year, division }: ModeSelectionProps) {
               </Link>
             </CardFooter>
           </Card>
+          */}
 {/* Coming Soon indicator */}
           <div className="flex items-center justify-center gap-2 text-muted-foreground py-4">
             <Sparkles className="h-4 w-4" />
