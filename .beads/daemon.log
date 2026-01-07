@@ -601,3 +601,64 @@ time=2026-01-06T20:03:52.849-08:00 level=INFO msg="Git HEAD change detected: %s"
 time=2026-01-06T20:03:53.852-08:00 level=INFO msg="Import triggered by file change"
 time=2026-01-06T20:03:53.852-08:00 level=INFO msg="Starting %s..." !BADKEY=auto-import
 time=2026-01-06T20:03:53.853-08:00 level=INFO msg="Skipping %s: JSONL content unchanged" !BADKEY=auto-import
+time=2026-01-06T20:04:08.162-08:00 level=INFO msg="Git HEAD change detected: %s" !BADKEY=/Users/brianellin/obob/obob-nextjs/.git/HEAD
+time=2026-01-06T20:04:08.702-08:00 level=INFO msg="JSONL file created: %s" !BADKEY=/Users/brianellin/obob/obob-nextjs/.beads/issues.jsonl
+time=2026-01-06T20:04:08.702-08:00 level=INFO msg="File change detected: %s" !BADKEY=/Users/brianellin/obob/obob-nextjs/.beads/issues.jsonl
+time=2026-01-06T20:04:08.745-08:00 level=INFO msg="Git HEAD change detected: %s" !BADKEY=/Users/brianellin/obob/obob-nextjs/.git/HEAD
+time=2026-01-06T20:04:08.752-08:00 level=INFO msg="JSONL removed/renamed, re-establishing watch"
+time=2026-01-06T20:04:08.803-08:00 level=INFO msg="Successfully re-established JSONL watch after %v" !BADKEY=50ms
+time=2026-01-06T20:04:08.803-08:00 level=INFO msg="JSONL file created: %s" !BADKEY=/Users/brianellin/obob/obob-nextjs/.beads/issues.jsonl
+time=2026-01-06T20:04:08.803-08:00 level=INFO msg="Git HEAD change detected: %s" !BADKEY=/Users/brianellin/obob/obob-nextjs/.git/HEAD
+time=2026-01-06T20:04:08.840-08:00 level=INFO msg="Git HEAD change detected: %s" !BADKEY=/Users/brianellin/obob/obob-nextjs/.git/HEAD
+time=2026-01-06T20:04:08.846-08:00 level=INFO msg="JSONL removed/renamed, re-establishing watch"
+time=2026-01-06T20:04:08.897-08:00 level=INFO msg="Successfully re-established JSONL watch after %v" !BADKEY=50ms
+time=2026-01-06T20:04:08.897-08:00 level=INFO msg="JSONL file created: %s" !BADKEY=/Users/brianellin/obob/obob-nextjs/.beads/issues.jsonl
+time=2026-01-06T20:04:08.897-08:00 level=INFO msg="Git HEAD change detected: %s" !BADKEY=/Users/brianellin/obob/obob-nextjs/.git/HEAD
+time=2026-01-06T20:04:08.931-08:00 level=INFO msg="Git HEAD change detected: %s" !BADKEY=/Users/brianellin/obob/obob-nextjs/.git/HEAD
+time=2026-01-06T20:04:08.974-08:00 level=INFO msg="Git HEAD change detected: %s" !BADKEY=/Users/brianellin/obob/obob-nextjs/.git/HEAD
+time=2026-01-06T20:04:08.979-08:00 level=INFO msg="JSONL removed/renamed, re-establishing watch"
+time=2026-01-06T20:04:09.029-08:00 level=INFO msg="Successfully re-established JSONL watch after %v" !BADKEY=50ms
+time=2026-01-06T20:04:09.029-08:00 level=INFO msg="JSONL file created: %s" !BADKEY=/Users/brianellin/obob/obob-nextjs/.beads/issues.jsonl
+time=2026-01-06T20:04:09.029-08:00 level=INFO msg="Git HEAD change detected: %s" !BADKEY=/Users/brianellin/obob/obob-nextjs/.git/HEAD
+time=2026-01-06T20:04:09.060-08:00 level=INFO msg="Git HEAD change detected: %s" !BADKEY=/Users/brianellin/obob/obob-nextjs/.git/HEAD
+time=2026-01-06T20:04:09.065-08:00 level=INFO msg="JSONL removed/renamed, re-establishing watch"
+time=2026-01-06T20:04:09.116-08:00 level=INFO msg="Successfully re-established JSONL watch after %v" !BADKEY=50ms
+time=2026-01-06T20:04:09.116-08:00 level=INFO msg="JSONL file created: %s" !BADKEY=/Users/brianellin/obob/obob-nextjs/.beads/issues.jsonl
+time=2026-01-06T20:04:09.116-08:00 level=INFO msg="Git HEAD change detected: %s" !BADKEY=/Users/brianellin/obob/obob-nextjs/.git/HEAD
+time=2026-01-06T20:04:09.147-08:00 level=INFO msg="Git HEAD change detected: %s" !BADKEY=/Users/brianellin/obob/obob-nextjs/.git/HEAD
+time=2026-01-06T20:04:09.164-08:00 level=INFO msg="Import triggered by file change"
+time=2026-01-06T20:04:09.164-08:00 level=INFO msg="Starting %s..." !BADKEY=auto-import
+time=2026-01-06T20:04:09.165-08:00 level=INFO msg="Skipping %s: JSONL content unchanged" !BADKEY=auto-import
+time=2026-01-06T20:04:09.197-08:00 level=INFO msg="Git HEAD change detected: %s" !BADKEY=/Users/brianellin/obob/obob-nextjs/.git/HEAD
+time=2026-01-06T20:04:09.245-08:00 level=INFO msg="Git HEAD change detected: %s" !BADKEY=/Users/brianellin/obob/obob-nextjs/.git/HEAD
+time=2026-01-06T20:04:09.292-08:00 level=INFO msg="Git HEAD change detected: %s" !BADKEY=/Users/brianellin/obob/obob-nextjs/.git/HEAD
+time=2026-01-06T20:04:09.342-08:00 level=INFO msg="Git HEAD change detected: %s" !BADKEY=/Users/brianellin/obob/obob-nextjs/.git/HEAD
+time=2026-01-06T20:04:09.391-08:00 level=INFO msg="Git HEAD change detected: %s" !BADKEY=/Users/brianellin/obob/obob-nextjs/.git/HEAD
+time=2026-01-06T20:04:09.444-08:00 level=INFO msg="Git HEAD change detected: %s" !BADKEY=/Users/brianellin/obob/obob-nextjs/.git/HEAD
+time=2026-01-06T20:04:09.490-08:00 level=INFO msg="Git HEAD change detected: %s" !BADKEY=/Users/brianellin/obob/obob-nextjs/.git/HEAD
+time=2026-01-06T20:04:09.537-08:00 level=INFO msg="Git HEAD change detected: %s" !BADKEY=/Users/brianellin/obob/obob-nextjs/.git/HEAD
+time=2026-01-06T20:04:09.580-08:00 level=INFO msg="Git HEAD change detected: %s" !BADKEY=/Users/brianellin/obob/obob-nextjs/.git/HEAD
+time=2026-01-06T20:04:09.630-08:00 level=INFO msg="Git HEAD change detected: %s" !BADKEY=/Users/brianellin/obob/obob-nextjs/.git/HEAD
+time=2026-01-06T20:04:09.675-08:00 level=INFO msg="Git HEAD change detected: %s" !BADKEY=/Users/brianellin/obob/obob-nextjs/.git/HEAD
+time=2026-01-06T20:04:09.676-08:00 level=INFO msg="Git HEAD change detected: %s" !BADKEY=/Users/brianellin/obob/obob-nextjs/.git/HEAD
+time=2026-01-06T20:04:10.678-08:00 level=INFO msg="Import triggered by file change"
+time=2026-01-06T20:04:10.678-08:00 level=INFO msg="Starting %s..." !BADKEY=auto-import
+time=2026-01-06T20:04:10.678-08:00 level=INFO msg="Skipping %s: JSONL content unchanged" !BADKEY=auto-import
+time=2026-01-06T20:04:16.554-08:00 level=INFO msg="JSONL removed/renamed, re-establishing watch"
+time=2026-01-06T20:04:16.605-08:00 level=INFO msg="Successfully re-established JSONL watch after %v" !BADKEY=50ms
+time=2026-01-06T20:04:16.605-08:00 level=INFO msg="JSONL file created: %s" !BADKEY=/Users/brianellin/obob/obob-nextjs/.beads/issues.jsonl
+time=2026-01-06T20:04:17.606-08:00 level=INFO msg="Import triggered by file change"
+time=2026-01-06T20:04:17.606-08:00 level=INFO msg="Starting %s..." !BADKEY=auto-import
+time=2026-01-06T20:04:17.607-08:00 level=INFO msg="Skipping %s: JSONL content unchanged" !BADKEY=auto-import
+time=2026-01-06T20:04:22.665-08:00 level=INFO msg="JSONL removed/renamed, re-establishing watch"
+time=2026-01-06T20:04:22.716-08:00 level=INFO msg="Successfully re-established JSONL watch after %v" !BADKEY=50ms
+time=2026-01-06T20:04:22.716-08:00 level=INFO msg="JSONL file created: %s" !BADKEY=/Users/brianellin/obob/obob-nextjs/.beads/issues.jsonl
+time=2026-01-06T20:04:23.718-08:00 level=INFO msg="Import triggered by file change"
+time=2026-01-06T20:04:23.718-08:00 level=INFO msg="Starting %s..." !BADKEY=auto-import
+time=2026-01-06T20:04:23.719-08:00 level=INFO msg="Skipping %s: JSONL content unchanged" !BADKEY=auto-import
+time=2026-01-06T20:07:38.548-08:00 level=INFO msg="JSONL removed/renamed, re-establishing watch"
+time=2026-01-06T20:07:38.599-08:00 level=INFO msg="Successfully re-established JSONL watch after %v" !BADKEY=50ms
+time=2026-01-06T20:07:38.599-08:00 level=INFO msg="JSONL file created: %s" !BADKEY=/Users/brianellin/obob/obob-nextjs/.beads/issues.jsonl
+time=2026-01-06T20:07:39.601-08:00 level=INFO msg="Import triggered by file change"
+time=2026-01-06T20:07:39.602-08:00 level=INFO msg="Starting %s..." !BADKEY=auto-import
+time=2026-01-06T20:07:39.605-08:00 level=INFO msg="Skipping %s: JSONL content unchanged" !BADKEY=auto-import

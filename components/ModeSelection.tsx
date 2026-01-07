@@ -8,7 +8,7 @@ import {
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { User, Users, Trophy, Grid2X2, Sparkles, Dog, Grid3X3, Calendar } from "lucide-react";
+import { User, Users, Trophy, Grid2X2, Sparkles, Dog, Calendar } from "lucide-react";
 import Link from "next/link";
 
 type ModeSelectionProps = {
@@ -195,36 +195,7 @@ export default function ModeSelection({ year, division }: ModeSelectionProps) {
               </Link>
             </CardFooter>
           </Card>
-          <Card className="border-2 border-gray-900 bg-white">
-            <CardHeader>
-              <div className="flex items-center gap-2">
-                <CardTitle className="font-serif">Content Crossword</CardTitle>
-              </div>
-              <CardDescription>
-                Solve crossword puzzles from book content
-              </CardDescription>
-            </CardHeader>
-            <CardContent>
-              <p>
-                Test your knowledge with crossword puzzles generated from content
-                questions. Choose your books and puzzle size for a relaxed
-                puzzle-solving experience.
-              </p>
-            </CardContent>
-            <CardFooter>
-              <Link
-                href={`/crossword/${year}/${division}`}
-                passHref
-                className="w-full"
-              >
-                <Button className="w-full bg-gray-900 hover:bg-gray-800 text-white transition-colors">
-                  <Grid3X3 className="mr-2 h-4 w-4" /> Play Crossword
-                </Button>
-              </Link>
-            </CardFooter>
-          </Card>
-
-          {/* Coming Soon indicator */}
+{/* Coming Soon indicator */}
           <div className="flex items-center justify-center gap-2 text-muted-foreground py-4">
             <Sparkles className="h-4 w-4" />
             <span className="text-sm">More games coming soon!</span>
