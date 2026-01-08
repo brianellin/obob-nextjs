@@ -208,6 +208,26 @@ export async function appendNewsletterSignup(data: {
   });
 }
 
+export async function appendCrosswordFeedbackToSheet(data: {
+  timestamp: string;
+  feedback: string;
+  email?: string;
+  teamCode?: string;
+  year: string;
+  division: string;
+  puzzleDate: string;
+}) {
+  return appendToSheet(process.env.GOOGLE_CROSSWORD_FEEDBACK_SHEET_ID!, {
+    timestamp: data.timestamp,
+    feedback: data.feedback,
+    email: data.email || '',
+    teamCode: data.teamCode || '',
+    year: data.year,
+    division: data.division,
+    puzzleDate: data.puzzleDate,
+  });
+}
+
 // Helper function to set up headers for the Google Sheet (run this once)
 export async function setupFeedbackSheetHeaders() {
   try {

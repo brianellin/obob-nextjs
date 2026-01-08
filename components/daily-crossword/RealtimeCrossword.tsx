@@ -35,6 +35,7 @@ import {
   type CrosswordAnalyticsContext,
 } from "@/lib/daily-crossword/analytics";
 import { CompletionBanner } from "./CompletionBanner";
+import { CrosswordFeedback } from "./CrosswordFeedback";
 
 interface LibraryClueData {
   clue: string;
@@ -881,6 +882,16 @@ export default function RealtimeCrossword({
             </div>
           </div>
         </CrosswordProvider>
+
+        {/* Feedback form */}
+        <div className="mt-6 px-4 sm:px-0 pb-4">
+          <CrosswordFeedback
+            teamCode={teamCode}
+            year={year}
+            division={division}
+            puzzleDate={dateString}
+          />
+        </div>
       </div>
 
       {/* Invite friends modal */}
