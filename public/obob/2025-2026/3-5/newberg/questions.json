@@ -1,0 +1,316 @@
+{
+  "questions": [
+    {
+      "type": "in-which-book",
+      "text": "does a character visit a psychic named Mystic Millie?",
+      "book_key": "the-tail-of-emily-windsnap",
+      "page": 9
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character offer water and peanut butter crackers to a guest?",
+      "book_key": "elf-dog-and-owl-head",
+      "page": 81
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character give away an air plant?",
+      "book_key": "the-secret-garden-on-81st-street",
+      "page": 32
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a teacher keep an 'author correspondence center' at the back of the classroom?",
+      "book_key": "the-lost-library",
+      "page": 51
+    },
+    {
+      "type": "in-which-book",
+      "text": "is someone looking for a lost rainbow shoe?",
+      "book_key": "squished",
+      "page": 7
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character twist an amethyst ring to help them fall asleep?",
+      "book_key": "inside-out-and-back-again",
+      "page": 103
+    },
+    {
+      "type": "in-which-book",
+      "text": "does someone wish for a \"big yellow cupcake, with pink frosting\"?",
+      "book_key": "number-the-stars",
+      "page": 9
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character read aloud a chapter from the book, Texas Ranger?",
+      "book_key": "just-like-click",
+      "page": 5
+    },
+    {
+      "type": "content",
+      "text": "at what time are the lights scheduled to go out each evening?",
+      "book_key": "city-of-ember",
+      "page": 4,
+      "answer": "Nine"
+    },
+    {
+      "type": "content",
+      "text": "what section number is Grant's family sitting in during the Penn Relays?",
+      "book_key": "the-million-dollar-race",
+      "page": 1,
+      "answer": "102"
+    },
+    {
+      "type": "content",
+      "text": "by what name do otters call the scary story known as 'every otter's story'?",
+      "book_key": "odder",
+      "page": 40,
+      "answer": "The Fifty"
+    },
+    {
+      "type": "content",
+      "text": "what word is on the front of the cap Brian finds in the survival pack?",
+      "book_key": "hatchet",
+      "page": 185,
+      "answer": "CESSNA"
+    },
+    {
+      "type": "content",
+      "text": "what is Langston's new Chicago street address?",
+      "book_key": "finding-langston",
+      "page": 2,
+      "answer": "4501 Wabash"
+    },
+    {
+      "type": "content",
+      "text": "what word is written in perfect penmanship inside the front cover of Marvel's math book?",
+      "book_key": "better-with-butter",
+      "page": 47,
+      "answer": "New"
+    },
+    {
+      "type": "content",
+      "text": "how long is the average lifespan of rabbits that climb trellises and go frolicking with birds, according to mother?",
+      "book_key": "the-remarkable-rescue-at-milkweed-meadow",
+      "page": 54,
+      "answer": "One year"
+    },
+    {
+      "type": "content",
+      "text": "Kyle must find a quarter and a nickel from which year to solve a riddle and win a game?",
+      "book_key": "escape-from-mr-lemoncellos-library",
+      "page": 3,
+      "answer": "1982"
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character take down a book called Fungus from the library shelves?",
+      "book_key": "city-of-ember",
+      "page": 119
+    },
+    {
+      "type": "in-which-book",
+      "text": "do characters ride in a golden gondola?",
+      "book_key": "elf-dog-and-owl-head",
+      "page": 205
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character joke that they are not afraid of frisbees?",
+      "book_key": "the-secret-garden-on-81st-street",
+      "page": 191
+    },
+    {
+      "type": "in-which-book",
+      "text": "does someone use a Polaroid as a bookmark?",
+      "book_key": "the-lost-library",
+      "page": 91
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character rip out pages from a library book and throw them into the air?",
+      "book_key": "finding-langston",
+      "page": 82
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character ride a bus in the carpool lane?",
+      "book_key": "better-with-butter",
+      "page": 283
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character quake in fear under the stare of nightshade eyes?",
+      "book_key": "the-remarkable-rescue-at-milkweed-meadow",
+      "page": 127
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character repeat a famous quote by Groucho Marx?",
+      "book_key": "escape-from-mr-lemoncellos-library",
+      "page": 1
+    },
+    {
+      "type": "content",
+      "text": "what is the name of the bus that Grant's family rides to New York?",
+      "book_key": "the-million-dollar-race",
+      "page": 75,
+      "answer": "Discount Rider"
+    },
+    {
+      "type": "content",
+      "text": "name two of the headings listed at the top of each scroll in the underwater school library.",
+      "book_key": "the-tail-of-emily-windsnap",
+      "page": 74,
+      "answer": "Shipwrecks, Treasures, Fishermen, or Sirens (any two)"
+    },
+    {
+      "type": "content",
+      "text": "what number do humans use to identify Odder?",
+      "book_key": "odder",
+      "page": 9,
+      "answer": "156"
+    },
+    {
+      "type": "content",
+      "text": "what animal eats all of Brian's buried eggs?",
+      "book_key": "hatchet",
+      "page": 131,
+      "answer": "skunk"
+    },
+    {
+      "type": "content",
+      "text": "what is the name, written on the work van, of the construction company at Cameron's house?",
+      "book_key": "squished",
+      "page": 59,
+      "answer": "Crayfish Construction"
+    },
+    {
+      "type": "content",
+      "text": "1975 is the Year of what animal?",
+      "book_key": "inside-out-and-back-again",
+      "page": 1,
+      "answer": "Cat"
+    },
+    {
+      "type": "content",
+      "text": "what material are Kirsti's new shoes made from?",
+      "book_key": "number-the-stars",
+      "page": 28,
+      "answer": "fish skin"
+    },
+    {
+      "type": "content",
+      "text": "what is the name of the horse assigned to Nick at the roundup?",
+      "book_key": "just-like-click",
+      "page": 63,
+      "answer": "Picnic"
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character eat cotton candy while on a walk?",
+      "book_key": "the-tail-of-emily-windsnap",
+      "page": 84
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a mother give the advice to \"stay away from all that you don't understand\"?",
+      "book_key": "odder",
+      "page": 36
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character order a \"better-than-best biscuits and gravy platter\"?",
+      "book_key": "squished",
+      "page": 135
+    },
+    {
+      "type": "in-which-book",
+      "text": "does someone hand out chocolate chip cookies at a school presentation?",
+      "book_key": "better-with-butter",
+      "page": 4
+    },
+    {
+      "type": "in-which-book",
+      "text": "does the \"moon shimmer like a lunaria blossom\"?",
+      "book_key": "the-remarkable-rescue-at-milkweed-meadow",
+      "page": 14
+    },
+    {
+      "type": "in-which-book",
+      "text": "is a banner representing a river displayed at an event?",
+      "book_key": "city-of-ember",
+      "page": 215
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character think, \"I would trade everything I have for a hamburger\"?",
+      "book_key": "hatchet",
+      "page": 51
+    },
+    {
+      "type": "in-which-book",
+      "text": "does someone have Batman tattooed on their arm?",
+      "book_key": "just-like-click",
+      "page": 106
+    },
+    {
+      "type": "content",
+      "text": "name two of the teams in the Girls' Final Four Race.",
+      "book_key": "the-million-dollar-race",
+      "page": 172,
+      "answer": "Brazil, Australia, Ukraine, or China (any two)"
+    },
+    {
+      "type": "content",
+      "text": "on what day of the week does the Queen of the Mountain schedule hunting wyrms in the petrified forest?",
+      "book_key": "elf-dog-and-owl-head",
+      "page": 1,
+      "answer": "Monday"
+    },
+    {
+      "type": "content",
+      "text": "by what other name do characters call the corner store?",
+      "book_key": "the-secret-garden-on-81st-street",
+      "page": 23,
+      "answer": "Bodega"
+    },
+    {
+      "type": "content",
+      "text": "what is the return date stamped onto the circulation cards of all the library books Evan and Rafe find in the little free library?",
+      "book_key": "the-lost-library",
+      "page": 32,
+      "answer": "November 5, 1999"
+    },
+    {
+      "type": "content",
+      "text": "what is Miss Fulton's first name?",
+      "book_key": "finding-langston",
+      "page": 54,
+      "answer": "Pearl"
+    },
+    {
+      "type": "content",
+      "text": "how many pouches of dried papaya does Há receive as a gift?",
+      "book_key": "inside-out-and-back-again",
+      "page": 232,
+      "answer": "3"
+    },
+    {
+      "type": "content",
+      "text": "Mama named her dog Trofast when she was a child. What does Trofast mean?",
+      "book_key": "number-the-stars",
+      "page": 58,
+      "answer": "Faithful"
+    },
+    {
+      "type": "content",
+      "text": "in what year was Mr. Lemoncello born?",
+      "book_key": "escape-from-mr-lemoncellos-library",
+      "page": 264,
+      "answer": "1956"
+    }
+  ]
+}

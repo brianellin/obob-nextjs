@@ -2,11 +2,7 @@ book_key,question_type,page,text,answer,author_name,book_title,source_name
 inside-out-and-back-again,content,1,What year is it when the book begins?,1975,Thanhha Lai,Inside Out and Back Again,OBOB Parent Group
 inside-out-and-back-again,content,1,What is 1975 the year of?,Cat,Thanhha Lai,Inside Out and Back Again,OBOB Parent Group
 inside-out-and-back-again,content,1,what do people eat on tet?,sugary lotus seeds and glutinous cakes,Thanhha Lai,Inside Out and Back Again,OBOB Parent Group
-inside-out-and-back-again,content,1,on what day people wear all new clothes?,tet,Thanhha Lai,Inside Out and Back Again,OBOB Parent Group
-inside-out-and-back-again,content,2,What was the mom's belief about how luck can be brought to the home related to people waking up?,By men rising in the morning before women,Thanhha Lai,Inside Out and Back Again,OBOB Parent Group
-inside-out-and-back-again,content,4,What is the name of the temple the character's mom visits every new year?,I Ching Teller of Fate,Thanhha Lai,Inside Out and Back Again,OBOB Parent Group
-inside-out-and-back-again,content,4,What is the name of the food eaten only during the tet?,Banh Chung,Thanhha Lai,Inside Out and Back Again,OBOB Parent Group
-inside-out-and-back-again,content,5,which animal does Brother Quang tell his sister she was named after?,Hippopotamus,Thanhha Lai,Inside Out and Back Again,Lake Oswego Public Library
+inside-out-and-back-again,content,1,1975 is the Year of what animal?,Cat,Thanhha Lai,Inside Out and Back Again,Newberg Public Library
 inside-out-and-back-again,content,6,How many older brothers does Hà have?,3,Thanhha Lai,Inside Out and Back Again,OBOB Parent Group
 inside-out-and-back-again,content,6,What was Hà named after?,the Golden River,Thanhha Lai,Inside Out and Back Again,OBOB Parent Group
 inside-out-and-back-again,content,9,Which brother is the oldest?,Brother Quang,Thanhha Lai,Inside Out and Back Again,OBOB Parent Group
@@ -57,12 +53,17 @@ inside-out-and-back-again,content,255,What does Vu Lee want to go to school to s
 inside-out-and-back-again,content,255,What does Brother Khôi want to become?,A doctor of animals,Thanhha Lai,Inside Out and Back Again,OBOB Parent Group
 inside-out-and-back-again,content,256,What profession does Hà's mother think that Hà would be good at?,A lawyer because Hà likes to argue,Thanhha Lai,Inside Out and Back Again,OBOB Parent Group
 inside-out-and-back-again,content,,(Two part question) Who are the two friends that Ha makes at school?,Pam and Steven,Thanhha Lai,Inside Out and Back Again,OBOB Parent Group
+inside-out-and-back-again,content,1,on what day people wear all new clothes?,tet,Thanhha Lai,Inside Out and Back Again,OBOB Parent Group
+inside-out-and-back-again,content,2,What was the mom's belief about how luck can be brought to the home related to people waking up?,By men rising in the morning before women,Thanhha Lai,Inside Out and Back Again,OBOB Parent Group
+inside-out-and-back-again,content,4,What is the name of the temple the character's mom visits every new year?,I Ching Teller of Fate,Thanhha Lai,Inside Out and Back Again,OBOB Parent Group
+inside-out-and-back-again,content,4,What is the name of the food eaten only during the tet?,Banh Chung,Thanhha Lai,Inside Out and Back Again,OBOB Parent Group
 inside-out-and-back-again,content,5,What is the name of the main character?,Kim Ha,Thanhha Lai,Inside Out and Back Again,OBOB Parent Group
 inside-out-and-back-again,content,5,What is the meaning of Ha Ma?,River Horse,Thanhha Lai,Inside Out and Back Again,OBOB Parent Group
 inside-out-and-back-again,content,5,What did brother quang remember about Kim Ha as a baby?,Red and fat like a hippopotamus,Thanhha Lai,Inside Out and Back Again,OBOB Parent Group
 inside-out-and-back-again,content,5,What are Ha's brothers names?,"Quang, Vu, Khoi",Thanhha Lai,Inside Out and Back Again,OBOB Parent Group
 inside-out-and-back-again,content,5,Who imitates Bruce Lee?,Brother Vu,Thanhha Lai,Inside Out and Back Again,OBOB Parent Group
 inside-out-and-back-again,content,5,What did Brother Khoi call Ha?,Mothers tail,Thanhha Lai,Inside Out and Back Again,OBOB Parent Group
+inside-out-and-back-again,content,5,which animal does Brother Quang tell his sister she was named after?,Hippopotamus,Thanhha Lai,Inside Out and Back Again,Lake Oswego Public Library
 inside-out-and-back-again,content,6,How many pairs of shoes did each kid have?,One,Thanhha Lai,Inside Out and Back Again,OBOB Parent Group
 inside-out-and-back-again,content,6,How did Ha's parents choose the name Kim Ha?,Golden [Kim] and River[Ha] where they strolled in the evenings,Thanhha Lai,Inside Out and Back Again,OBOB Parent Group
 inside-out-and-back-again,content,6,What did Ha's mom tell Ha about why her brothers tease her?,Because the brothers adore Ha,Thanhha Lai,Inside Out and Back Again,OBOB Parent Group
@@ -132,6 +133,7 @@ inside-out-and-back-again,content,217,What sort of meat does mother ask the butc
 inside-out-and-back-again,content,229,what kind of vehicle does Vu Lee use that changes how people treat his sister?,A motorcycle,Thanhha Lai,Inside Out and Back Again,Lake Oswego Public Library
 inside-out-and-back-again,content,230,Who gets Brother Quang tuition for night college?,Cowboy,Thanhha Lai,Inside Out and Back Again,OBOB Parent Group
 inside-out-and-back-again,content,232,What gift does Ha get that she throws in the trash?,dried papaya,Thanhha Lai,Inside Out and Back Again,OBOB Parent Group
+inside-out-and-back-again,content,232,how many pouches of dried papaya does Há receive as a gift?,3,Thanhha Lai,Inside Out and Back Again,Newberg Public Library
 inside-out-and-back-again,content,239,what gift does Ha receive from her friend Pam for Christmas?,A doll with long black hair,Thanhha Lai,Inside Out and Back Again,Lake Oswego Public Library
 inside-out-and-back-again,content,248,what important thing does Hà’s mother lose?,The amethyst (in her ring).,Thanhha Lai,Inside Out and Back Again,Cedar Mill Public Library
 inside-out-and-back-again,content,255,What type of school does brother Vu attend instead of real college?,Cooking school,Thanhha Lai,Inside Out and Back Again,OBOB Parent Group
@@ -164,6 +166,7 @@ inside-out-and-back-again,in-which-book,95,does a character pluck someones arm h
 inside-out-and-back-again,in-which-book,96,do families land on the island of Guam after being rescued?,,Thanhha Lai,Inside Out and Back Again,OBOB Parent Group
 inside-out-and-back-again,in-which-book,96,does a family spend over four weeks on a naval ship waiting to be rescued?,,Thanhha Lai,Inside Out and Back Again,Lake Oswego Public Library
 inside-out-and-back-again,in-which-book,103,does a mother have an amethyst ring that was a gift?,,Thanhha Lai,Inside Out and Back Again,OBOB Parent Group
+inside-out-and-back-again,in-which-book,103,does a character twist an amethyst ring to help them fall asleep?,,Thanhha Lai,Inside Out and Back Again,Newberg Public Library
 inside-out-and-back-again,in-which-book,110,does a family move to Alabama?,,Thanhha Lai,Inside Out and Back Again,OBOB Parent Group
 inside-out-and-back-again,in-which-book,111,is there a character called Cowboy?,,Thanhha Lai,Inside Out and Back Again,OBOB Parent Group
 inside-out-and-back-again,in-which-book,119,do characters eat a paper bucket of chicken for the first time?,,Thanhha Lai,Inside Out and Back Again,OBOB Parent Group

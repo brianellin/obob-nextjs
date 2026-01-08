@@ -1,4 +1,6 @@
 book_key,question_type,page,text,answer,author_name,book_title,source_name
+the-lost-library,content,1,What color is Mortimer the cat?,orange,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
+the-lost-library,content,1,"According to Morimer he had a lot of feelings, what he didn't have were a lot of ""what'?",words,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
 the-lost-library,content,3,What is unique about Mortimer's paws?,they have 6 toes,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
 the-lost-library,content,11,What was Al's plan for the library cart?,to transform it into a little free library,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
 the-lost-library,content,16,Where does Evan's dad take the mice he traps?,over the mountain/hill (into the woods),Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
@@ -17,8 +19,6 @@ the-lost-library,content,40,What color are the doors of the original library in 
 the-lost-library,content,50,Who does Evan write a letter to for the author's correspondence center at school?,HG Higgins,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
 the-lost-library,content,62,How does the boy describe the book that Al had shared in a Book Club after he returned it?,not boring,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
 the-lost-library,content,,What are the two smells coming from the cabinet of the little free library?,cheese and applesauce,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
-the-lost-library,content,1,What color is Mortimer the cat?,orange,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
-the-lost-library,content,1,"According to Morimer he had a lot of feelings, what he didn't have were a lot of ""what'?",words,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
 the-lost-library,content,2,What is the name of the town this story takes place?,Martinville,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
 the-lost-library,content,7,What do Al and Ms. Scoggin call Mortimer?,dear cat,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
 the-lost-library,content,11,What does Al build outside for the old library books?,little free library,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
@@ -26,6 +26,7 @@ the-lost-library,content,11,What does Al use for doors on the little free librar
 the-lost-library,content,12,What grade is Evan in?,Fifth-grade,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
 the-lost-library,content,17,What does Evan stop and write about in his journal on the last Monday of fifth-grade?,Clouds,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
 the-lost-library,content,17,What does Evan's dad give him to wear in kindergarten?,Imaginary cape,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
+the-lost-library,content,,"Mortimer has several names.  Besides Mortimer, Name three other names.","Six-toed-grouch, Dear cat, Goldie, the cat from the History House, Sunshine, the Grouch, Buffy",Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
 the-lost-library,content,19,When Evan first saw the little free library how many books did he take?,two,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
 the-lost-library,content,20,What kind of face does Mortimer say Evan has?,a question mark face,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
 the-lost-library,content,22,What is Evan's teachers name?,Mr. O'Neal,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
@@ -50,23 +51,24 @@ the-lost-library,content,57,What was Al's favorite thing to do before the fire?,
 the-lost-library,content,64,What type of crate does Mr. Gregorian fill with books for the little free library?,An egg crate,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
 the-lost-library,content,68,What is the mascot of Grantville Middle School?,Tigers,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
 the-lost-library,content,71,What color does Mr. O'Neal say the doors were on the old library?,blue (big blue doors),Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
-the-lost-library,content,205,What is written on the plastic pin that falls from the ceiling of the History House and lands in front of Al?,Librarian,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
-the-lost-library,content,214,Who becomes the intern when the new library opens?,Rafe,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
-the-lost-library,content,,"Mortimer has several names.  Besides Mortimer, Name three other names.","Six-toed-grouch, Dear cat, Goldie, the cat from the History House, Sunshine, the Grouch, Buffy",Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
-the-lost-library,content,4,How many mouse doors does Mortimer count in Martinville's History House?,Five,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
-the-lost-library,content,7,Which character gives Mortimer hugs that are never too tight?,Ms. Scoggins,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
-the-lost-library,content,13,What is the name of the town where the story takes place?,Martinville,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
-the-lost-library,content,18,What is the name of the house where the ghosts live?,Martinville History House,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
-the-lost-library,content,19,TWO PART: What does Evan think the little free library smells like?,applesauce and cheese,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
 the-lost-library,content,78,What kind of sandwich is in the brown paper bag delivered to Al every Wednesday?,Tuna fish and dill pickle sandwich (on rye bread with lettuce),Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
 the-lost-library,content,80,"Al grew up in an orphanage, what grade is she in when she discovers the public library?",Third grade,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
 the-lost-library,content,90,What is the date that the library burned down?,1999-11-05,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
 the-lost-library,content,103,"What does Evan find with the help of ""the dear cat"" while looking around the old library site?",Two keys on a ring,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
 the-lost-library,content,113,What is the name of the school librarian at Martinville Elementary School?,Ms. Shore,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
 the-lost-library,content,113,H. G. Higgins' first book was published in 2009.  What is the title of this book?,Assignment Accepted,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
-the-lost-library,content,115,H. G. Higgins is a pseudonymous author of American mystery novels.  What does pseudonymous mean?,a pen name (fake),Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
 the-lost-library,content,117,"Where did Edward McClelland, Evans' dad, work while he was in high school?",Library,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
 the-lost-library,content,,The little free library consisted of 4 rooms: Name two.,"box with cheese cupboard doors, egg crate, old red wagon, suitcase",Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
+the-lost-library,content,4,How many mouse doors does Mortimer count in Martinville's History House?,Five,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
+the-lost-library,content,7,Which character gives Mortimer hugs that are never too tight?,Ms. Scoggins,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
+the-lost-library,content,13,What is the name of the town where the story takes place?,Martinville,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
+the-lost-library,content,18,What is the name of the house where the ghosts live?,Martinville History House,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
+the-lost-library,content,19,TWO PART: What does Evan think the little free library smells like?,applesauce and cheese,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
+the-lost-library,content,23,What is the name of Evan's 5th grade teacher?,Mr. O'Neal,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
+the-lost-library,content,32,What is the last date stamped on all of the books in the little free library?,1999-11-05,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
+the-lost-library,content,33,"What is the name of the only person who checked out the book ""How to Write a Mystery Novel""?",H.G. Higgins,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
+the-lost-library,content,37,"TWO PART: In the Lost Library, Al does the cooking. Name two of the six dishes that she cooks for the ghosts.","applesauce, potato pancakes, apple muffins, baked potatoes, apple dumplings, mashed potatoes",Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
+the-lost-library,content,40,What does Al bring Mr. Brock a plate of at 4pm?,Cheese,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
 the-lost-library,content,129,What was the graduation breakfast that Evan's parents made him?,French toast with bananas (and orange juice),Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
 the-lost-library,content,132,What is on Mr. O'Neals bowtie that he wears to graduation?,Books,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
 the-lost-library,content,135,Why do Rafe's parents bring a bag of nuts to the graduation celebration?,They worried about sugar (and/or Rafe had a dentist appointment right after),Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
@@ -89,30 +91,26 @@ the-lost-library,content,205,"After the mice show, while Edward, Evan and Al wer
 the-lost-library,content,207,Who does Mortimer find at the Grantville Movie Theater?,His sister Petunia,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
 the-lost-library,content,,What affectionate term do Al and Ms. Scoggins call Morttimer?,Dear Cat,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
 the-lost-library,content,,What grade is Evan in when the story begins?,Fifth,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
-the-lost-library,content,23,What is the name of Evan's 5th grade teacher?,Mr. O'Neal,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
-the-lost-library,content,32,What is the last date stamped on all of the books in the little free library?,1999-11-05,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
-the-lost-library,content,37,"TWO PART: In the Lost Library, Al does the cooking. Name two of the six dishes that she cooks for the ghosts.","applesauce, potato pancakes, apple muffins, baked potatoes, apple dumplings, mashed potatoes",Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
-the-lost-library,content,40,What does Al bring Mr. Brock a plate of at 4pm?,Cheese,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
 the-lost-library,content,,What is the name of Mortimer's sister?,Petunia,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
-the-lost-library,content,33,"What is the name of the only person who checked out the book ""How to Write a Mystery Novel""?",H.G. Higgins,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
 the-lost-library,content,,What was Al's favorite thing before she was a ghost?,Book Club or Wednesday Book Club or Book Club Wednesdays,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
-the-lost-library,content,63,What item did Mr. Gregorian bring to make the first room of the little free library?,Egg crate,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
+the-lost-library,content,2,what time does the Town Hall begin to ring every day?,6:00 P.M.,Rebecca Stead and Wendy Mass,The Lost Library,Lake Oswego Public Library
 the-lost-library,content,68,What is the Grantville Middle School's mascot?,Tiger or Tigers,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
 the-lost-library,content,70,What game does Mr. O'Neal suggest the fifth graders play on their ride home from the middle school?,Geography,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
 the-lost-library,content,82,Where was Al's first job at?,Library (or City Library),Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
 the-lost-library,content,,What does Mortimer hear singing at night while he's outside?,Frogs,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
-the-lost-library,content,2,what time does the Town Hall begin to ring every day?,6:00 P.M.,Rebecca Stead and Wendy Mass,The Lost Library,Lake Oswego Public Library
 the-lost-library,content,7,what was the name of Petunia's favorite game to play with Mortimore?,Boss of the Library,Rebecca Stead and Wendy Mass,The Lost Library,Lake Oswego Public Library
 the-lost-library,content,19,what does the little free library smell like?,Applesauce and cheese,Rebecca Stead and Wendy Mass,The Lost Library,Lake Oswego Public Library
 the-lost-library,content,28,what do Rafe and Evan call their phones?,Bat Phones,Rebecca Stead and Wendy Mass,The Lost Library,Lake Oswego Public Library
 the-lost-library,content,30,"how does Evan mime ""going to town""?",By walking two fingers up his palm,Rebecca Stead and Wendy Mass,The Lost Library,Lake Oswego Public Library
 the-lost-library,content,30,"how many books were initially in the little free library, and how many had Evan's dad's name on their cards?",Forty-four and 10,Rebecca Stead and Wendy Mass,The Lost Library,Lake Oswego Public Library
+the-lost-library,content,32,what is the return date stamped onto the circulation cards of all the library books Evan and Rafe find in the little free library?,"November 5, 1999",Rebecca Stead and Wendy Mass,The Lost Library,Newberg Public Library
 the-lost-library,content,38,when are public tours offered at the History House?,"Every Sunday and Tuesday, at noon",Rebecca Stead and Wendy Mass,The Lost Library,Lake Oswego Public Library
 the-lost-library,content,39,what is Mr. Brock's favorite thing to discover in a book?,Courage,Rebecca Stead and Wendy Mass,The Lost Library,Lake Oswego Public Library
 the-lost-library,content,40,what time does Mr. Brock expect his cheese?,4:00 P.M.,Rebecca Stead and Wendy Mass,The Lost Library,Lake Oswego Public Library
 the-lost-library,content,40,what time did the library open the beautiful blue doors every morning?,8:30 am,Rebecca Stead and Wendy Mass,The Lost Library,Lake Oswego Public Library
 the-lost-library,content,47,"What item falls out of the book titled ""How to Write a Mystery Novel"". Be specific.",polaroid,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
 the-lost-library,content,50,"in How to Write a Mystery Novel, what is Chapter Four called?",Antagonists,Rebecca Stead and Wendy Mass,The Lost Library,Lake Oswego Public Library
+the-lost-library,content,63,What item did Mr. Gregorian bring to make the first room of the little free library?,Egg crate,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
 the-lost-library,content,63,"who brought the first crate of books to arrive at the free little library, and what is their occupation?","Mr. Gregorian, Grocery Store Manager",Rebecca Stead and Wendy Mass,The Lost Library,Lake Oswego Public Library
 the-lost-library,content,68,Where does Evan's class go for a field trip during the last week of school?,Grantvile Middle School,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
 the-lost-library,content,78,What kind of sandwich arrives every Wednesday at the Martinville History House?,tuna fish and dill pickle,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
@@ -133,6 +131,7 @@ the-lost-library,content,111,what colors were braided into the key chain Evan fo
 the-lost-library,content,113,What was the title of HG Higgins first book published in 2009?,Assignment Accepted,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
 the-lost-library,content,113,what year was H.G. Higgins' first book published?,2009,Rebecca Stead and Wendy Mass,The Lost Library,Lake Oswego Public Library
 the-lost-library,content,113,"who was quoted as saying ""We read to know we are not alone.""?",C. S. Lewis,Rebecca Stead and Wendy Mass,The Lost Library,Lake Oswego Public Library
+the-lost-library,content,115,H. G. Higgins is a pseudonymous author of American mystery novels.  What does pseudonymous mean?,a pen name (fake),Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
 the-lost-library,content,116,Who tells Evan that his dad used to work in the library?,"Ms. Short, the school librarian",Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
 the-lost-library,content,118,What does Rafe bravely remove from the playhouse in Pre-K?,a garter snake,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
 the-lost-library,content,118,What did Rafe pick up from inside the playhouse during Pre-K recess?,(Garter) Snake,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
@@ -162,8 +161,10 @@ the-lost-library,content,191,Who is the original owner of the keys Evan found at
 the-lost-library,content,198,What is the name on the van that Evan's father's drives?,Mission Mouse,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
 the-lost-library,content,200,"What do the mice hold in their hands to show Al, Edward and Evan how the fire started?",Matchstick (match),Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
 the-lost-library,content,202,how many mice parade in a circle around the dear cat?,Nine.,Rebecca Stead and Wendy Mass,The Lost Library,Cedar Mill Public Library
+the-lost-library,content,205,What is written on the plastic pin that falls from the ceiling of the History House and lands in front of Al?,Librarian,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
 the-lost-library,content,209,What does Rafe bring to middle school to hand out to his teachers?,Tomato,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
 the-lost-library,content,213,how many cozy reading nooks are in the new library?,Nine,Rebecca Stead and Wendy Mass,The Lost Library,Lake Oswego Public Library
+the-lost-library,content,214,Who becomes the intern when the new library opens?,Rafe,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
 the-lost-library,content,214,What is the name of Al's intern at the new Martinville Library?,Rafe,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
 the-lost-library,in-which-book,1,is there a cat named Mortimer?,,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
 the-lost-library,in-which-book,2,does a bell ring in the town at 6 p.m everyday?,,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
@@ -171,115 +172,117 @@ the-lost-library,in-which-book,3,is a character nick-named the Six-Toed Grouch?,
 the-lost-library,in-which-book,3,is a character called the six-toed-grouch?,,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
 the-lost-library,in-which-book,4,are there mouse doors numbered one thru five?,,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
 the-lost-library,in-which-book,5,does a character bake apple muffins almost every Sunday?,,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
+the-lost-library,in-which-book,7,"do brother and sister cats play ""Boss of the Library""?",,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
 the-lost-library,in-which-book,15,"does a character eat their unshiny and lumpy apples before school to avoid kids from saying ""ew"" in the cafeteria?",,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
+the-lost-library,in-which-book,15,"do kids say ""ew"" to a character's choice of snack at school?",,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
+the-lost-library,in-which-book,15,is a character supposed to write something in in their journal every day?,,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
 the-lost-library,in-which-book,16,do people demand refunds for failed mice exterminations?,,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
+the-lost-library,in-which-book,16,is a character's dad an exterminator?,,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
+the-lost-library,in-which-book,17,does a charactor wear an imaginary cape?,,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
+the-lost-library,in-which-book,19,"is there a sign that reads ""TAKE A BOOK, LEAVE A BOOK. OR BOTH.""",,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
 the-lost-library,in-which-book,24,is the same cat referred to by several different names?,,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
+the-lost-library,in-which-book,25,"is a character's mother described as ""the most patient and encouraging tech support person in Martinville""?",,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
 the-lost-library,in-which-book,28,"do best friends have matching old fashioned phones they call ""the bat phones""?",,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
 the-lost-library,in-which-book,34,does a Polaroid picture fall out of a library book?,,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
+the-lost-library,in-which-book,36,did a library burn to the ground?,,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
 the-lost-library,in-which-book,37,does someone Remind and Criticize another character as part of their role of supervisor?,,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
 the-lost-library,in-which-book,38,does a character have a distinct lack of talent for invisibility?,,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
+the-lost-library,in-which-book,38,does a ghost have to hide because of their lack of talent for invisibility?,,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
+the-lost-library,in-which-book,39,"does a character repeatedly say ""What Courage!""?",,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
+the-lost-library,in-which-book,40,"does Ms. Scoggin describe a character as ""a test""?",,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
 the-lost-library,in-which-book,43,does a character spend his first night under the sky wondering how frogs knew how to stop singing at exactly the same moment?,,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
 the-lost-library,in-which-book,50,does a character switch from putting on an imaginary cape to putting on an imaginary detective's hat?,,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
+the-lost-library,in-which-book,50,does a character switch from wearing an imaginary cape to an imaginary detective's cap?,,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
+the-lost-library,in-which-book,51,"does a teacher keep an ""author correspondence center"" at the back of their classroom?",,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
 the-lost-library,in-which-book,57,is there a Wednesday Book Club?,,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
+the-lost-library,in-which-book,62,"does a character declare Al's favorite book as ""Not boring""?",,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
+the-lost-library,in-which-book,63,"are an egg crate, a wagon an umbrella and a suitcase added as rooms to a little free library?",,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
+the-lost-library,in-which-book,66,does a mouse lose the tip of his tail to a hawk?,,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
 the-lost-library,in-which-book,68,does a mouse release their tail when they are captured by a hawk?,,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
 the-lost-library,in-which-book,70,does everyone groan when they find out there's no recess in middle school?,,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
+the-lost-library,in-which-book,70,"does everyone groan when they find out that ""there's no recess in middle school""",,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
+the-lost-library,in-which-book,78,is a tuna fish and dill pickle sandwich on rye bread with lettuce delivered to someone every Wednesday?,,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
+the-lost-library,in-which-book,79,"does a character refer to a library patron as ""our dear boy""",,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
 the-lost-library,in-which-book,81,does a character ask to go to the battery library to borrow batteries?,,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
+the-lost-library,in-which-book,81,"does a character think that batteries come from the ""battery library""?",,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
+the-lost-library,in-which-book,82,"does a character refer to a library as a ""grubby giant""?",,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
+the-lost-library,in-which-book,83,"do characters divide their books into ""horse stories, dog stories and other animal stories""?",,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
 the-lost-library,in-which-book,87,does a character build a new room in their mind every time they read a new book?,,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
 the-lost-library,in-which-book,95,"do two characters embark on ""Mission Mouse"" to rescue a mouse from a cat?",,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
 the-lost-library,in-which-book,105,"does someone finally lose their patience after being told repeatedly by their boss to ""take their place""?",,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
+the-lost-library,in-which-book,108,"is a character asked ""You are a librarian, are you not?""",,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
+the-lost-library,in-which-book,109,does a character float through the ceiling?,,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
+the-lost-library,in-which-book,113,does a character refer to getting on a library computer as a panicked game of musical chairs?,,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
 the-lost-library,in-which-book,119,"is a character eagerly awaiting the ""expiration date"" for the many rules their parents have given them?",,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
+the-lost-library,in-which-book,119,does a character have a middle school expiration date for the end of his parents rules?,,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
+the-lost-library,in-which-book,124,does a cat serve as the guardian of the library?,,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
 the-lost-library,in-which-book,126,does a character read aloud the poem April Rain Song by Langston Hughes?,,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
+the-lost-library,in-which-book,132,does a teacher wear a bow-tie with little books on it?,,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
 the-lost-library,in-which-book,135,"is there a dessert table with sixty different kinds of pies, cakes, brownies, and cookies?",,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
+the-lost-library,in-which-book,148,does a character show up with a bike basket full of individually wrapped brownies?,,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
 the-lost-library,in-which-book,152,is there a locally famous treehouse that was secured with a padlock after an accident?,,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
 the-lost-library,in-which-book,165,"is there a ""rock of truth"" with the rules: no lying and no interrupting?",,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
+the-lost-library,in-which-book,169,"does a character discover their father is the famous mystery writer, H.G. Higgins?",,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
+the-lost-library,in-which-book,175,does something called the Six-Toed Monster live at the movie theater?,,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
 the-lost-library,in-which-book,178,do a group of siblings all have names beginning with the letter F?,,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
 the-lost-library,in-which-book,180,do mice cooperate with a cat in exchange for a supply of cheese and apples?,,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
 the-lost-library,in-which-book,186,must a character find their place again before letting go of two ghost companions?,,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
 the-lost-library,in-which-book,189,does someone have a soft spot for mice ever since they were a child?,,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
+the-lost-library,in-which-book,191,does a character's father have a soft spot for mice?,,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
 the-lost-library,in-which-book,193,does a character spend twenty years believing they are a ghost?,,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
+the-lost-library,in-which-book,197,is a character referred to as the boy with a question mark face?,,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
 the-lost-library,in-which-book,203,does a performance involving matchsticks reveal the truth about an incident 20 years before?,,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
 the-lost-library,in-which-book,209,does someone bring tomatoes for their teachers on the first day of school?,,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
 the-lost-library,in-which-book,212,"does ""unanticipated animal behavior or interference"" become the official conclusion of a 20 year-old case?",,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
 the-lost-library,in-which-book,,"does the dedication page read, ""For the librarians of the past, present and future?",,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
 the-lost-library,in-which-book,3,"is a cat called a ""Six-Toed Grouch"" by a mouse?",,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
-the-lost-library,in-which-book,7,"do brother and sister cats play ""Boss of the Library""?",,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
 the-lost-library,in-which-book,13,is there a six-toed cat?,,Rebecca Stead and Wendy Mass,The Lost Library,Cedar Mill Public Library
 the-lost-library,in-which-book,14,did a magnolia tree indicate that the character was three quarters of the way to school?,,Rebecca Stead and Wendy Mass,The Lost Library,Lake Oswego Public Library
-the-lost-library,in-which-book,15,"do kids say ""ew"" to a character's choice of snack at school?",,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
-the-lost-library,in-which-book,15,is a character supposed to write something in in their journal every day?,,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
 the-lost-library,in-which-book,15,is a character supposed to write in a journal every day for school?,,Rebecca Stead and Wendy Mass,The Lost Library,Cedar Mill Public Library
-the-lost-library,in-which-book,16,is a character's dad an exterminator?,,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
 the-lost-library,in-which-book,17,does a character write that clouds smell like bug spray?,,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
-the-lost-library,in-which-book,17,does a charactor wear an imaginary cape?,,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
-the-lost-library,in-which-book,19,"is there a sign that reads ""TAKE A BOOK, LEAVE A BOOK. OR BOTH.""",,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
 the-lost-library,in-which-book,24,is there a cat with multiple names?,,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
-the-lost-library,in-which-book,25,"is a character's mother described as ""the most patient and encouraging tech support person in Martinville""?",,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
 the-lost-library,in-which-book,25,is the parent a tech-support person?,,Rebecca Stead and Wendy Mass,The Lost Library,Lake Oswego Public Library
 the-lost-library,in-which-book,26,"is there a book titled, ""How to Write a Mystery Novel"", found in a little free library box?",,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
 the-lost-library,in-which-book,28,"do two friends have old-fashioned phones they call ""the bat phones""?",,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
 the-lost-library,in-which-book,29,were students building pyramids out of pretzels and marshmallows?,,Rebecca Stead and Wendy Mass,The Lost Library,Lake Oswego Public Library
 the-lost-library,in-which-book,32,"is a character's call to come home immediately a long, loud whistle, followed by two short ones?",,Rebecca Stead and Wendy Mass,The Lost Library,Lake Oswego Public Library
-the-lost-library,in-which-book,36,did a library burn to the ground?,,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
 the-lost-library,in-which-book,38,do ghosts live in a one hundred and fifty year old house?,,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
-the-lost-library,in-which-book,38,does a ghost have to hide because of their lack of talent for invisibility?,,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
-the-lost-library,in-which-book,39,"does a character repeatedly say ""What Courage!""?",,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
-the-lost-library,in-which-book,40,"does Ms. Scoggin describe a character as ""a test""?",,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
-the-lost-library,in-which-book,50,does a character switch from wearing an imaginary cape to an imaginary detective's cap?,,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
-the-lost-library,in-which-book,51,"does a teacher keep an ""author correspondence center"" at the back of their classroom?",,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
+the-lost-library,in-which-book,51,does a teacher keep an 'author correspondence center' at the back of the classroom?,,Rebecca Stead and Wendy Mass,The Lost Library,Newberg Public Library
 the-lost-library,in-which-book,52,does a character write a letter to a famous mystery writer?,,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
 the-lost-library,in-which-book,53,"does a teacher say, ""All of life is a mystery, in a way.  And that makes every single one of us a detective""?",,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
 the-lost-library,in-which-book,59,"is there an event called ""Book Club Wednesdays""?",,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
-the-lost-library,in-which-book,62,"does a character declare Al's favorite book as ""Not boring""?",,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
-the-lost-library,in-which-book,63,"are an egg crate, a wagon an umbrella and a suitcase added as rooms to a little free library?",,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
-the-lost-library,in-which-book,66,does a mouse lose the tip of his tail to a hawk?,,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
-the-lost-library,in-which-book,70,"does everyone groan when they find out that ""there's no recess in middle school""",,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
 the-lost-library,in-which-book,73,"does the gym smell like floor polish, and what is the name of the school?",,Rebecca Stead and Wendy Mass,The Lost Library,Lake Oswego Public Library
 the-lost-library,in-which-book,74,"does a character's dad receive ""mouse complaints""?",,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
 the-lost-library,in-which-book,78,does a character find a brown bag lunch on the porch every Wednesday?,,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
-the-lost-library,in-which-book,78,is a tuna fish and dill pickle sandwich on rye bread with lettuce delivered to someone every Wednesday?,,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
-the-lost-library,in-which-book,79,"does a character refer to a library patron as ""our dear boy""",,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
 the-lost-library,in-which-book,80,do we learn that a character grew up in an orphanage?,,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
-the-lost-library,in-which-book,81,"does a character think that batteries come from the ""battery library""?",,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
-the-lost-library,in-which-book,82,"does a character refer to a library as a ""grubby giant""?",,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
-the-lost-library,in-which-book,83,"do characters divide their books into ""horse stories, dog stories and other animal stories""?",,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
 the-lost-library,in-which-book,85,do two characters begin to have trouble with hovering?,,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
 the-lost-library,in-which-book,91,does a fatal fire of unknown origin occur in the past?,,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
 the-lost-library,in-which-book,91,is there a Polaroid picture found in an old book?,,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
+the-lost-library,in-which-book,91,does someone use a Polaroid as a bookmark?,,Rebecca Stead and Wendy Mass,The Lost Library,Newberg Public Library
 the-lost-library,in-which-book,94,do two characters conspire to rescue a mouse?,,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
 the-lost-library,in-which-book,97,"is a character referred to as ""the Dear Boy""?",,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
 the-lost-library,in-which-book,97,is there an animal named Eggy?,,Rebecca Stead and Wendy Mass,The Lost Library,Lake Oswego Public Library
 the-lost-library,in-which-book,106,does a character stir their tea with their pinkie finger?,,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
 the-lost-library,in-which-book,106,does a character stir a sugar cube in their tea using a pinkie finger?,,Rebecca Stead and Wendy Mass,The Lost Library,Lake Oswego Public Library
-the-lost-library,in-which-book,108,"is a character asked ""You are a librarian, are you not?""",,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
 the-lost-library,in-which-book,109,does a character actually believe they are a ghost?,,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
-the-lost-library,in-which-book,109,does a character float through the ceiling?,,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
-the-lost-library,in-which-book,113,does a character refer to getting on a library computer as a panicked game of musical chairs?,,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
 the-lost-library,in-which-book,118,is there a character named Bruce Melon?,,Rebecca Stead and Wendy Mass,The Lost Library,Lake Oswego Public Library
 the-lost-library,in-which-book,119,does a character ask parents for an expiration date on all of the rules they have set for them?,,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
-the-lost-library,in-which-book,119,does a character have a middle school expiration date for the end of his parents rules?,,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
 the-lost-library,in-which-book,123,does a character do errands on Mondays?,,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
-the-lost-library,in-which-book,124,does a cat serve as the guardian of the library?,,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
 the-lost-library,in-which-book,127,does a cat enjoy listening to poetry?,,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
 the-lost-library,in-which-book,129,did someone have french toast with bananas for breakfast?,,Rebecca Stead and Wendy Mass,The Lost Library,Lake Oswego Public Library
-the-lost-library,in-which-book,132,does a teacher wear a bow-tie with little books on it?,,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
 the-lost-library,in-which-book,133,do the 5th grade teachers read poems at graduation?,,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
 the-lost-library,in-which-book,135,"are there 59 different kinds of cakes, pies, brownies, cookies and one bag of mixed nuts?",,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
 the-lost-library,in-which-book,138,does a character read the first chapter of their book over and over again?,,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
 the-lost-library,in-which-book,143,does a character answer a door holding a cheese plate?,,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
-the-lost-library,in-which-book,148,does a character show up with a bike basket full of individually wrapped brownies?,,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
 the-lost-library,in-which-book,152,is a treehouse called an attractive nuisance?,,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
 the-lost-library,in-which-book,162,is there an intern named Edward?,,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
 the-lost-library,in-which-book,165,is there a sitting spot called the rock of truth?,,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
 the-lost-library,in-which-book,165,"is there a ""rock of truth""?",,Rebecca Stead and Wendy Mass,The Lost Library,Lake Oswego Public Library
 the-lost-library,in-which-book,168,does a library burn down in the past?,,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
-the-lost-library,in-which-book,169,"does a character discover their father is the famous mystery writer, H.G. Higgins?",,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
-the-lost-library,in-which-book,175,does something called the Six-Toed Monster live at the movie theater?,,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
 the-lost-library,in-which-book,176,is there a six-toed monster who lives in a movie theater?,,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
 the-lost-library,in-which-book,178,are there 8 brothers and sisters whose names all begin with F?,,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
 the-lost-library,in-which-book,186,do two characters float and disappear through the ceiling?,,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
 the-lost-library,in-which-book,188,does a character find out their dad is a famous author?,,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
-the-lost-library,in-which-book,191,does a character's father have a soft spot for mice?,,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
-the-lost-library,in-which-book,197,is a character referred to as the boy with a question mark face?,,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
 the-lost-library,in-which-book,201,do mice and a cat put on a play?,,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group
 the-lost-library,in-which-book,209,does someone bring tomatoes to school?,,Rebecca Stead and Wendy Mass,The Lost Library,Lake Oswego Public Library
 the-lost-library,in-which-book,210,does a student give their teachers tomatoes instead of apples on the first day of school?,,Rebecca Stead and Wendy Mass,The Lost Library,OBOB Parent Group

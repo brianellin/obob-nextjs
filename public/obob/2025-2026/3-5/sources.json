@@ -19,6 +19,11 @@
       "path": "obobdog_community/questions.json",
       "name": "OBOB.dog Community",
       "link": "/blog/obob-dog-community"
+      },
+      {
+        "path": "newberg/questions.json",
+        "name": "Newberg Public Library",
+        "link": "https://www.newbergoregon.gov/government/departments/library/oregon_battle_of_the_books.php"
       }
     ]
   } 

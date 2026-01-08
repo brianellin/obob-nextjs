@@ -1,5 +1,4 @@
 book_key,question_type,page,text,answer,author_name,book_title,source_name
-number-the-stars,content,1,How many years old is Kirsti?,5 OR five,Lois Lowry,Number the Stars,OBOB Parent Group
 number-the-stars,content,3,"At the beginning of the book, how long have the German soldiers been in Denmark?",Three years,Lois Lowry,Number the Stars,OBOB Parent Group
 number-the-stars,content,3,What do Annemarie and Ellen secretly call the tall German soldier with the long neck?,Giraffe,Lois Lowry,Number the Stars,OBOB Parent Group
 number-the-stars,content,,Two-part question: What are the names of Annemarie's two sisters?,Kirsti (or Kirsten) and Lise,Lois Lowry,Number the Stars,OBOB Parent Group
@@ -84,14 +83,13 @@ number-the-stars,content,122,What does Kirsti say she's going to be when she gro
 number-the-stars,content,,Two-part question: Which two people does Annemarie know who were members of the Resistance?,Peter and Lise,Lois Lowry,Number the Stars,OBOB Parent Group
 number-the-stars,content,128,How old was Annemarie when the war ended?,Twelve,Lois Lowry,Number the Stars,OBOB Parent Group
 number-the-stars,content,,"This is a two part question, what is the name of the city and country ths story takes place in?",Copenhagen and Denmark,Lois Lowry,Number the Stars,OBOB Parent Group
+number-the-stars,content,1,How many years old is Kirsti?,5 OR five,Lois Lowry,Number the Stars,OBOB Parent Group
 number-the-stars,content,2,What is the name of the street in Annemarie's neighborhood with shops and cafes?,Osterbrogade,Lois Lowry,Number the Stars,OBOB Parent Group
 number-the-stars,content,6,On which floor of the apartment building does Ellen's family live?,Second,Lois Lowry,Number the Stars,OBOB Parent Group
 number-the-stars,content,6,What is the first and last name of Annemarie's best friend?,Ellen Rosen,Lois Lowry,Number the Stars,OBOB Parent Group
 number-the-stars,content,7,What is the Danish name of the illegal newspaper that Annemarie's mother burns after reading?,De Frie Danske,Lois Lowry,Number the Stars,OBOB Parent Group
 number-the-stars,content,9,What does Kirsti want on her bread that she can't have?,Butter,Lois Lowry,Number the Stars,OBOB.dog Community
-number-the-stars,content,12,What is the name of the Daniush king?,King Christian,Lois Lowry,Number the Stars,OBOB Parent Group
 number-the-stars,content,12,What is the first name of the king of Denmark?,Christian,Lois Lowry,Number the Stars,OBOB Parent Group
-number-the-stars,content,16,Two part question...name two of the three items stored in Lise's trunk?,"Wedding Dress, Yellow Dress or Crocheted Pillow cases",Lois Lowry,Number the Stars,OBOB Parent Group
 number-the-stars,content,16,[TWO PARTS] What are two of the items in the blue trunk that belonged to Lise?,Pillowcase(s) OR (Wedding) Dress OR (Engagement) Skirt,Lois Lowry,Number the Stars,OBOB Parent Group
 number-the-stars,content,20,What material are Samuel's bicycle wheels made from?,Wood,Lois Lowry,Number the Stars,OBOB Parent Group
 number-the-stars,content,22,What time is the curfew in Copenhagen?,eight o'clock,Lois Lowry,Number the Stars,OBOB Parent Group
@@ -128,9 +126,13 @@ number-the-stars,content,104,Annemarie makes a basket to hide the packet she del
 number-the-stars,content,,Annemarie tells herself what story as she navigates the path to the harbor to deliver the packet to her uncle?,Litte Red Riding-Hood,Lois Lowry,Number the Stars,OBOB Parent Group
 number-the-stars,content,4,what is the name of Annemarie’s stubborn little sister?,Kirsti,Lois Lowry,Number the Stars,Lake Oswego Public Library
 number-the-stars,content,7,"what is the name of the illegal, anti-Nazi newspaper that Annemarie’s family sometimes receives?",De Frie Danske (or The Free Danes),Lois Lowry,Number the Stars,Lake Oswego Public Library
+number-the-stars,content,12,What is the name of the Daniush king?,King Christian,Lois Lowry,Number the Stars,OBOB Parent Group
+number-the-stars,content,16,Two part question...name two of the three items stored in Lise's trunk?,"Wedding Dress, Yellow Dress or Crocheted Pillow cases",Lois Lowry,Number the Stars,OBOB Parent Group
 number-the-stars,content,23,What day of the week was the girls foot race that Annemarie won?,Friday,Lois Lowry,Number the Stars,OBOB.dog Community
 number-the-stars,content,27,what is the title of Annemarie’s mother’s favorite book?,Gone with the Wind,Lois Lowry,Number the Stars,Lake Oswego Public Library
+number-the-stars,content,28,what material are Kirsti's new shoes made from?,fish skin,Lois Lowry,Number the Stars,Newberg Public Library
 number-the-stars,content,51,which family member does Annemarie go visit with her friend Ellen after Nazis come looking for the Rosens?,Uncle Henrik,Lois Lowry,Number the Stars,Lake Oswego Public Library
+number-the-stars,content,58,Mama named her dog Trofast when she was a child. What does Trofast mean?,Faithful,Lois Lowry,Number the Stars,Newberg Public Library
 number-the-stars,content,62,what is Uncle Henrik’s boat called?,Ingeborg.,Lois Lowry,Number the Stars,Cedar Mill Public Library
 number-the-stars,content,67,what does Kirsti name the kitten at her uncle’s house?,"Thor, God of Thunder",Lois Lowry,Number the Stars,Lake Oswego Public Library
 number-the-stars,content,68,what is the name of Uncle Henrik’s cow?,Blossom,Lois Lowry,Number the Stars,Lake Oswego Public Library
@@ -249,6 +251,7 @@ number-the-stars,in-which-book,78,does a character consider taking their friend 
 number-the-stars,in-which-book,88,is a casket stuffed with folded blankets and articles of clothing?,,Lois Lowry,Number the Stars,OBOB Parent Group
 number-the-stars,in-which-book,,is there a house with a loose step leading up to the kitchen door?,,Lois Lowry,Number the Stars,OBOB Parent Group
 number-the-stars,in-which-book,6,"is the setting Nazi-occupied Copenhagen, Denmark?",,Lois Lowry,Number the Stars,Lake Oswego Public Library
+number-the-stars,in-which-book,9,"does someone wish for a ""big yellow cupcake, with pink frosting""?",,Lois Lowry,Number the Stars,Newberg Public Library
 number-the-stars,in-which-book,12,is there a king named Christian who rides a horse named Jubilee through town every morning?,,Lois Lowry,Number the Stars,Lake Oswego Public Library
 number-the-stars,in-which-book,24,is a button shop shut down because the owners are Jewish?,,Lois Lowry,Number the Stars,Lake Oswego Public Library
 number-the-stars,in-which-book,28,does a character receive shoes made of fish skin because there is no leather to be had?,,Lois Lowry,Number the Stars,Lake Oswego Public Library
