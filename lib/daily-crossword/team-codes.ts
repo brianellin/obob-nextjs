@@ -211,6 +211,50 @@ export function getCursorColor(nickname: string): string {
 }
 
 /**
+ * Map of color names used in nicknames to their hex values
+ */
+const NICKNAME_COLORS: Record<string, string> = {
+  blue: "#1E88E5",
+  red: "#E53935",
+  green: "#43A047",
+  purple: "#8E24AA",
+  orange: "#F4511E",
+  pink: "#D81B60",
+  teal: "#00897B",
+  gold: "#FFA000",
+  silver: "#78909C",
+  coral: "#FF7043",
+  mint: "#26A69A",
+  peach: "#FF8A65",
+  indigo: "#3949AB",
+  crimson: "#C62828",
+  emerald: "#00C853",
+  amber: "#FFB300",
+};
+
+/**
+ * Get the hex color for a nickname based on its color word
+ * Extracts the color word from nicknames like "Blue Pup" or "Green Corgi"
+ */
+export function getNicknameColor(nickname: string): string {
+  const firstWord = nickname.split(" ")[0]?.toLowerCase();
+  
+  if (firstWord && NICKNAME_COLORS[firstWord]) {
+    return NICKNAME_COLORS[firstWord];
+  }
+
+  // Fallback: hash-based color for unknown nicknames
+  const fallbackColors = Object.values(NICKNAME_COLORS);
+  let hash = 0;
+  for (let i = 0; i < nickname.length; i++) {
+    hash = (hash << 5) - hash + nickname.charCodeAt(i);
+    hash |= 0;
+  }
+
+  return fallbackColors[Math.abs(hash) % fallbackColors.length];
+}
+
+/**
  * Validate a team code format
  * Format: DOG_WORD-XXXX where X is from unambiguous character set
  */

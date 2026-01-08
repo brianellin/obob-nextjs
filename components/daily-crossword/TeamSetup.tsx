@@ -10,8 +10,8 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Users, Copy, Check, ArrowRight, Loader2, Grid3X3 } from "lucide-react";
-import { generateSessionId } from "@/lib/daily-crossword/team-codes";
+import { Users, Copy, Check, ArrowRight, Loader2, Grid3X3, Link2 } from "lucide-react";
+import { generateSessionId, getNicknameColor } from "@/lib/daily-crossword/team-codes";
 
 interface TeamSetupProps {
   year: string;
@@ -31,6 +31,7 @@ export default function TeamSetup({
   const [joinCode, setJoinCode] = useState("");
   const [nickname, setNickname] = useState("");
   const [copied, setCopied] = useState(false);
+  const [linkCopied, setLinkCopied] = useState(false);
 
   const getOrCreateSessionId = () => {
     const key = "daily-crossword-session";
@@ -116,6 +117,17 @@ export default function TeamSetup({
     await navigator.clipboard.writeText(teamCode);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
+  };
+
+  const getShareableLink = () => {
+    if (typeof window === "undefined") return "";
+    return `${window.location.origin}/crossword/${year}/${division}?team=${teamCode}`;
+  };
+
+  const handleCopyLink = async () => {
+    await navigator.clipboard.writeText(getShareableLink());
+    setLinkCopied(true);
+    setTimeout(() => setLinkCopied(false), 2000);
   };
 
   const handleStartPuzzle = () => {
@@ -225,18 +237,57 @@ export default function TeamSetup({
   if (mode === "create") {
     return (
       <div className="max-w-lg mx-auto p-4 space-y-6">
-        <div className="text-center space-y-2">
+        <div className="text-center space-y-3">
           <h1 className="text-3xl font-bold font-serif">Team Created!</h1>
-          <p className="text-muted-foreground">
-            Share this code with your teammates
-          </p>
+          <div className="flex items-center justify-center gap-2">
+            <span className="text-muted-foreground">You joined as</span>
+            <span
+              className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-sm font-medium border"
+              style={{
+                backgroundColor: `${getNicknameColor(nickname)}12`,
+                color: getNicknameColor(nickname),
+                borderColor: `${getNicknameColor(nickname)}40`,
+              }}
+            >
+              <span
+                className="w-2 h-2 rounded-full"
+                style={{ backgroundColor: getNicknameColor(nickname) }}
+              />
+              {nickname}
+            </span>
+          </div>
         </div>
 
         <Card>
           <CardContent className="pt-6 space-y-4">
+            <div className="space-y-2">
+              <p className="text-sm text-muted-foreground text-center">
+                Share this link with your teammates
+              </p>
+              <div className="flex items-center gap-2">
+                <Input
+                  readOnly
+                  value={getShareableLink()}
+                  className="text-sm font-mono bg-gray-50"
+                />
+                <Button
+                  variant="outline"
+                  size="icon"
+                  onClick={handleCopyLink}
+                  className="shrink-0"
+                >
+                  {linkCopied ? (
+                    <Check className="h-4 w-4 text-green-600" />
+                  ) : (
+                    <Link2 className="h-4 w-4" />
+                  )}
+                </Button>
+              </div>
+            </div>
+
             <div className="text-center">
               <p className="text-sm text-muted-foreground mb-2">
-                Your team code
+                Or share your team code
               </p>
               <div className="flex items-center justify-center gap-2">
                 <span className="text-4xl font-bold font-mono tracking-wider">
@@ -257,18 +308,10 @@ export default function TeamSetup({
               </div>
             </div>
 
-            <div className="bg-gray-50 p-4 rounded-lg text-center">
-              <p className="text-sm text-muted-foreground mb-1">
-                You joined as
-              </p>
-              <p className="font-medium">{nickname}</p>
-            </div>
-
-            <div className="bg-blue-50 border border-blue-100 p-4 rounded-lg">
-              <p className="text-sm text-blue-800">
-                <strong>Tip:</strong> Text the code to your teammates so they
-                can join! Everyone with the code can help solve the puzzle
-                together.
+            <div className="bg-gray-100 border border-gray-200 p-4 rounded-lg">
+              <p className="text-sm text-black">
+                <strong>Tip:</strong> Share the link or code with your teammates so they
+                can join! Everyone with the code or link can help solve the puzzle together.
               </p>
             </div>
 

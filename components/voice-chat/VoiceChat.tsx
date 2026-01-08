@@ -9,7 +9,7 @@ import {
   useRoomContext,
 } from "@livekit/components-react";
 import { Track } from "livekit-client";
-import { Mic, MicOff, X, AlertTriangle } from "lucide-react";
+import { Mic, MicOff, VolumeOff, X, AlertTriangle } from "lucide-react";
 import "@livekit/components-styles";
 import { usePostHog } from "posthog-js/react";
 import {
@@ -564,13 +564,13 @@ function VoiceDialog({ open, onChoice, isConnected, playerCount, permissionError
           ) : (
             <button
               onClick={() => onChoice("skip")}
-              className="w-full flex items-center gap-3 p-3 rounded-xl border border-gray-200 hover:bg-gray-50 transition-all text-left"
+              className="w-full flex items-center gap-3 p-4 rounded-xl border border-gray-200 hover:bg-gray-50 transition-all text-left"
             >
-              <div className="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center flex-shrink-0">
-                <MicOff className="h-5 w-5 text-gray-400" />
+              <div className="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center flex-shrink-0">
+                <VolumeOff className="h-6 w-6 text-gray-400" />
               </div>
               <div>
-                <div className="font-medium text-gray-600">No thanks</div>
+                <div className="font-semibold text-gray-600">No thanks</div>
                 <div className="text-sm text-gray-400">I'll just play quietly</div>
               </div>
             </button>
@@ -580,7 +580,7 @@ function VoiceDialog({ open, onChoice, isConnected, playerCount, permissionError
         <p className="text-xs text-gray-400 text-center">
           {isConnected 
             ? "Tap the mic button anytime to change" 
-            : "You can join voice chat anytime from the header"}
+            : "Join and leave voice chat at any time."}
         </p>
       </div>
     </div>,
