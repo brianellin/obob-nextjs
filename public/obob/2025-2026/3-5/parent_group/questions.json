@@ -1241,7 +1241,7 @@
     },
     {
       "type": "content",
-      "text": "What's an ESA?",
+      "text": "What do the letters ESA stand for?",
       "book_key": "better-with-butter",
       "answer": "emotional support animal",
       "page": 140
@@ -7249,12 +7249,6 @@
     },
     {
       "type": "in-which-book",
-      "text": "does someone's clothing think the blues sounds like an old man crying about something they can't have?",
-      "book_key": "finding-langston",
-      "page": 80
-    },
-    {
-      "type": "in-which-book",
       "text": "is blues not something a character would like to dance to?",
       "book_key": "finding-langston",
       "page": 80
@@ -10502,7 +10496,7 @@
     },
     {
       "type": "in-which-book",
-      "text": "are there trees that are twisted and snapped jalfway up from the ground?",
+      "text": "are there trees that are twisted and snapped halfway up from the ground?",
       "book_key": "hatchet",
       "page": 68
     },
@@ -11939,7 +11933,7 @@
     },
     {
       "type": "in-which-book",
-      "text": "is the main character's father in the Navy?",
+      "text": "is the main character's father in the Vietnamese Navy?",
       "book_key": "inside-out-and-back-again",
       "page": 12
     },
@@ -14135,7 +14129,7 @@
     },
     {
       "type": "content",
-      "text": "In what is his best sport?",
+      "text": "What is Nick's best sport?",
       "book_key": "just-like-click",
       "answer": "Badminton",
       "page": 9
@@ -15749,7 +15743,7 @@
       "type": "content",
       "text": "What is on Mr. O'Neals bowtie that he wears to graduation?",
       "book_key": "the-lost-library",
-      "answer": "Bookd",
+      "answer": "Books",
       "page": 132
     },
     {
@@ -18210,7 +18204,7 @@
     },
     {
       "type": "content",
-      "text": "What does Annemarie's father get to prove he has three daughtters?",
+      "text": "What does Annemarie's father show to the soldiers to prove he has three daughters?",
       "book_key": "number-the-stars",
       "answer": "Baby Photos",
       "page": 48

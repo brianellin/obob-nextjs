@@ -63,11 +63,11 @@
     },
     {
       "type": "content",
-      "text": "What drink does Brian make from the survival kit?",
+      "text": "What color or flavor of drink does Brian make from the survival kit?",
       "book_key": "hatchet",
       "page": 176,
       "contributor": "Amelia L.",
-      "answer": "Orange juice."
+      "answer": "Orange"
     },
     {
       "type": "in-which-book",

@@ -490,7 +490,7 @@
         "id": "3-down",
         "number": 3,
         "direction": "down",
-        "text": "In what is his best sport?",
+        "text": "What is Nick's best sport?",
         "answer": "BADMINTON",
         "startRow": 7,
         "startCol": 15,

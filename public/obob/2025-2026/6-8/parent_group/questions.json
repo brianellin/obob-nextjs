@@ -4520,12 +4520,6 @@
     },
     {
       "type": "in-which-book",
-      "text": "does Shenanigan discover a toy dragon in the attic?",
-      "book_key": "a-dictionary-of-scoundrels",
-      "page": 112
-    },
-    {
-      "type": "in-which-book",
       "text": "does Aunt Schadenfreude fake family sabotage?",
       "book_key": "a-dictionary-of-scoundrels",
       "page": 320
@@ -7138,7 +7132,7 @@
       "type": "content",
       "text": "What decorates the cover of Abba's iPad?",
       "book_key": "ellen-outside-the-lines",
-      "answer": "A rainbow-flag sticker",
+      "answer": "Rainbox flag stickers",
       "page": 35
     },
     {
@@ -10918,9 +10912,9 @@
     },
     {
       "type": "content",
-      "text": "What is the final test in the Hitler Youth initiations?",
+      "text": "What is the final test in the Hitler Youth initiations? Be specific.",
       "book_key": "projekt-1065-a-novel-of-world-war-ii",
-      "answer": "Jumping off a 2 story building",
+      "answer": "Jumping off a two-story building into a pool.",
       "page": 83
     },
     {
@@ -11023,9 +11017,9 @@
     },
     {
       "type": "content",
-      "text": "Why was there an opening on the Science Team?",
+      "text": "What is the name of the character who was killed and would be replaced on the science team?",
       "book_key": "projekt-1065-a-novel-of-world-war-ii",
-      "answer": "Max was killed",
+      "answer": "Max",
       "page": 215
     },
     {
