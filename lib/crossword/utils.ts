@@ -46,8 +46,13 @@ export function isSingleWordAnswer(answer: string): boolean {
     .replace(/\(.*?\)/g, "")
     .trim();
 
-  // If there are spaces in the cleaned answer, it's multi-word
+  // If there are spaces or separators (/, &, "or", "and") in the cleaned answer, it's multi-word
   if (/\s/.test(withoutParens)) {
+    return false;
+  }
+
+  // Reject answers with separators (alternative/compound answers like "Humans/Aquarists" or "Lebanese-Syrian")
+  if (/[\/\-]/.test(withoutParens)) {
     return false;
   }
 
