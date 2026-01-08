@@ -32,9 +32,9 @@ export default function CrosswordDivisionPicker() {
         </div>
 
         <div className="bg-white border-2 border-black rounded-lg p-4 text-md text-black font-serif">
-          <p className="mb-2">
-            <strong>A new puzzle every day!</strong>
-            <br /> Collaborate with teammates and friends to solve a crossword
+          <p className="font-bold mb-2">A new puzzle every day!</p>
+          <p>
+            Collaborate with teammates and friends to solve a crossword
             featuring content questions from all the books in your division.
           </p>
         </div>
