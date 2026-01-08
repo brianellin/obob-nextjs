@@ -36,6 +36,8 @@ import {
 } from "@/lib/daily-crossword/analytics";
 import { CompletionBanner } from "./CompletionBanner";
 import { CrosswordFeedback } from "./CrosswordFeedback";
+import { FAQ } from "@/components/FAQ";
+import { crosswordFAQItems } from "./crossword-faq-items";
 
 interface LibraryClueData {
   clue: string;
@@ -883,14 +885,15 @@ export default function RealtimeCrossword({
           </div>
         </CrosswordProvider>
 
-        {/* Feedback form */}
-        <div className="mt-6 px-4 sm:px-0 pb-4">
+        {/* Feedback form and FAQ */}
+        <div className="mt-6 px-4 sm:px-0 pb-4 space-y-4">
           <CrosswordFeedback
             teamCode={teamCode}
             year={year}
             division={division}
             puzzleDate={dateString}
           />
+          <FAQ items={crosswordFAQItems} title="Team Crossword FAQ" />
         </div>
       </div>
 
