@@ -79,7 +79,7 @@ export function CrosswordFeedback({
         <RosieIcon className="w-8 h-8 flex-shrink-0" />
         <div className="flex-1 min-w-0">
           <p className="text-sm font-medium text-amber-900">
-            Team Crossword is new! We&apos;re looking for feedback.
+            Daily Crossword is new! We&apos;re looking for feedback.
           </p>
         </div>
         {isExpanded ? (

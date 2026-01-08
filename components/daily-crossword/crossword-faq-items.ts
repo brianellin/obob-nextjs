@@ -4,12 +4,12 @@ export const crosswordFAQItems: FAQItem[] = [
   {
     question: "Can I select my own books?",
     answer:
-      "No — Team Crossword is designed as a collaborative game where you bring in friends and teammates to help solve the puzzle together. If you want to practice answering questions on your own, check out the other practice modes on OBOB Dog!",
+      "No — Daily Crossword is designed as a collaborative game where you bring in friends and teammates to help solve the puzzle together. If you want to practice answering questions on your own, check out the other practice modes on OBOB Dog!",
   },
   {
-    question: "Does everybody have the same puzzle?",
+    question: "Does every team get the same puzzle?",
     answer:
-      "Yes! Every day there's a new puzzle and everybody gets the same one. Collaborate with your team to solve it as quickly as possible and compare your time with friends.",
+      "Yes! Every day there's a new puzzle, and every team gets the same one. Collaborate with your team to solve it as quickly as possible and compare your time with friends.",
   },
   {
     question: "Can I talk with my team while we solve the puzzle?",

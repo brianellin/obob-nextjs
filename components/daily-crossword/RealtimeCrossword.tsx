@@ -893,7 +893,7 @@ export default function RealtimeCrossword({
             division={division}
             puzzleDate={dateString}
           />
-          <FAQ items={crosswordFAQItems} title="Team Crossword FAQ" />
+          <FAQ items={crosswordFAQItems} title="Daily Crossword FAQ" />
         </div>
       </div>
 

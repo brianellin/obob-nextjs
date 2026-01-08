@@ -5,6 +5,8 @@ import { useRouter } from "next/navigation";
 import { Grid3X3 } from "lucide-react";
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 import { Button } from "@/components/ui/button";
+import { FAQ } from "@/components/FAQ";
+import { crosswordFAQItems } from "@/components/daily-crossword/crossword-faq-items";
 
 const currentYear = "2025-2026";
 
@@ -78,6 +80,10 @@ export default function CrosswordDivisionPicker() {
         <Button className="w-full" size="lg" onClick={handleStart}>
           Start Crossword
         </Button>
+
+        <div className="pt-8">
+          <FAQ items={crosswordFAQItems} title="Daily Crossword FAQ" />
+        </div>
       </div>
     </main>
   );
