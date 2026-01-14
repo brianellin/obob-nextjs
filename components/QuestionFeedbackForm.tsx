@@ -150,7 +150,8 @@ export default function QuestionFeedbackForm({
             />
             <p className="text-xs text-gray-500 mt-1">
               We&apos;ll use this to ask follow-up questions and let you know
-              when the fix is live.
+              when the fix is live. By providing your email, you confirm you are
+              13 or older, or have parental permission.
             </p>
           </div>
 

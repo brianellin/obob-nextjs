@@ -106,9 +106,15 @@ export default function AboutPage() {
           </CardHeader>
           <CardContent className="flex gap-2 flex-col">
             <p className="">
-              {" "}
               Made with 💚 by Rosie, Gianna, Simone, and Brian (Glencoe
               Elementary).
+            </p>
+            <p className="text-sm text-slate-600">
+              OBOB.dog is operated by{" "}
+              <Link href="https://doing.systems" className="underline">
+                Doing Systems, LLC
+              </Link>
+              .
             </p>
             <Image
               src="/rosie.jpeg"
@@ -147,34 +153,45 @@ export default function AboutPage() {
 
         <Card>
           <CardHeader className="flex flex-row items-center gap-2">
-            <CardTitle>Privacy Policy</CardTitle>
+            <CardTitle>Privacy & Safety</CardTitle>
           </CardHeader>
           <CardContent>
             <p className="leading-7 mb-4">
               OBOB.dog values the privacy of its users, especially our unique
               audience of students studying for Oregon Battle of the Books.
-            </p>
-            <p className="leading-7 mb-4">
-              We&apos;ve designed the site to be COPPA compliant with the
-              following principles:
+              We&apos;ve designed the site to be COPPA compliant.
             </p>
             <ul className="my-4 ml-6 list-disc [&>li]:mt-2 text-slate-700">
-              <li>
-                OBOB.dog is a read-only with no login or signup required for
-                use.
-              </li>
-              <li>
-                There are no forms and we do not collect personal data of any
-                kind.
-              </li>
-              <li>
-                All questions have been written and reviewed by parent OBOB
-                volunteers and reviewed for safety.
-              </li>
+              <li>No login or signup required</li>
+              <li>No collection of personal data from children</li>
+              <li>Voice chat is live and never recorded</li>
+              <li>All questions reviewed by parent volunteers</li>
             </ul>
-            <p className="leading-7 text-slate-700 italic">
-              We&apos;re committed to providing a safe, private learning
-              environment for all OBOB participants.
+            <p className="leading-7 text-slate-700">
+              Read our full{" "}
+              <Link href="/privacy" className="underline">
+                Privacy Policy
+              </Link>{" "}
+              and{" "}
+              <Link href="/terms" className="underline">
+                Terms of Service
+              </Link>
+              .
+            </p>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader>
+            <CardTitle>Disclaimer</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p className="leading-7 text-slate-700">
+              OBOB.dog is an independent educational tool and is not affiliated
+              with, endorsed by, or sponsored by the Oregon Battle of the Books
+              program or the Oregon Association of School Libraries.
+              &ldquo;Oregon Battle of the Books&rdquo; and &ldquo;OBOB&rdquo;
+              are trademarks of the Oregon Association of School Libraries.
             </p>
           </CardContent>
         </Card>

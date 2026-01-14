@@ -578,9 +578,9 @@ function VoiceDialog({ open, onChoice, isConnected, playerCount, permissionError
         </div>
 
         <p className="text-xs text-gray-400 text-center">
-          {isConnected 
-            ? "Tap the mic button anytime to change" 
-            : "Join and leave voice chat at any time."}
+          {isConnected
+            ? "Tap the mic button anytime to change"
+            : "Voice chat is live and not recorded. We encourage parental supervision for younger users."}
         </p>
       </div>
     </div>,

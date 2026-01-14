@@ -11,7 +11,8 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Users, Copy, Check, ArrowRight, Loader2, Grid3X3, Link2 } from "lucide-react";
-import { generateSessionId, getNicknameColor } from "@/lib/daily-crossword/team-codes";
+import { getNicknameColor } from "@/lib/daily-crossword/team-codes";
+import { getOrCreateSessionId } from "@/lib/daily-crossword/session";
 
 interface TeamSetupProps {
   year: string;
@@ -33,15 +34,7 @@ export default function TeamSetup({
   const [copied, setCopied] = useState(false);
   const [linkCopied, setLinkCopied] = useState(false);
 
-  const getOrCreateSessionId = () => {
-    const key = "daily-crossword-session";
-    let sessionId = localStorage.getItem(key);
-    if (!sessionId) {
-      sessionId = generateSessionId();
-      localStorage.setItem(key, sessionId);
-    }
-    return sessionId;
-  };
+  // Session ID is managed by lib/daily-crossword/session.ts with 24h expiry
 
   const handleCreateTeam = async () => {
     setLoading(true);
@@ -49,6 +42,9 @@ export default function TeamSetup({
 
     try {
       const sessionId = getOrCreateSessionId();
+      if (!sessionId) {
+        throw new Error("Unable to create session. Please enable cookies and try again.");
+      }
       const response = await fetch("/api/daily-crossword/team", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -87,6 +83,9 @@ export default function TeamSetup({
 
     try {
       const sessionId = getOrCreateSessionId();
+      if (!sessionId) {
+        throw new Error("Unable to create session. Please enable cookies and try again.");
+      }
       const response = await fetch("/api/daily-crossword/team", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -132,6 +131,10 @@ export default function TeamSetup({
 
   const handleStartPuzzle = () => {
     const sessionId = getOrCreateSessionId();
+    if (!sessionId) {
+      setError("Unable to create session. Please enable cookies and try again.");
+      return;
+    }
     onTeamReady(teamCode, sessionId, nickname, "created");
   };
 

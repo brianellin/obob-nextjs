@@ -98,13 +98,19 @@ export function CrosswordFeedback({
             className="w-full px-3 py-2 border border-amber-300 rounded-lg bg-white text-sm resize-none focus:outline-none focus:ring-2 focus:ring-amber-400 focus:border-transparent"
             rows={3}
           />
-          <input
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            placeholder="Email (optional, for follow-up)"
-            className="w-full px-3 py-2 border border-amber-300 rounded-lg bg-white text-sm focus:outline-none focus:ring-2 focus:ring-amber-400 focus:border-transparent"
-          />
+          <div>
+            <input
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="Email (optional, for follow-up)"
+              className="w-full px-3 py-2 border border-amber-300 rounded-lg bg-white text-sm focus:outline-none focus:ring-2 focus:ring-amber-400 focus:border-transparent"
+            />
+            <p className="text-xs text-amber-700 mt-1">
+              By providing your email, you confirm you are 13 or older, or have
+              parental permission.
+            </p>
+          </div>
           <Button
             type="submit"
             disabled={!feedback.trim() || isSubmitting}

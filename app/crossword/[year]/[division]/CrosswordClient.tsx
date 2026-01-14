@@ -12,6 +12,7 @@ import {
   trackTeamJoined,
   type CrosswordAnalyticsContext,
 } from "@/lib/daily-crossword/analytics";
+import { getOrCreateSessionId, getSessionId } from "@/lib/daily-crossword/session";
 
 interface PuzzleData {
   puzzle: SerializedCrosswordPuzzle;
@@ -62,7 +63,7 @@ function DailyContent() {
       setInitialClue(urlClue);
     }
 
-    const storedSessionId = localStorage.getItem("daily-crossword-session");
+    const storedSessionId = getSessionId();
     const storedTeamCode = sessionStorage.getItem(`daily-team-${year}-${division}`);
 
     // URL team code takes precedence over stored team code - auto-join the team
@@ -89,11 +90,12 @@ function DailyContent() {
 
   const autoJoinTeam = async (code: string) => {
     try {
-      // Get or create session ID
-      let sessionId = localStorage.getItem("daily-crossword-session");
+      // Get or create session ID with 24h expiry
+      const sessionId = getOrCreateSessionId();
       if (!sessionId) {
-        sessionId = `session-${Date.now()}-${Math.random().toString(36).substring(2, 9)}`;
-        localStorage.setItem("daily-crossword-session", sessionId);
+        setIsInvitedUser(false);
+        setPhase("setup");
+        return;
       }
 
       const response = await fetch("/api/daily-crossword/team", {
