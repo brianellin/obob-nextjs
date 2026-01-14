@@ -1,6 +1,6 @@
 ---
 title: "Introducing Daily Crossword"
-date: "2025-01-14"
+date: "2026-01-14"
 excerpt: "A new collaborative way to practice OBOB with your team — solve a crossword puzzle together in real-time"
 ---
 
