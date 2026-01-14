@@ -164,7 +164,6 @@ export default function AboutPage() {
             <ul className="my-4 ml-6 list-disc [&>li]:mt-2 text-slate-700">
               <li>No login or signup required</li>
               <li>No collection of personal data from children</li>
-              <li>Voice chat is live and never recorded</li>
               <li>All questions reviewed by parent volunteers</li>
             </ul>
             <p className="leading-7 text-slate-700">
@@ -177,21 +176,6 @@ export default function AboutPage() {
                 Terms of Service
               </Link>
               .
-            </p>
-          </CardContent>
-        </Card>
-
-        <Card>
-          <CardHeader>
-            <CardTitle>Disclaimer</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <p className="leading-7 text-slate-700">
-              OBOB.dog is an independent educational tool and is not affiliated
-              with, endorsed by, or sponsored by the Oregon Battle of the Books
-              program or the Oregon Association of School Libraries.
-              &ldquo;Oregon Battle of the Books&rdquo; and &ldquo;OBOB&rdquo;
-              are trademarks of the Oregon Association of School Libraries.
             </p>
           </CardContent>
         </Card>

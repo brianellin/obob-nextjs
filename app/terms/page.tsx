@@ -68,19 +68,6 @@ export default function TermsPage() {
             <CardTitle>Intellectual Property</CardTitle>
           </CardHeader>
           <CardContent className="space-y-4">
-            <div className="bg-amber-50 border border-amber-200 p-4 rounded-lg">
-              <h3 className="font-semibold mb-2">Important Disclaimer</h3>
-              <p className="text-sm text-slate-700">
-                OBOB.dog is an <strong>independent educational tool</strong> and is{" "}
-                <strong>not affiliated with, endorsed by, or sponsored by</strong> the Oregon
-                Battle of the Books program or the Oregon Association of School Libraries.
-              </p>
-              <p className="text-sm text-slate-700 mt-2">
-                &ldquo;Oregon Battle of the Books&rdquo; and &ldquo;OBOB&rdquo; are trademarks
-                of the Oregon Association of School Libraries.
-              </p>
-            </div>
-
             <div>
               <h3 className="font-semibold mb-2">Book Content</h3>
               <p className="leading-7 text-slate-700">

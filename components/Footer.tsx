@@ -31,8 +31,6 @@ export default function Footer() {
         >
           Doing Systems, LLC
         </Link>
-        <span className="mx-2">&middot;</span>
-        Not affiliated with Oregon Battle of the Books
       </div>
     </footer>
   );

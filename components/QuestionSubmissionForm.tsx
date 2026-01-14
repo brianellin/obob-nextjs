@@ -261,6 +261,9 @@ export default function QuestionSubmissionForm({
                 className="bg-white"
                 disabled={isSubmitting}
               />
+              <p className="text-xs text-gray-500 mt-1">
+                By providing your email, you confirm you are 13+ or have parental permission.
+              </p>
             </div>
           </div>
 

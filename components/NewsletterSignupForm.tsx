@@ -119,41 +119,6 @@ export default function NewsletterSignupForm() {
       )}
 
       <div>
-        <label
-          htmlFor="email"
-          className="block text-sm font-medium text-gray-700 mb-2"
-        >
-          Email address <span className="text-red-500">*</span>
-        </label>
-        <Input
-          id="email"
-          type="email"
-          placeholder="your.email@example.com"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          disabled={isSubmitting}
-          required
-        />
-      </div>
-
-      <div>
-        <label
-          htmlFor="name"
-          className="block text-sm font-medium text-gray-700 mb-2"
-        >
-          Name <span className="text-gray-400">(optional)</span>
-        </label>
-        <Input
-          id="name"
-          type="text"
-          placeholder="Your name"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          disabled={isSubmitting}
-        />
-      </div>
-
-      <div>
         <label className="block text-sm font-medium text-gray-700 mb-2">
           I am a... <span className="text-red-500">*</span>
         </label>
@@ -198,6 +163,46 @@ export default function NewsletterSignupForm() {
             </ToggleGroupItem>
           ))}
         </ToggleGroup>
+      </div>
+
+      <div>
+        <label
+          htmlFor="email"
+          className="block text-sm font-medium text-gray-700 mb-2"
+        >
+          Email address <span className="text-red-500">*</span>
+        </label>
+        <Input
+          id="email"
+          type="email"
+          placeholder="your.email@example.com"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          disabled={isSubmitting}
+          required
+        />
+        {role === "Student" && (
+          <p className="text-xs text-gray-500 mt-1">
+            By providing your email, you confirm you are 13+ or have parental permission.
+          </p>
+        )}
+      </div>
+
+      <div>
+        <label
+          htmlFor="name"
+          className="block text-sm font-medium text-gray-700 mb-2"
+        >
+          Name <span className="text-gray-400">(optional)</span>
+        </label>
+        <Input
+          id="name"
+          type="text"
+          placeholder="Your name"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          disabled={isSubmitting}
+        />
       </div>
 
       <Button type="submit" disabled={isSubmitting} className="w-full">

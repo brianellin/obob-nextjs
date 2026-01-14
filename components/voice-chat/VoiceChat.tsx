@@ -503,7 +503,7 @@ function VoiceDialog({ open, onChoice, isConnected, playerCount, permissionError
     <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-[9999] p-4">
       <div className="bg-white rounded-xl shadow-xl max-w-sm w-full p-6 space-y-5">
         <div className="flex items-center justify-between">
-          <h3 className="text-xl font-bold">Voice Chat 🎙️</h3>
+          <h3 className="text-xl font-bold">Team Voice Chat 🎙️</h3>
           <button
             onClick={() => onChoice("skip")}
             className="p-1.5 hover:bg-gray-100 rounded-full transition-colors"
@@ -580,7 +580,7 @@ function VoiceDialog({ open, onChoice, isConnected, playerCount, permissionError
         <p className="text-xs text-gray-400 text-center">
           {isConnected
             ? "Tap the mic button anytime to change"
-            : "Voice chat is live and not recorded. We encourage parental supervision for younger users."}
+            : "Voice chat helps your team solve the puzzle together. It's live and not recorded. We encourage parental supervision."}
         </p>
       </div>
     </div>,

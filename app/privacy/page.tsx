@@ -139,11 +139,12 @@ export default function PrivacyPage() {
             </div>
 
             <div className="bg-blue-50 border border-blue-200 p-4 rounded-lg">
-              <h3 className="font-semibold mb-2">Voice Chat</h3>
+              <h3 className="font-semibold mb-2">Team Voice Chat</h3>
               <p className="text-sm text-slate-700">
-                Our optional voice chat feature uses WebRTC technology for real-time
-                communication between team members. Voice audio is transmitted peer-to-peer
-                and is <strong>NOT recorded, stored, or accessible</strong> to OBOB.dog at any
+                The Daily Crossword is designed for team collaboration. Voice chat lets
+                teammates discuss clues and solve the puzzle together in real-time. It uses
+                WebRTC technology where audio is transmitted peer-to-peer and is{" "}
+                <strong>NOT recorded, stored, or accessible</strong> to OBOB.dog at any
                 time. We encourage parental supervision when children use voice features.
               </p>
             </div>
