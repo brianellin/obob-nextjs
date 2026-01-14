@@ -18,16 +18,16 @@ export const metadata: Metadata = {
 export default function NewsletterPage() {
   return (
     <div className="container mx-auto max-w-md px-4 py-4">
-      <h1 className="text-4xl font-bold text-center mb-8 font-heading">
+      <h1 className="text-4xl font-bold text-center mb-8 font-rampart">
         <WavyUnderline style={0} thickness={4} color="text-yellow-900">
-          Stay in the Loop!
+          Newsletter
         </WavyUnderline>
       </h1>
 
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
-            Join the OBOB.dog Newsletter
+            Stay in the Loop
           </CardTitle>
           <CardDescription>
             Get occasional updates from OBOB.dog about new games, battle
