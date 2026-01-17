@@ -8,7 +8,7 @@
     },
     {
       "type": "in-which-book",
-      "text": "does a character dress up like Stephen Spielberg?",
+      "text": "does a character dress up like Steven Spielberg?",
       "book_key": "better-with-butter",
       "page": 9
     },
@@ -3015,7 +3015,7 @@
     },
     {
       "type": "in-which-book",
-      "text": "is it consider polite to lead your house guest to the basement first?",
+      "text": "is it considered polite to lead your house guest to the basement first?",
       "book_key": "elf-dog-and-owl-head",
       "page": 81
     },
@@ -3177,7 +3177,7 @@
     },
     {
       "type": "in-which-book",
-      "text": "do a group of elders remove a character memory?",
+      "text": "do a group of elders remove a character's memory?",
       "book_key": "elf-dog-and-owl-head",
       "page": 219
     },
@@ -7219,7 +7219,7 @@
     },
     {
       "type": "in-which-book",
-      "text": "does someone's clothing stay up late answering everyone one of another's questions?",
+      "text": "does someone stay up late answering everyone one of another's questions?",
       "book_key": "finding-langston",
       "page": 78
     },
@@ -10304,7 +10304,7 @@
     },
     {
       "type": "in-which-book",
-      "text": "Does a character lament getting hit by a deer and a tornado in just one day?",
+      "text": "Does a character lament getting hit by a moose and a tornado in just one day?",
       "book_key": "hatchet",
       "page": 139
     },
@@ -18078,7 +18078,7 @@
     },
     {
       "type": "content",
-      "text": "What is Annemarie's older siter's name?",
+      "text": "What is Annemarie's older sister's name?",
       "book_key": "number-the-stars",
       "answer": "Lise",
       "page": 12
@@ -18829,7 +18829,7 @@
     },
     {
       "type": "in-which-book",
-      "text": "is it explained that character switch between land and water like kids at the beach?",
+      "text": "dp charactera \"switch between land and water like kids at the beach\"?",
       "book_key": "odder",
       "page": 66
     },
@@ -19267,7 +19267,7 @@
     },
     {
       "type": "content",
-      "text": "How long can otters stay underwater",
+      "text": "How long can otters stay underwater?",
       "book_key": "odder",
       "answer": "6 - 7 minutes",
       "page": 45
@@ -22084,7 +22084,7 @@
     },
     {
       "type": "content",
-      "text": "What is the name of the plant that Masahior wanted to plant in his garden the most?  Be specific.",
+      "text": "What is the name of the plant that Masahiro wanted to plant in his garden the most?  Be specific.",
       "book_key": "the-secret-garden-on-81st-street",
       "answer": "The Don Juan Climbing Rose",
       "page": 234
@@ -23588,7 +23588,7 @@
     },
     {
       "type": "in-which-book",
-      "text": "does a mom and adaughter eat sandwiches on a green bench near the water?",
+      "text": "does a mom and a daughter eat sandwiches on a green bench near the water?",
       "book_key": "the-tail-of-emily-windsnap",
       "page": 119
     },

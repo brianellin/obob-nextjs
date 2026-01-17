@@ -125,7 +125,7 @@
     },
     {
       "type": "in-which-book",
-      "text": "does a character invited to join the Spirit Squad?",
+      "text": "is a character invited to join the Spirit Squad?",
       "book_key": "tagging-freedom",
       "page": 9,
       "contributor": "Isabel"
@@ -443,14 +443,6 @@
       "type": "content",
       "text": "what direction was Dara'a from Damascus?",
       "answer": "South",
-      "book_key": "tagging-freedom",
-      "page": 6,
-      "contributor": "Isabel"
-    },
-    {
-      "type": "content",
-      "text": "what was the age of some of the graffiti boys from Dara'a?",
-      "answer": "Twelve or Thirteen",
       "book_key": "tagging-freedom",
       "page": 6,
       "contributor": "Isabel"
