@@ -37,15 +37,15 @@ export default function NewsletterBanner() {
     <div className="bg-black px-4 py-3 relative">
       <div className="max-w-7xl mx-auto flex justify-center items-center relative">
         <Link
-          href="/newsletter"
+          href="/blog/daily-crossword"
           onClick={handleClick}
           className="flex items-center gap-4 pr-12 max-w-full hover:opacity-90"
         >
           <Grid3X3 className="w-6 h-6 text-white flex-shrink-0" />
           <p className="text-white text-sm font-heading font-bold tracking-wide">
-            New game coming soon!{" "}
-            <span className="underline">Sign up</span> for the newsletter to
-            find out first.
+            New game!{" "}
+            <span className="underline">Daily Crossword</span> is here.
+            Play with your team today!
           </p>
         </Link>
         <button
