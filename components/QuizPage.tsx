@@ -350,7 +350,7 @@ export default function QuizPage({
     };
     console.log("tracking questionAnswered", questionAnsweredData);
     track("questionAnswered", questionAnsweredData);
-    posthog.capture("questionAnswered", questionAnsweredData);
+    // PostHog capture removed to reduce event volume
 
     // Animate score for perfect answers
     if (points === 5) {

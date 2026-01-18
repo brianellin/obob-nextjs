@@ -76,16 +76,16 @@ export function trackClueSelected(
   clueId: string,
   posthog?: PostHog | null
 ) {
-  trackEvent(
-    "crosswordClueSelected",
-    {
+  // Disabled to reduce PostHog event volume - this fires on every clue click
+  // and provides minimal value compared to clue completion events
+  if (!isProduction) {
+    console.log(`[Crossword Analytics Dev] crosswordClueSelected (disabled)`, {
       ...getCommonProperties(ctx),
       clueNumber,
       clueDirection,
       clueId,
-    },
-    posthog
-  );
+    });
+  }
 }
 
 export function trackClueCompleted(
