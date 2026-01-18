@@ -45,11 +45,13 @@ export const metadata: Metadata = {
 };
 
 function formatDate(dateString: string): string {
-  const date = new Date(dateString);
+  // Parse as noon UTC to avoid date shift, then display in Pacific Time
+  const date = new Date(`${dateString}T12:00:00Z`);
   return date.toLocaleDateString('en-US', {
     year: 'numeric',
     month: 'long',
     day: 'numeric',
+    timeZone: 'America/Los_Angeles',
   });
 }
 

@@ -8,7 +8,7 @@ import {
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { User, Users, Trophy, Grid2X2, Sparkles, Dog, Calendar } from "lucide-react";
+import { User, Users, Trophy, Grid2X2, Grid3X3, Sparkles, Dog } from "lucide-react";
 import Link from "next/link";
 
 type ModeSelectionProps = {
@@ -77,9 +77,6 @@ export default function ModeSelection({ year, division }: ModeSelectionProps) {
             <CardHeader>
               <div className="flex items-center gap-2">
                 <CardTitle>Mock battle</CardTitle>
-                <Badge className="bg-orange-500 hover:bg-orange-500 text-white">
-                  New!
-                </Badge>
               </div>
               <CardDescription>
                 Coaches and parents this one is for you!
@@ -110,13 +107,40 @@ export default function ModeSelection({ year, division }: ModeSelectionProps) {
       <div>
         <h2 className="text-4xl font-bold mb-4 text-center font-rampart">OBOB Games</h2>
         <div className="space-y-4">
+          <Card className="border-2 border-black bg-white">
+            <CardHeader>
+              <div className="flex items-center gap-2">
+                <CardTitle className="font-serif text-black">Daily Crossword</CardTitle>
+                <Badge className="bg-black hover:bg-black text-white">
+                  New!
+                </Badge>
+              </div>
+              <CardDescription className="text-gray-600">
+                Solve today's puzzle with your team!
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <p className="text-gray-700">
+                A new crossword every day. Create a team, share your code,
+                and solve it together. Send clues to teammates for real-time help!
+              </p>
+            </CardContent>
+            <CardFooter>
+              <Link
+                href={`/crossword/${year}/${division}`}
+                passHref
+                className="w-full"
+              >
+                <Button className="w-full bg-black hover:bg-gray-800 text-white transition-colors">
+                  <Grid3X3 className="mr-2 h-4 w-4" /> Play Daily Crossword
+                </Button>
+              </Link>
+            </CardFooter>
+          </Card>
           <Card>
             <CardHeader>
               <div className="flex items-center gap-2">
                 <CardTitle className="italic">Zoomies</CardTitle>
-                <Badge className="bg-teal-500 hover:bg-teal-500 text-white">
-                  New!
-                </Badge>
               </div>
               <CardDescription>
                 Super fast-paced &quot;in which book&quot; questions
@@ -165,38 +189,6 @@ export default function ModeSelection({ year, division }: ModeSelectionProps) {
               </Link>
             </CardFooter>
           </Card>
-          {/* Daily Crossword card - hidden until ready to merchandise
-          <Card className="border-2 border-black bg-white">
-            <CardHeader>
-              <div className="flex items-center gap-2">
-                <CardTitle className="font-serif text-black">Daily Team Crossword</CardTitle>
-                <Badge className="bg-black hover:bg-black text-white">
-                  New!
-                </Badge>
-              </div>
-              <CardDescription className="text-gray-600">
-                Solve today's puzzle with your team!
-              </CardDescription>
-            </CardHeader>
-            <CardContent>
-              <p className="text-gray-700">
-                A new crossword every day at 6am. Create a team, share your code,
-                and solve it together. Send clues to teammates for real-time help!
-              </p>
-            </CardContent>
-            <CardFooter>
-              <Link
-                href={`/crossword/${year}/${division}`}
-                passHref
-                className="w-full"
-              >
-                <Button className="w-full bg-black hover:bg-gray-800 text-white transition-colors">
-                  <Calendar className="mr-2 h-4 w-4" /> Play Daily Crossword
-                </Button>
-              </Link>
-            </CardFooter>
-          </Card>
-          */}
 {/* Coming Soon indicator */}
           <div className="flex items-center justify-center gap-2 text-muted-foreground py-4">
             <Sparkles className="h-4 w-4" />
