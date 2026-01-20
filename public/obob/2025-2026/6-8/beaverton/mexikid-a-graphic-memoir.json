@@ -1,0 +1,102 @@
+{
+  "questions": [
+    {
+      "type": "content",
+      "text": "Which character has the power of \"the look\"?",
+      "book_key": "mexikid-a-graphic-memoir",
+      "page": 22,
+      "answer": "Lila"
+    },
+    {
+      "type": "content",
+      "text": "What snack would Pedro's mother keep in every part of their motorhome?",
+      "book_key": "mexikid-a-graphic-memoir",
+      "page": 50,
+      "answer": "Bananas"
+    },
+    {
+      "type": "content",
+      "text": "What is the only song left in the children's portable tape player after being searched by border agents?",
+      "book_key": "mexikid-a-graphic-memoir",
+      "page": 79,
+      "answer": "The \"Shipoopi\" song, a TV recording of Meredith Wilson's \"The Music Man\""
+    },
+    {
+      "type": "content",
+      "text": "What does Mexican music to Americanized ears sound like?",
+      "book_key": "mexikid-a-graphic-memoir",
+      "page": 32,
+      "answer": "Chun-Ta-Ta"
+    },
+    {
+      "type": "content",
+      "text": "Which character must give up their mule and cows?",
+      "book_key": "mexikid-a-graphic-memoir",
+      "page": 258,
+      "answer": "Abuelito"
+    },
+    {
+      "type": "content",
+      "text": "What items get taken from the family as they return to the United States?",
+      "book_key": "mexikid-a-graphic-memoir",
+      "page": 257,
+      "answer": "Nothing gets taken from them on the way back in"
+    },
+    {
+      "type": "content",
+      "text": "What candy causes an interesting chemical reaction when shared with a child in the neighborhood?",
+      "book_key": "mexikid-a-graphic-memoir",
+      "page": 176,
+      "answer": "Pop-rocks"
+    },
+    {
+      "type": "content",
+      "text": "What does the abuelito decide to do after his grandchildren have been tricked into buying fake fireworks?",
+      "book_key": "mexikid-a-graphic-memoir",
+      "page": 234,
+      "answer": "The children's abuelito refuses to fight for them, reminding them that money is not worth dying for"
+    },
+    {
+      "type": "in-which-book",
+      "text": "does the main character have eight brothers and sisters?",
+      "book_key": "mexikid-a-graphic-memoir",
+      "page": 1
+    },
+    {
+      "type": "in-which-book",
+      "text": "did the main character's grandfather work as a food runner during the Mexican revolution?",
+      "book_key": "mexikid-a-graphic-memoir",
+      "page": 26
+    },
+    {
+      "type": "in-which-book",
+      "text": "does the main character buy a massive pig shaped cookie in hopes of attracting a girl?",
+      "book_key": "mexikid-a-graphic-memoir",
+      "page": 158
+    },
+    {
+      "type": "in-which-book",
+      "text": "does the main character perform surgery on a deer?",
+      "book_key": "mexikid-a-graphic-memoir",
+      "page": 283
+    },
+    {
+      "type": "in-which-book",
+      "text": "must the main character help re-bury his grandmother after the rising water table threatens her burial plot?",
+      "book_key": "mexikid-a-graphic-memoir",
+      "page": 188
+    },
+    {
+      "type": "in-which-book",
+      "text": "is the main character tricked into buying fake fireworks?",
+      "book_key": "mexikid-a-graphic-memoir",
+      "page": 228
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character get an embarrassing haircut, a mix between \"The Fonz\" and \"Vicente Fernandez\"?",
+      "book_key": "mexikid-a-graphic-memoir",
+      "page": 120
+    }
+  ]
+}

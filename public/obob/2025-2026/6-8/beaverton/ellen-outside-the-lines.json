@@ -1,0 +1,103 @@
+{
+  "questions": [
+    {
+      "type": "content",
+      "text": "What is the first clue to the scavenger hunt about?",
+      "book_key": "ellen-outside-the-lines",
+      "page": 121,
+      "answer": "The first clue is linked to tilework by Gaudi"
+    },
+    {
+      "type": "content",
+      "text": "What is Ellen's group's first stop on their scavenger hunt?",
+      "book_key": "ellen-outside-the-lines",
+      "page": 87,
+      "answer": "The Sagrada Familia"
+    },
+    {
+      "type": "content",
+      "text": "Why is Ellen disappointed when she is assigned her group?",
+      "book_key": "ellen-outside-the-lines",
+      "page": 57,
+      "answer": "She has been placed in a separate group from her best friend, Laurel"
+    },
+    {
+      "type": "content",
+      "text": "What language do the siblings Xavi and Meritxell speak in addition to Spanish and English?",
+      "book_key": "ellen-outside-the-lines",
+      "page": 47,
+      "answer": "Catalan"
+    },
+    {
+      "type": "content",
+      "text": "Which character sleeps long and often?",
+      "book_key": "ellen-outside-the-lines",
+      "page": 254,
+      "answer": "Gibs"
+    },
+    {
+      "type": "content",
+      "text": "Which character writes and illustrates their own books?",
+      "book_key": "ellen-outside-the-lines",
+      "page": 35,
+      "answer": "Ellen's Abba, Natan Katz"
+    },
+    {
+      "type": "content",
+      "text": "Which character chooses to eat a non-kosher diet on their trip to Spain?",
+      "book_key": "ellen-outside-the-lines",
+      "page": 283,
+      "answer": "Ellen's Abba, Natan Katz"
+    },
+    {
+      "type": "content",
+      "text": "What is the answer to the clue Ellen and her group create?",
+      "book_key": "ellen-outside-the-lines",
+      "page": 315,
+      "answer": "The city of Barcelona"
+    },
+    {
+      "type": "content",
+      "text": "Ellen decides to leave her hotel in the middle of the night to see what?",
+      "book_key": "ellen-outside-the-lines",
+      "page": 275,
+      "answer": "The owl on the front of the building"
+    },
+    {
+      "type": "in-which-book",
+      "text": "does the main character write down important information in a dot diary?",
+      "book_key": "ellen-outside-the-lines",
+      "page": 44
+    },
+    {
+      "type": "in-which-book",
+      "text": "is it revealed early on that an international school trip will include a scavenger hunt?",
+      "book_key": "ellen-outside-the-lines",
+      "page": 25
+    },
+    {
+      "type": "in-which-book",
+      "text": "does the main character have 4 a.m. chats with her friends in the courtyard of her hotel?",
+      "book_key": "ellen-outside-the-lines",
+      "page": 138
+    },
+    {
+      "type": "in-which-book",
+      "text": "does the main character lie to her best friend so that she can stay in her originally assigned group?",
+      "book_key": "ellen-outside-the-lines",
+      "page": 133
+    },
+    {
+      "type": "in-which-book",
+      "text": "does the main character \"out\" one of her friends?",
+      "book_key": "ellen-outside-the-lines",
+      "page": 269
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character enjoy having Saturday sleepovers with her best friend?",
+      "book_key": "ellen-outside-the-lines",
+      "page": 78
+    }
+  ]
+}

@@ -1,0 +1,216 @@
+{
+  "questions": [
+    {
+      "type": "content",
+      "text": "What are Ruth's moving essentials?",
+      "book_key": "uprooted",
+      "page": 22,
+      "answer": "Her rock, eraser, keychain, baseball card, and pig collection"
+    },
+    {
+      "type": "content",
+      "text": "What character prophesied the Japanese invasion of Southern China?",
+      "book_key": "uprooted",
+      "page": 41,
+      "answer": "Ruth's Uncle"
+    },
+    {
+      "type": "content",
+      "text": "What does Ruth do wrong at her first big family dinner?",
+      "book_key": "uprooted",
+      "page": 79,
+      "answer": "She serves herself first, before her elders"
+    },
+    {
+      "type": "content",
+      "text": "What is the name of Bonnie's dog?",
+      "book_key": "uprooted",
+      "page": 106,
+      "answer": "Fifi"
+    },
+    {
+      "type": "content",
+      "text": "What kind of shirt does the cute guy in her school wear?",
+      "book_key": "uprooted",
+      "page": 123,
+      "answer": "Stussy shirt"
+    },
+    {
+      "type": "content",
+      "text": "What food does Ruth love at family dim sum?",
+      "book_key": "uprooted",
+      "page": 148,
+      "answer": "Curry tentacles"
+    },
+    {
+      "type": "content",
+      "text": "What does the family fight over at dim sum?",
+      "book_key": "uprooted",
+      "page": 150,
+      "answer": "The check"
+    },
+    {
+      "type": "content",
+      "text": "How is Ruth's father fed when his family runs out of milk?",
+      "book_key": "uprooted",
+      "page": 157,
+      "answer": "He is fed ground up rice and water"
+    },
+    {
+      "type": "content",
+      "text": "What does Ruth's mother give her to promote her brain health?",
+      "book_key": "uprooted",
+      "page": 177,
+      "answer": "Essence of Chicken"
+    },
+    {
+      "type": "content",
+      "text": "What does Ruth do to feel \"less weird\" in Hong Kong?",
+      "book_key": "uprooted",
+      "page": 138,
+      "answer": "Goes swimming"
+    },
+    {
+      "type": "content",
+      "text": "What does Ruth eat to be respectful to her grandmother?",
+      "book_key": "uprooted",
+      "page": 146,
+      "answer": "Chicken feet"
+    },
+    {
+      "type": "content",
+      "text": "What does Ruth nickname Marcus?",
+      "book_key": "uprooted",
+      "page": 162,
+      "answer": "DBD (Don't Be Desperate)"
+    },
+    {
+      "type": "content",
+      "text": "What do Ruth and Claudia have to chew up and spit into a petri dish?",
+      "book_key": "uprooted",
+      "page": 163,
+      "answer": "Bread"
+    },
+    {
+      "type": "content",
+      "text": "What kind of tree does Angie have in her backyard?",
+      "book_key": "uprooted",
+      "page": 173,
+      "answer": "Lychee"
+    },
+    {
+      "type": "content",
+      "text": "What language is Ruth studying in school?",
+      "book_key": "uprooted",
+      "page": 167,
+      "answer": "German"
+    },
+    {
+      "type": "content",
+      "text": "What character does it show Ruth painting when she is remembering her old school?",
+      "book_key": "uprooted",
+      "page": 186,
+      "answer": "Garfield"
+    },
+    {
+      "type": "content",
+      "text": "What kind of potato chips does Ruth get in her care package?",
+      "book_key": "uprooted",
+      "page": 218,
+      "answer": "Ketchup"
+    },
+    {
+      "type": "content",
+      "text": "What movie does someone tell Ruth that they wish they could watch together?",
+      "book_key": "uprooted",
+      "page": 220,
+      "answer": "The Nightmare Before Christmas"
+    },
+    {
+      "type": "content",
+      "text": "What kind of candy bar does Matt tell Ruth to dip in melted marshmallow?",
+      "book_key": "uprooted",
+      "page": 273,
+      "answer": "A Mars Bar"
+    },
+    {
+      "type": "content",
+      "text": "What are Ruth and her family celebrating at the end of the book?",
+      "book_key": "uprooted",
+      "page": 277,
+      "answer": "The Chinese New Year"
+    },
+    {
+      "type": "in-which-book",
+      "text": "do two characters have a \"talk-to-talk\" before bed?",
+      "book_key": "uprooted",
+      "page": 31
+    },
+    {
+      "type": "in-which-book",
+      "text": "must a family live in a barn for several months?",
+      "book_key": "uprooted",
+      "page": 96
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character eat a \"weirdly good\" tuna sandwich for lunch?",
+      "book_key": "uprooted",
+      "page": 122
+    },
+    {
+      "type": "in-which-book",
+      "text": "is someone introduced to the \"Big 4\" pop stars?",
+      "book_key": "uprooted",
+      "page": 133
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a man scare away bandits while sick with fever?",
+      "book_key": "uprooted",
+      "page": 243
+    },
+    {
+      "type": "in-which-book",
+      "text": "does someone struggle to understand what a \"wave-cut platform\" is?",
+      "book_key": "uprooted",
+      "page": 169
+    },
+    {
+      "type": "in-which-book",
+      "text": "is a character taught to dip a Mars Bar in melted marshmallow?",
+      "book_key": "uprooted",
+      "page": 273
+    },
+    {
+      "type": "in-which-book",
+      "text": "does someone bring Kentucky Fried Chicken for dinner?",
+      "book_key": "uprooted",
+      "page": 202
+    },
+    {
+      "type": "in-which-book",
+      "text": "does someone stomp in clogs?",
+      "book_key": "uprooted",
+      "page": 243
+    },
+    {
+      "type": "in-which-book",
+      "text": "does someone visit a mall called Pacific Place?",
+      "book_key": "uprooted",
+      "page": 127
+    },
+    {
+      "type": "in-which-book",
+      "text": "is someone excited for a new Jackie Chan movie?",
+      "book_key": "uprooted",
+      "page": 111
+    },
+    {
+      "type": "in-which-book",
+      "text": "are there dogs named Fifi and Hannibal?",
+      "book_key": "uprooted",
+      "page": 106
+    }
+  ]
+}

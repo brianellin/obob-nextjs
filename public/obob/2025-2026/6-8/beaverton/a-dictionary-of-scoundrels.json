@@ -1,0 +1,116 @@
+{
+  "questions": [
+    {
+      "type": "content",
+      "text": "Which character rehearses her own funeral every month?",
+      "book_key": "a-dictionary-of-scoundrels",
+      "page": 7,
+      "answer": "Aunt Schadenfreude"
+    },
+    {
+      "type": "content",
+      "text": "Why does Phenomena not mind the smell of her room?",
+      "book_key": "a-dictionary-of-scoundrels",
+      "page": 38,
+      "answer": "A mishap with chlorine gas when she was four destroyed her sense of smell"
+    },
+    {
+      "type": "content",
+      "text": "What character draws lizards on their arms?",
+      "book_key": "a-dictionary-of-scoundrels",
+      "page": 64,
+      "answer": "Erf"
+    },
+    {
+      "type": "content",
+      "text": "Who does Aunt Schadenfreude forbid from marrying?",
+      "book_key": "a-dictionary-of-scoundrels",
+      "page": 78,
+      "answer": "Candour Swift and Daisy"
+    },
+    {
+      "type": "content",
+      "text": "What was the cause of Arch-Aunt Schadenfreude's deadly fall?",
+      "book_key": "a-dictionary-of-scoundrels",
+      "page": 89,
+      "answer": "She was pushed down the stairs"
+    },
+    {
+      "type": "content",
+      "text": "Who is discovered to be the mastermind behind the plot to kill Aunt Schadenfreude?",
+      "book_key": "a-dictionary-of-scoundrels",
+      "page": 272,
+      "answer": "Candour Swift"
+    },
+    {
+      "type": "content",
+      "text": "What does Candour Swift do to try and kill all the Swifts at the reunion?",
+      "book_key": "a-dictionary-of-scoundrels",
+      "page": 281,
+      "answer": "He dosed them with laughing gas"
+    },
+    {
+      "type": "content",
+      "text": "Why does Candour Swift want to marry Daisy?",
+      "book_key": "a-dictionary-of-scoundrels",
+      "page": 308,
+      "answer": "To gain access to her money"
+    },
+    {
+      "type": "content",
+      "text": "Who is falsely accused of being the murderer by the Swift family?",
+      "book_key": "a-dictionary-of-scoundrels",
+      "page": 261,
+      "answer": "Cook"
+    },
+    {
+      "type": "content",
+      "text": "Candour is discovered to have been scratched on the hand. By who?",
+      "book_key": "a-dictionary-of-scoundrels",
+      "page": 272,
+      "answer": "John the cat"
+    },
+    {
+      "type": "in-which-book",
+      "text": "is each family member named from a randomly selected word in the dictionary?",
+      "book_key": "a-dictionary-of-scoundrels",
+      "page": 14
+    },
+    {
+      "type": "in-which-book",
+      "text": "is the main character known for causing trouble because of her name?",
+      "book_key": "a-dictionary-of-scoundrels",
+      "page": 8
+    },
+    {
+      "type": "in-which-book",
+      "text": "does one character conduct a \"practice funeral\" each month?",
+      "book_key": "a-dictionary-of-scoundrels",
+      "page": 7
+    },
+    {
+      "type": "in-which-book",
+      "text": "is a clue to the mystery a civet coffee bean?",
+      "book_key": "a-dictionary-of-scoundrels",
+      "page": 129
+    },
+    {
+      "type": "in-which-book",
+      "text": "is a game of Scrabble to the death played?",
+      "book_key": "a-dictionary-of-scoundrels",
+      "page": 179
+    },
+    {
+      "type": "in-which-book",
+      "text": "does the main character create a map of her house in order to find buried treasure?",
+      "book_key": "a-dictionary-of-scoundrels",
+      "page": 26
+    },
+    {
+      "type": "in-which-book",
+      "text": "is lab equipment broken by the killer?",
+      "book_key": "a-dictionary-of-scoundrels",
+      "page": 252
+    }
+  ]
+}

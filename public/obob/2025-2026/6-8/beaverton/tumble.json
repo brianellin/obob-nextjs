@@ -1,0 +1,117 @@
+{
+  "questions": [
+    {
+      "type": "content",
+      "text": "What is Addie's favorite telenovela?",
+      "book_key": "tumble",
+      "page": 22,
+      "answer": "Mundo Raro"
+    },
+    {
+      "type": "content",
+      "text": "What character works in fossil preparation?",
+      "book_key": "tumble",
+      "page": 136,
+      "answer": "Adela's mom, Lourdes"
+    },
+    {
+      "type": "content",
+      "text": "What is the main character cast as in the school play?",
+      "book_key": "tumble",
+      "page": 161,
+      "answer": "Marie"
+    },
+    {
+      "type": "content",
+      "text": "What was the book that Adela stole from the historical society?",
+      "book_key": "tumble",
+      "page": 70,
+      "answer": "A Bravo family biography published by the Cactus Wrestling League"
+    },
+    {
+      "type": "content",
+      "text": "What is a jobber?",
+      "book_key": "tumble",
+      "page": 2,
+      "answer": "A wrestler whose job it is to lose and make the other guy look good"
+    },
+    {
+      "type": "content",
+      "text": "Who is secretly the Eagle of Esperanza?",
+      "book_key": "tumble",
+      "page": 173,
+      "answer": "Adela's father, Manny"
+    },
+    {
+      "type": "content",
+      "text": "What was Adela called for having hair on her arms?",
+      "book_key": "tumble",
+      "page": 217,
+      "answer": "A yeti"
+    },
+    {
+      "type": "content",
+      "text": "What is a \"kayfabe\"?",
+      "book_key": "tumble",
+      "page": 231,
+      "answer": "Staying in character even when you're not in the ring"
+    },
+    {
+      "type": "content",
+      "text": "Who did Adela's character fight in the school play?",
+      "book_key": "tumble",
+      "page": 320,
+      "answer": "The Mouse King and the Nutcracker"
+    },
+    {
+      "type": "content",
+      "text": "What are the star goddesses from Aztec mythology called?",
+      "book_key": "tumble",
+      "page": 122,
+      "answer": "Tzitzimime"
+    },
+    {
+      "type": "content",
+      "text": "What is the banned wrestling move where one wrestler picks up another, turns them upside down, and drops them on their head?",
+      "book_key": "tumble",
+      "page": 134,
+      "answer": "Brainbuster"
+    },
+    {
+      "type": "in-which-book",
+      "text": "do characters take the same picture each year in front of a tumbleweed snowman?",
+      "book_key": "tumble",
+      "page": 27
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a duo call themselves the \"tzitzimime\"?",
+      "book_key": "tumble",
+      "page": 122
+    },
+    {
+      "type": "in-which-book",
+      "text": "does the main character see a likeness of Janus, the Roman god of beginnings?",
+      "book_key": "tumble",
+      "page": 125
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character free all the worms from their science class before the dissection unit?",
+      "book_key": "tumble",
+      "page": 44
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character likely have chronic traumatic encephalopathy, or dementia?",
+      "book_key": "tumble",
+      "page": 181
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character wrongly state that Halley's comet comes once every 100 years?",
+      "book_key": "tumble",
+      "page": 181
+    }
+  ]
+}

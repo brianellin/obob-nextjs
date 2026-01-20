@@ -1,0 +1,102 @@
+{
+  "questions": [
+    {
+      "type": "content",
+      "text": "What are the titles of the research papers Theo's sister writes?",
+      "book_key": "an-occasionally-happy-family",
+      "page": 32,
+      "answer": "Laura's Brief"
+    },
+    {
+      "type": "content",
+      "text": "What is the record number of birds catalogued in one \"Big Year\"?",
+      "book_key": "an-occasionally-happy-family",
+      "page": 61,
+      "answer": "784"
+    },
+    {
+      "type": "content",
+      "text": "What does Leo always call photos that are taken for him?",
+      "book_key": "an-occasionally-happy-family",
+      "page": 73,
+      "answer": "SP's, Sick Pics"
+    },
+    {
+      "type": "content",
+      "text": "What does one social media obsessed character call his followers?",
+      "book_key": "an-occasionally-happy-family",
+      "page": 76,
+      "answer": "Leo baebies"
+    },
+    {
+      "type": "content",
+      "text": "What does the owner of the house they are renting try to sell them?",
+      "book_key": "an-occasionally-happy-family",
+      "page": 140,
+      "answer": "Paintings of cactuses doing human activities, palm and tarot readings"
+    },
+    {
+      "type": "content",
+      "text": "What board game upsets the children's father?",
+      "book_key": "an-occasionally-happy-family",
+      "page": 175,
+      "answer": "Loaded Questions"
+    },
+    {
+      "type": "content",
+      "text": "What is the name of the river that Theo kayaks down?",
+      "book_key": "an-occasionally-happy-family",
+      "page": 184,
+      "answer": "Lovers' Lane"
+    },
+    {
+      "type": "content",
+      "text": "What does \"Bob the boy with perfect memory\" ultimately decide to do?",
+      "book_key": "an-occasionally-happy-family",
+      "page": 212,
+      "answer": "He chooses not to take the pill that will give him \"normal\" memory"
+    },
+    {
+      "type": "in-which-book",
+      "text": "does the main character's father drive very poorly, often getting honked at by other cars?",
+      "book_key": "an-occasionally-happy-family",
+      "page": 24
+    },
+    {
+      "type": "in-which-book",
+      "text": "does the main character have an idea for a series titled, \"Bob: The boy with Perfect Memory\"?",
+      "book_key": "an-occasionally-happy-family",
+      "page": 4
+    },
+    {
+      "type": "in-which-book",
+      "text": "does the main character have a cat that has \"pared his daily schedule down to one hour of eating and twenty-three hours of sleeping\"?",
+      "book_key": "an-occasionally-happy-family",
+      "page": 16
+    },
+    {
+      "type": "in-which-book",
+      "text": "is a character fully dedicated to finding and cataloguing as many North American bird species as possible?",
+      "book_key": "an-occasionally-happy-family",
+      "page": 61
+    },
+    {
+      "type": "in-which-book",
+      "text": "does one character's last name translate to \"The big Cheese\" in German?",
+      "book_key": "an-occasionally-happy-family",
+      "page": 116
+    },
+    {
+      "type": "in-which-book",
+      "text": "does one character often talk about how \"qi\" affects a person?",
+      "book_key": "an-occasionally-happy-family",
+      "page": 183
+    },
+    {
+      "type": "in-which-book",
+      "text": "is one character named after the inventor of the laser?",
+      "book_key": "an-occasionally-happy-family",
+      "page": 185
+    }
+  ]
+}

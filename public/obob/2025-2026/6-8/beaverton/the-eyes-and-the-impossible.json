@@ -1,0 +1,203 @@
+{
+  "questions": [
+    {
+      "type": "content",
+      "text": "Who responds \"low, low,\" when Bertrand greets them?",
+      "book_key": "the-eyes-and-the-impossible",
+      "page": 28,
+      "answer": "Yolanda"
+    },
+    {
+      "type": "content",
+      "text": "What name does Johannes find funny for a person considering their bearded and scarred look?",
+      "book_key": "the-eyes-and-the-impossible",
+      "page": 51,
+      "answer": "Rainbow"
+    },
+    {
+      "type": "content",
+      "text": "What is the activity that sends \"torrents of bliss\" through Bertrand?",
+      "book_key": "the-eyes-and-the-impossible",
+      "page": 69,
+      "answer": "Fly across the field, between archers and their targets, as fast as he can, eyes closed"
+    },
+    {
+      "type": "content",
+      "text": "What does Bertrand discover about his father?",
+      "book_key": "the-eyes-and-the-impossible",
+      "page": 191,
+      "answer": "He was a Coyote"
+    },
+    {
+      "type": "content",
+      "text": "Who \"only bite[s] for justice\"?",
+      "book_key": "the-eyes-and-the-impossible",
+      "page": 206,
+      "answer": "Angus"
+    },
+    {
+      "type": "content",
+      "text": "Who is given the nickname \"strange stripes\"?",
+      "book_key": "the-eyes-and-the-impossible",
+      "page": 169,
+      "answer": "Helene"
+    },
+    {
+      "type": "content",
+      "text": "Which bison would like to run if they had the space?",
+      "book_key": "the-eyes-and-the-impossible",
+      "page": 75,
+      "answer": "Meredith"
+    },
+    {
+      "type": "content",
+      "text": "What is the final flight of a seagull called?",
+      "book_key": "the-eyes-and-the-impossible",
+      "page": 114,
+      "answer": "The Coda"
+    },
+    {
+      "type": "content",
+      "text": "What is the name that Bertrand's captors give him?",
+      "book_key": "the-eyes-and-the-impossible",
+      "page": 48,
+      "answer": "Splotchy"
+    },
+    {
+      "type": "content",
+      "text": "Which character is seen as the most intelligent and worldly?",
+      "book_key": "the-eyes-and-the-impossible",
+      "page": 82,
+      "answer": "Bertrand"
+    },
+    {
+      "type": "content",
+      "text": "What is the name of the group of people who take an animal out of the park if they have bitten a human?",
+      "book_key": "the-eyes-and-the-impossible",
+      "page": 97,
+      "answer": "Control-the-Animals"
+    },
+    {
+      "type": "content",
+      "text": "What do they call the leader?",
+      "book_key": "the-eyes-and-the-impossible",
+      "page": 184,
+      "answer": "The Keeper of the Equilibrium"
+    },
+    {
+      "type": "content",
+      "text": "Who gets shot with an arrow?",
+      "book_key": "the-eyes-and-the-impossible",
+      "page": 200,
+      "answer": "Bertrand"
+    },
+    {
+      "type": "content",
+      "text": "What mode of transportation does Johannes find funny?",
+      "book_key": "the-eyes-and-the-impossible",
+      "page": 153,
+      "answer": "Bicycles"
+    },
+    {
+      "type": "content",
+      "text": "What animal all have names that start with J?",
+      "book_key": "the-eyes-and-the-impossible",
+      "page": 181,
+      "answer": "The ducks"
+    },
+    {
+      "type": "content",
+      "text": "Which character is described as the most \"duck-unloving and duck-untrusting\"?",
+      "book_key": "the-eyes-and-the-impossible",
+      "page": 103,
+      "answer": "Yolanda"
+    },
+    {
+      "type": "content",
+      "text": "What is the thought that Johannes keeps repeating?",
+      "book_key": "the-eyes-and-the-impossible",
+      "page": 236,
+      "answer": "I could go"
+    },
+    {
+      "type": "content",
+      "text": "What animal was Johannes' father?",
+      "book_key": "the-eyes-and-the-impossible",
+      "page": 191,
+      "answer": "A coyote"
+    },
+    {
+      "type": "content",
+      "text": "Who flies themselves into harm's way around groups of archers?",
+      "book_key": "the-eyes-and-the-impossible",
+      "page": 69,
+      "answer": "Bertrand"
+    },
+    {
+      "type": "in-which-book",
+      "text": "are ducks seen as morons?",
+      "book_key": "the-eyes-and-the-impossible",
+      "page": 18
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character's home disappear in a few hours?",
+      "book_key": "the-eyes-and-the-impossible",
+      "page": 161
+    },
+    {
+      "type": "in-which-book",
+      "text": "is someone infatuated with \"rectangles\"?",
+      "book_key": "the-eyes-and-the-impossible",
+      "page": 35
+    },
+    {
+      "type": "in-which-book",
+      "text": "is a \"pink tube\" a crucial disguise element?",
+      "book_key": "the-eyes-and-the-impossible",
+      "page": 105
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character believe that \"God is the Sun\"?",
+      "book_key": "the-eyes-and-the-impossible",
+      "page": 66
+    },
+    {
+      "type": "in-which-book",
+      "text": "is a group called the \"picture police\"?",
+      "book_key": "the-eyes-and-the-impossible",
+      "page": 82
+    },
+    {
+      "type": "in-which-book",
+      "text": "does one character have an affinity for pupusas?",
+      "book_key": "the-eyes-and-the-impossible",
+      "page": 137
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character say \"Heroes go forward\"?",
+      "book_key": "the-eyes-and-the-impossible",
+      "page": 249
+    },
+    {
+      "type": "in-which-book",
+      "text": "is there a parks person on a bicycle?",
+      "book_key": "the-eyes-and-the-impossible",
+      "page": 153
+    },
+    {
+      "type": "in-which-book",
+      "text": "is there a raccoon named Angus?",
+      "book_key": "the-eyes-and-the-impossible",
+      "page": 28
+    },
+    {
+      "type": "in-which-book",
+      "text": "is there a windmill?",
+      "book_key": "the-eyes-and-the-impossible",
+      "page": 135
+    }
+  ]
+}

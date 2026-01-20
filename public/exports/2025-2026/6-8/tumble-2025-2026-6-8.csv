@@ -1,6 +1,7 @@
 book_key,question_type,page,text,answer,author_name,book_title,source_name
 tumble,content,1,what food does Adelita only eat if cooked by Alex?,Eggs,Celia C. Peréz,Tumble,Lake Oswego Public Library
 tumble,content,2,"what is a ""jobber""?",Their job is to loose the wrestling match,Celia C. Peréz,Tumble,OBOB Parent Group
+tumble,content,2,What is a jobber?,A wrestler whose job it is to lose and make the other guy look good,Celia C. Peréz,Tumble,Beaverton City Library
 tumble,content,3,What is Apollo's signature closing move called?,The Sunset,Celia C. Peréz,Tumble,OBOB Parent Group
 tumble,content,5,what in the name of the Wrestling League in the neighboring town?,Cactus Wrestling League,Celia C. Peréz,Tumble,OBOB Parent Group
 tumble,content,5,where do people go to watch cactus wrestling?,Esperanza,Celia C. Peréz,Tumble,Lake Oswego Public Library
@@ -25,7 +26,9 @@ tumble,content,14,What grade is Adela in?,Seventh,Celia C. Peréz,Tumble,OBOB Pa
 tumble,content,15,who is Addies best friend? Two part question,Cyaandi Fernandez Cy nickname,Celia C. Peréz,Tumble,OBOB Parent Group
 tumble,content,15,what grade in Addie in,seventh grade,Celia C. Peréz,Tumble,OBOB Parent Group
 tumble,content,15,What is Cy's full name?,Cyaandi Fernandez,Celia C. Peréz,Tumble,OBOB Parent Group
+tumble,content,18,What job does Mateo pursue after he retires from wrestling?,A mask maker,Celia C. Peréz,Tumble,Cedar Mill Community Library
 tumble,content,22,What is Cy and Adela's favorite telenovela?,Mundo Raro,Celia C. Peréz,Tumble,OBOB Parent Group
+tumble,content,22,What is Addie's favorite telenovela?,Mundo Raro,Celia C. Peréz,Tumble,Beaverton City Library
 tumble,content,25,where is the missing photo found?,In a shoebox in a trunk,Celia C. Peréz,Tumble,OBOB Parent Group
 tumble,content,25,What size are Adela's feet?,size 8,Celia C. Peréz,Tumble,OBOB Parent Group
 tumble,content,26,How old is Adela's mom when Adela is born?,Twenty,Celia C. Peréz,Tumble,OBOB Parent Group
@@ -41,6 +44,7 @@ tumble,content,43,Who is Addie's home room teacher?,Mr Tanaka,Celia C. Peréz,Tu
 tumble,content,44,Who is Addie's science teacher?,Miss Guadet,Celia C. Peréz,Tumble,OBOB.dog Community
 tumble,content,45,what is the seal Addie and Cy find on the sweatpants in the special photo?,Esperanza High School,Celia C. Peréz,Tumble,OBOB Parent Group
 tumble,content,46,What is the name of the school librarian at Thorne Middle School?,Ms. Baig,Celia C. Peréz,Tumble,OBOB Parent Group
+tumble,content,46,What is the name of the character who offers to adopt Addie?,Alex,Celia C. Peréz,Tumble,Cedar Mill Community Library
 tumble,content,48,What is the name of Cy's brother?,Kobie,Celia C. Peréz,Tumble,OBOB Parent Group
 tumble,content,48,where does Adelita find the yearbook of her biological father?,The historical society,Celia C. Peréz,Tumble,Lake Oswego Public Library
 tumble,content,50,where does Addie find the yearbook she's looking for?,The Dos Pueblos Historical Society,Celia C. Peréz,Tumble,OBOB Parent Group
@@ -57,6 +61,7 @@ tumble,content,61,What time did Alex always open the diner?,6 o clock,Celia C. P
 tumble,content,62,what is the Bravo 3B?,the Bravo Back Breaker,Celia C. Peréz,Tumble,OBOB Parent Group
 tumble,content,62,"What does the ""3B"" stand for?",Bravo Back Breaker,Celia C. Peréz,Tumble,OBOB Parent Group
 tumble,content,67,Why doesn't Rudy keep his lunch in the cold back room of the Dos Pueblos Historical Society?,They don't allow food.,Celia C. Peréz,Tumble,OBOB.dog Community
+tumble,content,70,What was the book that Adela stole from the historical society?,A Bravo family biography published by the Cactus Wrestling League,Celia C. Peréz,Tumble,Beaverton City Library
 tumble,content,74,what does Llorona often do on the road?,Attempts to hitchhike,Celia C. Peréz,Tumble,Lake Oswego Public Library
 tumble,content,78,how does Addie reach out to her birth father?,she emails him,Celia C. Peréz,Tumble,OBOB Parent Group
 tumble,content,78,What is Adela's full name?,Adela Ramirez,Celia C. Peréz,Tumble,OBOB Parent Group
@@ -74,21 +79,26 @@ tumble,content,120,How tall is the wrestling ring in the Bravos' yard?,8 feet,Ce
 tumble,content,120,What color is the skirt on the wrestling ring in the Bravos' yard?,dark green,Celia C. Peréz,Tumble,OBOB Parent Group
 tumble,content,122,which cousin is missing a tooth?,Maggie,Celia C. Peréz,Tumble,OBOB Parent Group
 tumble,content,122,What is the name of the star goddesses in Aztec mythology?,tzitzimime,Celia C. Peréz,Tumble,OBOB Parent Group
+tumble,content,122,What are the star goddesses from Aztec mythology called?,Tzitzimime,Celia C. Peréz,Tumble,Beaverton City Library
 tumble,content,127,Which of the Bravo brothers is the twins' dad?,Speedy,Celia C. Peréz,Tumble,OBOB Parent Group
 tumble,content,128,Who made the twins' wrestling jackets?,Uncle Mateo,Celia C. Peréz,Tumble,OBOB Parent Group
 tumble,content,132,what is the name of Addie's colorful and kind Uncle?,Mateo,Celia C. Peréz,Tumble,OBOB Parent Group
 tumble,content,134,what is funny about The Pounding Fathers wrestling group?,they are the Founding Fathers as zombie ghouls,Celia C. Peréz,Tumble,OBOB Parent Group
+tumble,content,134,"What is the banned wrestling move where one wrestler picks up another, turns them upside down, and drops them on their head?",Brainbuster,Celia C. Peréz,Tumble,Beaverton City Library
+tumble,content,136,What character works in fossil preparation?,"Adela's mom, Lourdes",Celia C. Peréz,Tumble,Beaverton City Library
 tumble,content,147,why is pulling off a wrestler's mask such a big deal?,“It’s like a death of an illusion”,Celia C. Peréz,Tumble,Lake Oswego Public Library
 tumble,content,160,what part does Addie get in The Nutcracker?,Marie,Celia C. Peréz,Tumble,OBOB Parent Group
 tumble,content,160,What part does Adela get in the school play?,Marie,Celia C. Peréz,Tumble,OBOB Parent Group
 tumble,content,160,What part does Brandon get in the school play?,the nutcracker,Celia C. Peréz,Tumble,OBOB Parent Group
 tumble,content,161,Who plays the Mouse King in the school play?,Brandon,Celia C. Peréz,Tumble,OBOB Parent Group
+tumble,content,161,What is the main character cast as in the school play?,Marie,Celia C. Peréz,Tumble,Beaverton City Library
 tumble,content,165,Who is planning their retirement?,Mrs. Gonzalez,Celia C. Peréz,Tumble,OBOB.dog Community
 tumble,content,168,what role does Lucy get in The Nutcracker?,Toy soldier,Celia C. Peréz,Tumble,Lake Oswego Public Library
 tumble,content,169,What kind of pie does Alex send to the Bravo's house for Rosie?,apple,Celia C. Peréz,Tumble,OBOB Parent Group
 tumble,content,170,what does Alex give Addie to take to Rosie?,a pie,Celia C. Peréz,Tumble,OBOB Parent Group
 tumble,content,172,Manny breaks his contract with the Cactus Wrestling League in order to go to which country?,Japan,Celia C. Peréz,Tumble,OBOB Parent Group
 tumble,content,173,what is Manny's secret identity until he can come back as The Mountain?,The Eagle,Celia C. Peréz,Tumble,OBOB Parent Group
+tumble,content,173,Who is secretly the Eagle of Esperanza?,"Adela's father, Manny",Celia C. Peréz,Tumble,Beaverton City Library
 tumble,content,184,what road are the tumbleweed snowmen on?,Route 13,Celia C. Peréz,Tumble,OBOB Parent Group
 tumble,content,188,What is Rosie's wrestling name?,La Rosa Salvaje,Celia C. Peréz,Tumble,OBOB Parent Group
 tumble,content,189,Which city was Rosie not allowed to wrestle in?,Mexico City,Celia C. Peréz,Tumble,OBOB Parent Group
@@ -101,10 +111,12 @@ tumble,content,199,What sport does Eva do aside from wrestling?,softball,Celia C
 tumble,content,199,Who wants to become the first female wrestler at Esperanza High?,Maggie,Celia C. Peréz,Tumble,OBOB Parent Group
 tumble,content,208,What kind of bird darts across the road in front of Manny and Adela at a red light?,road runner,Celia C. Peréz,Tumble,OBOB Parent Group
 tumble,content,210,how much did Rosie pay the boys for each tumbleweed they collected and she used?,a quarter,Celia C. Peréz,Tumble,OBOB Parent Group
+tumble,content,217,What was Adela called for having hair on her arms?,A yeti,Celia C. Peréz,Tumble,Beaverton City Library
 tumble,content,220,"what do Manny and Adelita’s moms wear in their school photos, and what does Adelita think it means?",[1] Shirts with half a heart on it [2] A broken heart,Celia C. Peréz,Tumble,Lake Oswego Public Library
 tumble,content,225,What does Brandon's mom do for a living?,art teacher,Celia C. Peréz,Tumble,OBOB Parent Group
 tumble,content,228,what twist did Brandon suggest for the Nutcracker?,alien sock puppets,Celia C. Peréz,Tumble,OBOB Parent Group
 tumble,content,230,Where were wrestling events held on Friday nights in Esperanza?,Esperanza Arena,Celia C. Peréz,Tumble,OBOB Parent Group
+tumble,content,231,"What is a ""kayfabe""?",Staying in character even when you're not in the ring,Celia C. Peréz,Tumble,Beaverton City Library
 tumble,content,233,Who is the current women's Cactus Wrestling League Champion?,La Lechuza,Celia C. Peréz,Tumble,OBOB Parent Group
 tumble,content,237,who exposed The Eagle to be Manny when Addie was in attendance?,Guapo Garcia,Celia C. Peréz,Tumble,OBOB Parent Group
 tumble,content,238,Who is the current men's Cactus Wrestling League champion?,Apollo,Celia C. Peréz,Tumble,OBOB Parent Group
@@ -133,11 +145,13 @@ tumble,content,306,What color is Maggie's retainer?,Pink,Celia C. Peréz,Tumble,
 tumble,content,313,What color do Adela and Mateo dye her flats?,red,Celia C. Peréz,Tumble,OBOB Parent Group
 tumble,content,316,How many pounds does Gus weigh?,119 pounds,Celia C. Peréz,Tumble,OBOB.dog Community
 tumble,content,316,How many pounds does Brandon weigh?,100 pounds,Celia C. Peréz,Tumble,OBOB.dog Community
+tumble,content,320,Who did Adela's character fight in the school play?,The Mouse King and the Nutcracker,Celia C. Peréz,Tumble,Beaverton City Library
 tumble,content,334,What was Addie's favorite Father's Day card that she made?,"The one where her ""dad"" was in a hot air balloon.",Celia C. Peréz,Tumble,OBOB.dog Community
 tumble,content,341,What do the letters in the F.A.C.E.S. Club stand for?,"For Action, Care, and Equality in School",Celia C. Peréz,Tumble,OBOB Parent Group
 tumble,content,343,What two items does Adela place on the worm grave?,(plastic toy) worm and rock,Celia C. Peréz,Tumble,OBOB Parent Group
 tumble,content,346,what does Addie donate to the historical society?,Rosie's red wrestling cape,Celia C. Peréz,Tumble,OBOB Parent Group
 tumble,content,350,What images are embroidered on Adela's mask from her dad?,"stars, tumbleweeds and cacti",Celia C. Peréz,Tumble,OBOB Parent Group
+tumble,content,387,What item does Addie wear during the Nutcracker that belonged to Rosie?,A cape,Celia C. Peréz,Tumble,Cedar Mill Community Library
 tumble,in-which-book,1,does a character accidentally cut the roof of their mouth with a french fry?,,Celia C. Peréz,Tumble,OBOB Parent Group
 tumble,in-which-book,1,does a character find the idea of eating eggs gross?,,Celia C. Peréz,Tumble,OBOB Parent Group
 tumble,in-which-book,1,does a character jab themself with a potato?,,Celia C. Peréz,Tumble,Lake Oswego Public Library
@@ -163,6 +177,7 @@ tumble,in-which-book,24,does someone use a ruler to line up picture frames on th
 tumble,in-which-book,25,is something important found in a trunk?,,Celia C. Peréz,Tumble,OBOB Parent Group
 tumble,in-which-book,26,does a character have a lot of Christmas sweaters?,,Celia C. Peréz,Tumble,OBOB Parent Group
 tumble,in-which-book,26,does a character own a sweater collection?,,Celia C. Peréz,Tumble,Lake Oswego Public Library
+tumble,in-which-book,27,do characters take the same picture each year in front of a tumbleweed snowman?,,Celia C. Peréz,Tumble,Beaverton City Library
 tumble,in-which-book,30,"does a character say her work can be like Christmas morning, but except maybe ten times more exciting?",,Celia C. Peréz,Tumble,OBOB Parent Group
 tumble,in-which-book,30,is there a photo of a family dressed as The Flintstones?,,Celia C. Peréz,Tumble,OBOB Parent Group
 tumble,in-which-book,31,"is a character described as a ""just in caser""?",,Celia C. Peréz,Tumble,OBOB Parent Group
@@ -171,6 +186,7 @@ tumble,in-which-book,32,do two characters meet working at a diner in college?,,C
 tumble,in-which-book,35,does someone say something tastes like Christmas?,,Celia C. Peréz,Tumble,OBOB Parent Group
 tumble,in-which-book,40,does a school have a Nutcracker play every year with a surprise twist?,,Celia C. Peréz,Tumble,OBOB Parent Group
 tumble,in-which-book,44,does a character steal earthworms from a supply closet?,,Celia C. Peréz,Tumble,Lake Oswego Public Library
+tumble,in-which-book,44,does a character free all the worms from their science class before the dissection unit?,,Celia C. Peréz,Tumble,Beaverton City Library
 tumble,in-which-book,50,does a character lie to their mom about helping in the library after school?,,Celia C. Peréz,Tumble,OBOB Parent Group
 tumble,in-which-book,53,do characters talk about the biggest and most complete Tyrannosaurus rex skeleton ever found?,,Celia C. Peréz,Tumble,OBOB Parent Group
 tumble,in-which-book,53,do characters wear gold half heart necklace pendants?,,Celia C. Peréz,Tumble,OBOB Parent Group
@@ -193,6 +209,8 @@ tumble,in-which-book,114,does a character smack someone in the head with an empt
 tumble,in-which-book,115,does someone offer to make a map of the family?,,Celia C. Peréz,Tumble,OBOB Parent Group
 tumble,in-which-book,117,does a character suffer from memory loss?,,Celia C. Peréz,Tumble,Lake Oswego Public Library
 tumble,in-which-book,121,is a grandparent an artisit?,,Celia C. Peréz,Tumble,OBOB Parent Group
+tumble,in-which-book,122,"does a duo call themselves the ""tzitzimime""?",,Celia C. Peréz,Tumble,Beaverton City Library
+tumble,in-which-book,125,"does the main character see a likeness of Janus, the Roman god of beginnings?",,Celia C. Peréz,Tumble,Beaverton City Library
 tumble,in-which-book,129,is a trailer referred to as a giant silver Hostess Twinkie?,,Celia C. Peréz,Tumble,OBOB Parent Group
 tumble,in-which-book,129,does a character live in an airstream trailer?,,Celia C. Peréz,Tumble,OBOB Parent Group
 tumble,in-which-book,130,is there an old typewriter full of lavender branches?,,Celia C. Peréz,Tumble,OBOB Parent Group
@@ -209,6 +227,8 @@ tumble,in-which-book,170,"ia an apple pie referred to as ""Eve with a lid on""?"
 tumble,in-which-book,173,does a character have to keep a secret from everyone to help their family?,,Celia C. Peréz,Tumble,Lake Oswego Public Library
 tumble,in-which-book,177,do people watch Telenovelas?,,Celia C. Peréz,Tumble,OBOB Parent Group
 tumble,in-which-book,179,does a family room feel like a museum?,,Celia C. Peréz,Tumble,OBOB Parent Group
+tumble,in-which-book,181,"does a character likely have chronic traumatic encephalopathy, or dementia?",,Celia C. Peréz,Tumble,Beaverton City Library
+tumble,in-which-book,181,does a character wrongly state that Halley's comet comes once every 100 years?,,Celia C. Peréz,Tumble,Beaverton City Library
 tumble,in-which-book,195,does a character sleep in flannel pajamas with a sheep pattern?,,Celia C. Peréz,Tumble,Lake Oswego Public Library
 tumble,in-which-book,214,Does someone have a clapboard in their backpack?,,Celia C. Peréz,Tumble,OBOB.dog Community
 tumble,in-which-book,221,does a character hang cardboard turkeys on a ceiling?,,Celia C. Peréz,Tumble,OBOB Parent Group
@@ -227,3 +247,5 @@ tumble,in-which-book,328,does a smoothie move down someone's throat like cold ce
 tumble,in-which-book,329,Does someone order blue corn pancakes and scrambled eggs?,,Celia C. Peréz,Tumble,OBOB.dog Community
 tumble,in-which-book,339,does a character like the book D'Aulaires' Book of Greek Myths?,,Celia C. Peréz,Tumble,OBOB Parent Group
 tumble,in-which-book,341,do students create a club called F.A.C.E.S?,,Celia C. Peréz,Tumble,OBOB Parent Group
+tumble,in-which-book,,does a character receive a championship belt as a gift?,,Celia C. Peréz,Tumble,Cedar Mill Community Library
+tumble,in-which-book,,is a character's cousin missing a tooth?,,Celia C. Peréz,Tumble,Cedar Mill Community Library

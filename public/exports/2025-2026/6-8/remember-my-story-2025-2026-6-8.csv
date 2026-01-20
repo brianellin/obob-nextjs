@@ -1,16 +1,31 @@
 book_key,question_type,page,text,answer,author_name,book_title,source_name
 remember-my-story,content,0,Which country is Alter from?,Poland,Claire Sarnowski and Sarah Durand,Remember My Story,OBOB Parent Group
-remember-my-story,content,1,how old are Claire and Alter when they testify in front of the Oregon state senators?,"14, 92",Claire Sarnowski and Sarah Durand,Remember My Story,Lake Oswego Public Library
+remember-my-story,content,1,how old was Claire when she met Alter?,9,Claire Sarnowski and Sarah Durand,Remember My Story,OBOB Parent Group
+remember-my-story,content,2,who was Claire's best friend?,Alter or Alter Wiender,Claire Sarnowski and Sarah Durand,Remember My Story,OBOB Parent Group
+remember-my-story,content,5,what is Claire's hometown?,Lake Oswego,Claire Sarnowski and Sarah Durand,Remember My Story,OBOB Parent Group
+remember-my-story,content,9,what grade was Claire in when she first heard Alter speak?,4th grade,Claire Sarnowski and Sarah Durand,Remember My Story,OBOB Parent Group
+remember-my-story,content,10,what was next to Alter on the podium when he spoke at Crossler Middle School?,A water bottle,Claire Sarnowski and Sarah Durand,Remember My Story,OBOB Parent Group
+remember-my-story,content,10,what city do they say is the 3rd largest in Germany?,Munich,Claire Sarnowski and Sarah Durand,Remember My Story,OBOB Parent Group
 remember-my-story,content,11,The Nazi's invade Poland when Alter is how old?,Thirteen,Claire Sarnowski and Sarah Durand,Remember My Story,OBOB Parent Group
+remember-my-story,content,11,how old was Alter when Claire first heard him speak?,87,Claire Sarnowski and Sarah Durand,Remember My Story,OBOB Parent Group
 remember-my-story,content,12,Alter's father is shot by the Nazi's and thrown into a?,Mass grave,Claire Sarnowski and Sarah Durand,Remember My Story,OBOB Parent Group
 remember-my-story,content,13,"After Blechhammer, Alter was moved to how many other labor camps?",Four,Claire Sarnowski and Sarah Durand,Remember My Story,OBOB Parent Group
 remember-my-story,content,14,Alter has nowhere to go after being released from the labor camp so he sleeps on?,His father's grave,Claire Sarnowski and Sarah Durand,Remember My Story,OBOB Parent Group
+remember-my-story,content,14,which army liberated Alter's camp?,Russian,Claire Sarnowski and Sarah Durand,Remember My Story,OBOB Parent Group
+remember-my-story,content,15,how old was Alter when he was deported to Blechhammer?,13,Claire Sarnowski and Sarah Durand,Remember My Story,OBOB Parent Group
 remember-my-story,content,18,The author meets Holocaust survivor Alter Wiener who wrote a book called?,From a Name to a Number,Claire Sarnowski and Sarah Durand,Remember My Story,OBOB Parent Group
+remember-my-story,content,18,what's the name of the book that Alter wrote?,From Name to Number,Claire Sarnowski and Sarah Durand,Remember My Story,OBOB Parent Group
 remember-my-story,content,19,Alter says the one thing he will never take for granted is?,Nature,Claire Sarnowski and Sarah Durand,Remember My Story,OBOB Parent Group
+remember-my-story,content,21,what color is Alter's door mat?,Pink,Claire Sarnowski and Sarah Durand,Remember My Story,OBOB Parent Group
 remember-my-story,content,23,Claire's mother was diagnosed with?,Multiple Sclerosis,Claire Sarnowski and Sarah Durand,Remember My Story,OBOB Parent Group
+remember-my-story,content,27,how much money did Claire rasie for MS her first year fundraising?,900,Claire Sarnowski and Sarah Durand,Remember My Story,OBOB Parent Group
+remember-my-story,content,27,how much money in total has Claire raised for MS?,100000,Claire Sarnowski and Sarah Durand,Remember My Story,OBOB Parent Group
 remember-my-story,content,32,The cover photo on Alter's book was taken after he was released from which labor camp?,Waldenburg,Claire Sarnowski and Sarah Durand,Remember My Story,OBOB Parent Group
+remember-my-story,content,33,how far was it between Claire and Alter's homes?,20 miles,Claire Sarnowski and Sarah Durand,Remember My Story,OBOB Parent Group
+remember-my-story,content,33,where did Alter live in New York City?,"Forest Hills or Queens or Forest Hills, Queens",Claire Sarnowski and Sarah Durand,Remember My Story,OBOB Parent Group
 remember-my-story,content,34,Alter often makes Claire smoothies or?,Matzo Ball Soup,Claire Sarnowski and Sarah Durand,Remember My Story,OBOB Parent Group
 remember-my-story,content,35,The unleavened bread that's part of the Jewish tradition is called?,Matzo,Claire Sarnowski and Sarah Durand,Remember My Story,OBOB Parent Group
+remember-my-story,content,36,which year did Alter move to Oregon?,2000,Claire Sarnowski and Sarah Durand,Remember My Story,OBOB Parent Group
 remember-my-story,content,43,"Alter meets many Jehovah's Witnesses in the labor camp, they have to wear?",Purple Triangles,Claire Sarnowski and Sarah Durand,Remember My Story,OBOB Parent Group
 remember-my-story,content,52,"Alter's half-brother, Hirsh, dies in a concentration camp named?",Auschwitz,Claire Sarnowski and Sarah Durand,Remember My Story,OBOB Parent Group
 remember-my-story,content,52,Alter's older brother's name is?,Schmuel,Claire Sarnowski and Sarah Durand,Remember My Story,OBOB Parent Group
@@ -32,59 +47,67 @@ remember-my-story,content,221,Claire learns that the Holocaust education bill pa
 remember-my-story,content,223,When Governor Kate Brown signs Senate Bill 664 there is an easel next to her with a photo of?,Alter,Claire Sarnowski and Sarah Durand,Remember My Story,OBOB Parent Group
 remember-my-story,content,223,"After Alter dies the city of Hillsboro dedicates a _____ in his memory, which Claire often visits.",Bench,Claire Sarnowski and Sarah Durand,Remember My Story,OBOB Parent Group
 remember-my-story,content,,what are two ways Rachel Wutzel Wiender says you can stay warm?,"1) Put on a coat, 2)Light a fire (so that others can be warm too)",Claire Sarnowski and Sarah Durand,Remember My Story,OBOB Parent Group
-remember-my-story,content,1,how old was Claire when she met Alter?,9,Claire Sarnowski and Sarah Durand,Remember My Story,OBOB Parent Group
-remember-my-story,content,2,who was Claire's best friend?,Alter or Alter Wiender,Claire Sarnowski and Sarah Durand,Remember My Story,OBOB Parent Group
+remember-my-story,content,1,how old are Claire and Alter when they testify in front of the Oregon state senators?,"14, 92",Claire Sarnowski and Sarah Durand,Remember My Story,Lake Oswego Public Library
 remember-my-story,content,4,what is Claire’s hometown?,Lake Oswego,Claire Sarnowski and Sarah Durand,Remember My Story,Lake Oswego Public Library
-remember-my-story,content,5,what is Claire's hometown?,Lake Oswego,Claire Sarnowski and Sarah Durand,Remember My Story,OBOB Parent Group
-remember-my-story,content,9,what grade was Claire in when she first heard Alter speak?,4th grade,Claire Sarnowski and Sarah Durand,Remember My Story,OBOB Parent Group
 remember-my-story,content,9,When does Claire hear Alter speak for the first time? Be specific.,"May 30, 2014",Claire Sarnowski and Sarah Durand,Remember My Story,OBOB.dog Community
 remember-my-story,content,9,what’s the name of the school where Claire first saw Alter speak?,Crossler Middle School,Claire Sarnowski and Sarah Durand,Remember My Story,Lake Oswego Public Library
-remember-my-story,content,10,what was next to Alter on the podium when he spoke at Crossler Middle School?,A water bottle,Claire Sarnowski and Sarah Durand,Remember My Story,OBOB Parent Group
-remember-my-story,content,10,what city do they say is the 3rd largest in Germany?,Munich,Claire Sarnowski and Sarah Durand,Remember My Story,OBOB Parent Group
 remember-my-story,content,10,What was on the table next to Alter on the podium when he spoke at Crossler Middle School?,A waterbottle and a laptop,Claire Sarnowski and Sarah Durand,Remember My Story,OBOB.dog Community
-remember-my-story,content,11,how old was Alter when Claire first heard him speak?,87,Claire Sarnowski and Sarah Durand,Remember My Story,OBOB Parent Group
 remember-my-story,content,13,what was the name of the first labor camp Alter was deported to?,Blechhammer,Claire Sarnowski and Sarah Durand,Remember My Story,Lake Oswego Public Library
-remember-my-story,content,14,which army liberated Alter's camp?,Russian,Claire Sarnowski and Sarah Durand,Remember My Story,OBOB Parent Group
-remember-my-story,content,15,how old was Alter when he was deported to Blechhammer?,13,Claire Sarnowski and Sarah Durand,Remember My Story,OBOB Parent Group
-remember-my-story,content,18,what's the name of the book that Alter wrote?,From Name to Number,Claire Sarnowski and Sarah Durand,Remember My Story,OBOB Parent Group
 remember-my-story,content,18,what is the name of the book Alter wrote which he signed for Claire when they first met?,From a Name to a Number,Claire Sarnowski and Sarah Durand,Remember My Story,Lake Oswego Public Library
-remember-my-story,content,21,what color is Alter's door mat?,Pink,Claire Sarnowski and Sarah Durand,Remember My Story,OBOB Parent Group
-remember-my-story,content,27,how much money did Claire rasie for MS her first year fundraising?,900,Claire Sarnowski and Sarah Durand,Remember My Story,OBOB Parent Group
-remember-my-story,content,27,how much money in total has Claire raised for MS?,100000,Claire Sarnowski and Sarah Durand,Remember My Story,OBOB Parent Group
-remember-my-story,content,33,how far was it between Claire and Alter's homes?,20 miles,Claire Sarnowski and Sarah Durand,Remember My Story,OBOB Parent Group
-remember-my-story,content,33,where did Alter live in New York City?,"Forest Hills or Queens or Forest Hills, Queens",Claire Sarnowski and Sarah Durand,Remember My Story,OBOB Parent Group
+remember-my-story,content,20,What age was Claire Sarnowski when she first met Alter Wiener?,Nine years old,Claire Sarnowski and Sarah Durand,Remember My Story,Cedar Mill Community Library
 remember-my-story,content,35,what kind of broth does Alter use in his special matzo ball soup?,Vegetable broth,Claire Sarnowski and Sarah Durand,Remember My Story,Lake Oswego Public Library
-remember-my-story,content,36,which year did Alter move to Oregon?,2000,Claire Sarnowski and Sarah Durand,Remember My Story,OBOB Parent Group
+remember-my-story,content,35,What is the name of the unleavened bread that is part of Jewish tradition?,Matzo,Claire Sarnowski and Sarah Durand,Remember My Story,Beaverton City Library
 remember-my-story,content,37,what illness does Alter's wife have?,Parkinson's or Parkinson's Diseas,Claire Sarnowski and Sarah Durand,Remember My Story,OBOB Parent Group
 remember-my-story,content,37,what is Alter’s wife’s name?,Esther,Claire Sarnowski and Sarah Durand,Remember My Story,Lake Oswego Public Library
 remember-my-story,content,37,what month and year did Alter give his first speech at a high school?,"December, 2000",Claire Sarnowski and Sarah Durand,Remember My Story,Lake Oswego Public Library
+remember-my-story,content,40,What series of books were used in school to teach students about the Civil Rights movement?,"The ""Who Was?"" series",Claire Sarnowski and Sarah Durand,Remember My Story,Beaverton City Library
 remember-my-story,content,43,where does Alter buy his newspaper everyday?,New Seasons,Claire Sarnowski and Sarah Durand,Remember My Story,OBOB Parent Group
 remember-my-story,content,44,which religous group was forced to weard purple triangles?,Jehova's Witnesses,Claire Sarnowski and Sarah Durand,Remember My Story,OBOB Parent Group
 remember-my-story,content,44,what purple symbol were Jehovah’s Witnesses forced to wear on an armband in Nazi Germany?,Triangles,Claire Sarnowski and Sarah Durand,Remember My Story,Lake Oswego Public Library
+remember-my-story,content,44,What symbol does Claire learn Jehovah's Witnesses wore during the Holocaust?,A purple triangle,Claire Sarnowski and Sarah Durand,Remember My Story,Beaverton City Library
 remember-my-story,content,48,which two numbered slides did the River Grove Principal ask Claire to remove from Alter’s slideshow?,Twenty-two and twenty-five,Claire Sarnowski and Sarah Durand,Remember My Story,Lake Oswego Public Library
 remember-my-story,content,52,how many times a day did Alter's Father pray?,3,Claire Sarnowski and Sarah Durand,Remember My Story,OBOB Parent Group
+remember-my-story,content,54,How old was Alter when he was freed from the camps?,18,Claire Sarnowski and Sarah Durand,Remember My Story,Beaverton City Library
+remember-my-story,content,56,"What group does Claire see that she calls ""the best night of my life""?",One Direction,Claire Sarnowski and Sarah Durand,Remember My Story,Beaverton City Library
+remember-my-story,content,66,What year does Alter decide to stop presenting his speeches?,"2016, when he is 90",Claire Sarnowski and Sarah Durand,Remember My Story,Beaverton City Library
 remember-my-story,content,67,how old was Alter when he became a US citizen?,40,Claire Sarnowski and Sarah Durand,Remember My Story,OBOB Parent Group
 remember-my-story,content,67,what year did Alter become an American citizen?,1966,Claire Sarnowski and Sarah Durand,Remember My Story,Lake Oswego Public Library
+remember-my-story,content,67,How old was Alter when he became an American citizen?,40,Claire Sarnowski and Sarah Durand,Remember My Story,Beaverton City Library
 remember-my-story,content,72,"what community is ""85% white""?",Lake Oswego,Claire Sarnowski and Sarah Durand,Remember My Story,OBOB Parent Group
 remember-my-story,content,73,what was Alter's last concentration camp called?,Waldenburg,Claire Sarnowski and Sarah Durand,Remember My Story,OBOB Parent Group
+remember-my-story,content,76,What was posted in Lake Oswego High School cafeteria?,An antisemitic poster,Claire Sarnowski and Sarah Durand,Remember My Story,Beaverton City Library
+remember-my-story,content,87,What is the first and last name of the principal of Lake Oswego High School?,Rollin Dickinson,Claire Sarnowski and Sarah Durand,Remember My Story,Cedar Mill Community Library
 remember-my-story,content,91,who turned 13 on July 27th?,Claire,Claire Sarnowski and Sarah Durand,Remember My Story,OBOB Parent Group
 remember-my-story,content,91,who went to Disneyland for her birthday?,Claire,Claire Sarnowski and Sarah Durand,Remember My Story,OBOB Parent Group
 remember-my-story,content,91,what is Claire’s birthday?,July 27,Claire Sarnowski and Sarah Durand,Remember My Story,Lake Oswego Public Library
 remember-my-story,content,94,what was the hashtag students creasted after the Majory Stoneman Douglas High School shooting?,#NeverAgain,Claire Sarnowski and Sarah Durand,Remember My Story,OBOB Parent Group
+remember-my-story,content,95,What is the name of the speaker from Marjorie Stoneman Douglas high school who inspires Claire?,X Gonzalez,Claire Sarnowski and Sarah Durand,Remember My Story,Beaverton City Library
 remember-my-story,content,104,w\hat dance did Claire do at the Lakewood Bandstand?,Lindy Hop (a swing dance),Claire Sarnowski and Sarah Durand,Remember My Story,OBOB Parent Group
 remember-my-story,content,106,what color are Bob Barman's eyes?,Brown,Claire Sarnowski and Sarah Durand,Remember My Story,OBOB Parent Group
 remember-my-story,content,111,"which Oregon senator represented the nineteenth district, including parts of Portland and Lake Oswego?",Rob Wagner,Claire Sarnowski and Sarah Durand,Remember My Story,Lake Oswego Public Library
 remember-my-story,content,113,"who do Claire and her Mom meet with on July 26, 2018?",Rob Wagner,Claire Sarnowski and Sarah Durand,Remember My Story,OBOB Parent Group
+remember-my-story,content,116,What city does Claire live in?,Lake Oswego,Claire Sarnowski and Sarah Durand,Remember My Story,Beaverton City Library
+remember-my-story,content,118,How many millennials do not know what Auschwitz is?,2/3 of millennials,Claire Sarnowski and Sarah Durand,Remember My Story,Beaverton City Library
+remember-my-story,content,120,What is the name of the World Holocaust Remembrance Center in Jerusalem?,Yad Vashem,Claire Sarnowski and Sarah Durand,Remember My Story,Beaverton City Library
+remember-my-story,content,125,What organization had Claire done public speaking with previously?,National MS Society,Claire Sarnowski and Sarah Durand,Remember My Story,Beaverton City Library
 remember-my-story,content,129,"what do they say ""tikkum olam"" means?",To repair the world,Claire Sarnowski and Sarah Durand,Remember My Story,OBOB Parent Group
+remember-my-story,content,131,What did Alter work as in New York City?,A bookkeeper / accountant,Claire Sarnowski and Sarah Durand,Remember My Story,Beaverton City Library
 remember-my-story,content,134,when is Clair's Mom's birthday?,August 20th,Claire Sarnowski and Sarah Durand,Remember My Story,OBOB Parent Group
+remember-my-story,content,135,What is the name of the high school that Claire goes to?,Lakeridge,Claire Sarnowski and Sarah Durand,Remember My Story,Beaverton City Library
 remember-my-story,content,136,when was the hearing at the state capital?,September 25th,Claire Sarnowski and Sarah Durand,Remember My Story,OBOB Parent Group
 remember-my-story,content,138,what’s the name of the event held in various cities around the world that brings Holocaust survivors together?,Café Europa,Claire Sarnowski and Sarah Durand,Remember My Story,Lake Oswego Public Library
+remember-my-story,content,138,What is the name of the event that brought Holocaust survivors together from all over the world?,Café Europa,Claire Sarnowski and Sarah Durand,Remember My Story,Beaverton City Library
 remember-my-story,content,143,what security question did AOL ask Alter?,What was your first car?,Claire Sarnowski and Sarah Durand,Remember My Story,OBOB Parent Group
+remember-my-story,content,144,What is the name of Alter's book?,From a Name to a Number,Claire Sarnowski and Sarah Durand,Remember My Story,Beaverton City Library
 remember-my-story,content,147,what jobs did Alter have that he said recquired organization {[wo part question]?,Bookkeeper and accountant,Claire Sarnowski and Sarah Durand,Remember My Story,OBOB Parent Group
+remember-my-story,content,151,What is the title of the book that Alter Wiener wrote?,From a Name to a Number,Claire Sarnowski and Sarah Durand,Remember My Story,Cedar Mill Community Library
 remember-my-story,content,155,what color was the heart emoji that Claire sent aAlter?,Red,Claire Sarnowski and Sarah Durand,Remember My Story,OBOB Parent Group
 remember-my-story,content,163,who founded the organization Zero Hour?,Jamie Margolin,Claire Sarnowski and Sarah Durand,Remember My Story,OBOB Parent Group
 remember-my-story,content,163,what news station is Claire interviewed on?,KATU,Claire Sarnowski and Sarah Durand,Remember My Story,OBOB Parent Group
+remember-my-story,content,163,What TV station does Claire get interviewed on?,KATU,Claire Sarnowski and Sarah Durand,Remember My Story,Beaverton City Library
+remember-my-story,content,167,"What is significant about Armenia, Bosnia, and Rwanda?",These were all the sites of genocide in recent history,Claire Sarnowski and Sarah Durand,Remember My Story,Beaverton City Library
 remember-my-story,content,169,what age is Claire when she testifies at the Oregon State Capital?,14,Claire Sarnowski and Sarah Durand,Remember My Story,OBOB Parent Group
+remember-my-story,content,169,What was the first state to mandate statewide Holocaust education?,California,Claire Sarnowski and Sarah Durand,Remember My Story,Beaverton City Library
 remember-my-story,content,170,how many camps was Alter in?,5,Claire Sarnowski and Sarah Durand,Remember My Story,OBOB Parent Group
 remember-my-story,content,172,there's a sculpture of an outdoorsman in front of the capital.   What two things is he holding?,Ax and a tarp,Claire Sarnowski and Sarah Durand,Remember My Story,OBOB Parent Group
 remember-my-story,content,178,what do the 33 stars in the Oregon capital represent?,Oregon being the 33rd state,Claire Sarnowski and Sarah Durand,Remember My Story,OBOB Parent Group
@@ -102,10 +125,12 @@ remember-my-story,content,220,where is the first place Claire goes when she gets
 remember-my-story,content,221,on what date did Claire and Alter's bill pass the senate vote unanimously?,2019-03-12,Claire Sarnowski and Sarah Durand,Remember My Story,OBOB Parent Group
 remember-my-story,content,223,when did senate bill 664 become law?,2019-07-15,Claire Sarnowski and Sarah Durand,Remember My Story,OBOB Parent Group
 remember-my-story,content,225,where is the bench dedicated in Alter's honor?,Hillsboro's Central Park (or Hillsboro),Claire Sarnowski and Sarah Durand,Remember My Story,OBOB Parent Group
+remember-my-story,content,242,How many years after Alter died was a bench dedicated to him?,One year,Claire Sarnowski and Sarah Durand,Remember My Story,Cedar Mill Community Library
 remember-my-story,in-which-book,0,is the author an advocate for Holocaust education?,,Claire Sarnowski and Sarah Durand,Remember My Story,OBOB Parent Group
 remember-my-story,in-which-book,0,"does the author live in Lake Oswego, OR.?",,Claire Sarnowski and Sarah Durand,Remember My Story,OBOB Parent Group
 remember-my-story,in-which-book,1,does a character miss school to testify in front of their state senators?,,Claire Sarnowski and Sarah Durand,Remember My Story,Lake Oswego Public Library
 remember-my-story,in-which-book,3,"has a character spoken to nearly 1,000 community and school groups about their life?",,Claire Sarnowski and Sarah Durand,Remember My Story,Lake Oswego Public Library
+remember-my-story,in-which-book,4,does someone wake up every day at 6:00 AM?,,Claire Sarnowski and Sarah Durand,Remember My Story,Beaverton City Library
 remember-my-story,in-which-book,8,does a person immigrate from Poland to the U.S.?,,Claire Sarnowski and Sarah Durand,Remember My Story,OBOB Parent Group
 remember-my-story,in-which-book,10,does the author’s mother visit a concentration camp in Germany?,,Claire Sarnowski and Sarah Durand,Remember My Story,OBOB Parent Group
 remember-my-story,in-which-book,11,does someone have a Polish accent?,,Claire Sarnowski and Sarah Durand,Remember My Story,OBOB Parent Group
@@ -149,16 +174,21 @@ remember-my-story,in-which-book,56,does someone go to a New Direction concert?,,
 remember-my-story,in-which-book,59,does a person leave school because they are being bullied on Instagram?,,Claire Sarnowski and Sarah Durand,Remember My Story,OBOB Parent Group
 remember-my-story,in-which-book,59,is someone bullied on Instagram?,,Claire Sarnowski and Sarah Durand,Remember My Story,OBOB Parent Group
 remember-my-story,in-which-book,59,is a student bullied by their classmates on Instagram?,,Claire Sarnowski and Sarah Durand,Remember My Story,Lake Oswego Public Library
+remember-my-story,in-which-book,59,is someone bullied through a social media comment section?,,Claire Sarnowski and Sarah Durand,Remember My Story,Beaverton City Library
 remember-my-story,in-which-book,60,is a person punched by a guard for talking to another prisoner?,,Claire Sarnowski and Sarah Durand,Remember My Story,OBOB Parent Group
 remember-my-story,in-which-book,71,"does a character live in a town near Portland, Oregon?",,Claire Sarnowski and Sarah Durand,Remember My Story,Lake Oswego Public Library
 remember-my-story,in-which-book,76,is there an antisemitic image posted in the high school cafeteria?,,Claire Sarnowski and Sarah Durand,Remember My Story,Lake Oswego Public Library
 remember-my-story,in-which-book,78,does a school newspaper dedicate an entire page to the subject of racism?,,Claire Sarnowski and Sarah Durand,Remember My Story,Lake Oswego Public Library
 remember-my-story,in-which-book,82,do they testify before the interim education committee?,,Claire Sarnowski and Sarah Durand,Remember My Story,OBOB Parent Group
+remember-my-story,in-which-book,86,does someone love to dance when they are happy?,,Claire Sarnowski and Sarah Durand,Remember My Story,Beaverton City Library
 remember-my-story,in-which-book,87,does someone speak at Lakeridge Middle school on May 18th?,,Claire Sarnowski and Sarah Durand,Remember My Story,OBOB Parent Group
+remember-my-story,in-which-book,90,"is the phrase ""better not bitter"" often used?",,Claire Sarnowski and Sarah Durand,Remember My Story,Beaverton City Library
 remember-my-story,in-which-book,91,does a person go to Disneyland for their 13th birthday?,,Claire Sarnowski and Sarah Durand,Remember My Story,OBOB Parent Group
 remember-my-story,in-which-book,91,does a character go to Disneyland for their 13th birthday?,,Claire Sarnowski and Sarah Durand,Remember My Story,Lake Oswego Public Library
 remember-my-story,in-which-book,92,does someone have cats named Jasmine and Belle?,,Claire Sarnowski and Sarah Durand,Remember My Story,OBOB Parent Group
 remember-my-story,in-which-book,94,does a person have an Aunt named Sue?,,Claire Sarnowski and Sarah Durand,Remember My Story,OBOB Parent Group
+remember-my-story,in-which-book,104,does someone talk about doing a dance known as the Lindy Hop?,,Claire Sarnowski and Sarah Durand,Remember My Story,Beaverton City Library
+remember-my-story,in-which-book,115,does someone remember struggling to climb a slide?,,Claire Sarnowski and Sarah Durand,Remember My Story,Beaverton City Library
 remember-my-story,in-which-book,118,does the author discover that ⅔ of millennials don’t know what Auschwitz is?,,Claire Sarnowski and Sarah Durand,Remember My Story,OBOB Parent Group
 remember-my-story,in-which-book,120,does a government official go to the Workd Holocost Rememberance Center in Jeruselum?,,Claire Sarnowski and Sarah Durand,Remember My Story,OBOB Parent Group
 remember-my-story,in-which-book,128,does someone ask a senator if they'd like a smoothie?,,Claire Sarnowski and Sarah Durand,Remember My Story,OBOB Parent Group
@@ -167,11 +197,14 @@ remember-my-story,in-which-book,129,"is someone described as, ""representing the
 remember-my-story,in-which-book,133,"does somone say that they're ""too busy to die?""",,Claire Sarnowski and Sarah Durand,Remember My Story,OBOB Parent Group
 remember-my-story,in-which-book,139,is a character interviewed by a local news station?,,Claire Sarnowski and Sarah Durand,Remember My Story,Lake Oswego Public Library
 remember-my-story,in-which-book,143,has a 92 year-old never driven a car?,,Claire Sarnowski and Sarah Durand,Remember My Story,Lake Oswego Public Library
+remember-my-story,in-which-book,144,do people struggle with AOL customer service?,,Claire Sarnowski and Sarah Durand,Remember My Story,Beaverton City Library
 remember-my-story,in-which-book,155,does a character teach a friend how to use emojis in an email?,,Claire Sarnowski and Sarah Durand,Remember My Story,Lake Oswego Public Library
+remember-my-story,in-which-book,155,"does someone call emojis ""emotions""?",,Claire Sarnowski and Sarah Durand,Remember My Story,Beaverton City Library
 remember-my-story,in-which-book,156,does someone learn to use emjois?,,Claire Sarnowski and Sarah Durand,Remember My Story,OBOB Parent Group
 remember-my-story,in-which-book,158,does a person have to get stitches after tripping over a tree root?,,Claire Sarnowski and Sarah Durand,Remember My Story,OBOB Parent Group
 remember-my-story,in-which-book,167,"does somone say, ""history does tend to repeat itself""?",,Claire Sarnowski and Sarah Durand,Remember My Story,OBOB Parent Group
 remember-my-story,in-which-book,172,"is there a statue called ""the gold man""?",,Claire Sarnowski and Sarah Durand,Remember My Story,OBOB Parent Group
+remember-my-story,in-which-book,173,does a character get dressed up even when he's not leaving the house?,,Claire Sarnowski and Sarah Durand,Remember My Story,Beaverton City Library
 remember-my-story,in-which-book,176,is  loggers union on the Oregon Capital Steps?,,Claire Sarnowski and Sarah Durand,Remember My Story,OBOB Parent Group
 remember-my-story,in-which-book,178,is someone surprised there is no metal detector when entering a government building?,,Claire Sarnowski and Sarah Durand,Remember My Story,OBOB Parent Group
 remember-my-story,in-which-book,182,does the author meet Senator Arnie Roblan?,,Claire Sarnowski and Sarah Durand,Remember My Story,OBOB Parent Group
@@ -181,4 +214,8 @@ remember-my-story,in-which-book,214,"does someone get a note telling them to ""r
 remember-my-story,in-which-book,215,does the character die when he gets hit by a car crossing the street?,,Claire Sarnowski and Sarah Durand,Remember My Story,OBOB Parent Group
 remember-my-story,in-which-book,219,does someone get their license on 10/8/20?,,Claire Sarnowski and Sarah Durand,Remember My Story,OBOB Parent Group
 remember-my-story,in-which-book,223,does Governor Kate Brown sign Senate Bill 664 into law?,,Claire Sarnowski and Sarah Durand,Remember My Story,OBOB Parent Group
+remember-my-story,in-which-book,226,does a bench commemorate a special person?,,Claire Sarnowski and Sarah Durand,Remember My Story,Beaverton City Library
 remember-my-story,in-which-book,229,does someone write chapters when wildfire smoke is so thick she can't open her window?,,Claire Sarnowski and Sarah Durand,Remember My Story,OBOB Parent Group
+remember-my-story,in-which-book,,does a character say that forgiveness is the only way they have been able to continue living?,,Claire Sarnowski and Sarah Durand,Remember My Story,Cedar Mill Community Library
+remember-my-story,in-which-book,,does a school project lead a character to meet a person who survived five different concentration camps?,,Claire Sarnowski and Sarah Durand,Remember My Story,Cedar Mill Community Library
+remember-my-story,in-which-book,,does a student help introduce a bill to make Holocaust and genocide education required in schools?,,Claire Sarnowski and Sarah Durand,Remember My Story,Cedar Mill Community Library

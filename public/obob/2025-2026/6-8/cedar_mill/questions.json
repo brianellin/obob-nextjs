@@ -1,0 +1,606 @@
+{
+  "questions": [
+    {
+      "type": "in-which-book",
+      "text": "does a character light a cursed lamp said to awaken a demon?",
+      "book_key": "aru-shah-and-the-end-of-time",
+      "page": 47
+    },
+    {
+      "type": "in-which-book",
+      "text": "can a character throw a baseball 94 miles per hour?",
+      "book_key": "soar"
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character receive a championship belt as a gift?",
+      "book_key": "tumble"
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character kiss their grandfather's hand every time they meet?",
+      "book_key": "mexikid-a-graphic-memoir"
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character get pushed down a staircase during a family reunion?",
+      "book_key": "a-dictionary-of-scoundrels"
+    },
+    {
+      "type": "content",
+      "text": "What age was Claire Sarnowski when she first met Alter Wiener?",
+      "book_key": "remember-my-story",
+      "page": 20,
+      "answer": "Nine years old"
+    },
+    {
+      "type": "content",
+      "text": "What time was Michael supposed to drop Simon off at Friedrichstrasse?",
+      "book_key": "projekt-1065-a-novel-of-world-war-ii",
+      "answer": "3:45 AM"
+    },
+    {
+      "type": "content",
+      "text": "What is Yusuf's brother's name?",
+      "book_key": "tagging-freedom",
+      "page": 18,
+      "answer": "Ramy"
+    },
+    {
+      "type": "content",
+      "text": "What job does Mateo pursue after he retires from wrestling?",
+      "book_key": "tumble",
+      "page": 18,
+      "answer": "A mask maker"
+    },
+    {
+      "type": "content",
+      "text": "What was King Tokoz poisoned with?",
+      "book_key": "dealing-with-dragons",
+      "page": 164,
+      "answer": "Dragonsbane"
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character say that forgiveness is the only way they have been able to continue living?",
+      "book_key": "remember-my-story"
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character's dad make friends with an ornithologist?",
+      "book_key": "an-occasionally-happy-family"
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character use Uber so much that they get a discount?",
+      "book_key": "rain-rising"
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character make chocolate mousse for a dinner party?",
+      "book_key": "dealing-with-dragons"
+    },
+    {
+      "type": "in-which-book",
+      "text": "do characters get supplies at a magical Costco?",
+      "book_key": "aru-shah-and-the-end-of-time",
+      "page": 246
+    },
+    {
+      "type": "content",
+      "text": "What is the Latin volume on dragons that Cimorene reads?",
+      "book_key": "dealing-with-dragons",
+      "page": 75,
+      "answer": "Historia Dracorum"
+    },
+    {
+      "type": "content",
+      "text": "What sweet treats do the characters enjoy while abroad?",
+      "book_key": "ellen-outside-the-lines",
+      "page": 119,
+      "answer": "Churros con chocolate"
+    },
+    {
+      "type": "content",
+      "text": "What are the first names of Samira's two best friends?",
+      "book_key": "tagging-freedom",
+      "page": 24,
+      "answer": "Layla and Ellie"
+    },
+    {
+      "type": "content",
+      "text": "What was the name of the song Pedro's Abuelito sang?",
+      "book_key": "mexikid-a-graphic-memoir",
+      "page": 209,
+      "answer": "Prieta Linda"
+    },
+    {
+      "type": "content",
+      "text": "What is the name of the college that Xander visits?",
+      "book_key": "rain-rising",
+      "page": 70,
+      "answer": "Smith University"
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character attend Hope Church?",
+      "book_key": "rain-rising"
+    },
+    {
+      "type": "in-which-book",
+      "text": "do characters draw graffiti saying, \"We deserve to FLY FREE\"?",
+      "book_key": "tagging-freedom"
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character try chicken feet for the first time?",
+      "book_key": "uprooted",
+      "page": 146
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a family spend time together kayaking at Santa Elena Canyon?",
+      "book_key": "an-occasionally-happy-family"
+    },
+    {
+      "type": "in-which-book",
+      "text": "is a character the youngest of seven children?",
+      "book_key": "dealing-with-dragons"
+    },
+    {
+      "type": "content",
+      "text": "What game does Erf suggest playing to avoid answering questions about their real names?",
+      "book_key": "a-dictionary-of-scoundrels",
+      "page": 75,
+      "answer": "Charades"
+    },
+    {
+      "type": "content",
+      "text": "What was the name of the Martin's hometown in Mexico?",
+      "book_key": "mexikid-a-graphic-memoir",
+      "page": 112,
+      "answer": "Pegueros"
+    },
+    {
+      "type": "content",
+      "text": "Michael's father was an ambassador to which country?",
+      "book_key": "projekt-1065-a-novel-of-world-war-ii",
+      "page": 13,
+      "answer": "Germany"
+    },
+    {
+      "type": "content",
+      "text": "What subject does Ellen's favorite teacher teach?",
+      "book_key": "ellen-outside-the-lines",
+      "page": 11,
+      "answer": "Spanish"
+    },
+    {
+      "type": "content",
+      "text": "What item does Addie wear during the Nutcracker that belonged to Rosie?",
+      "book_key": "tumble",
+      "page": 387,
+      "answer": "A cape"
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a sign read, \"No robots in the bathroom by order of The Management\"?",
+      "book_key": "soar"
+    },
+    {
+      "type": "in-which-book",
+      "text": "do characters follow ants when lost in a forest?",
+      "book_key": "aru-shah-and-the-end-of-time",
+      "page": 22
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character receive advice from a talking frog?",
+      "book_key": "dealing-with-dragons"
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character attend an international school?",
+      "book_key": "uprooted",
+      "page": 98
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a father surprise his kids with a trip to Big Bend National Park?",
+      "book_key": "an-occasionally-happy-family"
+    },
+    {
+      "type": "content",
+      "text": "How many people are in the Martin family?",
+      "book_key": "mexikid-a-graphic-memoir",
+      "page": 5,
+      "answer": "11"
+    },
+    {
+      "type": "content",
+      "text": "How many years after Alter died was a bench dedicated to him?",
+      "book_key": "remember-my-story",
+      "page": 242,
+      "answer": "One year"
+    },
+    {
+      "type": "content",
+      "text": "What is Cat's brother's name?",
+      "book_key": "tagging-freedom",
+      "page": 50,
+      "answer": "Dylan"
+    },
+    {
+      "type": "content",
+      "text": "What kind of bird follows Asha around on her journey?",
+      "book_key": "asha-and-the-spirit-bird",
+      "answer": "Lamagaia"
+    },
+    {
+      "type": "content",
+      "text": "When Aru grabs the string of hope leading to the Otherworld, what does she describe it as feeling like?",
+      "book_key": "aru-shah-and-the-end-of-time",
+      "page": 109,
+      "answer": "Summer"
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character love egg tarts?",
+      "book_key": "uprooted",
+      "page": 143
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character wear a pink sweater as a disguise?",
+      "book_key": "the-eyes-and-the-impossible"
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character get ink all over their hands when doodling?",
+      "book_key": "a-dictionary-of-scoundrels"
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character create graphic novels about their mother's passing?",
+      "book_key": "an-occasionally-happy-family"
+    },
+    {
+      "type": "in-which-book",
+      "text": "are characters trying to get to a city called Zandapur?",
+      "book_key": "asha-and-the-spirit-bird"
+    },
+    {
+      "type": "content",
+      "text": "What is Samira's best friend's name?",
+      "book_key": "tagging-freedom",
+      "page": 24,
+      "answer": "Ellie"
+    },
+    {
+      "type": "content",
+      "text": "What does Jeremiah name his heart monitor?",
+      "book_key": "soar",
+      "answer": "Boxter"
+    },
+    {
+      "type": "content",
+      "text": "What is the name of the city Asha's father works in?",
+      "book_key": "asha-and-the-spirit-bird",
+      "answer": "Zandapur"
+    },
+    {
+      "type": "content",
+      "text": "What nickname does Aru give to the pigeon, Subalu?",
+      "book_key": "aru-shah-and-the-end-of-time",
+      "page": 75,
+      "answer": "Boo"
+    },
+    {
+      "type": "content",
+      "text": "In what city does the school trip take place?",
+      "book_key": "ellen-outside-the-lines",
+      "page": 45,
+      "answer": "Barcelona"
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character have a strong love for pupusas?",
+      "book_key": "the-eyes-and-the-impossible"
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a group of characters call themselves the \"Fantastic Four\"?",
+      "book_key": "rain-rising"
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character have a cat named Larry?",
+      "book_key": "an-occasionally-happy-family"
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a school project lead a character to meet a person who survived five different concentration camps?",
+      "book_key": "remember-my-story"
+    },
+    {
+      "type": "in-which-book",
+      "text": "do characters elbow bump instead of high-fiving to be more hygienic?",
+      "book_key": "aru-shah-and-the-end-of-time",
+      "page": 211
+    },
+    {
+      "type": "content",
+      "text": "What name does Asha call her grandma?",
+      "book_key": "asha-and-the-spirit-bird",
+      "answer": "Nanijee"
+    },
+    {
+      "type": "content",
+      "text": "What is the name of the character who offers to adopt Addie?",
+      "book_key": "tumble",
+      "page": 46,
+      "answer": "Alex"
+    },
+    {
+      "type": "content",
+      "text": "What did the travelers call Johannes when they put him on a leash?",
+      "book_key": "the-eyes-and-the-impossible",
+      "answer": "Splotchy"
+    },
+    {
+      "type": "content",
+      "text": "What is Butter's first name?",
+      "book_key": "rain-rising",
+      "page": 52,
+      "answer": "Nicholas"
+    },
+    {
+      "type": "content",
+      "text": "Who gives Theo a picture of their family before their mom passes?",
+      "book_key": "an-occasionally-happy-family",
+      "answer": "Mrs. Thilden"
+    },
+    {
+      "type": "in-which-book",
+      "text": "is a character claimed by the God of Death?",
+      "book_key": "aru-shah-and-the-end-of-time",
+      "page": 158
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character memorize location codes?",
+      "book_key": "projekt-1065-a-novel-of-world-war-ii"
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character's grandfather have a role in a revolution?",
+      "book_key": "mexikid-a-graphic-memoir"
+    },
+    {
+      "type": "in-which-book",
+      "text": "do ghosts complicate a mission when a crew investigates a deserted colony?",
+      "book_key": "dragon-pearl"
+    },
+    {
+      "type": "in-which-book",
+      "text": "is a character nervous about traveling to Spain?",
+      "book_key": "ellen-outside-the-lines",
+      "page": 52
+    },
+    {
+      "type": "content",
+      "text": "What is Ellie's name short for?",
+      "book_key": "tagging-freedom",
+      "page": 112,
+      "answer": "Eleanora"
+    },
+    {
+      "type": "content",
+      "text": "What is the first and last name of the principal of Lake Oswego High School?",
+      "book_key": "remember-my-story",
+      "page": 87,
+      "answer": "Rollin Dickinson"
+    },
+    {
+      "type": "content",
+      "text": "What is Michael afraid of?",
+      "book_key": "projekt-1065-a-novel-of-world-war-ii",
+      "page": 94,
+      "answer": "Heights"
+    },
+    {
+      "type": "content",
+      "text": "What were the names of Asha's siblings?",
+      "book_key": "asha-and-the-spirit-bird",
+      "page": 29,
+      "answer": "Rohan and Roopa"
+    },
+    {
+      "type": "content",
+      "text": "What is the exact time the ship carrying the goats initially plans to depart?",
+      "book_key": "the-eyes-and-the-impossible",
+      "page": 207,
+      "answer": "7:08"
+    },
+    {
+      "type": "in-which-book",
+      "text": "is a character sent to the U.S. to live with their aunt and uncle?",
+      "book_key": "tagging-freedom"
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a student help introduce a bill to make Holocaust and genocide education required in schools?",
+      "book_key": "remember-my-story"
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character feel overwhelmed by academic comparison to others?",
+      "book_key": "uprooted",
+      "page": 176
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a father reveal he is dating somebody new during a family vacation?",
+      "book_key": "an-occasionally-happy-family"
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character live in a fictional village called Moormanali?",
+      "book_key": "asha-and-the-spirit-bird"
+    },
+    {
+      "type": "content",
+      "text": "What club does Samira join?",
+      "book_key": "tagging-freedom",
+      "page": 9,
+      "answer": "Spirit Squad"
+    },
+    {
+      "type": "content",
+      "text": "What festival is mentioned during the character's time in Spain?",
+      "book_key": "ellen-outside-the-lines",
+      "page": 102,
+      "answer": "La Merce Festival"
+    },
+    {
+      "type": "content",
+      "text": "What is the name of Johannes' only sibling taken to a \"human lair\" by their mother?",
+      "book_key": "the-eyes-and-the-impossible",
+      "page": 19,
+      "answer": "Leonard"
+    },
+    {
+      "type": "content",
+      "text": "What was Michael wearing when he was having dinner with the S.S.?",
+      "book_key": "projekt-1065-a-novel-of-world-war-ii",
+      "page": 11,
+      "answer": "A Hitler Youth uniform"
+    },
+    {
+      "type": "content",
+      "text": "Which Swift relative wears a wig that keeps slipping sideways during the reunion?",
+      "book_key": "a-dictionary-of-scoundrels",
+      "page": 34,
+      "answer": "Uncle Maelstrom"
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a classroom activity involve learning about cultural differences?",
+      "book_key": "ellen-outside-the-lines",
+      "page": 88
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character try to find their missing father?",
+      "book_key": "asha-and-the-spirit-bird"
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character get a massage from a person named Dusk?",
+      "book_key": "an-occasionally-happy-family"
+    },
+    {
+      "type": "in-which-book",
+      "text": "do cadets undergo military training aboard a ship?",
+      "book_key": "dragon-pearl"
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character give someone an orange journal?",
+      "book_key": "rain-rising"
+    },
+    {
+      "type": "content",
+      "text": "What is the title of the book that Alter Wiener wrote?",
+      "book_key": "remember-my-story",
+      "page": 151,
+      "answer": "From a Name to a Number"
+    },
+    {
+      "type": "content",
+      "text": "What game did Michael & Simon play at night?",
+      "book_key": "projekt-1065-a-novel-of-world-war-ii",
+      "page": 277,
+      "answer": "Kim's game"
+    },
+    {
+      "type": "content",
+      "text": "What is Ramy's identity?",
+      "book_key": "tagging-freedom",
+      "page": 176,
+      "answer": "Spray Man"
+    },
+    {
+      "type": "content",
+      "text": "What kind of animal was Johannes?",
+      "book_key": "the-eyes-and-the-impossible",
+      "answer": "Dog"
+    },
+    {
+      "type": "content",
+      "text": "What was carved into the wooden banister of the staircase where Aunt Schadenfruede falls?",
+      "book_key": "a-dictionary-of-scoundrels",
+      "page": 43,
+      "answer": "The family motto"
+    },
+    {
+      "type": "in-which-book",
+      "text": "is a character's cousin missing a tooth?",
+      "book_key": "tumble"
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character attend a boarding school?",
+      "book_key": "uprooted",
+      "page": 27
+    },
+    {
+      "type": "in-which-book",
+      "text": "is a feast interrupted by a chandelier almost falling on the table?",
+      "book_key": "a-dictionary-of-scoundrels"
+    },
+    {
+      "type": "in-which-book",
+      "text": "do a character's parents work at a hospital in Syria?",
+      "book_key": "tagging-freedom"
+    },
+    {
+      "type": "in-which-book",
+      "text": "is there a stuffed eagle named Baby?",
+      "book_key": "soar"
+    },
+    {
+      "type": "content",
+      "text": "What is the title of the book Simon makes Michael read and discuss with him?",
+      "book_key": "projekt-1065-a-novel-of-world-war-ii",
+      "page": 125,
+      "answer": "The Golden Spiders"
+    },
+    {
+      "type": "content",
+      "text": "Who is the cadet that Min impersonates?",
+      "book_key": "dragon-pearl",
+      "answer": "Bae Jang"
+    },
+    {
+      "type": "content",
+      "text": "What is a gull's final ceremonial flight called?",
+      "book_key": "the-eyes-and-the-impossible",
+      "page": 135,
+      "answer": "Coda"
+    },
+    {
+      "type": "content",
+      "text": "What two colors are Amare's flag?",
+      "book_key": "rain-rising",
+      "page": 321,
+      "answer": "Red and Orange"
+    },
+    {
+      "type": "content",
+      "text": "What animal does the family see digging through trash at the campsite?",
+      "book_key": "an-occasionally-happy-family",
+      "answer": "A Javelina"
+    }
+  ]
+}

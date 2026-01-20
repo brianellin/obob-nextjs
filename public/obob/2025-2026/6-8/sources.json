@@ -14,6 +14,16 @@
         "path": "lake_oswego/questions.json",
         "name": "Lake Oswego Public Library",
         "link": "https://www.ci.oswego.or.us/kids/obob-practice-questions"
+      },
+      {
+        "path": "beaverton/questions.json",
+        "name": "Beaverton City Library",
+        "link": "https://www.beavertonlibrary.org/370/Oregon-Battle-of-the-Books"
+      },
+      {
+        "path": "cedar_mill/questions.json",
+        "name": "Cedar Mill Community Library",
+        "link": "https://library.cedarmill.org/teens/obob/"
       }
     ]
   } 

@@ -1,0 +1,114 @@
+{
+  "questions": [
+    {
+      "type": "content",
+      "text": "What day does Asha's father promise he'll be back home?",
+      "book_key": "asha-and-the-spirit-bird",
+      "page": 2,
+      "answer": "He promises he'll be back by Diwali"
+    },
+    {
+      "type": "content",
+      "text": "What does the village witch say Asha must sacrifice to have a successful journey?",
+      "book_key": "asha-and-the-spirit-bird",
+      "page": 50,
+      "answer": "She must sacrifice her hair"
+    },
+    {
+      "type": "content",
+      "text": "What bird guides Asha and Jeevan on their journey?",
+      "book_key": "asha-and-the-spirit-bird",
+      "page": 50,
+      "answer": "The lamagaia"
+    },
+    {
+      "type": "content",
+      "text": "What does Jeevan do on their train ride to Zandapur that gets the two of them kicked off?",
+      "book_key": "asha-and-the-spirit-bird",
+      "page": 94,
+      "answer": "He sneezes, alerting the train guards"
+    },
+    {
+      "type": "content",
+      "text": "What happens to Jeevan's younger brother when he is five?",
+      "book_key": "asha-and-the-spirit-bird",
+      "page": 65,
+      "answer": "His younger brother dies of fever"
+    },
+    {
+      "type": "content",
+      "text": "What animal tries to attack Jeevan while he sleeps?",
+      "book_key": "asha-and-the-spirit-bird",
+      "page": 155,
+      "answer": "A wolf"
+    },
+    {
+      "type": "content",
+      "text": "What do we learn is significant about the moon on Diwali?",
+      "book_key": "asha-and-the-spirit-bird",
+      "page": 305,
+      "answer": "The celebration falls on the darkest day of the month, when there is no moon"
+    },
+    {
+      "type": "content",
+      "text": "What does Nina give the children when they get into the taxi with her?",
+      "book_key": "asha-and-the-spirit-bird",
+      "answer": "She offers them a poisoned barfi"
+    },
+    {
+      "type": "content",
+      "text": "What does Asha see when she wakes up in the hospital in Zandipur?",
+      "book_key": "asha-and-the-spirit-bird",
+      "page": 278,
+      "answer": "The mango seedling has grown overnight, and the spirit bird is at the window"
+    },
+    {
+      "type": "content",
+      "text": "Asha often uses a Devay. What is this?",
+      "book_key": "asha-and-the-spirit-bird",
+      "answer": "A small clay pot filled with oil and a wick, similar to a tea light"
+    },
+    {
+      "type": "in-which-book",
+      "text": "is the main character referred to as the \"thunder baby\" by her family?",
+      "book_key": "asha-and-the-spirit-bird",
+      "page": 46
+    },
+    {
+      "type": "in-which-book",
+      "text": "does the main character feed her friend with goats' milk to help him recover from sickness?",
+      "book_key": "asha-and-the-spirit-bird",
+      "page": 156
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a tiger protect the main character's best friend while he recovers from illness?",
+      "book_key": "asha-and-the-spirit-bird",
+      "page": 152
+    },
+    {
+      "type": "in-which-book",
+      "text": "are the main characters forced to work in a yard sorting pieces of trash?",
+      "book_key": "asha-and-the-spirit-bird",
+      "page": 208
+    },
+    {
+      "type": "in-which-book",
+      "text": "does the main character plan to steal a garbage truck to escape from their captors?",
+      "book_key": "asha-and-the-spirit-bird",
+      "page": 227
+    },
+    {
+      "type": "in-which-book",
+      "text": "does the main character arrive at their destination only to find it has been burnt to a crisp?",
+      "book_key": "asha-and-the-spirit-bird",
+      "page": 252
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a witch live on the outskirts of the village?",
+      "book_key": "asha-and-the-spirit-bird",
+      "page": 41
+    }
+  ]
+}

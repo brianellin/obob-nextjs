@@ -1,17 +1,11 @@
 book_key,question_type,page,text,answer,author_name,book_title,source_name
 soar,content,1,how old is Jeramiah supposedly?,12 years old,Joan Bauer,Soar,Lake Oswego Public Library
-soar,content,2,About how old was Jeremiah when Walt found him?,9 months,Joan Bauer,Soar,OBOB Parent Group
 soar,content,4,what is Jermiah's stuffed animal's name?,Baby,Joan Bauer,Soar,OBOB Parent Group
-soar,content,4,What is the name of Jeremiah's stuffed eagle?,Baby,Joan Bauer,Soar,OBOB Parent Group
 soar,content,6,what is the name of Walt's consulting group?,(The) Magellean Group,Joan Bauer,Soar,OBOB Parent Group
-soar,content,7,What is the name of Jeremiah and Walt's robot?,Jewal,Joan Bauer,Soar,OBOB Parent Group
 soar,content,8,"what is the population of Hillcrest, Ohio?",12761,Joan Bauer,Soar,OBOB Parent Group
 soar,content,14,what color blood does the transplant nurse say Jeremiah has?,Red,Joan Bauer,Soar,OBOB Parent Group
 soar,content,15,what age was Jeremiah when he had a heart transpalnt?,Ten,Joan Bauer,Soar,OBOB Parent Group
-soar,content,15,What kind of transplant did Jeremiah receive?,heart,Joan Bauer,Soar,OBOB Parent Group
-soar,content,15,How old was Jeremiah when he got his transplant?,10,Joan Bauer,Soar,OBOB Parent Group
 soar,content,16,what is the name of the doctor who performed Jeremiah's heart transplant?,Dr. Feinberg,Joan Bauer,Soar,OBOB Parent Group
-soar,content,20,Who does DR Feinberg want to include in his book?,Jeremiah,Joan Bauer,Soar,OBOB Parent Group
 soar,content,22,how many baseball and coaching books does Jeremiah have?,Forty-seven,Joan Bauer,Soar,OBOB Parent Group
 soar,content,22,what color did Walt and Jeremiah paint the baseball so they could find it in the snow?,Neon red,Joan Bauer,Soar,OBOB Parent Group
 soar,content,23,what is the name of Yaff's mother's extreme little white dog?,Powderpuff,Joan Bauer,Soar,OBOB Parent Group
@@ -39,7 +33,13 @@ soar,content,186,"who writes the editorial in the Hillcrest Herald that goes vir
 soar,content,189,where does Jeremiah get the Nutella cookie recipe?,Benny's mom,Joan Bauer,Soar,OBOB Parent Group
 soar,content,191,what is Jeremiah's favorite star fact?,Stars die but can keep on glowing,Joan Bauer,Soar,OBOB Parent Group
 soar,content,,what is the new name/mascot for the Hillcrest Middle School baseball team?,The Eagles,Joan Bauer,Soar,OBOB Parent Group
+soar,content,2,About how old was Jeremiah when Walt found him?,9 months,Joan Bauer,Soar,OBOB Parent Group
 soar,content,2,what job does Jer think his mother had?,Working nights cleaning office buildings,Joan Bauer,Soar,Lake Oswego Public Library
+soar,content,4,What is the name of Jeremiah's stuffed eagle?,Baby,Joan Bauer,Soar,OBOB Parent Group
+soar,content,7,What is the name of Jeremiah and Walt's robot?,Jewal,Joan Bauer,Soar,OBOB Parent Group
+soar,content,15,What kind of transplant did Jeremiah receive?,heart,Joan Bauer,Soar,OBOB Parent Group
+soar,content,15,How old was Jeremiah when he got his transplant?,10,Joan Bauer,Soar,OBOB Parent Group
+soar,content,20,Who does DR Feinberg want to include in his book?,Jeremiah,Joan Bauer,Soar,OBOB Parent Group
 soar,content,33,What happened to the character that donated their heart to Jeremiah?,Bike accident,Joan Bauer,Soar,OBOB Parent Group
 soar,content,33,What did Jeremiah name his new heart?,Alice,Joan Bauer,Soar,OBOB Parent Group
 soar,content,33,"According to Jeremiah, what does the name Alice mean?",Noble,Joan Bauer,Soar,OBOB Parent Group
@@ -92,6 +92,7 @@ soar,content,292,what color is  the eagle on the MVP trophy?,Blue,Joan Bauer,Soa
 soar,content,293,Who receives the MVP award for the Eagles?,Jeremiah,Joan Bauer,Soar,OBOB Parent Group
 soar,content,293,what is the award that Jer receives from his baseball team?,MVP award,Joan Bauer,Soar,Lake Oswego Public Library
 soar,content,296,"what does Jeremiah say was the thing that turned his heart around, what healed it?",Baseball,Joan Bauer,Soar,OBOB Parent Group
+soar,content,,What does Jeremiah name his heart monitor?,Boxter,Joan Bauer,Soar,Cedar Mill Community Library
 soar,in-which-book,1,does a character like the taste of coffee?,,Joan Bauer,Soar,OBOB Parent Group
 soar,in-which-book,3,does someone get trained and certified as a foster parent?,,Joan Bauer,Soar,OBOB Parent Group
 soar,in-which-book,10,does a character's aunt make them wash their hands hundreds of times?,,Joan Bauer,Soar,OBOB Parent Group
@@ -172,3 +173,6 @@ soar,in-which-book,289,is an MVP award dinner held at a hospital cafeteria?,,Joa
 soar,in-which-book,290,does a character refuse to eat Jello ever again?,,Joan Bauer,Soar,OBOB Parent Group
 soar,in-which-book,290,does the main character not like Jell-O?,,Joan Bauer,Soar,Lake Oswego Public Library
 soar,in-which-book,297,is a wedding ring dropped during a wedding and rolls under a pew?,,Joan Bauer,Soar,OBOB Parent Group
+soar,in-which-book,,can a character throw a baseball 94 miles per hour?,,Joan Bauer,Soar,Cedar Mill Community Library
+soar,in-which-book,,"does a sign read, ""No robots in the bathroom by order of The Management""?",,Joan Bauer,Soar,Cedar Mill Community Library
+soar,in-which-book,,is there a stuffed eagle named Baby?,,Joan Bauer,Soar,Cedar Mill Community Library
