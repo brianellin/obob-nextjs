@@ -1,0 +1,168 @@
+{
+  "questions": [
+    {
+      "type": "content",
+      "text": "what is the first thing that gets Kyle Keely grounded for a week?",
+      "book_key": "escape-from-mr-lemoncellos-library",
+      "answer": "Taking a short-cut through his mother's favorite rosebush",
+      "page": 1
+    },
+    {
+      "type": "content",
+      "text": "what are two big words for \"library\" that Charles' tutor offers?",
+      "book_key": "escape-from-mr-lemoncellos-library",
+      "answer": "Book repository and athenaeum",
+      "page": 20
+    },
+    {
+      "type": "content",
+      "text": "Dr. Yanina Zinchenko has a slight hint of an accent, what is it?",
+      "book_key": "escape-from-mr-lemoncellos-library",
+      "answer": "Russian",
+      "page": 33
+    },
+    {
+      "type": "content",
+      "text": "which 2 books are on Kyle's library card?",
+      "book_key": "escape-from-mr-lemoncellos-library",
+      "answer": "I Love You, Stinky Face and The Napping House",
+      "page": 40
+    },
+    {
+      "type": "content",
+      "text": "what is the one rule Dr. Zinchenko tells to the essay winners?",
+      "book_key": "escape-from-mr-lemoncellos-library",
+      "answer": "Be Gentle",
+      "page": 49
+    },
+    {
+      "type": "content",
+      "text": "what did Akimi's dad design in the new library?",
+      "book_key": "escape-from-mr-lemoncellos-library",
+      "answer": "The support structure for the vault door",
+      "page": 52
+    },
+    {
+      "type": "content",
+      "text": "how old would Mrs. Gail Tobin (Head librarian of the Alexandraville public library in the 1960's) be if she were alive today?",
+      "book_key": "escape-from-mr-lemoncellos-library",
+      "answer": "110",
+      "page": 62
+    },
+    {
+      "type": "content",
+      "text": "in the computer game that features a medieval sewer, what surprising thing does the sewer smell like?",
+      "book_key": "escape-from-mr-lemoncellos-library",
+      "answer": "Pine trees",
+      "page": 81
+    },
+    {
+      "type": "content",
+      "text": "who is the first contestant to be eliminated from the game?",
+      "book_key": "escape-from-mr-lemoncellos-library",
+      "answer": "Yasmeen",
+      "page": 90
+    },
+    {
+      "type": "content",
+      "text": "what is the extreme challenge in which Bridgette gets eliminated?",
+      "book_key": "escape-from-mr-lemoncellos-library",
+      "answer": "Name 4 books each by 10 authors in 2 minutes",
+      "page": 122
+    },
+    {
+      "type": "content",
+      "text": "what color are the walls in the Young Adult room?",
+      "book_key": "escape-from-mr-lemoncellos-library",
+      "answer": "Purple and yellow",
+      "page": 124
+    },
+    {
+      "type": "content",
+      "text": "which character had ancestors that came to America on the Mayflower?",
+      "book_key": "escape-from-mr-lemoncellos-library",
+      "answer": "Charles Chiltington",
+      "page": 136
+    },
+    {
+      "type": "content",
+      "text": "what famous person said \"Outside of a dog a book is a man's best friend. Inside a dog it's too dark to read.\"?",
+      "book_key": "escape-from-mr-lemoncellos-library",
+      "answer": "Groucho Marx",
+      "page": 146
+    },
+    {
+      "type": "content",
+      "text": "who do Kyle and his teammates meet in the 590's - Zoology area?",
+      "book_key": "escape-from-mr-lemoncellos-library",
+      "answer": "John James Audubon",
+      "page": 185
+    },
+    {
+      "type": "content",
+      "text": "what does Kyle's team read their second night in the Library?",
+      "book_key": "escape-from-mr-lemoncellos-library",
+      "answer": "Sherlock Holmes",
+      "page": 205
+    },
+    {
+      "type": "content",
+      "text": "who gets eliminated for stealing?",
+      "book_key": "escape-from-mr-lemoncellos-library",
+      "answer": "Andrew Peckleman",
+      "page": 229
+    },
+    {
+      "type": "content",
+      "text": "what 2 book titles are on the back of Sierra's library card?",
+      "book_key": "escape-from-mr-lemoncellos-library",
+      "answer": "The Westing Game and The Egypt Game",
+      "page": 242
+    },
+    {
+      "type": "content",
+      "text": "what job does Charles's uncle Jimmy do?",
+      "book_key": "escape-from-mr-lemoncellos-library",
+      "answer": "Head Librarian of the Library of Congress",
+      "page": 250
+    },
+    {
+      "type": "content",
+      "text": "what year did The Mixed Up Files of Mrs. Basil E. Frankweiler win the Newbery Medal?",
+      "book_key": "escape-from-mr-lemoncellos-library",
+      "answer": "1968",
+      "page": 274
+    },
+    {
+      "type": "content",
+      "text": "what is the answer to the final clue \"Once you learn how to do this, you will be forever free.\"?",
+      "book_key": "escape-from-mr-lemoncellos-library",
+      "answer": "Read",
+      "page": 285
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character say a book was \"originally written in Canadian\"?",
+      "book_key": "escape-from-mr-lemoncellos-library",
+      "page": 188
+    },
+    {
+      "type": "in-which-book",
+      "text": "are characters told to bring \"a sleeping bag, toothbrush, and a change of clothes... and consider bringing 2 pairs of underwear\"?",
+      "book_key": "escape-from-mr-lemoncellos-library",
+      "page": 34
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character wear banana-peel slippers?",
+      "book_key": "escape-from-mr-lemoncellos-library",
+      "page": 36
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a game have smell-a-vision?",
+      "book_key": "escape-from-mr-lemoncellos-library",
+      "page": 80
+    }
+  ]
+}

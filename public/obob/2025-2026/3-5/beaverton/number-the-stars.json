@@ -1,0 +1,175 @@
+{
+  "questions": [
+    {
+      "type": "content",
+      "text": "which friend is taller - Annemarie or Ellen?",
+      "book_key": "number-the-stars",
+      "answer": "Annemarie",
+      "page": 1
+    },
+    {
+      "type": "content",
+      "text": "when the story takes place how long had the German army occupied the country of Denmark?",
+      "book_key": "number-the-stars",
+      "answer": "3 years",
+      "page": 3
+    },
+    {
+      "type": "content",
+      "text": "who is King Christian X's bodyguard?",
+      "book_key": "number-the-stars",
+      "answer": "All of Denmark",
+      "page": 14
+    },
+    {
+      "type": "content",
+      "text": "what are the wheels of Samuel Hirsch's bicycle made of?",
+      "book_key": "number-the-stars",
+      "answer": "Wood",
+      "page": 20
+    },
+    {
+      "type": "content",
+      "text": "why does Kirsti refuse to wear her new shoes?",
+      "book_key": "number-the-stars",
+      "answer": "They are made of fish skin",
+      "page": 28
+    },
+    {
+      "type": "content",
+      "text": "what is the surprise that Mama has for Annemarie and Kirsti after the Rosen's goes to the synagogue for Rosh Hashanah?",
+      "book_key": "number-the-stars",
+      "answer": "That Ellen will be staying with them for a few days",
+      "page": 34
+    },
+    {
+      "type": "content",
+      "text": "what time is it when the Nazi's visit the Johansen's apartment?",
+      "book_key": "number-the-stars",
+      "answer": "4 AM",
+      "page": 44
+    },
+    {
+      "type": "content",
+      "text": "fill in the blank from this phone conversation between Papa and Uncle Henrik: \"I'm sending Inge to you today with the children, and she will be bringing you _______________\"",
+      "book_key": "number-the-stars",
+      "answer": "A carton of cigarettes",
+      "page": 53
+    },
+    {
+      "type": "content",
+      "text": "what does Kirsti name the gray kitten?",
+      "book_key": "number-the-stars",
+      "answer": "Thor, God of Thunder",
+      "page": 67
+    },
+    {
+      "type": "content",
+      "text": "how does Uncle Henrik get cream and butter when it's so hard to come by?",
+      "book_key": "number-the-stars",
+      "answer": "The cow, Blossom",
+      "page": 68
+    },
+    {
+      "type": "content",
+      "text": "why is Annemarie surprised to hear Mama and Uncle Henrik planning Great-Aunt Birte's funeral?",
+      "book_key": "number-the-stars",
+      "answer": "She's never heard of Great Aunt Birte",
+      "page": 72
+    },
+    {
+      "type": "content",
+      "text": "who does Peter bring to Uncle Henrik's house for Great Aunt Birte's funeral?",
+      "book_key": "number-the-stars",
+      "answer": "Mr. and Mrs. Rosen / Ellen's parents",
+      "page": 81
+    },
+    {
+      "type": "content",
+      "text": "what does Mama tell the Nazi soldiers that Great-Aunt Birte died from?",
+      "book_key": "number-the-stars",
+      "answer": "Typhus",
+      "page": 85
+    },
+    {
+      "type": "content",
+      "text": "what shape are the buttons on Kirsti's thick red sweater?",
+      "book_key": "number-the-stars",
+      "answer": "Heart shaped",
+      "page": 89
+    },
+    {
+      "type": "content",
+      "text": "why does Annemarie think it's harder for the ones who are waiting?",
+      "book_key": "number-the-stars",
+      "answer": "Less danger, but more fear",
+      "page": 98
+    },
+    {
+      "type": "content",
+      "text": "what story does Annemarie tell herself while she's walking through the woods?",
+      "book_key": "number-the-stars",
+      "answer": "Little Red Riding Hood",
+      "page": 107
+    },
+    {
+      "type": "content",
+      "text": "what do the soldiers say their dogs smell in Annemarie's basket?",
+      "book_key": "number-the-stars",
+      "answer": "Meat",
+      "page": 116
+    },
+    {
+      "type": "content",
+      "text": "what did Annemarie have to do when she got back to the farmhouse after her delivery to Uncle Henrik?",
+      "book_key": "number-the-stars",
+      "answer": "Milk the cow Blossom",
+      "page": 120
+    },
+    {
+      "type": "content",
+      "text": "how is Peter Neilsen's grave marked?",
+      "book_key": "number-the-stars",
+      "answer": "With a number",
+      "page": 129
+    },
+    {
+      "type": "content",
+      "text": "what secret do we learn about Lise when the family visits Peter's grave?",
+      "book_key": "number-the-stars",
+      "answer": "That she was part of the resistance",
+      "page": 130
+    },
+    {
+      "type": "content",
+      "text": "approximately how many Jewish people were smuggled out of Denmark in the fall of 1943?",
+      "book_key": "number-the-stars",
+      "answer": "Nearly seven thousand (7,000)",
+      "page": 132
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character long for a big yellow cupcake with pink frosting?",
+      "book_key": "number-the-stars",
+      "page": 9
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character pretend to be a silly, empty-headed little girl?",
+      "book_key": "number-the-stars",
+      "page": 105
+    },
+    {
+      "type": "in-which-book",
+      "text": "do characters play a game of \"Gone with the wind\"?",
+      "book_key": "number-the-stars",
+      "page": 27
+    },
+    {
+      "type": "in-which-book",
+      "text": "do characters take a train ride near the Baltic sea?",
+      "book_key": "number-the-stars",
+      "page": 54
+    }
+  ]
+}

@@ -1,0 +1,217 @@
+{
+  "questions": [
+    {
+      "type": "content",
+      "text": "what type of plane was Brian traveling in?",
+      "book_key": "hatchet",
+      "answer": "Bushplane (Cessna 406)",
+      "page": 1
+    },
+    {
+      "type": "content",
+      "text": "how old is Brian?",
+      "book_key": "hatchet",
+      "answer": "Thirteen",
+      "page": 1
+    },
+    {
+      "type": "content",
+      "text": "where does Brian's father work?",
+      "book_key": "hatchet",
+      "answer": "In the oil fields of Canada",
+      "page": 6
+    },
+    {
+      "type": "content",
+      "text": "what word do you say to signal end of transmission over the radio?",
+      "book_key": "hatchet",
+      "answer": "Over",
+      "page": 19
+    },
+    {
+      "type": "content",
+      "text": "what is a beaver house called?",
+      "book_key": "hatchet",
+      "answer": "A beaver lodge",
+      "page": 38
+    },
+    {
+      "type": "content",
+      "text": "what type of thinking was Brian's English teacher always talking about?",
+      "book_key": "hatchet",
+      "answer": "Positive thinking",
+      "page": 46
+    },
+    {
+      "type": "content",
+      "text": "who gave Brian the hatchet?",
+      "book_key": "hatchet",
+      "answer": "His mother",
+      "page": 46
+    },
+    {
+      "type": "content",
+      "text": "what are at least two things Brian had with him when he arrived on the island?",
+      "book_key": "hatchet",
+      "answer": "A quarter, three dimes, a nickle, two pennies, fingernail clipper, 20 dollar bill, hatchet, tennis shoes, socks, jeans, underwear, belt, t-shirt, windbreaker, digital watch",
+      "page": 46
+    },
+    {
+      "type": "content",
+      "text": "Brian realizes that in all his life what has he never heard before?",
+      "book_key": "hatchet",
+      "answer": "Complete silence",
+      "page": 47
+    },
+    {
+      "type": "content",
+      "text": "what type of shelter did Brian and his friend decide was the best?",
+      "book_key": "hatchet",
+      "answer": "A lean-to",
+      "page": 53
+    },
+    {
+      "type": "content",
+      "text": "what was the first thing he ate on the island?",
+      "book_key": "hatchet",
+      "answer": "Berries",
+      "page": 59
+    },
+    {
+      "type": "content",
+      "text": "what did he use as a carrying pouch to collect the berries?",
+      "book_key": "hatchet",
+      "answer": "His windbreaker",
+      "page": 60
+    },
+    {
+      "type": "content",
+      "text": "what does he end up calling the first berries he ate?",
+      "book_key": "hatchet",
+      "answer": "Gut cherries",
+      "page": 65
+    },
+    {
+      "type": "content",
+      "text": "what time was it when Brian saw the sun straight overhead?",
+      "book_key": "hatchet",
+      "answer": "Noon",
+      "page": 72
+    },
+    {
+      "type": "content",
+      "text": "what kind of juice did Brian drink?",
+      "book_key": "hatchet",
+      "answer": "Raspberry juice",
+      "page": 72
+    },
+    {
+      "type": "content",
+      "text": "what happened when Brian hit the wall with his hatchet?",
+      "book_key": "hatchet",
+      "answer": "There was a shower of sparks",
+      "page": 75
+    },
+    {
+      "type": "content",
+      "text": "what made the insects disappear?",
+      "book_key": "hatchet",
+      "answer": "Smoke (near the fire)",
+      "page": 90
+    },
+    {
+      "type": "content",
+      "text": "what did he start calling the camouflaged birds?",
+      "book_key": "hatchet",
+      "answer": "Foolbirds",
+      "page": 114
+    },
+    {
+      "type": "content",
+      "text": "what did he use as string for his hunting bow?",
+      "book_key": "hatchet",
+      "answer": "His shoelaces",
+      "page": 117
+    },
+    {
+      "type": "content",
+      "text": "what kind of hope did Brian feel building inside him?",
+      "book_key": "hatchet",
+      "answer": "Tough hope",
+      "page": 120
+    },
+    {
+      "type": "content",
+      "text": "what is the great, single driving influence in nature?",
+      "book_key": "hatchet",
+      "answer": "To eat",
+      "page": 122
+    },
+    {
+      "type": "content",
+      "text": "what happened when Brian encountered a skunk?",
+      "book_key": "hatchet",
+      "answer": "He got sprayed",
+      "page": 123
+    },
+    {
+      "type": "content",
+      "text": "what lesson did the skunk teach Brian?",
+      "book_key": "hatchet",
+      "answer": "Protect food",
+      "page": 124
+    },
+    {
+      "type": "content",
+      "text": "what event did he call the day he first ate a bird?",
+      "book_key": "hatchet",
+      "answer": "Day of First Meat",
+      "page": 137
+    },
+    {
+      "type": "content",
+      "text": "what did he call his raft?",
+      "book_key": "hatchet",
+      "answer": "Brushpile",
+      "page": 156
+    },
+    {
+      "type": "content",
+      "text": "what did he find in the survival pack that made him feel changed?",
+      "book_key": "hatchet",
+      "answer": "A rifle",
+      "page": 173
+    },
+    {
+      "type": "content",
+      "text": "how did the pilot find Brian?",
+      "book_key": "hatchet",
+      "answer": "Heard the emergency transmitter",
+      "page": 177
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character think of fire as a friend?",
+      "book_key": "hatchet",
+      "page": 87
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character eat raw turtle eggs?",
+      "book_key": "hatchet",
+      "page": 94
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character encounter a mama bear and her cubs?",
+      "book_key": "hatchet",
+      "page": 114
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character get attacked by a porcupine?",
+      "book_key": "hatchet",
+      "page": 76
+    }
+  ]
+}

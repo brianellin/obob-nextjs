@@ -1,0 +1,336 @@
+{
+  "questions": [
+    {
+      "type": "content",
+      "text": "what do elf-hounds hunt on Mondays?",
+      "book_key": "elf-dog-and-owl-head",
+      "answer": "Wyrms",
+      "page": 1
+    },
+    {
+      "type": "content",
+      "text": "what makes the People Under the Mountain invisible to humans?",
+      "book_key": "elf-dog-and-owl-head",
+      "answer": "Smoke from magical machines",
+      "page": 4
+    },
+    {
+      "type": "content",
+      "text": "what did Clay think the dog had saved him from?",
+      "book_key": "elf-dog-and-owl-head",
+      "answer": "A black bear",
+      "page": 15
+    },
+    {
+      "type": "content",
+      "text": "what material was the dish that the elf-hound would eat off of in the human world?",
+      "book_key": "elf-dog-and-owl-head",
+      "answer": "Plastic",
+      "page": 26
+    },
+    {
+      "type": "content",
+      "text": "what is Clay's best friend's name?",
+      "book_key": "elf-dog-and-owl-head",
+      "answer": "Levi",
+      "page": 31
+    },
+    {
+      "type": "content",
+      "text": "what kind of dog does Clay say the dog he found is?",
+      "book_key": "elf-dog-and-owl-head",
+      "answer": "Bulgarian elf-hound",
+      "page": 24
+    },
+    {
+      "type": "content",
+      "text": "what does Levi say is the source of the strange sightings in the woods?",
+      "book_key": "elf-dog-and-owl-head",
+      "answer": "UFOs",
+      "page": 32
+    },
+    {
+      "type": "content",
+      "text": "what does Clay overhear that the dog's name is?",
+      "book_key": "elf-dog-and-owl-head",
+      "answer": "Elphinore",
+      "page": 40
+    },
+    {
+      "type": "content",
+      "text": "what animal did the people in the village Clay discovered resemble?",
+      "book_key": "elf-dog-and-owl-head",
+      "answer": "Owls",
+      "page": 42
+    },
+    {
+      "type": "content",
+      "text": "what did Clay steal from the village he found?",
+      "book_key": "elf-dog-and-owl-head",
+      "answer": "A wooden shaker (that made plants grow very fast)",
+      "page": 42
+    },
+    {
+      "type": "content",
+      "text": "name one strange thing that happened when DiRossi took a bath?",
+      "book_key": "elf-dog-and-owl-head",
+      "answer": "Reeds started growing in the bathtub and there was a catfish in the tub",
+      "page": 47
+    },
+    {
+      "type": "content",
+      "text": "what creature emerged in the laundry room after Dad sprinkled the laundry with the shaker Clay found?",
+      "book_key": "elf-dog-and-owl-head",
+      "answer": "A dinosaur",
+      "page": 57
+    },
+    {
+      "type": "content",
+      "text": "what thing did Clay see that \"stared up at him from the forest floor like an evil eye—a warning or a curse\"?",
+      "book_key": "elf-dog-and-owl-head",
+      "answer": "An owl pellet",
+      "page": 63
+    },
+    {
+      "type": "content",
+      "text": "what is DiRossi referring to when she says, \"It's so my world is always in shadow...it's always midnight for me....\"?",
+      "book_key": "elf-dog-and-owl-head",
+      "answer": "DiRossi's explanation for why she always wears sunglasses",
+      "page": 67
+    },
+    {
+      "type": "content",
+      "text": "who followed Clay after the magical powder incident at home?",
+      "book_key": "elf-dog-and-owl-head",
+      "answer": "His sisters Juniper and DiRossi",
+      "page": 67
+    },
+    {
+      "type": "content",
+      "text": "where did Elphinore lead Clay and his sisters?",
+      "book_key": "elf-dog-and-owl-head",
+      "answer": "The cliff that is the doorway to the People Under the Mountain",
+      "page": 70
+    },
+    {
+      "type": "content",
+      "text": "who came to Clay's house in the night?",
+      "book_key": "elf-dog-and-owl-head",
+      "answer": "An Owl-head child named Amos",
+      "page": 77
+    },
+    {
+      "type": "content",
+      "text": "what kind of lake is fed by the River of Time and Shadow?",
+      "book_key": "elf-dog-and-owl-head",
+      "answer": "A wishing lake",
+      "page": 89
+    },
+    {
+      "type": "content",
+      "text": "what are \"sleepers\"?",
+      "book_key": "elf-dog-and-owl-head",
+      "answer": "Mounds in the shape of giant sleeping people",
+      "page": 93
+    },
+    {
+      "type": "content",
+      "text": "what caused a sleeper to wake up?",
+      "book_key": "elf-dog-and-owl-head",
+      "answer": "Elphinore the dog was digging at its nostril",
+      "page": 95
+    },
+    {
+      "type": "content",
+      "text": "what thing of his dad's did Clay take for him and Amos to look for things?",
+      "book_key": "elf-dog-and-owl-head",
+      "answer": "Metal detector",
+      "page": 107
+    },
+    {
+      "type": "content",
+      "text": "name one thing Clay and Amos found with the metal detector.",
+      "book_key": "elf-dog-and-owl-head",
+      "answer": "Soda can, key, machine, helmet",
+      "page": 107
+    },
+    {
+      "type": "content",
+      "text": "what attacked Clay?",
+      "book_key": "elf-dog-and-owl-head",
+      "answer": "The wyrm",
+      "page": 113
+    },
+    {
+      "type": "content",
+      "text": "what is Amos' punishment for bringing Clay and befriending him, to the Owl-Head village?",
+      "book_key": "elf-dog-and-owl-head",
+      "answer": "His punishment is 25 lashes with a cane",
+      "page": 126
+    },
+    {
+      "type": "content",
+      "text": "why was Clay grounded?",
+      "book_key": "elf-dog-and-owl-head",
+      "answer": "For losing/breaking the metal detector",
+      "page": 130
+    },
+    {
+      "type": "content",
+      "text": "who did DiRossi befriend unexpectedly?",
+      "book_key": "elf-dog-and-owl-head",
+      "answer": "Vud the giant",
+      "page": 140
+    },
+    {
+      "type": "content",
+      "text": "what did Clay do with his dad during the summer after being grounded?",
+      "book_key": "elf-dog-and-owl-head",
+      "answer": "Rode in the road grader with his dad",
+      "page": 153
+    },
+    {
+      "type": "content",
+      "text": "how will Amos know Clay at the Midsummer celebration?",
+      "book_key": "elf-dog-and-owl-head",
+      "answer": "He'll have on a mask and red pants",
+      "page": 151
+    },
+    {
+      "type": "content",
+      "text": "what must Clay and his sister never do at the festival or else they will be trapped under the mountain for the rest of time?",
+      "book_key": "elf-dog-and-owl-head",
+      "answer": "They must not eat any food at the festival",
+      "page": 169
+    },
+    {
+      "type": "content",
+      "text": "what is at the circle of standing stones?",
+      "book_key": "elf-dog-and-owl-head",
+      "answer": "Portal to other worlds",
+      "page": 170
+    },
+    {
+      "type": "content",
+      "text": "what is the name of Death's horse?",
+      "book_key": "elf-dog-and-owl-head",
+      "answer": "Trigger Mortis",
+      "page": 172
+    },
+    {
+      "type": "content",
+      "text": "who came out of the mountain at the Midsummer festival?",
+      "book_key": "elf-dog-and-owl-head",
+      "answer": "The court of the Kingdom Under the Mountain",
+      "page": 175
+    },
+    {
+      "type": "content",
+      "text": "who destroyed Clay and his family's house?",
+      "book_key": "elf-dog-and-owl-head",
+      "answer": "The Royal Hunt",
+      "page": 187
+    },
+    {
+      "type": "content",
+      "text": "what did Clay and Amos go to look for after the hunting party took Elphinore?",
+      "book_key": "elf-dog-and-owl-head",
+      "answer": "They went to look for a door to the underground (that their key would unlock)",
+      "page": 191
+    },
+    {
+      "type": "content",
+      "text": "why did Amos sit on Clay's shoulders, while wearing a brocade coat with four arms?",
+      "book_key": "elf-dog-and-owl-head",
+      "answer": "To disguise themselves underground",
+      "page": 199
+    },
+    {
+      "type": "content",
+      "text": "where did Clay lead Amos and Elphinore while they were being chased by the Hunting party?",
+      "book_key": "elf-dog-and-owl-head",
+      "answer": "The Wishing Lake",
+      "page": 213
+    },
+    {
+      "type": "content",
+      "text": "what punishment did the Owl Head people give Clay?",
+      "book_key": "elf-dog-and-owl-head",
+      "answer": "Elphinore could not walk between worlds and Clay would not remember the Village/Owl Head people",
+      "page": 220
+    },
+    {
+      "type": "content",
+      "text": "what did Juniper have that could save the family from their financial trouble?",
+      "book_key": "elf-dog-and-owl-head",
+      "answer": "Gems from Elphinore's collar",
+      "page": 225
+    },
+    {
+      "type": "in-which-book",
+      "text": "are there people called \"The People Under the Mountain\"?",
+      "book_key": "elf-dog-and-owl-head",
+      "page": 5
+    },
+    {
+      "type": "in-which-book",
+      "text": "is there an uncle named Greykin?",
+      "book_key": "elf-dog-and-owl-head",
+      "page": 5
+    },
+    {
+      "type": "in-which-book",
+      "text": "were some neighbors maple sugaring?",
+      "book_key": "elf-dog-and-owl-head",
+      "page": 19
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a dog bark at a wall heater?",
+      "book_key": "elf-dog-and-owl-head",
+      "page": 30
+    },
+    {
+      "type": "in-which-book",
+      "text": "is someone good at drawing a map in his head?",
+      "book_key": "elf-dog-and-owl-head",
+      "page": 37
+    },
+    {
+      "type": "in-which-book",
+      "text": "does someone have a sweater that grows a sheep's head?",
+      "book_key": "elf-dog-and-owl-head",
+      "page": 52
+    },
+    {
+      "type": "in-which-book",
+      "text": "is the polite thing to do is to lead your guest to the basement?",
+      "book_key": "elf-dog-and-owl-head",
+      "page": 81
+    },
+    {
+      "type": "in-which-book",
+      "text": "would someone wish for a stampede of lemmings because they are delicious in pies?",
+      "book_key": "elf-dog-and-owl-head",
+      "page": 90
+    },
+    {
+      "type": "in-which-book",
+      "text": "does someone say, \"I can't get back to sleep because at any moment, he and his friend might come skipping by and wake me up with their chirpy voices and their singsongy attitudes.\"?",
+      "book_key": "elf-dog-and-owl-head",
+      "page": 137
+    },
+    {
+      "type": "in-which-book",
+      "text": "does someone say, \"Maybe one day she will marry a talking cricket and farm aphids with him.\"?",
+      "book_key": "elf-dog-and-owl-head",
+      "page": 148
+    },
+    {
+      "type": "in-which-book",
+      "text": "is someone led to a golden gondola?",
+      "book_key": "elf-dog-and-owl-head",
+      "page": 205
+    }
+  ]
+}

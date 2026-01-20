@@ -1,0 +1,147 @@
+{
+  "questions": [
+    {
+      "type": "content",
+      "text": "what is the name of Langston's middle school?",
+      "book_key": "finding-langston",
+      "answer": "Haines Junior High",
+      "page": 1
+    },
+    {
+      "type": "content",
+      "text": "what are the names of the three boys that bother Langston at school?",
+      "book_key": "finding-langston",
+      "answer": "Lymon, Erroll and Clem",
+      "page": 9
+    },
+    {
+      "type": "content",
+      "text": "what time does the school bell ring?",
+      "book_key": "finding-langston",
+      "answer": "3:00",
+      "page": 25
+    },
+    {
+      "type": "content",
+      "text": "what is Miss Cook's occupation?",
+      "book_key": "finding-langston",
+      "answer": "Librarian",
+      "page": 29
+    },
+    {
+      "type": "content",
+      "text": "what is Langston and his father's last stop while running errands?",
+      "book_key": "finding-langston",
+      "answer": "Fish Market",
+      "page": 30
+    },
+    {
+      "type": "content",
+      "text": "how many books is Langston allowed to check out from the library?",
+      "book_key": "finding-langston",
+      "answer": "Five",
+      "page": 31
+    },
+    {
+      "type": "content",
+      "text": "what is the name of the grocery store owner?",
+      "book_key": "finding-langston",
+      "answer": "Mr. Fields",
+      "page": 32
+    },
+    {
+      "type": "content",
+      "text": "what is Langston's dad's first name?",
+      "book_key": "finding-langston",
+      "answer": "Henry",
+      "page": 38
+    },
+    {
+      "type": "content",
+      "text": "what is the name of Langston's aunt?",
+      "book_key": "finding-langston",
+      "answer": "Lena",
+      "page": 42
+    },
+    {
+      "type": "content",
+      "text": "what is the name of the plant his father works at?",
+      "book_key": "finding-langston",
+      "answer": "Maxwell Brothers",
+      "page": 55
+    },
+    {
+      "type": "content",
+      "text": "what subject does Miss Fulton teach?",
+      "book_key": "finding-langston",
+      "answer": "English",
+      "page": 67
+    },
+    {
+      "type": "content",
+      "text": "in The Weary Blues by Langston Hughes, what is the title of Poem 4?",
+      "book_key": "finding-langston",
+      "answer": "To the Black Beloved",
+      "page": 80
+    },
+    {
+      "type": "content",
+      "text": "what is the name of the boy who rips Langston's book?",
+      "book_key": "finding-langston",
+      "answer": "Lymon",
+      "page": 81
+    },
+    {
+      "type": "content",
+      "text": "Mr. Jackson is listening to which two teams play baseball?",
+      "book_key": "finding-langston",
+      "answer": "Cardinals and Red Sox",
+      "page": 90
+    },
+    {
+      "type": "content",
+      "text": "what do they call the big explosion on the Navy ship in California?",
+      "book_key": "finding-langston",
+      "answer": "Port Chicago disaster",
+      "page": 98
+    },
+    {
+      "type": "content",
+      "text": "who gives Langston a book of poems called Harlem Shadows?",
+      "book_key": "finding-langston",
+      "answer": "Miss Fulton",
+      "page": 100
+    },
+    {
+      "type": "content",
+      "text": "where does Langston go with his father instead of the fish market?",
+      "book_key": "finding-langston",
+      "answer": "The library",
+      "page": 103
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character say the library smells like old paper, glue, and wood?",
+      "book_key": "finding-langston",
+      "page": 29
+    },
+    {
+      "type": "in-which-book",
+      "text": "does the main character live in a city nicknamed Bronzeville?",
+      "book_key": "finding-langston",
+      "page": 1
+    },
+    {
+      "type": "in-which-book",
+      "text": "is the main character named after a famous poet?",
+      "book_key": "finding-langston",
+      "page": 1
+    },
+    {
+      "type": "in-which-book",
+      "text": "does the main character discover a box of letters that his mother sent his father when they were young?",
+      "book_key": "finding-langston",
+      "page": 38
+    }
+  ]
+}

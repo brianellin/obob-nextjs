@@ -1,0 +1,3383 @@
+{
+  "questions": [
+    {
+      "type": "content",
+      "text": "Marvel's parents and school counselor call her worries \"anxiety.\" What does Marvel call her worries?",
+      "book_key": "better-with-butter",
+      "answer": "Armor",
+      "page": 2
+    },
+    {
+      "type": "content",
+      "text": "who does Marvel choose for her Famous Californian presentation?",
+      "book_key": "better-with-butter",
+      "answer": "Grandma Prisbrey",
+      "page": 3
+    },
+    {
+      "type": "content",
+      "text": "what did Addie Lucas get special permission for during her famous Californian presentation?",
+      "book_key": "better-with-butter",
+      "answer": "To hand out cookies",
+      "page": 4
+    },
+    {
+      "type": "content",
+      "text": "what happens to Marvel when she's on stage during the Famous Californians presentation practice?",
+      "book_key": "better-with-butter",
+      "answer": "She freezes and gets carried off stage",
+      "page": 14
+    },
+    {
+      "type": "content",
+      "text": "who is Skippy?",
+      "book_key": "better-with-butter",
+      "answer": "The school nurse",
+      "page": 22
+    },
+    {
+      "type": "content",
+      "text": "who says \"Sometimes life gives us more roadblocks than freeways\"?",
+      "book_key": "better-with-butter",
+      "answer": "Skippy the School Nurse",
+      "page": 26
+    },
+    {
+      "type": "content",
+      "text": "where does Marvel first see the baby goat, Butter?",
+      "book_key": "better-with-butter",
+      "answer": "On the sports field surrounded by a group of 8th graders",
+      "page": 32
+    },
+    {
+      "type": "content",
+      "text": "what does Marvel yell to get the 8th graders away from the baby goat?",
+      "book_key": "better-with-butter",
+      "answer": "Run! Principal Huxx is coming. Principal Huxx is coming",
+      "page": 35
+    },
+    {
+      "type": "content",
+      "text": "what grade is Reef in?",
+      "book_key": "better-with-butter",
+      "answer": "11th",
+      "page": 43
+    },
+    {
+      "type": "content",
+      "text": "what object of Marvel's does Butter chew on, making it hard to do her Math work?",
+      "book_key": "better-with-butter",
+      "answer": "Marvel's Math book",
+      "page": 46
+    },
+    {
+      "type": "content",
+      "text": "who goes to a principal/parent/teacher meeting when Marvel's mom is working?",
+      "book_key": "better-with-butter",
+      "answer": "Marvel's Dad/Captain McKenna",
+      "page": 76
+    },
+    {
+      "type": "content",
+      "text": "what is Ms. Day doing that distracts her from skipping the videorecording of Marvel's disastrous Famous Californian's presentation?",
+      "book_key": "better-with-butter",
+      "answer": "Texting or hearing news that her sister had a baby",
+      "page": 90
+    },
+    {
+      "type": "content",
+      "text": "what 2 things does Marvel and Reef's mom say are not allowed at the table?",
+      "book_key": "better-with-butter",
+      "answer": "Goats and phones",
+      "page": 99
+    },
+    {
+      "type": "content",
+      "text": "what food does Marvel use to train Butter to walk on a leash?",
+      "book_key": "better-with-butter",
+      "answer": "Cheerios",
+      "page": 101
+    },
+    {
+      "type": "content",
+      "text": "who or what does Marvel meet at the pet store that introduces her to the idea of therapy animals?",
+      "book_key": "better-with-butter",
+      "answer": "Sonny the Newfoundland Dog / a Therapy dog",
+      "page": 114
+    },
+    {
+      "type": "content",
+      "text": "what seat does Jamie pick at Friendship group?",
+      "book_key": "better-with-butter",
+      "answer": "The bean bag chair",
+      "page": 136
+    },
+    {
+      "type": "content",
+      "text": "what does Marvel use to make Butter an ESA vest?",
+      "book_key": "better-with-butter",
+      "answer": "Reef's scrimmage pinny",
+      "page": 154
+    },
+    {
+      "type": "content",
+      "text": "what skill is Marvel most worried about Butter being able to perform for Principal Huxx?",
+      "book_key": "better-with-butter",
+      "answer": "Respond to the command \"Leave it\"",
+      "page": 184
+    },
+    {
+      "type": "content",
+      "text": "what is the title of the end of year sixth grade play?",
+      "book_key": "better-with-butter",
+      "answer": "Heidi",
+      "page": 187
+    },
+    {
+      "type": "content",
+      "text": "what part does Theo want in the play \"Heidi\"?",
+      "book_key": "better-with-butter",
+      "answer": "Aunt Dete",
+      "page": 209
+    },
+    {
+      "type": "content",
+      "text": "what does Mercedes call any tool she doesn't know the name of?",
+      "book_key": "better-with-butter",
+      "answer": "Doofer",
+      "page": 226
+    },
+    {
+      "type": "content",
+      "text": "why does the third grader named Annie keep trying to interrupt when her teacher is talking to Marvel?",
+      "book_key": "better-with-butter",
+      "answer": "Because Butter is eating the test papers",
+      "page": 248
+    },
+    {
+      "type": "content",
+      "text": "how does Mercedes replace Butter in the school play?",
+      "book_key": "better-with-butter",
+      "answer": "She has her little brother dress up as a Goat",
+      "page": 257
+    },
+    {
+      "type": "content",
+      "text": "how does Marvel get to the farm to see Butter when she's sick?",
+      "book_key": "better-with-butter",
+      "answer": "Marvel takes the bus",
+      "page": 278
+    },
+    {
+      "type": "content",
+      "text": "who has very bad stage fright on opening night of Heidi and needs help getting on stage?",
+      "book_key": "better-with-butter",
+      "answer": "Jamie",
+      "page": 299
+    },
+    {
+      "type": "in-which-book",
+      "text": "did a character leave a job running a tech company to have a \"profession with meaning\"?",
+      "book_key": "better-with-butter",
+      "page": 6
+    },
+    {
+      "type": "in-which-book",
+      "text": "do characters live in a house with white picket fence and a garden five times the size of their house?",
+      "book_key": "better-with-butter",
+      "page": 42
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character nick-name a schoolmate \"Frosty\"?",
+      "book_key": "better-with-butter",
+      "page": 93
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character make posters for a \"Lost Creature\"?",
+      "book_key": "better-with-butter",
+      "page": 121
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character receive a phone call from the zoo about a missing capybara?",
+      "book_key": "better-with-butter",
+      "page": 201
+    },
+    {
+      "type": "in-which-book",
+      "text": "is a character named Gloria Fizzle?",
+      "book_key": "better-with-butter",
+      "page": 252
+    },
+    {
+      "type": "content",
+      "text": "what is decided will be given and passed down to each mayor of the City of Ember?",
+      "book_key": "city-of-ember",
+      "answer": "A box with secrets",
+      "page": 2
+    },
+    {
+      "type": "content",
+      "text": "why did the 7th mayor try and destroy the box and then hide it in a closet?",
+      "book_key": "city-of-ember",
+      "answer": "Because he thought it might hold information that would cure his sickness",
+      "page": 2
+    },
+    {
+      "type": "content",
+      "text": "what do the young people of the highest class receive by drawing from a bag?",
+      "book_key": "city-of-ember",
+      "answer": "Their job assignment",
+      "page": 8
+    },
+    {
+      "type": "content",
+      "text": "what is considered the most important job?",
+      "book_key": "city-of-ember",
+      "answer": "Fixing the electricity",
+      "page": 10
+    },
+    {
+      "type": "content",
+      "text": "what jobs do Lina and Doon trade?",
+      "book_key": "city-of-ember",
+      "answer": "Pipeworks Laborer and Messenger",
+      "page": 15
+    },
+    {
+      "type": "content",
+      "text": "who does Lina live with?",
+      "book_key": "city-of-ember",
+      "answer": "Her grandmother and her baby sister",
+      "page": 22
+    },
+    {
+      "type": "content",
+      "text": "what is one of the 4 rules for Messengers?",
+      "book_key": "city-of-ember",
+      "answer": "When a customer gives you a message, repeat it back; Always wear your red jacket so people can identify you; Go as fast as possible; Deliver a message only to the person it's meant for",
+      "page": 30
+    },
+    {
+      "type": "content",
+      "text": "when Lina goes to deliver a message to the Mayor, what part of the Gathering Hall Building does she end up?",
+      "book_key": "city-of-ember",
+      "answer": "The roof",
+      "page": 36
+    },
+    {
+      "type": "content",
+      "text": "what does Doon break the rules to go see on his first day on the job as Pipeworks Laborer?",
+      "book_key": "city-of-ember",
+      "answer": "The generator",
+      "page": 48
+    },
+    {
+      "type": "content",
+      "text": "what type of shop does Doon live above?",
+      "book_key": "city-of-ember",
+      "answer": "A Small Items shop",
+      "page": 49
+    },
+    {
+      "type": "content",
+      "text": "what is Doon's main purpose in being a Pipeworks Laborer?",
+      "book_key": "city-of-ember",
+      "answer": "He wants to find something important/find a way to help the City of Ember",
+      "page": 53
+    },
+    {
+      "type": "content",
+      "text": "what kind of bug did Doon find and start taking care of?",
+      "book_key": "city-of-ember",
+      "answer": "A worm",
+      "page": 52
+    },
+    {
+      "type": "content",
+      "text": "what do the inhabitants of the city call the space of darkness that is past the city?",
+      "book_key": "city-of-ember",
+      "answer": "The Unknown Regions",
+      "page": 65
+    },
+    {
+      "type": "content",
+      "text": "what type of seed does Clary give Lina as she is leaving the greenhouse and they are discussing where life comes from?",
+      "book_key": "city-of-ember",
+      "answer": "Bean",
+      "page": 69
+    },
+    {
+      "type": "content",
+      "text": "what does Lina imagine is beyond the city?",
+      "book_key": "city-of-ember",
+      "answer": "Another city",
+      "page": 68
+    },
+    {
+      "type": "content",
+      "text": "what two colors does Lina pick for the two colored pencils she will purchase?",
+      "book_key": "city-of-ember",
+      "answer": "Green and blue",
+      "page": 77
+    },
+    {
+      "type": "content",
+      "text": "what happens to Poppy while Lina is purchasing colored pencils?",
+      "book_key": "city-of-ember",
+      "answer": "She becomes lost",
+      "page": 78
+    },
+    {
+      "type": "content",
+      "text": "what happens when the Mayor calls a town meeting?",
+      "book_key": "city-of-ember",
+      "answer": "People start yelling, throwing, surging forward, are angry",
+      "page": 88
+    },
+    {
+      "type": "content",
+      "text": "what does Lina find in Poppy's hands and mouth and strewn about that came from inside the box her Granny found in the closet?",
+      "book_key": "city-of-ember",
+      "answer": "A message full of holes",
+      "page": 93
+    },
+    {
+      "type": "content",
+      "text": "who does Lina take the message full of holes to in order to try and get help to decipher it?",
+      "book_key": "city-of-ember",
+      "answer": "Captain Fleery",
+      "page": 97
+    },
+    {
+      "type": "content",
+      "text": "what does Lina discover Lizzie is receiving from Looper Windly?",
+      "book_key": "city-of-ember",
+      "answer": "Rare canned goods like peaches, applesauce and creamed corn",
+      "page": 151
+    },
+    {
+      "type": "content",
+      "text": "who gives Lina and Poppy a place to live after their grandmother dies?",
+      "book_key": "city-of-ember",
+      "answer": "Mrs. Murdo",
+      "page": 142
+    },
+    {
+      "type": "content",
+      "text": "when Doon is called \"bug boy\" by his fellow Pipeworkers, what does he do out of anger?",
+      "book_key": "city-of-ember",
+      "answer": "Steps on a bug he had found",
+      "page": 114
+    },
+    {
+      "type": "content",
+      "text": "who do readers discover has been receiving deliveries from the secret storage room below the city behind a locked door?",
+      "book_key": "city-of-ember",
+      "answer": "The mayor",
+      "page": 161
+    },
+    {
+      "type": "content",
+      "text": "what do Lina and Doon find in the boxes behind the secret panel?",
+      "book_key": "city-of-ember",
+      "answer": "Matches and candles",
+      "page": 188
+    },
+    {
+      "type": "content",
+      "text": "what is the name of the holiday the entire city celebrates?",
+      "book_key": "city-of-ember",
+      "answer": "The day of the Singing",
+      "page": 196
+    },
+    {
+      "type": "content",
+      "text": "why is there a reward posted for finding Doon and Lina?",
+      "book_key": "city-of-ember",
+      "answer": "Because they have been accused of spreading vicious rumors",
+      "page": 205
+    },
+    {
+      "type": "content",
+      "text": "what do Lina, Poppy, and Doon use to escape the city?",
+      "book_key": "city-of-ember",
+      "answer": "A boat",
+      "page": 237
+    },
+    {
+      "type": "content",
+      "text": "what do Lina, Poppy, and Doon find posted on the entrance to the path?",
+      "book_key": "city-of-ember",
+      "answer": "A sign welcoming City of Ember refugees",
+      "page": 250
+    },
+    {
+      "type": "content",
+      "text": "who finds Lina and Doon's message at the end of the book?",
+      "book_key": "city-of-ember",
+      "answer": "Mrs. Murdo",
+      "page": 270
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a Pipeworks Laborer and a Messenger team up to try and save their city?",
+      "book_key": "city-of-ember",
+      "page": 1
+    },
+    {
+      "type": "in-which-book",
+      "text": "do people draw job assignments once they have finished their highest class?",
+      "book_key": "city-of-ember",
+      "page": 8
+    },
+    {
+      "type": "in-which-book",
+      "text": "do we find the main characters Lina and Doon?",
+      "book_key": "city-of-ember",
+      "page": 1
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a girl and her baby sister live with their grandmother who runs a yarn shop?",
+      "book_key": "city-of-ember",
+      "page": 22
+    },
+    {
+      "type": "in-which-book",
+      "text": "does lack of electricity cause the lights to go out frequently?",
+      "book_key": "city-of-ember",
+      "page": 1
+    },
+    {
+      "type": "in-which-book",
+      "text": "is the Mayor and his guards and others stealing from the City?",
+      "book_key": "city-of-ember",
+      "page": 161
+    },
+    {
+      "type": "in-which-book",
+      "text": "do the main characters use a boat to escape?",
+      "book_key": "city-of-ember",
+      "page": 237
+    },
+    {
+      "type": "in-which-book",
+      "text": "do the main characters find a creature they have never seen before - a dog - during their escape?",
+      "book_key": "city-of-ember",
+      "page": 250
+    },
+    {
+      "type": "content",
+      "text": "what do elf-hounds hunt on Mondays?",
+      "book_key": "elf-dog-and-owl-head",
+      "answer": "Wyrms",
+      "page": 1
+    },
+    {
+      "type": "content",
+      "text": "what makes the People Under the Mountain invisible to humans?",
+      "book_key": "elf-dog-and-owl-head",
+      "answer": "Smoke from magical machines",
+      "page": 4
+    },
+    {
+      "type": "content",
+      "text": "what did Clay think the dog had saved him from?",
+      "book_key": "elf-dog-and-owl-head",
+      "answer": "A black bear",
+      "page": 15
+    },
+    {
+      "type": "content",
+      "text": "what material was the dish that the elf-hound would eat off of in the human world?",
+      "book_key": "elf-dog-and-owl-head",
+      "answer": "Plastic",
+      "page": 26
+    },
+    {
+      "type": "content",
+      "text": "what is Clay's best friend's name?",
+      "book_key": "elf-dog-and-owl-head",
+      "answer": "Levi",
+      "page": 31
+    },
+    {
+      "type": "content",
+      "text": "what kind of dog does Clay say the dog he found is?",
+      "book_key": "elf-dog-and-owl-head",
+      "answer": "Bulgarian elf-hound",
+      "page": 24
+    },
+    {
+      "type": "content",
+      "text": "what does Levi say is the source of the strange sightings in the woods?",
+      "book_key": "elf-dog-and-owl-head",
+      "answer": "UFOs",
+      "page": 32
+    },
+    {
+      "type": "content",
+      "text": "what does Clay overhear that the dog's name is?",
+      "book_key": "elf-dog-and-owl-head",
+      "answer": "Elphinore",
+      "page": 40
+    },
+    {
+      "type": "content",
+      "text": "what animal did the people in the village Clay discovered resemble?",
+      "book_key": "elf-dog-and-owl-head",
+      "answer": "Owls",
+      "page": 42
+    },
+    {
+      "type": "content",
+      "text": "what did Clay steal from the village he found?",
+      "book_key": "elf-dog-and-owl-head",
+      "answer": "A wooden shaker (that made plants grow very fast)",
+      "page": 42
+    },
+    {
+      "type": "content",
+      "text": "name one strange thing that happened when DiRossi took a bath?",
+      "book_key": "elf-dog-and-owl-head",
+      "answer": "Reeds started growing in the bathtub and there was a catfish in the tub",
+      "page": 47
+    },
+    {
+      "type": "content",
+      "text": "what creature emerged in the laundry room after Dad sprinkled the laundry with the shaker Clay found?",
+      "book_key": "elf-dog-and-owl-head",
+      "answer": "A dinosaur",
+      "page": 57
+    },
+    {
+      "type": "content",
+      "text": "what thing did Clay see that \"stared up at him from the forest floor like an evil eye—a warning or a curse\"?",
+      "book_key": "elf-dog-and-owl-head",
+      "answer": "An owl pellet",
+      "page": 63
+    },
+    {
+      "type": "content",
+      "text": "what is DiRossi referring to when she says, \"It's so my world is always in shadow...it's always midnight for me....\"?",
+      "book_key": "elf-dog-and-owl-head",
+      "answer": "DiRossi's explanation for why she always wears sunglasses",
+      "page": 67
+    },
+    {
+      "type": "content",
+      "text": "who followed Clay after the magical powder incident at home?",
+      "book_key": "elf-dog-and-owl-head",
+      "answer": "His sisters Juniper and DiRossi",
+      "page": 67
+    },
+    {
+      "type": "content",
+      "text": "where did Elphinore lead Clay and his sisters?",
+      "book_key": "elf-dog-and-owl-head",
+      "answer": "The cliff that is the doorway to the People Under the Mountain",
+      "page": 70
+    },
+    {
+      "type": "content",
+      "text": "who came to Clay's house in the night?",
+      "book_key": "elf-dog-and-owl-head",
+      "answer": "An Owl-head child named Amos",
+      "page": 77
+    },
+    {
+      "type": "content",
+      "text": "what kind of lake is fed by the River of Time and Shadow?",
+      "book_key": "elf-dog-and-owl-head",
+      "answer": "A wishing lake",
+      "page": 89
+    },
+    {
+      "type": "content",
+      "text": "what are \"sleepers\"?",
+      "book_key": "elf-dog-and-owl-head",
+      "answer": "Mounds in the shape of giant sleeping people",
+      "page": 93
+    },
+    {
+      "type": "content",
+      "text": "what caused a sleeper to wake up?",
+      "book_key": "elf-dog-and-owl-head",
+      "answer": "Elphinore the dog was digging at its nostril",
+      "page": 95
+    },
+    {
+      "type": "content",
+      "text": "what thing of his dad's did Clay take for him and Amos to look for things?",
+      "book_key": "elf-dog-and-owl-head",
+      "answer": "Metal detector",
+      "page": 107
+    },
+    {
+      "type": "content",
+      "text": "name one thing Clay and Amos found with the metal detector.",
+      "book_key": "elf-dog-and-owl-head",
+      "answer": "Soda can, key, machine, helmet",
+      "page": 107
+    },
+    {
+      "type": "content",
+      "text": "what attacked Clay?",
+      "book_key": "elf-dog-and-owl-head",
+      "answer": "The wyrm",
+      "page": 113
+    },
+    {
+      "type": "content",
+      "text": "what is Amos' punishment for bringing Clay and befriending him, to the Owl-Head village?",
+      "book_key": "elf-dog-and-owl-head",
+      "answer": "His punishment is 25 lashes with a cane",
+      "page": 126
+    },
+    {
+      "type": "content",
+      "text": "why was Clay grounded?",
+      "book_key": "elf-dog-and-owl-head",
+      "answer": "For losing/breaking the metal detector",
+      "page": 130
+    },
+    {
+      "type": "content",
+      "text": "who did DiRossi befriend unexpectedly?",
+      "book_key": "elf-dog-and-owl-head",
+      "answer": "Vud the giant",
+      "page": 140
+    },
+    {
+      "type": "content",
+      "text": "what did Clay do with his dad during the summer after being grounded?",
+      "book_key": "elf-dog-and-owl-head",
+      "answer": "Rode in the road grader with his dad",
+      "page": 153
+    },
+    {
+      "type": "content",
+      "text": "how will Amos know Clay at the Midsummer celebration?",
+      "book_key": "elf-dog-and-owl-head",
+      "answer": "He'll have on a mask and red pants",
+      "page": 151
+    },
+    {
+      "type": "content",
+      "text": "what must Clay and his sister never do at the festival or else they will be trapped under the mountain for the rest of time?",
+      "book_key": "elf-dog-and-owl-head",
+      "answer": "They must not eat any food at the festival",
+      "page": 169
+    },
+    {
+      "type": "content",
+      "text": "what is at the circle of standing stones?",
+      "book_key": "elf-dog-and-owl-head",
+      "answer": "Portal to other worlds",
+      "page": 170
+    },
+    {
+      "type": "content",
+      "text": "what is the name of Death's horse?",
+      "book_key": "elf-dog-and-owl-head",
+      "answer": "Trigger Mortis",
+      "page": 172
+    },
+    {
+      "type": "content",
+      "text": "who came out of the mountain at the Midsummer festival?",
+      "book_key": "elf-dog-and-owl-head",
+      "answer": "The court of the Kingdom Under the Mountain",
+      "page": 175
+    },
+    {
+      "type": "content",
+      "text": "who destroyed Clay and his family's house?",
+      "book_key": "elf-dog-and-owl-head",
+      "answer": "The Royal Hunt",
+      "page": 187
+    },
+    {
+      "type": "content",
+      "text": "what did Clay and Amos go to look for after the hunting party took Elphinore?",
+      "book_key": "elf-dog-and-owl-head",
+      "answer": "They went to look for a door to the underground (that their key would unlock)",
+      "page": 191
+    },
+    {
+      "type": "content",
+      "text": "why did Amos sit on Clay's shoulders, while wearing a brocade coat with four arms?",
+      "book_key": "elf-dog-and-owl-head",
+      "answer": "To disguise themselves underground",
+      "page": 199
+    },
+    {
+      "type": "content",
+      "text": "where did Clay lead Amos and Elphinore while they were being chased by the Hunting party?",
+      "book_key": "elf-dog-and-owl-head",
+      "answer": "The Wishing Lake",
+      "page": 213
+    },
+    {
+      "type": "content",
+      "text": "what punishment did the Owl Head people give Clay?",
+      "book_key": "elf-dog-and-owl-head",
+      "answer": "Elphinore could not walk between worlds and Clay would not remember the Village/Owl Head people",
+      "page": 220
+    },
+    {
+      "type": "content",
+      "text": "what did Juniper have that could save the family from their financial trouble?",
+      "book_key": "elf-dog-and-owl-head",
+      "answer": "Gems from Elphinore's collar",
+      "page": 225
+    },
+    {
+      "type": "in-which-book",
+      "text": "are there people called \"The People Under the Mountain\"?",
+      "book_key": "elf-dog-and-owl-head",
+      "page": 5
+    },
+    {
+      "type": "in-which-book",
+      "text": "is there an uncle named Greykin?",
+      "book_key": "elf-dog-and-owl-head",
+      "page": 5
+    },
+    {
+      "type": "in-which-book",
+      "text": "were some neighbors maple sugaring?",
+      "book_key": "elf-dog-and-owl-head",
+      "page": 19
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a dog bark at a wall heater?",
+      "book_key": "elf-dog-and-owl-head",
+      "page": 30
+    },
+    {
+      "type": "in-which-book",
+      "text": "is someone good at drawing a map in his head?",
+      "book_key": "elf-dog-and-owl-head",
+      "page": 37
+    },
+    {
+      "type": "in-which-book",
+      "text": "does someone have a sweater that grows a sheep's head?",
+      "book_key": "elf-dog-and-owl-head",
+      "page": 52
+    },
+    {
+      "type": "in-which-book",
+      "text": "is the polite thing to do is to lead your guest to the basement?",
+      "book_key": "elf-dog-and-owl-head",
+      "page": 81
+    },
+    {
+      "type": "in-which-book",
+      "text": "would someone wish for a stampede of lemmings because they are delicious in pies?",
+      "book_key": "elf-dog-and-owl-head",
+      "page": 90
+    },
+    {
+      "type": "in-which-book",
+      "text": "does someone say, \"I can't get back to sleep because at any moment, he and his friend might come skipping by and wake me up with their chirpy voices and their singsongy attitudes.\"?",
+      "book_key": "elf-dog-and-owl-head",
+      "page": 137
+    },
+    {
+      "type": "in-which-book",
+      "text": "does someone say, \"Maybe one day she will marry a talking cricket and farm aphids with him.\"?",
+      "book_key": "elf-dog-and-owl-head",
+      "page": 148
+    },
+    {
+      "type": "in-which-book",
+      "text": "is someone led to a golden gondola?",
+      "book_key": "elf-dog-and-owl-head",
+      "page": 205
+    },
+    {
+      "type": "content",
+      "text": "what is the first thing that gets Kyle Keely grounded for a week?",
+      "book_key": "escape-from-mr-lemoncellos-library",
+      "answer": "Taking a short-cut through his mother's favorite rosebush",
+      "page": 1
+    },
+    {
+      "type": "content",
+      "text": "what are two big words for \"library\" that Charles' tutor offers?",
+      "book_key": "escape-from-mr-lemoncellos-library",
+      "answer": "Book repository and athenaeum",
+      "page": 20
+    },
+    {
+      "type": "content",
+      "text": "Dr. Yanina Zinchenko has a slight hint of an accent, what is it?",
+      "book_key": "escape-from-mr-lemoncellos-library",
+      "answer": "Russian",
+      "page": 33
+    },
+    {
+      "type": "content",
+      "text": "which 2 books are on Kyle's library card?",
+      "book_key": "escape-from-mr-lemoncellos-library",
+      "answer": "I Love You, Stinky Face and The Napping House",
+      "page": 40
+    },
+    {
+      "type": "content",
+      "text": "what is the one rule Dr. Zinchenko tells to the essay winners?",
+      "book_key": "escape-from-mr-lemoncellos-library",
+      "answer": "Be Gentle",
+      "page": 49
+    },
+    {
+      "type": "content",
+      "text": "what did Akimi's dad design in the new library?",
+      "book_key": "escape-from-mr-lemoncellos-library",
+      "answer": "The support structure for the vault door",
+      "page": 52
+    },
+    {
+      "type": "content",
+      "text": "how old would Mrs. Gail Tobin (Head librarian of the Alexandraville public library in the 1960's) be if she were alive today?",
+      "book_key": "escape-from-mr-lemoncellos-library",
+      "answer": "110",
+      "page": 62
+    },
+    {
+      "type": "content",
+      "text": "in the computer game that features a medieval sewer, what surprising thing does the sewer smell like?",
+      "book_key": "escape-from-mr-lemoncellos-library",
+      "answer": "Pine trees",
+      "page": 81
+    },
+    {
+      "type": "content",
+      "text": "who is the first contestant to be eliminated from the game?",
+      "book_key": "escape-from-mr-lemoncellos-library",
+      "answer": "Yasmeen",
+      "page": 90
+    },
+    {
+      "type": "content",
+      "text": "what is the extreme challenge in which Bridgette gets eliminated?",
+      "book_key": "escape-from-mr-lemoncellos-library",
+      "answer": "Name 4 books each by 10 authors in 2 minutes",
+      "page": 122
+    },
+    {
+      "type": "content",
+      "text": "what color are the walls in the Young Adult room?",
+      "book_key": "escape-from-mr-lemoncellos-library",
+      "answer": "Purple and yellow",
+      "page": 124
+    },
+    {
+      "type": "content",
+      "text": "which character had ancestors that came to America on the Mayflower?",
+      "book_key": "escape-from-mr-lemoncellos-library",
+      "answer": "Charles Chiltington",
+      "page": 136
+    },
+    {
+      "type": "content",
+      "text": "what famous person said \"Outside of a dog a book is a man's best friend. Inside a dog it's too dark to read.\"?",
+      "book_key": "escape-from-mr-lemoncellos-library",
+      "answer": "Groucho Marx",
+      "page": 146
+    },
+    {
+      "type": "content",
+      "text": "who do Kyle and his teammates meet in the 590's - Zoology area?",
+      "book_key": "escape-from-mr-lemoncellos-library",
+      "answer": "John James Audubon",
+      "page": 185
+    },
+    {
+      "type": "content",
+      "text": "what does Kyle's team read their second night in the Library?",
+      "book_key": "escape-from-mr-lemoncellos-library",
+      "answer": "Sherlock Holmes",
+      "page": 205
+    },
+    {
+      "type": "content",
+      "text": "who gets eliminated for stealing?",
+      "book_key": "escape-from-mr-lemoncellos-library",
+      "answer": "Andrew Peckleman",
+      "page": 229
+    },
+    {
+      "type": "content",
+      "text": "what 2 book titles are on the back of Sierra's library card?",
+      "book_key": "escape-from-mr-lemoncellos-library",
+      "answer": "The Westing Game and The Egypt Game",
+      "page": 242
+    },
+    {
+      "type": "content",
+      "text": "what job does Charles's uncle Jimmy do?",
+      "book_key": "escape-from-mr-lemoncellos-library",
+      "answer": "Head Librarian of the Library of Congress",
+      "page": 250
+    },
+    {
+      "type": "content",
+      "text": "what year did The Mixed Up Files of Mrs. Basil E. Frankweiler win the Newbery Medal?",
+      "book_key": "escape-from-mr-lemoncellos-library",
+      "answer": "1968",
+      "page": 274
+    },
+    {
+      "type": "content",
+      "text": "what is the answer to the final clue \"Once you learn how to do this, you will be forever free.\"?",
+      "book_key": "escape-from-mr-lemoncellos-library",
+      "answer": "Read",
+      "page": 285
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character say a book was \"originally written in Canadian\"?",
+      "book_key": "escape-from-mr-lemoncellos-library",
+      "page": 188
+    },
+    {
+      "type": "in-which-book",
+      "text": "are characters told to bring \"a sleeping bag, toothbrush, and a change of clothes... and consider bringing 2 pairs of underwear\"?",
+      "book_key": "escape-from-mr-lemoncellos-library",
+      "page": 34
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character wear banana-peel slippers?",
+      "book_key": "escape-from-mr-lemoncellos-library",
+      "page": 36
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a game have smell-a-vision?",
+      "book_key": "escape-from-mr-lemoncellos-library",
+      "page": 80
+    },
+    {
+      "type": "content",
+      "text": "what is the name of Langston's middle school?",
+      "book_key": "finding-langston",
+      "answer": "Haines Junior High",
+      "page": 1
+    },
+    {
+      "type": "content",
+      "text": "what are the names of the three boys that bother Langston at school?",
+      "book_key": "finding-langston",
+      "answer": "Lymon, Erroll and Clem",
+      "page": 9
+    },
+    {
+      "type": "content",
+      "text": "what time does the school bell ring?",
+      "book_key": "finding-langston",
+      "answer": "3:00",
+      "page": 25
+    },
+    {
+      "type": "content",
+      "text": "what is Miss Cook's occupation?",
+      "book_key": "finding-langston",
+      "answer": "Librarian",
+      "page": 29
+    },
+    {
+      "type": "content",
+      "text": "what is Langston and his father's last stop while running errands?",
+      "book_key": "finding-langston",
+      "answer": "Fish Market",
+      "page": 30
+    },
+    {
+      "type": "content",
+      "text": "how many books is Langston allowed to check out from the library?",
+      "book_key": "finding-langston",
+      "answer": "Five",
+      "page": 31
+    },
+    {
+      "type": "content",
+      "text": "what is the name of the grocery store owner?",
+      "book_key": "finding-langston",
+      "answer": "Mr. Fields",
+      "page": 32
+    },
+    {
+      "type": "content",
+      "text": "what is Langston's dad's first name?",
+      "book_key": "finding-langston",
+      "answer": "Henry",
+      "page": 38
+    },
+    {
+      "type": "content",
+      "text": "what is the name of Langston's aunt?",
+      "book_key": "finding-langston",
+      "answer": "Lena",
+      "page": 42
+    },
+    {
+      "type": "content",
+      "text": "what is the name of the plant his father works at?",
+      "book_key": "finding-langston",
+      "answer": "Maxwell Brothers",
+      "page": 55
+    },
+    {
+      "type": "content",
+      "text": "what subject does Miss Fulton teach?",
+      "book_key": "finding-langston",
+      "answer": "English",
+      "page": 67
+    },
+    {
+      "type": "content",
+      "text": "in The Weary Blues by Langston Hughes, what is the title of Poem 4?",
+      "book_key": "finding-langston",
+      "answer": "To the Black Beloved",
+      "page": 80
+    },
+    {
+      "type": "content",
+      "text": "what is the name of the boy who rips Langston's book?",
+      "book_key": "finding-langston",
+      "answer": "Lymon",
+      "page": 81
+    },
+    {
+      "type": "content",
+      "text": "Mr. Jackson is listening to which two teams play baseball?",
+      "book_key": "finding-langston",
+      "answer": "Cardinals and Red Sox",
+      "page": 90
+    },
+    {
+      "type": "content",
+      "text": "what do they call the big explosion on the Navy ship in California?",
+      "book_key": "finding-langston",
+      "answer": "Port Chicago disaster",
+      "page": 98
+    },
+    {
+      "type": "content",
+      "text": "who gives Langston a book of poems called Harlem Shadows?",
+      "book_key": "finding-langston",
+      "answer": "Miss Fulton",
+      "page": 100
+    },
+    {
+      "type": "content",
+      "text": "where does Langston go with his father instead of the fish market?",
+      "book_key": "finding-langston",
+      "answer": "The library",
+      "page": 103
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character say the library smells like old paper, glue, and wood?",
+      "book_key": "finding-langston",
+      "page": 29
+    },
+    {
+      "type": "in-which-book",
+      "text": "does the main character live in a city nicknamed Bronzeville?",
+      "book_key": "finding-langston",
+      "page": 1
+    },
+    {
+      "type": "in-which-book",
+      "text": "is the main character named after a famous poet?",
+      "book_key": "finding-langston",
+      "page": 1
+    },
+    {
+      "type": "in-which-book",
+      "text": "does the main character discover a box of letters that his mother sent his father when they were young?",
+      "book_key": "finding-langston",
+      "page": 38
+    },
+    {
+      "type": "content",
+      "text": "what type of plane was Brian traveling in?",
+      "book_key": "hatchet",
+      "answer": "Bushplane (Cessna 406)",
+      "page": 1
+    },
+    {
+      "type": "content",
+      "text": "how old is Brian?",
+      "book_key": "hatchet",
+      "answer": "Thirteen",
+      "page": 1
+    },
+    {
+      "type": "content",
+      "text": "where does Brian's father work?",
+      "book_key": "hatchet",
+      "answer": "In the oil fields of Canada",
+      "page": 6
+    },
+    {
+      "type": "content",
+      "text": "what word do you say to signal end of transmission over the radio?",
+      "book_key": "hatchet",
+      "answer": "Over",
+      "page": 19
+    },
+    {
+      "type": "content",
+      "text": "what is a beaver house called?",
+      "book_key": "hatchet",
+      "answer": "A beaver lodge",
+      "page": 38
+    },
+    {
+      "type": "content",
+      "text": "what type of thinking was Brian's English teacher always talking about?",
+      "book_key": "hatchet",
+      "answer": "Positive thinking",
+      "page": 46
+    },
+    {
+      "type": "content",
+      "text": "who gave Brian the hatchet?",
+      "book_key": "hatchet",
+      "answer": "His mother",
+      "page": 46
+    },
+    {
+      "type": "content",
+      "text": "what are at least two things Brian had with him when he arrived on the island?",
+      "book_key": "hatchet",
+      "answer": "A quarter, three dimes, a nickle, two pennies, fingernail clipper, 20 dollar bill, hatchet, tennis shoes, socks, jeans, underwear, belt, t-shirt, windbreaker, digital watch",
+      "page": 46
+    },
+    {
+      "type": "content",
+      "text": "Brian realizes that in all his life what has he never heard before?",
+      "book_key": "hatchet",
+      "answer": "Complete silence",
+      "page": 47
+    },
+    {
+      "type": "content",
+      "text": "what type of shelter did Brian and his friend decide was the best?",
+      "book_key": "hatchet",
+      "answer": "A lean-to",
+      "page": 53
+    },
+    {
+      "type": "content",
+      "text": "what was the first thing he ate on the island?",
+      "book_key": "hatchet",
+      "answer": "Berries",
+      "page": 59
+    },
+    {
+      "type": "content",
+      "text": "what did he use as a carrying pouch to collect the berries?",
+      "book_key": "hatchet",
+      "answer": "His windbreaker",
+      "page": 60
+    },
+    {
+      "type": "content",
+      "text": "what does he end up calling the first berries he ate?",
+      "book_key": "hatchet",
+      "answer": "Gut cherries",
+      "page": 65
+    },
+    {
+      "type": "content",
+      "text": "what time was it when Brian saw the sun straight overhead?",
+      "book_key": "hatchet",
+      "answer": "Noon",
+      "page": 72
+    },
+    {
+      "type": "content",
+      "text": "what kind of juice did Brian drink?",
+      "book_key": "hatchet",
+      "answer": "Raspberry juice",
+      "page": 72
+    },
+    {
+      "type": "content",
+      "text": "what happened when Brian hit the wall with his hatchet?",
+      "book_key": "hatchet",
+      "answer": "There was a shower of sparks",
+      "page": 75
+    },
+    {
+      "type": "content",
+      "text": "what made the insects disappear?",
+      "book_key": "hatchet",
+      "answer": "Smoke (near the fire)",
+      "page": 90
+    },
+    {
+      "type": "content",
+      "text": "what did he start calling the camouflaged birds?",
+      "book_key": "hatchet",
+      "answer": "Foolbirds",
+      "page": 114
+    },
+    {
+      "type": "content",
+      "text": "what did he use as string for his hunting bow?",
+      "book_key": "hatchet",
+      "answer": "His shoelaces",
+      "page": 117
+    },
+    {
+      "type": "content",
+      "text": "what kind of hope did Brian feel building inside him?",
+      "book_key": "hatchet",
+      "answer": "Tough hope",
+      "page": 120
+    },
+    {
+      "type": "content",
+      "text": "what is the great, single driving influence in nature?",
+      "book_key": "hatchet",
+      "answer": "To eat",
+      "page": 122
+    },
+    {
+      "type": "content",
+      "text": "what happened when Brian encountered a skunk?",
+      "book_key": "hatchet",
+      "answer": "He got sprayed",
+      "page": 123
+    },
+    {
+      "type": "content",
+      "text": "what lesson did the skunk teach Brian?",
+      "book_key": "hatchet",
+      "answer": "Protect food",
+      "page": 124
+    },
+    {
+      "type": "content",
+      "text": "what event did he call the day he first ate a bird?",
+      "book_key": "hatchet",
+      "answer": "Day of First Meat",
+      "page": 137
+    },
+    {
+      "type": "content",
+      "text": "what did he call his raft?",
+      "book_key": "hatchet",
+      "answer": "Brushpile",
+      "page": 156
+    },
+    {
+      "type": "content",
+      "text": "what did he find in the survival pack that made him feel changed?",
+      "book_key": "hatchet",
+      "answer": "A rifle",
+      "page": 173
+    },
+    {
+      "type": "content",
+      "text": "how did the pilot find Brian?",
+      "book_key": "hatchet",
+      "answer": "Heard the emergency transmitter",
+      "page": 177
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character think of fire as a friend?",
+      "book_key": "hatchet",
+      "page": 87
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character eat raw turtle eggs?",
+      "book_key": "hatchet",
+      "page": 94
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character encounter a mama bear and her cubs?",
+      "book_key": "hatchet",
+      "page": 114
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character get attacked by a porcupine?",
+      "book_key": "hatchet",
+      "page": 76
+    },
+    {
+      "type": "content",
+      "text": "what does the main character's name translate to?",
+      "book_key": "inside-out-and-back-again",
+      "answer": "Kim Ha means Golden River",
+      "page": 6
+    },
+    {
+      "type": "content",
+      "text": "what is Tet?",
+      "book_key": "inside-out-and-back-again",
+      "answer": "Vietnamese New Year",
+      "page": 1
+    },
+    {
+      "type": "content",
+      "text": "why can't you sweep on Tet?",
+      "book_key": "inside-out-and-back-again",
+      "answer": "You might sweep away hope",
+      "page": 1
+    },
+    {
+      "type": "content",
+      "text": "in which year does this book take place?",
+      "book_key": "inside-out-and-back-again",
+      "answer": "1975",
+      "page": 1
+    },
+    {
+      "type": "content",
+      "text": "what thing does Kim Ha have that she loves almost as much as her mother?",
+      "book_key": "inside-out-and-back-again",
+      "answer": "Papaya seed/tree",
+      "page": 9
+    },
+    {
+      "type": "content",
+      "text": "what happened to her father?",
+      "book_key": "inside-out-and-back-again",
+      "answer": "He's missing in action",
+      "page": 12
+    },
+    {
+      "type": "content",
+      "text": "what do they take turns eating?",
+      "book_key": "inside-out-and-back-again",
+      "answer": "Hen's eggs",
+      "page": 16
+    },
+    {
+      "type": "content",
+      "text": "what does mother make and sell to earn extra money?",
+      "book_key": "inside-out-and-back-again",
+      "answer": "Baby clothes",
+      "page": 14
+    },
+    {
+      "type": "content",
+      "text": "what non family member looks out for this family?",
+      "book_key": "inside-out-and-back-again",
+      "answer": "Her father's friend Uncle Son",
+      "page": 42
+    },
+    {
+      "type": "content",
+      "text": "how do they leave Vietnam?",
+      "book_key": "inside-out-and-back-again",
+      "answer": "A ship",
+      "page": 66
+    },
+    {
+      "type": "content",
+      "text": "how much space do the 5 of them have on the ship?",
+      "book_key": "inside-out-and-back-again",
+      "answer": "Two mats of space",
+      "page": 66
+    },
+    {
+      "type": "content",
+      "text": "what do they eat, while on the ship?",
+      "book_key": "inside-out-and-back-again",
+      "answer": "One clump of rice morning, noon and night",
+      "page": 77
+    },
+    {
+      "type": "content",
+      "text": "what do they do while on the ship, to not be idle?",
+      "book_key": "inside-out-and-back-again",
+      "answer": "Learn English",
+      "page": 79
+    },
+    {
+      "type": "content",
+      "text": "what did brother Khoi have that caused odor?",
+      "book_key": "inside-out-and-back-again",
+      "answer": "His dead, flattened chick",
+      "page": 84
+    },
+    {
+      "type": "content",
+      "text": "what does she do for her brother Khoi?",
+      "book_key": "inside-out-and-back-again",
+      "answer": "She ties his chick to her doll and throws them overboard",
+      "page": 86
+    },
+    {
+      "type": "content",
+      "text": "what happens to cripple the ship?",
+      "book_key": "inside-out-and-back-again",
+      "answer": "One engine dies, so they move only with the remaining one",
+      "page": 87
+    },
+    {
+      "type": "content",
+      "text": "where do they land?",
+      "book_key": "inside-out-and-back-again",
+      "answer": "Guam",
+      "page": 96
+    },
+    {
+      "type": "content",
+      "text": "what does mother want to sell, that father gave her?",
+      "book_key": "inside-out-and-back-again",
+      "answer": "Amethyst ring",
+      "page": 103
+    },
+    {
+      "type": "content",
+      "text": "where does the family get sponsored to?",
+      "book_key": "inside-out-and-back-again",
+      "answer": "Alabama",
+      "page": 109
+    },
+    {
+      "type": "content",
+      "text": "what does she think the cowboy has, that he doesn't?",
+      "book_key": "inside-out-and-back-again",
+      "answer": "A horse",
+      "page": 134
+    },
+    {
+      "type": "content",
+      "text": "how does school make her feel?",
+      "book_key": "inside-out-and-back-again",
+      "answer": "Dumb",
+      "page": 157
+    },
+    {
+      "type": "content",
+      "text": "other than the cowboy, who is the nicest person to the new family?",
+      "book_key": "inside-out-and-back-again",
+      "answer": "Miss Washington",
+      "page": 165
+    },
+    {
+      "type": "content",
+      "text": "what are the names of the two kids at school who are nice to Ha?",
+      "book_key": "inside-out-and-back-again",
+      "answer": "Steven and Pam",
+      "page": 184
+    },
+    {
+      "type": "content",
+      "text": "what does Pam give Ha for Christmas?",
+      "book_key": "inside-out-and-back-again",
+      "answer": "A doll with black hair",
+      "page": 239
+    },
+    {
+      "type": "content",
+      "text": "what signifies that Ha's father is truly gone?",
+      "book_key": "inside-out-and-back-again",
+      "answer": "Mother loses the amethyst ring",
+      "page": 250
+    },
+    {
+      "type": "content",
+      "text": "what does Nick call his grandfather?",
+      "book_key": "just-like-click",
+      "answer": "Great Gramp",
+      "page": 5
+    },
+    {
+      "type": "content",
+      "text": "how much money is hidden under Nick's bed?",
+      "book_key": "just-like-click",
+      "answer": "$237,000",
+      "page": 14
+    },
+    {
+      "type": "content",
+      "text": "what kind of animal is Fletcher, Mr. Flossen's pet?",
+      "book_key": "just-like-click",
+      "answer": "A parrot",
+      "page": 17
+    },
+    {
+      "type": "content",
+      "text": "the superhero name is a combination of whose names?",
+      "book_key": "just-like-click",
+      "answer": "Clark and Nick",
+      "page": 21
+    },
+    {
+      "type": "content",
+      "text": "what does Nick give to Mr. Telly and Mrs. Baxter?",
+      "book_key": "just-like-click",
+      "answer": "A monthly allowance",
+      "page": 22
+    },
+    {
+      "type": "content",
+      "text": "what does Nick use to capture a pet parrot that has escaped?",
+      "book_key": "just-like-click",
+      "answer": "Blueberries",
+      "page": 24
+    },
+    {
+      "type": "content",
+      "text": "Nick uses the sound of what to cover up the sound of him sneaking out at night?",
+      "book_key": "just-like-click",
+      "answer": "The chiming of the clock",
+      "page": 32
+    },
+    {
+      "type": "content",
+      "text": "what was the strangest vehicle that a tourist family arrived in?",
+      "book_key": "just-like-click",
+      "answer": "An ice-cream truck",
+      "page": 33
+    },
+    {
+      "type": "content",
+      "text": "Nick thinks there should be a new Olympic event called what?",
+      "book_key": "just-like-click",
+      "answer": "Running with ladder",
+      "page": 57
+    },
+    {
+      "type": "content",
+      "text": "when Nick arrives at the roundup, what is the name of the horse he is assigned to?",
+      "book_key": "just-like-click",
+      "answer": "Picnic",
+      "page": 62
+    },
+    {
+      "type": "content",
+      "text": "what is the answer to the joke Lily tells: Where do all superheroes go on vacation?",
+      "book_key": "just-like-click",
+      "answer": "Cape Town",
+      "page": 62
+    },
+    {
+      "type": "content",
+      "text": "when a character is seen sleepwalking in the woods, what is he wearing?",
+      "book_key": "just-like-click",
+      "answer": "Yellow pajamas",
+      "page": 73
+    },
+    {
+      "type": "content",
+      "text": "how did Nick get hooked on Superman?",
+      "book_key": "just-like-click",
+      "answer": "His grandfather",
+      "page": 75
+    },
+    {
+      "type": "content",
+      "text": "what does Nick use to scare away thieves?",
+      "book_key": "just-like-click",
+      "answer": "A headlamp",
+      "page": 96
+    },
+    {
+      "type": "content",
+      "text": "Nick and Celia were duped with what kind of snake?",
+      "book_key": "just-like-click",
+      "answer": "A rubber snake",
+      "page": 100
+    },
+    {
+      "type": "content",
+      "text": "what was Great Gramp's superpower?",
+      "book_key": "just-like-click",
+      "answer": "He could read Nick's mind",
+      "page": 122
+    },
+    {
+      "type": "content",
+      "text": "what do Celia and Nick ride when they try to find a girl in trouble in the middle of the night?",
+      "book_key": "just-like-click",
+      "answer": "Horses",
+      "page": 135
+    },
+    {
+      "type": "content",
+      "text": "what was Lily doing on top of the fire tower?",
+      "book_key": "just-like-click",
+      "answer": "Making a wish",
+      "page": 148
+    },
+    {
+      "type": "in-which-book",
+      "text": "does each chapter start with a one-page comic strip?",
+      "book_key": "just-like-click",
+      "page": 1
+    },
+    {
+      "type": "in-which-book",
+      "text": "does the main character live in Black Butte Ranch year round?",
+      "book_key": "just-like-click",
+      "page": 1
+    },
+    {
+      "type": "in-which-book",
+      "text": "does the main character use a headlamp to scare away thieves?",
+      "book_key": "just-like-click",
+      "page": 96
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a group of kids almost get attacked by a wild cougar?",
+      "book_key": "just-like-click",
+      "page": 135
+    },
+    {
+      "type": "content",
+      "text": "which friend is taller - Annemarie or Ellen?",
+      "book_key": "number-the-stars",
+      "answer": "Annemarie",
+      "page": 1
+    },
+    {
+      "type": "content",
+      "text": "when the story takes place how long had the German army occupied the country of Denmark?",
+      "book_key": "number-the-stars",
+      "answer": "3 years",
+      "page": 3
+    },
+    {
+      "type": "content",
+      "text": "who is King Christian X's bodyguard?",
+      "book_key": "number-the-stars",
+      "answer": "All of Denmark",
+      "page": 14
+    },
+    {
+      "type": "content",
+      "text": "what are the wheels of Samuel Hirsch's bicycle made of?",
+      "book_key": "number-the-stars",
+      "answer": "Wood",
+      "page": 20
+    },
+    {
+      "type": "content",
+      "text": "why does Kirsti refuse to wear her new shoes?",
+      "book_key": "number-the-stars",
+      "answer": "They are made of fish skin",
+      "page": 28
+    },
+    {
+      "type": "content",
+      "text": "what is the surprise that Mama has for Annemarie and Kirsti after the Rosen's goes to the synagogue for Rosh Hashanah?",
+      "book_key": "number-the-stars",
+      "answer": "That Ellen will be staying with them for a few days",
+      "page": 34
+    },
+    {
+      "type": "content",
+      "text": "what time is it when the Nazi's visit the Johansen's apartment?",
+      "book_key": "number-the-stars",
+      "answer": "4 AM",
+      "page": 44
+    },
+    {
+      "type": "content",
+      "text": "fill in the blank from this phone conversation between Papa and Uncle Henrik: \"I'm sending Inge to you today with the children, and she will be bringing you _______________\"",
+      "book_key": "number-the-stars",
+      "answer": "A carton of cigarettes",
+      "page": 53
+    },
+    {
+      "type": "content",
+      "text": "what does Kirsti name the gray kitten?",
+      "book_key": "number-the-stars",
+      "answer": "Thor, God of Thunder",
+      "page": 67
+    },
+    {
+      "type": "content",
+      "text": "how does Uncle Henrik get cream and butter when it's so hard to come by?",
+      "book_key": "number-the-stars",
+      "answer": "The cow, Blossom",
+      "page": 68
+    },
+    {
+      "type": "content",
+      "text": "why is Annemarie surprised to hear Mama and Uncle Henrik planning Great-Aunt Birte's funeral?",
+      "book_key": "number-the-stars",
+      "answer": "She's never heard of Great Aunt Birte",
+      "page": 72
+    },
+    {
+      "type": "content",
+      "text": "who does Peter bring to Uncle Henrik's house for Great Aunt Birte's funeral?",
+      "book_key": "number-the-stars",
+      "answer": "Mr. and Mrs. Rosen / Ellen's parents",
+      "page": 81
+    },
+    {
+      "type": "content",
+      "text": "what does Mama tell the Nazi soldiers that Great-Aunt Birte died from?",
+      "book_key": "number-the-stars",
+      "answer": "Typhus",
+      "page": 85
+    },
+    {
+      "type": "content",
+      "text": "what shape are the buttons on Kirsti's thick red sweater?",
+      "book_key": "number-the-stars",
+      "answer": "Heart shaped",
+      "page": 89
+    },
+    {
+      "type": "content",
+      "text": "why does Annemarie think it's harder for the ones who are waiting?",
+      "book_key": "number-the-stars",
+      "answer": "Less danger, but more fear",
+      "page": 98
+    },
+    {
+      "type": "content",
+      "text": "what story does Annemarie tell herself while she's walking through the woods?",
+      "book_key": "number-the-stars",
+      "answer": "Little Red Riding Hood",
+      "page": 107
+    },
+    {
+      "type": "content",
+      "text": "what do the soldiers say their dogs smell in Annemarie's basket?",
+      "book_key": "number-the-stars",
+      "answer": "Meat",
+      "page": 116
+    },
+    {
+      "type": "content",
+      "text": "what did Annemarie have to do when she got back to the farmhouse after her delivery to Uncle Henrik?",
+      "book_key": "number-the-stars",
+      "answer": "Milk the cow Blossom",
+      "page": 120
+    },
+    {
+      "type": "content",
+      "text": "how is Peter Neilsen's grave marked?",
+      "book_key": "number-the-stars",
+      "answer": "With a number",
+      "page": 129
+    },
+    {
+      "type": "content",
+      "text": "what secret do we learn about Lise when the family visits Peter's grave?",
+      "book_key": "number-the-stars",
+      "answer": "That she was part of the resistance",
+      "page": 130
+    },
+    {
+      "type": "content",
+      "text": "approximately how many Jewish people were smuggled out of Denmark in the fall of 1943?",
+      "book_key": "number-the-stars",
+      "answer": "Nearly seven thousand (7,000)",
+      "page": 132
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character long for a big yellow cupcake with pink frosting?",
+      "book_key": "number-the-stars",
+      "page": 9
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character pretend to be a silly, empty-headed little girl?",
+      "book_key": "number-the-stars",
+      "page": 105
+    },
+    {
+      "type": "in-which-book",
+      "text": "do characters play a game of \"Gone with the wind\"?",
+      "book_key": "number-the-stars",
+      "page": 27
+    },
+    {
+      "type": "in-which-book",
+      "text": "do characters take a train ride near the Baltic sea?",
+      "book_key": "number-the-stars",
+      "page": 54
+    },
+    {
+      "type": "content",
+      "text": "it is said that sharks as a rule do not eat what type of animal?",
+      "book_key": "odder",
+      "answer": "Sea otters",
+      "page": 3
+    },
+    {
+      "type": "content",
+      "text": "what number is Odder known as?",
+      "book_key": "odder",
+      "answer": "156",
+      "page": 9
+    },
+    {
+      "type": "content",
+      "text": "what is the name of Odder's favorite companion?",
+      "book_key": "odder",
+      "answer": "Kairi",
+      "page": 14
+    },
+    {
+      "type": "content",
+      "text": "what does Kairi say to Odder when Odder asks play or eat first?",
+      "book_key": "odder",
+      "answer": "First we eat and then we play",
+      "page": 14
+    },
+    {
+      "type": "content",
+      "text": "what is the name of the bay that is a little scary to some, but a place Odder thinks is worth the scare because there are succulent crabs there?",
+      "book_key": "odder",
+      "answer": "Monterey Bay",
+      "page": 21
+    },
+    {
+      "type": "content",
+      "text": "why does Odder say she wants to be close to a kayaker?",
+      "book_key": "odder",
+      "answer": "Because she is curious",
+      "page": 32
+    },
+    {
+      "type": "content",
+      "text": "how many times has Odder been trapped and relocated to quiet waters away from humans?",
+      "book_key": "odder",
+      "answer": "8",
+      "page": 35
+    },
+    {
+      "type": "content",
+      "text": "what does \"the fifty\" reference in the story of \"THE FIFTY\"?",
+      "book_key": "odder",
+      "answer": "That at one time there were only 50 sea otters left",
+      "page": 43
+    },
+    {
+      "type": "content",
+      "text": "how long can a sea otter stay underwater?",
+      "book_key": "odder",
+      "answer": "6-7 minutes",
+      "page": 45
+    },
+    {
+      "type": "content",
+      "text": "what does Odder do when Kairi is nipped by a great white shark?",
+      "book_key": "odder",
+      "answer": "Swims towards the shark and begins hurling herself at him",
+      "page": 56
+    },
+    {
+      "type": "content",
+      "text": "after Odder is bitten by a young shark, where is she taken?",
+      "book_key": "odder",
+      "answer": "Highwater",
+      "page": 73
+    },
+    {
+      "type": "content",
+      "text": "what are the people called who take care of Odder at Highwater?",
+      "book_key": "odder",
+      "answer": "Aquarists",
+      "page": 75
+    },
+    {
+      "type": "content",
+      "text": "what do the aquarists do to try and save Odder?",
+      "book_key": "odder",
+      "answer": "Surgery",
+      "page": 79
+    },
+    {
+      "type": "content",
+      "text": "what part of Odder's mom's body did she sleep on as a pup?",
+      "book_key": "odder",
+      "answer": "Stomach",
+      "page": 86
+    },
+    {
+      "type": "content",
+      "text": "what did Odder's mom do to keep her safe while she was diving for food?",
+      "book_key": "odder",
+      "answer": "Tied/looped/leashed her to strands of kelp",
+      "page": 88
+    },
+    {
+      "type": "content",
+      "text": "how many hairs per square inch is a sea otter said to have?",
+      "book_key": "odder",
+      "answer": "A million hairs per square inch",
+      "page": 89
+    },
+    {
+      "type": "content",
+      "text": "what happens to cause Odder and her mother to become separated?",
+      "book_key": "odder",
+      "answer": "A storm",
+      "page": 106
+    },
+    {
+      "type": "content",
+      "text": "what are the names of the elder sea otters who decide to be kind to Odder?",
+      "book_key": "odder",
+      "answer": "Gracie and Holly",
+      "page": 150
+    },
+    {
+      "type": "content",
+      "text": "what do Gracie and Holly tell Odder it is best to be: a name or a number?",
+      "book_key": "odder",
+      "answer": "A number",
+      "page": 153
+    },
+    {
+      "type": "content",
+      "text": "what does Odder call the humans taking care of her until Gracie and Holly inform her of what they are really called?",
+      "book_key": "odder",
+      "answer": "Animals",
+      "page": 159
+    },
+    {
+      "type": "content",
+      "text": "what does Odder find out has happened to Kairi from Gracie and Holly?",
+      "book_key": "odder",
+      "answer": "That she had a stillborn pup and that she has the shaking sickness",
+      "page": 193
+    },
+    {
+      "type": "content",
+      "text": "what name is given to Odder at Highwater when she returns there for rehabilitation after the shark attack?",
+      "book_key": "odder",
+      "answer": "Jazz",
+      "page": 229
+    },
+    {
+      "type": "content",
+      "text": "when Odder discovers Kairi is at Highwater, what does Odder discover has also been given to Kairi to take care of at Highwater?",
+      "book_key": "odder",
+      "answer": "An abandoned pup",
+      "page": 218
+    },
+    {
+      "type": "content",
+      "text": "what does Odder always say is an otter's purpose?",
+      "book_key": "odder",
+      "answer": "Play",
+      "page": 252
+    },
+    {
+      "type": "content",
+      "text": "what does Odder do for 3 days with the pup that has been placed in the tank with her?",
+      "book_key": "odder",
+      "answer": "Ignores her",
+      "page": 238
+    },
+    {
+      "type": "content",
+      "text": "how long does it take before the pup that Odder taught is released into the wild?",
+      "book_key": "odder",
+      "answer": "6 months",
+      "page": 259
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a 3-year-old sea otter get bit by a shark?",
+      "book_key": "odder",
+      "page": 56
+    },
+    {
+      "type": "in-which-book",
+      "text": "are humans called \"animals\" and are trying to rescue a marine animal?",
+      "book_key": "odder",
+      "page": 159
+    },
+    {
+      "type": "in-which-book",
+      "text": "do we find a character called Kairi?",
+      "book_key": "odder",
+      "page": 14
+    },
+    {
+      "type": "in-which-book",
+      "text": "do we read about two settings: a marine rehabilitation center and the ocean?",
+      "book_key": "odder",
+      "page": 1
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a mother and her pup get separated during a storm?",
+      "book_key": "odder",
+      "page": 106
+    },
+    {
+      "type": "in-which-book",
+      "text": "do aquarists wear \"disguises\" so the animals will not get too attached to them?",
+      "book_key": "odder",
+      "page": 75
+    },
+    {
+      "type": "in-which-book",
+      "text": "are young pups placed with adults who are not their mothers?",
+      "book_key": "odder",
+      "page": 218
+    },
+    {
+      "type": "in-which-book",
+      "text": "is it said that the whole purpose of life is to play?",
+      "book_key": "odder",
+      "page": 252
+    },
+    {
+      "type": "content",
+      "text": "what city and state do they live in at the beginning of the story?",
+      "book_key": "squished",
+      "answer": "Hickory Valley, Maryland",
+      "page": 3
+    },
+    {
+      "type": "content",
+      "text": "what is the name of the narrator?",
+      "book_key": "squished",
+      "answer": "Avery Annie Lee",
+      "page": 5
+    },
+    {
+      "type": "content",
+      "text": "how many kids are in the household?",
+      "book_key": "squished",
+      "answer": "Seven",
+      "page": 6
+    },
+    {
+      "type": "content",
+      "text": "name an instrument one of Avery's siblings play?",
+      "book_key": "squished",
+      "answer": "Clarinet, cymbals, harmonica, or violin",
+      "page": 7
+    },
+    {
+      "type": "content",
+      "text": "what pet does the family have?",
+      "book_key": "squished",
+      "answer": "Cat and dog",
+      "page": 7
+    },
+    {
+      "type": "content",
+      "text": "what's the baby's name?",
+      "book_key": "squished",
+      "answer": "Bea",
+      "page": 9
+    },
+    {
+      "type": "content",
+      "text": "Avery was so busy helping her family that she forgot to do something people do in the morning while getting ready for work or school. What did she forget?",
+      "book_key": "squished",
+      "answer": "To get dressed out of her pj's",
+      "page": 12
+    },
+    {
+      "type": "content",
+      "text": "what was Avery's dream?",
+      "book_key": "squished",
+      "answer": "To have her own room",
+      "page": 14
+    },
+    {
+      "type": "content",
+      "text": "which sibling is older than Avery?",
+      "book_key": "squished",
+      "answer": "Theo age 13",
+      "page": 15
+    },
+    {
+      "type": "content",
+      "text": "who or what is Slothy?",
+      "book_key": "squished",
+      "answer": "Stuffed sloth loved by Josie",
+      "page": 15
+    },
+    {
+      "type": "content",
+      "text": "what grade is Avery graduating from?",
+      "book_key": "squished",
+      "answer": "5th grade",
+      "page": 17
+    },
+    {
+      "type": "content",
+      "text": "what award is Avery going to win at her graduation?",
+      "book_key": "squished",
+      "answer": "Outstanding artist award",
+      "page": 18
+    },
+    {
+      "type": "content",
+      "text": "who is the principal's son?",
+      "book_key": "squished",
+      "answer": "Cameron",
+      "page": 21
+    },
+    {
+      "type": "content",
+      "text": "who climbed up on stage at graduation and lost their pants while doing so?",
+      "book_key": "squished",
+      "answer": "Max",
+      "page": 18
+    },
+    {
+      "type": "content",
+      "text": "who is getting their own room before Avery gets her own room?",
+      "book_key": "squished",
+      "answer": "Theo",
+      "page": 34
+    },
+    {
+      "type": "content",
+      "text": "who is moving into Avery's room?",
+      "book_key": "squished",
+      "answer": "Max",
+      "page": 34
+    },
+    {
+      "type": "content",
+      "text": "name one place Avery tries sleeping besides in her room?",
+      "book_key": "squished",
+      "answer": "Basement, bathtub",
+      "page": 44
+    },
+    {
+      "type": "content",
+      "text": "where did Avery, Dani and Cameron go every summer together?",
+      "book_key": "squished",
+      "answer": "The fair",
+      "page": 53
+    },
+    {
+      "type": "content",
+      "text": "whose dad teaches at the high school?",
+      "book_key": "squished",
+      "answer": "Avery's",
+      "page": 60
+    },
+    {
+      "type": "content",
+      "text": "who is getting a basement apartment?",
+      "book_key": "squished",
+      "answer": "Cameron's grandmother",
+      "page": 61
+    },
+    {
+      "type": "content",
+      "text": "what job does Avery want to get and makes posters for?",
+      "book_key": "squished",
+      "answer": "Dog walker",
+      "page": 69
+    },
+    {
+      "type": "content",
+      "text": "what is the name of the first dog Avery walks?",
+      "book_key": "squished",
+      "answer": "Honey",
+      "page": 78
+    },
+    {
+      "type": "content",
+      "text": "who saves Avery when Honey runs off and all the kids need things?",
+      "book_key": "squished",
+      "answer": "Theo",
+      "page": 85
+    },
+    {
+      "type": "content",
+      "text": "where does Avery go swimming with her friend Dani?",
+      "book_key": "squished",
+      "answer": "Dani's new friend Charlotte's pool",
+      "page": 107
+    },
+    {
+      "type": "content",
+      "text": "who does Theo not get along with anymore?",
+      "book_key": "squished",
+      "answer": "Dani's brother Nick",
+      "page": 110
+    },
+    {
+      "type": "content",
+      "text": "where are mom and dad talking about moving to?",
+      "book_key": "squished",
+      "answer": "Oregon",
+      "page": 121
+    },
+    {
+      "type": "content",
+      "text": "after dog walking what does Avery try to do to make money?",
+      "book_key": "squished",
+      "answer": "Sell lemonade",
+      "page": 126
+    },
+    {
+      "type": "content",
+      "text": "where does mom suggest she and Avery go for their \"mother-daughter\" date?",
+      "book_key": "squished",
+      "answer": "Lulu's Restaurant",
+      "page": 133
+    },
+    {
+      "type": "content",
+      "text": "what did Avery ask her mom at the restaurant?",
+      "book_key": "squished",
+      "answer": "Why she wanted to have so many kids",
+      "page": 136
+    },
+    {
+      "type": "content",
+      "text": "who lives in Oregon that they know?",
+      "book_key": "squished",
+      "answer": "Grandma and Grandpa (mother's parents)",
+      "page": 141
+    },
+    {
+      "type": "content",
+      "text": "where are the 6th graders having an event that Avery's family goes to?",
+      "book_key": "squished",
+      "answer": "Skate World",
+      "page": 153
+    },
+    {
+      "type": "content",
+      "text": "who was sent to Space Camp?",
+      "book_key": "squished",
+      "answer": "Cameron",
+      "page": 156
+    },
+    {
+      "type": "content",
+      "text": "who bullies Theo at Skate World?",
+      "book_key": "squished",
+      "answer": "Nick",
+      "page": 163
+    },
+    {
+      "type": "content",
+      "text": "what game did they play before bedtime after mom got home from her interview?",
+      "book_key": "squished",
+      "answer": "Sardines",
+      "page": 179
+    },
+    {
+      "type": "content",
+      "text": "who said, \"Just like water is always moving, people are always changing.\"?",
+      "book_key": "squished",
+      "answer": "Cameron's mom",
+      "page": 196
+    },
+    {
+      "type": "content",
+      "text": "who ran away?",
+      "book_key": "squished",
+      "answer": "Juliet and Josie",
+      "page": 206
+    },
+    {
+      "type": "content",
+      "text": "where did Juliet and Josie run away to?",
+      "book_key": "squished",
+      "answer": "The dog Honey's house",
+      "page": 226
+    },
+    {
+      "type": "content",
+      "text": "where is Theo thinking about volunteering when they move to Oregon?",
+      "book_key": "squished",
+      "answer": "The library",
+      "page": 238
+    },
+    {
+      "type": "content",
+      "text": "what caused the town of Martinville to no longer have a library?",
+      "book_key": "the-lost-library",
+      "answer": "A Fire",
+      "page": 27
+    },
+    {
+      "type": "content",
+      "text": "Evan and Rafe have matching phones (that are not cell phones). What do they call these phones?",
+      "book_key": "the-lost-library",
+      "answer": "Bat phones",
+      "page": 28
+    },
+    {
+      "type": "content",
+      "text": "what is the name of the cat that lives at the Martinville History House?",
+      "book_key": "the-lost-library",
+      "answer": "Mortimer",
+      "page": 6
+    },
+    {
+      "type": "content",
+      "text": "who are the three people readers discover are actually ghosts?",
+      "book_key": "the-lost-library",
+      "answer": "Al, Ms. Scoggin and Mr. Brock",
+      "page": 36
+    },
+    {
+      "type": "content",
+      "text": "what does Al build outside the Martinville History House with the help of Ms. Scoggin as the lookout?",
+      "book_key": "the-lost-library",
+      "answer": "A little free library",
+      "page": 10
+    },
+    {
+      "type": "content",
+      "text": "what do Evan and Rafe discover happened to people in the fire that burned down the library?",
+      "book_key": "the-lost-library",
+      "answer": "That people died",
+      "page": 36
+    },
+    {
+      "type": "content",
+      "text": "what type of photograph did Evan find in one of the books from the little free library?",
+      "book_key": "the-lost-library",
+      "answer": "A polaroid",
+      "page": 47
+    },
+    {
+      "type": "content",
+      "text": "what famous mystery writer's name do Rafe and Evan discover on a library check out card from a library book in the little free library?",
+      "book_key": "the-lost-library",
+      "answer": "H.G. Higgins",
+      "page": 33
+    },
+    {
+      "type": "content",
+      "text": "when Rafe and Evan visit Grantville Middle School, what do they say they will not have in middle school that they did have in elementary school?",
+      "book_key": "the-lost-library",
+      "answer": "Recess",
+      "page": 70
+    },
+    {
+      "type": "content",
+      "text": "where is the spot that Mr. O'Neal explains the fire at the library got started?",
+      "book_key": "the-lost-library",
+      "answer": "The basement",
+      "page": 72
+    },
+    {
+      "type": "content",
+      "text": "who does Mortimer try to help and does he also ask (\"because they seem to know things\") why frogs sing at night?",
+      "book_key": "the-lost-library",
+      "answer": "He is trying to help and asks the mice",
+      "page": 66
+    },
+    {
+      "type": "content",
+      "text": "readers discover that Al grew up where?",
+      "book_key": "the-lost-library",
+      "answer": "In an orphanage",
+      "page": 87
+    },
+    {
+      "type": "content",
+      "text": "what book is Evan reading and using to help solve the mystery of the library fire?",
+      "book_key": "the-lost-library",
+      "answer": "How to Write a Mystery Novel",
+      "page": 91
+    },
+    {
+      "type": "content",
+      "text": "Al becomes friends with a library patron she calls \"dear boy\" and they decide to embark on a rescue together. What do they title their rescue?",
+      "book_key": "the-lost-library",
+      "answer": "Mission Mouse",
+      "page": 95
+    },
+    {
+      "type": "content",
+      "text": "what is the name of the mouse that Al and the dear boy rescue?",
+      "book_key": "the-lost-library",
+      "answer": "Eggy",
+      "page": 97
+    },
+    {
+      "type": "content",
+      "text": "when Evan goes to explore the land where the library used to be, what does he find, with the help of Mortimer the cat?",
+      "book_key": "the-lost-library",
+      "answer": "2 keys on a ring",
+      "page": 103
+    },
+    {
+      "type": "content",
+      "text": "what is located in what Evan and his neighbors called \"their woods\" that is considered dangerous and often involved dares to try to climb up to it?",
+      "book_key": "the-lost-library",
+      "answer": "A treehouse",
+      "page": 151
+    },
+    {
+      "type": "content",
+      "text": "what is something that Evan is afraid about and not too excited about concerning school?",
+      "book_key": "the-lost-library",
+      "answer": "Going to Grantville Middle School next year",
+      "page": 149
+    },
+    {
+      "type": "content",
+      "text": "what does the key, which Evan found at the site of the old library, end up unlocking?",
+      "book_key": "the-lost-library",
+      "answer": "The padlock on the treehouse door",
+      "page": 154
+    },
+    {
+      "type": "content",
+      "text": "what is one thing Rafe asks for that others maybe don't, that is another reason Evan thinks Rafe is fearless?",
+      "book_key": "the-lost-library",
+      "answer": "He asks for hugs",
+      "page": 155
+    },
+    {
+      "type": "content",
+      "text": "Evan and Rafe decide who else is a suspect for the fire BESIDES Evan's dad?",
+      "book_key": "the-lost-library",
+      "answer": "H.G. Higgins",
+      "page": 158
+    },
+    {
+      "type": "content",
+      "text": "who does Evan discover is the real H.G. Higgins?",
+      "book_key": "the-lost-library",
+      "answer": "His dad",
+      "page": 169
+    },
+    {
+      "type": "content",
+      "text": "Mortimer hears about a cat called \"the six-toed monster\" and thinks it could possibly be who?",
+      "book_key": "the-lost-library",
+      "answer": "Petunia",
+      "page": 176
+    },
+    {
+      "type": "content",
+      "text": "readers discover what actually started the fire to the library. What was it?",
+      "book_key": "the-lost-library",
+      "answer": "A mouse running with a matchstick in its mouth",
+      "page": 180
+    },
+    {
+      "type": "content",
+      "text": "who becomes the librarian and the intern at the new library that Evan's dad had built in Martinville?",
+      "book_key": "the-lost-library",
+      "answer": "Al - librarian and Rafe - intern",
+      "page": 190
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a boy discover that his dad is actually the famous author, H.G. Higgins?",
+      "book_key": "the-lost-library",
+      "page": 169
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a cat orchestrate a performance with mice to show humans how a fire started in the basement of a library?",
+      "book_key": "the-lost-library",
+      "page": 180
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a 5th grade boy and his friend try to solve the mystery of why the library books in the little free library have the same return date as the fire that took place that burned down the town library?",
+      "book_key": "the-lost-library",
+      "page": 33
+    },
+    {
+      "type": "in-which-book",
+      "text": "do two ghosts and Al occupy a place called The Martinville History House?",
+      "book_key": "the-lost-library",
+      "page": 36
+    },
+    {
+      "type": "in-which-book",
+      "text": "does an orange polydactyl cat search for his long-lost sibling, Petunia?",
+      "book_key": "the-lost-library",
+      "page": 176
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a ghost, a former assistant librarian and a cat work together to build a little free library?",
+      "book_key": "the-lost-library",
+      "page": 10
+    },
+    {
+      "type": "in-which-book",
+      "text": "is there a character that as a boy wanted to save mice from death who grows into a man who also prefers to save mice by driving them out of town rather than extinguishing them?",
+      "book_key": "the-lost-library",
+      "page": 95
+    },
+    {
+      "type": "in-which-book",
+      "text": "are there two ghosts, Ms. Scoggins and Mr. Brock, who were formerly people who never got to go on their first date to the movies?",
+      "book_key": "the-lost-library",
+      "page": 36
+    },
+    {
+      "type": "in-which-book",
+      "text": "is there a character who wants to give his teachers in middle school tomatoes on the first day instead of apples because he became a proficient gardener over the summer?",
+      "book_key": "the-lost-library",
+      "page": 190
+    },
+    {
+      "type": "content",
+      "text": "what does Grant do during the Penn Relays?",
+      "book_key": "the-million-dollar-race",
+      "answer": "He falls",
+      "page": 3
+    },
+    {
+      "type": "content",
+      "text": "who first has the idea of making a reality TV show of the Falloon family?",
+      "book_key": "the-million-dollar-race",
+      "answer": "Jay",
+      "page": 7
+    },
+    {
+      "type": "content",
+      "text": "what are the 2 things that the winners of \"Million Dollar Race\" will receive?",
+      "book_key": "the-million-dollar-race",
+      "answer": "A trust fund worth one million dollars and a lifetime sponsorship deal from Babblemoney Sneaker Company",
+      "page": 17
+    },
+    {
+      "type": "content",
+      "text": "what does the Greek word \"Skepsis\" mean?",
+      "book_key": "the-million-dollar-race",
+      "answer": "Question Everything",
+      "page": 23
+    },
+    {
+      "type": "content",
+      "text": "what does Grant call a group of security guards?",
+      "book_key": "the-million-dollar-race",
+      "answer": "A flex",
+      "page": 35
+    },
+    {
+      "type": "content",
+      "text": "what grade was Grant in when he first saw Jay?",
+      "book_key": "the-million-dollar-race",
+      "answer": "Fourth",
+      "page": 57
+    },
+    {
+      "type": "content",
+      "text": "what game did Jay and Tua start playing the day before Tua left, but didn't finish?",
+      "book_key": "the-million-dollar-race",
+      "answer": "Monopoly",
+      "page": 62
+    },
+    {
+      "type": "content",
+      "text": "how does Grant's Mom translate his dad's reason for leaving the commune in California?",
+      "book_key": "the-million-dollar-race",
+      "answer": "We got tired of pooping in the woods",
+      "page": 66
+    },
+    {
+      "type": "content",
+      "text": "what does 6-year-old Grant want for his birthday?",
+      "book_key": "the-million-dollar-race",
+      "answer": "Captain America Action figure (new)",
+      "page": 71
+    },
+    {
+      "type": "content",
+      "text": "who has the original idea for Grant to represent his own country rather than the USA?",
+      "book_key": "the-million-dollar-race",
+      "answer": "Franny",
+      "page": 97
+    },
+    {
+      "type": "content",
+      "text": "how do people become \"citizens\" of Grantslvainia?",
+      "book_key": "the-million-dollar-race",
+      "answer": "They subscribe to the youtube channel",
+      "page": 129
+    },
+    {
+      "type": "content",
+      "text": "who does the Falloon family find driving for Uber in California?",
+      "book_key": "the-million-dollar-race",
+      "answer": "Karl",
+      "page": 137
+    },
+    {
+      "type": "content",
+      "text": "when the Falloon family is staying in the luxury villa, what breaks in Grant's hand?",
+      "book_key": "the-million-dollar-race",
+      "answer": "The mini-fridge",
+      "page": 163
+    },
+    {
+      "type": "content",
+      "text": "what does Franny say that a million dollars is to an advertising budget for a company like Babblemoney?",
+      "book_key": "the-million-dollar-race",
+      "answer": "A drop in the bucket",
+      "page": 166
+    },
+    {
+      "type": "content",
+      "text": "name 2 of the countries represented in the Girls' Final Four",
+      "book_key": "the-million-dollar-race",
+      "answer": "Brazil, Australia, Ukraine or China",
+      "page": 172
+    },
+    {
+      "type": "content",
+      "text": "how does Babblemoney arrive to the final day of the race?",
+      "book_key": "the-million-dollar-race",
+      "answer": "In a helicopter",
+      "page": 175
+    },
+    {
+      "type": "content",
+      "text": "what does Grant's mom chant during the boy's semi-final race?",
+      "book_key": "the-million-dollar-race",
+      "answer": "Everyone do your best! Everyone do your best!",
+      "page": 186
+    },
+    {
+      "type": "content",
+      "text": "what do Grant and Jay do when they approach the finish line of the final in the Million Dollar Race?",
+      "book_key": "the-million-dollar-race",
+      "answer": "Sit down, back to back, and link arms",
+      "page": 193
+    },
+    {
+      "type": "content",
+      "text": "what \"doinks\" down on Ms. Babblemoney's head as she tries to get away on her too-slow scooter?",
+      "book_key": "the-million-dollar-race",
+      "answer": "A hot dog",
+      "page": 196
+    },
+    {
+      "type": "content",
+      "text": "where do the Falloons and the Fa'atasis go on rented bikes before leaving California?",
+      "book_key": "the-million-dollar-race",
+      "answer": "The commune",
+      "page": 204
+    },
+    {
+      "type": "in-which-book",
+      "text": "do characters ride bikes because their family doesn't own a car?",
+      "book_key": "the-million-dollar-race",
+      "page": 12
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character post a video of all their burps for the week, edited together like a symphony?",
+      "book_key": "the-million-dollar-race",
+      "page": 20
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character wear a red tracksuit and pearls every day?",
+      "book_key": "the-million-dollar-race",
+      "page": 35
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character say they had the song \"baby shark\" stuck in their head for a month and thought they would need to have their head amputated?",
+      "book_key": "the-million-dollar-race",
+      "page": 47
+    },
+    {
+      "type": "in-which-book",
+      "text": "was a character born in a school bus?",
+      "book_key": "the-million-dollar-race",
+      "page": 65
+    },
+    {
+      "type": "content",
+      "text": "what are rabbits most terrified of?",
+      "book_key": "the-remarkable-rescue-at-milkweed-meadow",
+      "answer": "Snares",
+      "page": 1
+    },
+    {
+      "type": "content",
+      "text": "what is the bully of the feeder's name?",
+      "book_key": "the-remarkable-rescue-at-milkweed-meadow",
+      "answer": "Blue",
+      "page": 2
+    },
+    {
+      "type": "content",
+      "text": "how did Blue get revenge on the robin who scolded him?",
+      "book_key": "the-remarkable-rescue-at-milkweed-meadow",
+      "answer": "He plucked one of the robin's eggs, broke it open and ate it",
+      "page": 4
+    },
+    {
+      "type": "content",
+      "text": "what is the oldest rabbit brother's name?",
+      "book_key": "the-remarkable-rescue-at-milkweed-meadow",
+      "answer": "Kale",
+      "page": 6
+    },
+    {
+      "type": "content",
+      "text": "what is the rabbit narrator's name?",
+      "book_key": "the-remarkable-rescue-at-milkweed-meadow",
+      "answer": "Butternut",
+      "page": 8
+    },
+    {
+      "type": "content",
+      "text": "what is the human given name of the rabbit who was named and kept by humans, and what did she change her name to?",
+      "book_key": "the-remarkable-rescue-at-milkweed-meadow",
+      "answer": "Bun Bun and Sage",
+      "page": 12
+    },
+    {
+      "type": "content",
+      "text": "name one of the three things Grandmother Sage taught her kits?",
+      "book_key": "the-remarkable-rescue-at-milkweed-meadow",
+      "answer": "Stories matter, rabbits have dignity, or stay alive",
+      "page": 15
+    },
+    {
+      "type": "content",
+      "text": "why did Goosegrass bring out Grandmother's special comb?",
+      "book_key": "the-remarkable-rescue-at-milkweed-meadow",
+      "answer": "To separate the tails of two squirrels whose tails were stuck together",
+      "page": 24
+    },
+    {
+      "type": "content",
+      "text": "who stole the dragonfly comb?",
+      "book_key": "the-remarkable-rescue-at-milkweed-meadow",
+      "answer": "Blue",
+      "page": 25
+    },
+    {
+      "type": "content",
+      "text": "who are Piper, Windy and Beaker?",
+      "book_key": "the-remarkable-rescue-at-milkweed-meadow",
+      "answer": "The just-hatched robins",
+      "page": 34
+    },
+    {
+      "type": "content",
+      "text": "what prevented Thistle from completing her road test?",
+      "book_key": "the-remarkable-rescue-at-milkweed-meadow",
+      "answer": "A nearby coyote howled",
+      "page": 44
+    },
+    {
+      "type": "content",
+      "text": "why did Mother Firstfledge come to the rabbit warren during lessons?",
+      "book_key": "the-remarkable-rescue-at-milkweed-meadow",
+      "answer": "She requested Butternut come out to see Piper fledge",
+      "page": 49
+    },
+    {
+      "type": "content",
+      "text": "where did Piper land when he fledged?",
+      "book_key": "the-remarkable-rescue-at-milkweed-meadow",
+      "answer": "He landed in the gutter",
+      "page": 51
+    },
+    {
+      "type": "content",
+      "text": "the hoof of what creature came through the rabbit's lecture hall?",
+      "book_key": "the-remarkable-rescue-at-milkweed-meadow",
+      "answer": "A white tail deer fawn",
+      "page": 63
+    },
+    {
+      "type": "content",
+      "text": "who stood up to Blue?",
+      "book_key": "the-remarkable-rescue-at-milkweed-meadow",
+      "answer": "Piper Firstfledge",
+      "page": 71
+    },
+    {
+      "type": "content",
+      "text": "what is the name of the fawn with the broken leg?",
+      "book_key": "the-remarkable-rescue-at-milkweed-meadow",
+      "answer": "Winsome",
+      "page": 78
+    },
+    {
+      "type": "content",
+      "text": "name one of the three foods Winsome said were her favorites?",
+      "book_key": "the-remarkable-rescue-at-milkweed-meadow",
+      "answer": "Carrots, apples or berries",
+      "page": 79
+    },
+    {
+      "type": "content",
+      "text": "what creature was feeding out of the garbage bins when Piper and Butternut went to look for food in them?",
+      "book_key": "the-remarkable-rescue-at-milkweed-meadow",
+      "answer": "A coyote (pregnant)",
+      "page": 81
+    },
+    {
+      "type": "content",
+      "text": "what does Winsome's mother call rabbits?",
+      "book_key": "the-remarkable-rescue-at-milkweed-meadow",
+      "answer": "Hopping moss clumps",
+      "page": 91
+    },
+    {
+      "type": "content",
+      "text": "what did Winsome find in the woods—something she promised to give to Piper in the future?",
+      "book_key": "the-remarkable-rescue-at-milkweed-meadow",
+      "answer": "A blue ribbon",
+      "page": 97
+    },
+    {
+      "type": "content",
+      "text": "which two creatures raced each other?",
+      "book_key": "the-remarkable-rescue-at-milkweed-meadow",
+      "answer": "Piper the robin and Winsome the deer",
+      "page": 105
+    },
+    {
+      "type": "content",
+      "text": "who first discovered that Butternut had been sneaking out at night?",
+      "book_key": "the-remarkable-rescue-at-milkweed-meadow",
+      "answer": "Her brother Kale",
+      "page": 108
+    },
+    {
+      "type": "content",
+      "text": "what did Butternut pray would take her the day of her road test?",
+      "book_key": "the-remarkable-rescue-at-milkweed-meadow",
+      "answer": "A tornado",
+      "page": 118
+    },
+    {
+      "type": "content",
+      "text": "what held Blue at bay that day?",
+      "book_key": "the-remarkable-rescue-at-milkweed-meadow",
+      "answer": "A swarm of birds",
+      "page": 119
+    },
+    {
+      "type": "content",
+      "text": "what kind of creature said to Butternut, \"Don't worry. I'm bringing you back to your family.\"?",
+      "book_key": "the-remarkable-rescue-at-milkweed-meadow",
+      "answer": "A human",
+      "page": 122
+    },
+    {
+      "type": "content",
+      "text": "what creature died during Butternut's road test?",
+      "book_key": "the-remarkable-rescue-at-milkweed-meadow",
+      "answer": "The coyote",
+      "page": 123
+    },
+    {
+      "type": "content",
+      "text": "who left peanuts for Blue?",
+      "book_key": "the-remarkable-rescue-at-milkweed-meadow",
+      "answer": "Piper",
+      "page": 127
+    },
+    {
+      "type": "content",
+      "text": "what terrible thing did Winsome find?",
+      "book_key": "the-remarkable-rescue-at-milkweed-meadow",
+      "answer": "The coyote pups",
+      "page": 130
+    },
+    {
+      "type": "content",
+      "text": "what is the rescue plan Butternut came up with?",
+      "book_key": "the-remarkable-rescue-at-milkweed-meadow",
+      "answer": "Take the pups one at a time to the human's back door",
+      "page": 133
+    },
+    {
+      "type": "content",
+      "text": "who leaves the night of the coyote pup rescue?",
+      "book_key": "the-remarkable-rescue-at-milkweed-meadow",
+      "answer": "Winsome and her mother",
+      "page": 136
+    },
+    {
+      "type": "content",
+      "text": "who did Butternut ask for help from after Winsome and her mother left?",
+      "book_key": "the-remarkable-rescue-at-milkweed-meadow",
+      "answer": "Her own family of rabbits",
+      "page": 142
+    },
+    {
+      "type": "content",
+      "text": "how many rabbits did it take to move one coyote pup?",
+      "book_key": "the-remarkable-rescue-at-milkweed-meadow",
+      "answer": "Four",
+      "page": 149
+    },
+    {
+      "type": "content",
+      "text": "in a surprising twist, who fended off an owl?",
+      "book_key": "the-remarkable-rescue-at-milkweed-meadow",
+      "answer": "Blue",
+      "page": 154
+    },
+    {
+      "type": "content",
+      "text": "who did Butternut decide to befriend at the end of the tale?",
+      "book_key": "the-remarkable-rescue-at-milkweed-meadow",
+      "answer": "The human female",
+      "page": 179
+    },
+    {
+      "type": "in-which-book",
+      "text": "is grooming very important, and there is a very special comb with a dragonfly on it?",
+      "book_key": "the-remarkable-rescue-at-milkweed-meadow",
+      "page": 17
+    },
+    {
+      "type": "in-which-book",
+      "text": "does someone say, \"our milkweed is our brain power\"?",
+      "book_key": "the-remarkable-rescue-at-milkweed-meadow",
+      "page": 17
+    },
+    {
+      "type": "in-which-book",
+      "text": "does someone use their righteous indignation to do something daring?",
+      "book_key": "the-remarkable-rescue-at-milkweed-meadow",
+      "page": 28
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a bird poop on someone's face?",
+      "book_key": "the-remarkable-rescue-at-milkweed-meadow",
+      "page": 43
+    },
+    {
+      "type": "in-which-book",
+      "text": "does someone say, \"And characters are like bananas; if they're good, you can never have too many\"?",
+      "book_key": "the-remarkable-rescue-at-milkweed-meadow",
+      "page": 62
+    },
+    {
+      "type": "in-which-book",
+      "text": "do creatures rummage through garbage bins looking for food?",
+      "book_key": "the-remarkable-rescue-at-milkweed-meadow",
+      "page": 80
+    },
+    {
+      "type": "in-which-book",
+      "text": "does someone offer to eat the bugs off of another's back?",
+      "book_key": "the-remarkable-rescue-at-milkweed-meadow",
+      "page": 90
+    },
+    {
+      "type": "in-which-book",
+      "text": "does someone have a \"tiny treasure box of goodness\"?",
+      "book_key": "the-remarkable-rescue-at-milkweed-meadow",
+      "page": 115
+    },
+    {
+      "type": "in-which-book",
+      "text": "does someone crash into a window?",
+      "book_key": "the-remarkable-rescue-at-milkweed-meadow",
+      "page": 158
+    },
+    {
+      "type": "in-which-book",
+      "text": "does someone suggest a nice trivia duel on weed species?",
+      "book_key": "the-remarkable-rescue-at-milkweed-meadow",
+      "page": 170
+    },
+    {
+      "type": "content",
+      "text": "what city is Mary sent to after her parents die?",
+      "book_key": "the-secret-garden-on-81st-street",
+      "answer": "New York City",
+      "page": null
+    },
+    {
+      "type": "content",
+      "text": "who are the two women who are assigned to take care of Mary in her uncle's absence?",
+      "book_key": "the-secret-garden-on-81st-street",
+      "answer": "Mrs. Medford and Martha",
+      "page": null
+    },
+    {
+      "type": "content",
+      "text": "what famous park does Mary visit when she first arrives in the city?",
+      "book_key": "the-secret-garden-on-81st-street",
+      "answer": "Central Park",
+      "page": null
+    },
+    {
+      "type": "content",
+      "text": "Ben owns a special kind of corner store that is called what?",
+      "book_key": "the-secret-garden-on-81st-street",
+      "answer": "A bodega",
+      "page": null
+    },
+    {
+      "type": "content",
+      "text": "at the bodega, who does Ben say doesn't usually like customers to pet him but seems to like Mary?",
+      "book_key": "the-secret-garden-on-81st-street",
+      "answer": "Robin, the cat",
+      "page": null
+    },
+    {
+      "type": "content",
+      "text": "what type of plant does Ben gift Mary at the bodega?",
+      "book_key": "the-secret-garden-on-81st-street",
+      "answer": "An air plant",
+      "page": null
+    },
+    {
+      "type": "content",
+      "text": "what exhibits at the Museum of Natural History does Ben recommend Mary should see?",
+      "book_key": "the-secret-garden-on-81st-street",
+      "answer": "The squid and the whale",
+      "page": null
+    },
+    {
+      "type": "content",
+      "text": "what memory makes Mary begin to cry as she is visiting the Museum of Natural History?",
+      "book_key": "the-secret-garden-on-81st-street",
+      "answer": "She remembers looking at fish with her family when she sees a family looking at fish in the aquarium",
+      "page": null
+    },
+    {
+      "type": "content",
+      "text": "Mary visits the MET and finds out about what famous Impressionist painter who liked to paint pictures of a particular bridge?",
+      "book_key": "the-secret-garden-on-81st-street",
+      "answer": "Monet",
+      "page": null
+    },
+    {
+      "type": "content",
+      "text": "Mary finds a key in a drawer that helps her unlock the door to the rooftop where she finds what?",
+      "book_key": "the-secret-garden-on-81st-street",
+      "answer": "A secret garden",
+      "page": null
+    },
+    {
+      "type": "content",
+      "text": "who does Martha invite over to help Mary bring the garden back to life?",
+      "book_key": "the-secret-garden-on-81st-street",
+      "answer": "Dickon, her little brother",
+      "page": null
+    },
+    {
+      "type": "content",
+      "text": "who used to take care of the rooftop garden before he died?",
+      "book_key": "the-secret-garden-on-81st-street",
+      "answer": "Masahiro (Mary's Uncle's husband)",
+      "page": null
+    },
+    {
+      "type": "content",
+      "text": "when Mary's Uncle Archie offers to get her something she wants, what does she ask for?",
+      "book_key": "the-secret-garden-on-81st-street",
+      "answer": "Plants",
+      "page": null
+    },
+    {
+      "type": "content",
+      "text": "Mary hears noises on the floor above her and she later finds out those noises were made by her cousin whose first and last name is what?",
+      "book_key": "the-secret-garden-on-81st-street",
+      "answer": "Colin Craven",
+      "page": null
+    },
+    {
+      "type": "content",
+      "text": "readers discover that Colin has what type of disorder?",
+      "book_key": "the-secret-garden-on-81st-street",
+      "answer": "Anxiety or panic disorder",
+      "page": null
+    },
+    {
+      "type": "content",
+      "text": "what flower do readers discover through Mary's social media is the earliest to bloom?",
+      "book_key": "the-secret-garden-on-81st-street",
+      "answer": "Irises",
+      "page": null
+    },
+    {
+      "type": "content",
+      "text": "Dickon points out that \"normal\" is not a word that he would like to use and that he instead thinks of the three of them (himself, Mary, and Colin) as what?",
+      "book_key": "the-secret-garden-on-81st-street",
+      "answer": "Weirdos",
+      "page": null
+    },
+    {
+      "type": "content",
+      "text": "when Colin is sharing good memories of his dad in the garden, Mary starts to cry and tells Colin it is because of what?",
+      "book_key": "the-secret-garden-on-81st-street",
+      "answer": "Because she fears she does not have any good memories to hang onto of her parents",
+      "page": null
+    },
+    {
+      "type": "content",
+      "text": "readers discover from Mary's social media that what type of bud is edible?",
+      "book_key": "the-secret-garden-on-81st-street",
+      "answer": "Daylily buds",
+      "page": null
+    },
+    {
+      "type": "content",
+      "text": "Colin says that he \"forgets to feel scared\" since he has been doing what?",
+      "book_key": "the-secret-garden-on-81st-street",
+      "answer": "Visiting the garden",
+      "page": null
+    },
+    {
+      "type": "content",
+      "text": "what does Colin plant for Robin the cat?",
+      "book_key": "the-secret-garden-on-81st-street",
+      "answer": "Catnip",
+      "page": null
+    },
+    {
+      "type": "content",
+      "text": "who do Colin, Mary, and Dickon show the garden to first?",
+      "book_key": "the-secret-garden-on-81st-street",
+      "answer": "Ben",
+      "page": null
+    },
+    {
+      "type": "content",
+      "text": "Mary has a good memory of her parents and especially of her mom reading to her that took place where?",
+      "book_key": "the-secret-garden-on-81st-street",
+      "answer": "The mountain house",
+      "page": null
+    },
+    {
+      "type": "content",
+      "text": "what type of plant does Ben bring to plant in the garden that Masahiro always wanted?",
+      "book_key": "the-secret-garden-on-81st-street",
+      "answer": "A rose (specifically a Don Juan climbing rose)",
+      "page": null
+    },
+    {
+      "type": "content",
+      "text": "at the end, Uncle Archie assures Mary that he, Colin, and Mary are all going to be what?",
+      "book_key": "the-secret-garden-on-81st-street",
+      "answer": "A family",
+      "page": null
+    },
+    {
+      "type": "in-which-book",
+      "text": "do two friends and eventually a third friend revive a garden?",
+      "book_key": "the-secret-garden-on-81st-street",
+      "page": null
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a girl's parents die so she is sent to live with her uncle in New York City?",
+      "book_key": "the-secret-garden-on-81st-street",
+      "page": null
+    },
+    {
+      "type": "in-which-book",
+      "text": "is a boy diagnosed with panic disorder and lives a life mainly in his room until he meets his cousin Mary?",
+      "book_key": "the-secret-garden-on-81st-street",
+      "page": null
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a girl become a part of a new family that includes her uncle and her cousin?",
+      "book_key": "the-secret-garden-on-81st-street",
+      "page": null
+    },
+    {
+      "type": "in-which-book",
+      "text": "is there a special kind of cat called a \"bodega cat\"?",
+      "book_key": "the-secret-garden-on-81st-street",
+      "page": null
+    },
+    {
+      "type": "content",
+      "text": "what grade is Emily Windsnap's swim class?",
+      "book_key": "the-tail-of-emily-windsnap",
+      "answer": "7th grade",
+      "page": 1
+    },
+    {
+      "type": "content",
+      "text": "what is the name of Emily and her mother's boat?",
+      "book_key": "the-tail-of-emily-windsnap",
+      "answer": "King of the Sea",
+      "page": 3
+    },
+    {
+      "type": "content",
+      "text": "what did the swim coach tell Emily was happening to her legs?",
+      "book_key": "the-tail-of-emily-windsnap",
+      "answer": "Just a cramp",
+      "page": 7
+    },
+    {
+      "type": "content",
+      "text": "where does Mr. Beeston work?",
+      "book_key": "the-tail-of-emily-windsnap",
+      "answer": "The lighthouse",
+      "page": 11
+    },
+    {
+      "type": "content",
+      "text": "what is the name of the seaside town where Emily lives?",
+      "book_key": "the-tail-of-emily-windsnap",
+      "answer": "Brightport",
+      "page": 31
+    },
+    {
+      "type": "content",
+      "text": "what kind of school does Shona go to?",
+      "book_key": "the-tail-of-emily-windsnap",
+      "answer": "Mermaid School",
+      "page": 35
+    },
+    {
+      "type": "content",
+      "text": "what does Shona want to be when she grows up?",
+      "book_key": "the-tail-of-emily-windsnap",
+      "answer": "A siren",
+      "page": 37
+    },
+    {
+      "type": "content",
+      "text": "what cruel name does Mandy call Emily?",
+      "book_key": "the-tail-of-emily-windsnap",
+      "answer": "Fish girl",
+      "page": 45
+    },
+    {
+      "type": "content",
+      "text": "what device do mermaids use to measure how far they have swam?",
+      "book_key": "the-tail-of-emily-windsnap",
+      "answer": "A splishometer",
+      "page": 48
+    },
+    {
+      "type": "content",
+      "text": "what is mermaid slang for cool?",
+      "book_key": "the-tail-of-emily-windsnap",
+      "answer": "Swishy",
+      "page": 51
+    },
+    {
+      "type": "content",
+      "text": "what does King Neptune make when he gets in a bad mood?",
+      "book_key": "the-tail-of-emily-windsnap",
+      "answer": "Thunderstorms and typhoons",
+      "page": 60
+    },
+    {
+      "type": "content",
+      "text": "what happens if merfolk and humans are caught together?",
+      "book_key": "the-tail-of-emily-windsnap",
+      "answer": "Prison",
+      "page": 61
+    },
+    {
+      "type": "content",
+      "text": "where is the merfolk's prison?",
+      "book_key": "the-tail-of-emily-windsnap",
+      "answer": "Beyond the Great Mermer Reef",
+      "page": 61
+    },
+    {
+      "type": "content",
+      "text": "what is the name of the ship of gold with masts made of marble?",
+      "book_key": "the-tail-of-emily-windsnap",
+      "answer": "The Voyager",
+      "page": 64
+    },
+    {
+      "type": "content",
+      "text": "what did King Neptune give the town of Shiprock as a thank you?",
+      "book_key": "the-tail-of-emily-windsnap",
+      "answer": "A dolphin",
+      "page": 77
+    },
+    {
+      "type": "content",
+      "text": "what was the name of the merman poet who married a human woman at Rainbow Rocks?",
+      "book_key": "the-tail-of-emily-windsnap",
+      "answer": "Jake Windsnapp",
+      "page": 78
+    },
+    {
+      "type": "content",
+      "text": "how does Mr. Beeston administer the memory-blocking drug to Emily's mother?",
+      "book_key": "the-tail-of-emily-windsnap",
+      "answer": "Donuts",
+      "page": 125
+    },
+    {
+      "type": "content",
+      "text": "what structure do Emily and Shona dig a hole into?",
+      "book_key": "the-tail-of-emily-windsnap",
+      "answer": "The Great MerMer Reef",
+      "page": 163
+    },
+    {
+      "type": "content",
+      "text": "what is Emily's dad making when she finds his prison cell?",
+      "book_key": "the-tail-of-emily-windsnap",
+      "answer": "A bracelet",
+      "page": 171
+    },
+    {
+      "type": "content",
+      "text": "who helps Emily's class forget they saw a mermaid?",
+      "book_key": "the-tail-of-emily-windsnap",
+      "answer": "Mr. Beeston",
+      "page": 208
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a teacher instruct students about 19th century shipwrecks?",
+      "book_key": "the-tail-of-emily-windsnap",
+      "page": null
+    },
+    {
+      "type": "in-which-book",
+      "text": "does someone end up in court at an underwater palace?",
+      "book_key": "the-tail-of-emily-windsnap",
+      "page": null
+    },
+    {
+      "type": "in-which-book",
+      "text": "are characters pardoned for their crimes because they broke rules in the name of love?",
+      "book_key": "the-tail-of-emily-windsnap",
+      "page": null
+    },
+    {
+      "type": "in-which-book",
+      "text": "must a character move to a secret island with their family?",
+      "book_key": "the-tail-of-emily-windsnap",
+      "page": null
+    }
+  ]
+}

@@ -1,0 +1,168 @@
+{
+  "questions": [
+    {
+      "type": "content",
+      "text": "what grade is Emily Windsnap's swim class?",
+      "book_key": "the-tail-of-emily-windsnap",
+      "answer": "7th grade",
+      "page": 1
+    },
+    {
+      "type": "content",
+      "text": "what is the name of Emily and her mother's boat?",
+      "book_key": "the-tail-of-emily-windsnap",
+      "answer": "King of the Sea",
+      "page": 3
+    },
+    {
+      "type": "content",
+      "text": "what did the swim coach tell Emily was happening to her legs?",
+      "book_key": "the-tail-of-emily-windsnap",
+      "answer": "Just a cramp",
+      "page": 7
+    },
+    {
+      "type": "content",
+      "text": "where does Mr. Beeston work?",
+      "book_key": "the-tail-of-emily-windsnap",
+      "answer": "The lighthouse",
+      "page": 11
+    },
+    {
+      "type": "content",
+      "text": "what is the name of the seaside town where Emily lives?",
+      "book_key": "the-tail-of-emily-windsnap",
+      "answer": "Brightport",
+      "page": 31
+    },
+    {
+      "type": "content",
+      "text": "what kind of school does Shona go to?",
+      "book_key": "the-tail-of-emily-windsnap",
+      "answer": "Mermaid School",
+      "page": 35
+    },
+    {
+      "type": "content",
+      "text": "what does Shona want to be when she grows up?",
+      "book_key": "the-tail-of-emily-windsnap",
+      "answer": "A siren",
+      "page": 37
+    },
+    {
+      "type": "content",
+      "text": "what cruel name does Mandy call Emily?",
+      "book_key": "the-tail-of-emily-windsnap",
+      "answer": "Fish girl",
+      "page": 45
+    },
+    {
+      "type": "content",
+      "text": "what device do mermaids use to measure how far they have swam?",
+      "book_key": "the-tail-of-emily-windsnap",
+      "answer": "A splishometer",
+      "page": 48
+    },
+    {
+      "type": "content",
+      "text": "what is mermaid slang for cool?",
+      "book_key": "the-tail-of-emily-windsnap",
+      "answer": "Swishy",
+      "page": 51
+    },
+    {
+      "type": "content",
+      "text": "what does King Neptune make when he gets in a bad mood?",
+      "book_key": "the-tail-of-emily-windsnap",
+      "answer": "Thunderstorms and typhoons",
+      "page": 60
+    },
+    {
+      "type": "content",
+      "text": "what happens if merfolk and humans are caught together?",
+      "book_key": "the-tail-of-emily-windsnap",
+      "answer": "Prison",
+      "page": 61
+    },
+    {
+      "type": "content",
+      "text": "where is the merfolk's prison?",
+      "book_key": "the-tail-of-emily-windsnap",
+      "answer": "Beyond the Great Mermer Reef",
+      "page": 61
+    },
+    {
+      "type": "content",
+      "text": "what is the name of the ship of gold with masts made of marble?",
+      "book_key": "the-tail-of-emily-windsnap",
+      "answer": "The Voyager",
+      "page": 64
+    },
+    {
+      "type": "content",
+      "text": "what did King Neptune give the town of Shiprock as a thank you?",
+      "book_key": "the-tail-of-emily-windsnap",
+      "answer": "A dolphin",
+      "page": 77
+    },
+    {
+      "type": "content",
+      "text": "what was the name of the merman poet who married a human woman at Rainbow Rocks?",
+      "book_key": "the-tail-of-emily-windsnap",
+      "answer": "Jake Windsnapp",
+      "page": 78
+    },
+    {
+      "type": "content",
+      "text": "how does Mr. Beeston administer the memory-blocking drug to Emily's mother?",
+      "book_key": "the-tail-of-emily-windsnap",
+      "answer": "Donuts",
+      "page": 125
+    },
+    {
+      "type": "content",
+      "text": "what structure do Emily and Shona dig a hole into?",
+      "book_key": "the-tail-of-emily-windsnap",
+      "answer": "The Great MerMer Reef",
+      "page": 163
+    },
+    {
+      "type": "content",
+      "text": "what is Emily's dad making when she finds his prison cell?",
+      "book_key": "the-tail-of-emily-windsnap",
+      "answer": "A bracelet",
+      "page": 171
+    },
+    {
+      "type": "content",
+      "text": "who helps Emily's class forget they saw a mermaid?",
+      "book_key": "the-tail-of-emily-windsnap",
+      "answer": "Mr. Beeston",
+      "page": 208
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a teacher instruct students about 19th century shipwrecks?",
+      "book_key": "the-tail-of-emily-windsnap",
+      "page": null
+    },
+    {
+      "type": "in-which-book",
+      "text": "does someone end up in court at an underwater palace?",
+      "book_key": "the-tail-of-emily-windsnap",
+      "page": null
+    },
+    {
+      "type": "in-which-book",
+      "text": "are characters pardoned for their crimes because they broke rules in the name of love?",
+      "book_key": "the-tail-of-emily-windsnap",
+      "page": null
+    },
+    {
+      "type": "in-which-book",
+      "text": "must a character move to a secret island with their family?",
+      "book_key": "the-tail-of-emily-windsnap",
+      "page": null
+    }
+  ]
+}

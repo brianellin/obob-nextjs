@@ -1,0 +1,234 @@
+{
+  "questions": [
+    {
+      "type": "content",
+      "text": "it is said that sharks as a rule do not eat what type of animal?",
+      "book_key": "odder",
+      "answer": "Sea otters",
+      "page": 3
+    },
+    {
+      "type": "content",
+      "text": "what number is Odder known as?",
+      "book_key": "odder",
+      "answer": "156",
+      "page": 9
+    },
+    {
+      "type": "content",
+      "text": "what is the name of Odder's favorite companion?",
+      "book_key": "odder",
+      "answer": "Kairi",
+      "page": 14
+    },
+    {
+      "type": "content",
+      "text": "what does Kairi say to Odder when Odder asks play or eat first?",
+      "book_key": "odder",
+      "answer": "First we eat and then we play",
+      "page": 14
+    },
+    {
+      "type": "content",
+      "text": "what is the name of the bay that is a little scary to some, but a place Odder thinks is worth the scare because there are succulent crabs there?",
+      "book_key": "odder",
+      "answer": "Monterey Bay",
+      "page": 21
+    },
+    {
+      "type": "content",
+      "text": "why does Odder say she wants to be close to a kayaker?",
+      "book_key": "odder",
+      "answer": "Because she is curious",
+      "page": 32
+    },
+    {
+      "type": "content",
+      "text": "how many times has Odder been trapped and relocated to quiet waters away from humans?",
+      "book_key": "odder",
+      "answer": "8",
+      "page": 35
+    },
+    {
+      "type": "content",
+      "text": "what does \"the fifty\" reference in the story of \"THE FIFTY\"?",
+      "book_key": "odder",
+      "answer": "That at one time there were only 50 sea otters left",
+      "page": 43
+    },
+    {
+      "type": "content",
+      "text": "how long can a sea otter stay underwater?",
+      "book_key": "odder",
+      "answer": "6-7 minutes",
+      "page": 45
+    },
+    {
+      "type": "content",
+      "text": "what does Odder do when Kairi is nipped by a great white shark?",
+      "book_key": "odder",
+      "answer": "Swims towards the shark and begins hurling herself at him",
+      "page": 56
+    },
+    {
+      "type": "content",
+      "text": "after Odder is bitten by a young shark, where is she taken?",
+      "book_key": "odder",
+      "answer": "Highwater",
+      "page": 73
+    },
+    {
+      "type": "content",
+      "text": "what are the people called who take care of Odder at Highwater?",
+      "book_key": "odder",
+      "answer": "Aquarists",
+      "page": 75
+    },
+    {
+      "type": "content",
+      "text": "what do the aquarists do to try and save Odder?",
+      "book_key": "odder",
+      "answer": "Surgery",
+      "page": 79
+    },
+    {
+      "type": "content",
+      "text": "what part of Odder's mom's body did she sleep on as a pup?",
+      "book_key": "odder",
+      "answer": "Stomach",
+      "page": 86
+    },
+    {
+      "type": "content",
+      "text": "what did Odder's mom do to keep her safe while she was diving for food?",
+      "book_key": "odder",
+      "answer": "Tied/looped/leashed her to strands of kelp",
+      "page": 88
+    },
+    {
+      "type": "content",
+      "text": "how many hairs per square inch is a sea otter said to have?",
+      "book_key": "odder",
+      "answer": "A million hairs per square inch",
+      "page": 89
+    },
+    {
+      "type": "content",
+      "text": "what happens to cause Odder and her mother to become separated?",
+      "book_key": "odder",
+      "answer": "A storm",
+      "page": 106
+    },
+    {
+      "type": "content",
+      "text": "what are the names of the elder sea otters who decide to be kind to Odder?",
+      "book_key": "odder",
+      "answer": "Gracie and Holly",
+      "page": 150
+    },
+    {
+      "type": "content",
+      "text": "what do Gracie and Holly tell Odder it is best to be: a name or a number?",
+      "book_key": "odder",
+      "answer": "A number",
+      "page": 153
+    },
+    {
+      "type": "content",
+      "text": "what does Odder call the humans taking care of her until Gracie and Holly inform her of what they are really called?",
+      "book_key": "odder",
+      "answer": "Animals",
+      "page": 159
+    },
+    {
+      "type": "content",
+      "text": "what does Odder find out has happened to Kairi from Gracie and Holly?",
+      "book_key": "odder",
+      "answer": "That she had a stillborn pup and that she has the shaking sickness",
+      "page": 193
+    },
+    {
+      "type": "content",
+      "text": "what name is given to Odder at Highwater when she returns there for rehabilitation after the shark attack?",
+      "book_key": "odder",
+      "answer": "Jazz",
+      "page": 229
+    },
+    {
+      "type": "content",
+      "text": "when Odder discovers Kairi is at Highwater, what does Odder discover has also been given to Kairi to take care of at Highwater?",
+      "book_key": "odder",
+      "answer": "An abandoned pup",
+      "page": 218
+    },
+    {
+      "type": "content",
+      "text": "what does Odder always say is an otter's purpose?",
+      "book_key": "odder",
+      "answer": "Play",
+      "page": 252
+    },
+    {
+      "type": "content",
+      "text": "what does Odder do for 3 days with the pup that has been placed in the tank with her?",
+      "book_key": "odder",
+      "answer": "Ignores her",
+      "page": 238
+    },
+    {
+      "type": "content",
+      "text": "how long does it take before the pup that Odder taught is released into the wild?",
+      "book_key": "odder",
+      "answer": "6 months",
+      "page": 259
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a 3-year-old sea otter get bit by a shark?",
+      "book_key": "odder",
+      "page": 56
+    },
+    {
+      "type": "in-which-book",
+      "text": "are humans called \"animals\" and are trying to rescue a marine animal?",
+      "book_key": "odder",
+      "page": 159
+    },
+    {
+      "type": "in-which-book",
+      "text": "do we find a character called Kairi?",
+      "book_key": "odder",
+      "page": 14
+    },
+    {
+      "type": "in-which-book",
+      "text": "do we read about two settings: a marine rehabilitation center and the ocean?",
+      "book_key": "odder",
+      "page": 1
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a mother and her pup get separated during a storm?",
+      "book_key": "odder",
+      "page": 106
+    },
+    {
+      "type": "in-which-book",
+      "text": "do aquarists wear \"disguises\" so the animals will not get too attached to them?",
+      "book_key": "odder",
+      "page": 75
+    },
+    {
+      "type": "in-which-book",
+      "text": "are young pups placed with adults who are not their mothers?",
+      "book_key": "odder",
+      "page": 218
+    },
+    {
+      "type": "in-which-book",
+      "text": "is it said that the whole purpose of life is to play?",
+      "book_key": "odder",
+      "page": 252
+    }
+  ]
+}

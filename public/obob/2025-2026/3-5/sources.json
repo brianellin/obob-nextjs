@@ -24,6 +24,11 @@
         "path": "newberg/questions.json",
         "name": "Newberg Public Library",
         "link": "https://www.newbergoregon.gov/government/departments/library/oregon_battle_of_the_books.php"
+      },
+      {
+        "path": "beaverton/questions.json",
+        "name": "Beaverton City Library",
+        "link": "https://www.beavertonlibrary.org/370/Oregon-Battle-of-the-Books"
       }
     ]
   } 

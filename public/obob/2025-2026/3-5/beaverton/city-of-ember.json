@@ -1,0 +1,262 @@
+{
+  "questions": [
+    {
+      "type": "content",
+      "text": "what is decided will be given and passed down to each mayor of the City of Ember?",
+      "book_key": "city-of-ember",
+      "answer": "A box with secrets",
+      "page": 2
+    },
+    {
+      "type": "content",
+      "text": "why did the 7th mayor try and destroy the box and then hide it in a closet?",
+      "book_key": "city-of-ember",
+      "answer": "Because he thought it might hold information that would cure his sickness",
+      "page": 2
+    },
+    {
+      "type": "content",
+      "text": "what do the young people of the highest class receive by drawing from a bag?",
+      "book_key": "city-of-ember",
+      "answer": "Their job assignment",
+      "page": 8
+    },
+    {
+      "type": "content",
+      "text": "what is considered the most important job?",
+      "book_key": "city-of-ember",
+      "answer": "Fixing the electricity",
+      "page": 10
+    },
+    {
+      "type": "content",
+      "text": "what jobs do Lina and Doon trade?",
+      "book_key": "city-of-ember",
+      "answer": "Pipeworks Laborer and Messenger",
+      "page": 15
+    },
+    {
+      "type": "content",
+      "text": "who does Lina live with?",
+      "book_key": "city-of-ember",
+      "answer": "Her grandmother and her baby sister",
+      "page": 22
+    },
+    {
+      "type": "content",
+      "text": "what is one of the 4 rules for Messengers?",
+      "book_key": "city-of-ember",
+      "answer": "When a customer gives you a message, repeat it back; Always wear your red jacket so people can identify you; Go as fast as possible; Deliver a message only to the person it's meant for",
+      "page": 30
+    },
+    {
+      "type": "content",
+      "text": "when Lina goes to deliver a message to the Mayor, what part of the Gathering Hall Building does she end up?",
+      "book_key": "city-of-ember",
+      "answer": "The roof",
+      "page": 36
+    },
+    {
+      "type": "content",
+      "text": "what does Doon break the rules to go see on his first day on the job as Pipeworks Laborer?",
+      "book_key": "city-of-ember",
+      "answer": "The generator",
+      "page": 48
+    },
+    {
+      "type": "content",
+      "text": "what type of shop does Doon live above?",
+      "book_key": "city-of-ember",
+      "answer": "A Small Items shop",
+      "page": 49
+    },
+    {
+      "type": "content",
+      "text": "what is Doon's main purpose in being a Pipeworks Laborer?",
+      "book_key": "city-of-ember",
+      "answer": "He wants to find something important/find a way to help the City of Ember",
+      "page": 53
+    },
+    {
+      "type": "content",
+      "text": "what kind of bug did Doon find and start taking care of?",
+      "book_key": "city-of-ember",
+      "answer": "A worm",
+      "page": 52
+    },
+    {
+      "type": "content",
+      "text": "what do the inhabitants of the city call the space of darkness that is past the city?",
+      "book_key": "city-of-ember",
+      "answer": "The Unknown Regions",
+      "page": 65
+    },
+    {
+      "type": "content",
+      "text": "what type of seed does Clary give Lina as she is leaving the greenhouse and they are discussing where life comes from?",
+      "book_key": "city-of-ember",
+      "answer": "Bean",
+      "page": 69
+    },
+    {
+      "type": "content",
+      "text": "what does Lina imagine is beyond the city?",
+      "book_key": "city-of-ember",
+      "answer": "Another city",
+      "page": 68
+    },
+    {
+      "type": "content",
+      "text": "what two colors does Lina pick for the two colored pencils she will purchase?",
+      "book_key": "city-of-ember",
+      "answer": "Green and blue",
+      "page": 77
+    },
+    {
+      "type": "content",
+      "text": "what happens to Poppy while Lina is purchasing colored pencils?",
+      "book_key": "city-of-ember",
+      "answer": "She becomes lost",
+      "page": 78
+    },
+    {
+      "type": "content",
+      "text": "what happens when the Mayor calls a town meeting?",
+      "book_key": "city-of-ember",
+      "answer": "People start yelling, throwing, surging forward, are angry",
+      "page": 88
+    },
+    {
+      "type": "content",
+      "text": "what does Lina find in Poppy's hands and mouth and strewn about that came from inside the box her Granny found in the closet?",
+      "book_key": "city-of-ember",
+      "answer": "A message full of holes",
+      "page": 93
+    },
+    {
+      "type": "content",
+      "text": "who does Lina take the message full of holes to in order to try and get help to decipher it?",
+      "book_key": "city-of-ember",
+      "answer": "Captain Fleery",
+      "page": 97
+    },
+    {
+      "type": "content",
+      "text": "what does Lina discover Lizzie is receiving from Looper Windly?",
+      "book_key": "city-of-ember",
+      "answer": "Rare canned goods like peaches, applesauce and creamed corn",
+      "page": 151
+    },
+    {
+      "type": "content",
+      "text": "who gives Lina and Poppy a place to live after their grandmother dies?",
+      "book_key": "city-of-ember",
+      "answer": "Mrs. Murdo",
+      "page": 142
+    },
+    {
+      "type": "content",
+      "text": "when Doon is called \"bug boy\" by his fellow Pipeworkers, what does he do out of anger?",
+      "book_key": "city-of-ember",
+      "answer": "Steps on a bug he had found",
+      "page": 114
+    },
+    {
+      "type": "content",
+      "text": "who do readers discover has been receiving deliveries from the secret storage room below the city behind a locked door?",
+      "book_key": "city-of-ember",
+      "answer": "The mayor",
+      "page": 161
+    },
+    {
+      "type": "content",
+      "text": "what do Lina and Doon find in the boxes behind the secret panel?",
+      "book_key": "city-of-ember",
+      "answer": "Matches and candles",
+      "page": 188
+    },
+    {
+      "type": "content",
+      "text": "what is the name of the holiday the entire city celebrates?",
+      "book_key": "city-of-ember",
+      "answer": "The day of the Singing",
+      "page": 196
+    },
+    {
+      "type": "content",
+      "text": "why is there a reward posted for finding Doon and Lina?",
+      "book_key": "city-of-ember",
+      "answer": "Because they have been accused of spreading vicious rumors",
+      "page": 205
+    },
+    {
+      "type": "content",
+      "text": "what do Lina, Poppy, and Doon use to escape the city?",
+      "book_key": "city-of-ember",
+      "answer": "A boat",
+      "page": 237
+    },
+    {
+      "type": "content",
+      "text": "what do Lina, Poppy, and Doon find posted on the entrance to the path?",
+      "book_key": "city-of-ember",
+      "answer": "A sign welcoming City of Ember refugees",
+      "page": 250
+    },
+    {
+      "type": "content",
+      "text": "who finds Lina and Doon's message at the end of the book?",
+      "book_key": "city-of-ember",
+      "answer": "Mrs. Murdo",
+      "page": 270
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a Pipeworks Laborer and a Messenger team up to try and save their city?",
+      "book_key": "city-of-ember",
+      "page": 1
+    },
+    {
+      "type": "in-which-book",
+      "text": "do people draw job assignments once they have finished their highest class?",
+      "book_key": "city-of-ember",
+      "page": 8
+    },
+    {
+      "type": "in-which-book",
+      "text": "do we find the main characters Lina and Doon?",
+      "book_key": "city-of-ember",
+      "page": 1
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a girl and her baby sister live with their grandmother who runs a yarn shop?",
+      "book_key": "city-of-ember",
+      "page": 22
+    },
+    {
+      "type": "in-which-book",
+      "text": "does lack of electricity cause the lights to go out frequently?",
+      "book_key": "city-of-ember",
+      "page": 1
+    },
+    {
+      "type": "in-which-book",
+      "text": "is the Mayor and his guards and others stealing from the City?",
+      "book_key": "city-of-ember",
+      "page": 161
+    },
+    {
+      "type": "in-which-book",
+      "text": "do the main characters use a boat to escape?",
+      "book_key": "city-of-ember",
+      "page": 237
+    },
+    {
+      "type": "in-which-book",
+      "text": "do the main characters find a creature they have never seen before - a dog - during their escape?",
+      "book_key": "city-of-ember",
+      "page": 250
+    }
+  ]
+}

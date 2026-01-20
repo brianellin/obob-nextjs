@@ -1,0 +1,270 @@
+{
+  "questions": [
+    {
+      "type": "content",
+      "text": "what city and state do they live in at the beginning of the story?",
+      "book_key": "squished",
+      "answer": "Hickory Valley, Maryland",
+      "page": 3
+    },
+    {
+      "type": "content",
+      "text": "what is the name of the narrator?",
+      "book_key": "squished",
+      "answer": "Avery Annie Lee",
+      "page": 5
+    },
+    {
+      "type": "content",
+      "text": "how many kids are in the household?",
+      "book_key": "squished",
+      "answer": "Seven",
+      "page": 6
+    },
+    {
+      "type": "content",
+      "text": "name an instrument one of Avery's siblings play?",
+      "book_key": "squished",
+      "answer": "Clarinet, cymbals, harmonica, or violin",
+      "page": 7
+    },
+    {
+      "type": "content",
+      "text": "what pet does the family have?",
+      "book_key": "squished",
+      "answer": "Cat and dog",
+      "page": 7
+    },
+    {
+      "type": "content",
+      "text": "what's the baby's name?",
+      "book_key": "squished",
+      "answer": "Bea",
+      "page": 9
+    },
+    {
+      "type": "content",
+      "text": "Avery was so busy helping her family that she forgot to do something people do in the morning while getting ready for work or school. What did she forget?",
+      "book_key": "squished",
+      "answer": "To get dressed out of her pj's",
+      "page": 12
+    },
+    {
+      "type": "content",
+      "text": "what was Avery's dream?",
+      "book_key": "squished",
+      "answer": "To have her own room",
+      "page": 14
+    },
+    {
+      "type": "content",
+      "text": "which sibling is older than Avery?",
+      "book_key": "squished",
+      "answer": "Theo age 13",
+      "page": 15
+    },
+    {
+      "type": "content",
+      "text": "who or what is Slothy?",
+      "book_key": "squished",
+      "answer": "Stuffed sloth loved by Josie",
+      "page": 15
+    },
+    {
+      "type": "content",
+      "text": "what grade is Avery graduating from?",
+      "book_key": "squished",
+      "answer": "5th grade",
+      "page": 17
+    },
+    {
+      "type": "content",
+      "text": "what award is Avery going to win at her graduation?",
+      "book_key": "squished",
+      "answer": "Outstanding artist award",
+      "page": 18
+    },
+    {
+      "type": "content",
+      "text": "who is the principal's son?",
+      "book_key": "squished",
+      "answer": "Cameron",
+      "page": 21
+    },
+    {
+      "type": "content",
+      "text": "who climbed up on stage at graduation and lost their pants while doing so?",
+      "book_key": "squished",
+      "answer": "Max",
+      "page": 18
+    },
+    {
+      "type": "content",
+      "text": "who is getting their own room before Avery gets her own room?",
+      "book_key": "squished",
+      "answer": "Theo",
+      "page": 34
+    },
+    {
+      "type": "content",
+      "text": "who is moving into Avery's room?",
+      "book_key": "squished",
+      "answer": "Max",
+      "page": 34
+    },
+    {
+      "type": "content",
+      "text": "name one place Avery tries sleeping besides in her room?",
+      "book_key": "squished",
+      "answer": "Basement, bathtub",
+      "page": 44
+    },
+    {
+      "type": "content",
+      "text": "where did Avery, Dani and Cameron go every summer together?",
+      "book_key": "squished",
+      "answer": "The fair",
+      "page": 53
+    },
+    {
+      "type": "content",
+      "text": "whose dad teaches at the high school?",
+      "book_key": "squished",
+      "answer": "Avery's",
+      "page": 60
+    },
+    {
+      "type": "content",
+      "text": "who is getting a basement apartment?",
+      "book_key": "squished",
+      "answer": "Cameron's grandmother",
+      "page": 61
+    },
+    {
+      "type": "content",
+      "text": "what job does Avery want to get and makes posters for?",
+      "book_key": "squished",
+      "answer": "Dog walker",
+      "page": 69
+    },
+    {
+      "type": "content",
+      "text": "what is the name of the first dog Avery walks?",
+      "book_key": "squished",
+      "answer": "Honey",
+      "page": 78
+    },
+    {
+      "type": "content",
+      "text": "who saves Avery when Honey runs off and all the kids need things?",
+      "book_key": "squished",
+      "answer": "Theo",
+      "page": 85
+    },
+    {
+      "type": "content",
+      "text": "where does Avery go swimming with her friend Dani?",
+      "book_key": "squished",
+      "answer": "Dani's new friend Charlotte's pool",
+      "page": 107
+    },
+    {
+      "type": "content",
+      "text": "who does Theo not get along with anymore?",
+      "book_key": "squished",
+      "answer": "Dani's brother Nick",
+      "page": 110
+    },
+    {
+      "type": "content",
+      "text": "where are mom and dad talking about moving to?",
+      "book_key": "squished",
+      "answer": "Oregon",
+      "page": 121
+    },
+    {
+      "type": "content",
+      "text": "after dog walking what does Avery try to do to make money?",
+      "book_key": "squished",
+      "answer": "Sell lemonade",
+      "page": 126
+    },
+    {
+      "type": "content",
+      "text": "where does mom suggest she and Avery go for their \"mother-daughter\" date?",
+      "book_key": "squished",
+      "answer": "Lulu's Restaurant",
+      "page": 133
+    },
+    {
+      "type": "content",
+      "text": "what did Avery ask her mom at the restaurant?",
+      "book_key": "squished",
+      "answer": "Why she wanted to have so many kids",
+      "page": 136
+    },
+    {
+      "type": "content",
+      "text": "who lives in Oregon that they know?",
+      "book_key": "squished",
+      "answer": "Grandma and Grandpa (mother's parents)",
+      "page": 141
+    },
+    {
+      "type": "content",
+      "text": "where are the 6th graders having an event that Avery's family goes to?",
+      "book_key": "squished",
+      "answer": "Skate World",
+      "page": 153
+    },
+    {
+      "type": "content",
+      "text": "who was sent to Space Camp?",
+      "book_key": "squished",
+      "answer": "Cameron",
+      "page": 156
+    },
+    {
+      "type": "content",
+      "text": "who bullies Theo at Skate World?",
+      "book_key": "squished",
+      "answer": "Nick",
+      "page": 163
+    },
+    {
+      "type": "content",
+      "text": "what game did they play before bedtime after mom got home from her interview?",
+      "book_key": "squished",
+      "answer": "Sardines",
+      "page": 179
+    },
+    {
+      "type": "content",
+      "text": "who said, \"Just like water is always moving, people are always changing.\"?",
+      "book_key": "squished",
+      "answer": "Cameron's mom",
+      "page": 196
+    },
+    {
+      "type": "content",
+      "text": "who ran away?",
+      "book_key": "squished",
+      "answer": "Juliet and Josie",
+      "page": 206
+    },
+    {
+      "type": "content",
+      "text": "where did Juliet and Josie run away to?",
+      "book_key": "squished",
+      "answer": "The dog Honey's house",
+      "page": 226
+    },
+    {
+      "type": "content",
+      "text": "where is Theo thinking about volunteering when they move to Oregon?",
+      "book_key": "squished",
+      "answer": "The library",
+      "page": 238
+    }
+  ]
+}

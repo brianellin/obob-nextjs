@@ -1,0 +1,154 @@
+{
+  "questions": [
+    {
+      "type": "content",
+      "text": "what does Nick call his grandfather?",
+      "book_key": "just-like-click",
+      "answer": "Great Gramp",
+      "page": 5
+    },
+    {
+      "type": "content",
+      "text": "how much money is hidden under Nick's bed?",
+      "book_key": "just-like-click",
+      "answer": "$237,000",
+      "page": 14
+    },
+    {
+      "type": "content",
+      "text": "what kind of animal is Fletcher, Mr. Flossen's pet?",
+      "book_key": "just-like-click",
+      "answer": "A parrot",
+      "page": 17
+    },
+    {
+      "type": "content",
+      "text": "the superhero name is a combination of whose names?",
+      "book_key": "just-like-click",
+      "answer": "Clark and Nick",
+      "page": 21
+    },
+    {
+      "type": "content",
+      "text": "what does Nick give to Mr. Telly and Mrs. Baxter?",
+      "book_key": "just-like-click",
+      "answer": "A monthly allowance",
+      "page": 22
+    },
+    {
+      "type": "content",
+      "text": "what does Nick use to capture a pet parrot that has escaped?",
+      "book_key": "just-like-click",
+      "answer": "Blueberries",
+      "page": 24
+    },
+    {
+      "type": "content",
+      "text": "Nick uses the sound of what to cover up the sound of him sneaking out at night?",
+      "book_key": "just-like-click",
+      "answer": "The chiming of the clock",
+      "page": 32
+    },
+    {
+      "type": "content",
+      "text": "what was the strangest vehicle that a tourist family arrived in?",
+      "book_key": "just-like-click",
+      "answer": "An ice-cream truck",
+      "page": 33
+    },
+    {
+      "type": "content",
+      "text": "Nick thinks there should be a new Olympic event called what?",
+      "book_key": "just-like-click",
+      "answer": "Running with ladder",
+      "page": 57
+    },
+    {
+      "type": "content",
+      "text": "when Nick arrives at the roundup, what is the name of the horse he is assigned to?",
+      "book_key": "just-like-click",
+      "answer": "Picnic",
+      "page": 62
+    },
+    {
+      "type": "content",
+      "text": "what is the answer to the joke Lily tells: Where do all superheroes go on vacation?",
+      "book_key": "just-like-click",
+      "answer": "Cape Town",
+      "page": 62
+    },
+    {
+      "type": "content",
+      "text": "when a character is seen sleepwalking in the woods, what is he wearing?",
+      "book_key": "just-like-click",
+      "answer": "Yellow pajamas",
+      "page": 73
+    },
+    {
+      "type": "content",
+      "text": "how did Nick get hooked on Superman?",
+      "book_key": "just-like-click",
+      "answer": "His grandfather",
+      "page": 75
+    },
+    {
+      "type": "content",
+      "text": "what does Nick use to scare away thieves?",
+      "book_key": "just-like-click",
+      "answer": "A headlamp",
+      "page": 96
+    },
+    {
+      "type": "content",
+      "text": "Nick and Celia were duped with what kind of snake?",
+      "book_key": "just-like-click",
+      "answer": "A rubber snake",
+      "page": 100
+    },
+    {
+      "type": "content",
+      "text": "what was Great Gramp's superpower?",
+      "book_key": "just-like-click",
+      "answer": "He could read Nick's mind",
+      "page": 122
+    },
+    {
+      "type": "content",
+      "text": "what do Celia and Nick ride when they try to find a girl in trouble in the middle of the night?",
+      "book_key": "just-like-click",
+      "answer": "Horses",
+      "page": 135
+    },
+    {
+      "type": "content",
+      "text": "what was Lily doing on top of the fire tower?",
+      "book_key": "just-like-click",
+      "answer": "Making a wish",
+      "page": 148
+    },
+    {
+      "type": "in-which-book",
+      "text": "does each chapter start with a one-page comic strip?",
+      "book_key": "just-like-click",
+      "page": 1
+    },
+    {
+      "type": "in-which-book",
+      "text": "does the main character live in Black Butte Ranch year round?",
+      "book_key": "just-like-click",
+      "page": 1
+    },
+    {
+      "type": "in-which-book",
+      "text": "does the main character use a headlamp to scare away thieves?",
+      "book_key": "just-like-click",
+      "page": 96
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a group of kids almost get attacked by a wild cougar?",
+      "book_key": "just-like-click",
+      "page": 135
+    }
+  ]
+}
