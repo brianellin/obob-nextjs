@@ -83,6 +83,11 @@ export function getAllBlogPostsMeta(): BlogPostMeta[] {
   return posts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 }
 
+export function getLatestBlogPostMeta(): BlogPostMeta | null {
+  const posts = getAllBlogPostsMeta();
+  return posts.length > 0 ? posts[0] : null;
+}
+
 export async function getAllBlogPosts(): Promise<BlogPost[]> {
   const slugs = getBlogSlugs();
   const posts = await Promise.all(slugs.map(slug => getBlogPostBySlug(slug)));

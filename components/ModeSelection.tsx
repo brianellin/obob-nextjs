@@ -8,7 +8,7 @@ import {
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { User, Users, Trophy, Grid2X2, Grid3X3, Sparkles, Dog } from "lucide-react";
+import { User, Users, Trophy, Grid2X2, Grid3X3, Dog } from "lucide-react";
 import Link from "next/link";
 
 type ModeSelectionProps = {
@@ -189,12 +189,6 @@ export default function ModeSelection({ year, division }: ModeSelectionProps) {
               </Link>
             </CardFooter>
           </Card>
-{/* Coming Soon indicator */}
-          <div className="flex items-center justify-center gap-2 text-muted-foreground py-4">
-            <Sparkles className="h-4 w-4" />
-            <span className="text-sm">More games coming soon!</span>
-            <Sparkles className="h-4 w-4" />
-          </div>
         </div>
       </div>
     </div>
