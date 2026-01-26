@@ -27,7 +27,7 @@ export default function HomeHero() {
     <>
       <section className="max-w-2xl mx-auto space-y-4 mb-8 mt-4">
         <h1 className="text-5xl font-bold text-center font-rampart tracking-tight">
-          <WavyUnderline style={0} thickness={6} color="text-lime-400">
+          <WavyUnderline style={0} thickness={6} color="text-amber-600">
             OBOB.DOG{" "}
           </WavyUnderline>
         </h1>
@@ -36,8 +36,8 @@ export default function HomeHero() {
         </p>
 
         <div className="max-w-lg mx-auto pt-6">
-          <div className="bg-gray-50 border border-gray-200 rounded-lg p-4 shadow-sm">
-            <p className="text-sm font-semibold text-gray-700 text-center mb-3 font-heading">
+          <div className="bg-stone-100 border border-stone-300 rounded-lg p-4 shadow-sm">
+            <p className="text-sm font-semibold text-stone-700 text-center mb-3 font-heading">
               Pick your 2025-2026 division
             </p>
             <ToggleGroup
@@ -51,21 +51,21 @@ export default function HomeHero() {
               <ToggleGroupItem
                 value="3-5"
                 aria-label="Elementary Division"
-                className="data-[state=on]:bg-black data-[state=on]:text-white font-heading font-semibold"
+                className="data-[state=on]:bg-stone-800 data-[state=on]:text-amber-50 font-heading font-semibold"
               >
                 Elementary
               </ToggleGroupItem>
               <ToggleGroupItem
                 value="6-8"
                 aria-label="Middle School Division"
-                className="data-[state=on]:bg-black data-[state=on]:text-white font-heading font-semibold"
+                className="data-[state=on]:bg-stone-800 data-[state=on]:text-amber-50 font-heading font-semibold"
               >
                 Middle
               </ToggleGroupItem>
               <ToggleGroupItem
                 value="9-12"
                 aria-label="High School Division"
-                className="data-[state=on]:bg-black data-[state=on]:text-white font-heading font-semibold"
+                className="data-[state=on]:bg-stone-800 data-[state=on]:text-amber-50 font-heading font-semibold"
               >
                 High
               </ToggleGroupItem>

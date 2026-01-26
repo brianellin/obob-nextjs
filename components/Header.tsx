@@ -25,7 +25,7 @@ export default function Header() {
   };
 
   return (
-    <header className="bg-white text-black p-4 shadow-sm">
+    <header className="bg-amber-50 text-stone-900 p-4 shadow-sm">
       <div className="container mx-auto flex justify-center items-center relative">
         <Link href="/" className="inline-flex items-center">
           <BookHeartIcon className="w-6 h-6" />
@@ -36,7 +36,7 @@ export default function Header() {
         <div className="absolute right-0">
           <Sheet>
             <SheetTrigger asChild>
-              <button className="p-2 hover:bg-gray-100 rounded-md transition-colors">
+              <button className="p-2 hover:bg-stone-200 rounded-md transition-colors">
                 <Menu className="w-6 h-6" />
                 <span className="sr-only">Open menu</span>
               </button>
@@ -49,7 +49,7 @@ export default function Header() {
                 <SheetClose asChild>
                   <Link
                     href="/"
-                    className="text-lg hover:text-gray-600 transition-colors"
+                    className="text-lg hover:text-stone-600 transition-colors"
                   >
                     Home / New Battle
                   </Link>
@@ -57,10 +57,10 @@ export default function Header() {
                 <SheetClose asChild>
                   <Link
                     href="/books"
-                    className="text-lg hover:text-gray-600 transition-colors flex items-center gap-2"
+                    className="text-lg hover:text-stone-600 transition-colors flex items-center gap-2"
                   >
                     Books &amp; Questions
-                    <span className="px-2 py-1 text-xs font-bold text-white bg-pink-500 rounded-full">
+                    <span className="px-2 py-1 text-xs font-bold text-white bg-amber-700 rounded-full">
                       NEW!
                     </span>
                   </Link>
@@ -69,7 +69,7 @@ export default function Header() {
                 <SheetClose asChild>
                   <Link
                     href="/blog"
-                    className="text-lg hover:text-gray-600 transition-colors"
+                    className="text-lg hover:text-stone-600 transition-colors"
                   >
                     Blog
                   </Link>
@@ -77,7 +77,7 @@ export default function Header() {
                 <SheetClose asChild>
                   <Link
                     href="/about"
-                    className="text-lg hover:text-gray-600 transition-colors"
+                    className="text-lg hover:text-stone-600 transition-colors"
                   >
                     About
                   </Link>
@@ -85,7 +85,7 @@ export default function Header() {
                 <SheetClose asChild>
                   <Link
                     href="/newsletter"
-                    className="text-lg hover:text-gray-600 transition-colors"
+                    className="text-lg hover:text-stone-600 transition-colors"
                   >
                     Newsletter
                   </Link>
