@@ -405,13 +405,13 @@ export default function CollaborativeCrossword({
     async (row: number, col: number, char: string) => {
       // Track this answer locally so we don't re-apply it from sync
       const cellKey = `${row},${col}`;
-      
+
       // Skip POST only if this exact cell:letter was just applied from remote sync
       // (This prevents the feedback loop where we re-POST what we just received)
       if (isApplyingRemoteAnswersRef.current && appliedAnswersRef.current.has(`${cellKey}:${char}`)) {
         return;
       }
-      
+
       appliedAnswersRef.current.add(`${cellKey}:${char}`);
 
       try {
