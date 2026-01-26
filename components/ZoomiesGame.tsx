@@ -74,6 +74,10 @@ const CORRECT_REACTIONS = [
   "LOWKEY GENIUS 🤫🧠",
   "RIZZ ✨😏",
   "SKILLZ 🎯",
+  "LOCKED IN 🔒",
+  "NO NOTES 📋",
+  "BANGER 💥",
+  "PEAK 🏔️",
   // 2000s
   "EPIC WIN 🎮",
   "YOU ROCK 🤘",
@@ -129,6 +133,11 @@ const WRONG_REACTIONS = [
   "WAIT WHAT 😳",
   "HOLD UP ✋",
   "COOKED 🍳",
+  "CHOPPED 🔪",
+  "DELULU 🫠",
+  "TOUCH GRASS 🌱",
+  "NAUR 🇦🇺",
+  "FUMBLED 🏈",
   "MID 😒",
   // Edgy modern (added back)
   "NAH 👎",
