@@ -225,15 +225,20 @@ function CollaborativeClue({
   onHelpRequest: (clueId: string) => void;
 }) {
   return (
-    <div className="flex items-start gap-1 group">
-      <Clue
-        direction={direction}
-        number={number}
-        complete={complete}
-        correct={correct}
-      >
-        {text} <em className="text-gray-500">({bookTitle})</em>
-      </Clue>
+    <div className={`flex items-start gap-1 group transition-colors ${correct ? "text-green-700" : ""}`}>
+      {correct && (
+        <Check className="h-4 w-4 text-green-600 flex-shrink-0 mt-1" />
+      )}
+      <div className={correct ? "line-through decoration-green-600/40" : ""}>
+        <Clue
+          direction={direction}
+          number={number}
+          complete={complete}
+          correct={correct}
+        >
+          {text} <em className={correct ? "text-green-600/60" : "text-gray-500"}>({bookTitle})</em>
+        </Clue>
+      </div>
       {!correct && (
         <button
           onClick={(e) => {

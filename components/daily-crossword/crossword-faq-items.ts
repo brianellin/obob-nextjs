@@ -25,4 +25,9 @@ export const crosswordFAQItems: FAQItem[] = [
     question: "How many people can be on a team?",
     answer: "As many as you want! 🤪",
   },
+  {
+    question: "Can I get a hint or the page number?",
+    answer:
+      "Sorry, no hints or page numbers! All the answers come straight from the books. Grab a copy and look it up — that's part of the fun!",
+  },
 ];
