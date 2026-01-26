@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import NewsletterBanner from "@/components/NewsletterBanner";
 import { Analytics } from "@vercel/analytics/react";
 import { PostHogProvider } from "./providers";
+import { ThemeProvider } from "next-themes";
 
 const nunitoSans = Nunito_Sans({
   subsets: ["latin"],
@@ -44,7 +45,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
         <link
           rel="icon"
@@ -60,12 +61,14 @@ export default function RootLayout({
         />
       </head>
       <body className={`${nunitoSans.className} ${nunitoSans.variable} ${nunito.variable} ${rampartOne.variable} ${libreBaskerville.variable}`}>
-        <PostHogProvider>
-          <NewsletterBanner />
-          <Header />
-          <main className="container mx-auto px-2 py-2">{children}</main>
-          <Footer />
-        </PostHogProvider>
+        <ThemeProvider attribute="class" defaultTheme="light" disableTransitionOnChange>
+          <PostHogProvider>
+            <NewsletterBanner />
+            <Header />
+            <main className="container mx-auto px-2 py-2">{children}</main>
+            <Footer />
+          </PostHogProvider>
+        </ThemeProvider>
         <Analytics />
       </body>
     </html>

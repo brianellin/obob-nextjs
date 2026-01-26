@@ -1,10 +1,11 @@
 "use client";
 
-import { Dot, Menu } from "lucide-react";
+import { Dot, Menu, Sun, Moon } from "lucide-react";
 import RosieIcon from "./RosieIcon";
 import Link from "next/link";
 import { track } from "@vercel/analytics";
 import { usePostHog } from "posthog-js/react";
+import { useTheme } from "next-themes";
 import {
   Sheet,
   SheetContent,
@@ -17,6 +18,7 @@ import BookHeartIcon from "./BookHeartIcon";
 
 export default function Header() {
   const posthog = usePostHog();
+  const { theme, setTheme } = useTheme();
 
   const handleBlueskyClick = () => {
     track("blueskyClick");
@@ -25,7 +27,7 @@ export default function Header() {
   };
 
   return (
-    <header className="bg-amber-50 text-stone-900 p-4 shadow-sm">
+    <header className="bg-amber-50 dark:bg-stone-900 text-stone-900 dark:text-stone-100 p-4 shadow-sm">
       <div className="container mx-auto flex justify-center items-center relative">
         <Link href="/" className="inline-flex items-center">
           <BookHeartIcon className="w-6 h-6" />
@@ -33,7 +35,15 @@ export default function Header() {
           <RosieIcon className="w-6 h-6" />
         </Link>
 
-        <div className="absolute right-0">
+        <div className="absolute right-0 flex items-center gap-1">
+          <button
+            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+            className="p-2 hover:bg-stone-200 dark:hover:bg-stone-700 rounded-md transition-colors"
+          >
+            <Sun className="w-5 h-5 hidden dark:block" />
+            <Moon className="w-5 h-5 block dark:hidden" />
+            <span className="sr-only">Toggle dark mode</span>
+          </button>
           <Sheet>
             <SheetTrigger asChild>
               <button className="p-2 hover:bg-stone-200 rounded-md transition-colors">
