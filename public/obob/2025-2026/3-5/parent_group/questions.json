@@ -3057,7 +3057,7 @@
     },
     {
       "type": "in-which-book",
-      "text": "is a charater attacked by a big blue creature?",
+      "text": "is a character attacked by a big blue creature?",
       "book_key": "elf-dog-and-owl-head",
       "page": 113
     },
@@ -3215,7 +3215,7 @@
     },
     {
       "type": "content",
-      "text": "at the beginning of the story at the beginning of the story, what was a food the elegant dog had never smelled before?",
+      "text": "at the beginning of the story, what was a food the elegant dog had never smelled before?",
       "book_key": "elf-dog-and-owl-head",
       "answer": "Pizza",
       "page": 9
@@ -3418,7 +3418,7 @@
     },
     {
       "type": "content",
-      "text": "In the Book Elf Dog and Owl Head who helped Juniper when she was lost in the forest?",
+      "text": "who helped Juniper when she was lost in the forest?",
       "book_key": "elf-dog-and-owl-head",
       "answer": "Amos",
       "page": 150
@@ -3796,7 +3796,7 @@
     },
     {
       "type": "content",
-      "text": "what does Juniper call the catfish in the rub with DiRossi?",
+      "text": "what does Juniper call the catfish in the tub with DiRossi?",
       "book_key": "elf-dog-and-owl-head",
       "answer": "Mr Whiskers",
       "page": 49
@@ -3805,7 +3805,7 @@
       "type": "content",
       "text": "who calls Clay's dad saying there's a giant blue lizard in a culvert?",
       "book_key": "elf-dog-and-owl-head",
-      "answer": "Mrs Haverson",
+      "answer": "Mrs. Haverson",
       "page": 47
     },
     {
@@ -4020,7 +4020,7 @@
     },
     {
       "type": "content",
-      "text": "What is Clay's older sisiter's name?",
+      "text": "What is Clay's older sister's name?",
       "book_key": "elf-dog-and-owl-head",
       "answer": "DiRossi",
       "page": 11
@@ -8947,7 +8947,7 @@
     },
     {
       "type": "content",
-      "text": "when Langston's daddy asks to work in the morning which way does he turn at the end of the block?",
+      "text": "when Langston's daddy walks to work in the morning which way does he turn at the end of the block?",
       "book_key": "finding-langston",
       "answer": "left",
       "page": 41
@@ -9290,7 +9290,7 @@
     },
     {
       "type": "content",
-      "text": "what two places in Langston Hughes from? (2-part)",
+      "text": "Two part question: What two states is Langston Hughes from?",
       "book_key": "finding-langston",
       "answer": "Missouri, Kansas",
       "page": 63
@@ -9423,9 +9423,9 @@
     },
     {
       "type": "content",
-      "text": "what are someone of the magazines in Miss Fulton's apartment?  Name two. (2-part)",
+      "text": "Two part question: Name two of the magazines found in Miss Fulton's apartment.",
       "book_key": "finding-langston",
-      "answer": "Life, The Crisis, Ebony",
+      "answer": "Any two: Life, Ebony, The Crisis.",
       "page": 69
     },
     {
@@ -11012,7 +11012,7 @@
     },
     {
       "type": "content",
-      "text": "What blue bird witha crest and sharp beak does Brian see sitting on a limb by the lake?",
+      "text": "What blue bird with a crest and sharp beak does Brian see sitting on a limb by the lake?",
       "book_key": "hatchet",
       "answer": "kingfisher",
       "page": 74
@@ -11075,7 +11075,7 @@
     },
     {
       "type": "content",
-      "text": "What was the moose calming chewing on by the lake?",
+      "text": "What was the moose calmly chewing on by the lake?",
       "book_key": "hatchet",
       "answer": "lilypad root",
       "page": 100
@@ -11700,7 +11700,7 @@
       "type": "content",
       "text": "List any two things Brian finds in the survival pack",
       "book_key": "hatchet",
-      "answer": "A sleeping bag, a foam sleeping pad, an aluminum cookset with 4 little pots and 2 frying pans, a fork, knife and spoon",
+      "answer": "Any two: A sleeping bag, a foam sleeping pad, an aluminum cookset with 4 little pots and 2 frying pans, a fork, knife and spoon",
       "page": 171
     },
     {
@@ -11747,7 +11747,7 @@
     },
     {
       "type": "content",
-      "text": "Where does Brian see an upside down forrest to match the real one?",
+      "text": "Where does Brian see an upside down forest to match the real one?",
       "book_key": "hatchet",
       "answer": "in the lake",
       "page": 36
@@ -12441,7 +12441,7 @@
     },
     {
       "type": "content",
-      "text": "What was the name of Hà's father's best friend who helpd her family leave Siagon?",
+      "text": "What was the name of Hà's father's best friend who helped her family leave Siagon?",
       "book_key": "inside-out-and-back-again",
       "answer": "Uncle Son",
       "page": 42
@@ -13609,7 +13609,7 @@
     },
     {
       "type": "in-which-book",
-      "text": "Does a character continue to dream about bring a superhero long after their classmates stop playing superheros?",
+      "text": "Does a character continue to dream about being a superhero long after their classmates stop playing superheros?",
       "book_key": "just-like-click",
       "page": 104
     },
@@ -14982,7 +14982,7 @@
     },
     {
       "type": "in-which-book",
-      "text": "does a charactor wear an imaginary cape?",
+      "text": "does a character wear an imaginary cape?",
       "book_key": "the-lost-library",
       "page": 17
     },
@@ -17324,12 +17324,7 @@
     },
     {
       "type": "in-which-book",
-      "text": "was rewarded the Newberry Medal in 1990?",
-      "book_key": "number-the-stars"
-    },
-    {
-      "type": "in-which-book",
-      "text": "are two girls topped by soldiers, while running a race?",
+      "text": "are two girls stopped by soldiers, while running a race?",
       "book_key": "number-the-stars",
       "page": 2
     },
@@ -17491,7 +17486,7 @@
     },
     {
       "type": "in-which-book",
-      "text": "does a character walk a small group of kpeople through the woods at night?",
+      "text": "does a character walk a small group of people through the woods at night?",
       "book_key": "number-the-stars",
       "page": 91
     },
@@ -18351,7 +18346,7 @@
     },
     {
       "type": "content",
-      "text": "what does Annemarie's mother trip over, when returning from thr harbor?",
+      "text": "what does Annemarie's mother trip over, when returning from the harbor?",
       "book_key": "number-the-stars",
       "answer": "Root",
       "page": 102
@@ -18829,7 +18824,7 @@
     },
     {
       "type": "in-which-book",
-      "text": "dp charactera \"switch between land and water like kids at the beach\"?",
+      "text": "do characters \"switch between land and water like kids at the beach\"?",
       "book_key": "odder",
       "page": 66
     },
@@ -20618,7 +20613,7 @@
     },
     {
       "type": "content",
-      "text": "How many sticks were used to in Piper's rescue nest?",
+      "text": "How many sticks were used in Piper's rescue nest?",
       "book_key": "the-remarkable-rescue-at-milkweed-meadow",
       "answer": "Two",
       "page": 148
@@ -21364,11 +21359,6 @@
       "text": "does the ending state, \"Things change with the seasons, for better and worse, but in the end, we can still grow.\"?",
       "book_key": "the-secret-garden-on-81st-street",
       "page": 246
-    },
-    {
-      "type": "in-which-book",
-      "text": "is the story a modern retelling of a classic?",
-      "book_key": "the-secret-garden-on-81st-street"
     },
     {
       "type": "in-which-book",
@@ -22825,7 +22815,7 @@
     },
     {
       "type": "in-which-book",
-      "text": "does a character's best friend, jen, have eleven kids in their family?",
+      "text": "does a character's best friend, Jen, have eleven kids in their family?",
       "book_key": "squished",
       "page": 136
     },
@@ -23900,7 +23890,7 @@
     },
     {
       "type": "in-which-book",
-      "text": "is the progaganist handcuffed?",
+      "text": "is a character handcuffed?",
       "book_key": "the-tail-of-emily-windsnap",
       "page": 186
     },
@@ -24767,7 +24757,7 @@
     },
     {
       "type": "content",
-      "text": "what is at either side of the throne in Nepturne's palace?",
+      "text": "what is at either side of the throne in Neptune's palace?",
       "book_key": "the-tail-of-emily-windsnap",
       "answer": "golden seahorses",
       "page": 187

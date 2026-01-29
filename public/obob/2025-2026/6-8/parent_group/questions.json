@@ -2601,7 +2601,7 @@
       "type": "in-which-book",
       "text": "is a character diagnosed with traumatic amnesia?",
       "book_key": "asha-and-the-spirit-bird",
-      "page": 237
+      "page": 267
     },
     {
       "type": "in-which-book",
@@ -3322,7 +3322,7 @@
     },
     {
       "type": "content",
-      "text": "What animal protects Jeevan from a wolfl?",
+      "text": "What animal protects Jeevan from a wolf?",
       "book_key": "asha-and-the-spirit-bird",
       "answer": "A tiger",
       "page": 153
@@ -4511,12 +4511,6 @@
       "text": "is a secret room called the Panic Chamber?",
       "book_key": "a-dictionary-of-scoundrels",
       "page": 150
-    },
-    {
-      "type": "in-which-book",
-      "text": "does a magnifying glass lead to a hidden note?",
-      "book_key": "a-dictionary-of-scoundrels",
-      "page": 85
     },
     {
       "type": "in-which-book",
@@ -6530,7 +6524,7 @@
     },
     {
       "type": "in-which-book",
-      "text": "does the author say they relocated from Minnesoate to George as a kid?",
+      "text": "does the author's family relocate from Minnesota Georgia when the author was in middle school?",
       "book_key": "ellen-outside-the-lines",
       "page": 325
     },
@@ -10262,9 +10256,9 @@
     },
     {
       "type": "content",
-      "text": "who is Theo named after and what was the person known for?",
+      "text": "What is the full name of the person Theo is named after?",
       "book_key": "an-occasionally-happy-family",
-      "answer": "He was named after Theodore Maiman, the inventor of the laser.",
+      "answer": "Theodore Maiman",
       "page": 57
     },
     {
@@ -10962,9 +10956,9 @@
     },
     {
       "type": "content",
-      "text": "What did the handle of the Hitler Youth Dagger say?",
+      "text": "What three words were engraved on the blade of the Hitler Youth dagger?",
       "book_key": "projekt-1065-a-novel-of-world-war-ii",
-      "answer": "Blut unt ehre (Blood and Honor)",
+      "answer": "Blut und ehre (Blood and Honor)",
       "page": 143
     },
     {
@@ -12383,9 +12377,9 @@
     },
     {
       "type": "in-which-book",
-      "text": "does a person have a mother that dies from a heart condition?",
+      "text": "does a character's mother die of a heart condition when they are four years old?",
       "book_key": "remember-my-story",
-      "page": 52
+      "page": 53
     },
     {
       "type": "in-which-book",
@@ -12992,7 +12986,7 @@
     },
     {
       "type": "content",
-      "text": "w\\hat dance did Claire do at the Lakewood Bandstand?",
+      "text": "what dance did Claire do at the Lakewood Bandstand?",
       "book_key": "remember-my-story",
       "answer": "Lindy Hop (a swing dance)",
       "page": 104
@@ -13887,7 +13881,7 @@
       "type": "content",
       "text": "What is the name of Jeremiah and Walt's robot?",
       "book_key": "soar",
-      "answer": "Jewal",
+      "answer": "Jerwal",
       "page": 7
     },
     {
@@ -17681,9 +17675,9 @@
     },
     {
       "type": "content",
-      "text": "What are the three ingedients of the perfect tuna sandwich?",
+      "text": "Two part question: Name two of the items that make up the anatomy of the perfect tuna sandwich.",
       "book_key": "uprooted",
-      "answer": "Bread, Mayo, Lettuce, tuna, cheese",
+      "answer": "Any two: bread, mayo, lettuce, tuna, cheese. ",
       "page": 122
     },
     {
