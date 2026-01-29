@@ -6721,7 +6721,7 @@
     },
     {
       "type": "in-which-book",
-      "text": "does someone have a small sink that they was their dishes and their clothing?",
+      "text": "does someone have a small sink where they wash their dishes and their clothing?",
       "book_key": "finding-langston",
       "page": 36
     },
@@ -9992,7 +9992,7 @@
     },
     {
       "type": "in-which-book",
-      "text": "someone wear a white pullover tennish shirt?",
+      "text": "does someone wear a white pullover tennis shirt?",
       "book_key": "hatchet",
       "page": 27
     },
@@ -11399,7 +11399,7 @@
       "type": "content",
       "text": "Name one of the food packets Brian selected for his 'feast' after first retrieving the survival pack.",
       "book_key": "hatchet",
-      "answer": "Beef and potato dinner, orange drink or peach whip",
+      "answer": "Beef and potato dinner or peach whip",
       "page": 165
     },
     {
@@ -13501,7 +13501,7 @@
     },
     {
       "type": "in-which-book",
-      "text": "does someone make a wish to not lose their dog to animal shelter",
+      "text": "does someone make a wish to not lose their dog to an animal shelter",
       "book_key": "just-like-click",
       "page": 150
     },
@@ -24729,7 +24729,7 @@
     },
     {
       "type": "content",
-      "text": "what wing does Emily enter the prsion?",
+      "text": "through what wing does Emily enter the prison?",
       "book_key": "the-tail-of-emily-windsnap",
       "answer": "North wing",
       "page": 169
