@@ -4550,12 +4550,6 @@
     },
     {
       "type": "in-which-book",
-      "text": "does Shenanigan use a monocle to solve a clue?",
-      "book_key": "a-dictionary-of-scoundrels",
-      "page": 85
-    },
-    {
-      "type": "in-which-book",
       "text": "is a pantry counted wrong and creates suspicion?",
       "book_key": "a-dictionary-of-scoundrels",
       "page": 23
@@ -4884,13 +4878,6 @@
       "book_key": "a-dictionary-of-scoundrels",
       "answer": "Aunt Inheritance",
       "page": 13
-    },
-    {
-      "type": "content",
-      "text": "What does Shenanigan accidentally break that causes a huge family argument?",
-      "book_key": "a-dictionary-of-scoundrels",
-      "answer": "A priceless vase",
-      "page": 60
     },
     {
       "type": "content",
@@ -7671,7 +7658,7 @@
     },
     {
       "type": "in-which-book",
-      "text": "is a suinrise described as having pinks, lavenders, chartreuse, silver, and gold?",
+      "text": "is a sunrise described as having pinks, lavenders, chartreuse, silver, and gold?",
       "book_key": "the-eyes-and-the-impossible",
       "page": 231
     },
@@ -8202,7 +8189,7 @@
     },
     {
       "type": "content",
-      "text": "Angus announces they have how many minutes to finish freeing the bison?",
+      "text": "Yolanda tells Johannes that Angus said they only have a certain number of minutes to free the bison - how many minutes did Angus say they have?",
       "book_key": "the-eyes-and-the-impossible",
       "answer": "Eighteen",
       "page": 221
@@ -10928,9 +10915,9 @@
     },
     {
       "type": "content",
-      "text": "What were the minimum requirements for SRD candidates?",
+      "text": "Two part question: Name two of the three of the physical tests SRD candidates had to meet.",
       "book_key": "projekt-1065-a-novel-of-world-war-ii",
-      "answer": "60 meters in 12 seconds, long jump 2.75 meters, throw a softball 25 meters,",
+      "answer": "Any two: Run 60 meter in twelve seconds, long jump 2.75 meters, throw a softball 25 meters",
       "page": 118
     },
     {
@@ -15803,7 +15790,7 @@
       "type": "content",
       "text": "Who plays the Mouse King in the school play?",
       "book_key": "tumble",
-      "answer": "Brandon",
+      "answer": "Gus",
       "page": 161
     },
     {
@@ -16413,7 +16400,7 @@
     },
     {
       "type": "in-which-book",
-      "text": "does a character's mom show her daughter her favorite desert spot?",
+      "text": "does a character's mom show her daughter her favorite dessert spot?",
       "book_key": "uprooted",
       "page": 237
     },

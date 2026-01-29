@@ -806,7 +806,7 @@
       },
       {
         "type": "in-which-book",
-        "text": "was the address 221b Baker Street mentioned and who lived there?",
+        "text": "is the address 221b Baker Street mentioned?",
         "book_key": "escape-from-mr-lemoncellos-library",
         "page": 206
       },
