@@ -413,6 +413,592 @@
       "book_key": "the-million-dollar-race",
       "page": 99,
       "contributor": "Jacob"
+    },
+    {
+      "type": "content",
+      "text": "How many dollars does nick give Mr. Telly and Mrs. Baxter each month?",
+      "answer": "500",
+      "book_key": "just-like-click",
+      "page": 167,
+      "contributor": "Zoey B."
+    },
+    {
+      "type": "in-which-book",
+      "text": "Does someone get home at 4:22?",
+      "book_key": "just-like-click",
+      "page": 109,
+      "contributor": "Zoey B."
+    },
+    {
+      "type": "content",
+      "text": "Which department in Sierra's dad's town library has board games?",
+      "answer": "Young adult",
+      "book_key": "escape-from-mr-lemoncellos-library",
+      "page": 120,
+      "contributor": "Jacob K."
+    },
+    {
+      "type": "content",
+      "text": "What is the title of the scary story that Odder tells Kairi?",
+      "answer": "the Fifty",
+      "book_key": "odder",
+      "page": 40,
+      "contributor": "Connor J."
+    },
+    {
+      "type": "content",
+      "text": "How do the squirrels tail's get stuck together?",
+      "answer": "sap",
+      "book_key": "the-remarkable-rescue-at-milkweed-meadow",
+      "page": 1,
+      "contributor": "Milo"
+    },
+    {
+      "type": "content",
+      "text": "What object did Lina and Doon use to throw down the note?",
+      "answer": "Brick",
+      "book_key": "city-of-ember",
+      "page": 74,
+      "contributor": "Trent"
+    },
+    {
+      "type": "in-which-book",
+      "text": "Is a persons last name \"harrow\"?",
+      "book_key": "city-of-ember",
+      "page": 5,
+      "contributor": "Sadid S."
+    },
+    {
+      "type": "in-which-book",
+      "text": "Does a character say that they had been slumbering for one million years?",
+      "book_key": "elf-dog-and-owl-head",
+      "page": 137,
+      "contributor": "Micah L."
+    },
+    {
+      "type": "content",
+      "text": "Where does this book take place?",
+      "answer": "Monterey Bay, California",
+      "book_key": "odder",
+      "page": 1,
+      "contributor": "Lyle K."
+    },
+    {
+      "type": "content",
+      "text": "Where does Mary remember when she was with her mom when she was little?",
+      "answer": "the mountain house",
+      "book_key": "the-secret-garden-on-81st-street",
+      "page": 10,
+      "contributor": "Adelene"
+    },
+    {
+      "type": "content",
+      "text": "What does Grant get for his sixth birthday, instead of a Captain America Action Figure?",
+      "answer": "Non-Violent Man",
+      "book_key": "the-million-dollar-race",
+      "page": 72,
+      "contributor": "Sydney B."
+    },
+    {
+      "type": "content",
+      "text": "What does Al call people who feel something about books?",
+      "answer": "Great Readers",
+      "book_key": "the-lost-library",
+      "page": 59,
+      "contributor": "Aayushi S."
+    },
+    {
+      "type": "in-which-book",
+      "text": "Does a 5th grade teacher teach about probability on the last week before summer break?",
+      "book_key": "the-lost-library",
+      "page": 29,
+      "contributor": "Aayushi S."
+    },
+    {
+      "type": "in-which-book",
+      "text": "Does a character read an article called \"Everything You Ever Wanted To Know About Fertilizer But Were Afraid To Ask\"?",
+      "book_key": "the-lost-library",
+      "page": 120,
+      "contributor": "Aayushi S."
+    },
+    {
+      "type": "content",
+      "text": "What is the name of the kindergartner who does not want to go to school?",
+      "answer": "Ellie",
+      "book_key": "better-with-butter",
+      "page": 221,
+      "contributor": "Aayushi S."
+    },
+    {
+      "type": "content",
+      "text": "What play does Marvel vote for?",
+      "answer": "Hamilton",
+      "book_key": "better-with-butter",
+      "page": 195,
+      "contributor": "Aayushi S."
+    },
+    {
+      "type": "content",
+      "text": "What two things are not allowed at the table?",
+      "answer": "Goats and phones",
+      "book_key": "better-with-butter",
+      "page": 99,
+      "contributor": "Aayushi S."
+    },
+    {
+      "type": "in-which-book",
+      "text": "Did someone's dad grow up in the Gulf Coast?",
+      "book_key": "better-with-butter",
+      "page": 64,
+      "contributor": "Aayushi S."
+    },
+    {
+      "type": "content",
+      "text": "Who does Mercedes cast as the grandmother?",
+      "answer": "Jada",
+      "book_key": "better-with-butter",
+      "page": 240,
+      "contributor": "Aayushi S."
+    },
+    {
+      "type": "in-which-book",
+      "text": "Is there a guide named Arlin Froll?",
+      "book_key": "city-of-ember",
+      "page": 41,
+      "contributor": "Aayushi S."
+    },
+    {
+      "type": "in-which-book",
+      "text": "Is a mayor's first name Lemander?",
+      "book_key": "city-of-ember",
+      "page": 85,
+      "contributor": "Aayushi S."
+    },
+    {
+      "type": "content",
+      "text": "Who runs the Calley Street Vegetable Market?",
+      "answer": "Arbin Swimm",
+      "book_key": "city-of-ember",
+      "page": 57,
+      "contributor": "Aayushi S."
+    },
+    {
+      "type": "content",
+      "text": "Who runs the pipeworks?",
+      "answer": "Lister Munk, (pipeworks director)",
+      "book_key": "city-of-ember",
+      "page": 41,
+      "contributor": "Aayushi S."
+    },
+    {
+      "type": "in-which-book",
+      "text": "Is the farthest point in the city Greengate Square?",
+      "book_key": "city-of-ember",
+      "page": 57,
+      "contributor": "Aayushi S."
+    },
+    {
+      "type": "in-which-book",
+      "text": "Does a teacher hit students who misbehave with paddles?",
+      "book_key": "city-of-ember",
+      "page": 233,
+      "contributor": "Aayushi S."
+    },
+    {
+      "type": "content",
+      "text": "What is one of the superpowers that Click wants before he learns that there is a limit of one per customer?",
+      "answer": "X-Ray vision OR smarts OR flying",
+      "book_key": "just-like-click",
+      "page": 84,
+      "contributor": "Sydney B."
+    },
+    {
+      "type": "in-which-book",
+      "text": "Is there a character named Doogy?",
+      "book_key": "just-like-click",
+      "page": 77,
+      "contributor": "Sydney B."
+    },
+    {
+      "type": "in-which-book",
+      "text": "Do characters discover a cougar?",
+      "book_key": "just-like-click",
+      "page": 143,
+      "contributor": "Sydney B."
+    },
+    {
+      "type": "content",
+      "text": "In what comic book does Nick add red to Click's cape to make Click's cape red?",
+      "answer": "Click Stops the Asteroid",
+      "book_key": "just-like-click",
+      "page": 14,
+      "contributor": "Sydney B."
+    },
+    {
+      "type": "content",
+      "text": "In how many hours is Nick's mom going to pick up Nick and Anna from the horse roundup?",
+      "answer": "2 hours",
+      "book_key": "just-like-click",
+      "page": 62,
+      "contributor": "Sydney B."
+    },
+    {
+      "type": "in-which-book",
+      "text": "Does someone say, \"Let's go look for bullfrogs when you feel better.\"?",
+      "book_key": "just-like-click",
+      "page": 156,
+      "contributor": "Sydney B."
+    },
+    {
+      "type": "content",
+      "text": "Who is the \"smartest Keeley\"?",
+      "answer": "Curtis",
+      "book_key": "escape-from-mr-lemoncellos-library",
+      "page": 2,
+      "contributor": "Amanda H."
+    },
+    {
+      "type": "content",
+      "text": "Two part question: Name two of the new cards in the refresher pack of clue cards for Mr. Lemoncello's Indoor-Outdoor Scavenger Hunt game",
+      "answer": "Any two: an adult's droopy underpants, one dirty dish, a rotten banana peel",
+      "book_key": "escape-from-mr-lemoncellos-library",
+      "page": 2,
+      "contributor": "Amanda H."
+    },
+    {
+      "type": "content",
+      "text": "What had once been Alexandriaville's \"most magnificent building\"?",
+      "answer": "the Gold Leaf Bank",
+      "book_key": "escape-from-mr-lemoncellos-library",
+      "page": 7,
+      "contributor": "Amanda H."
+    },
+    {
+      "type": "content",
+      "text": "What is the longest amount of time a single construction crew worked on building Alexandriaville's new public library?",
+      "answer": "Six weeks",
+      "book_key": "escape-from-mr-lemoncellos-library",
+      "page": 7,
+      "contributor": "Amanda H."
+    },
+    {
+      "type": "content",
+      "text": "How many screens make up the Wonder Dome?",
+      "answer": "10",
+      "book_key": "escape-from-mr-lemoncellos-library",
+      "page": 8,
+      "contributor": "Amanda H."
+    },
+    {
+      "type": "content",
+      "text": "What day of the week is the grand opening of the library scheduled for?",
+      "answer": "Friday",
+      "book_key": "escape-from-mr-lemoncellos-library",
+      "page": 11,
+      "contributor": "Amanda H."
+    },
+    {
+      "type": "content",
+      "text": "What does Kyle say that unfrosted brown sugar cinnamon Toaster Tarts taste like?",
+      "answer": "The box they came in",
+      "book_key": "escape-from-mr-lemoncellos-library",
+      "page": 14,
+      "contributor": "Amanda H."
+    },
+    {
+      "type": "content",
+      "text": "How long has it been since the old Alexandriaville library was torn down?",
+      "answer": "12 years",
+      "book_key": "escape-from-mr-lemoncellos-library",
+      "page": 14,
+      "contributor": "Amanda H."
+    },
+    {
+      "type": "content",
+      "text": "What term does Curtis prefer to be called, rather than a nerd?",
+      "answer": "geek",
+      "book_key": "escape-from-mr-lemoncellos-library",
+      "page": 14,
+      "contributor": "Amanda H."
+    },
+    {
+      "type": "content",
+      "text": "What level of \"Squirrel Squad\" is Kyle up to?",
+      "answer": "27",
+      "book_key": "escape-from-mr-lemoncellos-library",
+      "page": 16,
+      "contributor": "Amanda H."
+    },
+    {
+      "type": "content",
+      "text": "What part of the Alexandriaville library did Akimi's dad and his firm make the blueprints for?",
+      "answer": "The front door (and that was it)",
+      "book_key": "escape-from-mr-lemoncellos-library",
+      "page": 20,
+      "contributor": "Amanda H."
+    },
+    {
+      "type": "content",
+      "text": "What two sizes of vests do they have at the pet store?",
+      "answer": "L and XL",
+      "book_key": "better-with-butter",
+      "page": 150,
+      "contributor": "Aayushi S."
+    },
+    {
+      "type": "content",
+      "text": "What role does Theo originally have in the play?",
+      "answer": "Stage Manager",
+      "book_key": "better-with-butter",
+      "page": 164,
+      "contributor": "Aayushi S."
+    },
+    {
+      "type": "content",
+      "text": "Where does Uncle Son's family live?",
+      "answer": "Canada",
+      "book_key": "inside-out-and-back-again",
+      "page": 105,
+      "contributor": "Aayushi S."
+    },
+    {
+      "type": "in-which-book",
+      "text": "Does a mom want to have an engineer, a doctor, a poet, and a lawyer as her kids' jobs?",
+      "book_key": "inside-out-and-back-again",
+      "page": 256,
+      "contributor": "Aayushi S."
+    },
+    {
+      "type": "in-which-book",
+      "text": "Does a daughter cut only a thin sliver of potato to save money?",
+      "book_key": "inside-out-and-back-again",
+      "page": 47,
+      "contributor": "Aayushi S."
+    },
+    {
+      "type": "in-which-book",
+      "text": "Is Friday good news day?",
+      "book_key": "inside-out-and-back-again",
+      "page": 18,
+      "contributor": "Aayushi S."
+    },
+    {
+      "type": "content",
+      "text": "When is Há's birthday?",
+      "answer": "April 10th",
+      "book_key": "inside-out-and-back-again",
+      "page": 29,
+      "contributor": "Aayushi S."
+    },
+    {
+      "type": "in-which-book",
+      "text": "Does someone accidentally drink fish sauce?",
+      "book_key": "inside-out-and-back-again",
+      "page": 101,
+      "contributor": "Aayushi S."
+    },
+    {
+      "type": "in-which-book",
+      "text": "Can someone not multiply 18 by 42?",
+      "book_key": "inside-out-and-back-again",
+      "page": 187,
+      "contributor": "Aayushi S."
+    },
+    {
+      "type": "content",
+      "text": "What is the name of the church Hà and her family go to?",
+      "answer": "Del Ray Southern Baptist Church",
+      "book_key": "inside-out-and-back-again",
+      "page": 169,
+      "contributor": "Aayushi S."
+    },
+    {
+      "type": "in-which-book",
+      "text": "Does someone live on Princess Anne Road?",
+      "book_key": "inside-out-and-back-again",
+      "page": 124,
+      "contributor": "Aayushi S."
+    },
+    {
+      "type": "content",
+      "text": "How long did the cowboy pay rent ahead on the house?",
+      "answer": "3 months",
+      "book_key": "inside-out-and-back-again",
+      "page": 124,
+      "contributor": "Aayushi S."
+    },
+    {
+      "type": "in-which-book",
+      "text": "Does Tom, a twenty-year-old soldier die?",
+      "book_key": "inside-out-and-back-again",
+      "page": 200,
+      "contributor": "Aayushi S."
+    },
+    {
+      "type": "content",
+      "text": "Name two of the three places Hà's brothers guess their father escaped to?",
+      "answer": "Any 2 of these: Cambodia, France, Tibet.",
+      "book_key": "inside-out-and-back-again",
+      "page": 240,
+      "contributor": "Aayushi S."
+    },
+    {
+      "type": "in-which-book",
+      "text": "Does someone wish their father would appear into their classroom?",
+      "book_key": "inside-out-and-back-again",
+      "page": 159,
+      "contributor": "Aayushi S."
+    },
+    {
+      "type": "in-which-book",
+      "text": "Does someone try to decode the sentence \"Jane sees Spot Run\"?",
+      "book_key": "inside-out-and-back-again",
+      "page": 129,
+      "contributor": "Aayushi S."
+    },
+    {
+      "type": "in-which-book",
+      "text": "Does a character make lemonade?",
+      "book_key": "squished",
+      "page": 148,
+      "contributor": "Aditya"
+    },
+    {
+      "type": "content",
+      "text": "What is the name of the assistant guard?",
+      "answer": "Barton Snode",
+      "book_key": "city-of-ember",
+      "page": 32,
+      "contributor": "Aayushi S."
+    },
+    {
+      "type": "in-which-book",
+      "text": "Does a teacher give students red and green dots?",
+      "book_key": "city-of-ember",
+      "page": 29,
+      "contributor": "Aayushi S."
+    },
+    {
+      "type": "content",
+      "text": "What does Natty Prine's message say?",
+      "answer": "My stove is broke, don't come for dinner.",
+      "book_key": "city-of-ember",
+      "page": 28,
+      "contributor": "Aayushi S."
+    },
+    {
+      "type": "content",
+      "text": "What is the 7th mayor's name?",
+      "answer": "Podd Morerthwart",
+      "book_key": "city-of-ember",
+      "page": 35,
+      "contributor": "Aayushi S."
+    },
+    {
+      "type": "content",
+      "text": "How many customers does Lina get on her first day?",
+      "answer": "19",
+      "book_key": "city-of-ember",
+      "page": 30,
+      "contributor": "Aayushi S."
+    },
+    {
+      "type": "in-which-book",
+      "text": "Is someone 50 feet underground?",
+      "book_key": "city-of-ember",
+      "page": 44,
+      "contributor": "Aayushi S."
+    },
+    {
+      "type": "in-which-book",
+      "text": "Does work start at 8?",
+      "book_key": "city-of-ember",
+      "page": 23,
+      "contributor": "Aayushi S."
+    },
+    {
+      "type": "content",
+      "text": "Name any 2 people in Lina and Doon's class",
+      "answer": "Any 2: Orly Gordon, Chet Noam, Vindie Chance, Lizzie Bisco",
+      "book_key": "city-of-ember",
+      "page": 10,
+      "contributor": "Aayushi S."
+    },
+    {
+      "type": "content",
+      "text": "Who is so slay?",
+      "answer": "Carla is so slay.",
+      "book_key": "better-with-butter",
+      "page": 1,
+      "contributor": "Carla"
+    },
+    {
+      "type": "in-which-book",
+      "text": "Does a character's father come back after 9 months to see a goat eating crops?",
+      "book_key": "better-with-butter",
+      "page": 6,
+      "contributor": "Sofia"
+    },
+    {
+      "type": "in-which-book",
+      "text": "Is a man described as bald as a peeled potato?",
+      "book_key": "city-of-ember",
+      "page": 50,
+      "contributor": "Margot J."
+    },
+    {
+      "type": "content",
+      "text": "How many feet high was Sierra Russel on her floating platform?",
+      "answer": "25",
+      "book_key": "escape-from-mr-lemoncellos-library",
+      "page": 67,
+      "contributor": "Adali"
+    },
+    {
+      "type": "content",
+      "text": "What number was on the card Sierra pulled?",
+      "answer": "220.5203",
+      "book_key": "escape-from-mr-lemoncellos-library",
+      "page": 167,
+      "contributor": "Adali"
+    },
+    {
+      "type": "content",
+      "text": "What time did the ceiling lady announce it was?",
+      "answer": "11:00 AM",
+      "book_key": "escape-from-mr-lemoncellos-library",
+      "page": 267,
+      "contributor": "Adali"
+    },
+    {
+      "type": "in-which-book",
+      "text": "Is there a character with square teeth?",
+      "book_key": "odder",
+      "page": 1,
+      "contributor": "Maycie"
+    },
+    {
+      "type": "in-which-book",
+      "text": "Does someone say \"we'll be famous?\"",
+      "book_key": "escape-from-mr-lemoncellos-library",
+      "page": 86,
+      "contributor": "Henry"
+    },
+    {
+      "type": "content",
+      "text": "What is Avery's full name?",
+      "answer": "Avery Annie Lee",
+      "book_key": "squished",
+      "page": 4,
+      "contributor": "Henry"
+    },
+    {
+      "type": "content",
+      "text": "Where did Brian go on an overnight trip to visit relatives?",
+      "answer": "Cape Hesper",
+      "book_key": "hatchet",
+      "page": 127,
+      "contributor": "Mishkat"
     }
   ]
 }

@@ -1,0 +1,65 @@
+{
+  "questions": [
+    {
+      "type": "in-which-book",
+      "text": "Does a junior high student get a nickname for being \"really, really skinny\"?",
+      "book_key": "dragon-hoops",
+      "page": 3,
+      "contributor": "Mimi S."
+    },
+    {
+      "type": "content",
+      "text": "What are two nicknames Mr. Yang's student Erin gives Mr. Yang?",
+      "answer": "Mr. Yangular, Mr. Yangers",
+      "book_key": "dragon-hoops",
+      "page": 7,
+      "contributor": "Mimi S."
+    },
+    {
+      "type": "content",
+      "text": "What is the name of the O'Dowd high school men's basketball team coach?",
+      "answer": "Lou",
+      "book_key": "dragon-hoops",
+      "page": 9,
+      "contributor": "Mimi S."
+    },
+    {
+      "type": "content",
+      "text": "When Mr. Yang goes to talk to Coach Lou about his next book, what hand greeting do they settle on?",
+      "answer": "handshake, shake",
+      "book_key": "dragon-hoops",
+      "page": 12,
+      "contributor": "Mimi S."
+    },
+    {
+      "type": "content",
+      "text": "How long does Mr. Yang and Coach Lou's first conversation last?",
+      "answer": "about an hour",
+      "book_key": "dragon-hoops",
+      "page": 13,
+      "contributor": "Mimi S."
+    },
+    {
+      "type": "in-which-book",
+      "text": "Are chapters titled after character's names?",
+      "book_key": "dragon-hoops",
+      "page": 1,
+      "contributor": "Mimi S."
+    },
+    {
+      "type": "in-which-book",
+      "text": "Was a character nicknamed \"Sue Ellen\"?",
+      "book_key": "dragon-hoops",
+      "page": 17,
+      "contributor": "Mimi S."
+    },
+    {
+      "type": "content",
+      "text": "What is Coach Lou's full name? (First, middle, last)",
+      "answer": "Llewellyn Blackmon Richie",
+      "book_key": "dragon-hoops",
+      "page": 17,
+      "contributor": "Mimi S."
+    }
+  ]
+}

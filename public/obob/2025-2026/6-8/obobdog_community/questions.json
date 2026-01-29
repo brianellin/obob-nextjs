@@ -1510,6 +1510,340 @@
       "book_key": "dealing-with-dragons",
       "page": 178,
       "contributor": "Hayley"
+    },
+    {
+      "type": "in-which-book",
+      "text": "Do tall crape myrtles and elms stand outside the windows?",
+      "book_key": "aru-shah-and-the-end-of-time",
+      "page": 3,
+      "contributor": "Emmett"
+    },
+    {
+      "type": "content",
+      "text": "Two Part: What does Alex say are the key to making a good scrambled egg?",
+      "answer": "Keep the heat low and beat the egg before pouring it into the pan",
+      "book_key": "tumble",
+      "page": 1,
+      "contributor": "Emmett"
+    },
+    {
+      "type": "content",
+      "text": "How many blue pills does Jeremiah take?",
+      "answer": "2",
+      "book_key": "soar",
+      "page": 102,
+      "contributor": "Lily"
+    },
+    {
+      "type": "content",
+      "text": "What does SARB stand for?",
+      "answer": "Search and Report Back",
+      "book_key": "soar",
+      "page": 60,
+      "contributor": "Lily"
+    },
+    {
+      "type": "content",
+      "text": "Who are the most fearsome killers in all the land?",
+      "answer": "The SS",
+      "book_key": "projekt-1065-a-novel-of-world-war-ii",
+      "page": 1,
+      "contributor": "Emmett"
+    },
+    {
+      "type": "content",
+      "text": "Where did Michael and his family move to Berlin from?",
+      "answer": "London",
+      "book_key": "projekt-1065-a-novel-of-world-war-ii",
+      "page": 4,
+      "contributor": "Emmett"
+    },
+    {
+      "type": "content",
+      "text": "What does Obersturmführer mean?",
+      "answer": "Senior assault leader",
+      "book_key": "projekt-1065-a-novel-of-world-war-ii",
+      "page": 4,
+      "contributor": "Emmett"
+    },
+    {
+      "type": "content",
+      "text": "What is one insult Hitler Youth call Fritz when he doesn't burn the books?",
+      "answer": "Jew lover or Degenerate",
+      "book_key": "projekt-1065-a-novel-of-world-war-ii",
+      "page": 38,
+      "contributor": "Emmett"
+    },
+    {
+      "type": "content",
+      "text": "Who does Michael want to pound into a German Pancake after getting hit in the face?",
+      "answer": "Horst",
+      "book_key": "projekt-1065-a-novel-of-world-war-ii",
+      "page": 42,
+      "contributor": "Emmett"
+    },
+    {
+      "type": "content",
+      "text": "Where are the Nazis taking the Jews?",
+      "answer": "To labor camps",
+      "book_key": "projekt-1065-a-novel-of-world-war-ii",
+      "page": 8,
+      "contributor": "Emmett"
+    },
+    {
+      "type": "content",
+      "text": "Where was Jeremiah probably born?",
+      "answer": "Indianapolis, Indiana",
+      "book_key": "soar",
+      "page": 1,
+      "contributor": "Emmett"
+    },
+    {
+      "type": "content",
+      "text": "Where was Jeremiah found?",
+      "answer": "Computer Partners Ltd.",
+      "book_key": "soar",
+      "page": 1,
+      "contributor": "Emmett"
+    },
+    {
+      "type": "content",
+      "text": "What month and day was Jeremiah found?",
+      "answer": "October 3rd",
+      "book_key": "soar",
+      "page": 1,
+      "contributor": "Emmett"
+    },
+    {
+      "type": "content",
+      "text": "What was Dirk Dagwood's day to make coffee at Computer Partners Ltd?",
+      "answer": "Monday",
+      "book_key": "soar",
+      "page": 3,
+      "contributor": "Emmett"
+    },
+    {
+      "type": "content",
+      "text": "How many times have the Hornets won the state championship?",
+      "answer": "Six",
+      "book_key": "soar",
+      "page": 9,
+      "contributor": "Emmett"
+    },
+    {
+      "type": "content",
+      "text": "Name 2 countries that Germany had taken over",
+      "answer": "Denmark, Norway, Belgium, Netherlands, and Luxembourg",
+      "book_key": "projekt-1065-a-novel-of-world-war-ii",
+      "page": 20,
+      "contributor": "Emmett"
+    },
+    {
+      "type": "in-which-book",
+      "text": "Is an automobile company getting rich for making engines, planes, and submarines?",
+      "book_key": "projekt-1065-a-novel-of-world-war-ii",
+      "page": 12,
+      "contributor": "Emmett"
+    },
+    {
+      "type": "in-which-book",
+      "text": "Is a funeral supposed to look like a wedding upside down?",
+      "book_key": "a-dictionary-of-scoundrels",
+      "page": 1,
+      "contributor": "Simon L."
+    },
+    {
+      "type": "content",
+      "text": "What does Phenomena get trapped in while retrieving an arrow?",
+      "answer": "A freezer",
+      "book_key": "a-dictionary-of-scoundrels",
+      "page": 195,
+      "contributor": "Simon L."
+    },
+    {
+      "type": "in-which-book",
+      "text": "Does a character fall from an aerial tram?",
+      "book_key": "projekt-1065-a-novel-of-world-war-ii",
+      "page": 249,
+      "contributor": "Simon L."
+    },
+    {
+      "type": "content",
+      "text": "Who is Joseph Goebbels?",
+      "answer": "the Nazi propaganda minister",
+      "book_key": "projekt-1065-a-novel-of-world-war-ii",
+      "page": 179,
+      "contributor": "Simon L."
+    },
+    {
+      "type": "in-which-book",
+      "text": "Does a character smell Sandalwood mixed with woody patchouli and wood?",
+      "book_key": "asha-and-the-spirit-bird",
+      "page": 173,
+      "contributor": "Simon L."
+    },
+    {
+      "type": "in-which-book",
+      "text": "Does a character sail millions of miles away from their home?",
+      "book_key": "the-eyes-and-the-impossible",
+      "page": 248,
+      "contributor": "Simon L."
+    },
+    {
+      "type": "content",
+      "text": "What does the word \"fungerous\" mean?",
+      "answer": "Fun and dangerous",
+      "book_key": "mexikid-a-graphic-memoir",
+      "page": 48,
+      "contributor": "Rayne"
+    },
+    {
+      "type": "in-which-book",
+      "text": "Does a character give money to nudists to put clothes on?",
+      "book_key": "an-occasionally-happy-family",
+      "page": 125,
+      "contributor": "Rayne"
+    },
+    {
+      "type": "content",
+      "text": "Which two characters want to \"listen to the latest\" and buy a record from K-mart?",
+      "answer": "Sal and Leon",
+      "book_key": "mexikid-a-graphic-memoir",
+      "page": 24,
+      "contributor": "Sebastian M."
+    },
+    {
+      "type": "content",
+      "text": "What is Jeremiah's third favorite baseball team?",
+      "answer": "The Cincinnati Reds",
+      "book_key": "soar",
+      "page": 7,
+      "contributor": "Maggie"
+    },
+    {
+      "type": "content",
+      "text": "What does Sujin give to Min after the battle with the mercs?",
+      "answer": "A thin box (chocolates works too)",
+      "book_key": "dragon-pearl",
+      "page": 191,
+      "contributor": "Simon L."
+    },
+    {
+      "type": "in-which-book",
+      "text": "Does the sound of a character's head thunking across the floor give another character pleasure?",
+      "book_key": "dragon-pearl",
+      "page": 18,
+      "contributor": "Simon L."
+    },
+    {
+      "type": "content",
+      "text": "What does Liam brag about on the last day of school?",
+      "answer": "going to Florida",
+      "book_key": "an-occasionally-happy-family",
+      "page": 6,
+      "contributor": "Simon L."
+    },
+    {
+      "type": "in-which-book",
+      "text": "Does a character brag about going to Florida for a few weeks?",
+      "book_key": "an-occasionally-happy-family",
+      "page": 6,
+      "contributor": "Simon L."
+    },
+    {
+      "type": "content",
+      "text": "Who is Theo's least favorite friend?",
+      "answer": "Liam",
+      "book_key": "an-occasionally-happy-family",
+      "page": 4,
+      "contributor": "Simon L."
+    },
+    {
+      "type": "in-which-book",
+      "text": "Does a character describe a view as \"A desktop background\"?",
+      "book_key": "an-occasionally-happy-family",
+      "page": 40,
+      "contributor": "Simon L."
+    },
+    {
+      "type": "content",
+      "text": "What is Jeremiah's estimated birth date?",
+      "answer": "January 10th",
+      "book_key": "soar",
+      "page": 4,
+      "contributor": "Alba M."
+    },
+    {
+      "type": "content",
+      "text": "What is the name of the principal of Hillcrest Middle School?",
+      "answer": "Dr Selligman",
+      "book_key": "soar",
+      "page": 48,
+      "contributor": "Alba M."
+    },
+    {
+      "type": "content",
+      "text": "What is the name of Jeremiah's English teacher?",
+      "answer": "Mrs Ogletree",
+      "book_key": "soar",
+      "page": 49,
+      "contributor": "Alba M."
+    },
+    {
+      "type": "content",
+      "text": "Who is the music appreciation teacher?",
+      "answer": "Mrs Nimroy",
+      "book_key": "soar",
+      "page": 51,
+      "contributor": "Alba M."
+    },
+    {
+      "type": "content",
+      "text": "What is the name of the science teacher?",
+      "answer": "Miss Mullner",
+      "book_key": "soar",
+      "page": 66,
+      "contributor": "Alba M."
+    },
+    {
+      "type": "content",
+      "text": "What is the name of the civilization teacher?",
+      "answer": "Mr Aronson",
+      "book_key": "soar",
+      "page": 137,
+      "contributor": "Alba M."
+    },
+    {
+      "type": "content",
+      "text": "What is the name of the soccer coach?",
+      "answer": "Mr Darko",
+      "book_key": "soar",
+      "page": 140,
+      "contributor": "Alba M."
+    },
+    {
+      "type": "content",
+      "text": "What makes the tree fall down behind the kids from the dump when they are escaping?",
+      "answer": "Lightning",
+      "book_key": "asha-and-the-spirit-bird",
+      "page": 240,
+      "contributor": "Lidz"
+    },
+    {
+      "type": "content",
+      "text": "Who does Asha say reminds her of her sister, Roopa?",
+      "answer": "Attica",
+      "book_key": "asha-and-the-spirit-bird",
+      "page": 242,
+      "contributor": "Lidz"
+    },
+    {
+      "type": "content",
+      "text": "What day of the week would people from the street shelter take the kids to play kabadi at the park?",
+      "answer": "Sunday",
+      "book_key": "asha-and-the-spirit-bird",
+      "page": 244,
+      "contributor": "Lidz"
     }
   ]
 }
