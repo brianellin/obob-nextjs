@@ -20169,7 +20169,7 @@
     },
     {
       "type": "in-which-book",
-      "text": "does one of the character's steal and eat one or the robin's eggs?",
+      "text": "does one of the character's steal and eat one of the robin's eggs?",
       "book_key": "the-remarkable-rescue-at-milkweed-meadow",
       "page": 4
     },
@@ -24743,7 +24743,7 @@
     },
     {
       "type": "content",
-      "text": "the gaurds of the prison move Emily from place to place by attaching her handcuff to what body part?",
+      "text": "the gurards of the prison move Emily from place to place by attaching her handcuff to what body part?",
       "book_key": "the-tail-of-emily-windsnap",
       "answer": "wrist",
       "page": 186
