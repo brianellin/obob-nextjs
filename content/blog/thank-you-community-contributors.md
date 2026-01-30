@@ -91,6 +91,8 @@ When you practice on OBOB.dog, look for the "OBOB.dog Community" source - those 
 
 Adding questions is easy. All you need is the book you're reading and a few minutes.
 
+**Bonus:** Questions with one-word answers are automatically included in our [Daily Crossword](/crossword) puzzles, giving your contributions even more reach!
+
 **[Learn how to contribute questions](/blog/obob-dog-community)**
 
 Every question counts. Thank you for being part of the OBOB.dog community!
