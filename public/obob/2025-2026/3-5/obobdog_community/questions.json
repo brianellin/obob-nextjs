@@ -999,6 +999,35 @@
       "book_key": "hatchet",
       "page": 127,
       "contributor": "Mishkat"
+    },
+    {
+      "type": "in-which-book",
+      "text": "is a character's tone described as \"sarcastic to the tenth power\"?",
+      "book_key": "better-with-butter",
+      "page": 162,
+      "contributor": "Glorby N."
+    },
+    {
+      "type": "in-which-book",
+      "text": "is someone not allowed to have a phone because of a PTA pledge?",
+      "book_key": "better-with-butter",
+      "page": 42,
+      "contributor": "Aayushi S."
+    },
+    {
+      "type": "in-which-book",
+      "text": "does someone say they will only like Sleeping Beauty if its a feminist retelling?",
+      "book_key": "better-with-butter",
+      "page": 185,
+      "contributor": "Aayushi S."
+    },
+    {
+      "type": "content",
+      "text": "Name any two of the plays suggested besides High School Musical.",
+      "answer": "Any two of these: Hamilton, Peter Pan, The Giver, Sleeping Beauty, A Midsummer's Night's Dream",
+      "book_key": "better-with-butter",
+      "page": 185,
+      "contributor": "Aayushi S."
     }
   ]
 }

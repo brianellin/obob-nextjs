@@ -52,7 +52,7 @@ Parse the pasted data and for each row:
 
 6. **Validate**: Ensure the bookKey exists in the corresponding `books.json` file
 
-7. **Report**: Show a summary of questions added per year/division
+7. **Report**: Show a summary of questions added per year/division. Also provide a comma separated email addresses that I can use to send a thank you email to the question writers. 
 
 ## Data to import
 

@@ -1844,6 +1844,21 @@
       "book_key": "asha-and-the-spirit-bird",
       "page": 244,
       "contributor": "Lidz"
+    },
+    {
+      "type": "in-which-book",
+      "text": "A character think that the name \"Emergency Mode\" would be easy to remeber",
+      "book_key": "dragon-pearl",
+      "page": 78,
+      "contributor": "Simon L."
+    },
+    {
+      "type": "content",
+      "text": "What Table is Captain Hye at?",
+      "answer": "The High stakes table",
+      "book_key": "dragon-pearl",
+      "page": 56,
+      "contributor": "Simon L."
     }
   ]
 }

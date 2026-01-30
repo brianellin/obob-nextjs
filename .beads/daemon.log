@@ -749,3 +749,21 @@ time=2026-01-29T09:37:21.371-08:00 level=INFO msg="JSONL file created: %s" !BADK
 time=2026-01-29T09:37:22.373-08:00 level=INFO msg="Import triggered by file change"
 time=2026-01-29T09:37:22.373-08:00 level=INFO msg="Starting %s..." !BADKEY=auto-import
 time=2026-01-29T09:37:22.376-08:00 level=INFO msg="Skipping %s: JSONL content unchanged" !BADKEY=auto-import
+time=2026-01-30T08:46:16.541-08:00 level=INFO msg="JSONL removed/renamed, re-establishing watch"
+time=2026-01-30T08:46:16.592-08:00 level=INFO msg="Successfully re-established JSONL watch after %v" !BADKEY=50ms
+time=2026-01-30T08:46:16.592-08:00 level=INFO msg="JSONL file created: %s" !BADKEY=/Users/brianellin/obob/obob-nextjs/.beads/issues.jsonl
+time=2026-01-30T08:46:17.595-08:00 level=INFO msg="Import triggered by file change"
+time=2026-01-30T08:46:17.596-08:00 level=INFO msg="Starting %s..." !BADKEY=auto-import
+time=2026-01-30T08:46:17.600-08:00 level=INFO msg="Skipping %s: JSONL content unchanged" !BADKEY=auto-import
+time=2026-01-30T09:28:31.548-08:00 level=INFO msg="JSONL removed/renamed, re-establishing watch"
+time=2026-01-30T09:28:31.599-08:00 level=INFO msg="Successfully re-established JSONL watch after %v" !BADKEY=50ms
+time=2026-01-30T09:28:31.599-08:00 level=INFO msg="JSONL file created: %s" !BADKEY=/Users/brianellin/obob/obob-nextjs/.beads/issues.jsonl
+time=2026-01-30T09:28:32.601-08:00 level=INFO msg="Import triggered by file change"
+time=2026-01-30T09:28:32.602-08:00 level=INFO msg="Starting %s..." !BADKEY=auto-import
+time=2026-01-30T09:28:32.604-08:00 level=INFO msg="Skipping %s: JSONL content unchanged" !BADKEY=auto-import
+time=2026-01-30T09:29:40.076-08:00 level=INFO msg="JSONL removed/renamed, re-establishing watch"
+time=2026-01-30T09:29:40.126-08:00 level=INFO msg="Successfully re-established JSONL watch after %v" !BADKEY=50ms
+time=2026-01-30T09:29:40.126-08:00 level=INFO msg="JSONL file created: %s" !BADKEY=/Users/brianellin/obob/obob-nextjs/.beads/issues.jsonl
+time=2026-01-30T09:29:41.128-08:00 level=INFO msg="Import triggered by file change"
+time=2026-01-30T09:29:41.128-08:00 level=INFO msg="Starting %s..." !BADKEY=auto-import
+time=2026-01-30T09:29:41.129-08:00 level=INFO msg="Skipping %s: JSONL content unchanged" !BADKEY=auto-import
