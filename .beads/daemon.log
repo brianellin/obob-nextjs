@@ -767,3 +767,15 @@ time=2026-01-30T09:29:40.126-08:00 level=INFO msg="JSONL file created: %s" !BADK
 time=2026-01-30T09:29:41.128-08:00 level=INFO msg="Import triggered by file change"
 time=2026-01-30T09:29:41.128-08:00 level=INFO msg="Starting %s..." !BADKEY=auto-import
 time=2026-01-30T09:29:41.129-08:00 level=INFO msg="Skipping %s: JSONL content unchanged" !BADKEY=auto-import
+time=2026-01-30T09:30:50.811-08:00 level=INFO msg="JSONL removed/renamed, re-establishing watch"
+time=2026-01-30T09:30:50.862-08:00 level=INFO msg="Successfully re-established JSONL watch after %v" !BADKEY=50ms
+time=2026-01-30T09:30:50.862-08:00 level=INFO msg="JSONL file created: %s" !BADKEY=/Users/brianellin/obob/obob-nextjs/.beads/issues.jsonl
+time=2026-01-30T09:30:51.864-08:00 level=INFO msg="Import triggered by file change"
+time=2026-01-30T09:30:51.866-08:00 level=INFO msg="Starting %s..." !BADKEY=auto-import
+time=2026-01-30T09:30:51.869-08:00 level=INFO msg="Skipping %s: JSONL content unchanged" !BADKEY=auto-import
+time=2026-01-30T09:30:54.701-08:00 level=INFO msg="JSONL removed/renamed, re-establishing watch"
+time=2026-01-30T09:30:54.752-08:00 level=INFO msg="Successfully re-established JSONL watch after %v" !BADKEY=50ms
+time=2026-01-30T09:30:54.752-08:00 level=INFO msg="JSONL file created: %s" !BADKEY=/Users/brianellin/obob/obob-nextjs/.beads/issues.jsonl
+time=2026-01-30T09:30:55.754-08:00 level=INFO msg="Import triggered by file change"
+time=2026-01-30T09:30:55.755-08:00 level=INFO msg="Starting %s..." !BADKEY=auto-import
+time=2026-01-30T09:30:55.758-08:00 level=INFO msg="Skipping %s: JSONL content unchanged" !BADKEY=auto-import
