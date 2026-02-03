@@ -1859,6 +1859,77 @@
       "book_key": "dragon-pearl",
       "page": 56,
       "contributor": "Simon L."
+    },
+    {
+      "type": "content",
+      "text": "What sandwich does Alex say he packed for Adela and her mom?",
+      "answer": "Sardines and horseradish",
+      "book_key": "tumble",
+      "page": 26,
+      "contributor": "Tom"
+    },
+    {
+      "type": "content",
+      "text": "How many times does Adela have to tell her mom what the white poster board was for?",
+      "answer": "4 times",
+      "book_key": "tumble",
+      "page": 26,
+      "contributor": "Tom"
+    },
+    {
+      "type": "content",
+      "text": "What is Apollo's signature move?",
+      "answer": "The Sunset",
+      "book_key": "tumble",
+      "page": 22,
+      "contributor": "Tom"
+    },
+    {
+      "type": "content",
+      "text": "What color is the new purse Laurel buys at a souvenir stand?",
+      "answer": "Yellow",
+      "book_key": "ellen-outside-the-lines",
+      "page": 102,
+      "contributor": "Hayley"
+    },
+    {
+      "type": "content",
+      "text": "What floor of La Pedrera has warrior chimneys and a 1980s themed appartment?",
+      "answer": "The 4th",
+      "book_key": "ellen-outside-the-lines",
+      "page": 125,
+      "contributor": "Hayley"
+    },
+    {
+      "type": "content",
+      "text": "When Laurel and Ellen have a sleepover in Barcelona, Ellen wants to watch The Emperors New Groove. What do they watch instead?",
+      "answer": "A cheerleading docuseries on youtube",
+      "book_key": "ellen-outside-the-lines",
+      "page": 214,
+      "contributor": "Hayley"
+    },
+    {
+      "type": "content",
+      "text": "Since Isa said, \"I dont have actual makeup wipes...\" what did she use on Ellen instead?",
+      "answer": "Kleenex",
+      "book_key": "ellen-outside-the-lines",
+      "page": 233,
+      "contributor": "Hayley"
+    },
+    {
+      "type": "in-which-book",
+      "text": "In which book does a character live in St. Louis?",
+      "book_key": "soar",
+      "page": 1,
+      "contributor": "Jude"
+    },
+    {
+      "type": "content",
+      "text": "How does the girl who the heart transplant is from die?",
+      "answer": "A bike crash.",
+      "book_key": "soar",
+      "page": 1,
+      "contributor": "Jude"
     }
   ]
 }

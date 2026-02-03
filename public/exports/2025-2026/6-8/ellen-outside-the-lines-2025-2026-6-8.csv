@@ -1,6 +1,7 @@
 book_key,question_type,page,text,answer,author_name,book_title,source_name
 ellen-outside-the-lines,content,1,What is the name of Ellen's therapist?,Dr. Talia,A.J. Sass,Ellen Outside the Lines,OBOB Parent Group
 ellen-outside-the-lines,content,2,What sound does Ellen's ceiling fan make?,whoosh-rattle,A.J. Sass,Ellen Outside the Lines,OBOB Parent Group
+ellen-outside-the-lines,content,2,What is the name of Ellen's best friend?,Laurel,A.J. Sass,Ellen Outside the Lines,OBOB Parent Group
 ellen-outside-the-lines,content,4,What is Laurel's last name?,McKinley,A.J. Sass,Ellen Outside the Lines,OBOB Parent Group
 ellen-outside-the-lines,content,7,What term does Ellen's mother use to describe her father's voice?,Israeli airy,A.J. Sass,Ellen Outside the Lines,OBOB Parent Group
 ellen-outside-the-lines,content,10,What color is Laurel's hair?,strawberry-blond,A.J. Sass,Ellen Outside the Lines,OBOB Parent Group
@@ -12,7 +13,31 @@ ellen-outside-the-lines,content,35,What is the name of the graphic novel illustr
 ellen-outside-the-lines,content,39,What is the name of the hotel the study abroad group stays at?,Hotel El Buho,A.J. Sass,Ellen Outside the Lines,OBOB Parent Group
 ellen-outside-the-lines,content,43,What color flowers are on the wall of Ellen and Laurel's hotel room?,Purple,A.J. Sass,Ellen Outside the Lines,OBOB Parent Group
 ellen-outside-the-lines,content,,What things are described as contagious?,"grins, yawns",A.J. Sass,Ellen Outside the Lines,OBOB Parent Group
-ellen-outside-the-lines,content,2,What is the name of Ellen's best friend?,Laurel,A.J. Sass,Ellen Outside the Lines,OBOB Parent Group
+ellen-outside-the-lines,content,64,What two times are listed in Ellen's categories under time?,"before, after",A.J. Sass,Ellen Outside the Lines,OBOB Parent Group
+ellen-outside-the-lines,content,69,Which students are in Mr. Katz's small group?,"Ellen, Isa, Andy, and Noah-James (or Gibbs)",A.J. Sass,Ellen Outside the Lines,OBOB Parent Group
+ellen-outside-the-lines,content,82,Which architect designed La Sagrada Familia?,Antoni Gaudi,A.J. Sass,Ellen Outside the Lines,OBOB Parent Group
+ellen-outside-the-lines,content,85,Ellen and Laurel liken Hotel El Buho to what Atlanta landmark?,The Big Chicken,A.J. Sass,Ellen Outside the Lines,OBOB Parent Group
+ellen-outside-the-lines,content,89,"What does Dr. Talia call it when Ellen rocks her body, flaps her hands, or focuses on something shiny?",stimming,A.J. Sass,Ellen Outside the Lines,OBOB Parent Group
+ellen-outside-the-lines,content,112,Which teammate do Ellen's friends want her to switch with to join their team?,Cody,A.J. Sass,Ellen Outside the Lines,OBOB Parent Group
+ellen-outside-the-lines,content,129,What is Ellen's cue that her father is joking?,wink,A.J. Sass,Ellen Outside the Lines,OBOB Parent Group
+ellen-outside-the-lines,content,131,Which character writes puns so Ellen can practice figuring out what they mean?,Isa,A.J. Sass,Ellen Outside the Lines,OBOB Parent Group
+ellen-outside-the-lines,content,142,What symbol is used to denote gender neutral in spanish written language?,@ (at symbol),A.J. Sass,Ellen Outside the Lines,OBOB Parent Group
+ellen-outside-the-lines,content,149,What is the term of endearment that Abba uses for Ellen?,metukah,A.J. Sass,Ellen Outside the Lines,OBOB Parent Group
+ellen-outside-the-lines,content,156,What does it mean when Abba suggests that he and Ellen have an NK day?,non-kosher,A.J. Sass,Ellen Outside the Lines,OBOB Parent Group
+ellen-outside-the-lines,content,176,What are the names of the siblings who visit Hotel El Buho every summer?,Meritxell and Xavi,A.J. Sass,Ellen Outside the Lines,OBOB Parent Group
+ellen-outside-the-lines,content,185,Which student recites the second clue and solution for Senor L?,Gibs,A.J. Sass,Ellen Outside the Lines,OBOB Parent Group
+ellen-outside-the-lines,content,189,What does Ellen's mom name her cactus?,David,A.J. Sass,Ellen Outside the Lines,OBOB Parent Group
+ellen-outside-the-lines,content,196,What flavor of custard does Ellen order for her donut in the cafe with Isa?,vanilla,A.J. Sass,Ellen Outside the Lines,OBOB Parent Group
+ellen-outside-the-lines,content,209,What non-kosher food does Madison claim Ellen's dad ordered at dinner?,shrimp paella,A.J. Sass,Ellen Outside the Lines,OBOB Parent Group
+ellen-outside-the-lines,content,219,How does Ellen organize Laurel's makeup on the bathroom counter?,alphabetically,A.J. Sass,Ellen Outside the Lines,OBOB Parent Group
+ellen-outside-the-lines,content,222,Which classmate applies eye liner to Ellen's eyes as part of a makeover?,Madison,A.J. Sass,Ellen Outside the Lines,OBOB Parent Group
+ellen-outside-the-lines,content,234,What is Isa's full first name?,Isabel,A.J. Sass,Ellen Outside the Lines,OBOB Parent Group
+ellen-outside-the-lines,content,241,How does Ellen's team choose to travel to the third clue?,cable car,A.J. Sass,Ellen Outside the Lines,OBOB Parent Group
+ellen-outside-the-lines,content,264,What is the name of the park with the lizard statue?,Park Guell,A.J. Sass,Ellen Outside the Lines,OBOB Parent Group
+ellen-outside-the-lines,content,278,What number does Ellen count to when she waits for Isa to reply to her text that she is locked out>,sesenta (60),A.J. Sass,Ellen Outside the Lines,OBOB Parent Group
+ellen-outside-the-lines,content,300,What time does Ellen meet Isa and Andy in the garden to apologize?,03:55:00,A.J. Sass,Ellen Outside the Lines,OBOB Parent Group
+ellen-outside-the-lines,content,315,What is the answer to the clue that Ellen's team creates?,Barcelona,A.J. Sass,Ellen Outside the Lines,OBOB Parent Group
+ellen-outside-the-lines,content,321,What pun does Ellen write on the back of her owl postcard?,Owl I need is you,A.J. Sass,Ellen Outside the Lines,OBOB Parent Group
 ellen-outside-the-lines,content,,Two Part Question: What are the names of Laurel's two sisters?,Dahlia and Lily,A.J. Sass,Ellen Outside the Lines,OBOB Parent Group
 ellen-outside-the-lines,content,6,What is Laurel's mom's first name?,Susannah,A.J. Sass,Ellen Outside the Lines,OBOB Parent Group
 ellen-outside-the-lines,content,6,What is Ellen's Abba's first name?,Natan,A.J. Sass,Ellen Outside the Lines,OBOB Parent Group
@@ -77,60 +102,42 @@ ellen-outside-the-lines,content,39,the hotel is named after what type of animal?
 ellen-outside-the-lines,content,45,In what city does the school trip take place?,Barcelona,A.J. Sass,Ellen Outside the Lines,Cedar Mill Community Library
 ellen-outside-the-lines,content,47,What language do the siblings Xavi and Meritxell speak in addition to Spanish and English?,Catalan,A.J. Sass,Ellen Outside the Lines,Beaverton City Library
 ellen-outside-the-lines,content,57,Why is Ellen disappointed when she is assigned her group?,"She has been placed in a separate group from her best friend, Laurel",A.J. Sass,Ellen Outside the Lines,Beaverton City Library
-ellen-outside-the-lines,content,64,What two times are listed in Ellen's categories under time?,"before, after",A.J. Sass,Ellen Outside the Lines,OBOB Parent Group
-ellen-outside-the-lines,content,69,Which students are in Mr. Katz's small group?,"Ellen, Isa, Andy, and Noah-James (or Gibbs)",A.J. Sass,Ellen Outside the Lines,OBOB Parent Group
-ellen-outside-the-lines,content,82,Which architect designed La Sagrada Familia?,Antoni Gaudi,A.J. Sass,Ellen Outside the Lines,OBOB Parent Group
-ellen-outside-the-lines,content,85,Ellen and Laurel liken Hotel El Buho to what Atlanta landmark?,The Big Chicken,A.J. Sass,Ellen Outside the Lines,OBOB Parent Group
 ellen-outside-the-lines,content,87,What is Ellen's group's first stop on their scavenger hunt?,The Sagrada Familia,A.J. Sass,Ellen Outside the Lines,Beaverton City Library
-ellen-outside-the-lines,content,89,"What does Dr. Talia call it when Ellen rocks her body, flaps her hands, or focuses on something shiny?",stimming,A.J. Sass,Ellen Outside the Lines,OBOB Parent Group
+ellen-outside-the-lines,content,102,What color is the new purse Laurel buys at a souvenir stand?,Yellow,A.J. Sass,Ellen Outside the Lines,OBOB.dog Community
 ellen-outside-the-lines,content,102,What festival is mentioned during the character's time in Spain?,La Merce Festival,A.J. Sass,Ellen Outside the Lines,Cedar Mill Community Library
 ellen-outside-the-lines,content,104,Ellen has an IEP at school. What do those three letters stand for?,Individualized Education Plan,A.J. Sass,Ellen Outside the Lines,OBOB Parent Group
 ellen-outside-the-lines,content,109,Isa calls Ellen a what before texting hashtag teamwork?,Genius,A.J. Sass,Ellen Outside the Lines,OBOB Parent Group
-ellen-outside-the-lines,content,112,Which teammate do Ellen's friends want her to switch with to join their team?,Cody,A.J. Sass,Ellen Outside the Lines,OBOB Parent Group
 ellen-outside-the-lines,content,119,Who is Ellen's ima?,Her mother,A.J. Sass,Ellen Outside the Lines,OBOB Parent Group
 ellen-outside-the-lines,content,119,What sweet treats do the characters enjoy while abroad?,Churros con chocolate,A.J. Sass,Ellen Outside the Lines,Cedar Mill Community Library
 ellen-outside-the-lines,content,121,What is the first clue to the scavenger hunt about?,The first clue is linked to tilework by Gaudi,A.J. Sass,Ellen Outside the Lines,Beaverton City Library
+ellen-outside-the-lines,content,125,What floor of La Pedrera has warrior chimneys and a 1980s themed appartment?,The 4th,A.J. Sass,Ellen Outside the Lines,OBOB.dog Community
 ellen-outside-the-lines,content,127,what is the number of Abba’s hotel room?,3B,A.J. Sass,Ellen Outside the Lines,Lake Oswego Public Library
 ellen-outside-the-lines,content,128,what hobby does Ellen’s mom learn while they’re away in Spain?,Cross-stitch,A.J. Sass,Ellen Outside the Lines,Lake Oswego Public Library
-ellen-outside-the-lines,content,129,What is Ellen's cue that her father is joking?,wink,A.J. Sass,Ellen Outside the Lines,OBOB Parent Group
-ellen-outside-the-lines,content,131,Which character writes puns so Ellen can practice figuring out what they mean?,Isa,A.J. Sass,Ellen Outside the Lines,OBOB Parent Group
 ellen-outside-the-lines,content,140,Who is Andy's favorite character in Abba's Fisher graphic novels?,Comet,A.J. Sass,Ellen Outside the Lines,OBOB Parent Group
-ellen-outside-the-lines,content,142,What symbol is used to denote gender neutral in spanish written language?,@ (at symbol),A.J. Sass,Ellen Outside the Lines,OBOB Parent Group
 ellen-outside-the-lines,content,142,"Isa writes what over the O's in ""artistos callejeros"" to make the words gender neutral?",@ (at) signs,A.J. Sass,Ellen Outside the Lines,OBOB Parent Group
 ellen-outside-the-lines,content,144,La Rambla goes all the way to which sea?,The Mediterranean,A.J. Sass,Ellen Outside the Lines,OBOB Parent Group
-ellen-outside-the-lines,content,149,What is the term of endearment that Abba uses for Ellen?,metukah,A.J. Sass,Ellen Outside the Lines,OBOB Parent Group
 ellen-outside-the-lines,content,154,"What does Andy define as being small dishes, like appetizers?",Tapas,A.J. Sass,Ellen Outside the Lines,OBOB Parent Group
-ellen-outside-the-lines,content,156,What does it mean when Abba suggests that he and Ellen have an NK day?,non-kosher,A.J. Sass,Ellen Outside the Lines,OBOB Parent Group
 ellen-outside-the-lines,content,156,what does NK day stand for?,Non-kosher day,A.J. Sass,Ellen Outside the Lines,Lake Oswego Public Library
 ellen-outside-the-lines,content,157,What is the name of Gibs' stuffed lizard?,El Drac,A.J. Sass,Ellen Outside the Lines,OBOB Parent Group
 ellen-outside-the-lines,content,161,What is the name of the region where people speak Catalan?,Catalunya,A.J. Sass,Ellen Outside the Lines,OBOB Parent Group
 ellen-outside-the-lines,content,165,Gibs says he takes meds that are supposed to help him what?,Concentrate,A.J. Sass,Ellen Outside the Lines,OBOB Parent Group
-ellen-outside-the-lines,content,176,What are the names of the siblings who visit Hotel El Buho every summer?,Meritxell and Xavi,A.J. Sass,Ellen Outside the Lines,OBOB Parent Group
 ellen-outside-the-lines,content,178,Isa listens to podcasts about what?,How people make things,A.J. Sass,Ellen Outside the Lines,OBOB Parent Group
 ellen-outside-the-lines,content,183,What helps keep the noise level manageable for Ellen on La Rambla?,Headphones,A.J. Sass,Ellen Outside the Lines,OBOB Parent Group
-ellen-outside-the-lines,content,185,Which student recites the second clue and solution for Senor L?,Gibs,A.J. Sass,Ellen Outside the Lines,OBOB Parent Group
-ellen-outside-the-lines,content,189,What does Ellen's mom name her cactus?,David,A.J. Sass,Ellen Outside the Lines,OBOB Parent Group
 ellen-outside-the-lines,content,189,What is the name of Miriam's cactus?,David,A.J. Sass,Ellen Outside the Lines,OBOB Parent Group
 ellen-outside-the-lines,content,193,On which day of the week does Ellen finally manage to sleep in?,Saturday,A.J. Sass,Ellen Outside the Lines,OBOB Parent Group
-ellen-outside-the-lines,content,196,What flavor of custard does Ellen order for her donut in the cafe with Isa?,vanilla,A.J. Sass,Ellen Outside the Lines,OBOB Parent Group
 ellen-outside-the-lines,content,196,which character is vegetarian?,Isa,A.J. Sass,Ellen Outside the Lines,Lake Oswego Public Library
-ellen-outside-the-lines,content,209,What non-kosher food does Madison claim Ellen's dad ordered at dinner?,shrimp paella,A.J. Sass,Ellen Outside the Lines,OBOB Parent Group
 ellen-outside-the-lines,content,212,Ellen doesn't like skirts because they're too what?,Uncomfortable,A.J. Sass,Ellen Outside the Lines,OBOB Parent Group
+ellen-outside-the-lines,content,214,"When Laurel and Ellen have a sleepover in Barcelona, Ellen wants to watch The Emperors New Groove. What do they watch instead?",A cheerleading docuseries on youtube,A.J. Sass,Ellen Outside the Lines,OBOB.dog Community
 ellen-outside-the-lines,content,216,What does El Drac mean in Catalan?,The dragon,A.J. Sass,Ellen Outside the Lines,OBOB Parent Group
-ellen-outside-the-lines,content,219,How does Ellen organize Laurel's makeup on the bathroom counter?,alphabetically,A.J. Sass,Ellen Outside the Lines,OBOB Parent Group
-ellen-outside-the-lines,content,222,Which classmate applies eye liner to Ellen's eyes as part of a makeover?,Madison,A.J. Sass,Ellen Outside the Lines,OBOB Parent Group
 ellen-outside-the-lines,content,230,Ellen says she hates makeup but she likes her curly hair and what?,Freckles,A.J. Sass,Ellen Outside the Lines,OBOB Parent Group
-ellen-outside-the-lines,content,234,What is Isa's full first name?,Isabel,A.J. Sass,Ellen Outside the Lines,OBOB Parent Group
+ellen-outside-the-lines,content,233,"Since Isa said, ""I dont have actual makeup wipes..."" what did she use on Ellen instead?",Kleenex,A.J. Sass,Ellen Outside the Lines,OBOB.dog Community
 ellen-outside-the-lines,content,234,What is Isa's old name?,Isabel,A.J. Sass,Ellen Outside the Lines,OBOB Parent Group
-ellen-outside-the-lines,content,241,How does Ellen's team choose to travel to the third clue?,cable car,A.J. Sass,Ellen Outside the Lines,OBOB Parent Group
 ellen-outside-the-lines,content,251,What three words does Ellen say to Laurel to explain that Andy isn't mad at Madison?,"""Andy's like me.""",A.J. Sass,Ellen Outside the Lines,OBOB Parent Group
 ellen-outside-the-lines,content,254,Catalunya used to be separate from what?,Spain,A.J. Sass,Ellen Outside the Lines,OBOB Parent Group
 ellen-outside-the-lines,content,254,Which character sleeps long and often?,Gibs,A.J. Sass,Ellen Outside the Lines,Beaverton City Library
 ellen-outside-the-lines,content,260,Which park do Ellen's and Laurel's team visit on the same day?,Park Güell,A.J. Sass,Ellen Outside the Lines,OBOB Parent Group
-ellen-outside-the-lines,content,264,What is the name of the park with the lizard statue?,Park Guell,A.J. Sass,Ellen Outside the Lines,OBOB Parent Group
 ellen-outside-the-lines,content,274,What does Ellen leave the hotel to see in the middle of the night?,The owl,A.J. Sass,Ellen Outside the Lines,OBOB Parent Group
 ellen-outside-the-lines,content,275,Ellen decides to leave her hotel in the middle of the night to see what?,The owl on the front of the building,A.J. Sass,Ellen Outside the Lines,Beaverton City Library
-ellen-outside-the-lines,content,278,What number does Ellen count to when she waits for Isa to reply to her text that she is locked out>,sesenta (60),A.J. Sass,Ellen Outside the Lines,OBOB Parent Group
 ellen-outside-the-lines,content,282,What does Ellen say she needed to get when Abba asks why she left the hotel in the middle of the night?,Some air,A.J. Sass,Ellen Outside the Lines,OBOB Parent Group
 ellen-outside-the-lines,content,283,Which character chooses to eat a non-kosher diet on their trip to Spain?,"Ellen's Abba, Natan Katz",A.J. Sass,Ellen Outside the Lines,Beaverton City Library
 ellen-outside-the-lines,content,285,Abba says he has a different relationship to Judaism than Ellen and who do?,Ellen's mother,A.J. Sass,Ellen Outside the Lines,OBOB Parent Group
@@ -140,16 +147,13 @@ ellen-outside-the-lines,content,294,"Who says that teams exist so when one perso
 ellen-outside-the-lines,content,298,what time of morning does Ellen head down to the garden to apologize to Andy?,3:55am,A.J. Sass,Ellen Outside the Lines,Lake Oswego Public Library
 ellen-outside-the-lines,content,299,"What does Ellen say are hard for her because ""there are so many rules and they don't always stay the same""?",Friendships,A.J. Sass,Ellen Outside the Lines,OBOB Parent Group
 ellen-outside-the-lines,content,299,Dr. Talia gives Ellen a short list of three things that she can control. Name two of them.,"[Any two] [1] Her breath, [2] her attitude, [3] the words she uses",A.J. Sass,Ellen Outside the Lines,Lake Oswego Public Library
-ellen-outside-the-lines,content,300,What time does Ellen meet Isa and Andy in the garden to apologize?,03:55:00,A.J. Sass,Ellen Outside the Lines,OBOB Parent Group
 ellen-outside-the-lines,content,307,what day of the week is their flight home from Barcelona?,Sunday,A.J. Sass,Ellen Outside the Lines,Lake Oswego Public Library
 ellen-outside-the-lines,content,310,"What feels like a holiday, a celebration of every identity?",Pride parade,A.J. Sass,Ellen Outside the Lines,OBOB Parent Group
 ellen-outside-the-lines,content,312,where does the school group have dinner on their last night in Barcelona?,On a boat,A.J. Sass,Ellen Outside the Lines,Lake Oswego Public Library
 ellen-outside-the-lines,content,313,There's a picture of Andy wearing which jersey he bought at a museum?,FC Barcelona,A.J. Sass,Ellen Outside the Lines,OBOB Parent Group
-ellen-outside-the-lines,content,315,What is the answer to the clue that Ellen's team creates?,Barcelona,A.J. Sass,Ellen Outside the Lines,OBOB Parent Group
 ellen-outside-the-lines,content,315,"On their last night in Spain, what does Ellen take a big serving of at dinner?",Patatas bravas,A.J. Sass,Ellen Outside the Lines,OBOB Parent Group
 ellen-outside-the-lines,content,315,What is the answer to the clue Ellen and her group create?,The city of Barcelona,A.J. Sass,Ellen Outside the Lines,Beaverton City Library
 ellen-outside-the-lines,content,316,"Who says, ""I don't want to spend my last night in this beautiful city fishing kids out of the sea""?",Senor L,A.J. Sass,Ellen Outside the Lines,OBOB Parent Group
-ellen-outside-the-lines,content,321,What pun does Ellen write on the back of her owl postcard?,Owl I need is you,A.J. Sass,Ellen Outside the Lines,OBOB Parent Group
 ellen-outside-the-lines,content,321,Which pun does Ellen write on the back of the owl postcard?,"""Owl I need is you.""",A.J. Sass,Ellen Outside the Lines,OBOB Parent Group
 ellen-outside-the-lines,in-which-book,1,is a character supposed to focus on stuff within their control?,,A.J. Sass,Ellen Outside the Lines,OBOB Parent Group
 ellen-outside-the-lines,in-which-book,3,does a character have a dot diary on their desk?,,A.J. Sass,Ellen Outside the Lines,OBOB Parent Group
@@ -162,6 +166,7 @@ ellen-outside-the-lines,in-which-book,9,are two friends called the two Els?,,A.J
 ellen-outside-the-lines,in-which-book,10,does a character fiddle with their necklace when they're nervous?,,A.J. Sass,Ellen Outside the Lines,OBOB Parent Group
 ellen-outside-the-lines,in-which-book,10,"does someone thrum their fingers when the world gets too bright, loud, or both?",,A.J. Sass,Ellen Outside the Lines,OBOB Parent Group
 ellen-outside-the-lines,in-which-book,11,have two characters been friends since 3rd grade?,,A.J. Sass,Ellen Outside the Lines,OBOB Parent Group
+ellen-outside-the-lines,in-which-book,16,"does a character call their child ""Metukah""?",,A.J. Sass,Ellen Outside the Lines,OBOB Parent Group
 ellen-outside-the-lines,in-which-book,18,is a teacher named Mr. Liechtenstein?,,A.J. Sass,Ellen Outside the Lines,OBOB Parent Group
 ellen-outside-the-lines,in-which-book,23,does a character keep daily schedules and task lists in a dot diary?,,A.J. Sass,Ellen Outside the Lines,OBOB Parent Group
 ellen-outside-the-lines,in-which-book,28,do friends like to make up stories about other travelers?,,A.J. Sass,Ellen Outside the Lines,OBOB Parent Group
@@ -191,7 +196,6 @@ ellen-outside-the-lines,in-which-book,273,did someone say the purpose of rules i
 ellen-outside-the-lines,in-which-book,295,is a character a vegetarian?,,A.J. Sass,Ellen Outside the Lines,OBOB Parent Group
 ellen-outside-the-lines,in-which-book,322,does a character look forward to basketball camp during the summer?,,A.J. Sass,Ellen Outside the Lines,OBOB Parent Group
 ellen-outside-the-lines,in-which-book,,are there a pair of Els?,,A.J. Sass,Ellen Outside the Lines,OBOB Parent Group
-ellen-outside-the-lines,in-which-book,16,"does a character call their child ""Metukah""?",,A.J. Sass,Ellen Outside the Lines,OBOB Parent Group
 ellen-outside-the-lines,in-which-book,19,"does a character quote the movie "" The Emperor's New Groove""?",,A.J. Sass,Ellen Outside the Lines,OBOB Parent Group
 ellen-outside-the-lines,in-which-book,25,do characters participate in a scavenger hunt?,,A.J. Sass,Ellen Outside the Lines,OBOB Parent Group
 ellen-outside-the-lines,in-which-book,31,do characters speak Modern Hebrew?,,A.J. Sass,Ellen Outside the Lines,OBOB Parent Group

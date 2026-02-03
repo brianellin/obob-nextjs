@@ -9970,7 +9970,7 @@
       "type": "in-which-book",
       "text": "does someone use a CB radio in his uncles truck once?",
       "book_key": "hatchet",
-      "page": 19
+      "page": 18
     },
     {
       "type": "in-which-book",
@@ -9988,19 +9988,13 @@
       "type": "in-which-book",
       "text": "does a bank clock flash 3:31?",
       "book_key": "hatchet",
-      "page": 27
+      "page": 29
     },
     {
       "type": "in-which-book",
       "text": "does someone wear a white pullover tennis shirt?",
       "book_key": "hatchet",
       "page": 27
-    },
-    {
-      "type": "in-which-book",
-      "text": "does someone plow a small dirt bike into a parked car?",
-      "book_key": "hatchet",
-      "page": 29
     },
     {
       "type": "in-which-book",
@@ -10810,16 +10804,16 @@
     },
     {
       "type": "content",
-      "text": "At the airport how many words did the pilot speak to Brian?",
+      "text": "What seat did the pilot tell Brian to get into?",
       "book_key": "hatchet",
-      "answer": "5",
-      "page": 8
+      "answer": "Copilot",
+      "page": 1
     },
     {
       "type": "content",
       "text": "How many minutes did it take to level off at 6000 feet?",
       "book_key": "hatchet",
-      "answer": "5",
+      "answer": "Five",
       "page": 8
     },
     {
@@ -10931,7 +10925,7 @@
       "text": "[2 part question] Name 2 things Brian pulls out of his pockets after the crash?",
       "book_key": "hatchet",
       "answer": "a quarter, dime, nickel, penny, fingernail clippers, billfold, $20",
-      "page": 38
+      "page": 46
     },
     {
       "type": "content",
@@ -11126,8 +11120,8 @@
       "type": "content",
       "text": "What percentage of Brian's body weight did he lose?",
       "book_key": "hatchet",
-      "answer": "0.17",
-      "page": 126
+      "answer": "17 percent",
+      "page": 178
     },
     {
       "type": "content",
@@ -11341,7 +11335,7 @@
     },
     {
       "type": "content",
-      "text": "After the tornado makes the tail of the plan visible, what does Brian set his mind to recovering?",
+      "text": "After the tornado makes the tail of the plane visible, what does Brian set his mind to recovering?",
       "book_key": "hatchet",
       "answer": "The survival pack",
       "page": 144
@@ -11355,9 +11349,9 @@
     },
     {
       "type": "content",
-      "text": "What kinds of logs does Brian decide he need in order to build his raft?",
+      "text": "In order to build the raft, Brian decides needs logs with what sticking out?",
       "book_key": "hatchet",
-      "answer": "Logs with limbs sticking out (that he can weave together)",
+      "answer": "Limbs",
       "page": 147
     },
     {
@@ -11532,7 +11526,7 @@
       "type": "content",
       "text": "What time is flashing on the bank clock in the mall?",
       "book_key": "hatchet",
-      "answer": "03:31:00",
+      "answer": "3:31",
       "page": 29
     },
     {
@@ -11700,14 +11694,14 @@
       "type": "content",
       "text": "List any two things Brian finds in the survival pack",
       "book_key": "hatchet",
-      "answer": "Any two: A sleeping bag, a foam sleeping pad, an aluminum cookset with 4 little pots and 2 frying pans, a fork, knife and spoon",
+      "answer": "Any two: A sleeping bag, a foam sleeping pad, an aluminum cookset with 4 little pots and 2 frying pans, a fork, knife, gun, and a spoon",
       "page": 171
     },
     {
       "type": "content",
       "text": "When the pilot rescued Brian, how long had he been on the lake?",
       "book_key": "hatchet",
-      "answer": "55 days",
+      "answer": "54 days",
       "page": 178
     },
     {

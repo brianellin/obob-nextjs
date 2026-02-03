@@ -1028,6 +1028,29 @@
       "book_key": "better-with-butter",
       "page": 185,
       "contributor": "Aayushi S."
+    },
+    {
+      "type": "content",
+      "text": "When Emily wakes up her mom, what does Mary ask her to get if Emily wants to get back on her good graces.",
+      "answer": "A nice cup of tea.",
+      "book_key": "the-tail-of-emily-windsnap",
+      "page": 1,
+      "contributor": "Shanelle"
+    },
+    {
+      "type": "content",
+      "text": "What does Mary get scared by in the subways.",
+      "answer": "A rat with a slice of pizza.",
+      "book_key": "the-secret-garden-on-81st-street",
+      "page": 2,
+      "contributor": "Shanelle"
+    },
+    {
+      "type": "in-which-book",
+      "text": "In which book does a character read a book called The Weary Blues.",
+      "book_key": "finding-langston",
+      "page": 80,
+      "contributor": "Shanelle"
     }
   ]
 }

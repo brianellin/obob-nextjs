@@ -1,9 +1,9 @@
 book_key,question_type,page,text,answer,author_name,book_title,source_name
+hatchet,content,1,What seat did the pilot tell Brian to get into?,Copilot,Gary Paulsen,Hatchet,OBOB Parent Group
 hatchet,content,8,What number Cessna does Brian fly on?,406,Gary Paulsen,Hatchet,OBOB Parent Group
 hatchet,content,8,How old was Brian?,13,Gary Paulsen,Hatchet,OBOB Parent Group
 hatchet,content,8,Who drives Brian to the airport?,his mother,Gary Paulsen,Hatchet,OBOB Parent Group
-hatchet,content,8,At the airport how many words did the pilot speak to Brian?,5,Gary Paulsen,Hatchet,OBOB Parent Group
-hatchet,content,8,How many minutes did it take to level off at 6000 feet?,5,Gary Paulsen,Hatchet,OBOB Parent Group
+hatchet,content,8,How many minutes did it take to level off at 6000 feet?,Five,Gary Paulsen,Hatchet,OBOB Parent Group
 hatchet,content,11,How old was the divorce when Brian was headed North?,one month,Gary Paulsen,Hatchet,OBOB Parent Group
 hatchet,content,11,What job did Brian's father hold?,mechanical engineer,Gary Paulsen,Hatchet,OBOB Parent Group
 hatchet,content,12,How long was the car ride to the airport in Hampton?,2 1/2 hours,Gary Paulsen,Hatchet,OBOB Parent Group
@@ -36,7 +36,7 @@ hatchet,content,16,What is the number on the lighted display in the top center o
 hatchet,content,16,What device on a plane tells the height above the ground?,altimeter,Gary Paulsen,Hatchet,OBOB Parent Group
 hatchet,content,22,How often does Brian try the radio after he left the plane running?,Every ten minutes,Gary Paulsen,Hatchet,OBOB Parent Group
 hatchet,content,28,What animal did Brian think he saw at the edge of the pond before the plane went down?,Moose,Gary Paulsen,Hatchet,OBOB Parent Group
-hatchet,content,29,What time is flashing on the bank clock in the mall?,03:31:00,Gary Paulsen,Hatchet,OBOB Parent Group
+hatchet,content,29,What time is flashing on the bank clock in the mall?,3:31,Gary Paulsen,Hatchet,OBOB Parent Group
 hatchet,content,30,What item of clothing tore as Brian escaped the plane?,Windbreaker,Gary Paulsen,Hatchet,OBOB Parent Group
 hatchet,content,30,Name the friend Brian was with when he saw his mom in a strange station wagon with a blond man.,Terry,Gary Paulsen,Hatchet,OBOB Parent Group
 hatchet,content,31,What time was on the bank clock when Brian saw his mom in the station wagon?,3 :31,Gary Paulsen,Hatchet,OBOB Parent Group
@@ -58,40 +58,37 @@ hatchet,content,60,What did Brian use to make a carrying pouch for berries?,his 
 hatchet,content,67,What is the second type of berry that Brian finds near the lake?,Raspberries,Gary Paulsen,Hatchet,OBOB Parent Group
 hatchet,content,67,what does Brian use to cover the piles of berries?,Grass he tore from the lake,Gary Paulsen,Hatchet,OBOB Parent Group
 hatchet,content,69,name the animal Brian sees while eating raspberries and describe what color it was.,A bear. It was black with a cinnamon colored nose,Gary Paulsen,Hatchet,OBOB Parent Group
-hatchet,content,69,What is the second kind of berry Brian finds after the gut-cherries?,raspberries,Gary Paulsen,Hatchet,OBOB Parent Group
 hatchet,content,73,What type of animal wanders into Brian's shelter the night of the rainstorm?,porcupine,Gary Paulsen,Hatchet,OBOB Parent Group
 hatchet,content,74,How many porcupine quills does Brian find in his calf?,8,Gary Paulsen,Hatchet,OBOB Parent Group
 hatchet,content,74,"What does Brian think of, when he smells a musty rot smell?",Graves with cobwebs and dust and old death,Gary Paulsen,Hatchet,OBOB Parent Group
 hatchet,content,76,How many porcupine pins are slammed into Brian's leg?,Eight,Gary Paulsen,Hatchet,OBOB Parent Group
-hatchet,content,76,How many porcupine quills does Brian find in his leg when a porcupine ended up in his shelter?,8,Gary Paulsen,Hatchet,OBOB Parent Group
 hatchet,content,78,What does Brian dream of before being awakened by the morning light and the clouds of new mosquitos?,"His father and  his friend,Terry",Gary Paulsen,Hatchet,OBOB Parent Group
 hatchet,content,79,What is on the table next to Terry in Brian's dream?,A grocery sack,Gary Paulsen,Hatchet,OBOB Parent Group
 hatchet,content,80,What type of tree does Brian pull bark from to make his first fire?,Birch,Gary Paulsen,Hatchet,OBOB Parent Group
-hatchet,content,81,What tool does Brian use to make sparks?,hatchet,Gary Paulsen,Hatchet,OBOB Parent Group
 hatchet,content,84,How many times does Brian stop for berries while collecting dry birchbark fluff?,Twice,Gary Paulsen,Hatchet,OBOB Parent Group
 hatchet,content,89,What kind of eggs does Brian find in the pile of sand?,Turtle,Gary Paulsen,Hatchet,OBOB Parent Group
 hatchet,content,90,How many turtle eggs did Brian find under the pile of sand?,17,Gary Paulsen,Hatchet,OBOB Parent Group
 hatchet,content,91,When does Brian realize he had the means to make a signal for the first time?,When he saw the smoke curling up through the trees,Gary Paulsen,Hatchet,OBOB Parent Group
 hatchet,content,94,What does Brian find when he kept digging the cool-damp sand?,Eggs (Turtle eggs),Gary Paulsen,Hatchet,OBOB Parent Group
 hatchet,content,94,How many eggs does Brian find in the turtle's nest?,Seventeen,Gary Paulsen,Hatchet,OBOB Parent Group
-hatchet,content,94,"What did Brian find in the sand, that were the same size as table tennis balls?",turtle eggs,Gary Paulsen,Hatchet,OBOB Parent Group
-hatchet,content,94,How many turtle eggs did Brian find in the sand?,17,Gary Paulsen,Hatchet,OBOB Parent Group
-hatchet,content,95,What is Brian's fathers brothers name?,Carter,Gary Paulsen,Hatchet,OBOB Parent Group
 hatchet,content,96,How many raw eggs does Brian eat first?,Six,Gary Paulsen,Hatchet,OBOB Parent Group
 hatchet,content,115,What animal comes and digs up the remaining eggs Brian had hidden?,skunk,Gary Paulsen,Hatchet,OBOB Parent Group
 hatchet,content,115,"The day when Brian stood and watched the wolves, how many days have passed since the crash?",forty-seven,Gary Paulsen,Hatchet,OBOB Parent Group
 hatchet,content,116,What word does Brian think of as he lay on the rock through the night?,Clouddown,Gary Paulsen,Hatchet,OBOB Parent Group
 hatchet,content,118,How many days did it take Brian to build his secure shelter and tightly weaved Willow door?,Three,Gary Paulsen,Hatchet,OBOB Parent Group
 hatchet,content,123,For how many hours is Brian blinded by the skunk spray?,Almost two hours,Gary Paulsen,Hatchet,OBOB Parent Group
+hatchet,content,126,What is the proper name of gut cherries?,choke cherries,Gary Paulsen,Hatchet,OBOB Parent Group
+hatchet,content,126,What is the proper name for foolbirds?,grouse,Gary Paulsen,Hatchet,OBOB Parent Group
 hatchet,content,126,How does Brian describe the shape of the 'fool birds' once he sees one flying?,(Kind of like) a pear,Gary Paulsen,Hatchet,OBOB Parent Group
+hatchet,content,127,Name 2 types of fish Brian catches in the lake?,"bluegills, sunfish and perch",Gary Paulsen,Hatchet,OBOB Parent Group
 hatchet,content,127,What does Brian's mom leave out by mistake when they went on an overnight trip?,Salmon,Gary Paulsen,Hatchet,OBOB Parent Group
 hatchet,content,133,What animal charged Brian at the river and injured him?,Moose,Gary Paulsen,Hatchet,OBOB Parent Group
 hatchet,content,136,What did Brian use to make a soft bed for himself inside the shelter?,Pine boughs,Gary Paulsen,Hatchet,OBOB Parent Group
 hatchet,content,141,What does Brian see sticking out of the water after the tornado?,The tail of the plane,Gary Paulsen,Hatchet,OBOB Parent Group
 hatchet,content,141,What special thought does Brian think for the pilot as he sees the tail of the plane out of the water?,Have rest. Have rest forever.,Gary Paulsen,Hatchet,OBOB Parent Group
-hatchet,content,144,"After the tornado makes the tail of the plan visible, what does Brian set his mind to recovering?",The survival pack,Gary Paulsen,Hatchet,OBOB Parent Group
+hatchet,content,144,"After the tornado makes the tail of the plane visible, what does Brian set his mind to recovering?",The survival pack,Gary Paulsen,Hatchet,OBOB Parent Group
 hatchet,content,146,"What did Brian fashion with his hatchet, out of wood, so that he didn't have to hold a stick anymore while cooking fish?",A fish board,Gary Paulsen,Hatchet,OBOB Parent Group
-hatchet,content,147,What kinds of logs does Brian decide he need in order to build his raft?,Logs with limbs sticking out (that he can weave together),Gary Paulsen,Hatchet,OBOB Parent Group
+hatchet,content,147,"In order to build the raft, Brian decides needs logs with what sticking out?",Limbs,Gary Paulsen,Hatchet,OBOB Parent Group
 hatchet,content,148,What does Brian use to tie his raft to the tail of the plane?,Strips of fabric from his windbreaker tied into a rope or tie down.,Gary Paulsen,Hatchet,OBOB Parent Group
 hatchet,content,148,"After the tornado, where does Brian find his bow?",Jammed into a driftwood log,Gary Paulsen,Hatchet,OBOB Parent Group
 hatchet,content,149,What was sticking out in the short part of the L of the lake?,Tail of the plane,Gary Paulsen,Hatchet,OBOB Parent Group
@@ -108,8 +105,9 @@ hatchet,content,168,"Why was the pilot that found Brian, flying in the area?",Fu
 hatchet,content,168,How many days was Brian alone in the wilderness before he was rescued?,54 days,Gary Paulsen,Hatchet,OBOB Parent Group
 hatchet,content,168,What percentage of body fat did Brian lose over the time he was lost in the wilderness?,0.16,Gary Paulsen,Hatchet,OBOB Parent Group
 hatchet,content,169,"What type of wolves does Brian realize he'd seen, when he was able to research at home?",Timber wolves,Gary Paulsen,Hatchet,OBOB Parent Group
-hatchet,content,171,List any two things Brian finds in the survival pack,"Any two: A sleeping bag, a foam sleeping pad, an aluminum cookset with 4 little pots and 2 frying pans, a fork, knife and spoon",Gary Paulsen,Hatchet,OBOB Parent Group
-hatchet,content,178,"When the pilot rescued Brian, how long had he been on the lake?",55 days,Gary Paulsen,Hatchet,OBOB Parent Group
+hatchet,content,171,List any two things Brian finds in the survival pack,"Any two: A sleeping bag, a foam sleeping pad, an aluminum cookset with 4 little pots and 2 frying pans, a fork, knife, gun, and a spoon",Gary Paulsen,Hatchet,OBOB Parent Group
+hatchet,content,178,What percentage of Brian's body weight did he lose?,17 percent,Gary Paulsen,Hatchet,OBOB Parent Group
+hatchet,content,178,"When the pilot rescued Brian, how long had he been on the lake?",54 days,Gary Paulsen,Hatchet,OBOB Parent Group
 hatchet,content,,What kind of a shelter did Brian originally plan to build?,lean-to,Gary Paulsen,Hatchet,OBOB Parent Group
 hatchet,content,1,"what type of bushplane did they fly in, make and number?",Cessna 406,Gary Paulsen,Hatchet,Lake Oswego Public Library
 hatchet,content,1,what city was the airport located where Brian departed from?,"Hampton, New York",Gary Paulsen,Hatchet,Lake Oswego Public Library
@@ -127,14 +125,14 @@ hatchet,content,27,What mall was Brian by when he learns The Secret?,Amber Mall,
 hatchet,content,29,How old was Brian when he broke his ankle?,9,Gary Paulsen,Hatchet,OBOB Parent Group
 hatchet,content,30,What comes swarming in thick hordes when the sun is half way up?,mosquitos,Gary Paulsen,Hatchet,OBOB Parent Group
 hatchet,content,32,What 2 trees are the forest largely made up of?,pines and spruce,Gary Paulsen,Hatchet,OBOB Parent Group
-hatchet,content,38,[2 part question] Name 2 things Brian pulls out of his pockets after the crash?,"a quarter, dime, nickel, penny, fingernail clippers, billfold, $20",Gary Paulsen,Hatchet,OBOB Parent Group
 hatchet,content,38,what is the name for a beaver house?,Beaver Lodge,Gary Paulsen,Hatchet,Lake Oswego Public Library
 hatchet,content,38,what is a beaver house called?,A beaver lodge,Gary Paulsen,Hatchet,Beaverton City Library
 hatchet,content,44,What month does Brian's father move out?,January,Gary Paulsen,Hatchet,OBOB Parent Group
+hatchet,content,46,[2 part question] Name 2 things Brian pulls out of his pockets after the crash?,"a quarter, dime, nickel, penny, fingernail clippers, billfold, $20",Gary Paulsen,Hatchet,OBOB Parent Group
 hatchet,content,46,What color are the berries Brian finds around the lake?,red,Gary Paulsen,Hatchet,OBOB Parent Group
 hatchet,content,46,what type of thinking was Brian's English teacher always talking about?,Positive thinking,Gary Paulsen,Hatchet,Beaverton City Library
 hatchet,content,46,who gave Brian the hatchet?,His mother,Gary Paulsen,Hatchet,Beaverton City Library
-hatchet,content,46,what are at least two things Brian had with him when he arrived on the island?,"A quarter, three dimes, a nickle, two pennies, fingernail clipper, 20 dollar bill, hatchet, tennis shoes, socks, jeans, underwear, belt, t-shirt, windbreaker, digital watch",Gary Paulsen,Hatchet,Beaverton City Library
+hatchet,content,46,what are at least two things Brian had with him when he crashed in the woods?,"A quarter, three dimes, a nickle, two pennies, fingernail clipper, 20 dollar bill, hatchet, tennis shoes, socks, jeans, underwear, belt, t-shirt, windbreaker, digital watch",Gary Paulsen,Hatchet,Beaverton City Library
 hatchet,content,47,Brian realizes that in all his life what has he never heard before?,Complete silence,Gary Paulsen,Hatchet,Beaverton City Library
 hatchet,content,51,What does Brian name the red berries?,gut cherries,Gary Paulsen,Hatchet,OBOB Parent Group
 hatchet,content,53,What berries does Brian find on the small thorny bushes?,raspberries,Gary Paulsen,Hatchet,OBOB Parent Group
@@ -150,6 +148,7 @@ hatchet,content,65,what does Brian call the berries he finds?,Gut cherries.,Gary
 hatchet,content,65,what does he end up calling the first berries he ate?,Gut cherries,Gary Paulsen,Hatchet,Beaverton City Library
 hatchet,content,69,What type of eggs does Brian find in the sand?,turtle,Gary Paulsen,Hatchet,OBOB Parent Group
 hatchet,content,69,How many turtle eggs does Brian find in the nest?,17,Gary Paulsen,Hatchet,OBOB Parent Group
+hatchet,content,69,What is the second kind of berry Brian finds after the gut-cherries?,raspberries,Gary Paulsen,Hatchet,OBOB Parent Group
 hatchet,content,70,How many turtle eggs does Brian eat the first day he finds them?,6,Gary Paulsen,Hatchet,OBOB Parent Group
 hatchet,content,72,How many days wood supply does Brian decide to always have on hand?,3 days,Gary Paulsen,Hatchet,OBOB Parent Group
 hatchet,content,72,what time was it when Brian saw the sun straight overhead?,Noon,Gary Paulsen,Hatchet,Beaverton City Library
@@ -157,8 +156,10 @@ hatchet,content,72,what kind of juice did Brian drink?,Raspberry juice,Gary Paul
 hatchet,content,74,What blue bird with a crest and sharp beak does Brian see sitting on a limb by the lake?,kingfisher,Gary Paulsen,Hatchet,OBOB Parent Group
 hatchet,content,75,What animal does Brian see that looks like tiny lobster,crayfish,Gary Paulsen,Hatchet,OBOB Parent Group
 hatchet,content,75,what happened when Brian hit the wall with his hatchet?,There was a shower of sparks,Gary Paulsen,Hatchet,Beaverton City Library
+hatchet,content,76,How many porcupine quills does Brian find in his leg when a porcupine ended up in his shelter?,8,Gary Paulsen,Hatchet,OBOB Parent Group
 hatchet,content,76,how many porcupine quills did Brian get stung by?,Eight,Gary Paulsen,Hatchet,Lake Oswego Public Library
 hatchet,content,81,What does Brian call the birds he hunts around the lake?,foolbirds,Gary Paulsen,Hatchet,OBOB Parent Group
+hatchet,content,81,What tool does Brian use to make sparks?,hatchet,Gary Paulsen,Hatchet,OBOB Parent Group
 hatchet,content,83,what type of tree did Brian find to help start his first fire?,Birch,Gary Paulsen,Hatchet,Lake Oswego Public Library
 hatchet,content,84,What color sides does the first fish Brian catches have?,gold or golden,Gary Paulsen,Hatchet,OBOB Parent Group
 hatchet,content,85,How many fish did Brian eat the first day he was able to catch them?,[over] 20,Gary Paulsen,Hatchet,OBOB Parent Group
@@ -166,8 +167,11 @@ hatchet,content,87,What animal dug up the turtle eggs?,skunk,Gary Paulsen,Hatche
 hatchet,content,88,After Brian was sprayed by the skunk how many hours was he completetly blind?,2,Gary Paulsen,Hatchet,OBOB Parent Group
 hatchet,content,90,what made the insects disappear?,Smoke (near the fire),Gary Paulsen,Hatchet,Beaverton City Library
 hatchet,content,94,What fruit shape did Brian see on the front of the foolbirds?,pear,Gary Paulsen,Hatchet,OBOB Parent Group
+hatchet,content,94,"What did Brian find in the sand, that were the same size as table tennis balls?",turtle eggs,Gary Paulsen,Hatchet,OBOB Parent Group
+hatchet,content,94,How many turtle eggs did Brian find in the sand?,17,Gary Paulsen,Hatchet,OBOB Parent Group
 hatchet,content,94,how many turtle eggs were there and what size are they?,Seventeen and the size of table tennis balls,Gary Paulsen,Hatchet,Lake Oswego Public Library
 hatchet,content,94,what kind of eggs does Brian find?,(Snapping) turtle eggs.,Gary Paulsen,Hatchet,Cedar Mill Public Library
+hatchet,content,95,What is Brian's fathers brothers name?,Carter,Gary Paulsen,Hatchet,OBOB Parent Group
 hatchet,content,96,How many turtle eggs did Brian eat when he first discovered them?,6,Gary Paulsen,Hatchet,OBOB Parent Group
 hatchet,content,96,What kept Brian from eating the turtle egg shells?,too leathery to chew,Gary Paulsen,Hatchet,OBOB Parent Group
 hatchet,content,99,What did Brian use to make the cloth pouch for his arrows?,windbreaker [sleeve],Gary Paulsen,Hatchet,OBOB Parent Group
@@ -193,10 +197,6 @@ hatchet,content,123,What food packet does Brian select to eat first?,beef and po
 hatchet,content,123,what happened when Brian encountered a skunk?,He got sprayed,Gary Paulsen,Hatchet,Beaverton City Library
 hatchet,content,124,what lesson did the skunk teach Brian?,Protect food,Gary Paulsen,Hatchet,Beaverton City Library
 hatchet,content,126,How many days did Brian spend alone at the lake?,54,Gary Paulsen,Hatchet,OBOB Parent Group
-hatchet,content,126,What percentage of Brian's body weight did he lose?,0.17,Gary Paulsen,Hatchet,OBOB Parent Group
-hatchet,content,126,What is the proper name of gut cherries?,choke cherries,Gary Paulsen,Hatchet,OBOB Parent Group
-hatchet,content,126,What is the proper name for foolbirds?,grouse,Gary Paulsen,Hatchet,OBOB Parent Group
-hatchet,content,127,Name 2 types of fish Brian catches in the lake?,"bluegills, sunfish and perch",Gary Paulsen,Hatchet,OBOB Parent Group
 hatchet,content,127,Where did Brian go on an overnight trip to visit relatives?,Cape Hesper,Gary Paulsen,Hatchet,OBOB.dog Community
 hatchet,content,130,what time of day did Brian see the fast gray rabbits?,Dawn,Gary Paulsen,Hatchet,Lake Oswego Public Library
 hatchet,content,131,what animal eats all of Brian's buried eggs?,skunk,Gary Paulsen,Hatchet,Newberg Public Library
@@ -245,17 +245,16 @@ hatchet,in-which-book,13,"Does a characters mom tell him to try on a gift she's 
 hatchet,in-which-book,14,does someone witness a person having a heart attack in front of Paisley's store?,,Gary Paulsen,Hatchet,OBOB Parent Group
 hatchet,in-which-book,14,Has a character witnessed two men having a heart attack during his lifetime?,,Gary Paulsen,Hatchet,OBOB Parent Group
 hatchet,in-which-book,17,Is a character forced to take control of a plane?,,Gary Paulsen,Hatchet,OBOB Parent Group
-hatchet,in-which-book,19,does someone use a CB radio in his uncles truck once?,,Gary Paulsen,Hatchet,OBOB Parent Group
+hatchet,in-which-book,18,does someone use a CB radio in his uncles truck once?,,Gary Paulsen,Hatchet,OBOB Parent Group
 hatchet,in-which-book,21,"Does a character call for help on a headset radio, forgetting to release the switch and say ""over""?",,Gary Paulsen,Hatchet,OBOB Parent Group
 hatchet,in-which-book,21,does a character feel like a prisoner kept in a small cell?,,Gary Paulsen,Hatchet,OBOB Parent Group
 hatchet,in-which-book,25,does someone think they see a moose at the edge of a pond?,,Gary Paulsen,Hatchet,OBOB Parent Group
 hatchet,in-which-book,26,does a character see a large animal at the edge of a pond?,,Gary Paulsen,Hatchet,OBOB Parent Group
 hatchet,in-which-book,27,does someone ride 10 speed bikes with a friend?,,Gary Paulsen,Hatchet,OBOB Parent Group
-hatchet,in-which-book,27,does a bank clock flash 3:31?,,Gary Paulsen,Hatchet,OBOB Parent Group
 hatchet,in-which-book,27,does someone wear a white pullover tennis shirt?,,Gary Paulsen,Hatchet,OBOB Parent Group
 hatchet,in-which-book,27,Was a character desperate to find a lake and be clear of the forest and trees?,,Gary Paulsen,Hatchet,OBOB Parent Group
 hatchet,in-which-book,28,does a character tear the nails loose on one hand trying to release a seat belt?,,Gary Paulsen,Hatchet,OBOB Parent Group
-hatchet,in-which-book,29,does someone plow a small dirt bike into a parked car?,,Gary Paulsen,Hatchet,OBOB Parent Group
+hatchet,in-which-book,29,does a bank clock flash 3:31?,,Gary Paulsen,Hatchet,OBOB Parent Group
 hatchet,in-which-book,31,Is a character riding his 10 speed with his friend Terry when he discovers a secret?,,Gary Paulsen,Hatchet,OBOB Parent Group
 hatchet,in-which-book,31,Does a character discover a secret about his mom involving a station wagon?,,Gary Paulsen,Hatchet,OBOB Parent Group
 hatchet,in-which-book,31,"does a character think to himself, ""The crash is over and Im alive""?",,Gary Paulsen,Hatchet,OBOB Parent Group
@@ -360,7 +359,6 @@ hatchet,in-which-book,169,"Does a character have an author seek him out to write
 hatchet,in-which-book,170,"Does a characters mom have a career in real estate, and dad in oil fields?",,Gary Paulsen,Hatchet,OBOB Parent Group
 hatchet,in-which-book,170,"Does a character never tell his dad about ""the secret""?",,Gary Paulsen,Hatchet,OBOB Parent Group
 hatchet,in-which-book,170,"do mosquitos tear into a character like a grey, angry cloud?",,Gary Paulsen,Hatchet,OBOB Parent Group
-hatchet,in-which-book,172,does a character find a .22 survival rifle in a survival pack?,,Gary Paulsen,Hatchet,OBOB Parent Group
 hatchet,in-which-book,176,does a character have an orange drink that was sweet and tangy?,,Gary Paulsen,Hatchet,OBOB Parent Group
 hatchet,in-which-book,,"does a character cook a bird over a fire and call it ""First Meat""?",,Gary Paulsen,Hatchet,OBOB Parent Group
 hatchet,in-which-book,9,"was someone referred to as ""my little scout?""",,Gary Paulsen,Hatchet,Lake Oswego Public Library
@@ -382,5 +380,6 @@ hatchet,in-which-book,122,is a character sprayed by a skunk?,,Gary Paulsen,Hatch
 hatchet,in-which-book,127,did someone's mom accidentally leave salmon out overnight?,,Gary Paulsen,Hatchet,Lake Oswego Public Library
 hatchet,in-which-book,132,is there an animal shaped like a pear?,,Gary Paulsen,Hatchet,Lake Oswego Public Library
 hatchet,in-which-book,155,does a character build a wooden raft?,,Gary Paulsen,Hatchet,Cedar Mill Public Library
+hatchet,in-which-book,172,does a character find a .22 survival rifle in a survival pack?,,Gary Paulsen,Hatchet,OBOB Parent Group
 hatchet,in-which-book,175,is there peach whip for dessert?,,Gary Paulsen,Hatchet,Lake Oswego Public Library
 hatchet,in-which-book,181,is there a man in a station wagon?,,Gary Paulsen,Hatchet,Lake Oswego Public Library
