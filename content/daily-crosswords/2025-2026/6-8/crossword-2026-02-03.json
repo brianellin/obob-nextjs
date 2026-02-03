@@ -516,7 +516,7 @@
         "id": "6-down",
         "number": 6,
         "direction": "down",
-        "text": "What number does Ellen count to when she waits for Isa to reply to her text that she is locked out>",
+        "text": "What number does Ellen count to when she waits for Isa to reply to her text that she is locked out?",
         "answer": "SESENTA",
         "startRow": 10,
         "startCol": 9,
