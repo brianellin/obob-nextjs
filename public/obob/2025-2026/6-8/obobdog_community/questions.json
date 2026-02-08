@@ -1930,6 +1930,30 @@
       "book_key": "soar",
       "page": 1,
       "contributor": "Jude"
+    },
+    {
+      "type": "content",
+      "text": "Where are Min's aunties planning on sending her?",
+      "answer": "Jaebi Village",
+      "book_key": "dragon-pearl",
+      "page": 26,
+      "contributor": "Sudeshna D."
+    },
+    {
+      "type": "content",
+      "text": "Which station does the Pale Lightning un-Gate from before they are attacked by mercenaries?",
+      "answer": "Sycamore Station",
+      "book_key": "dragon-pearl",
+      "page": 158,
+      "contributor": "Sudeshna D."
+    },
+    {
+      "type": "content",
+      "text": "What does Aru get from Burton Prater when she sells him a 'vintage' penny?",
+      "answer": "2 dollars and half a twix bar",
+      "book_key": "aru-shah-and-the-end-of-time",
+      "page": 378,
+      "contributor": "Maisie"
     }
   ]
 }

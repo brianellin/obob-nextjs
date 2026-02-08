@@ -1,8 +1,6 @@
 book_key,question_type,page,text,answer,author_name,book_title,source_name
-better-with-butter,content,1,What does Butter wear to show that she is an emotional support animal?,A red vest with a tag that says ESA,Victoria Piontek,Better with Butter,OBOB.dog Community
 better-with-butter,content,3,"who does Marvel choose to dress up as for her ""Famous Californian"" presentation?",Grandma Prisbrey,Victoria Piontek,Better with Butter,OBOB Parent Group
 better-with-butter,content,3,What was Grandma Prisbey famous for?,Building a village out of recycled garbage,Victoria Piontek,Better with Butter,OBOB Parent Group
-better-with-butter,content,3,Who does Marvel choose for her presentation on a famous Californian?,Grandma Prisbrey,Victoria Piontek,Better with Butter,OBOB Parent Group
 better-with-butter,content,4,What color is Marvel's wig for her famous Californian costume?,gray,Victoria Piontek,Better with Butter,OBOB Parent Group
 better-with-butter,content,5,what is the name of the school that Marvel attends?,Bayside Academy,Victoria Piontek,Better with Butter,OBOB Parent Group
 better-with-butter,content,7,Who does Marvel choose to do her famous Californian speech on?,Grandma Prisbey,Victoria Piontek,Better with Butter,OBOB Parent Group
@@ -46,6 +44,8 @@ better-with-butter,content,230,which villain character would Theo rather be in t
 better-with-butter,content,252,which character drives a white pick up truck with a trailer?,Gloria Fizzle,Victoria Piontek,Better with Butter,OBOB Parent Group
 better-with-butter,content,279,which bus stop does Marvel get off at to visit Gloria and Butter?,Fort Cronkhite,Victoria Piontek,Better with Butter,OBOB Parent Group
 better-with-butter,content,,Who's credit card does Marvel use to buy the ESA certificate?,Reef's,Victoria Piontek,Better with Butter,OBOB Parent Group
+better-with-butter,content,1,What does Butter wear to show that she is an emotional support animal?,A red vest with a tag that says ESA,Victoria Piontek,Better with Butter,OBOB.dog Community
+better-with-butter,content,3,Who does Marvel choose for her presentation on a famous Californian?,Grandma Prisbrey,Victoria Piontek,Better with Butter,OBOB Parent Group
 better-with-butter,content,4,Who chooses to present on Mrs. Field and hand out cookies for their famous Californian presentation?,Addie Lucas,Victoria Piontek,Better with Butter,OBOB Parent Group
 better-with-butter,content,6,What is the name of the principal at Bayside Academy?,Principal Huxx,Victoria Piontek,Better with Butter,OBOB Parent Group
 better-with-butter,content,13,What is the name of Marvel's main teacher?,Ms. Day,Victoria Piontek,Better with Butter,OBOB Parent Group
@@ -62,8 +62,11 @@ better-with-butter,content,121,How many lost animal fliers of Butter does Marvel
 better-with-butter,content,137,What is the name of Marvel's school counselor?,Mr. J,Victoria Piontek,Better with Butter,OBOB Parent Group
 better-with-butter,content,138,Name one of the three people in Marvel's friendship group.,"Jamie, Keira, Kylie",Victoria Piontek,Better with Butter,OBOB Parent Group
 better-with-butter,content,140,What do the letters ESA stand for?,emotional support animal,Victoria Piontek,Better with Butter,OBOB Parent Group
+better-with-butter,content,153,How does Marvel pay the online money to register Butter as an ESA?,Reef's credit card,Victoria Piontek,Better with Butter,OBOB Parent Group
 better-with-butter,content,154,Where is Marvel so excited to go to for the first time just because Butter will be with her?,School,Victoria Piontek,Better with Butter,OBOB Parent Group
+better-with-butter,content,178,Who convinces Principal Huxx to allow Butter at school temporarily?,her dad and Mr. J,Victoria Piontek,Better with Butter,OBOB Parent Group
 better-with-butter,content,184,What skill is Marvel worried about Butter being able to perform for Mr. J?,Leave it,Victoria Piontek,Better with Butter,OBOB Parent Group
+better-with-butter,content,184,List two skills Butter has to demonstrate to stay at school as an ESA.,Leave it; walk on leash; respond to name; come when called; be friendly and adaptable,Victoria Piontek,Better with Butter,OBOB Parent Group
 better-with-butter,content,187,"Which play do Addie, Theo and Mercedes suggest the class perform?",Heidi,Victoria Piontek,Better with Butter,OBOB Parent Group
 better-with-butter,content,196,Who offers to help with the set of the play?,Marvel's dad,Victoria Piontek,Better with Butter,OBOB Parent Group
 better-with-butter,content,198,Who does Marvel want to play the lead role with Butter in the play?,Theo,Victoria Piontek,Better with Butter,OBOB Parent Group
@@ -76,10 +79,13 @@ better-with-butter,content,235,What role does Mercedes talk Marvel into playing?
 better-with-butter,content,237,Who is Marvel's best friend?,Addie,Victoria Piontek,Better with Butter,OBOB Parent Group
 better-with-butter,content,245,Where is Marvel's favorite place to train Butter?,playground,Victoria Piontek,Better with Butter,OBOB Parent Group
 better-with-butter,content,249,What does Butter eat while Marvel is helping Ms. Stewart move the desks?,state tests,Victoria Piontek,Better with Butter,OBOB Parent Group
+better-with-butter,content,249,What is Butter doing that makes Principal Huxx call Marvel's dad and decide not to allow Butter at school anymore?,ate state testing papers,Victoria Piontek,Better with Butter,OBOB Parent Group
+better-with-butter,content,253,What is Butter's owner's name?,Gloria Fizzle,Victoria Piontek,Better with Butter,OBOB Parent Group
 better-with-butter,content,268,Who thinks Marvel is brave?,her brother or Reef,Victoria Piontek,Better with Butter,OBOB Parent Group
 better-with-butter,content,271,Who is Marvel surprised to see at group therapy?,Jamie,Victoria Piontek,Better with Butter,OBOB Parent Group
 better-with-butter,content,,Name two things Marvel has to do to move on to 7th grade.,"extra credit, not leave early, not get there late, attend every day, participate in the play",Victoria Piontek,Better with Butter,OBOB Parent Group
 better-with-butter,content,1,Who is so slay?,Carla is so slay.,Victoria Piontek,Better with Butter,OBOB.dog Community
+better-with-butter,content,1,What pages did Butter eat out of Marvel's math book?,243 and 244,Victoria Piontek,Better with Butter,OBOB.dog Community
 better-with-butter,content,2,what does Marvel call her worries?,An armor.,Victoria Piontek,Better with Butter,Cedar Mill Public Library
 better-with-butter,content,2,"Marvel's parents and school counselor call her worries ""anxiety."" What does Marvel call her worries?",Armor,Victoria Piontek,Better with Butter,Beaverton City Library
 better-with-butter,content,3,what is the name of the historical figure that Marvel has to give a speech as?,Grandma Prisbey,Victoria Piontek,Better with Butter,Lake Oswego Public Library
@@ -135,12 +141,9 @@ better-with-butter,content,136,what seat does Jamie pick at Friendship group?,Th
 better-with-butter,content,148,"What kind of store does ""Goth girl"" work at?",Pet store,Victoria Piontek,Better with Butter,OBOB Parent Group
 better-with-butter,content,150,What two sizes of vests do they have at the pet store?,L and XL,Victoria Piontek,Better with Butter,OBOB.dog Community
 better-with-butter,content,151,What does ESA stand for?,Emotional Support Animal,Victoria Piontek,Better with Butter,OBOB Parent Group
-better-with-butter,content,153,How does Marvel pay the online money to register Butter as an ESA?,Reef's credit card,Victoria Piontek,Better with Butter,OBOB Parent Group
 better-with-butter,content,154,what does Marvel use to make Butter an ESA vest?,Reef's scrimmage pinny,Victoria Piontek,Better with Butter,Beaverton City Library
 better-with-butter,content,164,What role does Theo originally have in the play?,Stage Manager,Victoria Piontek,Better with Butter,OBOB.dog Community
 better-with-butter,content,173,what non-food item is Butter always attempting to eat?,Paper,Victoria Piontek,Better with Butter,Lake Oswego Public Library
-better-with-butter,content,178,Who convinces Principal Huxx to allow Butter at school temporarily?,her dad and Mr. J,Victoria Piontek,Better with Butter,OBOB Parent Group
-better-with-butter,content,184,List two skills Butter has to demonstrate to stay at school as an ESA.,Leave it; walk on leash; respond to name; come when called; be friendly and adaptable,Victoria Piontek,Better with Butter,OBOB Parent Group
 better-with-butter,content,184,what skill is Marvel most worried about Butter being able to perform for Principal Huxx?,"Respond to the command ""Leave it""",Victoria Piontek,Better with Butter,Beaverton City Library
 better-with-butter,content,185,Name any two of the plays suggested besides High School Musical.,"Any two of these: Hamilton, Peter Pan, The Giver, Sleeping Beauty, A Midsummer's Night's Dream",Victoria Piontek,Better with Butter,OBOB.dog Community
 better-with-butter,content,187,what is the title of the end of year sixth grade play?,Heidi,Victoria Piontek,Better with Butter,Beaverton City Library
@@ -156,10 +159,8 @@ better-with-butter,content,234,What is the first name of the character who plays
 better-with-butter,content,237,which classmate slowly becomes Marvel's best friend?,Addie,Victoria Piontek,Better with Butter,Lake Oswego Public Library
 better-with-butter,content,240,Who does Mercedes cast as the grandmother?,Jada,Victoria Piontek,Better with Butter,OBOB.dog Community
 better-with-butter,content,248,why does the third grader named Annie keep trying to interrupt when her teacher is talking to Marvel?,Because Butter is eating the test papers,Victoria Piontek,Better with Butter,Beaverton City Library
-better-with-butter,content,249,What is Butter doing that makes Principal Huxx call Marvel's dad and decide not to allow Butter at school anymore?,ate state testing papers,Victoria Piontek,Better with Butter,OBOB Parent Group
 better-with-butter,content,252,What is the full name of the woman who owns Butter?,Gloria Fizzle,Victoria Piontek,Better with Butter,OBOB Parent Group
 better-with-butter,content,252,what's the name of Butter's original owner?,Gloria Fizzle,Victoria Piontek,Better with Butter,Lake Oswego Public Library
-better-with-butter,content,253,What is Butter's owner's name?,Gloria Fizzle,Victoria Piontek,Better with Butter,OBOB Parent Group
 better-with-butter,content,257,how does Mercedes replace Butter in the school play?,She has her little brother dress up as a Goat,Victoria Piontek,Better with Butter,Beaverton City Library
 better-with-butter,content,271,what reason does Jamie give for being in group therapy?,His parents got divorced,Victoria Piontek,Better with Butter,Lake Oswego Public Library
 better-with-butter,content,275,"Why is Butter not eating when she goes home with Gloria, her owner?",she is greiving,Victoria Piontek,Better with Butter,OBOB Parent Group
@@ -169,6 +170,7 @@ better-with-butter,content,300,which character ends up with stage fright during 
 better-with-butter,in-which-book,1,does the main character describe themselves as a coward?,,Victoria Piontek,Better with Butter,OBOB Parent Group
 better-with-butter,in-which-book,1,"does a character's mind ""whirl like one of those miserable spinning rides at amusement parks""?",,Victoria Piontek,Better with Butter,OBOB Parent Group
 better-with-butter,in-which-book,1,"is a character always on alert for catastrophes like terminal illness, global warming, food poisoning, and rising sea levels?",,Victoria Piontek,Better with Butter,Lake Oswego Public Library
+better-with-butter,in-which-book,1,Does someone go to Central Park?,,Victoria Piontek,Better with Butter,OBOB.dog Community
 better-with-butter,in-which-book,3,"does a character have to give a ""Famous Californian"" presentation?",,Victoria Piontek,Better with Butter,OBOB Parent Group
 better-with-butter,in-which-book,3,does a character have to do a Famous Californian presentation as part of the sixth-grade play?,,Victoria Piontek,Better with Butter,Lake Oswego Public Library
 better-with-butter,in-which-book,3,is there a Famous Californian presentation?,,Victoria Piontek,Better with Butter,Cedar Mill Public Library

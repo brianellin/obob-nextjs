@@ -1051,6 +1051,188 @@
       "book_key": "finding-langston",
       "page": 80,
       "contributor": "Shanelle"
+    },
+    {
+      "type": "in-which-book",
+      "text": "Does a mom trip on a root?",
+      "book_key": "number-the-stars",
+      "page": 113,
+      "contributor": "Brynn L."
+    },
+    {
+      "type": "content",
+      "text": "Who watches a star wars marathon?",
+      "answer": "Nick",
+      "book_key": "just-like-click",
+      "page": 4,
+      "contributor": "Brynn L."
+    },
+    {
+      "type": "content",
+      "text": "What is Mary's instagram page called?",
+      "answer": "The_Secret_Garden",
+      "book_key": "the-secret-garden-on-81st-street",
+      "page": 112,
+      "contributor": "Lilien W."
+    },
+    {
+      "type": "in-which-book",
+      "text": "Does someone go to Central Park?",
+      "book_key": "better-with-butter",
+      "page": 1,
+      "contributor": "Lilac"
+    },
+    {
+      "type": "content",
+      "text": "who picks up Mary from the airport?",
+      "answer": "Mrs.Medlock",
+      "book_key": "the-secret-garden-on-81st-street",
+      "page": 6,
+      "contributor": "Riley H."
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a character say I feel like I cant breathe in all this stuff!",
+      "book_key": "the-secret-garden-on-81st-street",
+      "page": 25,
+      "contributor": "Riley H."
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a girl read a book called Octopus and Squid by Jacques-Yves Cousteau?",
+      "book_key": "the-secret-garden-on-81st-street",
+      "page": 48,
+      "contributor": "Riley H."
+    },
+    {
+      "type": "in-which-book",
+      "text": "does a girl see kids talking about a play?",
+      "book_key": "the-secret-garden-on-81st-street",
+      "page": 39,
+      "contributor": "Riley H."
+    },
+    {
+      "type": "content",
+      "text": "What color is Avery's mom's car?",
+      "answer": "Red",
+      "book_key": "squished",
+      "page": 142,
+      "contributor": "Athena"
+    },
+    {
+      "type": "content",
+      "text": "What is the name of Avery's youngest siblings?",
+      "answer": "Bea",
+      "book_key": "squished",
+      "page": 15,
+      "contributor": "Athena"
+    },
+    {
+      "type": "content",
+      "text": "Two part question: Name both of the odders at the aquarium",
+      "answer": "Gracie and Holly",
+      "book_key": "odder",
+      "page": 1,
+      "contributor": "Eleanor B."
+    },
+    {
+      "type": "in-which-book",
+      "text": "does someone get papaya as a present?",
+      "book_key": "inside-out-and-back-again",
+      "page": 1,
+      "contributor": "Eleanor B."
+    },
+    {
+      "type": "content",
+      "text": "What type of shark was Kairi attacked by?",
+      "answer": "Great white shark",
+      "book_key": "odder",
+      "page": 1,
+      "contributor": "Carter"
+    },
+    {
+      "type": "content",
+      "text": "What does Al stand for?",
+      "answer": "Assistant Librarian",
+      "book_key": "the-lost-library",
+      "page": 124,
+      "contributor": "Dinosaur"
+    },
+    {
+      "type": "content",
+      "text": "In Odder, who is the main character?",
+      "answer": "Odder",
+      "book_key": "odder",
+      "page": 1,
+      "contributor": "Carter"
+    },
+    {
+      "type": "content",
+      "text": "What pages did Butter eat out of Marvel's math book?",
+      "answer": "243 and 244",
+      "book_key": "better-with-butter",
+      "page": 1,
+      "contributor": "Eleanor B."
+    },
+    {
+      "type": "content",
+      "text": "What is the answer to the puzzle at the end of the book?",
+      "answer": "If you knew where to look you have now solved every question in the book.",
+      "book_key": "escape-from-mr-lemoncellos-library",
+      "page": 1,
+      "contributor": "Eleanor B."
+    },
+    {
+      "type": "in-which-book",
+      "text": "is the main character's name Butternut?",
+      "book_key": "the-remarkable-rescue-at-milkweed-meadow",
+      "page": 1,
+      "contributor": "Carter"
+    },
+    {
+      "type": "content",
+      "text": "What 5th grade graduation award does Avery win?",
+      "answer": "The art award",
+      "book_key": "squished",
+      "page": 24,
+      "contributor": "Maya"
+    },
+    {
+      "type": "content",
+      "text": "What is the name of Avery's dad's new book?",
+      "answer": "The Clockmakers Curse",
+      "book_key": "squished",
+      "page": 56,
+      "contributor": "Maya"
+    },
+    {
+      "type": "in-which-book",
+      "text": "Is a character's grandmother moving into their basement?",
+      "book_key": "squished",
+      "page": 61,
+      "contributor": "Maya"
+    },
+    {
+      "type": "in-which-book",
+      "text": "Does a character make fliers for dog walking?",
+      "book_key": "squished",
+      "page": 70,
+      "contributor": "Maya"
+    },
+    {
+      "type": "in-which-book",
+      "text": "Does the main character play a round of sardines before bed?",
+      "book_key": "squished",
+      "page": 179,
+      "contributor": "Maya"
+    },
+    {
+      "type": "content",
+      "text": "What book were Ellen and Annemarie acting out on the living room floor?",
+      "answer": "Gone with the Wind",
+      "book_key": "number-the-stars",
+      "page": 1,
+      "contributor": "Lena L."
     }
   ]
 }
