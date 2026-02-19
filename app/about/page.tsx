@@ -106,7 +106,7 @@ export default function AboutPage() {
           </CardHeader>
           <CardContent className="flex gap-2 flex-col">
             <p className="">
-              Made with 💚 by Rosie, Gianna, Simone, and Brian (Glencoe
+              Made with 💚 by Rosie, Gianna, Simone, Devin, and Brian (Glencoe
               Elementary).
             </p>
             <p className="text-sm text-slate-600">
