@@ -714,6 +714,46 @@
       "book_key": "an-appetite-for-miracles",
       "page": 227,
       "contributor": "Mimi S."
+    },
+    {
+      "type": "content",
+      "text": "Where was the single gun shot wound that killed Mr. Moore?",
+      "answer": "the temple",
+      "book_key": "promise-boys",
+      "page": 1,
+      "contributor": "Mimi S."
+    },
+    {
+      "type": "content",
+      "text": "What month and day was Mr. Moore shot?",
+      "answer": "October 10th",
+      "book_key": "promise-boys",
+      "page": 1,
+      "contributor": "Mimi S."
+    },
+    {
+      "type": "content",
+      "text": "What is Keyana's last name?",
+      "answer": "Glenn",
+      "book_key": "promise-boys",
+      "page": 8,
+      "contributor": "Mimi S."
+    },
+    {
+      "type": "content",
+      "text": "What is the last name of the dean at Promise Prep?",
+      "answer": "Hicks",
+      "book_key": "promise-boys",
+      "page": 11,
+      "contributor": "Mimi S."
+    },
+    {
+      "type": "content",
+      "text": "Where does Becca Buckingham go to school?",
+      "answer": "Mercy Academy for Girls",
+      "book_key": "promise-boys",
+      "page": 13,
+      "contributor": "Mimi S."
     }
   ]
 }

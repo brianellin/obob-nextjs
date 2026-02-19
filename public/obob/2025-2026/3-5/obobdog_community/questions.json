@@ -1233,6 +1233,82 @@
       "book_key": "number-the-stars",
       "page": 1,
       "contributor": "Lena L."
+    },
+    {
+      "type": "content",
+      "text": "What number mayor was the one who dented the box with instructions?",
+      "answer": "Seventh",
+      "book_key": "city-of-ember",
+      "page": 1,
+      "contributor": "Eleanor B."
+    },
+    {
+      "type": "content",
+      "text": "While thinking of her sister, what does Annemarie stare out at through her window?",
+      "answer": "\"The dim September night\"",
+      "book_key": "number-the-stars",
+      "page": 13,
+      "contributor": "Varya"
+    },
+    {
+      "type": "content",
+      "text": "What does the elderly bearded man specifically say to Henrik when Henrik started to leave?",
+      "answer": "\"God keep you safe,\"",
+      "book_key": "number-the-stars",
+      "page": 82,
+      "contributor": "Varya"
+    },
+    {
+      "type": "content",
+      "text": "How many brothers dose Kyle have?",
+      "answer": "Two",
+      "book_key": "escape-from-mr-lemoncellos-library",
+      "page": 2,
+      "contributor": "Megan O."
+    },
+    {
+      "type": "in-which-book",
+      "text": "is one of the main characters a goat?",
+      "book_key": "better-with-butter",
+      "page": 27,
+      "contributor": "Pfeifer B."
+    },
+    {
+      "type": "in-which-book",
+      "text": "Does one of the main characters love Cheerios?",
+      "book_key": "better-with-butter",
+      "page": 27,
+      "contributor": "Pfeifer B."
+    },
+    {
+      "type": "content",
+      "text": "What is the full name of Butternut's first friend?",
+      "answer": "Piper Firstfledge",
+      "book_key": "the-remarkable-rescue-at-milkweed-meadow",
+      "page": 1,
+      "contributor": "Seb H."
+    },
+    {
+      "type": "in-which-book",
+      "text": "does someone imagine being a superhero?",
+      "book_key": "just-like-click",
+      "page": 1,
+      "contributor": "Colton"
+    },
+    {
+      "type": "content",
+      "text": "what is the name of the school play?",
+      "answer": "heidi",
+      "book_key": "better-with-butter",
+      "page": 1,
+      "contributor": "Colton"
+    },
+    {
+      "type": "in-which-book",
+      "text": "In which book does a character not know what matches are?",
+      "book_key": "city-of-ember",
+      "page": 1,
+      "contributor": "Colton"
     }
   ]
 }
