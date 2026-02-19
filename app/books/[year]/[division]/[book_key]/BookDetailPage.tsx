@@ -20,6 +20,7 @@ import {
 import { Book, Question } from "@/types";
 import { QuestionHeatmapInline } from "@/components/QuestionHeatmapInline";
 import QuestionSubmissionForm from "@/components/QuestionSubmissionForm";
+import DownloadAgreementDialog from "@/components/DownloadAgreementDialog";
 
 interface BookPageProps {
   book: Book;
@@ -202,15 +203,15 @@ export default function BookDetailPage({
             Back to Books
           </Button>
         </Link>
-        <a
-          href={`/exports/${year}/${division}/${book.book_key}-${year}-${division}.csv`}
-          download
+        <DownloadAgreementDialog
+          downloadUrl={`/exports/${year}/${division}/${book.book_key}-${year}-${division}.csv`}
+          fileName={`${book.book_key}-${year}-${division}.csv`}
         >
           <Button variant="outline" size="sm">
             <Download className="h-4 w-4 md:mr-2" />
             <span className="hidden md:inline">Download Questions</span>
           </Button>
-        </a>
+        </DownloadAgreementDialog>
       </div>
 
       {/* Book Header */}

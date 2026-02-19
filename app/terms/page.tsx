@@ -36,7 +36,7 @@ export default function TermsPage() {
               If you do not agree to these terms, please do not use our service.
             </p>
             <p className="leading-7 text-sm text-slate-600">
-              <strong>Effective Date:</strong> January 2025
+              <strong>Effective Date:</strong> February 2026
             </p>
           </CardContent>
         </Card>
@@ -82,8 +82,16 @@ export default function TermsPage() {
               <p className="leading-7 text-slate-700">
                 Practice questions come from various sources including schools, libraries, and
                 parent volunteers who have made them publicly available. Each question cites
-                its source. Community-contributed questions are submitted under a Creative
-                Commons license.
+                its source. All questions are licensed under the{" "}
+                <Link
+                  href="https://creativecommons.org/licenses/by-nc/4.0/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline"
+                >
+                  Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)
+                </Link>{" "}
+                license.
               </p>
             </div>
 
@@ -98,6 +106,55 @@ export default function TermsPage() {
                   GitHub
                 </Link>
                 .
+              </p>
+            </div>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader>
+            <CardTitle>Downloads & Licensing</CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-4">
+            <div className="flex items-center gap-3">
+              <img
+                src="https://licensebuttons.net/l/by-nc/4.0/88x31.png"
+                alt="CC BY-NC 4.0"
+                width={88}
+                height={31}
+              />
+              <p className="leading-7 text-slate-700">
+                Downloadable question sets are licensed under{" "}
+                <Link
+                  href="https://creativecommons.org/licenses/by-nc/4.0/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline"
+                >
+                  CC BY-NC 4.0
+                </Link>
+                .
+              </p>
+            </div>
+            <div>
+              <h3 className="font-semibold mb-2">License Requirements</h3>
+              <ul className="ml-6 list-disc [&>li]:mt-2 text-slate-700">
+                <li>
+                  <strong>Non-commercial use only.</strong> You may not use downloaded
+                  questions for any commercial purpose.
+                </li>
+                <li>
+                  <strong>Attribution required.</strong> When using questions in derivative
+                  works (apps, games, tools, flashcards, etc.), you must credit obob.dog
+                  and the original question source.
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="font-semibold mb-2">Example Attribution</h3>
+              <p className="leading-7 text-slate-600 italic bg-slate-50 p-3 rounded-md text-sm">
+                &ldquo;Questions from obob.dog, originally contributed by [Source Name].
+                Licensed under CC BY-NC 4.0.&rdquo;
               </p>
             </div>
           </CardContent>

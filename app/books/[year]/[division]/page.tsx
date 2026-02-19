@@ -9,7 +9,8 @@ import { Separator } from "@/components/ui/separator";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { getAllQuestions } from "@/lib/questions";
 import { notFound } from "next/navigation";
-import { BookOpen, Download, User, Users, Swords } from "lucide-react";
+import { BookOpen, User, Users, Swords } from "lucide-react";
+import DownloadAllQuestionsButton from "@/components/DownloadAllQuestionsButton";
 import type { Metadata } from "next";
 
 type Props = {
@@ -245,15 +246,7 @@ export default async function BooksPage({ params }: Props) {
                 Division {division} • {booksStats.length} Books
               </p>
             </div>
-            <a
-              href={`/exports/${year}/${division}/obob-${year}-${division}-all-questions.csv`}
-              download
-            >
-              <Button variant="outline" size="sm">
-                <Download className="h-4 w-4 md:mr-2" />
-                <span className="hidden md:inline">Download All Questions</span>
-              </Button>
-            </a>
+            <DownloadAllQuestionsButton year={year} division={division} />
           </div>
         </div>
 
