@@ -462,8 +462,7 @@ export default function ZoomiesGame({
       pointsEarned,
       bookKey: currentQuestion.book.book_key,
     };
-    track("zoomiesAnswered", answerData);
-    posthog.capture("zoomiesAnswered", answerData);
+    // zoomiesAnswered tracking disabled to reduce event volume
 
     // Animate and move to next
     setTimeout(() => {

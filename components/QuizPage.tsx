@@ -261,8 +261,7 @@ export default function QuizPage({
         year,
         division,
       };
-      console.log("tracking questionStarted", questionStartedData);
-      track("questionStarted", questionStartedData);
+      // Vercel tracking disabled to reduce event volume
       posthog.capture("questionStarted", questionStartedData);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -348,9 +347,8 @@ export default function QuizPage({
       year,
       division,
     };
-    console.log("tracking questionAnswered", questionAnsweredData);
-    track("questionAnswered", questionAnsweredData);
-    // PostHog capture removed to reduce event volume
+    // Vercel tracking disabled to reduce event volume
+    // PostHog capture also removed to reduce event volume
 
     // Animate score for perfect answers
     if (points === 5) {

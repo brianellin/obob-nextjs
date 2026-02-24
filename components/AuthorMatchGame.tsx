@@ -190,7 +190,7 @@ export default function AuthorMatchGame({ books, year, division }: AuthorMatchGa
         attemptCount: newAttemptCount,
         attemptTime: startTime ? (Date.now() - startTime) / 1000 : 0,
       };
-      trackEvent("matchAttempt", attemptData, posthog);
+      // matchAttempt tracking disabled to reduce event volume
 
       if (isMatch) {
         // Match found! Assign a color to this pair
