@@ -1,7 +1,7 @@
 ---
 title: "Odd vs Even: Which Side Gives You the Best Chance of a Win?"
 date: "2026-02-24"
-excerpt: "A Glencoe Elementary OBOB coordinator tracked 44 pool play battles to find out if answering odd or even questions gives teams an edge."
+excerpt: "Does picking odd or even questions in OBOB actually matter? Laura from Glencoe Elementary tracked 44 pool play battles to find out."
 author: "Laura, Glencoe Elementary OBOB Coordinator"
 ---
 
