@@ -5,7 +5,6 @@ import type { Metadata } from 'next';
 
 const SITE_URL = 'https://obob.dog';
 const SITE_NAME = 'OBOB.dog';
-const DEFAULT_OG_IMAGE = `${SITE_URL}/og-blog.png`;
 
 interface BlogPostPageProps {
   params: Promise<{
@@ -29,7 +28,6 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
   }
 
   const postUrl = `${SITE_URL}/blog/${slug}`;
-  const ogImage = post.coverImage || DEFAULT_OG_IMAGE;
 
   return {
     title: `${post.title} | OBOB.dog Blog`,
@@ -47,20 +45,11 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
       locale: 'en_US',
       publishedTime: new Date(post.date).toISOString(),
       authors: ['OBOB.dog Team'],
-      images: [
-        {
-          url: ogImage,
-          width: 1200,
-          height: 630,
-          alt: post.title,
-        },
-      ],
     },
     twitter: {
-      card: 'summary_large_image',
+      card: 'summary',
       title: post.title,
       description: post.excerpt,
-      images: [ogImage],
     },
     robots: {
       index: true,
@@ -148,9 +137,12 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
         <header className="mb-8">
           <h1 className="text-4xl font-bold mb-4 font-heading">{post.title}</h1>
-          <time className="text-gray-500" dateTime={new Date(post.date).toISOString()}>
-            {formatDate(post.date)}
-          </time>
+          <div className="text-gray-500">
+            {post.author && <span className="font-medium text-gray-700">By {post.author} · </span>}
+            <time dateTime={new Date(post.date).toISOString()}>
+              {formatDate(post.date)}
+            </time>
+          </div>
         </header>
 
         <div

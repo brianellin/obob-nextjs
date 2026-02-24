@@ -23,20 +23,11 @@ export const metadata: Metadata = {
     url: `${SITE_URL}/blog`,
     siteName: SITE_NAME,
     locale: 'en_US',
-    images: [
-      {
-        url: `${SITE_URL}/og-blog.png`,
-        width: 1200,
-        height: 630,
-        alt: 'OBOB.dog Blog',
-      },
-    ],
   },
   twitter: {
-    card: 'summary_large_image',
+    card: 'summary',
     title: 'OBOB.DOG Blog',
     description: 'News, updates, and tips for Oregon Battle of the Books practice',
-    images: [`${SITE_URL}/og-blog.png`],
   },
   robots: {
     index: true,

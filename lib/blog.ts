@@ -14,6 +14,7 @@ export interface BlogPost {
   excerpt: string;
   content: string;
   coverImage?: string;
+  author?: string;
 }
 
 export interface BlogPostMeta {
@@ -22,6 +23,7 @@ export interface BlogPostMeta {
   date: string;
   excerpt: string;
   coverImage?: string;
+  author?: string;
 }
 
 const BLOG_DIR = path.join(process.cwd(), 'content/blog');
@@ -59,6 +61,7 @@ export async function getBlogPostBySlug(slug: string): Promise<BlogPost | null> 
     excerpt: data.excerpt || '',
     content: processedContent.toString(),
     coverImage: data.coverImage,
+    author: data.author,
   };
 }
 
@@ -76,6 +79,7 @@ export function getAllBlogPostsMeta(): BlogPostMeta[] {
       date: data.date || new Date().toISOString(),
       excerpt: data.excerpt || '',
       coverImage: data.coverImage,
+      author: data.author,
     };
   });
 
