@@ -207,6 +207,7 @@ export default function ZoomiesGame({
   const [reactionType, setReactionType] = useState<"correct" | "wrong" | null>(
     null
   );
+  const [correctBookTitle, setCorrectBookTitle] = useState<string | null>(null);
   const [showStreakPopup, setShowStreakPopup] = useState<string | null>(null);
   const [soundEnabled, setSoundEnabled] = useState(() => {
     if (typeof window !== "undefined") {
@@ -422,6 +423,7 @@ export default function ZoomiesGame({
 
       // Show reaction
       setReactionType("correct");
+      setCorrectBookTitle(null);
       setShowReaction(
         CORRECT_REACTIONS[Math.floor(Math.random() * CORRECT_REACTIONS.length)]
       );
@@ -432,6 +434,7 @@ export default function ZoomiesGame({
       playRandomSound(wrongSounds.current);
 
       setReactionType("wrong");
+      setCorrectBookTitle(currentQuestion.book.title);
       setShowReaction(
         WRONG_REACTIONS[Math.floor(Math.random() * WRONG_REACTIONS.length)]
       );
@@ -464,7 +467,7 @@ export default function ZoomiesGame({
     };
     // zoomiesAnswered tracking disabled to reduce event volume
 
-    // Animate and move to next
+    // Animate and move to next (longer delay on wrong to read correct answer)
     setTimeout(() => {
       setShowReaction(null);
       setReactionType(null);
@@ -500,7 +503,7 @@ export default function ZoomiesGame({
           totalQuestions: QUESTION_COUNT,
         });
       }
-    }, 1200);
+    }, isCorrect ? 1200 : 2000);
   };
 
   // Keep the ref updated with latest handleAnswer
@@ -941,6 +944,11 @@ Can you catch me? https://obob.dog/zoomies/${year}/${division}?utm_source=share`
               >
                 {showReaction}
               </span>
+              {reactionType === "wrong" && correctBookTitle && (
+                <span className="text-sm text-white/80 mt-3 text-center animate-vibe-reaction">
+                  It was <span className="font-semibold italic">{correctBookTitle}</span>
+                </span>
+              )}
             </div>
           )}
 
