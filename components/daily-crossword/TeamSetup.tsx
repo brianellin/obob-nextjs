@@ -187,16 +187,16 @@ export default function TeamSetup({
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <Card
-            className="cursor-pointer hover:border-primary transition-colors"
+            className="flex flex-col cursor-pointer hover:border-primary transition-colors"
             onClick={handleCreateTeam}
           >
-            <CardHeader className="pb-3">
+            <CardHeader className="pb-3 flex-1">
               <CardTitle className="flex items-center gap-2 text-base">
                 <Users className="h-5 w-5" />
                 Create a Team
               </CardTitle>
               <CardDescription>
-                Start a new team and invite friends
+                Start a new team and invite your friends to solve today&apos;s puzzle together
               </CardDescription>
             </CardHeader>
             <CardContent>
@@ -209,17 +209,17 @@ export default function TeamSetup({
             </CardContent>
           </Card>
 
-          <Card>
+          <Card className="flex flex-col">
             <CardHeader className="pb-3">
               <CardTitle className="flex items-center gap-2 text-base">
                 <ArrowRight className="h-5 w-5" />
                 Join a Team
               </CardTitle>
               <CardDescription>
-                Enter a code to join friends
+                Have a team code? Enter it below to join
               </CardDescription>
             </CardHeader>
-            <CardContent className="space-y-2">
+            <CardContent className="flex-1 flex flex-col justify-end space-y-2">
               <Input
                 placeholder="e.g., BARK42"
                 value={joinCode}
