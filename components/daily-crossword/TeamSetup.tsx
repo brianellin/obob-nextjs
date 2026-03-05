@@ -166,7 +166,7 @@ export default function TeamSetup({
 
   if (mode === "choose") {
     return (
-      <div className="max-w-lg mx-auto p-4 space-y-6">
+      <div className="max-w-2xl mx-auto p-4 space-y-6">
         <div className="text-center space-y-2">
           <div className="flex items-center justify-center gap-3">
             <Grid3X3 className="h-8 w-8 text-black" />
@@ -185,18 +185,18 @@ export default function TeamSetup({
           </p>
         </div>
 
-        <div className="space-y-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <Card
             className="cursor-pointer hover:border-primary transition-colors"
             onClick={handleCreateTeam}
           >
-            <CardHeader>
-              <CardTitle className="flex items-center gap-2">
+            <CardHeader className="pb-3">
+              <CardTitle className="flex items-center gap-2 text-base">
                 <Users className="h-5 w-5" />
                 Create a Team
               </CardTitle>
               <CardDescription>
-                Start a new team and invite your friends
+                Start a new team and invite friends
               </CardDescription>
             </CardHeader>
             <CardContent>
@@ -210,18 +210,18 @@ export default function TeamSetup({
           </Card>
 
           <Card>
-            <CardHeader>
-              <CardTitle className="flex items-center gap-2">
+            <CardHeader className="pb-3">
+              <CardTitle className="flex items-center gap-2 text-base">
                 <ArrowRight className="h-5 w-5" />
                 Join a Team
               </CardTitle>
               <CardDescription>
-                Enter a team code to join your friends
+                Enter a code to join friends
               </CardDescription>
             </CardHeader>
-            <CardContent className="space-y-3">
+            <CardContent className="space-y-2">
               <Input
-                placeholder="Enter team code (e.g., BARK42)"
+                placeholder="e.g., BARK42"
                 value={joinCode}
                 onChange={(e) => setJoinCode(e.target.value.toUpperCase())}
                 className="text-center text-lg font-mono uppercase"
