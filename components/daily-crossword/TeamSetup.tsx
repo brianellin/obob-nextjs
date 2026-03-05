@@ -39,7 +39,7 @@ export default function TeamSetup({
 
   // Fetch recent archive dates
   useEffect(() => {
-    fetch(`/api/daily-crossword/archive?year=${year}&division=${division}&limit=7`)
+    fetch(`/api/daily-crossword/archive?year=${year}&division=${division}&limit=3`)
       .then((res) => res.json())
       .then((data) => {
         if (data.dates) setArchiveDates(data.dates);

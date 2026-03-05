@@ -299,7 +299,7 @@ function PreviousAnswers({ year, division }: { year: string; division: string })
   const [dates, setDates] = useState<string[]>([]);
 
   useEffect(() => {
-    fetch(`/api/daily-crossword/archive?year=${year}&division=${division}&limit=7`)
+    fetch(`/api/daily-crossword/archive?year=${year}&division=${division}&limit=3`)
       .then((res) => res.json())
       .then((data) => {
         if (data.dates) setDates(data.dates);
