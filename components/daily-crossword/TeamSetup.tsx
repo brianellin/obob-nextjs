@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {
@@ -10,7 +11,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Users, Copy, Check, ArrowRight, Loader2, Grid3X3, Link2 } from "lucide-react";
+import { Users, Copy, Check, ArrowRight, Loader2, Grid3X3, Link2, ChevronRight } from "lucide-react";
 import { getNicknameColor } from "@/lib/daily-crossword/team-codes";
 import { getOrCreateSessionId } from "@/lib/daily-crossword/session";
 
@@ -25,6 +26,7 @@ export default function TeamSetup({
   division,
   onTeamReady,
 }: TeamSetupProps) {
+  const router = useRouter();
   const [mode, setMode] = useState<"choose" | "create" | "join">("choose");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -33,6 +35,17 @@ export default function TeamSetup({
   const [nickname, setNickname] = useState("");
   const [copied, setCopied] = useState(false);
   const [linkCopied, setLinkCopied] = useState(false);
+  const [archiveDates, setArchiveDates] = useState<string[]>([]);
+
+  // Fetch recent archive dates
+  useEffect(() => {
+    fetch(`/api/daily-crossword/archive?year=${year}&division=${division}&limit=7`)
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.dates) setArchiveDates(data.dates);
+      })
+      .catch(() => {});
+  }, [year, division]);
 
   // Session ID is managed by lib/daily-crossword/session.ts with 24h expiry
 
@@ -231,6 +244,37 @@ export default function TeamSetup({
         {error && (
           <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg text-center">
             {error}
+          </div>
+        )}
+
+        {archiveDates.length > 0 && (
+          <div className="space-y-2 pt-2">
+            <h2 className="text-sm font-semibold text-gray-500 uppercase tracking-wide">
+              Previous Answers
+            </h2>
+            <div className="border border-gray-200 rounded-lg divide-y divide-gray-200">
+              {archiveDates.map((dateStr) => {
+                const [y, m, d] = dateStr.split("-").map(Number);
+                const date = new Date(y, m - 1, d);
+                const label = date.toLocaleDateString("en-US", {
+                  weekday: "short",
+                  month: "short",
+                  day: "numeric",
+                });
+                return (
+                  <button
+                    key={dateStr}
+                    onClick={() =>
+                      router.push(`/crossword/${year}/${division}/archive/${dateStr}`)
+                    }
+                    className="w-full flex items-center justify-between px-4 py-3 hover:bg-gray-50 transition-colors text-left"
+                  >
+                    <span className="text-sm text-gray-700">{label}</span>
+                    <ChevronRight className="w-4 h-4 text-gray-400" />
+                  </button>
+                );
+              })}
+            </div>
           </div>
         )}
       </div>
