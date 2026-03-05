@@ -898,6 +898,16 @@ export default function RealtimeCrossword({
             division={division}
             puzzleDate={dateString}
           />
+          <p className="text-sm text-center">
+            <a
+              href={`/crossword/${year}/${division}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-500 hover:text-gray-700 underline underline-offset-2"
+            >
+              View previous days&apos; answers
+            </a>
+          </p>
           <FAQ items={crosswordFAQItems} title="Daily Crossword FAQ" />
         </div>
       </div>
