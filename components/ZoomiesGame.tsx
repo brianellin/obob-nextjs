@@ -35,6 +35,7 @@ type GamePhase = "intro" | "book-selection" | "playing" | "results";
 type ZoomiesResult = {
   question: QuestionWithBook;
   correct: boolean;
+  selectedBook: Book | null;
   timeMs: number;
   streakAtTime: number;
 };
@@ -446,6 +447,7 @@ export default function ZoomiesGame({
       {
         question: currentQuestion,
         correct: isCorrect,
+        selectedBook: selectedBook,
         timeMs: responseTime,
         streakAtTime: isCorrect ? streak + 1 : 0,
       },
@@ -777,7 +779,7 @@ Can you catch me? https://obob.dog/zoomies/${year}/${division}?utm_source=share`
     const correctCount = results.filter((r) => r.correct).length;
 
     return (
-      <div className="min-h-screen bg-gradient-to-b from-white to-cyan-50 flex flex-col items-center justify-center p-4">
+      <div className="min-h-screen bg-gradient-to-b from-white to-cyan-50 flex flex-col items-center p-4 pt-12">
         {showConfetti && (
           <Confetti
             width={width}
@@ -856,6 +858,53 @@ Can you catch me? https://obob.dog/zoomies/${year}/${division}?utm_source=share`
               Share Your Score
             </Button>
           </Card>
+
+          {/* Question Review */}
+          <div className="text-left w-full mb-8">
+            <h3 className="text-lg font-bold text-gray-700 mb-3">Question Review</h3>
+            <div className="space-y-3">
+              {results.map((result, i) => (
+                <div
+                  key={i}
+                  className={`rounded-xl p-4 border ${
+                    result.correct
+                      ? "bg-emerald-50 border-emerald-200"
+                      : "bg-red-50 border-red-200"
+                  }`}
+                >
+                  <div className="flex items-start gap-2">
+                    <span className="mt-0.5 flex-shrink-0">
+                      {result.correct ? (
+                        <Check className="w-4 h-4 text-emerald-600" />
+                      ) : (
+                        <X className="w-4 h-4 text-red-500" />
+                      )}
+                    </span>
+                    <div className="min-w-0">
+                      <p className="text-sm text-gray-600">
+                        <span className="uppercase tracking-wide text-xs font-semibold text-teal-500">In which book</span>{" "}
+                        {result.question.text}
+                      </p>
+                      {result.correct ? (
+                        <p className="text-sm mt-1 text-emerald-700">
+                          <span className="italic font-semibold">{result.question.book.title}</span>
+                        </p>
+                      ) : (
+                        <div className="text-sm mt-1 space-y-0.5">
+                          <p className="text-red-600">
+                            Your answer: <span className="italic font-semibold">{result.selectedBook?.title ?? "Time\u2019s up"}</span>
+                          </p>
+                          <p className="text-emerald-700">
+                            Correct answer: <span className="italic font-semibold">{result.question.book.title}</span>
+                          </p>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     );
