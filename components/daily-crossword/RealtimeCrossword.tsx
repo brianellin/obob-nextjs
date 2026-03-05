@@ -12,6 +12,7 @@ import {
   WifiOff,
   LogOut,
   Users,
+  ChevronRight,
 } from "lucide-react";
 import { VoiceChat } from "@/components/voice-chat/VoiceChat";
 import { usePostHog } from "posthog-js/react";
@@ -290,6 +291,52 @@ function CustomDirectionClues({
           />
         );
       })}
+    </div>
+  );
+}
+
+function PreviousAnswers({ year, division }: { year: string; division: string }) {
+  const [dates, setDates] = useState<string[]>([]);
+
+  useEffect(() => {
+    fetch(`/api/daily-crossword/archive?year=${year}&division=${division}&limit=7`)
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.dates) setDates(data.dates);
+      })
+      .catch(() => {});
+  }, [year, division]);
+
+  if (dates.length === 0) return null;
+
+  return (
+    <div className="space-y-2">
+      <h2 className="text-sm font-semibold text-gray-500 uppercase tracking-wide">
+        Previous Answers
+      </h2>
+      <div className="border border-gray-200 rounded-lg divide-y divide-gray-200">
+        {dates.map((dateStr) => {
+          const [y, m, d] = dateStr.split("-").map(Number);
+          const date = new Date(y, m - 1, d);
+          const label = date.toLocaleDateString("en-US", {
+            weekday: "short",
+            month: "short",
+            day: "numeric",
+          });
+          return (
+            <a
+              key={dateStr}
+              href={`/crossword/${year}/${division}/archive/${dateStr}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full flex items-center justify-between px-4 py-3 hover:bg-gray-50 transition-colors text-left"
+            >
+              <span className="text-sm text-gray-700">{label}</span>
+              <ChevronRight className="w-4 h-4 text-gray-400" />
+            </a>
+          );
+        })}
+      </div>
     </div>
   );
 }
@@ -898,16 +945,7 @@ export default function RealtimeCrossword({
             division={division}
             puzzleDate={dateString}
           />
-          <p className="text-sm text-center">
-            <a
-              href={`/crossword/${year}/${division}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-500 hover:text-gray-700 underline underline-offset-2"
-            >
-              View previous days&apos; answers
-            </a>
-          </p>
+          <PreviousAnswers year={year} division={division} />
           <FAQ items={crosswordFAQItems} title="Daily Crossword FAQ" />
         </div>
       </div>
